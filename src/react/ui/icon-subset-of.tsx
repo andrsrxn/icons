@@ -1,0 +1,25 @@
+import type { Icon } from '../types'
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE4LjEzNyA1Ljc1YS43NS43NSAwIDAgMCAwLTEuNXYxLjVaTTEwLjk2MSA1di0uNzVWNVpNOC4wOTMgMTUuMDRsLjM5Ni0uNjM4LS4zOTYuNjM3Wm0uMTk2LjEyLjM5Ni0uNjM2LS4zOTYuNjM3Wm0yLjkzNy44NHYuNzVWMTZabTYuOTExLjc1YS43NS43NSAwIDEgMCAwLTEuNXYxLjVaTTguNDYyIDUuNjFsLS4zNDUtLjY2Ny4zNDUuNjY2Wm05Ljg0MiAxNC4yMzVhLjc1Ljc1IDAgMSAwIDAtMS41djEuNVptLTEyLjYwOC0xLjVhLjc1Ljc1IDAgMCAwIDAgMS41di0xLjVaTTE4LjEzNyA1di0uNzVoLTcuMTc2djEuNWg3LjE3NlY1Wk04LjA5MyAxNS4wNGwtLjM5Ni42MzYuMTk1LjEyMi4zOTctLjYzNy4zOTYtLjYzNy0uMTk2LS4xMjItLjM5Ni42MzdabTMuMTMzLjk2di43NWg2LjkxMXYtMS41aC02LjkxMVYxNlptLTIuOTM3LS44NC0uMzk3LjYzOGE2LjMxIDYuMzEgMCAwIDAgMy4zMzQuOTUydi0xLjVhNC44MSA0LjgxIDAgMCAxLTIuNTQxLS43MjZsLS4zOTYuNjM3Wk0xMC45NiA1di0uNzVhNi4xOCA2LjE4IDAgMCAwLTIuODQ0LjY5M2wuMzQ1LjY2Ni4zNDUuNjY2YTQuNjggNC42OCAwIDAgMSAyLjE1NC0uNTI1VjVabS0yLjQ5OS42MS0uMzQ1LS42NjdjLTQuMjUzIDIuMjA2LTQuNDg4IDguMjAyLS40MiAxMC43MzNsLjM5Ni0uNjM3LjM5Ni0uNjM3Yy0zLjA4LTEuOTE2LTIuOTAyLTYuNDU3LjMxOC04LjEyN2wtLjM0NS0uNjY2Wm05Ljg0MiAxMy40ODV2LS43NUg1LjY5NnYxLjVoMTIuNjA4di0uNzVaIi8+PC9zdmc+)
+ */
+export const IconSubsetOf: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='icon-subset-of'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M18.137 5.75a.75.75 0 0 0 0-1.5v1.5ZM10.961 5v-.75V5ZM8.093 15.04l.396-.638-.396.637Zm.196.12.396-.636-.396.637Zm2.937.84v.75V16Zm6.911.75a.75.75 0 1 0 0-1.5v1.5ZM8.462 5.61l-.345-.667.345.666Zm9.842 14.235a.75.75 0 1 0 0-1.5v1.5Zm-12.608-1.5a.75.75 0 0 0 0 1.5v-1.5ZM18.137 5v-.75h-7.176v1.5h7.176V5ZM8.093 15.04l-.396.636.195.122.397-.637.396-.637-.196-.122-.396.637Zm3.133.96v.75h6.911v-1.5h-6.911V16Zm-2.937-.84-.397.638a6.31 6.31 0 0 0 3.334.952v-1.5a4.81 4.81 0 0 1-2.541-.726l-.396.637ZM10.96 5v-.75a6.18 6.18 0 0 0-2.844.693l.345.666.345.666a4.68 4.68 0 0 1 2.154-.525V5Zm-2.499.61-.345-.667c-4.253 2.206-4.488 8.202-.42 10.733l.396-.637.396-.637c-3.08-1.916-2.902-6.457.318-8.127l-.345-.666Zm9.842 13.485v-.75H5.696v1.5h12.608v-.75Z'
+      />
+    </svg>
+  )
+}

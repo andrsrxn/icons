@@ -1,0 +1,33 @@
+import type { Icon } from '../types'
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE2LjM1NyAxNS4zODJjLTMuMjM2IDMuMDQ4LTcuNTkyIDIuMzM1LTkuNDcyLjU2NC0xLjY4NS0xLjU4Ni0yLjYzNy01Ljg3NC41OTktOC45MjIgNC4wMjQtMy43OSA5LjUwNS0zLjM5NSAxMS4zOS0zLjEyLjQxLjA2LjcxNS4zNjQuNzU5Ljc1My4yMDUgMS44MzMuNDM4IDcuMjI3LTMuMjc2IDEwLjcyNVoiIG9wYWNpdHk9Ii4yIi8+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIxLjUiIGQ9Ik0xMS42NDEgMTEuMDIyYy0xLjg1IDEuMTk1LTUuNjQyIDQuNzgxLTYuMDAyIDkuNTdtMTAuNzE4LTUuMjFjLTMuMjM2IDMuMDQ4LTcuNTkyIDIuMzM1LTkuNDcyLjU2NC0xLjY4NS0xLjU4Ni0yLjYzNy01Ljg3NC41OTktOC45MjIgNC4wMjQtMy43OSA5LjUwNS0zLjM5NSAxMS4zOS0zLjEyLjQxLjA2LjcxNS4zNjQuNzU5Ljc1My4yMDUgMS44MzMuNDM4IDcuMjI3LTMuMjc2IDEwLjcyNVoiLz48L3N2Zz4=)
+ */
+export const IconLeaf: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='icon-leaf'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M16.357 15.382c-3.236 3.048-7.592 2.335-9.472.564-1.685-1.586-2.637-5.874.599-8.922 4.024-3.79 9.505-3.395 11.39-3.12.41.06.715.364.759.753.205 1.833.438 7.227-3.276 10.725Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='1.5'
+        d='M11.641 11.022c-1.85 1.195-5.642 4.781-6.002 9.57m10.718-5.21c-3.236 3.048-7.592 2.335-9.472.564-1.685-1.586-2.637-5.874.599-8.922 4.024-3.79 9.505-3.395 11.39-3.12.41.06.715.364.759.753.205 1.833.438 7.227-3.276 10.725Z'
+      />
+    </svg>
+  )
+}

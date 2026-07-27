@@ -1,0 +1,160 @@
+/**
+ * generate-icons.js
+ *
+ * Transforms all .svg files in src/raw/ into React components:
+ *
+ * 1. Converts SVG attributes to camelCase JSX properties.
+ * 2. Cleans hardcoded width and height attributes.
+ * 3. Injects custom React props and default CSS variables.
+ * 4. Generates a JSDoc preview with a Base64 encoded image.
+ *
+ * Usage:
+ *   node scripts/generate-icons.js
+ */
+/** biome-ignore-all lint/performance/useTopLevelRegex: no */
+/** biome-ignore-all lint/nursery/useNamedCaptureGroup: no */
+/** biome-ignore-all lint/style/noParameterAssign: no */
+/** biome-ignore-all lint/complexity/noForEach: no */
+/** biome-ignore-all lint/suspicious/noConsole: no */
+
+import fs from 'node:fs'
+import path from 'node:path'
+import process from 'node:process'
+
+// Config
+
+const ICONS_DIR = path.resolve('./src/raw')
+const ICONS_OUT = path.resolve('./src/react/ui')
+
+const CLASSNAME = 'ui-icon'
+const ICON_SIZE = 24
+
+const JSX_EXCEPTIONS = new Set(['viewBox', 'xmlns', 'xmlns:xlink', 'xml:space'])
+
+// Helpers
+
+function toPascalCase(str) {
+  return str.replace(/(^\w|-\w)/gu, clear => clear.replace(/-/u, '').toUpperCase())
+}
+
+function extractSvg(source) {
+  const match = source.match(/<svg[\s\S]*?<\/svg>/u)
+  return match ? match[0] : null
+}
+
+function svgAttrsToJsx(svg) {
+  return svg.replace(/([a-z]+-[a-z-]+)=/giu, (match, attr) => {
+    if (JSX_EXCEPTIONS.has(attr)) {
+      return match
+    }
+    const camel = attr.replace(/-([a-z])/gu, (_, c) => c.toUpperCase())
+    return `${camel}=`
+  })
+}
+
+// Custom props injection
+
+function injectReactProps(svg, iconName) {
+  return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
+    return `<svg${attrs}
+      width={size ?? 'var(--ui-icon-size, ${ICON_SIZE})'}
+      height={size ?? 'var(--ui-icon-size, ${ICON_SIZE})'}
+      data-slot='${iconName}'
+      aria-hidden='true'
+      focusable='false'
+      className={\`${CLASSNAME} \${className ?? ''}\`}
+      {...props}>`
+  })
+}
+
+function normalizeSvg(svg, iconName) {
+  svg = svgAttrsToJsx(svg)
+
+  // 1. Clean the width and height attributes from the original <svg> tag
+  svg = svg.replace(/<svg([^>]*)>/u, (_, attrs) => {
+    const cleanAttrs = attrs.replace(/\b(width|height)=["'][^"']*["']/giu, '')
+    return `<svg${cleanAttrs}>`
+  })
+
+  svg = injectReactProps(svg, iconName)
+
+  return svg
+}
+
+// Generate Base 64 preview for icon
+function injectWhiteBackground(svg) {
+  return svg.replace(/<svg([^>]*)>/u, `<svg$1><rect width='100%' height='100%' fill='white'/>`)
+}
+
+function svgToBase64(svg) {
+  return Buffer.from(svg).toString('base64')
+}
+
+function createPreviewJSDoc(base64) {
+  return `/**\n * @preview ![img](data:image/svg+xml;base64,${base64})\n */`
+}
+
+// Main transform
+
+function generateComponent(fileName, svgContent) {
+  const iconName = fileName.replace('.svg', '')
+  const componentName = toPascalCase(iconName)
+
+  const rawSvg = extractSvg(svgContent)
+  if (!rawSvg) {
+    return null
+  }
+
+  const previewSvg = injectWhiteBackground(rawSvg)
+  const base64 = svgToBase64(previewSvg)
+  const jsDocPreview = createPreviewJSDoc(base64)
+
+  const jsxSvg = normalizeSvg(rawSvg, iconName)
+
+  return `import type { Icon } from '../types'
+
+${jsDocPreview}
+export const ${componentName}: Icon = ({ size, className, ...props }) => {
+  return (
+    ${jsxSvg}
+  )
+}
+`
+}
+
+function main() {
+  if (!fs.existsSync(ICONS_DIR)) {
+    console.error(`Directory not found: ${ICONS_DIR}`)
+    process.exit(1)
+  }
+
+  const files = fs.readdirSync(ICONS_DIR)
+  const svgFiles = files.filter(file => file.endsWith('.svg'))
+
+  let processedCount = 0
+
+  svgFiles.forEach(file => {
+    const filePath = path.join(ICONS_DIR, file)
+    const svgContent = fs.readFileSync(filePath, 'utf-8')
+
+    const componentContent = generateComponent(file, svgContent)
+
+    if (componentContent) {
+      const outputFilePath = path.join(ICONS_OUT, file.replace('.svg', '.tsx'))
+
+      fs.writeFileSync(outputFilePath, componentContent)
+      processedCount++
+      console.log(` Generated: ${file.replace('.svg', '.tsx')}`)
+    } else {
+      console.warn(` No SVG found in ${file}`)
+    }
+  })
+
+  // Summary
+
+  console.log('\n Summary:')
+  console.log(`   Files scanned:    ${svgFiles.length}`)
+  console.log(`   Files generated:  ${processedCount}`)
+}
+
+main()

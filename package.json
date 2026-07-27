@@ -1,0 +1,118 @@
+{
+  "name": "@andrsrxn/icons",
+  "version": "1.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Over 500 free duotone icons library for @andrsrxn/ui",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Andrés Raxón",
+    "email": "info@andrsrxn.com",
+    "url": "https://andrsrxn.com"
+  },
+  "keywords": [
+    "icons",
+    "duotone",
+    "react",
+    "ui",
+    "svg",
+    "typescript",
+    "icons-library",
+    "design-system",
+    "@andrsrxn/ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrsrxn/icons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andrsrxn/icons/issues"
+  },
+  "homepage": "https://github.com/andrsrxn/icons#readme",
+  "sideEffects": [
+    "dist/**/*.css"
+  ],
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": "^24",
+    "pnpm": "^11"
+  },
+  "packageManager": "pnpm@11.12.0",
+  "main": "./dist/ui/index.cjs",
+  "module": "./dist/ui/index.js",
+  "types": "./dist/ui/index.d.ts",
+  "exports": {
+    "./styles.css": "./dist/styles.css",
+    ".": {
+      "types": "./dist/ui/index.d.ts",
+      "import": "./dist/ui/index.js",
+      "require": "./dist/ui/index.cjs"
+    },
+    "./brands": {
+      "types": "./dist/brands/index.d.ts",
+      "import": "./dist/brands/index.js",
+      "require": "./dist/brands/index.cjs"
+    },
+    "./brands/*": {
+      "types": "./dist/brands/*.d.ts",
+      "import": "./dist/brands/*.js",
+      "require": "./dist/brands/*.cjs"
+    },
+    "./flags": {
+      "types": "./dist/flags/index.d.ts",
+      "import": "./dist/flags/index.js",
+      "require": "./dist/flags/index.cjs"
+    },
+    "./flags/*": {
+      "types": "./dist/flags/*.d.ts",
+      "import": "./dist/flags/*.js",
+      "require": "./dist/flags/*.cjs"
+    },
+    "./*": {
+      "types": "./dist/ui/*.d.ts",
+      "import": "./dist/ui/*.js",
+      "require": "./dist/ui/*.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build:icons": "tsdown",
+    "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
+    "build": "pnpm build:icons && pnpm build:css && echo Build finished.",
+    "format": "prettier --write . && echo Format finished.",
+    "lint": "biome check && echo Lint finished.",
+    "typecheck": "tsc --noEmit && echo Typecheck finished.",
+    "generate-icons": "node ./scripts/generate-icons.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/ui && echo Icons generated and formatted.",
+    "generate-icons-index": "node ./scripts/generate-icons-index.js && echo Icons index generated.",
+    "migrate-brand-icons": "node ./scripts/migrate-brand-icons.js --write && echo Migrated brand icons.",
+    "migrate-flag-icons": "node ./scripts/migrate-flag-icons.js --write && echo Migrated flag icons.",
+    "typecoverage": "pnpm type-coverage -at-least=99 && echo Typecoverage finished.",
+    "depcheck": "pnpm dlx knip && echo Depcheck finished.",
+    "doctor": "pnpm dlx react-doctor@latest . && echo Doctor finished."
+  },
+  "peerDependencies": {
+    "react": "^19",
+    "react-dom": "^19"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.16",
+    "@types/node": "24.12.4",
+    "@types/react": "19.2.16",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.4",
+    "husky": "9.1.7",
+    "lightningcss-cli": "1.33.0",
+    "lint-staged": "17.2.0",
+    "prettier": "3.9.6",
+    "tsdown": "0.22.14",
+    "type-coverage": "2.30.0",
+    "typescript": "6.0.3",
+    "vite": "8.1.5"
+  }
+}

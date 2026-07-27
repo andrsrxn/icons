@@ -1,0 +1,75 @@
+:root {
+  --ui-icon-size: 24px;
+}
+
+:root,
+.light,
+[data-theme='light'] {
+  --ui-icon-fill-monochrome: #000000;
+  --ui-icon-fill-monochrome-inverse: #ffffff;
+  --ui-icon-fill-astro: #17191e;
+  --ui-icon-fill-aws: #252f3e;
+  --ui-icon-fill-bash: #1b1b1f;
+  --ui-icon-fill-cursor: #26251e;
+  --ui-icon-fill-disney-plus: #01147b;
+  --ui-icon-fill-drizzle-orm: #000000;
+  --ui-icon-fill-git-hub: #24292f;
+  --ui-icon-fill-grok: #0a0a0a;
+  --ui-icon-fill-linear: #222326;
+  --ui-icon-fill-mongo-db: #001e2b;
+  --ui-icon-fill-motion: #0f1115;
+  --ui-icon-fill-payload: #2f2f2f;
+  --ui-icon-fill-pnpm: #4e4e4e;
+  --ui-icon-fill-prettier: #cfd4d7;
+  --ui-icon-fill-react: #087ea4;
+  --ui-icon-fill-t3: #000000;
+  --ui-icon-fill-wise: #163300;
+}
+
+.dark,
+[data-theme='dark'] {
+  --ui-icon-fill-monochrome: #ffffff;
+  --ui-icon-fill-monochrome-inverse: #000000;
+  --ui-icon-fill-astro: #ffffff;
+  --ui-icon-fill-aws: #ffffff;
+  --ui-icon-fill-bash: #ffffff;
+  --ui-icon-fill-cursor: #edecec;
+  --ui-icon-fill-disney-plus: #ffffff;
+  --ui-icon-fill-drizzle-orm: #c5f74f;
+  --ui-icon-fill-git-hub: #ffffff;
+  --ui-icon-fill-grok: #ffffff;
+  --ui-icon-fill-linear: #ffffff;
+  --ui-icon-fill-mongo-db: #00ed64;
+  --ui-icon-fill-motion: #ffffff;
+  --ui-icon-fill-payload: #ffffff;
+  --ui-icon-fill-pnpm: #ffffff;
+  --ui-icon-fill-prettier: #4d616e;
+  --ui-icon-fill-react: #58c4dc;
+  --ui-icon-fill-t3: #e2e8f0;
+  --ui-icon-fill-wise: #ffffff;
+}
+
+.ui-icon,
+.ui-icon-brand,
+.ui-icon-flag {
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Only to UI icons */
+.ui-icon {
+  vertical-align: middle;
+  pointer-events: none;
+}
+
+/* RTL aware icons */
+[data-slot='icon-arrow-start']:dir(rtl),
+[data-slot='icon-arrow-end']:dir(rtl),
+[data-slot='icon-arrow-up-end']:dir(rtl),
+[data-slot='icon-arrow-up-start']:dir(rtl),
+[data-slot='icon-chevron-end']:dir(rtl),
+[data-slot='icon-chevron-start']:dir(rtl),
+[data-slot='icon-chevron-end-double']:dir(rtl),
+[data-slot='icon-chevron-start-double']:dir(rtl) {
+  transform: scaleX(-1);
+}

@@ -1,0 +1,25 @@
+import type { Icon } from '../types'
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE3LjkzNSA1LjMxNmEuNzUuNzUgMCAwIDAtLjQyMy0xLjQzOWwuMjEyLjcyLjIxMS43MlptLTUuMzQuNzkuMjEuNzE5LS4yMS0uNzJabS0uMjA0IDcuNjA5LS4yNS43MDcuMjUtLjcwN1ptNS4wODMgMi41ODlhLjc1Ljc1IDAgMSAwIC41LTEuNDE1bC0uMjUuNzA4LS4yNS43MDdabTEuMDQxIDMuODVhLjc1Ljc1IDAgMCAwIDAtMS41djEuNVptLTEzLjAzLTEuNWEuNzUuNzUgMCAwIDAgMCAxLjV2LTEuNVpNMTcuNzI0IDQuNTk2bC0uMjEyLS43Mi01LjEzIDEuNTA5LjIxMi43Mi4yMTIuNzE5IDUuMTMtMS41MDktLjIxMi0uNzJabS01LjMzMiA5LjExOC0uMjUuNzA3IDUuMzMyIDEuODgyLjI1LS43MDcuMjUtLjcwOC01LjMzMy0xLjg4MS0uMjUuNzA3Wm0uMjAyLTcuNjEtLjIxMS0uNzJDOS45NiA2LjA5OSA4LjA3IDYuNjUzIDYuNzg4IDcuMjE5Yy0uNjQyLjI4NC0xLjE5Ni41OTYtMS42Ljk3OC0uNDIxLjQtLjY5OC44OTYtLjcxNCAxLjVsLjc1LjAyLjc1LjAyYy4wMDMtLjEyMy4wNDctLjI2Mi4yNDYtLjQ1LjIxOS0uMjA4LjU5LS40MzggMS4xNzMtLjY5NSAxLjE3MS0uNTE3IDIuOTQ2LTEuMDQgNS40MTMtMS43NjZsLS4yMTItLjcyWm0tLjIwMiA3LjYxLjI1LS43MDdjLTIuNDI1LS44NTYtNC4xNy0xLjQ3My01LjMxMi0yLjA1Mi0uNTctLjI4OC0uOTI3LS41MzctMS4xMzQtLjc1Ni0uMTktLjItLjIyNi0uMzQtLjIyMi0uNDY0bC0uNzUtLjAyLS43NS0uMDJjLS4wMTYuNjA1LjIzNCAxLjExNS42MzQgMS41MzcuMzgyLjQwMy45MTguNzQ0IDEuNTQ1IDEuMDYxIDEuMjUuNjM0IDMuMTEgMS4yODggNS40ODkgMi4xMjhsLjI1LS43MDdabTYuMTIzIDUuNjg4di0uNzVINS40ODZ2MS41aDEzLjAzdi0uNzVaIi8+PC9zdmc+)
+ */
+export const IconLessOrEqualThan: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='icon-less-or-equal-than'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M17.935 5.316a.75.75 0 0 0-.423-1.439l.212.72.211.72Zm-5.34.79.21.719-.21-.72Zm-.204 7.609-.25.707.25-.707Zm5.083 2.589a.75.75 0 1 0 .5-1.415l-.25.708-.25.707Zm1.041 3.85a.75.75 0 0 0 0-1.5v1.5Zm-13.03-1.5a.75.75 0 0 0 0 1.5v-1.5ZM17.724 4.596l-.212-.72-5.13 1.509.212.72.212.719 5.13-1.509-.212-.72Zm-5.332 9.118-.25.707 5.332 1.882.25-.707.25-.708-5.333-1.881-.25.707Zm.202-7.61-.211-.72C9.96 6.099 8.07 6.653 6.788 7.219c-.642.284-1.196.596-1.6.978-.421.4-.698.896-.714 1.5l.75.02.75.02c.003-.123.047-.262.246-.45.219-.208.59-.438 1.173-.695 1.171-.517 2.946-1.04 5.413-1.766l-.212-.72Zm-.202 7.61.25-.707c-2.425-.856-4.17-1.473-5.312-2.052-.57-.288-.927-.537-1.134-.756-.19-.2-.226-.34-.222-.464l-.75-.02-.75-.02c-.016.605.234 1.115.634 1.537.382.403.918.744 1.545 1.061 1.25.634 3.11 1.288 5.489 2.128l.25-.707Zm6.123 5.688v-.75H5.486v1.5h13.03v-.75Z'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,14 @@
+import type { SVGProps } from 'react'
+export const IconBrandPaper = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns='http://www.w3.org/2000/svg'
+    aria-label='Paper'
+    className={`ui-icon-brand ${className ?? ''}`}
+    preserveAspectRatio='xMidYMid'
+    role='img'
+    xmlSpace='preserve'
+    viewBox='0 0 39 39'
+    {...props}>
+    <path d='M39 24H24V6H6V24H24V39H0V6H6V0H39V24Z' fill='#81ADEC' />
+  </svg>
+)

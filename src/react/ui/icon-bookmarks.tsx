@@ -1,0 +1,32 @@
+import type { Icon } from '../types'
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTQuMDkxIDE3LjM2di02LjIyYzAtMS44ODUgMC0yLjgyOC41ODYtMy40MTQuNTg2LS41ODYgMS41MjktLjU4NiAzLjQxNC0uNTg2aDIuNTQ1YzEuODg2IDAgMi44MjkgMCAzLjQxNC41ODYuNTg2LjU4Ni41ODYgMS41MjkuNTg2IDMuNDE0djYuMjE5YzAgMS44NTEgMCAyLjc3Ny0uNTc2IDMuMDQ2LS41NzcuMjctMS4yODctLjMyNC0yLjcwNy0xLjUxMmwtLjcwNi0uNTljLS42MTMtLjUxNC0uOTItLjc3LTEuMjgzLS43Ny0uMzYzIDAtLjY3LjI1Ni0xLjI4NC43N2wtLjcwNS41OWMtMS40MiAxLjE4OC0yLjEzIDEuNzgyLTIuNzA3IDEuNTEycy0uNTc3LTEuMTk1LS41NzctMy4wNDZaIiBvcGFjaXR5PSIuMiIvPjxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJtMTQuNjM2IDEzLjkwOCAxLjk5MyAxLjY1OGMxLjQyIDEuMTggMi4xMjkgMS43NyAyLjcwNCAxLjUwMS41NzYtLjI3LjU3Ni0xLjE5My41NzYtMy4wMzhWNy43OTVjMC0xLjg4NSAwLTIuODI4LS41ODYtMy40MTQtLjU4Ni0uNTg2LTEuNTI5LS41ODYtMy40MTQtLjU4NmgtMy4yYy0xLjI1NyAwLTEuODg2IDAtMi4zNTQuMjczYTIgMiAwIDAgMC0uNzE4LjcxOWMtLjI3My40NjctLjI3MyAxLjA5Ni0uMjczIDIuMzU0bS01LjI3MyA0djYuMjM0YzAgMS44NDUgMCAyLjc2OC41NzYgMy4wMzguNTc1LjI3IDEuMjg1LS4zMiAyLjcwMy0xLjVsLjcxNS0uNTk1Yy42MTEtLjUwOS45MTctLjc2MyAxLjI3OS0uNzYzLjM2MSAwIC42NjcuMjU0IDEuMjc5Ljc2M2wuNzE0LjU5NGMxLjQxOSAxLjE4IDIuMTI4IDEuNzcgMi43MDQgMS41MDEuNTc1LS4yNy41NzUtMS4xOTMuNTc1LTMuMDM4VjExLjE0YzAtMS44ODUgMC0yLjgyOC0uNTg2LTMuNDE0LS41ODUtLjU4Ni0xLjUyOC0uNTg2LTMuNDE0LS41ODZIOC4wOTFjLTEuODg1IDAtMi44MjggMC0zLjQxNC41ODYtLjU4Ni41ODYtLjU4NiAxLjUyOS0uNTg2IDMuNDE0WiIvPjwvc3ZnPg==)
+ */
+export const IconBookmarks: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='icon-bookmarks'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M4.091 17.36v-6.22c0-1.885 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h2.545c1.886 0 2.829 0 3.414.586.586.586.586 1.529.586 3.414v6.219c0 1.851 0 2.777-.576 3.046-.577.27-1.287-.324-2.707-1.512l-.706-.59c-.613-.514-.92-.77-1.283-.77-.363 0-.67.256-1.284.77l-.705.59c-1.42 1.188-2.13 1.782-2.707 1.512s-.577-1.195-.577-3.046Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeWidth='1.5'
+        d='m14.636 13.908 1.993 1.658c1.42 1.18 2.129 1.77 2.704 1.501.576-.27.576-1.193.576-3.038V7.795c0-1.885 0-2.828-.586-3.414-.586-.586-1.529-.586-3.414-.586h-3.2c-1.257 0-1.886 0-2.354.273a2 2 0 0 0-.718.719c-.273.467-.273 1.096-.273 2.354m-5.273 4v6.234c0 1.845 0 2.768.576 3.038.575.27 1.285-.32 2.703-1.5l.715-.595c.611-.509.917-.763 1.279-.763.361 0 .667.254 1.279.763l.714.594c1.419 1.18 2.128 1.77 2.704 1.501.575-.27.575-1.193.575-3.038V11.14c0-1.885 0-2.828-.586-3.414-.585-.586-1.528-.586-3.414-.586H8.091c-1.885 0-2.828 0-3.414.586-.586.586-.586 1.529-.586 3.414Z'
+      />
+    </svg>
+  )
+}

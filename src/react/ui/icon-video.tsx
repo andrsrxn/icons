@@ -1,0 +1,36 @@
+import type { Icon } from '../types'
+
+/**
+ * @preview ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDI0IDI0Ij48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWxsPSd3aGl0ZScvPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTMuNTc4IDEwLjY3NWMwLTEuODg1IDAtMi44MjguNTg2LTMuNDE0LjU4Ni0uNTg2IDEuNTI5LS41ODYgMy40MTQtLjU4Nmg0LjE2YzEuODg1IDAgMi44MjggMCAzLjQxMy41ODYuNTg2LjU4Ni41ODYgMS41MjkuNTg2IDMuNDE0djIuNjVjMCAxLjg4NiAwIDIuODI4LS41ODYgMy40MTQtLjU4NS41ODYtMS41MjguNTg2LTMuNDE0LjU4Nkg3LjU3OGMtMS44ODUgMC0yLjgyOCAwLTMuNDE0LS41ODYtLjU4Ni0uNTg2LS41ODYtMS41MjktLjU4Ni0zLjQxNHYtMi42NVoiIG9wYWNpdHk9Ii4yIi8+PHBhdGggc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNMy41NzggMTAuNjc1YzAtMS44ODUgMC0yLjgyOC41ODYtMy40MTQuNTg2LS41ODYgMS41MjktLjU4NiAzLjQxNC0uNTg2aDQuMTZjMS44ODUgMCAyLjgyOCAwIDMuNDEzLjU4Ni41ODYuNTg2LjU4NiAxLjUyOS41ODYgMy40MTR2Mi42NWMwIDEuODg2IDAgMi44MjgtLjU4NiAzLjQxNC0uNTg1LjU4Ni0xLjUyOC41ODYtMy40MTQuNTg2SDcuNTc4Yy0xLjg4NSAwLTIuODI4IDAtMy40MTQtLjU4Ni0uNTg2LS41ODYtLjU4Ni0xLjUyOS0uNTg2LTMuNDE0di0yLjY1WiIvPjxwYXRoIHN0cm9rZT0iY3VycmVudENvbG9yIiBzdHJva2Utd2lkdGg9IjEuNSIgZD0iTTE1LjczNyAxMS4wNzRjMC0uNTMxIDAtLjc5Ny4wNzktMS4wM2ExLjUgMS41IDAgMCAxIC40MTMtLjYzMWMuMTgyLS4xNjYuNDI1LS4yNzIuOTEyLS40ODUgMS4wNDgtLjQ1OCAxLjU3My0uNjg3IDEuOTk3LS42MjZhMS41IDEuNSAwIDAgMSAxLjA1Ny42OTJjLjIyNy4zNjQuMjI3LjkzNi4yMjcgMi4wOHYxLjg3NmMwIDEuMTM4IDAgMS43MDYtLjIyNiAyLjA3YTEuNSAxLjUgMCAwIDEtMS4wNTIuNjkyYy0uNDIyLjA2NC0uOTQ1LS4xNi0xLjk5LS42MS0uNDktLjIxMS0uNzM2LS4zMTctLjkyLS40ODJhMS41IDEuNSAwIDAgMS0uNDE3LS42MzNjLS4wOC0uMjM1LS4wOC0uNTAyLS4wOC0xLjAzN3YtMS44NzZaIi8+PC9zdmc+)
+ */
+export const IconVideo: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='icon-video'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M3.578 10.675c0-1.885 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h4.16c1.885 0 2.828 0 3.413.586.586.586.586 1.529.586 3.414v2.65c0 1.886 0 2.828-.586 3.414-.585.586-1.528.586-3.414.586H7.578c-1.885 0-2.828 0-3.414-.586-.586-.586-.586-1.529-.586-3.414v-2.65Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeWidth='1.5'
+        d='M3.578 10.675c0-1.885 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h4.16c1.885 0 2.828 0 3.413.586.586.586.586 1.529.586 3.414v2.65c0 1.886 0 2.828-.586 3.414-.585.586-1.528.586-3.414.586H7.578c-1.885 0-2.828 0-3.414-.586-.586-.586-.586-1.529-.586-3.414v-2.65Z'
+      />
+      <path
+        stroke='currentColor'
+        strokeWidth='1.5'
+        d='M15.737 11.074c0-.531 0-.797.079-1.03a1.5 1.5 0 0 1 .413-.631c.182-.166.425-.272.912-.485 1.048-.458 1.573-.687 1.997-.626a1.5 1.5 0 0 1 1.057.692c.227.364.227.936.227 2.08v1.876c0 1.138 0 1.706-.226 2.07a1.5 1.5 0 0 1-1.052.692c-.422.064-.945-.16-1.99-.61-.49-.211-.736-.317-.92-.482a1.5 1.5 0 0 1-.417-.633c-.08-.235-.08-.502-.08-1.037v-1.876Z'
+      />
+    </svg>
+  )
+}
