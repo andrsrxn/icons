@@ -132,6 +132,13 @@ import type { Icon, IconProps } from '@andrsrxn/icons'
 - **Icon**: The SVG element
 - **IconProps**: Icon component props from SVG and custom props
 
+## Inspiration
+
+All of the icons were made by scratch on Figma but inspired on the following icon libraries:
+
+- [Phosphor Icons](https://phosphoricons.com/)
+- [HugeIcons](https://hugeicons.com/icons)
+
 ## License
 
 [MIT License](LICENSE) - Copyright 2026 andrsrxn.
