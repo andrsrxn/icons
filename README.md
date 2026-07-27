@@ -139,6 +139,13 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 - [Phosphor Icons](https://phosphoricons.com/)
 - [HugeIcons](https://hugeicons.com/icons)
 
+## Next steps
+
+- Adapt the rest of Brand icons into UI logo icons (already have the most used ones)
+- Add more specific UI icons
+- Keep optimizing the icon library
+- Consider adapting the icons to other frameworks (Svelte, Vue, Angular, etc.)
+
 ## License
 
 [MIT License](LICENSE) - Copyright 2026 andrsrxn.
