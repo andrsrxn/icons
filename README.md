@@ -148,4 +148,4 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 
 ## License
 
-[MIT License](LICENSE) - Copyright 2026 andrsrxn.
+All icons are free to use, personal or commercial use allowed. [MIT License](LICENSE) - Copyright 2026 andrsrxn.
