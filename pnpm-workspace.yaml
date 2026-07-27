@@ -1,7 +1,7 @@
 saveExact: true
 provenance: true
 autoInstallPeers: true
-minimumReleaseAge: 4320
+minimumReleaseAge: 0
 allowBuilds:
   esbuild: true
   lightningcss-cli: true
