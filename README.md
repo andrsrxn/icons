@@ -136,6 +136,13 @@ import type { Icon, IconProps } from '@andrsrxn/icons'
 
 We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through GitHub issues.
 
+## Support
+
+If this project helps you, you can support its development through:
+
+- Credit or debit card: https://app.recurrente.com/s/andrsrxn/pagar
+- PayPal: https://paypal.me/andrsrxn
+
 ## Inspiration
 
 All of the icons were made by scratch on Figma but inspired on the following icon libraries:
