@@ -132,6 +132,10 @@ import type { Icon, IconProps } from '@andrsrxn/icons'
 - **Icon**: The SVG element
 - **IconProps**: Icon component props from SVG and custom props
 
+## Contributing
+
+We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through GitHub issues.
+
 ## Inspiration
 
 All of the icons were made by scratch on Figma but inspired on the following icon libraries:
