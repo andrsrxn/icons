@@ -1,10 +1,16 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandMicrosoftCopilot: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandMicrosoftCopilot: BrandIcon = ({
+  className,
+  size,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Microsoft Copilot'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='2 4 43.998 40'

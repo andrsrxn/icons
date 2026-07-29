@@ -1,6 +1,7 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandGoogleSearchConsole: BrandIcon = ({
   className,
+  size,
   ...props
 }: BrandIconProps) => (
   <svg
@@ -8,10 +9,10 @@ export const IconBrandGoogleSearchConsole: BrandIcon = ({
     fill='none'
     aria-label='Google Search Console'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     xmlSpace='preserve'
-    width='100%'
-    height='100%'
     fillRule='evenodd'
     clipRule='evenodd'
     strokeLinejoin='round'

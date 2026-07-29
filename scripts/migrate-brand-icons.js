@@ -164,10 +164,21 @@ for (const file of files) {
     "import type { BrandIcon, BrandIconProps } from './types'"
   )
 
+  content = content.replace(/(\(\{\s*className,)(?!\s*size,)(\s*\.\.\.props\s*\})/gu, '$1 size,$2')
+
   content = content.replace(
     /export\s+const\s+(BrandIcon\w+)\s*=\s*\(([\s\S]*?):\s*SVGProps<SVGSVGElement>\)\s*=>/gu,
     'export const $1: BrandIcon = ($2: BrandIconProps) =>'
   )
+
+  const svgClassNameRegex = /(className=\{`ui-icon-brand \$\{className \?\? ''\}`\})/gu
+
+  if (!content.includes('width={size')) {
+    content = content.replace(
+      svgClassNameRegex,
+      `$1\n    width={size ?? 'var(--ui-icon-size, 24)'}\n    height={size ?? 'var(--ui-icon-size, 24)'}`
+    )
+  }
 
   // 1. Replace monochrome fills:  className='fill-black dark:fill-white'
   //    → fill="var(--ui-icon-fill-monochrome)"

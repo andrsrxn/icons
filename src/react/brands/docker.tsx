@@ -1,9 +1,11 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandDocker: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandDocker: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Docker'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     preserveAspectRatio='xMidYMid'
     role='img'
     fill='#008fe2'

@@ -1,6 +1,7 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandMicrosoftSharePoint: BrandIcon = ({
   className,
+  size,
   ...props
 }: BrandIconProps) => (
   <svg
@@ -8,6 +9,8 @@ export const IconBrandMicrosoftSharePoint: BrandIcon = ({
     fill='none'
     aria-label='Microsoft SharePoint'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='0 0 450 500'

@@ -1,10 +1,16 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandMicrosoftOutlook: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandMicrosoftOutlook: BrandIcon = ({
+  className,
+  size,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Microsoft Outlook'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='60 90.4 570.02 539.67'

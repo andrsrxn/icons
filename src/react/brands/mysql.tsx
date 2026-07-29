@@ -1,9 +1,11 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandMySQL: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandMySQL: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='MySQL'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     viewBox='0 0 122.88 83.67'
     {...props}>

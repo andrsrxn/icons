@@ -1,10 +1,16 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandMicrosoftOneNote: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandMicrosoftOneNote: BrandIcon = ({
+  className,
+  size,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Microsoft OneNote'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='4 6 35 35.999'

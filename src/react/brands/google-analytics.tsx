@@ -1,5 +1,9 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandGoogleAnalytics: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandGoogleAnalytics: BrandIcon = ({
+  className,
+  size,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     id='google_analytics__Layer_1'
@@ -8,6 +12,8 @@ export const IconBrandGoogleAnalytics: BrandIcon = ({ className, ...props }: Bra
     fill='none'
     aria-label='Google Analytics'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     viewBox='0 0 2195.9 2430.9'
     xmlSpace='preserve'

@@ -1,10 +1,12 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandTrello: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandTrello: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Trello'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0 0 63 63'

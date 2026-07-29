@@ -1,9 +1,15 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandGooglePlayBadge: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandGooglePlayBadge: BrandIcon = ({
+  className,
+  size,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Google Play Badge'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     role='img'
     preserveAspectRatio='xMidYMid'
     xmlnsXlink='http://www.w3.org/1999/xlink'

@@ -1,10 +1,12 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandAliExpress: BrandIcon = ({ className, ...props }: BrandIconProps) => (
+export const IconBrandAliExpress: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='AliExpress'
     className={`ui-icon-brand ${className ?? ''}`}
+    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size ?? 'var(--ui-icon-size, 24)'}
     {...props}
     enableBackground='new 0 0 1991.3 2143.2'
     role='img'
