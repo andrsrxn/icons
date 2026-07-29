@@ -1,0 +1,30 @@
+import type { Icon } from '../types'
+
+export const IconLogoMsOutlook: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='logo-ms-outlook'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M12.832 7.392H4.384A.384.384 0 0 0 4 7.776v8.448c0 .212.172.384.384.384h8.448a.384.384 0 0 0 .384-.384V7.776a.384.384 0 0 0-.384-.384Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='1.5'
+        d='M8 16.667v2a.667.667 0 0 0 .667.666h10.666a.667.667 0 0 0 .667-.666v-8h-2m2 0L14 15m-4-7.667V4.667h8v7.444m1.772 7.057-6.439-4.65M4.667 7.333h8c.368 0 .666.299.666.667v8a.667.667 0 0 1-.666.667h-8A.667.667 0 0 1 4 16V8c0-.368.298-.667.667-.667Zm6 4.667a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z'
+      />
+    </svg>
+  )
+}

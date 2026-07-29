@@ -1,0 +1,29 @@
+import type { Icon } from '../types'
+
+export const IconKeyShift: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='key-shift'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M15.65 10.732a.5.5 0 0 1 .5-.5h1.418c.887 0 1.332-.954.704-1.512l-5.567-4.95a1.087 1.087 0 0 0-1.41 0L5.728 8.72c-.628.558-.183 1.512.705 1.512h1.416a.5.5 0 0 1 .5.5v6.425c0 1.383 0 2.074.41 2.55a1.9 1.9 0 0 0 .372.331c.536.365 1.314.365 2.869.365 1.555 0 2.332 0 2.869-.365.14-.095.265-.206.372-.33.41-.477.41-1.168.41-2.551v-6.425Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeWidth='1.5'
+        d='M15.65 10.732a.5.5 0 0 1 .5-.5h1.418c.887 0 1.332-.954.704-1.512l-5.567-4.95a1.087 1.087 0 0 0-1.41 0L5.728 8.72c-.628.558-.183 1.512.705 1.512h1.416a.5.5 0 0 1 .5.5v6.425c0 1.383 0 2.074.41 2.55a1.9 1.9 0 0 0 .372.331c.536.365 1.314.365 2.869.365 1.555 0 2.332 0 2.869-.365.14-.095.265-.206.372-.33.41-.477.41-1.168.41-2.551v-6.425Z'
+      />
+    </svg>
+  )
+}

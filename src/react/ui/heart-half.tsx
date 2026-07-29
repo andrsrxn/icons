@@ -1,0 +1,30 @@
+import type { Icon } from '../types'
+
+export const IconHeartHalf: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='heart-half'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M7.868 4.611c1.903 0 3.356 1.42 3.98 2.31.07.1.106.151.129.224a.951.951 0 0 1 .023.287v9.616c0 1.08 0 1.621-.28 1.759-.28.137-.725-.207-1.616-.896-2.824-2.182-6.367-4.34-6.367-8.984 0-1.862 1.533-4.316 4.131-4.316Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='1.5'
+        d='M12 19.57c2.754-2.927 8.263-4.853 8.263-10.643 0-1.862-1.533-4.316-4.131-4.316-2.079 0-3.62 1.695-4.132 2.543-.511-.848-2.053-2.543-4.132-2.543-2.598 0-4.131 2.454-4.131 4.316 0 5.79 5.509 7.716 8.263 10.642Zm0-12.416v12.415'
+      />
+    </svg>
+  )
+}

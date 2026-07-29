@@ -1,0 +1,28 @@
+import type { Icon } from '../types'
+
+export const IconPanelsBottom: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='panels-bottom'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M16 20c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.885 20 16v-4H4v4c0 1.886 0 2.828.586 3.414C5.172 20 6.114 20 8 20h8Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeWidth='1.5'
+        d='M20 12V8c0-1.886 0-2.828-.586-3.414C18.828 4 17.886 4 16 4H8c-1.886 0-2.828 0-3.414.586C4 5.172 4 6.114 4 8v4m16 0v4c0 1.886 0 2.828-.586 3.414C18.828 20 17.886 20 16 20H8c-1.886 0-2.828 0-3.414-.586C4 18.828 4 17.886 4 16v-4m16 0H4'
+      />
+    </svg>
+  )
+}

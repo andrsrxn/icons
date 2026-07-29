@@ -1,0 +1,28 @@
+import type { Icon } from '../types'
+
+export const IconPanelsRight: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='panels-right'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M20 8c0-1.886 0-2.828-.586-3.414C18.828 4 17.886 4 16 4h-4v16h4c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.886 20 16V8Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeWidth='1.5'
+        d='M12 20h4c1.886 0 2.828 0 3.414-.586C20 18.828 20 17.886 20 16V8c0-1.886 0-2.828-.586-3.414C18.828 4 17.886 4 16 4H8c-1.886 0-2.828 0-3.414.586C4 5.172 4 6.114 4 8v8c0 1.886 0 2.828.586 3.414C5.172 20 6.114 20 8 20h4Zm0-16v16'
+      />
+    </svg>
+  )
+}

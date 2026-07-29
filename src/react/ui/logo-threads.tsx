@@ -1,0 +1,30 @@
+import type { Icon } from '../types'
+
+export const IconLogoThreads: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='logo-threads'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M12 21c4.142 0 7.5-4.03 7.5-9S16.142 3 12 3c-4.142 0-7.5 4.03-7.5 9s3.358 9 7.5 9Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='1.5'
+        d='M18.75 7.28C17.8 4.808 15.803 3 12 3c-6 0-7.5 4.5-7.5 9S6 21 12 21c4.5 0 6.75-3 6.75-5.25 0-2.22-1.336-3.62-3.018-4.272m0 0C12.868 10.366 9 11.415 9 14.25 9 18 15.75 18 15.75 12c0-.18-.006-.354-.018-.522Zm0 0C15.394 6.753 10.448 6.828 9 9'
+      />
+    </svg>
+  )
+}

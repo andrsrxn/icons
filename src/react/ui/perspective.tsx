@@ -1,0 +1,28 @@
+import type { Icon } from '../types'
+
+export const IconPerspective: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='perspective'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M4 10.737c0-1.656 0-2.484.49-3.048.49-.564 1.31-.68 2.95-.912l8-1.132c2.122-.3 3.183-.45 3.871.148C20 6.39 20 7.463 20 9.606v4.775c0 2.15 0 3.223-.69 3.822-.691.598-1.755.444-3.881.137l-8-1.154c-1.635-.236-2.453-.354-2.94-.917C4 15.705 4 14.879 4 13.227v-2.49Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeWidth='1.5'
+        d='M4 10.8c0-1.65 0-2.474.487-3.037.487-.563 1.302-.683 2.934-.922l8-1.17c2.13-.312 3.195-.468 3.887.13C20 6.399 20 7.475 20 9.628v4.753c0 2.15 0 3.223-.69 3.822-.691.598-1.755.444-3.881.137l-8-1.154c-1.635-.236-2.453-.354-2.94-.917C4 15.705 4 14.879 4 13.227V10.8Z'
+      />
+    </svg>
+  )
+}

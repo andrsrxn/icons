@@ -1,0 +1,30 @@
+import type { Icon } from '../types'
+
+export const IconCompassTool: Icon = ({ size, className, ...props }) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 24 24'
+      width={size ?? 'var(--ui-icon-size, 24)'}
+      height={size ?? 'var(--ui-icon-size, 24)'}
+      data-slot='compass-tool'
+      aria-hidden='true'
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      <path
+        fill='currentColor'
+        d='M13.923 6.896a1.923 1.923 0 1 1-3.846 0 1.923 1.923 0 0 1 3.846 0Z'
+        opacity='.2'
+      />
+      <path
+        stroke='currentColor'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='1.5'
+        d='M3.73 15.254S6.705 17.47 12 17.47s8.27-2.217 8.27-2.217m-9.23-6.434L4.764 20.355M12.96 8.819l6.275 11.536M12 4.969V3.36m1.923 3.536a1.923 1.923 0 1 1-3.846 0 1.923 1.923 0 0 1 3.846 0Z'
+      />
+    </svg>
+  )
+}
