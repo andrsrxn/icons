@@ -1,4 +1,4 @@
-import type { Icon } from '../types'
+import type { Icon } from './types'
 
 export const IconPercent: Icon = ({ size, className, ...props }) => {
   return (

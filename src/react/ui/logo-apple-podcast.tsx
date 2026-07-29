@@ -1,4 +1,4 @@
-import type { Icon } from '../types'
+import type { Icon } from './types'
 
 export const IconLogoApplePodcast: Icon = ({ size, className, ...props }) => {
   return (

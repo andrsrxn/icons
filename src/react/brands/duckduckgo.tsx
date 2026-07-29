@@ -1,4 +1,4 @@
-import type { BrandIcon, BrandIconProps } from '../types'
+import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandDuckDuckGo: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'

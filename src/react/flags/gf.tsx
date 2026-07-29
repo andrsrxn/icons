@@ -1,4 +1,4 @@
-import type { FlagIcon, FlagIconProps } from '../types'
+import type { FlagIcon, FlagIconProps } from './types'
 
 export const IconFlagGF: FlagIcon = ({ className, ...props }: FlagIconProps) => {
   return (

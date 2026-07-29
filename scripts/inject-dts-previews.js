@@ -93,7 +93,7 @@ for (const file of files) {
     continue
   }
 
-  dts = dts.replace(/(declare\s+const\s+\w+\s*:)/u, `${preview}\n$1`)
+  dts = dts.replace(/(export\s+declare\s+const\s+\w+\s*:)/u, `${preview}\n$1`)
 
   fs.writeFileSync(dtsPath, dts, 'utf8')
 

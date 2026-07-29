@@ -1,4 +1,4 @@
-import type { Icon } from '../types'
+import type { Icon } from './types'
 
 export const IconCubeVertex: Icon = ({ size, className, ...props }) => {
   return (

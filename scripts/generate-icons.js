@@ -94,7 +94,7 @@ function generateComponent(fileName, svgContent) {
 
   const jsxSvg = normalizeSvg(rawSvg, iconName)
 
-  return `import type { Icon } from '../types'
+  return `import type { Icon } from './types'
 
 export const Icon${componentName}: Icon = ({ size, className, ...props }) => {
   return (

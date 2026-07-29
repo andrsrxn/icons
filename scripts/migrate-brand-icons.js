@@ -9,7 +9,7 @@
  *
  * 2. Replace SVG props with BrandIcon specific props
  *    → Remove SVGProps type import
- *    → Add BrandIcon and BrandIconProps imports from '../types'
+ *    → Add BrandIcon and BrandIconProps imports from './types'
  *    → Replace component props type with BrandIconProps
  *    → Replace the return type with BrandIcon
  *
@@ -141,8 +141,8 @@ let filesChanged = 0
 
 for (const file of files) {
   const filePath = path.join(BRANDS_DIR, file)
-  let content = fs.readFileSync(filePath, 'utf-8')
-  const original = content
+  const original = fs.readFileSync(filePath, 'utf-8')
+  let content = original
 
   const componentName = extractComponentName(content)
   if (!componentName) {
@@ -156,10 +156,12 @@ for (const file of files) {
   // Track unique fill pairs to reuse same variable
   const fillPairMap = new Map()
 
+  content = content.replace('../types', './types')
+
   // replace the svg props type to brand icon type
   content = content.replace(
     /import\s+type\s+\{\s*SVGProps\s*\}\s+from\s+['"]react['"]/gu,
-    "import type { BrandIcon, BrandIconProps } from '../types'"
+    "import type { BrandIcon, BrandIconProps } from './types'"
   )
 
   content = content.replace(
@@ -282,12 +284,12 @@ for (const file of files) {
 
   // Write changes
 
-  if (content !== original) {
-    filesChanged++
+  // if (content !== original) {
+  filesChanged++
 
-    fs.writeFileSync(filePath, content, 'utf-8')
-    console.log(` Updated: ${file}`)
-  }
+  fs.writeFileSync(filePath, content, 'utf-8')
+  console.log(` Updated: ${file}`)
+  // }
 }
 
 // Generate CSS file for custom fill variables

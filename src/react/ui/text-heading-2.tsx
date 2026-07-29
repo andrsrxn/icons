@@ -1,4 +1,4 @@
-import type { Icon } from '../types'
+import type { Icon } from './types'
 
 export const IconTextHeading2: Icon = ({ size, className, ...props }) => {
   return (

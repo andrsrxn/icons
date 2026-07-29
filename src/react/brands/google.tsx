@@ -1,4 +1,4 @@
-import type { BrandIcon, BrandIconProps } from '../types'
+import type { BrandIcon, BrandIconProps } from './types'
 
 export const IconBrandGoogle: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg

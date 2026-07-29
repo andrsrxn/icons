@@ -35,10 +35,11 @@ for (const file of files) {
   let content = original
 
   // 1. Replace the React SVG props import with the custom flag icon types
+  content = content.replace('../types', './types')
 
   content = content.replace(
     /import\s+type\s+\{\s*SVGProps\s*\}\s+from\s+['"]react['"]/u,
-    "import type { FlagIcon, FlagIconProps } from '../types'"
+    "import type { FlagIcon, FlagIconProps } from './types'"
   )
 
   // 2. Replace the component signature
@@ -50,13 +51,13 @@ for (const file of files) {
 
   // Write changes
 
-  if (content !== original) {
-    fs.writeFileSync(filePath, content, 'utf-8')
+  // if (content !== original) {
+  fs.writeFileSync(filePath, content, 'utf-8')
 
-    filesChanged++
+  filesChanged++
 
-    console.log(`Updated: ${file}`)
-  }
+  console.log(`Updated: ${file}`)
+  // }
 }
 
 // Summary
