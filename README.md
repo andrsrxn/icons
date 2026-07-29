@@ -18,9 +18,11 @@ pnpm add @andrsrxn/icons
 
 All of them are optimized and scalable SVGs.
 
-- **UI**: 600+ functional icons for apps. (aspect ratio 1:1)
-- **Brands**: 300+ Real logos for widely-known companies and technologies, treated as image assets with `aria-label` included. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, treated as image assets with `title` included. (aspect ratio 3:2)
+- **UI**: 600+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Brands**: 300+ Real logos for widely-known companies and technologies; treated as image assets with brand name as `aria-label` included. (aspect ratio 1:1)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+
+> **Note:**: The UI icons include "logos" which are different from the Brands category, the logos are duotone adapted versions of the real brand logos. (e.g. `IconLogoGithub` and `IconBrandGitHub` are different)
 
 ## Usage
 
@@ -30,11 +32,15 @@ Still tree-shakable, it will only import the icons you use.
 
 ```tsx
 import { IconRocket } from '@andrsrxn/icons'
+import { IconBrandGitHub } from '@andrsrxn/icons/brands'
+import { IconFlagUS } from '@andrsrxn/icons/flags'
 
 export function App() {
   return (
     <div className='flex h-screen w-full items-center justify-center'>
       <IconRocket />
+      <IconBrandGitHub />
+      <IconFlagUS />
     </div>
   )
 }
@@ -42,10 +48,12 @@ export function App() {
 
 ### Specific import
 
-Explicitly importing icons is also supported so you can have more control over it.
+Explicitly importing icons is also supported, giving you more granular control over imports.
 
 ```tsx
-import { IconRocket } from '@andrsrxn/icons/icon-rocket'
+import { IconRocket } from '@andrsrxn/icons/rocket'
+import { IconBrandGitHub } from '@andrsrxn/icons/brands/github'
+import { IconFlagUS } from '@andrsrxn/icons/flags/us'
 
 export function App() {
   return (
@@ -75,11 +83,13 @@ The following UI icons automatically detect the `dir` attribute on the `body` or
 
 ### Size
 
-> **Note:** Is recommended to add a size (width and height) to brand icons, while the flag icons could only have the width in order to keep the proportions.
+> **Note:** Is recommended to add a size (width and height) to UI and Brand icons, while the flag icons should only have the width in order to keep their proportions.
 
-You can change the size of the icons in three ways (this will only affect UI icons, not flags or brands icons, those most be set individually):
+You can change the size of the icons in three ways:
 
 1. Global CSS variable
+
+> **Note**: This variable will only affect UI icons, not flags or brands icons, those most be set individually
 
 ```css
 :root {
@@ -91,12 +101,15 @@ You can change the size of the icons in three ways (this will only affect UI ico
 
 ```tsx
 <IconRocket size={48} />
+<IconBrandGitHub size={48} />
 ```
 
 3. Classname
 
 ```tsx
-<IconRocket className='size-8' />
+<IconRocket className='size-6' />
+<IconBrandGitHub className='size-6' />
+<IconBrandFlagUS className='w-6' />
 ```
 
 ### Color
@@ -105,12 +118,15 @@ You can change the size of the icons in three ways (this will only affect UI ico
 
 ```tsx
 <IconRocket color='gray' />
+<IconBrandGitHub color='gray' />
 ```
 
 2. Classname
 
 ```tsx
 <IconRocket className='text-blue-500' />
+<IconBrandGitHub className='text-blue-500' />
+<IconBrandFlagUS className='text-blue-500' />
 ```
 
 #### Dark mode
@@ -123,10 +139,12 @@ It is not intended to change the stroke width of the icons, it could lead to inc
 
 ## Types
 
-We expose 2 main types that are used along side every icon:
+We expose types for each category:
 
 ```typescript
-import type { Icon, IconProps } from '@andrsrxn/icons'
+import type { Icon, IconProps } from '@andrsrxn/icons/types'
+import type { BrandIcon, BrandIconProps } from '@andrsrxn/icons/brands/types'
+import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 ```
 
 - **Icon**: The SVG element
