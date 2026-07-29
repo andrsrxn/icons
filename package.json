@@ -27,9 +27,6 @@
     "type": "git",
     "url": "git+https://github.com/andrsrxn/icons.git"
   },
-  "bugs": {
-    "url": "https://github.com/andrsrxn/icons/issues"
-  },
   "homepage": "https://github.com/andrsrxn/icons#readme",
   "sideEffects": [
     "dist/**/*.css"
@@ -53,6 +50,11 @@
       "types": "./dist/ui/index.d.ts",
       "import": "./dist/ui/index.js",
       "require": "./dist/ui/index.cjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "import": "./dist/types.js",
+      "require": "./dist/types.cjs"
     },
     "./brands": {
       "types": "./dist/brands/index.d.ts",
@@ -82,12 +84,15 @@
   },
   "scripts": {
     "dev": "vite",
-    "build:icons": "tsdown",
+    "build:icons": "tsdown && tsc -p ./tsconfig.build.json && node ./scripts/inject-dts-previews.js",
     "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
-    "build": "pnpm build:icons && pnpm build:css && echo Build finished.",
+    "build": "pnpm build:icons && tsc && pnpm build:css && echo Build finished.",
     "format": "prettier --write . && echo Format finished.",
     "lint": "biome check && echo Lint finished.",
     "typecheck": "tsc --noEmit && echo Typecheck finished.",
+    "changeset": "changeset",
+    "version-package": "changeset version",
+    "release": "pnpm build && changeset publish",
     "generate-icons": "node ./scripts/generate-icons.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/ui && echo Icons generated and formatted.",
     "generate-icons-index": "node ./scripts/generate-icons-index.js && echo Icons index generated.",
     "migrate-brand-icons": "node ./scripts/migrate-brand-icons.js && prettier --write ./src/react/brands && echo Migrated brand icons.",
@@ -102,6 +107,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.16",
+    "@changesets/cli": "2.31.1",
     "@types/node": "24.12.4",
     "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
