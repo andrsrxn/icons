@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react'
-export const IconBrandGraphql = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+import type { BrandIcon, BrandIconProps } from '../types'
+export const IconBrandGraphql: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     className={`ui-icon-brand ${className ?? ''}`}
     xmlns='http://www.w3.org/2000/svg'

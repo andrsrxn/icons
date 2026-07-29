@@ -1,6 +1,6 @@
-import type { SVGProps } from 'react'
+import type { FlagIcon, FlagIconProps } from '../types'
 
-export const IconFlagPF = ({ className, ...props }: SVGProps<SVGSVGElement>) => {
+export const IconFlagPF: FlagIcon = ({ className, ...props }: FlagIconProps) => {
   return (
     <svg
       width='21px'

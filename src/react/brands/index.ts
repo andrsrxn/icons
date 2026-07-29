@@ -1,4 +1,3 @@
-export type * from '../types'
 export * from './1password'
 export * from './acrobat-reader'
 export * from './adobe-after-effects'

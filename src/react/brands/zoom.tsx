@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react'
-export const IconBrandZoom = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+import type { BrandIcon, BrandIconProps } from '../types'
+export const IconBrandZoom: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Zoom'

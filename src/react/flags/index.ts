@@ -1,4 +1,3 @@
-export type * from '../types'
 export * from './ad'
 export * from './ae'
 export * from './af'

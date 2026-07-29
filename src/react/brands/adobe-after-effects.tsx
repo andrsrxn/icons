@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react'
-export const IconBrandAdobeAfterEffects = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+import type { BrandIcon, BrandIconProps } from '../types'
+export const IconBrandAdobeAfterEffects: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'

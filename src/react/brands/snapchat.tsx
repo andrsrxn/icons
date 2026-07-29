@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react'
-export const IconBrandSnapchat = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+import type { BrandIcon, BrandIconProps } from '../types'
+export const IconBrandSnapchat: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Snapchat'

@@ -1,5 +1,5 @@
-import type { SVGProps } from 'react'
-export const IconBrandRapidAPI = ({ className, ...props }: SVGProps<SVGSVGElement>) => (
+import type { BrandIcon, BrandIconProps } from '../types'
+export const IconBrandRapidAPI: BrandIcon = ({ className, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='RapidAPI'
