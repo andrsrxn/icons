@@ -81,19 +81,6 @@ function normalizeSvg(svg, iconName) {
   return svg
 }
 
-// Generate Base 64 preview for icon
-function injectWhiteBackground(svg) {
-  return svg.replace(/<svg([^>]*)>/u, `<svg$1><rect width='100%' height='100%' fill='white'/>`)
-}
-
-function svgToBase64(svg) {
-  return Buffer.from(svg).toString('base64')
-}
-
-function createPreviewJSDoc(base64) {
-  return `/**\n * @preview ![img](data:image/svg+xml;base64,${base64})\n */`
-}
-
 // Main transform
 
 function generateComponent(fileName, svgContent) {
@@ -105,16 +92,11 @@ function generateComponent(fileName, svgContent) {
     return null
   }
 
-  const previewSvg = injectWhiteBackground(rawSvg)
-  const base64 = svgToBase64(previewSvg)
-  const jsDocPreview = createPreviewJSDoc(base64)
-
   const jsxSvg = normalizeSvg(rawSvg, iconName)
 
   return `import type { Icon } from '../types'
 
-${jsDocPreview}
-export const ${componentName}: Icon = ({ size, className, ...props }) => {
+export const Icon${componentName}: Icon = ({ size, className, ...props }) => {
   return (
     ${jsxSvg}
   )

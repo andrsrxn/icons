@@ -7,11 +7,17 @@
  *    → Remove className, add fill="var(--ui-icon-fill-monochrome)"
  *    (for the inverse variant fill-white dark:fill-black, uses --ui-icon-fill-monochrome-inverse)
  *
- * 2. Custom hex fills (fill-[#xxx] dark:fill-[#yyy] or fill-[#xxx] dark:fill-white etc.):
+ * 2. Replace SVG props with BrandIcon specific props
+ *    → Remove SVGProps type import
+ *    → Add BrandIcon and BrandIconProps imports from '../types'
+ *    → Replace component props type with BrandIconProps
+ *    → Replace the return type with BrandIcon
+ *
+ * 3. Custom hex fills (fill-[#xxx] dark:fill-[#yyy] or fill-[#xxx] dark:fill-white etc.):
  *    → Remove className, add fill="var(--ui-icon-<name>-<n>)"
  *    → Collect CSS variables for :root / .dark in a generated CSS file
  *
- * 3. SVG root className:
+ * 4. SVG root className:
  *    className={cn('size-icon-base shrink-0', className)}
  *    → className={`ui-icon-brand ${className ?? ''}`}
  *    Also removes the `import { cn } from '...'` line.
@@ -150,6 +156,17 @@ for (const file of files) {
   // Track unique fill pairs to reuse same variable
   const fillPairMap = new Map()
 
+  // replace the svg props type to brand icon type
+  content = content.replace(
+    /import\s+type\s+\{\s*SVGProps\s*\}\s+from\s+['"]react['"]/gu,
+    "import type { BrandIcon, BrandIconProps } from '../types'"
+  )
+
+  content = content.replace(
+    /export\s+const\s+(BrandIcon\w+)\s*=\s*\(([\s\S]*?):\s*SVGProps<SVGSVGElement>\)\s*=>/gu,
+    'export const $1: BrandIcon = ($2: BrandIconProps) =>'
+  )
+
   // 1. Replace monochrome fills:  className='fill-black dark:fill-white'
   //    → fill="var(--ui-icon-fill-monochrome)"
   //    Also handle inverse:  className='fill-white dark:fill-black'
@@ -157,6 +174,7 @@ for (const file of files) {
 
   // Handle both single-quoted and JSX expression className for monochrome
   // Pattern A: className='fill-black dark:fill-white' (on same line or attribute)
+
   content = content.replace(
     /className='fill-black dark:fill-white'/gu,
     "fill='var(--ui-icon-fill-monochrome)'"

@@ -53,8 +53,6 @@ function main() {
       return `export * from './${basename}'`
     })
 
-    exports.unshift(`export type * from '../types'`)
-
     const outputFile = path.join(dir, 'index.ts')
     // biome-ignore lint/style/useTemplate: false positive
     fs.writeFileSync(outputFile, exports.join('\n') + '\n')

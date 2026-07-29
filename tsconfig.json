@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2024",
     "useDefineForClassFields": true,
-    "lib": ["ES2024"],
+    "lib": ["ES2024", "DOM"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -32,7 +32,7 @@
     "incremental": false,
     "forceConsistentCasingInFileNames": true,
     "noUncheckedIndexedAccess": true,
-    "removeComments": true,
+    "removeComments": false,
     "noImplicitAny": true,
     "strictNullChecks": true,
     "noImplicitThis": true,
