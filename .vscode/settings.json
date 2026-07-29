@@ -1,0 +1,13 @@
+{
+  "typescript.tsdk": "node_modules\\typescript\\lib",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never",
+    "source.organizeImports.biome": "explicit",
+    "source.removeUnusedImports": "explicit",
+    "source.removeUnused.ts": "never",
+    "quickfix.biome": "explicit"
+  },
+  "files.insertFinalNewline": true,
+  "files.eol": "\r\n",
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
