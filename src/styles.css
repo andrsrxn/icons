@@ -24,6 +24,7 @@
   --ui-icon-fill-react: #087ea4;
   --ui-icon-fill-t3: #000000;
   --ui-icon-fill-wise: #163300;
+  --ui-icon-fill-sqlite: #003b57;
 }
 
 .dark,
@@ -47,6 +48,7 @@
   --ui-icon-fill-react: #58c4dc;
   --ui-icon-fill-t3: #e2e8f0;
   --ui-icon-fill-wise: #ffffff;
+  --ui-icon-fill-sqlite: #ffffff;
 }
 
 .ui-icon,
