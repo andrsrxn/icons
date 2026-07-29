@@ -14,6 +14,12 @@ You only need to be using `react` and `react-dom` version 19.
 pnpm add @andrsrxn/icons
 ```
 
+Then add the minimal CSS to the root of your project
+
+```tsx
+import '@andrsrxn/icons/styles.css'
+```
+
 ## Categories
 
 All of them are optimized and scalable SVGs.
@@ -77,6 +83,10 @@ The following UI icons automatically detect the `dir` attribute on the `body` or
 - chevron-end-double
 - chevron-start-double
 
+## Naming
+
+All of the icons have an `Icon` prefix to differentiate them from other components and be easily importable.
+
 ## Styling
 
 > **Note:** The styles added on `className` will have the most priority over the others, second the specific prop and last the global CSS variable when applicable.
@@ -124,14 +134,18 @@ You can change the size of the icons in three ways:
 2. Classname
 
 ```tsx
-<IconRocket className='text-blue-500' />
-<IconBrandGitHub className='text-blue-500' />
-<IconBrandFlagUS className='text-blue-500' />
+<IconRocket className='text-blue-500 dark:text-red-500' />
+<IconBrandGitHub className='text-blue-500 dark:text-red-500' />
+<IconBrandFlagUS className='text-blue-500 dark:text-red-500' />
 ```
 
 #### Dark mode
 
-When using the Brand icons, they automatically handle dark mode changes through the `.dark` className or `data-theme='dark'` attribute.
+> **Note**: Only supported **automatically** on Brand icons, for UI icons you need to set the color manually.
+
+When using the Brand icons, they automatically handle dark mode through the `.dark` className or `data-theme='dark'` attribute.
+
+You can also define an static theme for each icon, by adding the `.light`/`.dark` className or setting `data-theme='light'`/`data-theme='dark'` to the icon itself or a parent element to keep always the same style.
 
 ### Stroke width
 
