@@ -1,5 +1,4 @@
 saveExact: true
-provenance: true
 autoInstallPeers: true
 minimumReleaseAge: 0
 allowBuilds:
