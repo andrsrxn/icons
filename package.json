@@ -34,7 +34,8 @@
   "files": [
     "dist",
     "LICENSE",
-    "README.md"
+    "README.md",
+    "CHANGELOG.md"
   ],
   "engines": {
     "node": "^24",
@@ -92,7 +93,9 @@
     "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
     "build": "pnpm build:icons && tsc && pnpm build:css && echo Build finished.",
     "format": "prettier --write . && echo Format finished.",
+    "format:check": "prettier --check . && echo Format finished.",
     "lint": "biome check && echo Lint finished.",
+    "lint:check": "biome ci && echo Lint finished.",
     "typecheck": "tsc --noEmit && echo Typecheck finished.",
     "changeset": "changeset",
     "version-package": "changeset version",
