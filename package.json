@@ -40,7 +40,7 @@
     "node": "^24",
     "pnpm": "^11"
   },
-  "packageManager": "pnpm@11.12.0",
+  "packageManager": "pnpm@11.13.1",
   "main": "./dist/ui/index.cjs",
   "module": "./dist/ui/index.js",
   "types": "./dist/ui/index.d.ts",
