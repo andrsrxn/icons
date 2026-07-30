@@ -3,12 +3,14 @@
  *
  * Migrates all .tsx flag icon components in src/react/flags/:
  *
- * 1. Replaces the React SVGProps import with the custom flag icon types.
- * 2. Updates each component signature to use FlagIcon and FlagIconProps.
+ * 1. Replaces the React SVGProps import with custom flag icon types.
+ * 2. Updates component signature to support `size`, `width = size ?? 24`, and `height = size ?? 'auto'`.
+ * 3. Binds ROOT <svg> width and height to `{width}` and `{height}` without touching internal shapes.
  *
  * Usage:
  *   node scripts/migrate-flag-icons.js
  */
+/** biome-ignore-all lint/performance/useTopLevelRegex: not necessary */
 /** biome-ignore-all lint/nursery/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/suspicious/noConsole: not necessary */
 
@@ -34,28 +36,29 @@ for (const file of files) {
   const original = fs.readFileSync(filePath, 'utf-8')
   let content = original
 
-  // 1. Replace the React SVG props import with the custom flag icon types
+  // 1. Normalizar Imports de tipos
   content = content.replace('../types', './types')
-
   content = content.replace(
-    /import\s+type\s+\{\s*SVGProps\s*\}\s+from\s+['"]react['"]/u,
+    /import\s+type\s+\{\s*SVGProps\s*\}\s+from\s+['"]react['"]/gu,
     "import type { FlagIcon, FlagIconProps } from './types'"
   )
 
-  // 2. Replace the component signature
-
+  // 2. Actualizar la firma (Corregida la captura de $2 para evitar '}' duplicada)
   content = content.replace(
-    /export const (FlagIcon[A-Za-z0-9]+) = \(\{ className, \.\.\.props \}: SVGProps<SVGSVGElement>\) =>/u,
-    'export const $1: FlagIcon = ({ className, ...props }: FlagIconProps) =>'
+    /export\s+const\s+(IconFlag\w+|FlagIcon\w+)(?::\s*FlagIcon)?\s*=\s*\(\{\s*className,[\s\S]*?(\.\.\.props)\s*\}\s*:\s*(?:SVGProps<SVGSVGElement>|FlagIconProps)\)\s*=>/gu,
+    `export const $1: FlagIcon = ({\n  className,\n  size,\n  width = size ?? 24,\n  height = size ?? 'auto',\n  $2\n}: FlagIconProps) =>`
   )
 
-  // Write changes
+  // 3. Reemplazar width y height SOLAMENTE en la etiqueta de apertura del <svg> raíz
+  content = content.replace(/<svg\b([\s\S]*?)>/u, svgTagMatch => {
+    return svgTagMatch
+      .replace(/\bwidth=(?:'[^']+'|"[^"]+"|\{[^}]+\})/u, 'width={width}')
+      .replace(/\bheight=(?:'[^']+'|"[^"]+"|\{[^}]+\})/u, 'height={height}')
+  })
 
   // if (content !== original) {
   fs.writeFileSync(filePath, content, 'utf-8')
-
   filesChanged++
-
   console.log(`Updated: ${file}`)
   // }
 }

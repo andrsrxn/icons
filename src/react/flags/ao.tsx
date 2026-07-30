@@ -1,10 +1,16 @@
 import type { FlagIcon, FlagIconProps } from './types'
 
-export const IconFlagAO: FlagIcon = ({ className, ...props }: FlagIconProps) => {
+export const IconFlagAO: FlagIcon = ({
+  className,
+  size,
+  width = size ?? 24,
+  height = size ?? 'auto',
+  ...props
+}: FlagIconProps) => {
   return (
     <svg
-      width='21px'
-      height='15px'
+      width={width}
+      height={height}
       viewBox='0 0 21 15'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
