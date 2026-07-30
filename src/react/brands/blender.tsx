@@ -1,12 +1,12 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandBlender: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandBlender: BrandIcon = ({ className, size = 24, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Blender'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0.1 16.7 2472.8 1996.5'

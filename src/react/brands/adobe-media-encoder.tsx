@@ -1,7 +1,7 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandAdobeMediaEncoder: BrandIcon = ({
   className,
-  size,
+  size = 24,
   ...props
 }: BrandIconProps) => (
   <svg
@@ -9,8 +9,8 @@ export const IconBrandAdobeMediaEncoder: BrandIcon = ({
     fill='none'
     aria-label='Adobe Media Encoder'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='0 0 32 32'

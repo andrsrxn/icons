@@ -1,13 +1,13 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandTikTok: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandTikTok: BrandIcon = ({ className, size = 24, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     fill='none'
     aria-label='TikTok'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0 0 352.28 398.67'

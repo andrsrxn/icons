@@ -1,7 +1,7 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandMicrosoftPowerPoint: BrandIcon = ({
   className,
-  size,
+  size = 24,
   ...props
 }: BrandIconProps) => (
   <svg
@@ -9,8 +9,8 @@ export const IconBrandMicrosoftPowerPoint: BrandIcon = ({
     fill='none'
     aria-label='Microsoft PowerPoint'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     role='img'
     preserveAspectRatio='xMidYMid'
     viewBox='60 78.75 581.25 562.5'

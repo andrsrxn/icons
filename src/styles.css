@@ -1,7 +1,3 @@
-:root {
-  --ui-icon-size: 24px;
-}
-
 :root,
 .light,
 [data-theme='light'] {

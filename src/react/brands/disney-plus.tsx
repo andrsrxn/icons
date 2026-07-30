@@ -1,12 +1,16 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandDisneyPlus: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandDisneyPlus: BrandIcon = ({
+  className,
+  size = 24,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Disney Plus'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     enableBackground='new 0 0 534 302'
     preserveAspectRatio='xMidYMid'
     role='img'

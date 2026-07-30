@@ -1,11 +1,15 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandSQLServer: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandSQLServer: BrandIcon = ({
+  className,
+  size = 24,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='SQL Server'
     className={`ui-icon-brand ${className ?? ''}`}
-    height={size ?? 'var(--ui-icon-size, 24)'}
-    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size}
+    width={size}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0 0 48 48'

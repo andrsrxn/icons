@@ -1,7 +1,7 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandJetBrainsWebStorm: BrandIcon = ({
   className,
-  size,
+  size = 24,
   ...props
 }: BrandIconProps) => (
   <svg
@@ -9,8 +9,8 @@ export const IconBrandJetBrainsWebStorm: BrandIcon = ({
     fill='none'
     aria-label='JetBrains WebStorm'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     role='img'
     xmlnsXlink='http://www.w3.org/1999/xlink'
     viewBox='0 0 105 105'

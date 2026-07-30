@@ -1,11 +1,11 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandTwitter: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandTwitter: BrandIcon = ({ className, size = 24, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Twitter'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     {...props}
     preserveAspectRatio='xMidYMid'
     role='img'

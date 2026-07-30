@@ -1,11 +1,11 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandAdobeXD: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandAdobeXD: BrandIcon = ({ className, size = 24, ...props }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='Adobe XD'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     {...props}
     role='img'
     viewBox='0 0 240 234'

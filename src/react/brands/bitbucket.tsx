@@ -1,5 +1,9 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandBitbucket: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandBitbucket: BrandIcon = ({
+  className,
+  size = 24,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     x='0'
@@ -7,8 +11,8 @@ export const IconBrandBitbucket: BrandIcon = ({ className, size, ...props }: Bra
     fill='none'
     aria-label='Bitbucket'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     enableBackground='new 8.4 14.39 2481.29 2231.21'
     preserveAspectRatio='xMidYMid'
     role='img'

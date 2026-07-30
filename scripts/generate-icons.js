@@ -57,8 +57,8 @@ function svgAttrsToJsx(svg) {
 function injectReactProps(svg, iconName) {
   return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
     return `<svg${attrs}
-      width={size ?? 'var(--ui-icon-size, ${ICON_SIZE})'}
-      height={size ?? 'var(--ui-icon-size, ${ICON_SIZE})'}
+      width={size}
+      height={size}
       data-slot='${iconName}'
       aria-hidden='true'
       focusable='false'
@@ -96,7 +96,7 @@ function generateComponent(fileName, svgContent) {
 
   return `import type { Icon } from './types'
 
-export const Icon${componentName}: Icon = ({ size, className, ...props }) => {
+export const Icon${componentName}: Icon = ({ size = ${ICON_SIZE}, className, ...props }) => {
   return (
     ${jsxSvg}
   )

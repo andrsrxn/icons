@@ -1,15 +1,15 @@
 import type { BrandIcon, BrandIconProps } from './types'
 export const IconBrandJetbrainsPyCharm: BrandIcon = ({
   className,
-  size,
+  size = 24,
   ...props
 }: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     aria-label='JetBrains PyCharm'
     className={`ui-icon-brand ${className ?? ''}`}
-    width={size ?? 'var(--ui-icon-size, 24)'}
-    height={size ?? 'var(--ui-icon-size, 24)'}
+    width={size}
+    height={size}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0 0 105 105'

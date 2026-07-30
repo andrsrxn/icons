@@ -1,12 +1,16 @@
 import type { BrandIcon, BrandIconProps } from './types'
-export const IconBrandMetamask: BrandIcon = ({ className, size, ...props }: BrandIconProps) => (
+export const IconBrandMetamask: BrandIcon = ({
+  className,
+  size = 24,
+  ...props
+}: BrandIconProps) => (
   <svg
     xmlns='http://www.w3.org/2000/svg'
     fill='none'
     aria-label='Metamask'
     className={`ui-icon-brand ${className ?? ''}`}
-    height={size ?? 'var(--ui-icon-size, 24)'}
-    width={size ?? 'var(--ui-icon-size, 24)'}
+    height={size}
+    width={size}
     preserveAspectRatio='xMidYMid'
     role='img'
     viewBox='0 0 134 135'
