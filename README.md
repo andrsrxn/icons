@@ -74,7 +74,7 @@ export function App() {
 
 ## RTL support
 
-The following UI icons automatically detect the `dir` attribute on the `html` or the closest parent element and add the `transform: scaleX(-1)`
+The following UI icons automatically detect the `dir` attribute on the `html` or the closest parent element and add the `transform: scaleX(-1)` CSS property to the SVG element:
 
 - arrow-end
 - arrow-start
@@ -87,44 +87,54 @@ The following UI icons automatically detect the `dir` attribute on the `html` or
 
 ## Naming
 
-All of the icons have an `Icon` prefix to differentiate them from other components and be easily importable.
+All of the categories have an `Icon` prefix to differentiate them from other components and be easily importable.
 
 ## Styling
 
-> **Note:** The styles added on `className` will have the most priority over the others, second the specific prop and last the global CSS variable when applicable.
+All of the icons have a specific className to style them globally or individualy
+
+- **UI icons**: `ui-icon`
+- **Brand icons**: `brand-icon`
+- **Flag icons**: `flag-icon`
+
+Or you can use the custom props as the next examples:
 
 ### Size
 
-> **Note:** Is recommended to set a size (width and height) to UI and Brand icons, while the flag icons should only have the width in order to keep their proportions.
+> **Note:** If you want to keep proportions on Flag icons, only set the `width`.
 
-You can change the size of the icons in three ways:
-
-1. Global CSS variable
-
-> **Note**: This variable will only affect UI icons, not flags or brands icons, those most be set individually
-
-```css
-:root {
-  --ui-icon-size: 32px;
-}
-```
-
-2. Size prop
+1. Size prop
 
 ```tsx
 <IconRocket size={48} />
 <IconBrandGitHub size={48} />
+
+// Keep 3:2 proportions
+<IconFlagUS width={48} />
+
+// Square proportions
+<IconFlagUS size={48} />
 ```
 
-3. Classname
+2. Classname
 
 ```tsx
 <IconRocket className='size-6' />
 <IconBrandGitHub className='size-6' />
+
+// Keep 3:2 proportions
 <IconBrandFlagUS className='w-6' />
+
+// Square proportions
+<IconBrandFlagUS className='size-6' />
+
+// To fill the entire square
+<IconBrandFlagUS className='size-6 object-cover' />
 ```
 
 ### Color
+
+By default, the UI icons have `currentColor` set as fill and stroke value.
 
 1. Color prop
 
@@ -143,7 +153,7 @@ You can change the size of the icons in three ways:
 
 #### Dark mode
 
-> **Note**: Only supported **automatically** on Brand icons, for UI icons you need to set the color manually.
+> **Note**: Automatically supported **only** on Brand icons, for UI icons you must set the color manually.
 
 When using the Brand icons, they automatically handle dark mode through the `.dark` className or `data-theme='dark'` attribute.
 
@@ -151,11 +161,11 @@ You can also define an static theme for each icon, by adding the `.light`/`.dark
 
 ### Stroke width
 
-It is not intended to change the stroke width of the icons, it could lead to inconsistent results in some cases.
+It is not intended to change the stroke width of the icons (default `1.5`). It could lead to inconsistent results in some cases.
 
 ## Types
 
-We expose types for each category:
+We expose scoped types for each category:
 
 ```typescript
 import type { Icon, IconProps } from '@andrsrxn/icons/types'
@@ -163,8 +173,10 @@ import type { BrandIcon, BrandIconProps } from '@andrsrxn/icons/brands/types'
 import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 ```
 
-- **Icon**: The SVG element
-- **IconProps**: Icon component props from SVG and custom props
+- **Icon**, **BrandIcon**, **FlagIcon**: The SVG element
+- **IconProps**, **BrandIconProps**, **FlagIconProps**: Icon component props from SVG and custom props
+
+> **Note**: Named this way to avoid conficts with some Icon components names, such as `IconFlag` from UI icons.
 
 ## Contributing
 
@@ -184,7 +196,9 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 - [Phosphor Icons](https://phosphoricons.com/)
 - [HugeIcons](https://hugeicons.com/icons)
 
-> **Note**: I didn't create the flags SVGs, I downloaded them a long time ago from an open source project, I don't remember where from, but I will credit the original creators as soon as I find them.
+### Flags
+
+<!-- TODO: -->
 
 ## Next steps
 
