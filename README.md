@@ -184,6 +184,8 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 - [Phosphor Icons](https://phosphoricons.com/)
 - [HugeIcons](https://hugeicons.com/icons)
 
+> **Note**: I didn't create the flags SVGs, I downloaded them a long time ago from an open source project, I don't remember where from, but I will credit the original creators as soon as I find them.
+
 ## Next steps
 
 - Adapt the rest of Brand icons into UI logo icons (already have the most used ones)
