@@ -28,7 +28,7 @@ All of them are optimized and scalable SVGs.
 - **Brands**: 300+ Real logos for widely-known companies and technologies; treated as image assets with brand name as `aria-label` included. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
-> **Note:**: The UI icons include "logos" which are different from the Brands category, the logos are duotone adapted versions of the real brand logos. (e.g. `IconLogoGithub` and `IconBrandGitHub` are different)
+> **Note:** The UI icons include "logos" which are different from the Brands category, the logos are duotone adapted versions of the real brand logos. (e.g. `IconLogoGithub` and `IconBrandGitHub` are different)
 
 ## Usage
 
@@ -196,9 +196,11 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 - [Phosphor Icons](https://phosphoricons.com/)
 - [HugeIcons](https://hugeicons.com/icons)
 
-### Flags
+## Credits
 
-<!-- TODO: -->
+The flag icons are adapted from [FlagKit](https://github.com/madebybowtie/FlagKit) by [Bowtie](https://github.com/madebybowtie), used under the MIT License (Copyright (c) 2016 Bowtie AB). Only the 3:2 rectangular flag versions were used as source material and converted into `tsx` components.
+
+See [THIRD-PARTY-LICENSES.md](THIRD-PARTY-LICENSES.md) for the full license text.
 
 ## Next steps
 
