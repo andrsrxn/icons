@@ -65,6 +65,8 @@ export function App() {
   return (
     <div className='flex h-screen w-full items-center justify-center'>
       <IconRocket />
+      <IconBrandGitHub />
+      <IconFlagUS />
     </div>
   )
 }
@@ -72,7 +74,7 @@ export function App() {
 
 ## RTL support
 
-The following UI icons automatically detect the `dir` attribute on the `body` or the closest parent element and add the `transform: scaleX(-1)`
+The following UI icons automatically detect the `dir` attribute on the `html` or the closest parent element and add the `transform: scaleX(-1)`
 
 - arrow-end
 - arrow-start
@@ -93,7 +95,7 @@ All of the icons have an `Icon` prefix to differentiate them from other componen
 
 ### Size
 
-> **Note:** Is recommended to add a size (width and height) to UI and Brand icons, while the flag icons should only have the width in order to keep their proportions.
+> **Note:** Is recommended to set a size (width and height) to UI and Brand icons, while the flag icons should only have the width in order to keep their proportions.
 
 You can change the size of the icons in three ways:
 
