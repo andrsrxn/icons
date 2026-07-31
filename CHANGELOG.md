@@ -1,5 +1,16 @@
 # @andrsrxn/icons
 
+## 2.1.0
+
+### Minor Changes
+
+- [`85de063`](https://github.com/andrsrxn/icons/commit/85de0639e77f62aac7be63bd6d608a08ad6102a5) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added specific continent flag icons, with a preffix of a letter C.
+  Added LGBT flag icon.
+
+### Patch Changes
+
+- [`7cc6633`](https://github.com/andrsrxn/icons/commit/7cc66334468cebaa058ca817ede0468b779c3e46) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Fixed a runtime error on Flag icons ("Expected length, 'auto'") that occurred when only `width` was set without `size`. Flag icons without an explicit `size` now correctly scale proportionally based on `width` instead of passing an invalid `auto` value to the SVG `height` attribute. A fallback on CSS is provided through only to `ui-icon-flag`.
+
 ## 2.0.0
 
 ### Major Changes
