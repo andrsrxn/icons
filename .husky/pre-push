@@ -1,0 +1,4 @@
+# pnpm lint
+# pnpm typecheck
+
+exit 1
