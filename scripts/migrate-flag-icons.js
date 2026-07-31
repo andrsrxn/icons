@@ -46,7 +46,7 @@ for (const file of files) {
   // 2. Actualizar la firma (Corregida la captura de $2 para evitar '}' duplicada)
   content = content.replace(
     /export\s+const\s+(IconFlag\w+|FlagIcon\w+)(?::\s*FlagIcon)?\s*=\s*\(\{\s*className,[\s\S]*?(\.\.\.props)\s*\}\s*:\s*(?:SVGProps<SVGSVGElement>|FlagIconProps)\)\s*=>/gu,
-    `export const $1: FlagIcon = ({\n  className,\n  size,\n  width = size ?? 24,\n  height = size ?? 'auto',\n  $2\n}: FlagIconProps) =>`
+    'export const $1: FlagIcon = ({\n  className,\n  size,\n  width = size ?? 24,\n  height = size,\n  $2\n}: FlagIconProps) =>'
   )
 
   // 3. Reemplazar width y height SOLAMENTE en la etiqueta de apertura del <svg> raíz

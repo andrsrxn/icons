@@ -4,7 +4,7 @@ export const IconFlagCD: FlagIcon = ({
   className,
   size,
   width = size ?? 24,
-  height = size ?? 'auto',
+  height = size,
   ...props
 }: FlagIconProps) => {
   return (

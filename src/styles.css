@@ -54,6 +54,10 @@
   flex-shrink: 0;
 }
 
+.ui-icon-flag {
+  height: auto;
+}
+
 /* Only to UI icons */
 .ui-icon {
   vertical-align: middle;
