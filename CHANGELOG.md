@@ -1,5 +1,16 @@
 # @andrsrxn/icons
 
+## 2.2.0
+
+### Minor Changes
+
+- [`9c2647d`](https://github.com/andrsrxn/icons/commit/9c2647d30d5a15c7b1218ce36fa8b60e9c2f3ce9) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added missing payment/credit card providers to Brand icons
+
+  - JCB
+  - Discover Network
+  - Maestro
+  - UnionPay
+
 ## 2.1.0
 
 ### Minor Changes
