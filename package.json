@@ -35,7 +35,8 @@
     "dist",
     "LICENSE",
     "README.md",
-    "CHANGELOG.md"
+    "CHANGELOG.md",
+    "THIRD-PARTY-LICENSES.md"
   ],
   "engines": {
     "node": "^24",
