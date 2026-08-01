@@ -13,6 +13,7 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
+    "allowJs": true,
 
     /* Linting */
     "strict": true,
@@ -40,5 +41,5 @@
 
     "skipDefaultLibCheck": true
   },
-  "include": ["src", "tsdown.config.ts", "demo"]
+  "include": ["src", "tsdown.config.ts", "demo", "__tests__"]
 }

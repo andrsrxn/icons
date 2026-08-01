@@ -53,6 +53,9 @@ jobs:
       - name: Typecheck
         run: pnpm typecheck
 
+      - name: Run tests
+        run: pnpm test
+
       # Not necessary for now, just a reference for the future
       # - name: Build
       #   run: pnpm build

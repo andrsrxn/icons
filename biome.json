@@ -597,6 +597,22 @@
   },
   "overrides": [
     {
+      "includes": ["__tests__/**"],
+      "linter": {
+        "rules": {
+          "performance": {
+            "noReExportAll": "off",
+            "noBarrelFile": "off",
+            "noNamespaceImport": "off",
+            "useTopLevelRegex": "off"
+          },
+          "nursery": {
+            "useNamedCaptureGroup": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": ["src/**"],
       "linter": {
         "rules": {

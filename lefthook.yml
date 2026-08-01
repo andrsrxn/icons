@@ -13,3 +13,6 @@ pre-push:
 
     typecheck:
       run: pnpm typecheck
+
+    test:
+      run: pnpm test

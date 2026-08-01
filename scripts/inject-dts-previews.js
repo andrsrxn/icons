@@ -46,65 +46,70 @@ function createPreviewJSDoc(base64) {
  */`
 }
 
-// Validate
-
-if (!(fs.existsSync(RAW_DIR) && fs.existsSync(DTS_DIR))) {
-  console.error('Source or dist directory not found.')
-  process.exit(1)
-}
-
 // Main
 
-const files = fs
-  .readdirSync(RAW_DIR)
-  .filter(file => file.endsWith('.svg'))
-  .sort()
-
-let injected = 0
-let skipped = 0
-
-for (const file of files) {
-  const svgPath = path.join(RAW_DIR, file)
-  const dtsPath = path.join(DTS_DIR, file.replace(/\.svg$/u, '.d.ts'))
-
-  if (!fs.existsSync(dtsPath)) {
-    skipped++
-    continue
+function main() {
+  if (!(fs.existsSync(RAW_DIR) && fs.existsSync(DTS_DIR))) {
+    console.error('Source or dist directory not found.')
+    process.exit(1)
   }
+  const files = fs
+    .readdirSync(RAW_DIR)
+    .filter(file => file.endsWith('.svg'))
+    .sort()
 
-  const source = fs.readFileSync(svgPath, 'utf8')
+  let injected = 0
+  let skipped = 0
 
-  const svg = extractSvg(source)
+  for (const file of files) {
+    const svgPath = path.join(RAW_DIR, file)
+    const dtsPath = path.join(DTS_DIR, file.replace(/\.svg$/u, '.d.ts'))
 
-  if (!svg) {
-    skipped++
-    continue
+    if (!fs.existsSync(dtsPath)) {
+      skipped++
+      continue
+    }
+
+    const source = fs.readFileSync(svgPath, 'utf8')
+
+    const svg = extractSvg(source)
+
+    if (!svg) {
+      skipped++
+      continue
+    }
+
+    const previewSvg = injectWhiteBackground(svg)
+    const base64 = svgToBase64(previewSvg)
+    const preview = createPreviewJSDoc(base64)
+
+    let dts = fs.readFileSync(dtsPath, 'utf8')
+
+    // Prevent duplicates if the script is executed multiple times.
+    if (dts.includes('@preview')) {
+      skipped++
+      continue
+    }
+
+    dts = dts.replace(/(export\s+declare\s+const\s+\w+\s*:)/u, `${preview}\n$1`)
+
+    fs.writeFileSync(dtsPath, dts, 'utf8')
+
+    injected++
+
+    console.log(`Injected preview: ${path.basename(dtsPath)}`)
   }
+  // Summary
 
-  const previewSvg = injectWhiteBackground(svg)
-  const base64 = svgToBase64(previewSvg)
-  const preview = createPreviewJSDoc(base64)
-
-  let dts = fs.readFileSync(dtsPath, 'utf8')
-
-  // Prevent duplicates if the script is executed multiple times.
-  if (dts.includes('@preview')) {
-    skipped++
-    continue
-  }
-
-  dts = dts.replace(/(export\s+declare\s+const\s+\w+\s*:)/u, `${preview}\n$1`)
-
-  fs.writeFileSync(dtsPath, dts, 'utf8')
-
-  injected++
-
-  console.log(`Injected preview: ${path.basename(dtsPath)}`)
+  console.log('\nSummary:')
+  console.log(`   Files scanned:   ${files.length}`)
+  console.log(`   Files injected:  ${injected}`)
+  console.log(`   Files skipped:   ${skipped}`)
 }
 
-// Summary
+// Testing purposes
+export { extractSvg, injectWhiteBackground, svgToBase64, createPreviewJSDoc }
 
-console.log('\nSummary:')
-console.log(`   Files scanned:   ${files.length}`)
-console.log(`   Files injected:  ${injected}`)
-console.log(`   Files skipped:   ${skipped}`)
+if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+  main()
+}

@@ -28,6 +28,23 @@ const DIRS = {
 
 const IN_DIRS = Object.values(DIRS)
 
+// Helpers
+
+export function generateExportLines(files) {
+  return (
+    files
+      // 1. Filter for .tsx files and exclude the barrel file itself
+      .filter(file => file.endsWith('.tsx') && file !== 'index.tsx')
+      // 2. Sort alphabetically for a deterministic output
+      .sort()
+      // 3. Map to export statements
+      .map(file => {
+        const basename = path.basename(file, '.tsx')
+        return `export * from './${basename}'`
+      })
+  )
+}
+
 // Main transform
 
 function main() {
@@ -43,15 +60,7 @@ function main() {
 
   for (const [prefix, dir] of Object.entries(DIRS)) {
     const files = fs.readdirSync(dir)
-
-    // Filter for .tsx files
-    const iconFiles = files.filter(file => file.endsWith('.tsx') && file !== 'index.tsx').sort()
-
-    const exports = iconFiles.map(file => {
-      const basename = path.basename(file, '.tsx')
-
-      return `export * from './${basename}'`
-    })
+    const exports = generateExportLines(files)
 
     // exports.unshift("export type * from './types'")
 
@@ -71,4 +80,7 @@ function main() {
   console.log(`   Total exports:     ${totalExports}`)
 }
 
-main()
+// Testing purposes
+if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+  main()
+}

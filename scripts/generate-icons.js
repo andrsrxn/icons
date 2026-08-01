@@ -139,4 +139,9 @@ function main() {
   console.log(`   Files generated:  ${processedCount}`)
 }
 
-main()
+// testing porpuses
+export { toPascalCase, svgAttrsToJsx, normalizeSvg, generateComponent }
+
+if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+  main()
+}
