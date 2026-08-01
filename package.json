@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "Over 600 free duotone icons library for @andrsrxn/ui",
+  "description": "React icon library with 600+ duotone icons, 330+ brand, and 250+ flag icons. Fully typed, RTL-aware, and brand icons dark-mode ready.",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -15,8 +15,11 @@
   "keywords": [
     "icons",
     "duotone",
+    "flags",
+    "brands",
     "react",
     "ui",
+    "tree-shakeable",
     "svg",
     "typescript",
     "icons-library",
@@ -98,6 +101,9 @@
     "lint": "biome check && echo Lint finished.",
     "lint:check": "biome ci && echo Lint finished.",
     "typecheck": "tsc --noEmit && echo Typecheck finished.",
+    "test": "vitest",
+    "test:check": "vitest run",
+    "test:coverage": "vitest run --coverage",
     "changeset": "changeset",
     "version-package": "changeset version",
     "release": "pnpm build && changeset publish",
@@ -117,16 +123,23 @@
     "@biomejs/biome": "2.4.16",
     "@changesets/changelog-github": "0.7.0",
     "@changesets/cli": "2.31.1",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "7.0.0",
+    "@testing-library/react": "16.3.2",
     "@types/node": "24.12.4",
     "@types/react": "19.2.16",
     "@types/react-dom": "19.2.3",
     "@vitejs/plugin-react": "6.0.4",
+    "@vitejs/plugin-react-swc": "4.3.3",
+    "@vitest/coverage-v8": "4.1.10",
+    "jsdom": "30.0.1",
     "lefthook": "2.1.10",
     "lightningcss-cli": "1.33.0",
     "prettier": "3.9.6",
     "tsdown": "0.22.14",
     "type-coverage": "2.30.0",
     "typescript": "6.0.3",
-    "vite": "8.1.5"
+    "vite": "8.1.5",
+    "vitest": "4.1.10"
   }
 }

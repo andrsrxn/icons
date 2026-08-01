@@ -32,7 +32,7 @@ import '@andrsrxn/icons/styles.css'
 All of them are optimized and scalable SVGs.
 
 - **UI**: 600+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Brands**: 300+ Real logos for widely-known companies and technologies; treated as image assets with brand name as `aria-label` included. (aspect ratio 1:1)
+- **Brands**: 330+ Real logos for widely-known companies and technologies; treated as image assets with brand name as `aria-label` included. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
 > **Note:** The UI icons include "logos" which are different from the Brands category, the logos are duotone adapted versions of the real brand logos. (e.g. `IconLogoGithub` and `IconBrandGitHub` are different)
