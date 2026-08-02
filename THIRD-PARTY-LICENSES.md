@@ -1,3 +1,9 @@
+Flag illustrations
+----------
+
+Source: [FlagKit](https://github.com/madebybowtie/FlagKit) by [Bowtie](https://github.com/madebybowtie)
+License: MIT
+
 The MIT License (MIT)
 
 Copyright (c) 2016 Bowtie AB
