@@ -1,7 +1,7 @@
 /**
  * generate-icons-index.js
  *
- * Generates an index.ts file for each icon directory (ui, brands, flags).
+ * Generates an index.ts file for each icon directory (ui, flags).
  * This allows all icons within a directory to be easily exported and imported.
  * It also exports the shared types in each generated index.
  *
@@ -17,11 +17,9 @@ import process from 'node:process'
 // Config
 
 const ICONS_DIR = path.resolve('./src/react/ui')
-const BRANDS_DIR = path.resolve('./src/react/brands')
 const FLAGS_DIR = path.resolve('./src/react/flags')
 
 const DIRS = {
-  brands: BRANDS_DIR,
   flags: FLAGS_DIR,
   ui: ICONS_DIR,
 }

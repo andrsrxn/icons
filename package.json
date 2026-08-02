@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "React icon library with 600+ duotone icons, 330+ brand, and 250+ flag icons. Fully typed, RTL-aware, and brand icons dark-mode ready.",
+  "description": "React icon library with 600+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized.",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -16,7 +16,6 @@
     "icons",
     "duotone",
     "flags",
-    "brands",
     "react",
     "ui",
     "tree-shakeable",
@@ -59,19 +58,6 @@
     "./types": {
       "types": "./dist/ui/types.d.ts"
     },
-    "./brands": {
-      "types": "./dist/brands/index.d.ts",
-      "import": "./dist/brands/index.js",
-      "require": "./dist/brands/index.cjs"
-    },
-    "./brands/types": {
-      "types": "./dist/brands/types.d.ts"
-    },
-    "./brands/*": {
-      "types": "./dist/brands/*.d.ts",
-      "import": "./dist/brands/*.js",
-      "require": "./dist/brands/*.cjs"
-    },
     "./flags": {
       "types": "./dist/flags/index.d.ts",
       "import": "./dist/flags/index.js",
@@ -109,8 +95,6 @@
     "release": "pnpm build && changeset publish",
     "generate-icons": "node ./scripts/generate-icons.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/ui && echo Icons generated and formatted.",
     "generate-icons-index": "node ./scripts/generate-icons-index.js && echo Icons index generated.",
-    "migrate-brand-icons": "node ./scripts/migrate-brand-icons.js && prettier --write ./src/react/brands && echo Migrated brand icons.",
-    "migrate-flag-icons": "node ./scripts/migrate-flag-icons.js && prettier --write ./src/react/flags && echo Migrated flag icons.",
     "typecoverage": "pnpm type-coverage -at-least=99 && echo Typecoverage finished.",
     "depcheck": "pnpm dlx knip && echo Depcheck finished.",
     "doctor": "pnpm dlx react-doctor@latest . && echo Doctor finished."

@@ -5,9 +5,6 @@ import { describe, expect, it } from 'vitest'
 import { IconActivity } from '../../src/react/ui/activity'
 import { IconSearch } from '../../src/react/ui/search'
 import { IconSettings } from '../../src/react/ui/settings'
-import { IconBrandGitHub } from '../../src/react/brands/github'
-import { IconBrandReact } from '../../src/react/brands/react'
-import { IconBrandVercel } from '../../src/react/brands/vercel'
 import { IconFlagUS } from '../../src/react/flags/us'
 import { IconFlagGB } from '../../src/react/flags/gb'
 import { IconFlagMX } from '../../src/react/flags/mx'
@@ -46,12 +43,6 @@ describe('Package Exports', () => {
     expect(IconSettings).toBeTypeOf('function')
   })
 
-  it('exports representative brand icons', () => {
-    expect(IconBrandGitHub).toBeTypeOf('function')
-    expect(IconBrandReact).toBeTypeOf('function')
-    expect(IconBrandVercel).toBeTypeOf('function')
-  })
-
   it('exports representative flag icons', () => {
     expect(IconFlagUS).toBeTypeOf('function')
     expect(IconFlagGB).toBeTypeOf('function')
@@ -60,11 +51,6 @@ describe('Package Exports', () => {
 
   it('exports every UI icon from the barrel', () => {
     const { files, exports } = testBarrelExports(path.resolve('src/react/ui'))
-    expect(new Set(exports)).toEqual(new Set(files))
-  })
-
-  it('exports every Brand icon from the barrel', () => {
-    const { files, exports } = testBarrelExports(path.resolve('src/react/brands'))
     expect(new Set(exports)).toEqual(new Set(files))
   })
 

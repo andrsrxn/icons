@@ -1,6 +1,6 @@
 ---
 name: Icon request
-about: Suggest a new UI icon, flag or brand to add
+about: Suggest a new UI or Flag icon to add
 title: "[ICON_NAME] icon request"
 labels: enhancement, icon request
 assignees: ''
@@ -18,7 +18,7 @@ Thanks for taking the time to suggest a new icon!
 
 ### Category
 
-<!-- It could be UI, Brand or Flag -->
+<!-- It could be UI or Flag -->
 *e.g., UI*
 
 ---

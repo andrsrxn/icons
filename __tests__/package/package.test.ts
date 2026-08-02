@@ -24,13 +24,6 @@ describe('package.json', () => {
       expect(pkg.exports['.'].require).toBeDefined()
     })
 
-    it('has a "./brands" export', () => {
-      expect(pkg.exports['./brands']).toBeDefined()
-      expect(pkg.exports['./brands'].types).toBeDefined()
-      expect(pkg.exports['./brands'].import).toBeDefined()
-      expect(pkg.exports['./brands'].require).toBeDefined()
-    })
-
     it('has a "./flags" export', () => {
       expect(pkg.exports['./flags']).toBeDefined()
       expect(pkg.exports['./flags'].types).toBeDefined()
@@ -47,18 +40,12 @@ describe('package.json', () => {
       expect(pkg.exports['./types'].types).toBeDefined()
     })
 
-    it('has a "./brands/types" export for type-only consumers', () => {
-      expect(pkg.exports['./brands/types']).toBeDefined()
-      expect(pkg.exports['./brands/types'].types).toBeDefined()
-    })
-
     it('has a "./flags/types" export for type-only consumers', () => {
       expect(pkg.exports['./flags/types']).toBeDefined()
       expect(pkg.exports['./flags/types'].types).toBeDefined()
     })
 
     it('has wildcard exports for tree-shaking individual icons', () => {
-      expect(pkg.exports['./brands/*']).toBeDefined()
       expect(pkg.exports['./flags/*']).toBeDefined()
       expect(pkg.exports['./*']).toBeDefined()
     })
