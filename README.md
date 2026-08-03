@@ -9,7 +9,7 @@
 [![CI](https://github.com/andrsrxn/icons/actions/workflows/ci.yml/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 
-Over 600 free duotone icons library for @andrsrxn/ui. Modern, smooth and accessibility-aware.
+React icon library with 550+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
 ## Requirements
 
@@ -31,7 +31,7 @@ import '@andrsrxn/icons/styles.css'
 
 All of them are optimized and scalable SVGs.
 
-- **UI**: 600+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **UI**: 550+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
 ## Usage
