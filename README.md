@@ -8,6 +8,7 @@
 [![License](https://img.shields.io/github/license/andrsrxn/icons)](https://github.com/andrsrxn/icons)
 [![CI](https://github.com/andrsrxn/icons/actions/workflows/ci.yml/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/ci.yml)
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
+[![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
 React icon library with 550+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
