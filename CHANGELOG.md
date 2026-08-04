@@ -1,5 +1,13 @@
 # @andrsrxn/icons
 
+## 3.1.0
+
+### Minor Changes
+
+- [`46b6ec0`](https://github.com/andrsrxn/icons/commit/46b6ec003797d3abedc2901883fe01e32d4ace67) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added a new UI icon
+
+  - Layout
+
 ## 3.0.0
 
 ### Major Changes
