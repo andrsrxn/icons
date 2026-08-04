@@ -1,6 +1,4 @@
 /**
- * generate-icons-index.js
- *
  * Generates an index.ts file for each icon directory (ui, flags).
  * This allows all icons within a directory to be easily exported and imported.
  * It also exports the shared types in each generated index.
@@ -79,6 +77,6 @@ function main() {
 }
 
 // Testing purposes
-if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+if (process?.argv?.[1]?.endsWith('generate-icons-index.js')) {
   main()
 }

@@ -5,7 +5,7 @@
     "source.organizeImports.biome": "explicit",
     "source.removeUnusedImports": "explicit",
     "source.removeUnused.ts": "never",
-    "quickfix.biome": "explicit"
+    "source.fixAll.biome": "explicit"
   },
   "files.insertFinalNewline": true,
   "files.eol": "\r\n",

@@ -1,7 +1,5 @@
 /**
- * generate-icons.js
- *
- * Transforms all .svg files in src/raw/ into React components:
+ * Transforms all .svg files in src/raw/ui into React components:
  *
  * 1. Converts SVG attributes to camelCase JSX properties.
  * 2. Cleans hardcoded width and height attributes.
@@ -23,7 +21,7 @@ import process from 'node:process'
 
 // Config
 
-const ICONS_DIR = path.resolve('./src/raw')
+const ICONS_DIR = path.resolve('./src/raw/ui')
 const ICONS_OUT = path.resolve('./src/react/ui')
 
 const CLASSNAME = 'ui-icon'
@@ -140,8 +138,8 @@ function main() {
 }
 
 // testing porpuses
-export { toPascalCase, svgAttrsToJsx, normalizeSvg, generateComponent }
+export { generateComponent, normalizeSvg, svgAttrsToJsx, toPascalCase }
 
-if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+if (process?.argv?.[1]?.endsWith(' && echo Icons index generated.')) {
   main()
 }

@@ -1,17 +1,17 @@
-import { describe, it, expect } from 'vitest'
+import { describe, expect, it } from 'vitest'
 import {
-  toPascalCase,
-  svgAttrsToJsx,
-  normalizeSvg,
   generateComponent,
+  normalizeSvg,
+  svgAttrsToJsx,
+  toPascalCase,
 } from '../../scripts/generate-icons.js'
+import { generateExportLines } from '../../scripts/generate-icons-index.js'
 import {
+  createPreviewJSDoc,
   extractSvg,
   injectWhiteBackground,
   svgToBase64,
-  createPreviewJSDoc,
 } from '../../scripts/inject-dts-previews.js'
-import { generateExportLines } from '../../scripts/generate-icons-index.js'
 
 // Tests for generate-icons.js
 describe('Generator: toPascalCase', () => {

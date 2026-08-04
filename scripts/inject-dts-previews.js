@@ -1,11 +1,12 @@
 /**
- * inject-dts-previews.js
- *
- * Generates @preview JSDoc comments for every generated UI icon declaration.
+ * Generates @preview JSDoc comments for every generated icon declaration.
  *
  * To avoid adding a @preview JSDoc comment on the source code, this script recreates
  * the preview directly from the original SVG source and injects it into the generated
  * declaration file, so only the types have it when developing.
+ *
+ * The script processes every category defined in CATEGORIES. Each category must have
+ * a matching directory structure between src/raw and dist.
  *
  * Usage:
  *   node scripts/inject-dts-previews.js
@@ -21,8 +22,10 @@ import process from 'node:process'
 
 // Config
 
-const RAW_DIR = path.resolve('./src/raw')
-const DTS_DIR = path.resolve('./dist/ui')
+const CATEGORIES = ['ui', 'flags']
+
+const RAW_ROOT = path.resolve('./src/raw')
+const DTS_ROOT = path.resolve('./dist')
 
 // Helpers
 
@@ -42,28 +45,36 @@ function svgToBase64(svg) {
 
 function createPreviewJSDoc(base64) {
   return `/**
- * @preview ![img](data:image/svg+xml;base64,${base64})
- */`
+  * @preview ![img](data:image/svg+xml;base64,${base64})
+  */`
 }
 
-// Main
+function processCategory(category) {
+  const rawDir = path.join(RAW_ROOT, category)
+  const dtsDir = path.join(DTS_ROOT, category)
 
-function main() {
-  if (!(fs.existsSync(RAW_DIR) && fs.existsSync(DTS_DIR))) {
-    console.error('Source or dist directory not found.')
-    process.exit(1)
+  if (!(fs.existsSync(rawDir) && fs.existsSync(dtsDir))) {
+    console.error(`Source or dist directory not found for category: ${category}`)
+    return {
+      scanned: 0,
+      injected: 0,
+      skipped: 0,
+    }
   }
+
   const files = fs
-    .readdirSync(RAW_DIR)
+    .readdirSync(rawDir)
     .filter(file => file.endsWith('.svg'))
     .sort()
 
   let injected = 0
   let skipped = 0
 
+  console.log('Generating previews for ', category)
+
   for (const file of files) {
-    const svgPath = path.join(RAW_DIR, file)
-    const dtsPath = path.join(DTS_DIR, file.replace(/\.svg$/u, '.d.ts'))
+    const svgPath = path.join(rawDir, file)
+    const dtsPath = path.join(dtsDir, file.replace(/\.svg$/u, '.d.ts'))
 
     if (!fs.existsSync(dtsPath)) {
       skipped++
@@ -71,7 +82,6 @@ function main() {
     }
 
     const source = fs.readFileSync(svgPath, 'utf8')
-
     const svg = extractSvg(source)
 
     if (!svg) {
@@ -97,19 +107,44 @@ function main() {
 
     injected++
 
-    console.log(`Injected preview: ${path.basename(dtsPath)}`)
+    // console.log(`[${category}] Injected preview: ${path.basename(dtsPath)}`)
   }
+
+  return {
+    scanned: files.length,
+    injected,
+    skipped,
+  }
+}
+
+// Main
+
+function main() {
+  let totalScanned = 0
+  let totalInjected = 0
+  let totalSkipped = 0
+
+  for (const category of CATEGORIES) {
+    const result = processCategory(category)
+
+    totalScanned += result.scanned
+    totalInjected += result.injected
+    totalSkipped += result.skipped
+  }
+
   // Summary
 
   console.log('\nSummary:')
-  console.log(`   Files scanned:   ${files.length}`)
-  console.log(`   Files injected:  ${injected}`)
-  console.log(`   Files skipped:   ${skipped}`)
+  console.log(`   Categories processed: ${CATEGORIES.length}`)
+  console.log(`   Files scanned:        ${totalScanned}`)
+  console.log(`   Files injected:      ${totalInjected}`)
+  console.log(`   Files skipped:        ${totalSkipped}`)
 }
 
 // Testing purposes
-export { extractSvg, injectWhiteBackground, svgToBase64, createPreviewJSDoc }
 
-if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
+export { createPreviewJSDoc, extractSvg, injectWhiteBackground, processCategory, svgToBase64 }
+
+if (process?.argv?.[1]?.endsWith('inject-dts-previews.js')) {
   main()
 }

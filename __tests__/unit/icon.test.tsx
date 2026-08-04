@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { IconActivity } from '../../src/react/ui/activity'
-import { IconSearch } from '../../src/react/ui/search'
-import { IconHeart } from '../../src/react/ui/heart'
 import { IconAlarm } from '../../src/react/ui/alarm'
 import { IconCheck } from '../../src/react/ui/check'
+import { IconHeart } from '../../src/react/ui/heart'
+import { IconSearch } from '../../src/react/ui/search'
 
 const uiIcons = [
   { name: 'IconActivity', Component: IconActivity, slot: 'activity' },

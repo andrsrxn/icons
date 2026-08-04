@@ -1,9 +1,9 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: it exists */
 /** biome-ignore-all lint/performance/noNamespaceImport: to automate all icons importing */
-import { createRoot } from 'react-dom/client'
 
-import * as icons from '../src/react/ui/index'
+import { createRoot } from 'react-dom/client'
 import * as fIcons from '../src/react/flags/index'
+import * as icons from '../src/react/ui/index'
 
 const uiIcons = Object.entries(icons).map(([name, Icon]) => (
   <div key={name} className='icon-card'>

@@ -94,6 +94,7 @@
     "release": "pnpm build && changeset publish",
     "generate-icons": "node ./scripts/generate-icons.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/ui && echo Icons generated and formatted.",
     "generate-icons-index": "node ./scripts/generate-icons-index.js && echo Icons index generated.",
+    "generate-flags": "node ./scripts/generate-flags.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/flags && echo Flags generated and formatted.",
     "typecoverage": "pnpm type-coverage -at-least=99 && echo Typecoverage finished.",
     "depcheck": "pnpm dlx knip && echo Depcheck finished.",
     "doctor": "pnpm dlx react-doctor@latest . && echo Doctor finished."
@@ -103,7 +104,7 @@
     "react-dom": "^19"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.16",
+    "@biomejs/biome": "2.5.6",
     "@changesets/changelog-github": "0.7.0",
     "@changesets/cli": "2.31.1",
     "@testing-library/dom": "10.4.1",
