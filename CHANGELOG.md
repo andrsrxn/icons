@@ -1,5 +1,15 @@
 # @andrsrxn/icons
 
+## 3.2.0
+
+### Minor Changes
+
+- [`022683f`](https://github.com/andrsrxn/icons/commit/022683ffad90e6899cb6fee0d44cdcaf001d7613) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Now the Flag icons have a preview of the flag when importing the icon, such as UI icons
+
+### Patch Changes
+
+- [`d36d698`](https://github.com/andrsrxn/icons/commit/d36d698bc2b8bfba7d2d24cd2ce1fc9009f5c895) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Optimize svg output from Flag icons with svgo by generating them directly from the raw files
+
 ## 3.1.0
 
 ### Minor Changes
