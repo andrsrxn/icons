@@ -22,7 +22,7 @@ import process from 'node:process'
 
 // Config
 
-const CATEGORIES = ['ui']
+const CATEGORIES = ['ui', 'flags']
 
 const RAW_ROOT = path.resolve('./src/raw')
 const DTS_ROOT = path.resolve('./dist')
