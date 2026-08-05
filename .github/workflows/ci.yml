@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   checks:
-    name: Format, Lint & Typecheck
+    name: Format, Lint, Typecheck, and Testing
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
