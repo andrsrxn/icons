@@ -1,5 +1,11 @@
 # @andrsrxn/icons
 
+## 3.3.0
+
+### Minor Changes
+
+- [`ecf99e2`](https://github.com/andrsrxn/icons/commit/ecf99e26a26b8855664c55b4ee6860c0e92ccd04) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Accepts title and aria-label on UI and Flag icons, overriding aria-hidden when applicable
+
 ## 3.2.0
 
 ### Minor Changes
