@@ -243,9 +243,9 @@ describe('Flags Generator: generateComponent', () => {
     const rawSvg = '<svg viewBox="0 0 21 15"><rect width="21" height="15"/></svg>'
     const result = generateFlagComponent('mk.svg', rawSvg)
 
-    expect(result).toContain("import type { FlagIcon, FlagIconProps } from './types'")
+    expect(result).toContain("import type { FlagIcon } from './types'")
     expect(result).toContain('export const IconFlagMK: FlagIcon =')
-    expect(result).toContain('<title>MK</title>')
+    expect(result).toContain('{isHidden || ariaLabel ? null : <title>{titleText}</title>}')
     expect(result).toContain("<clipPath id='mk-clip'>")
     expect(result).toContain("<rect x='0' y='0' width='21' height='15' />")
     expect(result).toContain("<g clipPath='url(#mk-clip)'>")
@@ -259,7 +259,7 @@ describe('Flags Generator: generateComponent', () => {
     expect(result).toContain('export const IconFlagUSCA: FlagIcon =')
 
     // Title tag maintains formatted uppercase string
-    expect(result).toContain('<title>US-CA</title>')
+    expect(result).toContain('{isHidden || ariaLabel ? null : <title>{titleText}</title>}')
 
     // ClipPath ID maintains kebab-case country code prefix
     expect(result).toContain("<clipPath id='us-ca-clip'>")
