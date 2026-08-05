@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBoundingBox: Icon = ({ size = 24, className, ...props }) => {
+export const IconBoundingBox: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBoundingBox: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bounding-box'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.496 5.487a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0Zm0 13.027a2.01 2.01 0 1 1-4.019 0 2.01 2.01 0 0 1 4.02 0Zm13.027 0a2.01 2.01 0 1 1-4.019 0 2.01 2.01 0 0 1 4.02 0Zm0-13.027a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0Z'

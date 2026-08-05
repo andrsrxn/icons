@@ -1,85 +1,88 @@
 import type { Icon } from './types'
 
-export const IconLayout: Icon = ({ size = 24, className, ...props }) => {
+export const IconLayout: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='layout'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='3.64' y='3.72' width='7.07' height='9.52' rx='2' fill='currentColor' />
       <rect
-        width='7.071'
-        height='9.517'
-        x='3.645'
-        y='3.719'
-        fill='currentColor'
         opacity='.2'
+        width='7.07'
+        height='9.52'
         rx='2'
+        transform='matrix(1 0 0 -1 13.28 20.28)'
+        fill='currentColor'
       />
       <rect
-        width='7.071'
-        height='9.517'
-        fill='currentColor'
         opacity='.2'
+        x='3.64'
+        y='15.77'
+        width='7.07'
+        height='4.51'
+        rx='1.5'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='7.07'
+        height='4.51'
+        rx='1.5'
+        transform='matrix(1 0 0 -1 13.28 8.23)'
+        fill='currentColor'
+      />
+      <rect
+        x='3.64'
+        y='3.72'
+        width='7.07'
+        height='9.52'
         rx='2'
-        transform='matrix(1 0 0 -1 13.284 20.281)'
-      />
-      <rect
-        width='7.071'
-        height='4.512'
-        x='3.645'
-        y='15.769'
-        fill='currentColor'
-        opacity='.2'
-        rx='1.5'
-      />
-      <rect
-        width='7.071'
-        height='4.507'
-        fill='currentColor'
-        opacity='.2'
-        rx='1.5'
-        transform='matrix(1 0 0 -1 13.284 8.226)'
-      />
-      <rect
-        width='7.071'
-        height='9.517'
-        x='3.645'
-        y='3.719'
         stroke='currentColor'
         strokeWidth='1.5'
+      />
+      <rect
+        width='7.07'
+        height='9.52'
         rx='2'
-      />
-      <rect
-        width='7.071'
-        height='9.517'
+        transform='matrix(1 0 0 -1 13.28 20.28)'
         stroke='currentColor'
         strokeWidth='1.5'
-        rx='2'
-        transform='matrix(1 0 0 -1 13.284 20.281)'
       />
       <rect
-        width='7.071'
-        height='4.512'
-        x='3.645'
-        y='15.769'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        x='3.64'
+        y='15.77'
+        width='7.07'
+        height='4.51'
         rx='1.5'
-      />
-      <rect
-        width='7.071'
-        height='4.507'
         stroke='currentColor'
         strokeWidth='1.5'
+      />
+      <rect
+        width='7.07'
+        height='4.51'
         rx='1.5'
-        transform='matrix(1 0 0 -1 13.284 8.226)'
+        transform='matrix(1 0 0 -1 13.28 8.23)'
+        stroke='currentColor'
+        strokeWidth='1.5'
       />
     </svg>
   )

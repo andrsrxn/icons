@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMouseRight: Icon = ({ size = 24, className, ...props }) => {
+export const IconMouseRight: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMouseRight: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='mouse-right'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M11.979 6.147v-.75h-.006l.006.75Zm0 3.263-.006.75h.006v-.75Zm5.23-.705h-.75v6.646h1.5V8.704h-.75ZM6.75 15.35h.75V8.704H6v6.646h.75Zm5.23 5.23v-.75a4.48 4.48 0 0 1-4.48-4.48H6a5.98 5.98 0 0 0 5.98 5.98v-.75Zm5.23-5.23h-.75a4.48 4.48 0 0 1-4.48 4.48v1.5a5.98 5.98 0 0 0 5.98-5.98h-.75ZM11.98 3.473v.75a4.48 4.48 0 0 1 4.48 4.48h1.5a5.98 5.98 0 0 0-5.98-5.98v.75Zm0 0v-.75A5.98 5.98 0 0 0 6 8.703h1.5a4.48 4.48 0 0 1 4.48-4.48v-.75Zm1.251 4.685h.75v-.761h-1.5v.761h.75Zm0-.761h.75a2.001 2.001 0 0 0-2.001-2.001v1.5a.5.5 0 0 1 .501.501h.75ZM11.98 6.146l-.006-.75h-.021l.006.75.006.75h.021l-.006-.75Zm-.021 0-.013-.75a2.001 2.001 0 0 0-1.967 2.001h1.5a.5.5 0 0 1 .492-.5l-.012-.75Zm-1.23 1.251h-.75v.761h1.5v-.761h-.75Zm0 .761h-.75c0 1.094.878 1.983 1.967 2.001l.013-.75.012-.75a.501.501 0 0 1-.492-.5h-.75Zm1.23 1.251-.006.75h.02l.007-.75.006-.75h-.021l-.006.75Zm.02 0v.75a2.001 2.001 0 0 0 2.002-2h-1.5a.501.501 0 0 1-.501.5v.75Zm-.02 2.147v-.75h-5.1v1.5h5.1v-.75Zm0 0v.75h5.273v-1.5h-5.273v.75Zm0-7.557h-.75v2.147h1.5V4h-.75Zm0 5.41h-.75v2.147h1.5V9.41h-.75Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMapPinLineArea: Icon = ({ size = 24, className, ...props }) => {
+export const IconMapPinLineArea: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMapPinLineArea: Icon = ({ size = 24, className, ...props }) => 
       width={size}
       height={size}
       data-slot='map-pin-line-area'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M15.264 6.971a3.264 3.264 0 1 1-6.528 0 3.264 3.264 0 0 1 6.528 0Zm5.026 10.318c0 1.779-3.712 3.22-8.29 3.22-4.578 0-8.29-1.441-8.29-3.22 0-1.779 3.712-3.22 8.29-3.22 4.578 0 8.29 1.441 8.29 3.22Z'

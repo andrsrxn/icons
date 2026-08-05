@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconReload: Icon = ({ size = 24, className, ...props }) => {
+export const IconReload: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconReload: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='reload'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m17.793 6.185.533-.528-.006-.007-.527.535Zm.527 12.203a.75.75 0 0 0-1.053-1.07l.526.535.527.535ZM19.65 8.06l.53.531-.53-.53Zm-4.222-.167a.75.75 0 1 0-.001 1.5v-.75l.001-.75Zm.805.75v.75-.75Zm4.004-4h-.75.75Zm.75-.81a.75.75 0 0 0-1.5 0h1.5Zm-8.936 16.372v-.75a7.436 7.436 0 0 1-7.436-7.436h-1.5c0 4.935 4 8.936 8.936 8.936v-.75ZM3.865 12.02h.75a7.436 7.436 0 0 1 7.436-7.436v-1.5c-4.935 0-8.936 4-8.936 8.936h.75Zm8.186-8.186v.75a7.41 7.41 0 0 1 5.216 2.136l.526-.534.527-.535a8.91 8.91 0 0 0-6.269-2.567v.75Zm5.742 14.02-.526-.534a7.41 7.41 0 0 1-5.216 2.136v1.5a8.91 8.91 0 0 0 6.269-2.567l-.527-.535Zm0-11.668-.533.527 1.858 1.876.533-.528.532-.527-1.857-1.876-.533.528Zm-2.366 2.458v.75h.805l.001-.75v-.75h-.805v.75Zm4.81-4h.75v-.81h-1.5v.81h.75Zm-4.004 4v.75c.922.001 1.689.004 2.296-.077.628-.084 1.196-.27 1.652-.725l-.53-.53-.53-.531c-.131.13-.329.237-.79.299-.484.065-1.132.065-2.097.065l-.001.75Zm4.004-4h-.75c0 .965-.002 1.614-.067 2.097-.062.462-.17.66-.3.79l.53.53.53.531c.457-.455.643-1.023.727-1.651.082-.607.08-1.374.08-2.296h-.75Z'

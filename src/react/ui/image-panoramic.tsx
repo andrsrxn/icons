@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconImagePanoramic: Icon = ({ size = 24, className, ...props }) => {
+export const IconImagePanoramic: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconImagePanoramic: Icon = ({ size = 24, className, ...props }) => 
       width={size}
       height={size}
       data-slot='image-panoramic'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m9.639 13.606-.228-.118c-.65-.337-.975-.505-1.303-.45a1 1 0 0 0-.065.012c-.324.077-.559.357-1.028.92-1.248 1.493-1.872 2.24-1.614 2.812a.99.99 0 0 0 .053.101c.322.539 1.291.453 3.23.281l2.87-.254c.086-.007.128-.011.171-.011.043 0 .085.003.17.01l4.092.338c1.75.145 2.624.217 2.945-.314.32-.53-.15-1.27-1.093-2.752l-1.38-2.17c-.657-1.034-.986-1.551-1.486-1.589-.5-.038-.903.425-1.708 1.349l-1.198 1.373c-.496.569-.744.853-1.084.918-.34.064-.674-.11-1.344-.456Z'

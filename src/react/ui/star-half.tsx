@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconStarHalf: Icon = ({ size = 24, className, ...props }) => {
+export const IconStarHalf: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconStarHalf: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='star-half'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m8.722 19.678 2.398-1.26c.416-.22.625-.329.74-.52.115-.19.115-.426.115-.896V8.505c0-2.138 0-3.206-.415-3.434a.8.8 0 0 0-.42-.098c-.473.02-.946.979-1.892 2.896-.145.294-.217.44-.334.544a.8.8 0 0 1-.127.093c-.135.079-.297.102-.621.15l-2.889.419c-1.397.203-2.096.305-2.25.778-.154.473.352.965 1.363 1.951l2.03 1.978c.295.288.442.432.503.62.061.187.026.39-.043.796l-.48 2.794c-.238 1.392-.357 2.087.045 2.38.402.292 1.027-.037 2.277-.694Z'

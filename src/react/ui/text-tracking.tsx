@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTextTracking: Icon = ({ size = 24, className, ...props }) => {
+export const IconTextTracking: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTextTracking: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='text-tracking'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M14.372 9.366 12.95 5.024c-.3-.918-1.6-.918-1.9 0L9.628 9.366a1 1 0 0 0 .95 1.311h2.844a1 1 0 0 0 .95-1.31Z'

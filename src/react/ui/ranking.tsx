@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconRanking: Icon = ({ size = 24, className, ...props }) => {
+export const IconRanking: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconRanking: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='ranking'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M9.667 20.409V12.54c0-.942 0-1.414.293-1.707.292-.293.764-.293 1.707-.293h.666c.943 0 1.415 0 1.707.293.293.293.293.764.293 1.707v7.869H9.667Zm1.542-16.197c.295-.599.443-.898.662-.957a.5.5 0 0 1 .258 0c.22.059.367.358.662.957.087.176.13.264.2.328a.502.502 0 0 0 .092.066c.081.046.178.06.373.089.66.096.991.144 1.114.334a.5.5 0 0 1 .08.246c.012.226-.227.459-.705.925-.14.137-.211.206-.25.291a.5.5 0 0 0-.035.108c-.019.092-.002.189.031.382.113.659.17.988.027 1.164a.5.5 0 0 1-.21.152c-.21.08-.506-.075-1.097-.385-.174-.092-.261-.137-.354-.148a.5.5 0 0 0-.114 0c-.093.01-.18.056-.354.148-.59.31-.886.466-1.098.385a.5.5 0 0 1-.209-.152c-.143-.176-.086-.505.027-1.164.033-.193.05-.29.031-.382a.505.505 0 0 0-.035-.108c-.039-.085-.11-.154-.25-.29-.478-.467-.717-.7-.705-.926a.5.5 0 0 1 .08-.246c.123-.19.453-.238 1.114-.334.194-.028.292-.043.373-.089a.502.502 0 0 0 .092-.066c.07-.064.113-.152.2-.328Z'

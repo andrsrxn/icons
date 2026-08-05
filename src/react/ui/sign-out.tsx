@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconSignOut: Icon = ({ size = 24, className, ...props }) => {
+export const IconSignOut: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconSignOut: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='sign-out'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m15.75 3.842-3.432.31c-.96.086-1.44.129-1.808.332a2 2 0 0 0-.863.945c-.17.385-.17.867-.17 1.83v8.7c0 1.74 0 2.611.526 3.185.526.574 1.393.649 3.128.8l2.632.229c2.033.177 3.05.265 3.698-.33.649-.594.649-1.614.649-3.655V7.826c0-2.047 0-3.07-.651-3.665-.65-.594-1.67-.503-3.708-.32Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconHouseglass: Icon = ({ size = 24, className, ...props }) => {
+export const IconHouseglass: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconHouseglass: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='houseglass'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M18.14 6.759c-.456 1.905-1.444 4.208-3.588 5.241 2.144 1.033 3.132 3.336 3.588 5.241.291 1.217.437 1.826-.013 2.396-.45.571-1.166.571-2.597.571H8.47c-1.43 0-2.146 0-2.597-.57-.45-.572-.304-1.18-.013-2.397.456-1.905 1.444-4.208 3.588-5.241-2.144-1.033-3.132-3.336-3.588-5.241-.291-1.217-.437-1.826.013-2.397.45-.57 1.166-.57 2.597-.57h7.06c1.43 0 2.146 0 2.597.57.45.571.304 1.18.013 2.397Z'

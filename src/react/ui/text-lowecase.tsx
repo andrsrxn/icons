@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTextLowecase: Icon = ({ size = 24, className, ...props }) => {
+export const IconTextLowecase: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTextLowecase: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='text-lowecase'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M19.817 14.165c0 1.67-1.38 3.025-3.083 3.025-1.703 0-3.083-1.354-3.083-3.025 0-1.67 1.38-3.024 3.083-3.024 1.702 0 3.082 1.354 3.082 3.024Zm-9.551 0c0 1.67-1.38 3.025-3.082 3.025-1.703 0-3.083-1.354-3.083-3.025 0-1.67 1.38-3.024 3.083-3.024 1.702 0 3.082 1.354 3.082 3.024Z'

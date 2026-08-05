@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCopy: Icon = ({ size = 24, className, ...props }) => {
+export const IconCopy: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCopy: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='copy'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.513 12.667c0-1.885 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h3.67c1.885 0 2.828 0 3.414.586.586.586.586 1.529.586 3.414v3.67c0 1.885 0 2.828-.586 3.414-.586.586-1.529.586-3.414.586h-3.67c-1.885 0-2.828 0-3.414-.586-.586-.586-.586-1.529-.586-3.414v-3.67Z'

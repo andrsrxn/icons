@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBank: Icon = ({ size = 24, className, ...props }) => {
+export const IconBank: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBank: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bank'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M11.73 3.879 3.7 9.016c-.421.27-.23.922.269.922H20.03c.5 0 .69-.652.27-.922L12.27 3.88a.5.5 0 0 0-.54 0ZM3.748 18.846c0-.378 0-.567.05-.72a1 1 0 0 1 .636-.636c.153-.05.342-.05.72-.05h13.692c.378 0 .567 0 .72.05a1 1 0 0 1 .636.636c.05.152.05.342.05.72 0 .379 0 .568-.05.72a1 1 0 0 1-.636.636c-.153.05-.342.05-.72.05H5.155c-.379 0-.568 0-.721-.05a1 1 0 0 1-.636-.635c-.05-.153-.05-.342-.05-.72Z'

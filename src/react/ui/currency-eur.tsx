@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCurrencyEur: Icon = ({ size = 24, className, ...props }) => {
+export const IconCurrencyEur: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCurrencyEur: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='currency-eur'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <g clipPath='url(#a)'>
         <path
           stroke='currentColor'

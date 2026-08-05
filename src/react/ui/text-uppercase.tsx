@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTextUppercase: Icon = ({ size = 24, className, ...props }) => {
+export const IconTextUppercase: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTextUppercase: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='text-uppercase'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M10.159 12.287 8.69 7.732c-.298-.924-1.606-.924-1.904 0L5.32 12.287a1 1 0 0 0 .952 1.306h2.935a1 1 0 0 0 .952-1.306Zm8.521 0-1.468-4.554c-.297-.924-1.605-.924-1.903 0l-1.468 4.554a1 1 0 0 0 .952 1.306h2.935a1 1 0 0 0 .952-1.306Z'

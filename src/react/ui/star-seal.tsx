@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconStarSeal: Icon = ({ size = 24, className, ...props }) => {
+export const IconStarSeal: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconStarSeal: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='star-seal'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M11.027 3.83a1.5 1.5 0 0 1 1.946 0l1.413 1.203a1.5 1.5 0 0 0 .853.354l1.85.147a1.5 1.5 0 0 1 1.377 1.376l.147 1.85a1.5 1.5 0 0 0 .354.854l1.204 1.413a1.5 1.5 0 0 1 0 1.946l-1.204 1.413a1.5 1.5 0 0 0-.354.853l-.147 1.85a1.5 1.5 0 0 1-1.376 1.377l-1.85.147a1.5 1.5 0 0 0-.854.354l-1.413 1.204a1.5 1.5 0 0 1-1.946 0l-1.413-1.204a1.5 1.5 0 0 0-.853-.354l-1.85-.147a1.5 1.5 0 0 1-1.377-1.376l-.147-1.85a1.5 1.5 0 0 0-.354-.854L3.83 12.973a1.5 1.5 0 0 1 0-1.946l1.204-1.413a1.5 1.5 0 0 0 .354-.853l.147-1.85A1.5 1.5 0 0 1 6.91 5.533l1.85-.147a1.5 1.5 0 0 0 .854-.354l1.413-1.204Z'

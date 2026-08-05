@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconHexagon: Icon = ({ size = 24, className, ...props }) => {
+export const IconHexagon: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconHexagon: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='hexagon'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M10.898 3.966c.538-.286.807-.429 1.102-.429.295 0 .564.143 1.102.429l5.908 3.139c.538.285.807.428.955.664.148.235.148.52.148 1.092v6.278c0 .571 0 .857-.148 1.092-.148.236-.417.378-.955.664l-5.908 3.139c-.538.286-.807.429-1.102.429-.295 0-.564-.143-1.102-.429L4.99 16.895c-.538-.285-.807-.428-.955-.664-.147-.235-.147-.52-.147-1.092V8.86c0-.571 0-.857.147-1.092.148-.236.417-.379.955-.664l5.908-3.14Z'

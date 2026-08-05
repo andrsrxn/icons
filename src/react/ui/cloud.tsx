@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCloud: Icon = ({ size = 24, className, ...props }) => {
+export const IconCloud: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCloud: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='cloud'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.052 10.147c.405 0 1.243.15 1.56.45-.255-1.582.477-3.139 1.888-3.829 1.684-.823 3.68-.09 4.456 1.774a4.08 4.08 0 0 1 .29 2.056c.412-.38 1.256-.451 1.703-.451 1.888 0 3.418 1.66 3.418 3.707 0 2.047-1.53 3.707-3.418 3.707H7.052c-1.889 0-3.42-1.66-3.42-3.707 0-2.048 1.531-3.707 3.42-3.707Z'

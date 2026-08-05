@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconWarningCircle: Icon = ({ size = 24, className, ...props }) => {
+export const IconWarningCircle: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconWarningCircle: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='warning-circle'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M20.291 12A8.291 8.291 0 1 1 3.71 12a8.291 8.291 0 0 1 16.582 0Z'

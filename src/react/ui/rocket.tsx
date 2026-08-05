@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconRocket: Icon = ({ size = 24, className, ...props }) => {
+export const IconRocket: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconRocket: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='rocket'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m6.045 10.787 1.23-.621a.5.5 0 0 1 .725.446v6.094a.5.5 0 0 1-.271.444l-2.007 1.034a1 1 0 0 1-1.448-1.03l.694-4.865a2 2 0 0 1 1.077-1.502Zm11.909 0-1.228-.621a.5.5 0 0 0-.726.446v6.094a.5.5 0 0 0 .271.444l2.007 1.034a1 1 0 0 0 1.448-1.03l-.694-4.865a2 2 0 0 0-1.078-1.502ZM13.54 11a1.54 1.54 0 1 1-3.08 0 1.54 1.54 0 0 1 3.08 0Z'

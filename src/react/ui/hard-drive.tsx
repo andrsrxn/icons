@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconHardDrive: Icon = ({ size = 24, className, ...props }) => {
+export const IconHardDrive: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconHardDrive: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='hard-drive'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.155 7.48c.379-1.432.568-2.147 1.108-2.562.539-.416 1.28-.416 2.76-.416h5.98c1.487 0 2.23 0 2.77.418s.727 1.137 1.102 2.576l.199.767c.599 2.302.898 3.453.298 4.23-.6.776-1.79.776-4.17.776H8.82c-2.388 0-3.583 0-4.183-.78-.6-.78-.295-1.934.316-4.242l.202-.768Z'

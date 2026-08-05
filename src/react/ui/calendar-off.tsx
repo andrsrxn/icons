@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCalendarOff: Icon = ({ size = 24, className, ...props }) => {
+export const IconCalendarOff: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCalendarOff: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='calendar-off'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.782 8.814c0-1.886 0-2.829.585-3.414.586-.586 1.529-.586 3.415-.586h8.436c1.886 0 2.829 0 3.415.586.585.585.585 1.528.585 3.414v.11H3.782v-.11Z'

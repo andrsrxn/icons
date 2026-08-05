@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconPause: Icon = ({ size = 24, className, ...props }) => {
+export const IconPause: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconPause: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='pause'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.37 6.5c0-.935 0-1.402.2-1.75a1.5 1.5 0 0 1 .55-.549C6.466 4 6.934 4 7.87 4c.934 0 1.401 0 1.75.201a1.5 1.5 0 0 1 .548.549c.201.348.201.815.201 1.75v11c0 .935 0 1.402-.2 1.75a1.5 1.5 0 0 1-.55.549C9.271 20 8.804 20 7.87 20c-.934 0-1.402 0-1.75-.201a1.5 1.5 0 0 1-.549-.549c-.2-.348-.2-.815-.2-1.75v-11Zm8.26 0c0-.935 0-1.402.202-1.75a1.5 1.5 0 0 1 .549-.549C14.729 4 15.196 4 16.13 4c.934 0 1.402 0 1.75.201a1.5 1.5 0 0 1 .549.549c.2.348.2.815.2 1.75v11c0 .935 0 1.402-.2 1.75a1.5 1.5 0 0 1-.55.549c-.347.201-.815.201-1.75.201-.934 0-1.401 0-1.75-.201a1.5 1.5 0 0 1-.548-.549c-.201-.348-.201-.815-.201-1.75v-11Z'

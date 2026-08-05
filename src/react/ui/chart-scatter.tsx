@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconChartScatter: Icon = ({ size = 24, className, ...props }) => {
+export const IconChartScatter: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconChartScatter: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='chart-scatter'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M8.822 8.006a.555.555 0 1 1-1.11 0 .555.555 0 0 1 1.11 0Zm4.017 4.252a.555.555 0 1 1-1.11 0 .555.555 0 0 1 1.11 0ZM9.377 16.73a.555.555 0 1 1-1.11 0 .555.555 0 0 1 1.11 0Zm8.362-1.285a.555.555 0 1 1-1.11 0 .555.555 0 0 1 1.11 0Zm-1.11-7a.555.555 0 1 1-1.11 0 .555.555 0 0 1 1.11 0Z'

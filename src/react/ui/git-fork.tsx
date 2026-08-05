@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconGitFork: Icon = ({ size = 24, className, ...props }) => {
+export const IconGitFork: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconGitFork: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='git-fork'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M6.315 3.899a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm11.371 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM14.5 17.601a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z'

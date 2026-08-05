@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconSeekForward: Icon = ({ size = 24, className, ...props }) => {
+export const IconSeekForward: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconSeekForward: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='seek-forward'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M12.231 11.204a1.884 1.884 0 1 1 3.769 0v2.604a1.884 1.884 0 0 1-3.769 0v-2.604Z'

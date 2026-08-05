@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconChartBarHorizontal: Icon = ({ size = 24, className, ...props }) => {
+export const IconChartBarHorizontal: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconChartBarHorizontal: Icon = ({ size = 24, className, ...props })
       width={size}
       height={size}
       data-slot='chart-bar-horizontal'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M4.5 9.74h13c.943 0 1.414 0 1.707.292.293.293.293.765.293 1.707v.522c0 .942 0 1.414-.293 1.707-.293.293-.764.293-1.707.293h-13V9.739Z'

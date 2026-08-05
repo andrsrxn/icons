@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCalendarHeart: Icon = ({ size = 24, className, ...props }) => {
+export const IconCalendarHeart: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCalendarHeart: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='calendar-heart'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.735 8.772c0-1.886 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h8.52c1.885 0 2.828 0 3.414.586.586.586.586 1.528.586 3.414v.13H3.735v-.13Zm11.987 6.064c.109 0 .214.012.315.033.832.177 1.248.265 1.3.265.053 0 .469-.088 1.301-.265.1-.021.206-.033.315-.033 1.016 0 1.616.96 1.616 1.688 0 1.782-1.336 2.628-2.43 3.466-.421.323-.632.484-.802.484-.17 0-.38-.161-.802-.484-1.093-.838-2.429-1.684-2.429-3.466 0-.729.6-1.688 1.616-1.688Z'

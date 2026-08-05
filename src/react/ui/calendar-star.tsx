@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCalendarStar: Icon = ({ size = 24, className, ...props }) => {
+export const IconCalendarStar: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCalendarStar: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='calendar-star'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.731 8.765c0-1.886 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h8.47c1.886 0 2.828 0 3.414.586.586.586.586 1.528.586 3.414v.117H3.731v-.117Zm12.715 6.526c.215-.436.323-.654.442-.758a.8.8 0 0 1 1.056 0c.12.104.227.322.442.758.064.13.096.194.136.25a.8.8 0 0 0 .4.29c.064.021.136.031.278.052.482.07.722.105.858.186a.8.8 0 0 1 .327 1.004c-.063.146-.237.316-.585.655-.104.1-.155.151-.195.206a.8.8 0 0 0-.153.47c0 .068.012.14.037.282.082.479.123.718.088.873a.8.8 0 0 1-.854.62c-.158-.014-.373-.127-.804-.353-.127-.067-.191-.101-.256-.122a.8.8 0 0 0-.494 0 1.757 1.757 0 0 0-.256.122c-.43.226-.646.34-.804.354a.8.8 0 0 1-.854-.62c-.035-.156.006-.395.088-.874.025-.143.037-.214.037-.282a.8.8 0 0 0-.153-.47 1.733 1.733 0 0 0-.195-.206c-.348-.34-.522-.509-.585-.655a.8.8 0 0 1 .326-1.004c.137-.081.377-.116.859-.186.142-.02.214-.031.279-.052a.8.8 0 0 0 .4-.29c.04-.056.071-.12.135-.25Z'

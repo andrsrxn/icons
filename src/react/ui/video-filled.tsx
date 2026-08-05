@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconVideoFilled: Icon = ({ size = 24, className, ...props }) => {
+export const IconVideoFilled: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconVideoFilled: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='video-filled'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M15.12 13.371v-2.743c0-.9 0-1.652-.08-2.248-.084-.627-.27-1.194-.725-1.65-.456-.455-1.022-.64-1.65-.725-.596-.08-1.347-.08-2.248-.08H7.532c-.901 0-1.653 0-2.249.08-.627.085-1.194.27-1.649.726-.455.455-.641 1.022-.726 1.65-.08.595-.08 1.347-.08 2.248v2.741c0 .901 0 1.652.08 2.248.085.628.27 1.195.726 1.65.455.456 1.022.641 1.65.726.595.08 1.347.08 2.248.08h2.885c.9 0 1.652 0 2.248-.08.628-.085 1.194-.27 1.65-.725.455-.456.64-1.023.725-1.65.08-.596.08-1.348.08-2.249Zm6.052.121v.01c0 .54 0 1.008-.04 1.374-.037.321-.114.685-.348.99l-.11.127a1.75 1.75 0 0 1-.822.475c-.445.113-.858-.016-1.197-.164-.327-.144-.716-.37-1.165-.63l-.053-.03-.071-.04c-.284-.164-.59-.34-.802-.614a1.75 1.75 0 0 1-.24-.415c-.13-.322-.13-.675-.129-1.003v-3.118c0-.325-.002-.674.128-.995a1.74 1.74 0 0 1 .236-.412c.21-.273.511-.45.792-.614l.129-.076c.447-.263.836-.492 1.163-.639.296-.133.65-.25 1.034-.203l.167.03.116.033c.268.087.513.238.711.44.323.329.419.753.46 1.122.041.367.041.834.041 1.374v2.977Z'

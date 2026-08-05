@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconWarningTriangle: Icon = ({ size = 24, className, ...props }) => {
+export const IconWarningTriangle: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconWarningTriangle: Icon = ({ size = 24, className, ...props }) =>
       width={size}
       height={size}
       data-slot='warning-triangle'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M10.265 6.497c.774-1.412 1.161-2.117 1.753-2.117.592 0 .98.705 1.753 2.117l5.565 10.14c.725 1.321 1.087 1.982.797 2.472-.29.49-1.044.49-2.55.49H6.453c-1.506 0-2.26 0-2.55-.49-.29-.49.072-1.15.797-2.471l5.565-10.141Z'

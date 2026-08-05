@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconQuotesDown: Icon = ({ size = 24, className, ...props }) => {
+export const IconQuotesDown: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconQuotesDown: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='quotes-down'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M20.302 15.938a3.436 3.436 0 1 1-6.871 0 3.436 3.436 0 0 1 6.871 0Zm-9.733 0a3.436 3.436 0 1 1-6.871 0 3.436 3.436 0 0 1 6.87 0Z'

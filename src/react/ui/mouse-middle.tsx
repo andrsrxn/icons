@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMouseMiddle: Icon = ({ size = 24, className, ...props }) => {
+export const IconMouseMiddle: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMouseMiddle: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='mouse-middle'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.244 13.075h9.532v3.43a4.766 4.766 0 0 1-9.532 0v-3.43ZM11.17 8.22l.383-.2a1 1 0 0 1 .917-.007l.413.21a1 1 0 0 1 .548.892v1.083a1 1 0 0 1-.46.842l-.413.264a1 1 0 0 1-1.092-.008l-.383-.255a1 1 0 0 1-.448-.833V9.105a1 1 0 0 1 .535-.885Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBellOn: Icon = ({ size = 24, className, ...props }) => {
+export const IconBellOn: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBellOn: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bell-on'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.58 10.034v3.164a.02.02 0 0 1-.01.017l-.903.473a1.705 1.705 0 0 0-.914 1.51v.412c0 .358 0 .537.023.687a2 2 0 0 0 1.676 1.675c.15.023.328.023.686.023h11.679c.358 0 .537 0 .687-.023a2 2 0 0 0 1.675-1.675c.023-.15.023-.33.023-.687v-.412c0-.634-.352-1.216-.914-1.51l-.903-.473a.02.02 0 0 1-.01-.017v-3.164a6.397 6.397 0 0 0-12.794 0Z'

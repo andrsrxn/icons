@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconRollerBrush: Icon = ({ size = 24, className, ...props }) => {
+export const IconRollerBrush: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconRollerBrush: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='roller-brush'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.945 5.197c0-.53 0-.796.486-.96.485-.165 1.266-.165 2.828-.165h7.03c1.562 0 2.343 0 2.829.165.485.164.485.43.485.96v2.386c0 .53 0 .795-.485.96-.486.164-1.267.164-2.83.164H7.26c-1.562 0-2.343 0-2.828-.164-.486-.165-.486-.43-.486-.96V5.197Zm7.222 15.199c-.346 0-.518 0-.626-.17-.107-.171-.107-.446-.107-.995v-2.472c0-.55 0-.824.107-.995.107-.17.28-.17.626-.17h1.556c.346 0 .519 0 .627.17.107.17.107.445.107.995v2.472c0 .55 0 .824-.107.995-.108.17-.28.17-.627.17h-1.556Z'

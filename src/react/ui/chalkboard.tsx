@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconChalkboard: Icon = ({ size = 24, className, ...props }) => {
+export const IconChalkboard: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconChalkboard: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='chalkboard'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.155 10.291c0-1.94 0-2.91.603-3.513.602-.602 1.572-.602 3.513-.602h5.458c1.94 0 2.91 0 3.513.602.603.603.603 7.136.603 9.076-.206-.452-.753-.815-1.206-1.021-.406-.185-.927-.185-1.97-.185h-.493c-1.043 0-1.564 0-1.97.185a2.057 2.057 0 0 0-1.021 1.021c-.185.406-.185.928-.185 1.97H5.155v-7.533Z'

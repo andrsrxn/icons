@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconGamingPad: Icon = ({ size = 24, className, ...props }) => {
+export const IconGamingPad: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconGamingPad: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='gaming-pad'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m5.637 18.713-.566-.166a2.577 2.577 0 0 1-1.838-2.75l.607-5.607c.184-1.697.276-2.546.846-3.057.57-.512 1.424-.512 3.131-.512h8.366c1.707 0 2.56 0 3.13.512.57.511.663 1.36.847 3.057l.607 5.606a2.577 2.577 0 0 1-1.838 2.751l-.566.166c-1.81.529-2.518-2.836-4.403-2.836h-3.92c-1.885 0-2.593 3.365-4.403 2.836Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconPencil: Icon = ({ size = 24, className, ...props }) => {
+export const IconPencil: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconPencil: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='pencil'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M15.595 4.592c.271-.272.407-.407.544-.495a1.5 1.5 0 0 1 1.617 0c.137.088.273.223.544.495l1.066 1.066c.271.27.407.406.495.544a1.5 1.5 0 0 1 0 1.617c-.088.137-.224.272-.495.544-.271.271-.407.407-.544.494a1.5 1.5 0 0 1-1.617 0c-.137-.087-.273-.223-.544-.494l-1.066-1.066c-.271-.272-.407-.407-.495-.544a1.5 1.5 0 0 1 0-1.617c.088-.137.224-.273.495-.544Z'

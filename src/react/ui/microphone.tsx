@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMicrophone: Icon = ({ size = 24, className, ...props }) => {
+export const IconMicrophone: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMicrophone: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='microphone'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M8.617 7.016a3.383 3.383 0 0 1 6.766 0v3.911a3.383 3.383 0 1 1-6.766 0V7.016Z'

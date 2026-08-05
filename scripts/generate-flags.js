@@ -112,15 +112,21 @@ function generateComponent(fileName, svgContent) {
   const jsxDefs = svgAttrsToJsx(`${defsContent}${clipPathDef}`)
   const jsxBody = svgAttrsToJsx(innerBody)
 
-  return `import type { FlagIcon, FlagIconProps } from './types'
+  return `import type { FlagIcon } from './types'
 
 export const ${componentName}: FlagIcon = ({
   className,
   size,
   width = size ?? 24,
   height = size,
+  title,
+  'aria-label': ariaLabel,
+  'aria-hidden': ariaHidden,
   ...props
-}: FlagIconProps) => {
+}) => {
+  const isHidden = ariaHidden === true
+  const titleText = title ?? '${countryCodeUpper}'
+
   return (
     <svg
       width={width}
@@ -129,10 +135,12 @@ export const ${componentName}: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      role='img'
+      role={isHidden ? undefined : 'img'}
+      aria-hidden={isHidden ? true : undefined}
+      aria-label={isHidden ? undefined : ariaLabel}
       className={\`${CLASSNAME} \${className ?? ''}\`}
       {...props}>
-      <title>${countryCodeUpper}</title>
+      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
 
       <defs>${jsxDefs}
       </defs>

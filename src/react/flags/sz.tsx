@@ -1,12 +1,18 @@
-import type { FlagIcon, FlagIconProps } from './types'
+import type { FlagIcon } from './types'
 
 export const IconFlagSZ: FlagIcon = ({
   className,
   size,
   width = size ?? 24,
   height = size,
+  title,
+  'aria-label': ariaLabel,
+  'aria-hidden': ariaHidden,
   ...props
-}: FlagIconProps) => {
+}) => {
+  const isHidden = ariaHidden === true
+  const titleText = title ?? 'SZ'
+
   return (
     <svg
       width={width}
@@ -15,10 +21,12 @@ export const IconFlagSZ: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      role='img'
+      role={isHidden ? undefined : 'img'}
+      aria-hidden={isHidden ? true : undefined}
+      aria-label={isHidden ? undefined : ariaLabel}
       className={`ui-icon-flag ${className ?? ''}`}
       {...props}>
-      <title>SZ</title>
+      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
 
       <defs>
         <linearGradient id='sz-a' x1='50%' x2='50%' y1='0%' y2='100%'>

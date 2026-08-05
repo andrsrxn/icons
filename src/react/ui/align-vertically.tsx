@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconAlignVertically: Icon = ({ size = 24, className, ...props }) => {
+export const IconAlignVertically: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconAlignVertically: Icon = ({ size = 24, className, ...props }) =>
       width={size}
       height={size}
       data-slot='align-vertically'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.469 12c0 .897 0 1.345.186 1.683a1.5 1.5 0 0 0 .591.592c.338.185.786.185 1.683.185h8.142c.897 0 1.345 0 1.683-.185a1.5 1.5 0 0 0 .591-.592c.186-.338.186-.786.186-1.683s0-1.345-.185-1.683a1.5 1.5 0 0 0-.592-.592c-.338-.185-.786-.185-1.683-.185H7.929c-.897 0-1.345 0-1.683.185a1.5 1.5 0 0 0-.591.592c-.186.338-.186.786-.186 1.683Z'

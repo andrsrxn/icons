@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMicroscope: Icon = ({ size = 24, className, ...props }) => {
+export const IconMicroscope: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMicroscope: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='microscope'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.183 6.072c0-1.012 0-1.519.161-1.833.162-.315.422-.315.942-.315h2.338c.52 0 .78 0 .941.315.162.314.162.82.162 1.833v4.555c0 1.013 0 1.52-.162 1.834-.161.314-.421.314-.94.314h-2.34c-.52 0-.779 0-.94-.314-.162-.315-.162-.821-.162-1.834V6.072Zm12.815 10.195c.725 0 1.087 0 1.312.151.226.15.226.393.226.878v2.18c0 .485 0 .727-.226.877-.225.15-.587.15-1.312.15h-3.262c-.725 0-1.088 0-1.313-.15-.225-.15-.225-.393-.225-.877v-2.18c0-.485 0-.727.225-.878.225-.15.588-.15 1.313-.15h3.262Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBookmarks: Icon = ({ size = 24, className, ...props }) => {
+export const IconBookmarks: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBookmarks: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bookmarks'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M4.091 17.36v-6.22c0-1.885 0-2.828.586-3.414.586-.586 1.529-.586 3.414-.586h2.545c1.886 0 2.829 0 3.414.586.586.586.586 1.529.586 3.414v6.219c0 1.851 0 2.777-.576 3.046-.577.27-1.287-.324-2.707-1.512l-.706-.59c-.613-.514-.92-.77-1.283-.77-.363 0-.67.256-1.284.77l-.705.59c-1.42 1.188-2.13 1.782-2.707 1.512s-.577-1.195-.577-3.046Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconHandTouch: Icon = ({ size = 24, className, ...props }) => {
+export const IconHandTouch: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconHandTouch: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='hand-touch'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m8.312 19.614-2.7-4.611a1.474 1.474 0 0 1 .266-1.822l.567-.53a.7.7 0 0 1 .99.034.7.7 0 0 0 1.21-.476V7.998A1.48 1.48 0 0 1 11.1 6.884l.047.041c.336.294.529.718.529 1.164v1.293a.822.822 0 0 0 1.19.736.822.822 0 0 1 .757.012l.829.446a.481.481 0 0 1 .253.424c0 .337.337.57.653.45l.616-.236a.935.935 0 0 1 .871.108l.327.23c.46.323.729.856.715 1.419l-.14 5.776a1.904 1.904 0 0 1-1.903 1.857h-5.805a2 2 0 0 1-1.726-.99Z'

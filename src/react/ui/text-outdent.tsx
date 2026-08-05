@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTextOutdent: Icon = ({ size = 24, className, ...props }) => {
+export const IconTextOutdent: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTextOutdent: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='text-outdent'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M10.817 5.25a.75.75 0 0 0 0 1.5v-1.5ZM20 6.75a.75.75 0 0 0 0-1.5v1.5Zm-16 4.5a.75.75 0 0 0 0 1.5v-1.5Zm16 1.5a.75.75 0 0 0 0-1.5v1.5Zm-16 4.5a.75.75 0 0 0 0 1.5v-1.5Zm16 1.5a.75.75 0 0 0 0-1.5v1.5ZM7.846 4.43a.75.75 0 0 0-.616-1.367l.308.684.308.683Zm-1.261-.254-.308-.684.308.684Zm-.002 3.647-.308.683.308-.683Zm.647 1.114a.75.75 0 0 0 .617-1.367l-.309.683-.308.684ZM3.972 5.998h-.75.75ZM10.817 6v.75H20v-1.5h-9.183V6ZM4 12v.75h16v-1.5H4V12Zm0 6v.75h16v-1.5H4V18ZM7.538 3.747l-.308-.684-.953.429.308.684.307.684.954-.43-.308-.683Zm-.955 4.076-.308.683.955.431.308-.684.309-.683-.955-.431-.309.684Zm.002-3.647-.308-.684c-.848.382-1.562.701-2.054 1.014-.477.303-1 .758-1.001 1.492h1.5c0 .088-.088.024.306-.226.378-.241.97-.51 1.864-.912l-.307-.684Zm-.002 3.647.309-.684c-.894-.403-1.486-.672-1.865-.913-.393-.25-.305-.315-.305-.227h-.75l-.75-.001c0 .734.523 1.189 1 1.493.492.313 1.205.633 2.053 1.015l.308-.683Z'

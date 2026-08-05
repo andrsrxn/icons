@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconSimCard: Icon = ({ size = 24, className, ...props }) => {
+export const IconSimCard: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconSimCard: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='sim-card'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M8.345 13.82c0-1.415 0-2.122.439-2.561.44-.44 1.146-.44 2.56-.44h1.311c1.415 0 2.122 0 2.561.44.44.439.44 1.146.44 2.56v.663c0 1.414 0 2.121-.44 2.56-.44.44-1.146.44-2.56.44h-1.312c-1.414 0-2.12 0-2.56-.44-.44-.439-.44-1.146-.44-2.56v-.663Z'

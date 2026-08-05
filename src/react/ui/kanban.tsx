@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconKanban: Icon = ({ size = 24, className, ...props }) => {
+export const IconKanban: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconKanban: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='kanban'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.726 7.726c0-1.886 0-2.829.586-3.414.585-.586 1.528-.586 3.414-.586h1.516v13.79c0 .706 0 1.058-.088 1.345a2 2 0 0 1-1.325 1.325c-.287.088-.64.088-1.345.088s-1.058 0-1.345-.088a2 2 0 0 1-1.325-1.325c-.088-.287-.088-.64-.088-1.345v-9.79Zm11.032-4h1.516c1.886 0 2.829 0 3.414.586.586.585.586 1.528.586 3.414v6.242c0 .705 0 1.058-.088 1.344a2 2 0 0 1-1.325 1.326c-.287.088-.64.088-1.345.088s-1.058 0-1.345-.088a2 2 0 0 1-1.325-1.326c-.088-.286-.088-.639-.088-1.344V3.726Z'

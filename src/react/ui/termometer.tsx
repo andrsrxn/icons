@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTermometer: Icon = ({ size = 24, className, ...props }) => {
+export const IconTermometer: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTermometer: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='termometer'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M9.627 5.984v7.938a3.806 3.806 0 1 0 4.745 0V5.984c0-.319 0-.478-.017-.612A2.03 2.03 0 0 0 12.61 3.63c-.133-.018-.293-.018-.611-.018-.319 0-.478 0-.611.018a2.03 2.03 0 0 0-1.744 1.743c-.018.134-.018.293-.018.612Z'

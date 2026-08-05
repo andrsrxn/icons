@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTreeView: Icon = ({ size = 24, className, ...props }) => {
+export const IconTreeView: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTreeView: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='tree-view'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M15.81 20.476c-.702 0-1.053 0-1.33-.115a1.5 1.5 0 0 1-.808-.809c-.115-.277-.115-.627-.115-1.329 0-.701 0-1.052.115-1.329a1.5 1.5 0 0 1 .809-.809c.276-.115.627-.115 1.328-.115.702 0 1.053 0 1.33.115a1.5 1.5 0 0 1 .808.81c.115.276.115.627.115 1.328 0 .702 0 1.052-.115 1.329a1.5 1.5 0 0 1-.809.809c-.276.115-.627.115-1.329.115Zm0-6.909c-.702 0-1.053 0-1.33-.116a1.5 1.5 0 0 1-.808-.808c-.115-.277-.115-.628-.115-1.33 0-.7 0-1.052.115-1.328a1.5 1.5 0 0 1 .809-.809c.276-.115.627-.115 1.328-.115.702 0 1.053 0 1.33.115a1.5 1.5 0 0 1 .808.809c.115.277.115.627.115 1.329 0 .701 0 1.052-.115 1.329a1.5 1.5 0 0 1-.809.808c-.276.116-.627.116-1.329.116ZM8.253 8.03c-.702 0-1.053 0-1.33-.115a1.5 1.5 0 0 1-.808-.81C6 6.83 6 6.479 6 5.778c0-.702 0-1.052.115-1.329a1.5 1.5 0 0 1 .809-.809c.276-.115.627-.115 1.329-.115.701 0 1.052 0 1.329.115a1.5 1.5 0 0 1 .809.809c.115.277.115.627.115 1.329 0 .701 0 1.052-.115 1.329a1.5 1.5 0 0 1-.81.809c-.276.115-.627.115-1.328.115Z'

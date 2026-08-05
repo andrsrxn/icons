@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconAlignCenterVertical: Icon = ({ size = 24, className, ...props }) => {
+export const IconAlignCenterVertical: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconAlignCenterVertical: Icon = ({ size = 24, className, ...props }
       width={size}
       height={size}
       data-slot='align-center-vertical'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.093 8c0-.897 0-1.345.186-1.683a1.5 1.5 0 0 1 .592-.592c.337-.185.786-.185 1.683-.185h4.893c.896 0 1.345 0 1.683.185a1.5 1.5 0 0 1 .591.592c.186.338.186.786.186 1.683s0 1.345-.186 1.683a1.5 1.5 0 0 1-.591.592c-.338.185-.787.185-1.683.185H9.553c-.897 0-1.346 0-1.683-.185a1.5 1.5 0 0 1-.592-.592c-.186-.338-.186-.786-.186-1.683Zm-1.624 8c0-.897 0-1.345.186-1.683a1.5 1.5 0 0 1 .591-.592c.338-.185.786-.185 1.683-.185h8.142c.897 0 1.345 0 1.683.185a1.5 1.5 0 0 1 .591.592c.186.338.186.786.186 1.683s0 1.345-.186 1.683a1.5 1.5 0 0 1-.591.592c-.338.185-.786.185-1.683.185H7.929c-.897 0-1.345 0-1.683-.185a1.5 1.5 0 0 1-.591-.592c-.186-.338-.186-.786-.186-1.683Z'

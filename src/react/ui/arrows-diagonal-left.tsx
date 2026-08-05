@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconArrowsDiagonalLeft: Icon = ({ size = 24, className, ...props }) => {
+export const IconArrowsDiagonalLeft: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconArrowsDiagonalLeft: Icon = ({ size = 24, className, ...props })
       width={size}
       height={size}
       data-slot='arrows-diagonal-left'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.447 13.013a.75.75 0 1 1 1.5.001h-.75l-.75-.001Zm.747 2.792.75.001h-.75Zm4 4.004v.75-.75Zm2.8-.75a.75.75 0 1 1 0 1.5v-1.5Zm-6.217.164-.53.53.53-.53ZM13.014 4.94a.75.75 0 0 1-.002-1.5v.75l.002.75Zm2.791-.753v.75-.75Zm4.004 4h.75-.75Zm.75 2.799a.75.75 0 0 1-1.5 0h1.5ZM19.222 4.77l.53-.53-.53.53Zm-.527-.527a.75.75 0 1 1 1.061 1.06l-.53-.53-.53-.53Zm-14.498 8.77h.75l-.003 2.792h-.75l-.75-.001.003-2.792h.75Zm3.997 6.795v-.75h2.8v1.5h-2.8v-.75Zm-4-4.004.75.001c0 .965 0 1.613.065 2.097.061.462.168.66.299.79l-.53.53-.531.53c-.456-.456-.641-1.023-.725-1.652-.081-.607-.079-1.374-.078-2.296h.75Zm4 4.004v.75c-.922 0-1.69.002-2.296-.08-.629-.084-1.196-.27-1.651-.726l.53-.53.53-.53c.131.13.329.238.79.3.484.065 1.132.066 2.097.066v.75ZM13.013 4.19v-.75l2.791-.003.001.75v.75l-2.791.003-.001-.75Zm6.796 3.997h.75v2.799h-1.5v-2.8h.75Zm-4.004-4v-.75c.922-.001 1.69-.004 2.296.077.628.084 1.196.27 1.652.725l-.53.53-.53.531c-.131-.13-.329-.237-.79-.299-.484-.064-1.132-.065-2.097-.064l-.001-.75Zm4.004 4h-.75c0-.965-.002-1.613-.067-2.097-.062-.462-.17-.66-.3-.79l.53-.53.53-.53c.457.455.643 1.022.727 1.65.082.607.08 1.374.08 2.297h-.75Zm-.583-3.414.53.53-14.448 14.45-.53-.531-.531-.53 14.448-14.45.53.53Z'

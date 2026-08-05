@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBezier: Icon = ({ size = 24, className, ...props }) => {
+export const IconBezier: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBezier: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bezier'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M13.435 9.635a2.029 2.029 0 1 1-2.87-2.87 2.029 2.029 0 0 1 2.87 2.87ZM6.91 17.546a2.029 2.029 0 1 1-2.87-2.87 2.029 2.029 0 0 1 2.87 2.87Zm13.05 0a2.03 2.03 0 1 1-2.87-2.87 2.03 2.03 0 0 1 2.87 2.87Z'

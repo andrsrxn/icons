@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconServer: Icon = ({ size = 24, className, ...props }) => {
+export const IconServer: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconServer: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='server'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.732 17.569c0-.73 0-1.095.094-1.391a2 2 0 0 1 1.3-1.3c.295-.094.66-.094 1.39-.094h10.968c.73 0 1.095 0 1.39.095a2 2 0 0 1 1.3 1.299c.094.296.094.66.094 1.39 0 .731 0 1.096-.094 1.392a2 2 0 0 1-1.3 1.3c-.295.093-.66.093-1.39.093H6.516c-.73 0-1.095 0-1.39-.094a2 2 0 0 1-1.3-1.3c-.094-.295-.094-.66-.094-1.39Zm0-11.138c0-.73 0-1.095.094-1.39a2 2 0 0 1 1.3-1.3c.295-.094.66-.094 1.39-.094h10.968c.73 0 1.095 0 1.39.094a2 2 0 0 1 1.3 1.3c.094.295.094.66.094 1.39 0 .73 0 1.095-.094 1.39a2 2 0 0 1-1.3 1.3c-.295.095-.66.095-1.39.095H6.516c-.73 0-1.095 0-1.39-.095a2 2 0 0 1-1.3-1.3c-.094-.295-.094-.66-.094-1.39Z'

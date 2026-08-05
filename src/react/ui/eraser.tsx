@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconEraser: Icon = ({ size = 24, className, ...props }) => {
+export const IconEraser: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconEraser: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='eraser'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M16.019 12.407 11.573 7.96a2 2 0 0 1-.009-2.82l.621-.628a2 2 0 0 1 2.838-.01l4.45 4.45a2 2 0 0 1 0 2.829l-.626.625a2 2 0 0 1-2.828 0Z'

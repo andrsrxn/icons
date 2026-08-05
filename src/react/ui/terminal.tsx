@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTerminal: Icon = ({ size = 24, className, ...props }) => {
+export const IconTerminal: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTerminal: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='terminal'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M4.181 5.769a.75.75 0 0 0-1.026 1.094l.513-.547.513-.547Zm2.43 3.306-.512.547.513-.547Zm.003 5.834.514.546-.514-.546Zm-3.46 2.22a.75.75 0 1 0 1.028 1.093l-.514-.546-.513-.547ZM8.8 11.99h.75-.75Zm1.866 4.944a.75.75 0 0 0 0 1.5v-1.5Zm9.667 1.5a.75.75 0 1 0 0-1.5v1.5ZM3.668 6.316l-.513.547L6.1 9.622l.513-.547.512-.547-2.943-2.76-.513.548Zm2.946 8.593-.513-.547-2.946 2.767.513.547.514.547 2.946-2.768-.514-.546Zm-.002-5.834-.513.547c.744.698 1.245 1.17 1.57 1.57.31.384.38.608.38.799h1.5c0-.676-.296-1.227-.715-1.743-.404-.5-.997-1.052-1.71-1.72l-.512.547Zm.002 5.834.514.546c.712-.669 1.304-1.223 1.708-1.722.418-.517.713-1.068.713-1.743h-1.5c0 .192-.069.416-.38.8-.323.4-.824.873-1.568 1.572l.513.546Zm4.05 2.775v.75h9.668v-1.5h-9.667v.75Z'

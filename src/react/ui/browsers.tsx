@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBrowsers: Icon = ({ size = 24, className, ...props }) => {
+export const IconBrowsers: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBrowsers: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='browsers'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M6.89 7.617c.128 0 .192 0 .234-.004.472-.04.73-.247.87-.7.013-.04.04-.16.093-.403.034-.153.08-.286.146-.408a2 2 0 0 1 .83-.83c.44-.233 1.019-.233 2.178-.233h5.87c1.158 0 1.738 0 2.177.233a2 2 0 0 1 .83.83c.1.189.158.404.19.68.047.395.07.593.006.797a1.07 1.07 0 0 1-.544.613c-.196.088-.436.088-.918.088h-2.875c-.189 0-.298.233-.21.4.033.061.06.125.084.192.27.76.405 1.14.106 1.563-.298.423-.851.423-1.957.423H5.65c-1.106 0-1.659 0-1.958-.423-.298-.423-.163-.803.106-1.563.024-.067.052-.131.084-.192a2 2 0 0 1 .83-.83c.44-.233 1.02-.233 2.179-.233Z'

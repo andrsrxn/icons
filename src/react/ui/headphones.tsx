@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconHeadphones: Icon = ({ size = 24, className, ...props }) => {
+export const IconHeadphones: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconHeadphones: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='headphones'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.743 15.283c0-.54 0-.81.052-1.032a2 2 0 0 1 1.496-1.497c.223-.052.493-.052 1.032-.052.54 0 .81 0 1.032.052a2 2 0 0 1 1.497 1.497c.052.223.052.492.052 1.032v2.064c0 .54 0 .81-.052 1.032a2 2 0 0 1-1.497 1.496c-.222.052-.492.052-1.032.052s-.809 0-1.032-.052a2 2 0 0 1-1.496-1.496c-.052-.223-.052-.493-.052-1.032v-2.064Zm11.353 0c0-.54 0-.81.052-1.032a2 2 0 0 1 1.497-1.497c.223-.052.492-.052 1.032-.052.539 0 .809 0 1.032.052a2 2 0 0 1 1.496 1.497c.052.223.052.492.052 1.032v2.064c0 .54 0 .81-.052 1.032a2 2 0 0 1-1.496 1.496c-.223.052-.493.052-1.032.052-.54 0-.81 0-1.032-.052a2 2 0 0 1-1.497-1.496c-.052-.223-.052-.493-.052-1.032v-2.064Z'

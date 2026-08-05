@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconPilcrow: Icon = ({ size = 24, className, ...props }) => {
+export const IconPilcrow: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconPilcrow: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='pilcrow'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M13.997 7.516c0-1.886 0-2.829.133-3.414.132-.586.345-.586.77-.586h1.916c.425 0 .638 0 .77.586.133.585.133 1.528.133 3.414V16c0 1.886 0 2.828-.133 3.414-.132.586-.345.586-.77.586H14.9c-.425 0-.638 0-.77-.586-.133-.586-.133-1.528-.133-3.414V7.516Z'

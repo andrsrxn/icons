@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconMagicWand: Icon = ({ size = 24, className, ...props }) => {
+export const IconMagicWand: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconMagicWand: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='magic-wand'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M9.14 11.38c.953-.953 1.43-1.43 1.849-1.602.42-.173.617.025 1.014.422l1.786 1.786c.397.397.595.595.423 1.015-.173.42-.65.896-1.603 1.849l-4.29 4.289c-.952.953-1.43 1.43-1.848 1.603-.42.173-.618-.026-1.015-.423L3.67 18.534c-.397-.397-.595-.596-.422-1.015.172-.42.649-.896 1.602-1.85l4.29-4.289Z'

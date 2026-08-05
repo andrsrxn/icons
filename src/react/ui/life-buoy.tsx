@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconLifeBuoy: Icon = ({ size = 24, className, ...props }) => {
+export const IconLifeBuoy: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconLifeBuoy: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='life-buoy'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M8.926 8.918 5.843 5.836c-1.098 1.027-2.39 3.535-2.507 6.168-.118 2.633 1.32 5.133 2.507 6.16l3.083-3.082c-.298-.42-.92-1.786-1.028-3.078-.108-1.292.64-2.527 1.028-3.086Zm6.148 0 3.083-3.082c1.098 1.027 2.39 3.535 2.507 6.168.118 2.633-1.32 5.133-2.508 6.16l-3.082-3.082c.298-.42.92-1.786 1.028-3.078.108-1.292-.64-2.527-1.028-3.086Z'

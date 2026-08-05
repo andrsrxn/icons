@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconDivider: Icon = ({ size = 24, className, ...props }) => {
+export const IconDivider: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconDivider: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='divider'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.883 9.086h8.235c1.83 0 2.745 0 3.313-.585C20 7.915 20 6.972 20 5.086v-1.59H4v1.59c0 1.886 0 2.829.569 3.415.568.585 1.483.585 3.314.585Zm0 6.033h8.235c1.83 0 2.745 0 3.313.585.569.586.569 1.529.569 3.415v1.59H4v-1.59c0-1.886 0-2.829.569-3.415.568-.585 1.483-.585 3.314-.585Z'

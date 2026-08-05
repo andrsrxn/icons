@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconKeyBackspace: Icon = ({ size = 24, className, ...props }) => {
+export const IconKeyBackspace: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconKeyBackspace: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='key-backspace'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M6.008 15.097c-1.724-1.423-2.586-2.134-2.588-3.074-.002-.94.857-1.655 2.575-3.085l2.32-1.932c.55-.458.826-.687 1.156-.807.33-.119.688-.119 1.404-.119h5.391c1.886 0 2.829 0 3.414.586.586.586.586 1.529.586 3.414v3.84c0 1.885 0 2.828-.586 3.414-.585.586-1.528.586-3.414.586h-5.4c-.712 0-1.068 0-1.396-.118-.328-.118-.602-.344-1.151-.797l-2.311-1.908Z'

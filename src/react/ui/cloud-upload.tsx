@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCloudUpload: Icon = ({ size = 24, className, ...props }) => {
+export const IconCloudUpload: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCloudUpload: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='cloud-upload'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M7.051 8.307c.406 0 1.244.143 1.56.426-.254-1.496.478-2.966 1.889-3.618 1.684-.778 3.68-.086 4.456 1.676a3.66 3.66 0 0 1 .29 1.942c.412-.359 1.256-.426 1.702-.426 1.889 0 3.42 1.568 3.42 3.503 0 1.934-1.531 3.502-3.42 3.502H7.051c-1.888 0-3.418-1.568-3.418-3.502 0-1.935 1.53-3.503 3.418-3.503Z'

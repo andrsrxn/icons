@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconDeviceLaptop: Icon = ({ size = 24, className, ...props }) => {
+export const IconDeviceLaptop: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconDeviceLaptop: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='device-laptop'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M19.713 15.987c.511 1.017.767 1.525.625 1.926a1.001 1.001 0 0 1-.223.361c-.295.307-.864.307-2.002.307H5.878c-1.147 0-1.72 0-2.015-.31a1 1 0 0 1-.222-.362c-.14-.403.12-.914.643-1.934.213-.418.32-.627.494-.762a.998.998 0 0 1 .196-.12c.2-.093.434-.093.904-.093h12.235c.473 0 .71 0 .91.094a1 1 0 0 1 .198.121c.174.138.28.35.492.772Z'

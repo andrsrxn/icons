@@ -48,16 +48,21 @@ function svgAttrsToJsx(svg) {
 
 // Custom props injection
 
+// Custom props injection
+
 function injectReactProps(svg, iconName) {
   return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
     return `<svg${attrs}
       width={size}
       height={size}
       data-slot='${iconName}'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={\`${CLASSNAME} \${className ?? ''}\`}
-      {...props}>`
+      {...props}>
+      {title ? <title>{title}</title> : null}`
   })
 }
 
@@ -90,7 +95,15 @@ function generateComponent(fileName, svgContent) {
 
   return `import type { Icon } from './types'
 
-export const Icon${componentName}: Icon = ({ size = ${ICON_SIZE}, className, ...props }) => {
+export const Icon${componentName}: Icon = ({
+  size = ${ICON_SIZE},
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     ${jsxSvg}
   )
@@ -136,6 +149,6 @@ function main() {
 // testing porpuses
 export { generateComponent, normalizeSvg, svgAttrsToJsx, toPascalCase }
 
-if (process?.argv?.[1]?.endsWith(' && echo Icons index generated.')) {
+if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
   main()
 }

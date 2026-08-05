@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCursorClick: Icon = ({ size = 24, className, ...props }) => {
+export const IconCursorClick: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCursorClick: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='cursor-click'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M9.168 18.465 5.835 8.347c-.542-1.645-.813-2.468-.378-2.903.435-.435 1.258-.164 2.903.378l10.118 3.333c1.076.354 1.615.531 1.627.88.013.347-.511.563-1.559.994l-2.056.847c-.627.258-.941.387-.994.65-.052.262.188.502.667.981l3.561 3.561c.577.577.866.866.902 1.219a.995.995 0 0 1 0 .205c-.036.354-.325.642-.902 1.22-.577.576-.865.865-1.219.901a.995.995 0 0 1-.205 0c-.353-.036-.642-.325-1.219-.902l-3.56-3.56c-.48-.48-.72-.72-.983-.668-.262.053-.391.367-.65.994l-.846 2.056c-.431 1.048-.647 1.572-.995 1.56-.348-.013-.525-.551-.88-1.628Z'

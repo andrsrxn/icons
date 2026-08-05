@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconTextHeading2: Icon = ({ size = 24, className, ...props }) => {
+export const IconTextHeading2: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconTextHeading2: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='text-heading-2'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M5.255 3.75a.75.75 0 0 0-1.5 0h1.5Zm-1.5 14.75a.75.75 0 0 0 1.5 0h-1.5Zm8.99 0a.75.75 0 0 0 1.5 0h-1.5Zm1.5-14.75a.75.75 0 0 0-1.5 0h1.5Zm1.585 11.366a.75.75 0 1 0 1.428.459l-.714-.23-.714-.229Zm.714 5.133-.5-.56a.75.75 0 0 0 .5 1.31v-.75ZM20 21a.75.75 0 0 0 0-1.5V21ZM3.12 3.001a.75.75 0 1 0 0 1.5V3Zm2.71 1.5a.75.75 0 1 0 0-1.5v1.5ZM12.098 3a.75.75 0 0 0 0 1.5V3Zm2.711 1.5a.75.75 0 1 0 0-1.5v1.5ZM3.12 17.78a.75.75 0 0 0 0 1.5v-1.5Zm2.712 1.5a.75.75 0 0 0 0-1.5v1.5Zm6.266-1.5a.75.75 0 0 0 0 1.5v-1.5Zm2.711 1.5a.75.75 0 1 0 0-1.5v1.5ZM4.505 3.75h-.75v7.374h1.5V3.751h-.75Zm0 7.374h-.75V18.5h1.5v-7.375h-.75Zm0 0v.75h8.99v-1.5h-8.99v.75Zm8.99 0h-.75V18.5h1.5v-7.375h-.75Zm0 0h.75V3.751h-1.5v7.374h.75Zm3.049 4.22.714.23c.111-.347.497-.673 1.014-.673v-1.5c-1.138 0-2.122.718-2.442 1.714l.714.23Zm1.728-1.193v.75c.277 0 .54.085.714.221.154.12.264.291.264.577h1.5c0-.769-.34-1.37-.844-1.762-.482-.374-1.084-.536-1.634-.536v.75ZM20 15.7h-.75c0 .128-.1.433-.418.918-.293.449-.696.939-1.116 1.403a24.653 24.653 0 0 1-1.637 1.638l-.027.024a.204.204 0 0 1-.006.006h-.001l.499.56.5.56v-.001l.003-.002.008-.008.032-.028.114-.105a26.151 26.151 0 0 0 1.627-1.638c.444-.49.905-1.046 1.26-1.588.33-.505.662-1.134.662-1.739H20Zm-3.456 4.55V21H20v-1.5h-3.456v.75ZM3.119 3.75v.75h2.712V3H3.119v.75Zm8.978 0v.75h2.711V3h-2.711v.75ZM3.119 18.53v.75h2.712v-1.5H3.119v.75Zm8.978 0v.75h2.711v-1.5h-2.711v.75Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconFirstAid: Icon = ({ size = 24, className, ...props }) => {
+export const IconFirstAid: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconFirstAid: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='first-aid'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M14.982 6.606v2.412h2.413c.923 0 1.384 0 1.749.15a2 2 0 0 1 1.092 1.092c.15.364.15.826.15 1.75 0 .922 0 1.384-.15 1.749a2 2 0 0 1-1.092 1.091c-.365.15-.826.15-1.75.15h-2.412v2.413c0 .923 0 1.385-.15 1.75a2 2 0 0 1-1.092 1.091c-.364.15-.826.15-1.75.15-.922 0-1.384 0-1.749-.15a2 2 0 0 1-1.092-1.092C9 18.798 9 18.336 9 17.412V15H6.587c-.923 0-1.385 0-1.75-.15a2 2 0 0 1-1.091-1.091c-.15-.365-.15-.827-.15-1.75s0-1.385.15-1.75a2 2 0 0 1 1.092-1.091c.364-.15.826-.15 1.75-.15H9V6.606c0-.924 0-1.385.15-1.75a2 2 0 0 1 1.091-1.092c.365-.15.827-.15 1.75-.15s1.385 0 1.75.15a2 2 0 0 1 1.091 1.092c.15.365.15.826.15 1.75Z'

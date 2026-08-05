@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBusFront: Icon = ({ size = 24, className, ...props }) => {
+export const IconBusFront: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBusFront: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bus-front'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M4.449 14.1c0-.523 0-.784.546-.947.547-.163 1.427-.163 3.187-.163h7.917c1.76 0 2.64 0 3.186.163.547.162.547.424.547.948v2.355c0 .523 0 .785-.547.947-.546.163-1.426.163-3.186.163H8.182c-1.76 0-2.64 0-3.187-.163-.546-.162-.546-.424-.546-.947V14.1Zm0-9.63c0-.334 0-.5.546-.605.547-.104 1.427-.104 3.187-.104h7.917c1.76 0 2.64 0 3.186.104.547.104.547.271.547.606v1.505c0 .334 0 .501-.547.605-.546.104-1.426.104-3.186.104H8.182c-1.76 0-2.64 0-3.187-.104-.546-.104-.546-.27-.546-.605V4.47Z'

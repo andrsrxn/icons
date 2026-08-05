@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconSignIn: Icon = ({ size = 24, className, ...props }) => {
+export const IconSignIn: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconSignIn: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='sign-in'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m15.529 3.824-3.924.338c-.953.082-1.43.123-1.796.322a2 2 0 0 0-.879.958c-.167.383-.167.86-.167 1.817v8.686c0 1.747 0 2.62.529 3.195.528.574 1.399.646 3.14.791l3.108.26c2.027.168 3.04.252 3.687-.342.645-.594.645-1.611.645-3.645V7.809c0-2.04 0-3.06-.648-3.654-.648-.594-1.663-.506-3.695-.331Z'

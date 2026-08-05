@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCurrencyBtc: Icon = ({ size = 24, className, ...props }) => {
+export const IconCurrencyBtc: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCurrencyBtc: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='currency-btc'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M14.848 11.722H13.8c.835 0 1.635-.326 2.226-.906a3.07 3.07 0 0 0 .921-2.189 3.07 3.07 0 0 0-.922-2.188 3.174 3.174 0 0 0-2.225-.907H8.554v13.069h6.294c.928 0 1.817-.363 2.473-1.008a3.41 3.41 0 0 0 1.024-2.432 3.41 3.41 0 0 0-1.024-2.431 3.527 3.527 0 0 0-2.473-1.008Z'

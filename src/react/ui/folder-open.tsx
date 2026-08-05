@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconFolderOpen: Icon = ({ size = 24, className, ...props }) => {
+export const IconFolderOpen: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconFolderOpen: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='folder-open'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.731 7.218v4.88c0 1.391.8 2.773 1.216 1.446.739-2.36 1.786-3.28 2.317-3.28h10.203a1.354 1.354 0 0 0 0-2.707h-5c-.443 0-.665 0-.875-.046a2.002 2.002 0 0 1-.525-.195c-.19-.103-.358-.247-.694-.536-.335-.29-.503-.434-.693-.536a2 2 0 0 0-.525-.195c-.21-.046-.432-.046-.875-.046H4.947c-.671 0-1.216.544-1.216 1.215Z'

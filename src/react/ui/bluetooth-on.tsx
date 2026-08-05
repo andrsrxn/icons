@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBluetoothOn: Icon = ({ size = 24, className, ...props }) => {
+export const IconBluetoothOn: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBluetoothOn: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='bluetooth-on'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m14.693 17.543-3.233 2.6a1 1 0 0 1-1.627-.78V4.552a1 1 0 0 1 1.61-.792l3.233 2.49a1 1 0 0 1 .04 1.552l-4.883 4.184 4.869 4.006a1 1 0 0 1-.009 1.552Z'

@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconBoxes: Icon = ({ size = 24, className, ...props }) => {
+export const IconBoxes: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconBoxes: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='boxes'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.843 16c0-1.886 0-2.828.586-3.414C5.015 12 5.957 12 7.843 12H8c1.886 0 2.828 0 3.414.586C12 13.172 12 14.114 12 16v.157c0 1.886 0 2.828-.586 3.414-.586.586-1.528.586-3.414.586h-.157c-1.886 0-2.828 0-3.414-.586-.586-.586-.586-1.528-.586-3.414V16ZM12 16c0-1.886 0-2.828.586-3.414C13.172 12 14.114 12 16 12h.157c1.886 0 2.828 0 3.414.586.586.586.586 1.528.586 3.414v.157c0 1.886 0 2.828-.586 3.414-.586.586-1.528.586-3.414.586H16c-1.886 0-2.828 0-3.414-.586C12 18.985 12 18.043 12 16.157V16ZM7.876 7.843c0-1.886 0-2.828.585-3.414.586-.586 1.529-.586 3.415-.586h.157c1.885 0 2.828 0 3.414.586.586.586.586 1.528.586 3.414V8c0 1.886 0 2.828-.586 3.414-.586.586-1.529.586-3.414.586h-.157c-1.886 0-2.829 0-3.415-.586-.585-.586-.585-1.528-.585-3.414v-.157Z'

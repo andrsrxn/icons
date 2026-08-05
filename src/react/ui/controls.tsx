@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconControls: Icon = ({ size = 24, className, ...props }) => {
+export const IconControls: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconControls: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='controls'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M6.852 8.156a2.213 2.213 0 1 0 4.426 0 2.213 2.213 0 0 0-4.426 0Zm10.312 7.676a2.229 2.229 0 1 1-4.457 0 2.229 2.229 0 0 1 4.457 0Z'

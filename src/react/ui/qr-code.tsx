@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconQrCode: Icon = ({ size = 24, className, ...props }) => {
+export const IconQrCode: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconQrCode: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='qr-code'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M3.741 16.785c0-1.38 0-2.069.325-2.567a2 2 0 0 1 .581-.58c.499-.326 1.188-.326 2.567-.326 1.38 0 2.069 0 2.567.325a2 2 0 0 1 .581.581c.326.498.326 1.188.326 2.567 0 1.38 0 2.069-.326 2.567a2 2 0 0 1-.58.58c-.499.326-1.189.326-2.568.326s-2.068 0-2.567-.325a2 2 0 0 1-.58-.581c-.326-.498-.326-1.188-.326-2.567Zm9.571-9.571c0-1.379 0-2.068.325-2.567a2 2 0 0 1 .581-.58c.498-.326 1.188-.326 2.567-.326 1.38 0 2.069 0 2.567.325a2 2 0 0 1 .58.581c.326.499.326 1.188.326 2.567 0 1.38 0 2.069-.325 2.567a2 2 0 0 1-.581.581c-.498.326-1.188.326-2.567.326-1.38 0-2.069 0-2.567-.326a2 2 0 0 1-.58-.58c-.326-.499-.326-1.189-.326-2.568Z'

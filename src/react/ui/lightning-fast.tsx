@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconLightningFast: Icon = ({ size = 24, className, ...props }) => {
+export const IconLightningFast: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconLightningFast: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='lightning-fast'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='m10.378 12.276 5.885-7.424c.287-.362.865-.084.762.366l-1.137 4.968a.433.433 0 0 0 .422.53h3.886c.363 0 .565.42.338.704l-6.167 7.729c-.29.363-.87.078-.76-.373l1.283-5.261a.433.433 0 0 0-.42-.537h-3.752a.433.433 0 0 1-.34-.702Z'

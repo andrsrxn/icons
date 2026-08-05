@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconWarningOctagon: Icon = ({ size = 24, className, ...props }) => {
+export const IconWarningOctagon: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconWarningOctagon: Icon = ({ size = 24, className, ...props }) => 
       width={size}
       height={size}
       data-slot='warning-octagon'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M14.526 4.009c.418-.001.627-.001.814.078.187.079.333.229.624.528l3.369 3.47c.285.294.427.44.5.625.074.185.07.39.065.798l-.073 4.98c-.006.4-.009.6-.085.779-.075.18-.217.32-.499.604l-3.517 3.526c-.289.29-.433.434-.616.51-.184.077-.388.077-.797.078l-4.837.006c-.418.001-.627.001-.814-.078-.187-.079-.333-.229-.624-.529l-3.369-3.47c-.285-.293-.427-.44-.5-.624-.074-.185-.07-.39-.065-.798l.073-4.98c.006-.4.009-.6.085-.779.075-.18.217-.32.499-.604l3.517-3.526c.288-.29.433-.434.616-.51.184-.077.388-.077.797-.078l4.837-.006Z'

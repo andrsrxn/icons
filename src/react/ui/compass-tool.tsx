@@ -1,6 +1,14 @@
 import type { Icon } from './types'
 
-export const IconCompassTool: Icon = ({ size = 24, className, ...props }) => {
+export const IconCompassTool: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
@@ -9,10 +17,13 @@ export const IconCompassTool: Icon = ({ size = 24, className, ...props }) => {
       width={size}
       height={size}
       data-slot='compass-tool'
-      aria-hidden='true'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
       focusable='false'
       className={`ui-icon ${className ?? ''}`}
       {...props}>
+      {title ? <title>{title}</title> : null}
       <path
         fill='currentColor'
         d='M13.923 6.896a1.923 1.923 0 1 1-3.846 0 1.923 1.923 0 0 1 3.846 0Z'
