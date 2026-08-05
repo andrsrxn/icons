@@ -27,8 +27,6 @@ const ICONS_OUT = path.resolve('./src/react/ui')
 const CLASSNAME = 'ui-icon'
 const ICON_SIZE = 24
 
-const JSX_EXCEPTIONS = new Set(['viewBox', 'xmlns', 'xmlns:xlink', 'xml:space'])
-
 // Helpers
 
 function toPascalCase(str) {
@@ -41,11 +39,9 @@ function extractSvg(source) {
 }
 
 function svgAttrsToJsx(svg) {
-  return svg.replace(/([a-z]+-[a-z-]+)=/giu, (match, attr) => {
-    if (JSX_EXCEPTIONS.has(attr)) {
-      return match
-    }
-    const camel = attr.replace(/-([a-z])/gu, (_, c) => c.toUpperCase())
+  return svg.replace(/\b([a-z]+[-:][a-z-]+)=/giu, (_match, attr) => {
+    const camel = attr.replace(/[-:]([a-z])/gu, (_, c) => c.toUpperCase())
+
     return `${camel}=`
   })
 }
