@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest'
 import {
-  generateComponent,
+  generateComponent as generateFlagComponent,
+  optimizeSvg,
+} from '../../scripts/generate-flags.js'
+import {
+  generateComponent as generateIconComponent,
   normalizeSvg,
   svgAttrsToJsx,
   toPascalCase,
@@ -67,7 +71,7 @@ describe('Generator: generateComponent', () => {
     const fakeFile = 'alert-triangle.svg'
     const fakeContent = '<svg><path d="M12 2"/></svg>'
 
-    const result = generateComponent(fakeFile, fakeContent)
+    const result = generateIconComponent(fakeFile, fakeContent)
 
     expect(result).toContain("import type { Icon } from './types'")
     expect(result).toContain('export const IconAlertTriangle: Icon =')
@@ -75,7 +79,7 @@ describe('Generator: generateComponent', () => {
   })
 
   it('returns null if the file does not contain an <svg> tag', () => {
-    const result = generateComponent('bad-file.svg', '<div>Not an icon</div>')
+    const result = generateIconComponent('bad-file.svg', '<div>Not an icon</div>')
     expect(result).toBeNull()
   })
 })
@@ -159,5 +163,110 @@ describe('Index Generator: generateExportLines', () => {
     const result = generateExportLines(rawFiles)
 
     expect(result).toEqual(["export * from './activity'", "export * from './search'"])
+  })
+})
+
+// Tests for generate-flags.js
+
+describe('Flags Generator: extractSvg', () => {
+  it('extracts the exact SVG node from raw content', () => {
+    const rawContent =
+      '<?xml version="1.0"?><svg viewBox="0 0 21 15"><path d="M0 0h21v15H0z"/></svg>'
+    const result = extractSvg(rawContent)
+
+    expect(result).toBe('<svg viewBox="0 0 21 15"><path d="M0 0h21v15H0z"/></svg>')
+  })
+
+  it('returns null if no SVG tag is found in source', () => {
+    const result = extractSvg('<div>Not an SVG</div>')
+    expect(result).toBeNull()
+  })
+})
+
+describe('Flags Generator: svgAttrsToJsx', () => {
+  it('converts kebab-case attributes to camelCase', () => {
+    const raw =
+      '<stop stop-color="#fff" stop-opacity="0.5" fill-rule="evenodd" clip-path="url(#clip)"/>'
+
+    const result = svgAttrsToJsx(raw)
+
+    expect(result).toContain('stopColor=')
+    expect(result).toContain('stopOpacity=')
+    expect(result).toContain('fillRule=')
+    expect(result).toContain('clipPath=')
+  })
+
+  it('converts namespace attributes to JSX props', () => {
+    const raw =
+      '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path-1" xml:space="preserve"/>'
+
+    const result = svgAttrsToJsx(raw)
+
+    expect(result).toContain('xmlnsXlink=')
+    expect(result).toContain('xlinkHref=')
+    expect(result).toContain('xmlSpace=')
+  })
+
+  it('ignores JSX exceptions (viewBox, xmlns)', () => {
+    const raw = '<svg viewBox="0 0 21 15" xmlns="http://www.w3.org/2000/svg">'
+    const result = svgAttrsToJsx(raw)
+
+    expect(result).toContain('viewBox="0 0 21 15"')
+    expect(result).toContain('xmlns=')
+  })
+})
+
+describe('Flags Generator: optimizeSvg', () => {
+  it('prefixes IDs and preserves mask/use references with country code', () => {
+    const rawSvg = `
+      <svg viewBox="0 0 21 15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="path-4" d="M0 0h21v15H0z"/>
+          <mask id="mask-5">
+            <use xlink:href="#path-4"/>
+          </mask>
+        </defs>
+        <rect width="21" height="15" mask="url(#mask-5)"/>
+      </svg>
+    `
+    const result = optimizeSvg(rawSvg, 'mk')
+
+    expect(result).toContain('id="mk-a"')
+    expect(result).toContain('id="mk-b"')
+    expect(result).toContain('xlink:href="#mk-a"')
+    expect(result).toContain('mask="url(#mk-b)"')
+  })
+})
+
+describe('Flags Generator: generateComponent', () => {
+  it('assembles a standard country flag TSX file correctly', () => {
+    const rawSvg = '<svg viewBox="0 0 21 15"><rect width="21" height="15"/></svg>'
+    const result = generateFlagComponent('mk.svg', rawSvg)
+
+    expect(result).toContain("import type { FlagIcon, FlagIconProps } from './types'")
+    expect(result).toContain('export const IconFlagMK: FlagIcon =')
+    expect(result).toContain('<title>MK</title>')
+    expect(result).toContain("<clipPath id='mk-clip'>")
+    expect(result).toContain("<rect x='0' y='0' width='21' height='15' />")
+    expect(result).toContain("<g clipPath='url(#mk-clip)'>")
+  })
+
+  it('handles hyphenated country codes correctly (us-ca.svg -> IconFlagUSCA)', () => {
+    const rawSvg = '<svg viewBox="0 0 21 15"><rect width="21" height="15"/></svg>'
+    const result = generateFlagComponent('us-ca.svg', rawSvg)
+
+    // Component name strips non-alphanumeric characters
+    expect(result).toContain('export const IconFlagUSCA: FlagIcon =')
+
+    // Title tag maintains formatted uppercase string
+    expect(result).toContain('<title>US-CA</title>')
+
+    // ClipPath ID maintains kebab-case country code prefix
+    expect(result).toContain("<clipPath id='us-ca-clip'>")
+  })
+
+  it('returns null if the file does not contain an <svg> tag', () => {
+    const result = generateFlagComponent('bad-flag.svg', '<div>Not an SVG</div>')
+    expect(result).toBeNull()
   })
 })
