@@ -21,38 +21,23 @@ export const IconFlagDK: FlagIcon = ({
       <title>DK</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='dk-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='dk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='dk-linearGradient-2'>
-          <stop stopColor='#EF264D' offset='0%' />
-          <stop stopColor='#E1143C' offset='100%' />
+        <linearGradient id='dk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ef264d' />
+          <stop offset='100%' stopColor='#e1143c' />
         </linearGradient>
+        <clipPath id='dk-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='dk-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='dk-DK'>
-          <rect
-            id='dk-FlagBackground'
-            fill='url(#dk-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='dk-Mask-Copy'
-            fill='url(#dk-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='dk-Rectangle-2'
-            fill='url(#dk-linearGradient-1)'
-            points='0 9 6 9 6 15 9 15 9 9 21 9 21 6 9 6 9 0 6 0 6 6 0 6'
-          />
+      <g clipPath='url(#dk-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#dk-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#dk-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#dk-a)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
         </g>
       </g>
     </svg>

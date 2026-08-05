@@ -21,56 +21,33 @@ export const IconFlagLC: FlagIcon = ({
       <title>LC</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lc-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='lc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lc-linearGradient-2'>
-          <stop stopColor='#86D7FF' offset='0%' />
-          <stop stopColor='#6BCDFE' offset='100%' />
+        <linearGradient id='lc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#86d7ff' />
+          <stop offset='100%' stopColor='#6bcdfe' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lc-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='lc-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lc-linearGradient-4'>
-          <stop stopColor='#FFDA57' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='lc-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffda57' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
+        <clipPath id='lc-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='lc-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='lc-LC'>
-          <rect
-            id='lc-FlagBackground'
-            fill='url(#lc-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='lc-Mask-Copy'
-            fill='url(#lc-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='lc-Rectangle-320'
-            fill='url(#lc-linearGradient-1)'
-            points='10.5 2 15 13 6 13'
-          />
-          <polygon
-            id='lc-Rectangle-320'
-            fill='url(#lc-linearGradient-3)'
-            points='10.5 4 14 13 7 13'
-          />
-          <polygon
-            id='lc-Rectangle-320'
-            fill='url(#lc-linearGradient-4)'
-            points='10.5 7 15 13 6 13'
-          />
+      <g clipPath='url(#lc-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#lc-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#lc-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#lc-a)' d='M10.5 2 15 13H6z' />
+          <path fill='url(#lc-c)' d='m10.5 4 3.5 9H7z' />
+          <path fill='url(#lc-d)' d='m10.5 7 4.5 6H6z' />
         </g>
       </g>
     </svg>

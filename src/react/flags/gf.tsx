@@ -21,46 +21,34 @@ export const IconFlagGF: FlagIcon = ({
       <title>GF</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gf-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gf-linearGradient-2'>
-          <stop stopColor='#2DA446' offset='0%' />
-          <stop stopColor='#218736' offset='100%' />
+        <linearGradient id='gf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2da446' />
+          <stop offset='100%' stopColor='#218736' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gf-linearGradient-3'>
-          <stop stopColor='#FFE24A' offset='0%' />
-          <stop stopColor='#FCDC34' offset='100%' />
+        <linearGradient id='gf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffe24a' />
+          <stop offset='100%' stopColor='#fcdc34' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gf-linearGradient-4'>
-          <stop stopColor='#E7242C' offset='0%' />
-          <stop stopColor='#D61C24' offset='100%' />
+        <linearGradient id='gf-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e7242c' />
+          <stop offset='100%' stopColor='#d61c24' />
         </linearGradient>
+        <clipPath id='gf-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gf-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gf-GF'>
-          <rect
-            id='gf-FlagBackground'
-            fill='url(#gf-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gf-Mask-Copy'
-            fill='url(#gf-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon id='gf-Rectangle-2' fill='url(#gf-linearGradient-3)' points='0 0 21 15 0 15' />
-          <polygon
-            id='gf-Star-53'
-            fill='url(#gf-linearGradient-4)'
-            points='10.5 9.07346292 8.66317109 10.4031781 9.36019403 8.24534541 7.52794839 6.90932189 9.79556117 6.90542313 10.5 4.75 11.2044388 6.90542313 13.4720516 6.90932189 11.639806 8.24534541 12.3368289 10.4031781'
+      <g clipPath='url(#gf-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gf-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gf-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#gf-c)' d='m0 0 21 15H0z' />
+          <path
+            fill='url(#gf-d)'
+            d='m10.5 9.073-1.837 1.33.697-2.158L7.528 6.91l2.268-.004.704-2.155.704 2.155 2.268.004-1.832 1.336.697 2.158z'
           />
         </g>
       </g>

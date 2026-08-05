@@ -21,49 +21,30 @@ export const IconFlagBF: FlagIcon = ({
       <title>BF</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bf-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bf-linearGradient-2'>
-          <stop stopColor='#00B051' offset='0%' />
-          <stop stopColor='#009F49' offset='100%' />
+        <linearGradient id='bf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#00b051' />
+          <stop offset='100%' stopColor='#009f49' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bf-linearGradient-3'>
-          <stop stopColor='#FA494B' offset='0%' />
-          <stop stopColor='#F02B2D' offset='100%' />
+        <linearGradient id='bf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fa494b' />
+          <stop offset='100%' stopColor='#f02b2d' />
         </linearGradient>
+        <clipPath id='bf-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bf-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bf-BF'>
-          <rect
-            id='bf-FlagBackground'
-            fill='url(#bf-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bf-Rectangle-2'
-            fill='url(#bf-linearGradient-2)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='bf-Rectangle-2'
-            fill='url(#bf-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <polygon
-            id='bf-Star-8'
-            fill='#FDD216'
-            points='10.5 9.17000005 8.73664424 10.427051 9.38726383 8.3615499 7.64683045 7.07294902 9.81229123 7.05345008 10.5 5 11.1877088 7.05345008 13.3531695 7.07294902 11.6127362 8.3615499 12.2633558 10.427051'
+      <g clipPath='url(#bf-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bf-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bf-b)' d='M0 8h21v7H0z' />
+          <path fill='url(#bf-c)' d='M0 0h21v8H0z' />
+          <path
+            fill='#fdd216'
+            d='m10.5 9.17-1.763 1.257.65-2.065-1.74-1.29 2.165-.019L10.5 5l.688 2.053 2.165.02-1.74 1.289.65 2.065z'
           />
         </g>
       </g>

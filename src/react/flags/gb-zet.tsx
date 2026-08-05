@@ -21,38 +21,23 @@ export const IconFlagGBZET: FlagIcon = ({
       <title>GB-ZET</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-zet-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gb-zet-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-zet-linearGradient-2'>
-          <stop stopColor='#187AE5' offset='0%' />
-          <stop stopColor='#0F68C9' offset='100%' />
+        <linearGradient id='gb-zet-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#187ae5' />
+          <stop offset='100%' stopColor='#0f68c9' />
         </linearGradient>
+        <clipPath id='gb-zet-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gb-zet-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gb-zet-GB-ZET'>
-          <rect
-            id='gb-zet-FlagBackground'
-            fill='url(#gb-zet-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gb-zet-Mask-Copy'
-            fill='url(#gb-zet-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='gb-zet-Rectangle-2'
-            fill='url(#gb-zet-linearGradient-1)'
-            points='0 9 6 9 6 15 9 15 9 9 21 9 21 6 9 6 9 0 6 0 6 6 0 6'
-          />
+      <g clipPath='url(#gb-zet-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gb-zet-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gb-zet-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#gb-zet-a)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
         </g>
       </g>
     </svg>

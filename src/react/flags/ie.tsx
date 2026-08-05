@@ -21,46 +21,28 @@ export const IconFlagIE: FlagIcon = ({
       <title>IE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ie-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ie-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ie-linearGradient-2'>
-          <stop stopColor='#FF8515' offset='0%' />
-          <stop stopColor='#FF7A00' offset='100%' />
+        <linearGradient id='ie-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff8515' />
+          <stop offset='100%' stopColor='#ff7a00' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ie-linearGradient-3'>
-          <stop stopColor='#07BB59' offset='0%' />
-          <stop stopColor='#029C48' offset='100%' />
+        <linearGradient id='ie-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#07bb59' />
+          <stop offset='100%' stopColor='#029c48' />
         </linearGradient>
+        <clipPath id='ie-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ie-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ie-IE'>
-          <rect
-            id='ie-FlagBackground'
-            fill='url(#ie-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='ie-Mask' fill='url(#ie-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='ie-Rectangle-2'
-            fill='url(#ie-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='ie-Rectangle-2-Copy'
-            fill='url(#ie-linearGradient-1)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#ie-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ie-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ie-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#ie-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#ie-a)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

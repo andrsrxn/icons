@@ -21,211 +21,130 @@ export const IconFlagGS: FlagIcon = ({
       <title>GS</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-2'>
-          <stop stopColor='#07319C' offset='0%' />
-          <stop stopColor='#00247E' offset='100%' />
+        <linearGradient id='gs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#07319c' />
+          <stop offset='100%' stopColor='#00247e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-3'>
-          <stop stopColor='#DB1E36' offset='0%' />
-          <stop stopColor='#D51931' offset='100%' />
+        <linearGradient id='gs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#db1e36' />
+          <stop offset='100%' stopColor='#d51931' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-4'>
-          <stop stopColor='#1E1E1E' offset='0%' />
-          <stop stopColor='#000000' offset='100%' />
+        <linearGradient id='gs-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1e1e1e' />
+          <stop offset='100%' />
         </linearGradient>
-        <ellipse id='gs-path-5' cx='0.5' cy='1.5' rx='1' ry='1.5' />
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-7'>
-          <stop stopColor='#A2ADB0' offset='0%' />
-          <stop stopColor='#8B9497' offset='100%' />
+        <linearGradient id='gs-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#a2adb0' />
+          <stop offset='100%' stopColor='#8b9497' />
         </linearGradient>
-        <ellipse id='gs-path-8' cx='0.5' cy='1.5' rx='1' ry='1.5' />
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-10'>
-          <stop stopColor='#4F4F4F' offset='0%' />
-          <stop stopColor='#2B2B2B' offset='100%' />
+        <linearGradient id='gs-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#4f4f4f' />
+          <stop offset='100%' stopColor='#2b2b2b' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-11'>
-          <stop stopColor='#FEC241' offset='0%' />
-          <stop stopColor='#FEBB2C' offset='100%' />
+        <linearGradient id='gs-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fec241' />
+          <stop offset='100%' stopColor='#febb2c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-12'>
-          <stop stopColor='#A84B14' offset='0%' />
-          <stop stopColor='#913F0E' offset='100%' />
+        <linearGradient id='gs-l' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#a84b14' />
+          <stop offset='100%' stopColor='#913f0e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-13'>
-          <stop stopColor='#CFB063' offset='0%' />
-          <stop stopColor='#BEA157' offset='100%' />
+        <linearGradient id='gs-m' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#cfb063' />
+          <stop offset='100%' stopColor='#bea157' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-14'>
-          <stop stopColor='#2D42FF' offset='0%' />
-          <stop stopColor='#0B24FC' offset='100%' />
+        <linearGradient id='gs-n' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2d42ff' />
+          <stop offset='100%' stopColor='#0b24fc' />
         </linearGradient>
-        <linearGradient x1='0%' y1='0%' x2='100%' y2='50%' id='gs-linearGradient-15'>
-          <stop stopColor='#E3DC3D' offset='0%' />
-          <stop stopColor='#CFC82A' offset='100%' />
+        <linearGradient id='gs-o' x1='0%' x2='100%' y1='0%' y2='50%'>
+          <stop offset='0%' stopColor='#e3dc3d' />
+          <stop offset='100%' stopColor='#cfc82a' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-16'>
-          <stop stopColor='#7F7D7D' offset='0%' />
-          <stop stopColor='#656263' offset='100%' />
+        <linearGradient id='gs-p' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#7f7d7d' />
+          <stop offset='100%' stopColor='#656263' />
         </linearGradient>
+        <linearGradient id='gs-s' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0f8012' />
+          <stop offset='100%' stopColor='#0b6a0d' />
+        </linearGradient>
+        <linearGradient id='gs-t' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffcf44' />
+          <stop offset='100%' stopColor='#fcc72e' />
+        </linearGradient>
+        <ellipse id='gs-d' cx='.5' cy='1.5' rx='1' ry='1.5' />
+        <ellipse id='gs-g' cx='.5' cy='1.5' rx='1' ry='1.5' />
         <path
-          d='M0.00681795878,0.505912304 C0.00305250412,0.226504654 0.215752602,0 0.495388985,0 L2.50461102,0 C2.7782068,0 3.00310922,0.230712891 3.00681796,0.505912304 L3.03033777,2.25115061 C3.03218993,2.38858633 2.93416692,2.56561279 2.82278051,2.63904572 L1.7277566,3.36095428 C1.61127373,3.43774711 1.41953181,3.43438721 1.31061945,3.36095428 L0.239917656,2.63904572 C0.126022043,2.56225289 0.0322437286,2.39257813 0.0303377719,2.25115061 L0.00681795878,0.505912304 Z'
-          id='gs-path-17'
+          id='gs-q'
+          d='M.007.506A.49.49 0 0 1 .495 0h2.01c.273 0 .498.23.502.506L3.03 2.25a.52.52 0 0 1-.207.388l-1.095.722a.41.41 0 0 1-.417 0L.24 2.639a.53.53 0 0 1-.21-.388z'
         />
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-19'>
-          <stop stopColor='#0F8012' offset='0%' />
-          <stop stopColor='#0B6A0D' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gs-linearGradient-20'>
-          <stop stopColor='#FFCF44' offset='0%' />
-          <stop stopColor='#FCC72E' offset='100%' />
-        </linearGradient>
+        <clipPath id='gs-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gs-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gs-GS'>
-          <rect
-            id='gs-FlagBackground'
-            fill='url(#gs-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gs-Mask-Copy'
-            fill='url(#gs-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#gs-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gs-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gs-b)' d='M0 0h21v15H0z' />
           <path
-            d='M3,3.22996746 L-1.3516287,-0.5 L0.660232527,-0.5 L4.16023253,2 L4.85660189,2 L9.5,-0.902123821 L9.5,0.25 C9.5,0.552509227 9.33308555,0.876533554 9.08215972,1.05576629 L6,3.25730895 L6,3.77003254 L9.13722049,6.45907867 C9.59934261,6.85518335 9.34102897,7.5 8.75,7.5 C8.50478614,7.5 8.2052751,7.40393402 8.00092153,7.25796718 L4.83976747,5 L4.14339811,5 L-0.5,7.90212382 L-0.5,6.24269105 L3,3.74269105 L3,3.22996746 Z'
-            id='gs-Rectangle-36'
-            fill='url(#gs-linearGradient-1)'
+            fill='url(#gs-a)'
             fillRule='nonzero'
+            d='M3 3.23-1.352-.5H.66L4.16 2h.697L9.5-.902V.25c0 .303-.167.627-.418.806L6 3.257v.513l3.137 2.69c.462.395.204 1.04-.387 1.04-.245 0-.545-.096-.75-.242L4.84 5h-.697L-.5 7.902v-1.66l3.5-2.5z'
           />
           <path
-            d='M3.5,3 L-4.4408921e-16,-2.13162821e-14 L0.5,-2.13162821e-14 L4,2.5 L5,2.5 L9,-2.13162821e-14 L9,0.25 C9,0.388071187 8.91348267,0.561798096 8.79154062,0.648899555 L5.5,3 L5.5,4 L8.8118248,6.83870697 C8.91575109,6.92778665 8.8840332,7 8.75,7 L8.75,7 C8.61192881,7 8.41348267,6.9382019 8.29154062,6.85110044 L5,4.5 L4,4.5 L-4.4408921e-16,7 L-4.4408921e-16,6.5 L3.5,4 L3.5,3 Z'
-            id='gs-Rectangle-36'
-            fill='url(#gs-linearGradient-3)'
+            fill='url(#gs-c)'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
           />
           <path
-            d='M-4.4408921e-16,2.5 L-4.4408921e-16,4.5 L3.5,4.5 L3.5,7.00461102 C3.5,7.2782068 3.71403503,7.5 4.00468445,7.5 L4.99531555,7.5 C5.27404508,7.5 5.5,7.2842474 5.5,7.00461102 L5.5,4.5 L9.00952148,4.5 C9.28040529,4.5 9.5,4.28596497 9.5,3.99531555 L9.5,3.00468445 C9.5,2.72595492 9.28494263,2.5 9.00952148,2.5 L5.5,2.5 L5.5,-2.13162821e-14 L3.5,-2.13162821e-14 L3.5,2.5 L-4.4408921e-16,2.5 Z'
-            id='gs-Rectangle-2'
-            fill='url(#gs-linearGradient-1)'
+            fill='url(#gs-a)'
+            d='M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 0 0 .505-.495V4.5h3.51a.49.49 0 0 0 .49-.505v-.99a.495.495 0 0 0-.49-.505H5.5V0h-2v2.5z'
           />
-          <polygon
-            id='gs-Rectangle-36'
-            fill='url(#gs-linearGradient-3)'
-            points='-4.4408921e-16 3 4 3 4 2.5 4 -2.13162821e-14 5 -2.13162821e-14 5 2.5 5 3 9 3 9 4 5 4 5 4.5 5 7 4 7 4 4.5 4 4 -4.4408921e-16 4'
-          />
-          <g id='gs-Group-2' transform='translate(18.000000, 8.000000)'>
-            <mask id='gs-mask-6' fill='white'>
-              <use xlinkHref='#gs-path-5' />
+          <path fill='url(#gs-c)' d='M0 3h4V0h1v3h4v1H5v3H4V4H0z' />
+          <g transform='translate(18 8)'>
+            <mask id='gs-f' fill='#fff'>
+              <use xlinkHref='#gs-d' />
             </mask>
-            <use id='gs-Oval-13' fill='url(#gs-linearGradient-4)' xlinkHref='#gs-path-5' />
-            <ellipse
-              id='gs-Oval-13-Copy-2'
-              fill='url(#gs-linearGradient-1)'
-              mask='url(#gs-mask-6)'
-              cx='0'
-              cy='2'
-              rx='1'
-              ry='1.5'
-            />
+            <use xlinkHref='#gs-d' fill='url(#gs-e)' />
+            <ellipse cy='2' fill='url(#gs-a)' mask='url(#gs-f)' rx='1' ry='1.5' />
           </g>
-          <g id='gs-Group-3' transform='translate(14.000000, 8.000000)'>
-            <mask id='gs-mask-9' fill='white'>
-              <use xlinkHref='#gs-path-8' />
+          <g transform='translate(14 8)'>
+            <mask id='gs-j' fill='#fff'>
+              <use xlinkHref='#gs-g' />
             </mask>
-            <use id='gs-Oval-13-Copy' fill='url(#gs-linearGradient-7)' xlinkHref='#gs-path-8' />
-            <ellipse
-              id='gs-Oval-13-Copy-3'
-              fill='url(#gs-linearGradient-10)'
-              mask='url(#gs-mask-9)'
-              cx='1'
-              cy='2'
-              rx='1'
-              ry='1.5'
-            />
+            <use xlinkHref='#gs-g' fill='url(#gs-h)' />
+            <ellipse cx='1' cy='2' fill='url(#gs-i)' mask='url(#gs-j)' rx='1' ry='1.5' />
           </g>
           <path
-            d='M16.5,12.5 C17.3284271,13 18,12.7761424 18,12.5 C18,12.2238576 17.3284271,12 16.5,12 C15.6715729,12 15,12.2238576 15,12.5 C15,12.7761424 15.6715729,13 16.5,12.5 Z'
-            id='gs-Oval-2'
-            fill='url(#gs-linearGradient-11)'
+            fill='url(#gs-k)'
+            d='M16.5 12.5c.828.5 1.5.276 1.5 0s-.672-.5-1.5-.5-1.5.224-1.5.5.672.5 1.5 0'
           />
-          <circle id='gs-Oval' fill='url(#gs-linearGradient-1)' cx='18.5' cy='5.5' r='1' />
-          <circle id='gs-Oval-Copy-4' fill='url(#gs-linearGradient-12)' cx='16.5' cy='4.5' r='1' />
-          <ellipse
-            id='gs-Oval-Copy-8'
-            fill='url(#gs-linearGradient-13)'
-            cx='16.5'
-            cy='3.75'
-            rx='1'
-            ry='1'
-          />
-          <circle id='gs-Oval-Copy-6' fill='url(#gs-linearGradient-1)' cx='16.5' cy='11.5' r='1' />
-          <circle id='gs-Oval-Copy' fill='url(#gs-linearGradient-1)' cx='14.5' cy='5.5' r='1' />
-          <circle id='gs-Oval-Copy-2' fill='url(#gs-linearGradient-14)' cx='15' cy='6.5' r='1' />
-          <circle id='gs-Oval-Copy-3' fill='url(#gs-linearGradient-14)' cx='18' cy='6.5' r='1' />
-          <ellipse
-            id='gs-Oval-Copy-7'
-            fill='url(#gs-linearGradient-15)'
-            cx='19'
-            cy='8'
-            rx='1'
-            ry='1'
-          />
+          <circle cx='18.5' cy='5.5' r='1' fill='url(#gs-a)' />
+          <circle cx='16.5' cy='4.5' r='1' fill='url(#gs-l)' />
+          <circle cx='16.5' cy='3.75' r='1' fill='url(#gs-m)' />
+          <circle cx='16.5' cy='11.5' r='1' fill='url(#gs-a)' />
+          <circle cx='14.5' cy='5.5' r='1' fill='url(#gs-a)' />
+          <circle cx='15' cy='6.5' r='1' fill='url(#gs-n)' />
+          <circle cx='18' cy='6.5' r='1' fill='url(#gs-n)' />
+          <circle cx='19' cy='8' r='1' fill='url(#gs-o)' />
+          <path fill='url(#gs-p)' d='m16 7.5-.5.5h2l-.5-.5.5-1.5s-.448-1-1-1-1 1-1 1z' />
           <path
-            d='M16,7.5 L15.5,8 L17.5,8 L17,7.5 L17.5,6 C17.5,6 17.0522847,5 16.5,5 C15.9477153,5 15.5,6 15.5,6 L16,7.5 Z'
-            id='gs-Oval-10'
-            fill='url(#gs-linearGradient-16)'
+            fill='#5d0543'
+            d='M16.5 6.5s.5-.112.5-.38c0-.008-.5-.12-.5-.12s-.5.112-.5.12c0 .268.5.38.5.38'
           />
-          <path
-            d='M16.5,6.5 C16.5,6.5 17,6.38807119 17,6.11999989 C17,6.11192881 16.5,6 16.5,6 C16.5,6 16,6.11192881 16,6.11999989 C16,6.38807119 16.5,6.5 16.5,6.5 Z'
-            id='gs-Oval-4'
-            fill='#5D0543'
-          />
-          <g id='gs-Group' transform='translate(15.000000, 8.000000)'>
-            <mask id='gs-mask-18' fill='white'>
-              <use xlinkHref='#gs-path-17' />
+          <g transform='translate(15 8)'>
+            <mask id='gs-r' fill='#fff'>
+              <use xlinkHref='#gs-q' />
             </mask>
-            <use id='gs-Rectangle-4' fill='url(#gs-linearGradient-1)' xlinkHref='#gs-path-17' />
-            <circle
-              id='gs-Oval-Copy-3'
-              fill='#225DA4'
-              mask='url(#gs-mask-18)'
-              cx='2.5'
-              cy='2.5'
-              r='1'
-            />
-            <circle
-              id='gs-Oval-Copy-5'
-              fill='#225DA4'
-              mask='url(#gs-mask-18)'
-              cx='0.5'
-              cy='1.5'
-              r='1'
-            />
-            <polygon
-              id='gs-Rectangle'
-              fill='url(#gs-linearGradient-19)'
-              mask='url(#gs-mask-18)'
-              points='0 0 3 0 1.5 3'
-            />
-            <ellipse
-              id='gs-Oval-3'
-              fill='url(#gs-linearGradient-20)'
-              mask='url(#gs-mask-18)'
-              cx='1.5'
-              cy='1.5'
-              rx='1'
-              ry='1'
-            />
+            <use xlinkHref='#gs-q' fill='url(#gs-a)' />
+            <circle cx='2.5' cy='2.5' r='1' fill='#225da4' mask='url(#gs-r)' />
+            <circle cx='.5' cy='1.5' r='1' fill='#225da4' mask='url(#gs-r)' />
+            <path fill='url(#gs-s)' d='M0 0h3L1.5 3z' mask='url(#gs-r)' />
+            <circle cx='1.5' cy='1.5' r='1' fill='url(#gs-t)' mask='url(#gs-r)' />
           </g>
         </g>
       </g>

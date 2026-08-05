@@ -21,72 +21,54 @@ export const IconFlagMD: FlagIcon = ({
       <title>MD</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='md-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='md-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='md-linearGradient-2'>
-          <stop stopColor='#EB1C43' offset='0%' />
-          <stop stopColor='#CA1134' offset='100%' />
+        <linearGradient id='md-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#eb1c43' />
+          <stop offset='100%' stopColor='#ca1134' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='md-linearGradient-3'>
-          <stop stopColor='#115BCB' offset='0%' />
-          <stop stopColor='#094AAC' offset='100%' />
+        <linearGradient id='md-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#115bcb' />
+          <stop offset='100%' stopColor='#094aac' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='md-linearGradient-4'>
-          <stop stopColor='#FFD953' offset='0%' />
-          <stop stopColor='#FFD130' offset='100%' />
+        <linearGradient id='md-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd953' />
+          <stop offset='100%' stopColor='#ffd130' />
         </linearGradient>
-        <rect id='md-path-5' x='7' y='0' width='7' height='15' />
         <filter
-          x='-10.7%'
-          y='-5.0%'
+          id='md-d'
           width='121.4%'
-          height='110.0%'
-          filterUnits='objectBoundingBox'
-          id='md-filter-6'>
+          height='110%'
+          x='-10.7%'
+          y='-5%'
+          filterUnits='objectBoundingBox'>
           <feMorphology
-            radius='0.25'
-            operator='dilate'
             in='SourceAlpha'
+            operator='dilate'
+            radius='.25'
             result='shadowSpreadOuter1'
           />
-          <feOffset dx='0' dy='0' in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
           <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
             in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
           />
         </filter>
+        <path id='md-e' d='M7 0h7v15H7z' />
+        <clipPath id='md-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='md-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='md-MD'>
-          <rect
-            id='md-FlagBackground'
-            fill='url(#md-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='md-Mask' fill='url(#md-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='md-Rectangle-2'
-            fill='url(#md-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <g id='md-Rectangle-2-Copy'>
-            <use fill='black' fillOpacity='1' filter='url(#md-filter-6)' xlinkHref='#md-path-5' />
-            <use fill='url(#md-linearGradient-4)' fillRule='evenodd' xlinkHref='#md-path-5' />
-          </g>
-          <path
-            d='M9,6 L10,6 L10.5,4.5 L11,6 L12,6 L12,9 L10.5,10 L9,9 L9,6 Z M10,7 L10,8.5 L11,8.5 L11,7 L10,7 Z'
-            id='md-Rectangle-1601'
-            fill='#AF7F59'
-          />
+      <g clipPath='url(#md-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#md-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#md-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#md-c)' d='M0 0h7v15H0z' />
+          <use xlinkHref='#md-e' fill='#000' filter='url(#md-d)' />
+          <use xlinkHref='#md-e' fill='url(#md-f)' />
+          <path fill='#af7f59' d='M9 6h1l.5-1.5L11 6h1v3l-1.5 1L9 9zm1 1v1.5h1V7z' />
         </g>
       </g>
     </svg>

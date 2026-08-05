@@ -21,45 +21,26 @@ export const IconFlagSG: FlagIcon = ({
       <title>SG</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sg-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='sg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sg-linearGradient-2'>
-          <stop stopColor='#E12237' offset='0%' />
-          <stop stopColor='#CE1126' offset='100%' />
+        <linearGradient id='sg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e12237' />
+          <stop offset='100%' stopColor='#ce1126' />
         </linearGradient>
+        <clipPath id='sg-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='sg-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='sg-SG'>
-          <rect
-            id='sg-FlagBackground'
-            fill='url(#sg-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='sg-Rectangle-2'
-            fill='url(#sg-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='sg-Rectangle-2'
-            fill='url(#sg-linearGradient-1)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#sg-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#sg-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#sg-b)' d='M0 0h21v8H0z' />
+          <path fill='url(#sg-a)' d='M0 8h21v7H0z' />
           <path
-            d='M6.87363497,1.6568923 C6.60168078,1.55545057 6.30731598,1.5 6,1.5 C4.61928813,1.5 3.5,2.61928813 3.5,4 C3.5,5.38071187 4.61928813,6.5 6,6.5 C6.30731598,6.5 6.60168078,6.44454943 6.87363497,6.3431077 C6.36024587,6.75416668 5.70883166,7 5,7 C3.34314575,7 2,5.65685425 2,4 C2,2.34314575 3.34314575,1 5,1 C5.70883166,1 6.36024587,1.24583332 6.87363497,1.6568923 L6.87363497,1.6568923 Z M5.5,4 C5.22385763,4 5,3.77614237 5,3.5 C5,3.22385763 5.22385763,3 5.5,3 C5.77614237,3 6,3.22385763 6,3.5 C6,3.77614237 5.77614237,4 5.5,4 Z M6.5,6 C6.22385763,6 6,5.77614237 6,5.5 C6,5.22385763 6.22385763,5 6.5,5 C6.77614237,5 7,5.22385763 7,5.5 C7,5.77614237 6.77614237,6 6.5,6 Z M8.5,6 C8.22385763,6 8,5.77614237 8,5.5 C8,5.22385763 8.22385763,5 8.5,5 C8.77614237,5 9,5.22385763 9,5.5 C9,5.77614237 8.77614237,6 8.5,6 Z M9.5,4 C9.22385763,4 9,3.77614237 9,3.5 C9,3.22385763 9.22385763,3 9.5,3 C9.77614237,3 10,3.22385763 10,3.5 C10,3.77614237 9.77614237,4 9.5,4 Z M7.5,2.5 C7.22385763,2.5 7,2.27614237 7,2 C7,1.72385763 7.22385763,1.5 7.5,1.5 C7.77614237,1.5 8,1.72385763 8,2 C8,2.27614237 7.77614237,2.5 7.5,2.5 Z'
-            id='sg-Oval-12'
-            fill='url(#sg-linearGradient-1)'
+            fill='url(#sg-a)'
+            d='M6.874 1.657a2.5 2.5 0 1 0 0 4.686 3 3 0 1 1 0-4.686M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2-1.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

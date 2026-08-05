@@ -21,58 +21,33 @@ export const IconFlagSD: FlagIcon = ({
       <title>SD</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sd-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='sd-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sd-linearGradient-2'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='sd-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sd-linearGradient-3'>
-          <stop stopColor='#EA1F44' offset='0%' />
-          <stop stopColor='#D01739' offset='100%' />
+        <linearGradient id='sd-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ea1f44' />
+          <stop offset='100%' stopColor='#d01739' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sd-linearGradient-4'>
-          <stop stopColor='#12933B' offset='0%' />
-          <stop stopColor='#0D722D' offset='100%' />
+        <linearGradient id='sd-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#12933b' />
+          <stop offset='100%' stopColor='#0d722d' />
         </linearGradient>
+        <clipPath id='sd-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='sd-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='sd-SD'>
-          <rect
-            id='sd-FlagBackground'
-            fill='url(#sd-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='sd-Rectangle-2'
-            fill='url(#sd-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='sd-Rectangle-2'
-            fill='url(#sd-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='sd-Rectangle-2'
-            fill='url(#sd-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <polygon id='sd-Rectangle-83' fill='url(#sd-linearGradient-4)' points='0 0 10 7.5 0 15' />
+      <g clipPath='url(#sd-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#sd-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#sd-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#sd-c)' d='M0 0h21v5H0z' />
+          <path fill='url(#sd-a)' d='M0 5h21v5H0z' />
+          <path fill='url(#sd-d)' d='m0 0 10 7.5L0 15z' />
         </g>
       </g>
     </svg>

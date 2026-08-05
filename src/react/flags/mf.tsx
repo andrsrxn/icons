@@ -21,46 +21,28 @@ export const IconFlagMF: FlagIcon = ({
       <title>MF</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mf-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mf-linearGradient-2'>
-          <stop stopColor='#F44653' offset='0%' />
-          <stop stopColor='#EE2A39' offset='100%' />
+        <linearGradient id='mf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f44653' />
+          <stop offset='100%' stopColor='#ee2a39' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mf-linearGradient-3'>
-          <stop stopColor='#1035BB' offset='0%' />
-          <stop stopColor='#042396' offset='100%' />
+        <linearGradient id='mf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1035bb' />
+          <stop offset='100%' stopColor='#042396' />
         </linearGradient>
+        <clipPath id='mf-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mf-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mf-MF'>
-          <rect
-            id='mf-FlagBackground'
-            fill='url(#mf-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='mf-Mask' fill='url(#mf-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='mf-Rectangle-2'
-            fill='url(#mf-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='mf-Rectangle-2-Copy'
-            fill='url(#mf-linearGradient-1)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#mf-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mf-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mf-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#mf-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#mf-a)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

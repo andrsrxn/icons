@@ -21,79 +21,40 @@ export const IconFlagDO: FlagIcon = ({
       <title>DO</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='do-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='do-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='do-linearGradient-2'>
-          <stop stopColor='#083D7A' offset='0%' />
-          <stop stopColor='#032F61' offset='100%' />
+        <linearGradient id='do-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#083d7a' />
+          <stop offset='100%' stopColor='#032f61' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='do-linearGradient-3'>
-          <stop stopColor='#DF1E35' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='do-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#df1e35' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
+        <clipPath id='do-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='do-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='do-DO'>
-          <rect
-            id='do-FlagBackground'
-            fill='url(#do-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='do-Rectangle-2'
-            fill='url(#do-linearGradient-2)'
-            x='0'
-            y='0'
-            width='9'
-            height='6'
-          />
-          <rect
-            id='do-Rectangle-2'
-            fill='url(#do-linearGradient-2)'
-            x='12'
-            y='9'
-            width='9'
-            height='6'
-          />
-          <rect
-            id='do-Rectangle-2'
-            fill='url(#do-linearGradient-3)'
-            x='0'
-            y='9'
-            width='9'
-            height='6'
-          />
-          <rect
-            id='do-Rectangle-2'
-            fill='url(#do-linearGradient-3)'
-            x='12'
-            y='0'
-            width='9'
-            height='6'
-          />
+      <g clipPath='url(#do-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#do-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#do-b)' d='M0 0h9v6H0z' />
+          <path fill='url(#do-b)' d='M12 9h9v6h-9z' />
+          <path fill='url(#do-c)' d='M0 9h9v6H0z' />
+          <path fill='url(#do-c)' d='M12 0h9v6h-9z' />
+          <path fill='url(#do-a)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
           <path
-            d='M9,6 L0,6 L0,9 L9,9 L9,15 L12,15 L12,9 L21,9 L21,6 L12,6 L12,0 L9,0 L9,6 Z'
-            id='do-Rectangle-2'
-            fill='url(#do-linearGradient-1)'
+            fill='#c93127'
+            fillOpacity='.2'
+            d='M9.44 6.44a1.5 1.5 0 0 0 2.12 2.12 1.5 1.5 0 0 0 0-2.12'
           />
+          <circle cx='10.5' cy='7.5' r='1' fill='#042f60' />
           <path
-            d='M10.5,6 C9.67157288,6 9,6.67157288 9,7.5 C9,8.32842712 9.67157288,9 10.5,9 L10.5,9 C11.3284271,9 12,8.32842712 12,7.5'
-            id='do-Oval-85'
-            fillOpacity='0.2'
-            fill='#C93127'
-            transform='translate(10.500000, 7.500000) rotate(-45.000000) translate(-10.500000, -7.500000) '
-          />
-          <circle id='do-Oval-85' fill='#042F60' cx='10.5' cy='7.5' r='1' />
-          <path
-            d='M11.5606602,8.56066017 C10.9748737,9.14644661 10.0251263,9.14644661 9.43933983,8.56066017 C8.85355339,7.97487373 8.85355339,7.02512627 9.43933983,6.43933983 L9.79289322,6.79289322 C9.40236893,7.18341751 9.40236893,7.81658249 9.79289322,8.20710678 C10.1834175,8.59763107 10.8165825,8.59763107 11.2071068,8.20710678 C11.5976311,7.81658249 11.5976311,7.18341751 11.2071068,6.79289322 L11.5606602,6.43933983 C12.1464466,7.02512627 12.1464466,7.97487373 11.5606602,8.56066017 Z M11.5606602,8.56066017 C10.9748737,9.14644661 10.0251263,9.14644661 9.43933983,8.56066017 C8.85355339,7.97487373 8.85355339,7.02512627 9.43933983,6.43933983 L9.79289322,6.79289322 C9.40236893,7.18341751 9.40236893,7.81658249 9.79289322,8.20710678 C10.1834175,8.59763107 10.8165825,8.59763107 11.2071068,8.20710678 C11.5976311,7.81658249 11.5976311,7.18341751 11.2071068,6.79289322 L11.5606602,6.43933983 C12.1464466,7.02512627 12.1464466,7.97487373 11.5606602,8.56066017 Z'
-            id='do-Oval-85'
-            fill='#0F6D1A'
+            fill='#0f6d1a'
             fillRule='nonzero'
+            d='M11.56 8.56a1.5 1.5 0 0 1-2.12-2.12l.353.353a1 1 0 1 0 1.414 0l.354-.354a1.5 1.5 0 0 1 0 2.122m0 0a1.5 1.5 0 0 1-2.12-2.12l.353.353a1 1 0 1 0 1.414 0l.354-.354a1.5 1.5 0 0 1 0 2.122'
           />
         </g>
       </g>

@@ -21,57 +21,31 @@ export const IconFlagCL: FlagIcon = ({
       <title>CL</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cl-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cl-linearGradient-2'>
-          <stop stopColor='#EA3B2E' offset='0%' />
-          <stop stopColor='#D52B1E' offset='100%' />
+        <linearGradient id='cl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ea3b2e' />
+          <stop offset='100%' stopColor='#d52b1e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cl-linearGradient-3'>
-          <stop stopColor='#0B48C2' offset='0%' />
-          <stop stopColor='#0239A7' offset='100%' />
+        <linearGradient id='cl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0b48c2' />
+          <stop offset='100%' stopColor='#0239a7' />
         </linearGradient>
+        <clipPath id='cl-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cl-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cl-CL'>
-          <rect
-            id='cl-FlagBackground'
-            fill='url(#cl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='cl-Rectangle-2'
-            fill='url(#cl-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='cl-Rectangle-2'
-            fill='url(#cl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='cl-Rectangle-83'
-            fill='url(#cl-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='7'
-          />
-          <polygon
-            id='cl-Star-8'
-            fill='url(#cl-linearGradient-1)'
-            points='3.5 4.28000003 2.3244295 5.11803399 2.75817589 3.74103327 1.59788697 2.88196601 3.04152748 2.86896672 3.5 1.5 3.95847252 2.86896672 5.40211303 2.88196601 4.24182411 3.74103327 4.6755705 5.11803399'
+      <g clipPath='url(#cl-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cl-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cl-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#cl-a)' d='M0 0h21v7H0z' />
+          <path fill='url(#cl-c)' d='M0 0h7v7H0z' />
+          <path
+            fill='url(#cl-a)'
+            d='m3.5 4.28-1.176.838.434-1.377-1.16-.859 1.444-.013L3.5 1.5l.458 1.369 1.444.013-1.16.859.434 1.377z'
           />
         </g>
       </g>

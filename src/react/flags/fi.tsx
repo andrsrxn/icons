@@ -21,30 +21,22 @@ export const IconFlagFI: FlagIcon = ({
       <title>FI</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='fi-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='fi-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='fi-linearGradient-2'>
-          <stop stopColor='#0848A6' offset='0%' />
-          <stop stopColor='#003480' offset='100%' />
+        <linearGradient id='fi-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0848a6' />
+          <stop offset='100%' stopColor='#003480' />
         </linearGradient>
+        <clipPath id='fi-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='fi-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='fi-FI'>
-          <rect
-            id='fi-FlagBackground'
-            fill='url(#fi-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='fi-Rectangle-2'
-            fill='url(#fi-linearGradient-2)'
-            points='0 9 6 9 6 15 9 15 9 9 21 9 21 6 9 6 9 0 6 0 6 6 0 6'
-          />
+      <g clipPath='url(#fi-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#fi-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#fi-b)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
         </g>
       </g>
     </svg>

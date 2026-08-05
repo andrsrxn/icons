@@ -21,62 +21,36 @@ export const IconFlagJO: FlagIcon = ({
       <title>JO</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jo-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='jo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jo-linearGradient-2'>
-          <stop stopColor='#199E56' offset='0%' />
-          <stop stopColor='#0F7A40' offset='100%' />
+        <linearGradient id='jo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#199e56' />
+          <stop offset='100%' stopColor='#0f7a40' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jo-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='jo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jo-linearGradient-4'>
-          <stop stopColor='#E6223A' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='jo-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e6223a' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
+        <clipPath id='jo-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='jo-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='jo-JO'>
-          <rect
-            id='jo-FlagBackground'
-            fill='url(#jo-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='jo-Rectangle-2'
-            fill='url(#jo-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='jo-Rectangle-2'
-            fill='url(#jo-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='jo-Rectangle-2'
-            fill='url(#jo-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <polygon id='jo-Rectangle-83' fill='url(#jo-linearGradient-4)' points='0 0 10 7.5 0 15' />
-          <polygon
-            id='jo-Star-27'
-            fill='url(#jo-linearGradient-1)'
-            points='3.5 8.25 2.84917439 8.8514533 2.91362639 7.96761735 2.03760813 7.8337814 2.76880407 7.3331093 2.32725278 6.5647653 3.1745872 6.82427335 3.5 6 3.8254128 6.82427335 4.67274722 6.5647653 4.23119593 7.3331093 4.96239187 7.8337814 4.08637361 7.96761735 4.15082561 8.8514533'
+      <g clipPath='url(#jo-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#jo-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#jo-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#jo-c)' d='M0 0h21v5H0z' />
+          <path fill='url(#jo-a)' d='M0 5h21v5H0z' />
+          <path fill='url(#jo-d)' d='m0 0 10 7.5L0 15z' />
+          <path
+            fill='url(#jo-a)'
+            d='m3.5 8.25-.65.601.064-.883-.876-.134.73-.5-.44-.77.847.26L3.5 6l.325.824.848-.26-.442.77.731.5-.876.134.065.883z'
           />
         </g>
       </g>

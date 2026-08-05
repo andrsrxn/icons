@@ -21,102 +21,69 @@ export const IconFlagAI: FlagIcon = ({
       <title>AI</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ai-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ai-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ai-linearGradient-2'>
-          <stop stopColor='#0A17A7' offset='0%' />
-          <stop stopColor='#030E88' offset='100%' />
+        <linearGradient id='ai-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0a17a7' />
+          <stop offset='100%' stopColor='#030e88' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ai-linearGradient-3'>
-          <stop stopColor='#DB1E36' offset='0%' />
-          <stop stopColor='#D51931' offset='100%' />
+        <linearGradient id='ai-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#db1e36' />
+          <stop offset='100%' stopColor='#d51931' />
         </linearGradient>
-        <path
-          d='M0,2.5 L0,0 L1,0.5 L2,0 L3,0.5 L4,0 L4,2.5 C4,4 2,5 2,5 C2,5 0,4 0,2.5 Z'
-          id='ai-path-4'
-        />
+        <linearGradient id='ai-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffa51b' />
+          <stop offset='100%' stopColor='#ff9a00' />
+        </linearGradient>
         <filter
-          x='-6.2%'
-          y='-5.0%'
+          id='ai-e'
           width='112.5%'
-          height='120.0%'
-          filterUnits='objectBoundingBox'
-          id='ai-filter-6'>
-          <feOffset dx='0' dy='0.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+          height='120%'
+          x='-6.2%'
+          y='-5%'
+          filterUnits='objectBoundingBox'>
+          <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
           <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
             in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
           />
         </filter>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ai-linearGradient-7'>
-          <stop stopColor='#FFA51B' offset='0%' />
-          <stop stopColor='#FF9A00' offset='100%' />
-        </linearGradient>
+        <path id='ai-d' d='M0 2.5V0l1 .5L2 0l1 .5L4 0v2.5C4 4 2 5 2 5S0 4 0 2.5' />
+        <clipPath id='ai-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ai-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ai-AI'>
-          <rect
-            id='ai-FlagBackground'
-            fill='url(#ai-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ai-Mask-Copy'
-            fill='url(#ai-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#ai-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ai-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ai-b)' d='M0 0h21v15H0z' />
           <path
-            d='M3,3.22996746 L-1.3516287,-0.5 L0.660232527,-0.5 L4.16023253,2 L4.85660189,2 L9.5,-0.902123821 L9.5,0.25 C9.5,0.552509227 9.33308555,0.876533554 9.08215972,1.05576629 L6,3.25730895 L6,3.77003254 L9.13722049,6.45907867 C9.59934261,6.85518335 9.34102897,7.5 8.75,7.5 C8.50478614,7.5 8.2052751,7.40393402 8.00092153,7.25796718 L4.83976747,5 L4.14339811,5 L-0.5,7.90212382 L-0.5,6.24269105 L3,3.74269105 L3,3.22996746 Z'
-            id='ai-Rectangle-36'
-            fill='url(#ai-linearGradient-1)'
+            fill='url(#ai-a)'
             fillRule='nonzero'
+            d='M3 3.23-1.352-.5H.66L4.16 2h.697L9.5-.902V.25c0 .303-.167.627-.418.806L6 3.257v.513l3.137 2.69c.462.395.204 1.04-.387 1.04-.245 0-.545-.096-.75-.242L4.84 5h-.697L-.5 7.902v-1.66l3.5-2.5z'
           />
           <path
-            d='M3.5,3 L-4.4408921e-16,7.10542736e-15 L0.5,7.10542736e-15 L4,2.5 L5,2.5 L9,7.10542736e-15 L9,0.25 C9,0.388071187 8.91348267,0.561798096 8.79154062,0.648899555 L5.5,3 L5.5,4 L8.8118248,6.83870697 C8.91575109,6.92778665 8.8840332,7 8.75,7 L8.75,7 C8.61192881,7 8.41348267,6.9382019 8.29154062,6.85110044 L5,4.5 L4,4.5 L-4.4408921e-16,7 L-4.4408921e-16,6.5 L3.5,4 L3.5,3 Z'
-            id='ai-Rectangle-36'
-            fill='url(#ai-linearGradient-3)'
+            fill='url(#ai-c)'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
           />
           <path
-            d='M-4.4408921e-16,2.5 L-4.4408921e-16,4.5 L3.5,4.5 L3.5,7.00461102 C3.5,7.2782068 3.71403503,7.5 4.00468445,7.5 L4.99531555,7.5 C5.27404508,7.5 5.5,7.2842474 5.5,7.00461102 L5.5,4.5 L9.00952148,4.5 C9.28040529,4.5 9.5,4.28596497 9.5,3.99531555 L9.5,3.00468445 C9.5,2.72595492 9.28494263,2.5 9.00952148,2.5 L5.5,2.5 L5.5,7.10542736e-15 L3.5,7.10542736e-15 L3.5,2.5 L-4.4408921e-16,2.5 Z'
-            id='ai-Rectangle-2'
-            fill='url(#ai-linearGradient-1)'
+            fill='url(#ai-a)'
+            d='M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 0 0 .505-.495V4.5h3.51a.49.49 0 0 0 .49-.505v-.99a.495.495 0 0 0-.49-.505H5.5V0h-2v2.5z'
           />
-          <polygon
-            id='ai-Rectangle-36'
-            fill='url(#ai-linearGradient-3)'
-            points='-4.4408921e-16 3 4 3 4 2.5 4 7.10542736e-15 5 7.10542736e-15 5 2.5 5 3 9 3 9 4 5 4 5 4.5 5 7 4 7 4 4.5 4 4 -4.4408921e-16 4'
-          />
-          <g id='ai-Rectangle-1105' transform='translate(13.000000, 5.000000)'>
-            <mask id='ai-mask-5' fill='white'>
-              <use xlinkHref='#ai-path-4' />
+          <path fill='url(#ai-c)' d='M0 3h4V0h1v3h4v1H5v3H4V4H0z' />
+          <g transform='translate(13 5)'>
+            <mask id='ai-f' fill='#fff'>
+              <use xlinkHref='#ai-d' />
             </mask>
-            <g id='ai-Mask'>
-              <use fill='black' fillOpacity='1' filter='url(#ai-filter-6)' xlinkHref='#ai-path-4' />
-              <use fill='url(#ai-linearGradient-1)' fillRule='evenodd' xlinkHref='#ai-path-4' />
-            </g>
-            <rect
-              id='ai-Rectangle-1106'
-              fill='#9ACCFF'
-              mask='url(#ai-mask-5)'
-              x='0'
-              y='4'
-              width='4'
-              height='1'
-            />
+            <use xlinkHref='#ai-d' fill='#000' filter='url(#ai-e)' />
+            <use xlinkHref='#ai-d' fill='url(#ai-a)' />
+            <path fill='#9accff' d='M0 4h4v1H0z' mask='url(#ai-f)' />
             <path
-              d='M2,2 C1.72385763,2 1.5,1.77614237 1.5,1.5 C1.5,1.22385763 1.72385763,1 2,1 C2.27614237,1 2.5,1.22385763 2.5,1.5 C2.5,1.77614237 2.27614237,2 2,2 Z M1,3 C0.723857625,3 0.5,2.77614237 0.5,2.5 C0.5,2.22385763 0.723857625,2 1,2 C1.27614237,2 1.5,2.22385763 1.5,2.5 C1.5,2.77614237 1.27614237,3 1,3 Z M3,3 C2.72385763,3 2.5,2.77614237 2.5,2.5 C2.5,2.22385763 2.72385763,2 3,2 C3.27614237,2 3.5,2.22385763 3.5,2.5 C3.5,2.77614237 3.27614237,3 3,3 Z'
-              id='ai-Oval-170'
-              fill='url(#ai-linearGradient-7)'
-              mask='url(#ai-mask-5)'
+              fill='url(#ai-g)'
+              d='M2 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M1 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+              mask='url(#ai-f)'
             />
           </g>
         </g>

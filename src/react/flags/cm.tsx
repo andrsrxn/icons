@@ -21,66 +21,40 @@ export const IconFlagCM: FlagIcon = ({
       <title>CM</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cm-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cm-linearGradient-2'>
-          <stop stopColor='#FFDC44' offset='0%' />
-          <stop stopColor='#FDD216' offset='100%' />
+        <linearGradient id='cm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffdc44' />
+          <stop offset='100%' stopColor='#fdd216' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cm-linearGradient-3'>
-          <stop stopColor='#059170' offset='0%' />
-          <stop stopColor='#007B5E' offset='100%' />
+        <linearGradient id='cm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#059170' />
+          <stop offset='100%' stopColor='#007b5e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cm-linearGradient-4'>
-          <stop stopColor='#E21A30' offset='0%' />
-          <stop stopColor='#CE1126' offset='100%' />
+        <linearGradient id='cm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e21a30' />
+          <stop offset='100%' stopColor='#ce1126' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cm-linearGradient-5'>
-          <stop stopColor='#FFDC42' offset='0%' />
-          <stop stopColor='#FDD217' offset='100%' />
+        <linearGradient id='cm-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffdc42' />
+          <stop offset='100%' stopColor='#fdd217' />
         </linearGradient>
+        <clipPath id='cm-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cm-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cm-CM'>
-          <rect
-            id='cm-FlagBackground'
-            fill='url(#cm-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='cm-Mask' fill='url(#cm-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='cm-Rectangle-2'
-            fill='url(#cm-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='cm-Rectangle-2-Copy'
-            fill='url(#cm-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='cm-Rectangle-2-Copy-2'
-            fill='url(#cm-linearGradient-2)'
-            x='14'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <polygon
-            id='cm-Star-8'
-            fill='url(#cm-linearGradient-5)'
-            points='10.5 8.47500004 9.03053687 9.52254249 9.57271986 7.80129158 8.12235871 6.72745751 9.92690936 6.7112084 10.5 5 11.0730906 6.7112084 12.8776413 6.72745751 11.4272801 7.80129158 11.9694631 9.52254249'
+      <g clipPath='url(#cm-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cm-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cm-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#cm-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#cm-d)' d='M7 0h7v15H7z' />
+          <path fill='url(#cm-b)' d='M14 0h7v15h-7z' />
+          <path
+            fill='url(#cm-e)'
+            d='M10.5 8.475 9.03 9.523 9.574 7.8l-1.45-1.074 1.804-.016L10.5 5l.573 1.711 1.805.016-1.45 1.074.541 1.722z'
           />
         </g>
       </g>

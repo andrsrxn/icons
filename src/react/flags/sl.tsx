@@ -21,53 +21,28 @@ export const IconFlagSL: FlagIcon = ({
       <title>SL</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sl-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='sl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sl-linearGradient-2'>
-          <stop stopColor='#35CE4F' offset='0%' />
-          <stop stopColor='#2AB441' offset='100%' />
+        <linearGradient id='sl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#35ce4f' />
+          <stop offset='100%' stopColor='#2ab441' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sl-linearGradient-3'>
-          <stop stopColor='#1C87DB' offset='0%' />
-          <stop stopColor='#1175C4' offset='100%' />
+        <linearGradient id='sl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1c87db' />
+          <stop offset='100%' stopColor='#1175c4' />
         </linearGradient>
+        <clipPath id='sl-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='sl-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='sl-SL'>
-          <rect
-            id='sl-FlagBackground'
-            fill='url(#sl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='sl-Rectangle-2'
-            fill='url(#sl-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='sl-Rectangle-2'
-            fill='url(#sl-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='sl-Rectangle-2'
-            fill='url(#sl-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#sl-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#sl-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#sl-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#sl-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#sl-a)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

@@ -21,58 +21,33 @@ export const IconFlagBS: FlagIcon = ({
       <title>BS</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bs-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bs-linearGradient-2'>
-          <stop stopColor='#22B7D5' offset='0%' />
-          <stop stopColor='#1CACC8' offset='100%' />
+        <linearGradient id='bs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#22b7d5' />
+          <stop offset='100%' stopColor='#1cacc8' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bs-linearGradient-3'>
-          <stop stopColor='#FCE569' offset='0%' />
-          <stop stopColor='#FADF52' offset='100%' />
+        <linearGradient id='bs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fce569' />
+          <stop offset='100%' stopColor='#fadf52' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bs-linearGradient-4'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='bs-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='bs-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bs-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bs-BS'>
-          <rect
-            id='bs-FlagBackground'
-            fill='url(#bs-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bs-Rectangle-2'
-            fill='url(#bs-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bs-Rectangle-2'
-            fill='url(#bs-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bs-Rectangle-2'
-            fill='url(#bs-linearGradient-3)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <polygon id='bs-Rectangle-83' fill='url(#bs-linearGradient-4)' points='0 0 10 7.5 0 15' />
+      <g clipPath='url(#bs-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bs-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bs-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#bs-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#bs-c)' d='M0 5h21v5H0z' />
+          <path fill='url(#bs-d)' d='m0 0 10 7.5L0 15z' />
         </g>
       </g>
     </svg>

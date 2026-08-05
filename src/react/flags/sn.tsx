@@ -21,54 +21,35 @@ export const IconFlagSN: FlagIcon = ({
       <title>SN</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sn-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='sn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sn-linearGradient-2'>
-          <stop stopColor='#F13642' offset='0%' />
-          <stop stopColor='#E1202C' offset='100%' />
+        <linearGradient id='sn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f13642' />
+          <stop offset='100%' stopColor='#e1202c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sn-linearGradient-3'>
-          <stop stopColor='#17A052' offset='0%' />
-          <stop stopColor='#108442' offset='100%' />
+        <linearGradient id='sn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#17a052' />
+          <stop offset='100%' stopColor='#108442' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='sn-linearGradient-4'>
-          <stop stopColor='#FFF166' offset='0%' />
-          <stop stopColor='#FDEE54' offset='100%' />
+        <linearGradient id='sn-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff166' />
+          <stop offset='100%' stopColor='#fdee54' />
         </linearGradient>
+        <clipPath id='sn-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='sn-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='sn-SN'>
-          <rect
-            id='sn-FlagBackground'
-            fill='url(#sn-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='sn-Mask' fill='url(#sn-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='sn-Rectangle-2'
-            fill='url(#sn-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='sn-Rectangle-2-Copy'
-            fill='url(#sn-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <polygon
-            id='sn-Star-33'
-            fill='url(#sn-linearGradient-3)'
-            points='10.5 8.52499999 9.03053687 9.52254249 9.52516708 7.81674242 8.12235871 6.72745751 9.89752012 6.67075759 10.5 5 11.1024799 6.67075759 12.8776413 6.72745751 11.4748329 7.81674242 11.9694631 9.52254249'
+      <g clipPath='url(#sn-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#sn-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#sn-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#sn-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#sn-d)' d='M7 0h7v15H7z' />
+          <path
+            fill='url(#sn-c)'
+            d='m10.5 8.525-1.47.998.495-1.706-1.403-1.09 1.776-.056L10.5 5l.602 1.67 1.776.057-1.403 1.09.494 1.706z'
           />
         </g>
       </g>

@@ -21,45 +21,27 @@ export const IconFlagUA: FlagIcon = ({
       <title>UA</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ua-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ua-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ua-linearGradient-2'>
-          <stop stopColor='#156DD1' offset='0%' />
-          <stop stopColor='#0D5EB9' offset='100%' />
+        <linearGradient id='ua-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#156dd1' />
+          <stop offset='100%' stopColor='#0d5eb9' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ua-linearGradient-3'>
-          <stop stopColor='#FFD948' offset='0%' />
-          <stop stopColor='#FFD430' offset='100%' />
+        <linearGradient id='ua-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd948' />
+          <stop offset='100%' stopColor='#ffd430' />
         </linearGradient>
+        <clipPath id='ua-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ua-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ua-UA'>
-          <rect
-            id='ua-FlagBackground'
-            fill='url(#ua-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ua-Rectangle-2'
-            fill='url(#ua-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='ua-Rectangle-2'
-            fill='url(#ua-linearGradient-3)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#ua-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ua-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ua-b)' d='M0 0h21v8H0z' />
+          <path fill='url(#ua-c)' d='M0 8h21v7H0z' />
         </g>
       </g>
     </svg>

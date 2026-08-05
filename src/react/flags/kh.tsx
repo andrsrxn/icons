@@ -21,57 +21,31 @@ export const IconFlagKH: FlagIcon = ({
       <title>KH</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kh-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='kh-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kh-linearGradient-2'>
-          <stop stopColor='#0F3EB6' offset='0%' />
-          <stop stopColor='#09339F' offset='100%' />
+        <linearGradient id='kh-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0f3eb6' />
+          <stop offset='100%' stopColor='#09339f' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kh-linearGradient-3'>
-          <stop stopColor='#ED1A3C' offset='0%' />
-          <stop stopColor='#DE0B2D' offset='100%' />
+        <linearGradient id='kh-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ed1a3c' />
+          <stop offset='100%' stopColor='#de0b2d' />
         </linearGradient>
+        <clipPath id='kh-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='kh-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='kh-KH'>
-          <rect
-            id='kh-FlagBackground'
-            fill='url(#kh-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='kh-Rectangle-2'
-            fill='url(#kh-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='kh-Rectangle-2'
-            fill='url(#kh-linearGradient-2)'
-            x='0'
-            y='11'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='kh-Rectangle-2'
-            fill='url(#kh-linearGradient-3)'
-            x='0'
-            y='4'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#kh-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#kh-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#kh-b)' d='M0 0h21v4H0z' />
+          <path fill='url(#kh-b)' d='M0 11h21v4H0z' />
+          <path fill='url(#kh-c)' d='M0 4h21v7H0z' />
           <path
-            d='M7.5,8 L8.5,8 L8.5,10 L6.5,10 L7.5,8 Z M9,8 L12,8 L12,10 L9,10 L9,8 Z M12.5,8 L13.5,8 L14.5,10 L12.5,10 L12.5,8 Z M12.5,6.50783157 C12.5,6.22736394 12.7319336,6 13,6 C13.2761424,6 13.5,6.22133017 13.5,6.50783157 L13.5,7.5 L12.5,7.5 L12.5,6.50783157 Z M9,6.54541016 L10,6.54541016 L10,5.99821125 C10,5.72305678 10.2319336,5.5 10.5,5.5 C10.7761424,5.5 11,5.72170461 11,5.99821125 L11,6.54541016 L12,6.54541016 L12,7.5 L9,7.5 L9,6.54541016 Z M7.5,6.50783157 C7.5,6.22736394 7.73193359,6 8,6 C8.27614237,6 8.5,6.22133017 8.5,6.50783157 L8.5,7.5 L7.5,7.5 L7.5,6.50783157 Z'
-            id='kh-Rectangle-621'
-            fill='url(#kh-linearGradient-1)'
+            fill='url(#kh-a)'
+            d='M7.5 8h1v2h-2zM9 8h3v2H9zm3.5 0h1l1 2h-2zm0-1.492A.51.51 0 0 1 13 6a.5.5 0 0 1 .5.508V7.5h-1zM9 6.545h1v-.547c0-.275.232-.498.5-.498.276 0 .5.222.5.498v.547h1V7.5H9zm-1.5-.037A.51.51 0 0 1 8 6a.5.5 0 0 1 .5.508V7.5h-1z'
           />
         </g>
       </g>

@@ -21,87 +21,59 @@ export const IconFlagMS: FlagIcon = ({
       <title>MS</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ms-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ms-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ms-linearGradient-2'>
-          <stop stopColor='#07319C' offset='0%' />
-          <stop stopColor='#00247E' offset='100%' />
+        <linearGradient id='ms-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#07319c' />
+          <stop offset='100%' stopColor='#00247e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ms-linearGradient-3'>
-          <stop stopColor='#DB1E36' offset='0%' />
-          <stop stopColor='#D51931' offset='100%' />
+        <linearGradient id='ms-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#db1e36' />
+          <stop offset='100%' stopColor='#d51931' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ms-linearGradient-4'>
-          <stop stopColor='#08B9D6' offset='0%' />
-          <stop stopColor='#00A3BE' offset='100%' />
+        <linearGradient id='ms-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#08b9d6' />
+          <stop offset='100%' stopColor='#00a3be' />
+        </linearGradient>
+        <linearGradient id='ms-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
         <path
-          d='M0,3.5 L2.57831658e-17,0.999341965 C1.15435165e-17,0.447420638 0.443716645,0 0.999807492,0 L4.00019251,0 C4.55237094,0 5,0.440959692 5,0.999341965 L5,3.5 C5,6 2.5,7 2.5,7 C2.5,7 0,6 0,3.5 Z'
-          id='ms-path-5'
+          id='ms-d'
+          d='M0 3.5V1c0-.553.444-1 1-1h3c.552 0 1 .441 1 1v2.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
         />
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ms-linearGradient-7'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
-        </linearGradient>
+        <clipPath id='ms-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ms-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ms-MS'>
-          <rect
-            id='ms-FlagBackground'
-            fill='url(#ms-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ms-Mask-Copy'
-            fill='url(#ms-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#ms-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ms-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ms-b)' d='M0 0h21v15H0z' />
           <path
-            d='M3,3.22996746 L-1.3516287,-0.5 L0.660232527,-0.5 L4.16023253,2 L4.85660189,2 L9.5,-0.902123821 L9.5,0.25 C9.5,0.552509227 9.33308555,0.876533554 9.08215972,1.05576629 L6,3.25730895 L6,3.77003254 L9.13722049,6.45907867 C9.59934261,6.85518335 9.34102897,7.5 8.75,7.5 C8.50478614,7.5 8.2052751,7.40393402 8.00092153,7.25796718 L4.83976747,5 L4.14339811,5 L-0.5,7.90212382 L-0.5,6.24269105 L3,3.74269105 L3,3.22996746 Z'
-            id='ms-Rectangle-36'
-            fill='url(#ms-linearGradient-1)'
+            fill='url(#ms-a)'
             fillRule='nonzero'
+            d='M3 3.23-1.352-.5H.66L4.16 2h.697L9.5-.902V.25c0 .303-.167.627-.418.806L6 3.257v.513l3.137 2.69c.462.395.204 1.04-.387 1.04-.245 0-.545-.096-.75-.242L4.84 5h-.697L-.5 7.902v-1.66l3.5-2.5z'
           />
           <path
-            d='M3.5,3 L-4.4408921e-16,-2.13162821e-14 L0.5,-2.13162821e-14 L4,2.5 L5,2.5 L9,-2.13162821e-14 L9,0.25 C9,0.388071187 8.91348267,0.561798096 8.79154062,0.648899555 L5.5,3 L5.5,4 L8.8118248,6.83870697 C8.91575109,6.92778665 8.8840332,7 8.75,7 L8.75,7 C8.61192881,7 8.41348267,6.9382019 8.29154062,6.85110044 L5,4.5 L4,4.5 L-4.4408921e-16,7 L-4.4408921e-16,6.5 L3.5,4 L3.5,3 Z'
-            id='ms-Rectangle-36'
-            fill='url(#ms-linearGradient-3)'
+            fill='url(#ms-c)'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
           />
           <path
-            d='M-4.4408921e-16,2.5 L-4.4408921e-16,4.5 L3.5,4.5 L3.5,7.00461102 C3.5,7.2782068 3.71403503,7.5 4.00468445,7.5 L4.99531555,7.5 C5.27404508,7.5 5.5,7.2842474 5.5,7.00461102 L5.5,4.5 L9.00952148,4.5 C9.28040529,4.5 9.5,4.28596497 9.5,3.99531555 L9.5,3.00468445 C9.5,2.72595492 9.28494263,2.5 9.00952148,2.5 L5.5,2.5 L5.5,-2.13162821e-14 L3.5,-2.13162821e-14 L3.5,2.5 L-4.4408921e-16,2.5 Z'
-            id='ms-Rectangle-2'
-            fill='url(#ms-linearGradient-1)'
+            fill='url(#ms-a)'
+            d='M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 0 0 .505-.495V4.5h3.51a.49.49 0 0 0 .49-.505v-.99a.495.495 0 0 0-.49-.505H5.5V0h-2v2.5z'
           />
-          <polygon
-            id='ms-Rectangle-36'
-            fill='url(#ms-linearGradient-3)'
-            points='-4.4408921e-16 3 4 3 4 2.5 4 -2.13162821e-14 5 -2.13162821e-14 5 2.5 5 3 9 3 9 4 5 4 5 4.5 5 7 4 7 4 4.5 4 4 -4.4408921e-16 4'
-          />
-          <g id='ms-Rectangle-1105' transform='translate(13.000000, 4.000000)'>
-            <mask id='ms-mask-6' fill='white'>
-              <use xlinkHref='#ms-path-5' />
+          <path fill='url(#ms-c)' d='M0 3h4V0h1v3h4v1H5v3H4V4H0z' />
+          <g transform='translate(13 4)'>
+            <mask id='ms-f' fill='#fff'>
+              <use xlinkHref='#ms-d' />
             </mask>
-            <use id='ms-Combined-Shape' fill='url(#ms-linearGradient-4)' xlinkHref='#ms-path-5' />
-            <polygon
-              id='ms-Rectangle-1106'
-              fill='#A63D09'
-              mask='url(#ms-mask-6)'
-              points='1.37667655e-13 5 5 5 5 7 3 7 2 7 1.61648472e-13 7'
-            />
-            <path
-              d='M3,2 L3,1 L2,1 L2,2 L1,2 L1,3 L2,3 L2,5 L3,5 L3,3 L4,3 L4,2 L3,2 Z'
-              id='ms-Rectangle-1106'
-              fill='url(#ms-linearGradient-7)'
-              mask='url(#ms-mask-6)'
-            />
+            <use xlinkHref='#ms-d' fill='url(#ms-e)' />
+            <path fill='#a63d09' d='M0 5h5v2H0z' mask='url(#ms-f)' />
+            <path fill='url(#ms-g)' d='M3 2V1H2v1H1v1h1v2h1V3h1V2z' mask='url(#ms-f)' />
           </g>
         </g>
       </g>

@@ -21,82 +21,54 @@ export const IconFlagRS: FlagIcon = ({
       <title>RS</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='rs-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='rs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='rs-linearGradient-2'>
-          <stop stopColor='#17508F' offset='0%' />
-          <stop stopColor='#114175' offset='100%' />
+        <linearGradient id='rs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#17508f' />
+          <stop offset='100%' stopColor='#114175' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='rs-linearGradient-3'>
-          <stop stopColor='#E1444D' offset='0%' />
-          <stop stopColor='#C53840' offset='100%' />
+        <linearGradient id='rs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e1444d' />
+          <stop offset='100%' stopColor='#c53840' />
         </linearGradient>
         <path
-          d='M0.5,2.5 C0.5,1.82617791 0.873828888,0.484626524 0.873828888,0.484626524 C0.943511269,0.216974685 1.2157526,0 1.49538898,0 L3.50461102,0 C3.7782068,0 4.05735636,0.214117162 4.12617111,0.481138541 C4.12617111,0.481138541 4.5,1.81010532 4.5,2.5 C4.5,3.1449728 4.12359554,4.51947242 4.12359554,4.51947242 C4.05533561,4.78486047 3.85530376,5.17418671 3.66748512,5.37236309 C3.66748512,5.37236309 3.25,6 2.5,6 C1.75,6 1.33251488,5.37236309 1.33251488,5.37236309 C1.14887198,5.16671263 0.942643642,4.78284423 0.873828888,4.51260075 C0.873828888,4.51260075 0.5,3.16104539 0.5,2.5 Z'
-          id='rs-path-4'
+          id='rs-d'
+          d='M.5 2.5C.5 1.826.874.485.874.485A.67.67 0 0 1 1.495 0h2.01c.273 0 .552.214.621.481 0 0 .374 1.33.374 2.019 0 .645-.376 2.02-.376 2.02-.069.265-.269.654-.457.852 0 0-.417.628-1.167.628s-1.167-.628-1.167-.628a2.4 2.4 0 0 1-.46-.86S.5 3.162.5 2.5'
         />
+        <clipPath id='rs-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='rs-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='rs-RS'>
-          <rect
-            id='rs-FlagBackground'
-            fill='url(#rs-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='rs-Rectangle-2'
-            fill='url(#rs-linearGradient-2)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='rs-Rectangle-2'
-            fill='url(#rs-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='rs-Rectangle-2'
-            fill='url(#rs-linearGradient-1)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <g id='rs-Rectangle-1668' transform='translate(4.000000, 5.000000)'>
-            <mask id='rs-mask-5' fill='white'>
-              <use xlinkHref='#rs-path-4' />
+      <g clipPath='url(#rs-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#rs-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#rs-b)' d='M0 5h21v5H0z' />
+          <path fill='url(#rs-c)' d='M0 0h21v5H0z' />
+          <path fill='url(#rs-a)' d='M0 10h21v5H0z' />
+          <g transform='translate(4 5)'>
+            <mask id='rs-e' fill='#fff'>
+              <use xlinkHref='#rs-d' />
             </mask>
-            <use id='rs-Mask' fill='url(#rs-linearGradient-1)' xlinkHref='#rs-path-4' />
-            <polygon
-              id='rs-Line'
-              fill='#C43840'
+            <use xlinkHref='#rs-d' fill='url(#rs-a)' />
+            <path
+              fill='#c43840'
               fillRule='nonzero'
-              mask='url(#rs-mask-5)'
-              points='4.42191312 -0.202781928 -0.202781928 5.57808688 0.578086881 6.20278193 5.20278193 0.421913119'
+              d='M4.422-.203-.203 5.578l.781.625L5.203.422z'
+              mask='url(#rs-e)'
             />
-            <polygon
-              id='rs-Line'
-              fill='#C43840'
+            <path
+              fill='#c43840'
               fillRule='nonzero'
-              mask='url(#rs-mask-5)'
-              points='-0.202781928 0.421913119 4.42191312 6.20278193 5.20278193 5.57808688 0.578086881 -0.202781928'
+              d='m-.203.422 4.625 5.78.78-.624L.579-.202z'
+              mask='url(#rs-e)'
             />
           </g>
-          <ellipse id='rs-Oval-214' fill='#FFFFFF' cx='6.5' cy='7.5' rx='1' ry='1.5' />
+          <ellipse cx='6.5' cy='7.5' fill='#fff' rx='1' ry='1.5' />
           <path
-            d='M5,4 L4.5,3 L5.5,3.5 L6.5,3 L7.5,3.5 L8.5,3 L8,4 L8,4.5 C8,4.77614237 7.7842474,5 7.50461102,5 L5.49538898,5 C5.2217932,5 5,4.76806641 5,4.5 L5,4 Z'
-            id='rs-Rectangle-1669'
-            fill='#D1A43A'
+            fill='#d1a43a'
+            d='m5 4-.5-1 1 .5 1-.5 1 .5 1-.5L8 4v.5c0 .276-.216.5-.495.5h-2.01A.503.503 0 0 1 5 4.5z'
           />
         </g>
       </g>

@@ -21,74 +21,58 @@ export const IconFlagBL: FlagIcon = ({
       <title>BL</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bl-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bl-linearGradient-2'>
-          <stop stopColor='#216CD3' offset='0%' />
-          <stop stopColor='#1557B2' offset='100%' />
+        <linearGradient id='bl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#216cd3' />
+          <stop offset='100%' stopColor='#1557b2' />
+        </linearGradient>
+        <linearGradient id='bl-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f7e14b' />
+          <stop offset='100%' stopColor='#f7df3e' />
+        </linearGradient>
+        <linearGradient id='bl-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e12539' />
+          <stop offset='100%' stopColor='#ca192c' />
         </linearGradient>
         <path
-          d='M0.5,0 L7.49999992,0 L7.49999998,4.49121523 C7.49999999,5.04835167 7.16440529,5.78765261 6.74055213,6.15095532 L5.1460309,7.5176878 C4.51309551,8.06020385 3.48356295,8.05733967 2.8539691,7.5176878 L1.25944787,6.15095532 C0.840016394,5.79144262 0.5,5.04991192 0.5,4.49121523 L0.5,0 Z'
-          id='bl-path-3'
+          id='bl-b'
+          d='M.5 0h7v4.491c0 .557-.336 1.297-.76 1.66L5.147 7.518c-.633.542-1.662.54-2.292 0L1.259 6.15C.84 5.791.5 5.05.5 4.491z'
         />
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bl-linearGradient-5'>
-          <stop stopColor='#F7E14B' offset='0%' />
-          <stop stopColor='#F7DF3E' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bl-linearGradient-6'>
-          <stop stopColor='#E12539' offset='0%' />
-          <stop stopColor='#CA192C' offset='100%' />
-        </linearGradient>
+        <clipPath id='bl-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bl-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bl-BL'>
-          <rect
-            id='bl-FlagBackground'
-            fill='url(#bl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <g id='bl-Rectangle-1693' transform='translate(6.500000, 5.000000)'>
-            <mask id='bl-mask-4' fill='white'>
-              <use xlinkHref='#bl-path-3' />
+      <g clipPath='url(#bl-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bl-a)' d='M0 0h21v15H0z' />
+          <g transform='translate(6.5 5)'>
+            <mask id='bl-e' fill='#fff'>
+              <use xlinkHref='#bl-b' />
             </mask>
-            <use id='bl-Combined-Shape' fill='url(#bl-linearGradient-2)' xlinkHref='#bl-path-3' />
+            <use xlinkHref='#bl-b' fill='url(#bl-c)' />
             <path
-              d='M2,2 C1.72385763,2 1.5,1.77614237 1.5,1.5 C1.5,1.22385763 1.72385763,1 2,1 C2.27614237,1 2.5,1.22385763 2.5,1.5 C2.5,1.77614237 2.27614237,2 2,2 Z M4,2 C3.72385763,2 3.5,1.77614237 3.5,1.5 C3.5,1.22385763 3.72385763,1 4,1 C4.27614237,1 4.5,1.22385763 4.5,1.5 C4.5,1.77614237 4.27614237,2 4,2 Z M6,2 C5.72385763,2 5.5,1.77614237 5.5,1.5 C5.5,1.22385763 5.72385763,1 6,1 C6.27614237,1 6.5,1.22385763 6.5,1.5 C6.5,1.77614237 6.27614237,2 6,2 Z'
-              id='bl-Combined-Shape'
-              fill='url(#bl-linearGradient-5)'
-              mask='url(#bl-mask-4)'
+              fill='url(#bl-d)'
+              d='M2 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+              mask='url(#bl-e)'
             />
             <path
-              d='M2.5,6.5 C2.22385763,6.5 2,6.27614237 2,6 C2,5.72385763 2.22385763,5.5 2.5,5.5 C2.77614237,5.5 3,5.72385763 3,6 C3,6.27614237 2.77614237,6.5 2.5,6.5 Z M4,7 C3.72385763,7 3.5,6.77614237 3.5,6.5 C3.5,6.22385763 3.72385763,6 4,6 C4.27614237,6 4.5,6.22385763 4.5,6.5 C4.5,6.77614237 4.27614237,7 4,7 Z M5.5,6.5 C5.22385763,6.5 5,6.27614237 5,6 C5,5.72385763 5.22385763,5.5 5.5,5.5 C5.77614237,5.5 6,5.72385763 6,6 C6,6.27614237 5.77614237,6.5 5.5,6.5 Z'
-              id='bl-Combined-Shape-Copy'
-              fill='url(#bl-linearGradient-5)'
-              mask='url(#bl-mask-4)'
+              fill='url(#bl-d)'
+              d='M2.5 6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M4 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1.5-.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+              mask='url(#bl-e)'
             />
-            <rect
-              id='bl-Rectangle-1425-Copy'
-              fill='url(#bl-linearGradient-6)'
-              mask='url(#bl-mask-4)'
-              x='0.5'
-              y='3'
-              width='7'
-              height='2'
-            />
-            <circle id='bl-Oval-292' fill='#FFFFFF' mask='url(#bl-mask-4)' cx='4' cy='4' r='1' />
+            <path fill='url(#bl-f)' d='M.5 3h7v2h-7z' mask='url(#bl-e)' />
+            <circle cx='4' cy='4' r='1' fill='#fff' mask='url(#bl-e)' />
           </g>
           <path
-            d='M6.5,3.5 C6.5,3.5 8.5,3 10.5,3 C12.5,3 14.5,3.5 14.5,3.5 L14,5.5 C14,5.5 12.25,5 10.5,5 C8.75,5 7,5.5 7,5.5 L6.5,3.5 Z'
-            id='bl-Rectangle-1426'
-            fill='url(#bl-linearGradient-5)'
+            fill='url(#bl-d)'
+            d='M6.5 3.5s2-.5 4-.5 4 .5 4 .5l-.5 2S12.25 5 10.5 5 7 5.5 7 5.5z'
           />
           <path
-            d='M10.5,4.5 C10.2238576,4.5 10,4.27614237 10,4 C10,3.72385763 10.2238576,3.5 10.5,3.5 C10.7761424,3.5 11,3.72385763 11,4 C11,4.27614237 10.7761424,4.5 10.5,4.5 Z M12.5,4.5 C12.2238576,4.5 12,4.27614237 12,4 C12,3.72385763 12.2238576,3.5 12.5,3.5 C12.7761424,3.5 13,3.72385763 13,4 C13,4.27614237 12.7761424,4.5 12.5,4.5 Z M8.5,4.5 C8.22385763,4.5 8,4.27614237 8,4 C8,3.72385763 8.22385763,3.5 8.5,3.5 C8.77614237,3.5 9,3.72385763 9,4 C9,4.27614237 8.77614237,4.5 8.5,4.5 Z'
-            id='bl-Combined-Shape'
-            fill='#5E5216'
+            fill='#5e5216'
+            d='M10.5 4.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-4 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

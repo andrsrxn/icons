@@ -21,54 +21,41 @@ export const IconFlagBR: FlagIcon = ({
       <title>BR</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='br-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='br-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='br-linearGradient-2'>
-          <stop stopColor='#05AB41' offset='0%' />
-          <stop stopColor='#019C39' offset='100%' />
+        <linearGradient id='br-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#05ab41' />
+          <stop offset='100%' stopColor='#019c39' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='br-linearGradient-3'>
-          <stop stopColor='#053087' offset='0%' />
-          <stop stopColor='#012877' offset='100%' />
+        <linearGradient id='br-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#053087' />
+          <stop offset='100%' stopColor='#012877' />
         </linearGradient>
-        <circle id='br-path-4' cx='3.5' cy='3.5' r='3.5' />
+        <circle id='br-c' cx='3.5' cy='3.5' r='3.5' />
+        <clipPath id='br-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='br-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='br-BR'>
-          <rect
-            id='br-FlagBackground'
-            fill='url(#br-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='br-Mask-Copy'
-            fill='url(#br-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#br-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#br-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#br-b)' d='M0 0h21v15H0z' />
           <path
-            d='M2.42151632,7.77274586 C2.18871929,7.62211248 2.19350487,7.37479097 2.42151632,7.22725414 L10.0784837,2.27274586 C10.3112807,2.12211248 10.6935049,2.12520903 10.9215163,2.27274586 L18.5784837,7.22725414 C18.8112807,7.37788752 18.8064951,7.62520903 18.5784837,7.77274586 L10.9215163,12.7272541 C10.6887193,12.8778875 10.3064951,12.874791 10.0784837,12.7272541 L2.42151632,7.77274586 Z'
-            id='br-Combined-Shape'
-            fill='#FDD216'
+            fill='#fdd216'
+            d='M2.422 7.773c-.233-.15-.228-.398 0-.546l7.656-4.954a.85.85 0 0 1 .844 0l7.656 4.954c.233.15.228.398 0 .546l-7.656 4.954a.85.85 0 0 1-.844 0z'
           />
-          <g id='br-Oval-2' transform='translate(7.000000, 4.000000)'>
-            <mask id='br-mask-5' fill='white'>
-              <use xlinkHref='#br-path-4' />
+          <g transform='translate(7 4)'>
+            <mask id='br-e' fill='#fff'>
+              <use xlinkHref='#br-c' />
             </mask>
-            <use id='br-Mask' fill='url(#br-linearGradient-3)' xlinkHref='#br-path-4' />
+            <use xlinkHref='#br-c' fill='url(#br-d)' />
             <path
-              d='M-0.100381226,2.97376324 C0.164901149,2.75894182 1.36252192,2.933788 3.43417519,3.48641101 C4.90835176,3.87965437 6.60707006,4.747859 6.9957681,5.22786103 L7.31042832,5.61643399 L8.08757424,4.98711354 L7.77291401,4.59854058 C7.22285434,3.91927356 5.35175728,2.96296719 3.69191715,2.52019722 C1.10596471,1.83038255 -0.0661252244,1.65926374 -0.7297016,2.19661727 L-1.11827459,2.51127745 L-0.488954213,3.28842343 L-0.100381226,2.97376324 Z'
-              id='br-Line'
-              fill='#FFFFFF'
+              fill='#fff'
               fillRule='nonzero'
-              mask='url(#br-mask-5)'
+              d='M-.1 2.974c.265-.215 1.463-.04 3.534.512 1.474.394 3.173 1.262 3.562 1.742l.314.388.778-.629-.315-.388c-.55-.68-2.421-1.636-4.081-2.079-2.586-.69-3.758-.86-4.422-.323l-.388.314.629.777z'
+              mask='url(#br-e)'
             />
           </g>
         </g>

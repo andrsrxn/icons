@@ -21,66 +21,40 @@ export const IconFlagAO: FlagIcon = ({
       <title>AO</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ao-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ao-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ao-linearGradient-2'>
-          <stop stopColor='#FF323E' offset='0%' />
-          <stop stopColor='#FD0D1B' offset='100%' />
+        <linearGradient id='ao-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff323e' />
+          <stop offset='100%' stopColor='#fd0d1b' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ao-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='ao-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ao-linearGradient-4'>
-          <stop stopColor='#DD2137' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='ao-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#dd2137' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ao-linearGradient-5'>
-          <stop stopColor='#F8D84B' offset='0%' />
-          <stop stopColor='#F9D536' offset='100%' />
+        <linearGradient id='ao-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f8d84b' />
+          <stop offset='100%' stopColor='#f9d536' />
         </linearGradient>
+        <clipPath id='ao-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ao-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ao-AO'>
-          <rect
-            id='ao-FlagBackground'
-            fill='url(#ao-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ao-Mask-Copy'
-            fill='url(#ao-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ao-Rectangle-2'
-            fill='url(#ao-linearGradient-3)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='ao-Rectangle-2'
-            fill='url(#ao-linearGradient-4)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
+      <g clipPath='url(#ao-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ao-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ao-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#ao-c)' d='M0 8h21v7H0z' />
+          <path fill='url(#ao-d)' d='M0 0h21v8H0z' />
           <path
-            d='M10.6306023,8.85466006 L9.2226499,7.91602515 C8.99288556,7.76284892 8.93079862,7.45241425 9.08397485,7.2226499 C9.23715108,6.99288556 9.54758575,6.93079862 9.7773501,7.08397485 L11.3130296,8.10776118 C11.3806662,7.9788916 11.4351961,7.84059073 11.4744444,7.69411428 C11.760328,6.62718208 11.127163,5.53050816 10.0602308,5.24462454 C9.79349776,5.17315364 9.63520651,4.89898516 9.70667742,4.63225211 C9.77814832,4.36551905 10.0523168,4.20722781 10.3190499,4.27869871 C11.9194482,4.70752415 12.8691956,6.35253502 12.4403702,7.95293333 C12.3721274,8.20761904 12.2730844,8.44582688 12.1483226,8.66462317 L12.7773501,9.08397485 C13.0071144,9.23715108 13.0692014,9.54758575 12.9160251,9.7773501 C12.7628489,10.0071144 12.4524142,10.0692014 12.2226499,9.91602515 L11.5104877,9.44125038 C10.7832553,10.0719943 9.76598896,10.3421636 8.76613558,10.0742537 C8.49940253,10.0027828 8.34111129,9.72861429 8.41258219,9.46188124 C8.4840531,9.19514819 8.75822158,9.03685694 9.02495463,9.10832785 C9.59426997,9.26087543 10.1720537,9.15174297 10.6306023,8.85466006 Z M9.5,6.5 C9.22385763,6.5 9,6.27614237 9,6 C9,5.72385763 9.22385763,5.5 9.5,5.5 C9.77614237,5.5 10,5.72385763 10,6 C10,6.27614237 9.77614237,6.5 9.5,6.5 Z'
-            id='ao-Shape'
-            fill='url(#ao-linearGradient-5)'
+            fill='url(#ao-e)'
             fillRule='nonzero'
+            d='m10.63 8.855-1.407-.939a.5.5 0 0 1 .554-.832l1.536 1.024q.102-.194.161-.414a2 2 0 0 0-1.414-2.45.5.5 0 1 1 .259-.965 3 3 0 0 1 1.83 4.386l.628.419a.5.5 0 0 1-.554.832l-.713-.475c-.727.631-1.744.901-2.744.633a.5.5 0 0 1 .259-.966c.57.153 1.147.044 1.606-.253M9.5 6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

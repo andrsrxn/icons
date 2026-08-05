@@ -21,62 +21,46 @@ export const IconFlagBA: FlagIcon = ({
       <title>BA</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ba-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ba-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ba-linearGradient-2'>
-          <stop stopColor='#0B36B2' offset='0%' />
-          <stop stopColor='#042993' offset='100%' />
+        <linearGradient id='ba-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0b36b2' />
+          <stop offset='100%' stopColor='#042993' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ba-linearGradient-3'>
-          <stop stopColor='#FFD045' offset='0%' />
-          <stop stopColor='#FECA2F' offset='100%' />
+        <linearGradient id='ba-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd045' />
+          <stop offset='100%' stopColor='#feca2f' />
         </linearGradient>
+        <clipPath id='ba-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ba-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ba-BA'>
-          <rect
-            id='ba-FlagBackground'
-            fill='url(#ba-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#ba-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ba-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ba-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#ba-c)' d='M17 15V0H6.5z' />
+          <path
+            fill='url(#ba-a)'
+            d='m13 14-.707.207.207-.707-.207-.707L13 13l.707-.207-.207.707.207.707z'
           />
-          <rect
-            id='ba-Mask-Copy'
-            fill='url(#ba-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+          <path
+            fill='url(#ba-a)'
+            d='m11 11-.707.207.207-.707-.207-.707L11 10l.707-.207-.207.707.207.707z'
           />
-          <polygon id='ba-Rectangle-2' fill='url(#ba-linearGradient-3)' points='17 15 17 0 6.5 0' />
-          <polygon
-            id='ba-Star-2'
-            fill='url(#ba-linearGradient-1)'
-            points='13 14 12.2928932 14.2071068 12.5 13.5 12.2928932 12.7928932 13 13 13.7071068 12.7928932 13.5 13.5 13.7071068 14.2071068'
+          <path
+            fill='url(#ba-a)'
+            d='m9 8-.707.207L8.5 7.5l-.207-.707L9 7l.707-.207L9.5 7.5l.207.707z'
           />
-          <polygon
-            id='ba-Star-2'
-            fill='url(#ba-linearGradient-1)'
-            points='11 11 10.2928932 11.2071068 10.5 10.5 10.2928932 9.79289322 11 10 11.7071068 9.79289322 11.5 10.5 11.7071068 11.2071068'
+          <path
+            fill='url(#ba-a)'
+            d='m7 5-.707.207L6.5 4.5l-.207-.707L7 4l.707-.207L7.5 4.5l.207.707z'
           />
-          <polygon
-            id='ba-Star-2'
-            fill='url(#ba-linearGradient-1)'
-            points='9 8 8.29289322 8.20710678 8.5 7.5 8.29289322 6.79289322 9 7 9.70710678 6.79289322 9.5 7.5 9.70710678 8.20710678'
-          />
-          <polygon
-            id='ba-Star-2'
-            fill='url(#ba-linearGradient-1)'
-            points='7 5 6.29289322 5.20710678 6.5 4.5 6.29289322 3.79289322 7 4 7.70710678 3.79289322 7.5 4.5 7.70710678 5.20710678'
-          />
-          <polygon
-            id='ba-Star-2'
-            fill='url(#ba-linearGradient-1)'
-            points='5 2 4.29289322 2.20710678 4.5 1.5 4.29289322 0.792893219 5 1 5.70710678 0.792893219 5.5 1.5 5.70710678 2.20710678'
+          <path
+            fill='url(#ba-a)'
+            d='m5 2-.707.207L4.5 1.5 4.293.793 5 1l.707-.207L5.5 1.5l.207.707z'
           />
         </g>
       </g>

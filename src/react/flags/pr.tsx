@@ -21,58 +21,32 @@ export const IconFlagPR: FlagIcon = ({
       <title>PR</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pr-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pr-linearGradient-2'>
-          <stop stopColor='#FA2222' offset='0%' />
-          <stop stopColor='#ED0000' offset='100%' />
+        <linearGradient id='pr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fa2222' />
+          <stop offset='100%' stopColor='#ed0000' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pr-linearGradient-3'>
-          <stop stopColor='#1D63F9' offset='0%' />
-          <stop stopColor='#0650F0' offset='100%' />
+        <linearGradient id='pr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1d63f9' />
+          <stop offset='100%' stopColor='#0650f0' />
         </linearGradient>
+        <clipPath id='pr-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pr-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pr-PR'>
-          <rect
-            id='pr-FlagBackground'
-            fill='url(#pr-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pr-Mask-Copy'
-            fill='url(#pr-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pr-Rectangle-2'
-            fill='url(#pr-linearGradient-1)'
-            x='0'
-            y='3'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='pr-Rectangle-2-Copy'
-            fill='url(#pr-linearGradient-1)'
-            x='0'
-            y='9'
-            width='21'
-            height='3'
-          />
-          <polygon id='pr-Rectangle-83' fill='url(#pr-linearGradient-3)' points='0 0 10 7.5 0 15' />
-          <polygon
-            id='pr-Star-27'
-            fill='url(#pr-linearGradient-1)'
-            points='3.5 8.45555972 2.03053687 9.52254249 2.5912087 7.79528419 1.12235871 6.72745751 2.93833609 6.72693595 3.5 5 4.06166391 6.72693595 5.87764129 6.72745751 4.4087913 7.79528419 4.96946313 9.52254249'
+      <g clipPath='url(#pr-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pr-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pr-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#pr-a)' d='M0 3h21v3H0z' />
+          <path fill='url(#pr-a)' d='M0 9h21v3H0z' />
+          <path fill='url(#pr-c)' d='m0 0 10 7.5L0 15z' />
+          <path
+            fill='url(#pr-a)'
+            d='M3.5 8.456 2.03 9.523l.561-1.728-1.469-1.068h1.816L3.5 5l.562 1.727h1.816l-1.47 1.068.561 1.728z'
           />
         </g>
       </g>

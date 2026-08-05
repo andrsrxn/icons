@@ -21,57 +21,32 @@ export const IconFlagDE: FlagIcon = ({
       <title>DE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='de-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='de-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='de-linearGradient-2'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='de-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='de-linearGradient-3'>
-          <stop stopColor='#F01515' offset='0%' />
-          <stop stopColor='#DE0000' offset='100%' />
+        <linearGradient id='de-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f01515' />
+          <stop offset='100%' stopColor='#de0000' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='de-linearGradient-4'>
-          <stop stopColor='#FFD521' offset='0%' />
-          <stop stopColor='#FFCF00' offset='100%' />
+        <linearGradient id='de-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd521' />
+          <stop offset='100%' stopColor='#ffcf00' />
         </linearGradient>
+        <clipPath id='de-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='de-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='de-DE'>
-          <rect
-            id='de-FlagBackground'
-            fill='url(#de-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='de-Rectangle-2'
-            fill='url(#de-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='de-Rectangle-2'
-            fill='url(#de-linearGradient-3)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='de-Rectangle-2'
-            fill='url(#de-linearGradient-4)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#de-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#de-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#de-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#de-c)' d='M0 5h21v5H0z' />
+          <path fill='url(#de-d)' d='M0 10h21v5H0z' />
         </g>
       </g>
     </svg>

@@ -21,46 +21,27 @@ export const IconFlagCA: FlagIcon = ({
       <title>CA</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ca-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ca-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ca-linearGradient-2'>
-          <stop stopColor='#FF3131' offset='0%' />
-          <stop stopColor='#FF0000' offset='100%' />
+        <linearGradient id='ca-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff3131' />
+          <stop offset='100%' stopColor='red' />
         </linearGradient>
+        <clipPath id='ca-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ca-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ca-CA'>
-          <rect
-            id='ca-FlagBackground'
-            fill='url(#ca-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='ca-Mask' fill='url(#ca-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='ca-Rectangle-2'
-            fill='url(#ca-linearGradient-2)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='ca-Rectangle-2-Copy'
-            fill='url(#ca-linearGradient-1)'
-            x='6'
-            y='0'
-            width='9'
-            height='15'
-          />
+      <g clipPath='url(#ca-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ca-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ca-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#ca-b)' d='M0 0h7v15H0z' />
+          <path fill='url(#ca-a)' d='M6 0h9v15H6z' />
           <path
-            d='M11.6741867,7.32581329 L12.3258133,6.67418671 C12.4215317,6.57846832 12.5808177,6.58081774 12.6805115,6.68051147 L13,7 L14,6.5 L13.5,7.5 L13.8194885,7.81948853 C13.921875,7.921875 13.9229621,8.07703795 13.8279309,8.17206907 L12.5,9.5 L11,9.5 L10.75,11 L10.25,11 L10,9.5 L8.5,9.5 L7.17206907,8.17206907 C7.08064651,8.08064651 7.08081774,7.91918226 7.18051147,7.81948853 L7.5,7.5 L7,6.5 L8,7 L8.31948853,6.68051147 C8.421875,6.578125 8.57798604,6.57798604 8.67418671,6.67418671 L9.32581329,7.32581329 C9.42153168,7.42153168 9.47771727,7.38858633 9.45023012,7.25115061 L9,5 L10,5.5 L10.5,4 L11,5.5 L12,5 L11.5497699,7.25115061 C11.5214844,7.39257812 11.577986,7.42201396 11.6741867,7.32581329 Z'
-            id='ca-Combined-Shape'
-            fill='url(#ca-linearGradient-2)'
+            fill='url(#ca-b)'
+            d='m11.674 7.326.652-.652a.25.25 0 0 1 .355.007L13 7l1-.5-.5 1 .32.32a.247.247 0 0 1 .008.352L12.5 9.5H11l-.25 1.5h-.5L10 9.5H8.5L7.172 8.172a.253.253 0 0 1 .009-.353L7.5 7.5l-.5-1L8 7l.32-.32a.25.25 0 0 1 .354-.006l.652.652c.096.096.152.063.124-.075L9 5l1 .5.5-1.5.5 1.5 1-.5-.45 2.251c-.029.142.028.171.124.075'
           />
         </g>
       </g>

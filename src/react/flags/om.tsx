@@ -21,55 +21,32 @@ export const IconFlagOM: FlagIcon = ({
       <title>OM</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='om-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='om-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='om-linearGradient-2'>
-          <stop stopColor='#138E16' offset='0%' />
-          <stop stopColor='#0F7F12' offset='100%' />
+        <linearGradient id='om-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#138e16' />
+          <stop offset='100%' stopColor='#0f7f12' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='om-linearGradient-3'>
-          <stop stopColor='#ED2B35' offset='0%' />
-          <stop stopColor='#D91B25' offset='100%' />
+        <linearGradient id='om-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ed2b35' />
+          <stop offset='100%' stopColor='#d91b25' />
         </linearGradient>
+        <clipPath id='om-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='om-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='om-OM'>
-          <rect
-            id='om-FlagBackground'
-            fill='url(#om-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#om-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#om-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#om-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#om-c)' d='M0 15h7v-5h14V5H7V0H0z' />
+          <path
+            fill='url(#om-a)'
+            d='m3.5 3.534-.868 1.268.45-1.47-1.532.113 1.43-.564-1.044-1.128 1.332.766L3.5 1l.232 1.519 1.332-.766L4.02 2.881l1.43.564-1.533-.112.45 1.469z'
           />
-          <rect
-            id='om-Rectangle-2'
-            fill='url(#om-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <polygon
-            id='om-Rectangle-2'
-            fill='url(#om-linearGradient-3)'
-            points='0 15 7 15 7 10 21 10 21 5 7 5 7 0 0 0'
-          />
-          <polygon
-            id='om-Star-32'
-            fill='url(#om-linearGradient-1)'
-            points='3.5 3.53381849 2.63223252 4.80193774 3.0826439 3.33283039 1.55014418 3.44504187 2.97956545 2.88121421 1.93633704 1.7530204 3.26838484 2.51904616 3.5 1 3.73161516 2.51904616 5.06366296 1.7530204 4.02043455 2.88121421 5.44985582 3.44504187 3.9173561 3.33283039 4.36776748 4.80193774'
-          />
-          <rect
-            id='om-Rectangle-2'
-            fill='url(#om-linearGradient-1)'
-            x='7'
-            y='0'
-            width='14'
-            height='5'
-          />
+          <path fill='url(#om-a)' d='M7 0h14v5H7z' />
         </g>
       </g>
     </svg>

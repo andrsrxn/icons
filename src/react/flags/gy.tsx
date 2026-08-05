@@ -21,66 +21,42 @@ export const IconFlagGY: FlagIcon = ({
       <title>GY</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gy-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-2'>
-          <stop stopColor='#08C55F' offset='0%' />
-          <stop stopColor='#009F49' offset='100%' />
+        <linearGradient id='gy-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#08c55f' />
+          <stop offset='100%' stopColor='#009f49' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-3'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gy-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-4'>
-          <stop stopColor='#FFD831' offset='0%' />
-          <stop stopColor='#FDD117' offset='100%' />
+        <linearGradient id='gy-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd831' />
+          <stop offset='100%' stopColor='#fdd117' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-5'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='gy-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gy-linearGradient-6'>
-          <stop stopColor='#E92034' offset='0%' />
-          <stop stopColor='#CE1225' offset='100%' />
+        <linearGradient id='gy-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e92034' />
+          <stop offset='100%' stopColor='#ce1225' />
         </linearGradient>
+        <clipPath id='gy-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gy-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gy-GY'>
-          <rect
-            id='gy-FlagBackground'
-            fill='url(#gy-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='gy-Mask' fill='url(#gy-linearGradient-2)' x='0' y='0' width='21' height='15' />
-          <polygon
-            id='gy-Rectangle-1134'
-            fill='url(#gy-linearGradient-3)'
-            fillRule='nonzero'
-            points='-1 15 -1 0 0 0 21 7 21 8 0 15'
-          />
-          <polygon
-            id='gy-Rectangle-1134'
-            fill='url(#gy-linearGradient-4)'
-            fillRule='nonzero'
-            points='8.8817842e-16 1.05409255 1.99840144e-15 13.9459074 19.3377223 7.5'
-          />
-          <polygon
-            id='gy-Rectangle-1134'
-            fill='url(#gy-linearGradient-5)'
-            fillRule='nonzero'
-            points='-1 15 -1 0 0 0 11.5 7.5 0 15'
-          />
-          <polygon
-            id='gy-Rectangle-1134'
-            fill='url(#gy-linearGradient-6)'
-            fillRule='nonzero'
-            points='0 13.8061278 9.66939597 7.5 0 1.19387219'
-          />
+      <g clipPath='url(#gy-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gy-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gy-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#gy-c)' fillRule='nonzero' d='M-1 15V0h1l21 7v1L0 15z' />
+          <path fill='url(#gy-d)' fillRule='nonzero' d='M0 1.054v12.892L19.338 7.5z' />
+          <path fill='url(#gy-e)' fillRule='nonzero' d='M-1 15V0h1l11.5 7.5L0 15z' />
+          <path fill='url(#gy-f)' fillRule='nonzero' d='M0 13.806 9.67 7.5 0 1.194z' />
         </g>
       </g>
     </svg>

@@ -21,37 +21,25 @@ export const IconFlagGBSCT: FlagIcon = ({
       <title>GB-SCT</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-sct-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gb-sct-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-sct-linearGradient-2'>
-          <stop stopColor='#1479D0' offset='0%' />
-          <stop stopColor='#0A68BA' offset='100%' />
+        <linearGradient id='gb-sct-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1479d0' />
+          <stop offset='100%' stopColor='#0a68ba' />
         </linearGradient>
+        <clipPath id='gb-sct-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gb-sct-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gb-sct-GB-SCT'>
-          <rect
-            id='gb-sct-FlagBackground'
-            fill='url(#gb-sct-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gb-sct-Mask-Copy'
-            fill='url(#gb-sct-linearGradient-2)'
-            x='0.000237781813'
-            y='-0.00266538434'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#gb-sct-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gb-sct-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gb-sct-b)' d='M0-.003h21v15H0z' />
           <path
-            d='M10.5002378,6.29111667 L-0.961614117,-1.44000006 L-2.07999992,0.218075088 L8.71194613,7.49733462 L-2.07999992,14.7765941 L-0.961614117,16.4346693 L10.5002378,8.70355256 L21.9620897,16.4346693 L23.0804755,14.7765941 L12.2885294,7.49733462 L23.0804755,0.218075088 L21.9620897,-1.44000006 L10.5002378,6.29111667 Z'
-            id='gb-sct-Rectangle-2'
-            fill='url(#gb-sct-linearGradient-1)'
+            fill='url(#gb-sct-a)'
+            d='M10.5 6.291-.962-1.44-2.08.218l10.792 7.28-10.792 7.279 1.118 1.658L10.5 8.704l11.462 7.73 1.118-1.657-10.791-7.28L23.08.218 21.962-1.44z'
           />
         </g>
       </g>

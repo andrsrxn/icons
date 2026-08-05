@@ -21,41 +21,23 @@ export const IconFlagID: FlagIcon = ({
       <title>ID</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='id-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='id-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='id-linearGradient-2'>
-          <stop stopColor='#E12237' offset='0%' />
-          <stop stopColor='#CE1126' offset='100%' />
+        <linearGradient id='id-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e12237' />
+          <stop offset='100%' stopColor='#ce1126' />
         </linearGradient>
+        <clipPath id='id-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='id-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='id-ID'>
-          <rect
-            id='id-FlagBackground'
-            fill='url(#id-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='id-Rectangle-2'
-            fill='url(#id-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='id-Rectangle-2'
-            fill='url(#id-linearGradient-1)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#id-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#id-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#id-b)' d='M0 0h21v8H0z' />
+          <path fill='url(#id-a)' d='M0 8h21v7H0z' />
         </g>
       </g>
     </svg>

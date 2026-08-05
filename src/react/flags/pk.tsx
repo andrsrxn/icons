@@ -21,64 +21,43 @@ export const IconFlagPK: FlagIcon = ({
       <title>PK</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pk-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pk-linearGradient-2'>
-          <stop stopColor='#0A632F' offset='0%' />
-          <stop stopColor='#05411E' offset='100%' />
+        <linearGradient id='pk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0a632f' />
+          <stop offset='100%' stopColor='#05411e' />
         </linearGradient>
-        <path
-          d='M15.9781898,10.8777212 C15.246875,11.4729173 14.3268852,11.8275274 13.3275103,11.8275274 C10.9454095,11.8275274 9.01433521,9.81280873 9.01433521,7.32752735 C9.01433521,4.84224598 10.9454095,2.82752735 13.3275103,2.82752735 C14.3268852,2.82752735 15.246875,3.18213737 15.9781898,3.77733347 C15.6461512,3.69153605 15.2964768,3.64570917 14.9354035,3.64570917 C12.7698573,3.64570917 11.0143352,5.29411532 11.0143352,7.32752735 C11.0143352,9.36093939 12.7698573,11.0093455 14.9354035,11.0093455 C15.2964768,11.0093455 15.6461512,10.9635187 15.9781898,10.8777212 L15.9781898,10.8777212 Z M16.0143352,8.10752738 L14.8387647,8.94556134 L15.2725111,7.56856062 L14.1122222,6.70949336 L15.5558627,6.69649407 L16.0143352,5.32752735 L16.4728077,6.69649407 L17.9164482,6.70949336 L16.7561593,7.56856062 L17.1899057,8.94556134 L16.0143352,8.10752738 L16.0143352,8.10752738 Z'
-          id='pk-path-3'
-        />
         <filter
-          x='-2.8%'
-          y='-2.8%'
+          id='pk-c'
           width='105.6%'
           height='111.1%'
-          filterUnits='objectBoundingBox'
-          id='pk-filter-4'>
-          <feOffset dx='0' dy='0.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+          x='-2.8%'
+          y='-2.8%'
+          filterUnits='objectBoundingBox'>
+          <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
           <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
             in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
           />
         </filter>
+        <path
+          id='pk-d'
+          d='M15.978 10.878a4.18 4.18 0 0 1-2.65.95c-2.383 0-4.314-2.015-4.314-4.5 0-2.486 1.931-4.5 4.314-4.5.999 0 1.919.354 2.65.95a4.2 4.2 0 0 0-1.043-.132c-2.165 0-3.92 1.648-3.92 3.682s1.755 3.681 3.92 3.681q.543-.001 1.043-.131m.036-2.77-1.175.838.434-1.377-1.16-.86 1.443-.013.458-1.368.459 1.368 1.443.013-1.16.86.434 1.377z'
+        />
+        <clipPath id='pk-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pk-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pk-PK'>
-          <rect
-            id='pk-FlagBackground'
-            fill='url(#pk-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pk-Mask-Copy'
-            fill='url(#pk-linearGradient-2)'
-            x='0'
-            y='-0.00182540814'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pk-Rectangle-2-Copy'
-            fill='url(#pk-linearGradient-1)'
-            x='0'
-            y='-0.00182540814'
-            width='6'
-            height='15'
-          />
-          <g
-            id='pk-Star-8'
-            transform='translate(13.465392, 7.327527) rotate(-45.000000) translate(-13.465392, -7.327527) '>
-            <use fill='black' fillOpacity='1' filter='url(#pk-filter-4)' xlinkHref='#pk-path-3' />
-            <use fill='url(#pk-linearGradient-1)' fillRule='evenodd' xlinkHref='#pk-path-3' />
+      <g clipPath='url(#pk-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pk-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pk-b)' d='M0-.002h21v15H0z' />
+          <path fill='url(#pk-a)' d='M0-.002h6v15H0z' />
+          <g transform='rotate(-45 13.465 7.328)'>
+            <use xlinkHref='#pk-d' fill='#000' filter='url(#pk-c)' />
+            <use xlinkHref='#pk-d' fill='url(#pk-a)' />
           </g>
         </g>
       </g>

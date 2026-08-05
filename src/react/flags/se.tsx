@@ -21,42 +21,27 @@ export const IconFlagSE: FlagIcon = ({
       <title>SE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='se-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='se-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='se-linearGradient-2'>
-          <stop stopColor='#157CBB' offset='0%' />
-          <stop stopColor='#0E6CA5' offset='100%' />
+        <linearGradient id='se-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#157cbb' />
+          <stop offset='100%' stopColor='#0e6ca5' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='se-linearGradient-3'>
-          <stop stopColor='#FFD34D' offset='0%' />
-          <stop stopColor='#FECB2F' offset='100%' />
+        <linearGradient id='se-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd34d' />
+          <stop offset='100%' stopColor='#fecb2f' />
         </linearGradient>
+        <clipPath id='se-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='se-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='se-SE'>
-          <rect
-            id='se-FlagBackground'
-            fill='url(#se-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='se-Mask-Copy'
-            fill='url(#se-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='se-Rectangle-2'
-            fill='url(#se-linearGradient-3)'
-            points='0 9 6 9 6 15 9 15 9 9 21 9 21 6 9 6 9 0 6 0 6 6 0 6'
-          />
+      <g clipPath='url(#se-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#se-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#se-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#se-c)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
         </g>
       </g>
     </svg>

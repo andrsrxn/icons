@@ -21,41 +21,23 @@ export const IconFlagPL: FlagIcon = ({
       <title>PL</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pl-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pl-linearGradient-2'>
-          <stop stopColor='#EB2A50' offset='0%' />
-          <stop stopColor='#DA1B40' offset='100%' />
+        <linearGradient id='pl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#eb2a50' />
+          <stop offset='100%' stopColor='#da1b40' />
         </linearGradient>
+        <clipPath id='pl-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pl-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pl-PL'>
-          <rect
-            id='pl-FlagBackground'
-            fill='url(#pl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pl-Rectangle-2'
-            fill='url(#pl-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='pl-Rectangle-2'
-            fill='url(#pl-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#pl-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pl-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pl-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#pl-a)' d='M0 0h21v7H0z' />
         </g>
       </g>
     </svg>

@@ -21,54 +21,34 @@ export const IconFlagCW: FlagIcon = ({
       <title>CW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cw-linearGradient-2'>
-          <stop stopColor='#0543A8' offset='0%' />
-          <stop stopColor='#00307D' offset='100%' />
+        <linearGradient id='cw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0543a8' />
+          <stop offset='100%' stopColor='#00307d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cw-linearGradient-3'>
-          <stop stopColor='#FCC747' offset='0%' />
-          <stop stopColor='#FEC539' offset='100%' />
+        <linearGradient id='cw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fcc747' />
+          <stop offset='100%' stopColor='#fec539' />
         </linearGradient>
+        <clipPath id='cw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cw-CW'>
-          <rect
-            id='cw-FlagBackground'
-            fill='url(#cw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#cw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cw-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#cw-c)' d='M0 10h21v2H0z' />
+          <path
+            fill='url(#cw-a)'
+            d='m6.5 6.267-1.176.851.447-1.381-1.173-.855 1.451-.003L6.5 3.5l.45 1.38 1.452.002-1.173.855.447 1.381z'
           />
-          <rect
-            id='cw-Mask-Copy'
-            fill='url(#cw-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='cw-Rectangle-1337'
-            fill='url(#cw-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='2'
-          />
-          <polygon
-            id='cw-Star-53'
-            fill='url(#cw-linearGradient-1)'
-            points='6.5 6.26701627 5.3244295 7.11803399 5.77052418 5.73702106 4.59788697 4.88196601 6.04915915 4.8794708 6.5 3.5 6.95084085 4.8794708 8.40211303 4.88196601 7.22947582 5.73702106 7.6755705 7.11803399'
-          />
-          <polygon
-            id='cw-Star-53-Copy'
-            fill='url(#cw-linearGradient-1)'
-            points='3 3.5752622 2.11832212 4.21352549 2.45289314 3.1777658 1.57341523 2.53647451 2.66186936 2.5346031 3 1.5 3.33813064 2.5346031 4.42658477 2.53647451 3.54710686 3.1777658 3.88167788 4.21352549'
+          <path
+            fill='url(#cw-a)'
+            d='m3 3.575-.882.639.335-1.036-.88-.642 1.089-.001L3 1.5l.338 1.035 1.089.001-.88.642.335 1.036z'
           />
         </g>
       </g>

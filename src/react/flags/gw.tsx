@@ -21,65 +21,39 @@ export const IconFlagGW: FlagIcon = ({
       <title>GW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gw-linearGradient-2'>
-          <stop stopColor='#1AB558' offset='0%' />
-          <stop stopColor='#169E4D' offset='100%' />
+        <linearGradient id='gw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1ab558' />
+          <stop offset='100%' stopColor='#169e4d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gw-linearGradient-3'>
-          <stop stopColor='#FFD952' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='gw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd952' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gw-linearGradient-4'>
-          <stop stopColor='#E72B42' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='gw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e72b42' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gw-linearGradient-5'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='gw-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='gw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gw-GW'>
-          <rect
-            id='gw-FlagBackground'
-            fill='url(#gw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gw-Rectangle-2'
-            fill='url(#gw-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='gw-Rectangle-2'
-            fill='url(#gw-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='gw-Rectangle-2'
-            fill='url(#gw-linearGradient-4)'
-            x='0'
-            y='0'
-            width='8'
-            height='15'
-          />
-          <polygon
-            id='gw-Star-53'
-            fill='url(#gw-linearGradient-5)'
-            points='4 8.45877033 2.53053687 9.52254249 3.08815523 7.79627633 1.62235871 6.72745751 3.43644894 6.72433851 4 5 4.56355106 6.72433851 6.37764129 6.72745751 4.91184477 7.79627633 5.46946313 9.52254249'
+      <g clipPath='url(#gw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gw-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#gw-c)' d='M0 0h21v7H0z' />
+          <path fill='url(#gw-d)' d='M0 0h8v15H0z' />
+          <path
+            fill='url(#gw-e)'
+            d='M4 8.459 2.53 9.523l.558-1.727-1.466-1.069 1.814-.003L4 5l.564 1.724 1.814.003-1.466 1.07.557 1.726z'
           />
         </g>
       </g>

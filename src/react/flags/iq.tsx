@@ -21,77 +21,35 @@ export const IconFlagIQ: FlagIcon = ({
       <title>IQ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='iq-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='iq-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='iq-linearGradient-2'>
-          <stop stopColor='#DF1E35' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='iq-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#df1e35' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='iq-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='iq-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='iq-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='iq-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='iq-IQ'>
-          <rect
-            id='iq-FlagBackground'
-            fill='url(#iq-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='iq-Rectangle-2'
-            fill='url(#iq-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='iq-Rectangle-2'
-            fill='url(#iq-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='iq-Rectangle-2'
-            fill='url(#iq-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
+      <g clipPath='url(#iq-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#iq-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#iq-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#iq-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#iq-a)' d='M0 5h21v5H0z' />
+          <path
+            fill='#0f7a40'
+            d='M14 6.256c0-.141.092-.21.232-.14l.536.268a.44.44 0 0 1 .232.365V8.75a.247.247 0 0 1-.252.249h-.496A.254.254 0 0 1 14 8.744zM8 6.256c0-.141.092-.21.232-.14l.536.268A.44.44 0 0 1 9 6.749V8.75A.247.247 0 0 1 8.748 9h-.496A.254.254 0 0 1 8 8.744zM12 6.749c0-.138.092-.295.232-.365l.536-.268c.128-.064.232-.002.232.14v2.488a.25.25 0 0 1-.252.256h-.496A.25.25 0 0 1 12 8.751z'
           />
           <path
-            d='M14,6.25577831 C14,6.11451585 14.0922852,6.04614258 14.2319336,6.1159668 L14.7680664,6.3840332 C14.8961598,6.4480799 15,6.60742188 15,6.74884939 L15,8.75115061 C15,8.88858633 14.8929825,9 14.7476578,9 L14.2523422,9 C14.1129775,9 14,8.88605976 14,8.74422169 L14,6.25577831 Z'
-            id='iq-Rectangle-213'
-            fill='#0F7A40'
-          />
-          <path
-            d='M8,6.25577831 C8,6.11451585 8.09228516,6.04614258 8.23193359,6.1159668 L8.76806641,6.3840332 C8.89615979,6.4480799 9,6.60742188 9,6.74884939 L9,8.75115061 C9,8.88858633 8.89298248,9 8.74765778,9 L8.25234222,9 C8.11297746,9 8,8.88605976 8,8.74422169 L8,6.25577831 Z'
-            id='iq-Rectangle-213'
-            fill='#0F7A40'
-          />
-          <path
-            d='M12,6.74884939 C12,6.61141367 12.0922852,6.45385742 12.2319336,6.3840332 L12.7680664,6.1159668 C12.8961598,6.0519201 13,6.11394024 13,6.25577831 L13,8.74422169 C13,8.88548415 12.8929825,9 12.7476578,9 L12.2523422,9 C12.1129775,9 12,8.89257812 12,8.75115061 L12,6.74884939 Z'
-            id='iq-Rectangle-213'
-            fill='#0F7A40'
-          />
-          <path
-            d='M10,7.74769449 C10,7.6108966 10.0922852,7.45385742 10.2319336,7.3840332 L10.7680664,7.1159668 C10.8961598,7.0519201 11,7.11181023 11,7.2423206 L11,8.04478441 L12.5,8.0447844 L12.5,8.99999997 L11.2476945,9 C11.1108966,9 10.8929825,9 10.7476578,9 L10.2523422,9 C10.1129775,9 10,8.88229752 10,8.75230551 L10,7.74769449 Z'
-            id='iq-Rectangle-213'
-            fill='#0F7A40'
-          />
-          <path
-            d='M6,7.74769449 C6,7.6108966 6.09228516,7.45385742 6.23193359,7.3840332 L6.76806641,7.1159668 C6.89615979,7.0519201 7,7.11181023 7,7.2423206 L7,8.04478441 L8.5,8.0447844 L8.5,8.99999997 L7.24769449,9 C7.1108966,9 6.89298248,9 6.74765778,9 L6.25234222,9 C6.11297746,9 6,8.88229752 6,8.75230551 L6,7.74769449 Z'
-            id='iq-Rectangle-213'
-            fill='#0F7A40'
+            fill='#0f7a40'
+            d='M10 7.748c0-.137.092-.294.232-.364l.536-.268c.128-.064.232-.004.232.126v.803h1.5V9h-2.248A.255.255 0 0 1 10 8.752zM6 7.748c0-.137.092-.294.232-.364l.536-.268c.128-.064.232-.004.232.126v.803h1.5V9H6.252A.255.255 0 0 1 6 8.752z'
           />
         </g>
       </g>

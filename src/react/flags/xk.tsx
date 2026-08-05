@@ -21,46 +21,33 @@ export const IconFlagXK: FlagIcon = ({
       <title>XK</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='xk-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='xk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='xk-linearGradient-2'>
-          <stop stopColor='#2F5FBF' offset='0%' />
-          <stop stopColor='#244EA3' offset='100%' />
+        <linearGradient id='xk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2f5fbf' />
+          <stop offset='100%' stopColor='#244ea3' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='xk-linearGradient-3'>
-          <stop stopColor='#E9C072' offset='0%' />
-          <stop stopColor='#CFA557' offset='100%' />
+        <linearGradient id='xk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e9c072' />
+          <stop offset='100%' stopColor='#cfa557' />
         </linearGradient>
+        <clipPath id='xk-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='xk-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='xk-XK'>
-          <rect
-            id='xk-FlagBackground'
-            fill='url(#xk-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='xk-Mask-Copy'
-            fill='url(#xk-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#xk-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#xk-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#xk-b)' d='M0 0h21v15H0z' />
+          <path
+            fill='url(#xk-a)'
+            d='m9 3.5-.707.207L8.5 3l-.207-.707L9 2.5l.707-.207L9.5 3l.207.707zm3 0-.707.207L11.5 3l-.207-.707L12 2.5l.707-.207L12.5 3l.207.707zm3 1-.707.207L14.5 4l-.207-.707L15 3.5l.707-.207L15.5 4l.207.707zm2 2-.707.207L16.5 6l-.207-.707L17 5.5l.707-.207L17.5 6l.207.707zm-13 0-.707.207L3.5 6l-.207-.707L4 5.5l.707-.207L4.5 6l.207.707zm2-2-.707.207L5.5 4l-.207-.707L6 3.5l.707-.207L6.5 4l.207.707z'
           />
           <path
-            d='M9,3.5 L8.29289322,3.70710678 L8.5,3 L8.29289322,2.29289322 L9,2.5 L9.70710678,2.29289322 L9.5,3 L9.70710678,3.70710678 L9,3.5 Z M12,3.5 L11.2928932,3.70710678 L11.5,3 L11.2928932,2.29289322 L12,2.5 L12.7071068,2.29289322 L12.5,3 L12.7071068,3.70710678 L12,3.5 Z M15,4.5 L14.2928932,4.70710678 L14.5,4 L14.2928932,3.29289322 L15,3.5 L15.7071068,3.29289322 L15.5,4 L15.7071068,4.70710678 L15,4.5 Z M17,6.5 L16.2928932,6.70710678 L16.5,6 L16.2928932,5.29289322 L17,5.5 L17.7071068,5.29289322 L17.5,6 L17.7071068,6.70710678 L17,6.5 Z M4,6.5 L3.29289322,6.70710678 L3.5,6 L3.29289322,5.29289322 L4,5.5 L4.70710678,5.29289322 L4.5,6 L4.70710678,6.70710678 L4,6.5 Z M6,4.5 L5.29289322,4.70710678 L5.5,4 L5.29289322,3.29289322 L6,3.5 L6.70710678,3.29289322 L6.5,4 L6.70710678,4.70710678 L6,4.5 Z'
-            id='xk-Combined-Shape'
-            fill='url(#xk-linearGradient-1)'
-          />
-          <polygon
-            id='xk-Rectangle-1408'
-            fill='url(#xk-linearGradient-3)'
-            points='9 10 8 9.5 7 7.5 8 7.5 9 6.5 9.5 5.5 10.5 5 11 5.5 12 6 12 6.5 12.5 7 14 8 13.5 9.5 12 11 11.5 10 10 11 10 12 9.5 11.5'
+            fill='url(#xk-c)'
+            d='m9 10-1-.5-1-2h1l1-1 .5-1 1-.5.5.5 1 .5v.5l.5.5L14 8l-.5 1.5L12 11l-.5-1-1.5 1v1l-.5-.5z'
           />
         </g>
       </g>

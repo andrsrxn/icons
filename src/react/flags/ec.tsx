@@ -21,73 +21,43 @@ export const IconFlagEC: FlagIcon = ({
       <title>EC</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ec-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ec-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ec-linearGradient-2'>
-          <stop stopColor='#0748AE' offset='0%' />
-          <stop stopColor='#003993' offset='100%' />
+        <linearGradient id='ec-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0748ae' />
+          <stop offset='100%' stopColor='#003993' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ec-linearGradient-3'>
-          <stop stopColor='#DE2035' offset='0%' />
-          <stop stopColor='#CE1126' offset='100%' />
+        <linearGradient id='ec-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#de2035' />
+          <stop offset='100%' stopColor='#ce1126' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ec-linearGradient-4'>
-          <stop stopColor='#FFD935' offset='0%' />
-          <stop stopColor='#FDD216' offset='100%' />
+        <linearGradient id='ec-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd935' />
+          <stop offset='100%' stopColor='#fdd216' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ec-linearGradient-5'>
-          <stop stopColor='#FBDC44' offset='0%' />
-          <stop stopColor='#FFDC32' offset='100%' />
+        <linearGradient id='ec-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fbdc44' />
+          <stop offset='100%' stopColor='#ffdc32' />
         </linearGradient>
+        <clipPath id='ec-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ec-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ec-EC'>
-          <rect
-            id='ec-FlagBackground'
-            fill='url(#ec-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ec-Rectangle-2'
-            fill='url(#ec-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='ec-Rectangle-2'
-            fill='url(#ec-linearGradient-3)'
-            x='0'
-            y='11'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='ec-Rectangle-2'
-            fill='url(#ec-linearGradient-4)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#ec-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ec-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ec-b)' d='M0 7h21v4H0z' />
+          <path fill='url(#ec-c)' d='M0 11h21v4H0z' />
+          <path fill='url(#ec-d)' d='M0 0h21v7H0z' />
+          <path fill='url(#ec-e)' d='M9.3 6a2 2 0 1 0 2.4 0L11 8.1h-1z' />
+          <path fill='#5fc0dc' d='M10.5 5.5 11 8h-1z' />
           <path
-            d='M9.29996095,6 C8.81420448,6.36488433 8.5,6.94580754 8.5,7.60011714 C8.5,8.70468664 9.3954305,9.60011714 10.5,9.60011714 C11.6045695,9.60011714 12.5,8.70468664 12.5,7.60011714 C12.5,6.94580754 12.1857955,6.36488433 11.700039,6 L11,8.10011714 L10,8.10011714 L9.29996095,6 Z'
-            id='ec-Oval-12'
-            fill='url(#ec-linearGradient-5)'
-          />
-          <polygon id='ec-Rectangle-483' fill='#5FC0DC' points='10.5 5.5 11 8 10 8' />
-          <path
-            d='M9.6767767,3.8232233 C9.60981862,3.75626523 9.51077674,3.73288462 9.42094306,3.76282918 L7.92094306,4.26282918 C7.78995723,4.30649112 7.71916723,4.44807111 7.76282918,4.57905694 C7.80649112,4.71004277 7.94807111,4.78083277 8.07905694,4.73717082 L9.43247731,4.2860307 L10.3232233,5.1767767 C10.4208544,5.27440777 10.5791456,5.27440777 10.6767767,5.1767767 L11.5675227,4.2860307 L12.9209431,4.73717082 C13.0519289,4.78083277 13.1935089,4.71004277 13.2371708,4.57905694 C13.2808328,4.44807111 13.2100428,4.30649112 13.0790569,4.26282918 L11.5790569,3.76282918 C11.4892233,3.73288462 11.3901814,3.75626523 11.3232233,3.8232233 L10.5,4.64644661 L9.6767767,3.8232233 Z'
-            id='ec-Line'
-            fill='#3F2821'
+            fill='#3f2821'
             fillRule='nonzero'
-            opacity='0.66'
+            d='M9.677 3.823a.25.25 0 0 0-.256-.06l-1.5.5a.25.25 0 1 0 .158.474l1.353-.451.891.89a.25.25 0 0 0 .354 0l.89-.89 1.354.451a.25.25 0 1 0 .158-.474l-1.5-.5a.25.25 0 0 0-.256.06l-.823.823z'
+            opacity='.66'
           />
         </g>
       </g>

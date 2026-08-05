@@ -21,30 +21,22 @@ export const IconFlagGBENG: FlagIcon = ({
       <title>GB-ENG</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-eng-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gb-eng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gb-eng-linearGradient-2'>
-          <stop stopColor='#E82739' offset='0%' />
-          <stop stopColor='#CA1A2B' offset='100%' />
+        <linearGradient id='gb-eng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e82739' />
+          <stop offset='100%' stopColor='#ca1a2b' />
         </linearGradient>
+        <clipPath id='gb-eng-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gb-eng-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gb-eng-GB-ENG'>
-          <rect
-            id='gb-eng-FlagBackground'
-            fill='url(#gb-eng-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <path
-            d='M9,6 L0,6 L0,9 L9,9 L9,15 L12,15 L12,9 L21,9 L21,6 L12,6 L12,0 L9,0 L9,6 Z'
-            id='gb-eng-Rectangle-2'
-            fill='url(#gb-eng-linearGradient-2)'
-          />
+      <g clipPath='url(#gb-eng-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gb-eng-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gb-eng-b)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
         </g>
       </g>
     </svg>

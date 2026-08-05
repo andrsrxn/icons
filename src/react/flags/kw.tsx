@@ -21,62 +21,33 @@ export const IconFlagKW: FlagIcon = ({
       <title>KW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='kw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kw-linearGradient-2'>
-          <stop stopColor='#D72238' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='kw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#d72238' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kw-linearGradient-3'>
-          <stop stopColor='#169A53' offset='0%' />
-          <stop stopColor='#0F7A40' offset='100%' />
+        <linearGradient id='kw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#169a53' />
+          <stop offset='100%' stopColor='#0f7a40' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='kw-linearGradient-4'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='kw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='kw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='kw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='kw-KW'>
-          <rect
-            id='kw-FlagBackground'
-            fill='url(#kw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='kw-Rectangle-2'
-            fill='url(#kw-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='kw-Rectangle-2'
-            fill='url(#kw-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='kw-Rectangle-2'
-            fill='url(#kw-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <polygon
-            id='kw-Rectangle-83'
-            fill='url(#kw-linearGradient-4)'
-            points='0 0 7 5 7 10 0 15'
-          />
+      <g clipPath='url(#kw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#kw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#kw-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#kw-c)' d='M0 0h21v5H0z' />
+          <path fill='url(#kw-a)' d='M0 5h21v5H0z' />
+          <path fill='url(#kw-d)' d='m0 0 7 5v5l-7 5z' />
         </g>
       </g>
     </svg>

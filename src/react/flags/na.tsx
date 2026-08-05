@@ -21,169 +21,131 @@ export const IconFlagNA: FlagIcon = ({
       <title>NA</title>
 
       <defs>
+        <linearGradient id='na-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='na-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0c4799' />
+          <stop offset='100%' stopColor='#05387e' />
+        </linearGradient>
+        <linearGradient id='na-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd243' />
+          <stop offset='100%' stopColor='#ffcd2f' />
+        </linearGradient>
+        <linearGradient id='na-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1bac55' />
+          <stop offset='100%' stopColor='#149447' />
+        </linearGradient>
+        <linearGradient id='na-m' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e52347' />
+          <stop offset='100%' stopColor='#d01739' />
+        </linearGradient>
+        <filter
+          id='na-b'
+          width='107.1%'
+          height='115%'
+          x='-3.6%'
+          y='-7.5%'
+          filterUnits='objectBoundingBox'>
+          <feMorphology
+            in='SourceAlpha'
+            operator='dilate'
+            radius='.25'
+            result='shadowSpreadOuter1'
+          />
+          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+          <feColorMatrix
+            in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+          />
+        </filter>
+        <filter
+          id='na-e'
+          width='112.5%'
+          height='125%'
+          x='-6.2%'
+          y='-6.2%'
+          filterUnits='objectBoundingBox'>
+          <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+          <feColorMatrix
+            in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+          />
+        </filter>
+        <filter
+          id='na-h'
+          width='107.1%'
+          height='115%'
+          x='-3.6%'
+          y='-7.5%'
+          filterUnits='objectBoundingBox'>
+          <feMorphology
+            in='SourceAlpha'
+            operator='dilate'
+            radius='.25'
+            result='shadowSpreadOuter1'
+          />
+          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+          <feColorMatrix
+            in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+          />
+        </filter>
+        <filter
+          id='na-k'
+          width='106.2%'
+          height='107.9%'
+          x='-3.1%'
+          y='-3.9%'
+          filterUnits='objectBoundingBox'>
+          <feMorphology
+            in='SourceAlpha'
+            operator='dilate'
+            radius='.25'
+            result='shadowSpreadOuter1'
+          />
+          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+          <feColorMatrix
+            in='shadowOffsetOuter1'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+          />
+        </filter>
+        <path id='na-c' d='m3.121 12.304 21-10h-21z' />
+        <path
+          id='na-f'
+          d='m6.621 6.804-.765.848.058-1.14-1.14.057.847-.765-.847-.765 1.14.058-.058-1.14.765.847.766-.848-.058 1.14 1.14-.057-.848.765.848.765-1.14-.058.058 1.14z'
+        />
+        <path id='na-i' d='M3.121 17.304h21v-10z' />
+        <path id='na-l' d='M5.433 19.304 25.75 6.609 21.81.304 1.493 12.999z' />
         <clipPath id='na-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='na-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='na-linearGradient-2'>
-          <stop stopColor='#0C4799' offset='0%' />
-          <stop stopColor='#05387E' offset='100%' />
-        </linearGradient>
-        <polygon
-          id='na-path-3'
-          points='3.12149555 12.3039496 24.1214956 2.30394957 3.12149555 2.30394957'
-        />
-        <filter
-          x='-3.6%'
-          y='-7.5%'
-          width='107.1%'
-          height='115.0%'
-          filterUnits='objectBoundingBox'
-          id='na-filter-4'>
-          <feMorphology
-            radius='0.25'
-            operator='dilate'
-            in='SourceAlpha'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset dx='0' dy='0' in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
-            in='shadowOffsetOuter1'
-          />
-        </filter>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='na-linearGradient-5'>
-          <stop stopColor='#FFD243' offset='0%' />
-          <stop stopColor='#FFCD2F' offset='100%' />
-        </linearGradient>
-        <polygon
-          id='na-path-6'
-          points='6.62149555 6.80394957 5.85612869 7.65170864 5.91438877 6.51105635 4.77373649 6.56931644 5.62149555 5.80394957 4.77373649 5.03858271 5.91438877 5.09684279 5.85612869 3.95619051 6.62149555 4.80394957 7.38686242 3.95619051 7.32860234 5.09684279 8.46925462 5.03858271 7.62149555 5.80394957 8.46925462 6.56931644 7.32860234 6.51105635 7.38686242 7.65170864'
-        />
-        <filter
-          x='-6.2%'
-          y='-6.2%'
-          width='112.5%'
-          height='125.0%'
-          filterUnits='objectBoundingBox'
-          id='na-filter-7'>
-          <feOffset dx='0' dy='0.5' in='SourceAlpha' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
-            in='shadowOffsetOuter1'
-          />
-        </filter>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='na-linearGradient-8'>
-          <stop stopColor='#1BAC55' offset='0%' />
-          <stop stopColor='#149447' offset='100%' />
-        </linearGradient>
-        <polygon
-          id='na-path-9'
-          points='3.12149555 17.3039496 24.1214956 17.3039496 24.1214956 7.30394957'
-        />
-        <filter
-          x='-3.6%'
-          y='-7.5%'
-          width='107.1%'
-          height='115.0%'
-          filterUnits='objectBoundingBox'
-          id='na-filter-10'>
-          <feMorphology
-            radius='0.25'
-            operator='dilate'
-            in='SourceAlpha'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset dx='0' dy='0' in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
-            in='shadowOffsetOuter1'
-          />
-        </filter>
-        <polygon
-          id='na-path-11'
-          points='5.43328436 19.3039725 25.7495351 6.60897002 21.8097068 0.30392669 1.49345602 12.9989291'
-        />
-        <filter
-          x='-3.1%'
-          y='-3.9%'
-          width='106.2%'
-          height='107.9%'
-          filterUnits='objectBoundingBox'
-          id='na-filter-12'>
-          <feMorphology
-            radius='0.25'
-            operator='dilate'
-            in='SourceAlpha'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset dx='0' dy='0' in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            values='0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0'
-            type='matrix'
-            in='shadowOffsetOuter1'
-          />
-        </filter>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='na-linearGradient-13'>
-          <stop stopColor='#E52347' offset='0%' />
-          <stop stopColor='#D01739' offset='100%' />
-        </linearGradient>
       </defs>
-      <g
-        clipPath='url(#na-clip)'
-        id='na-Symbols'
-        stroke='none'
-        strokeWidth='1'
-        fill='none'
-        fillRule='evenodd'>
-        <g id='na-NA'>
-          <rect
-            id='na-FlagBackground'
-            fill='url(#na-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <g id='na-Group-2' transform='translate(-3.120000, -2.300000)'>
-            <g id='na-Rectangle-2'>
-              <use fill='black' fillOpacity='1' filter='url(#na-filter-4)' xlinkHref='#na-path-3' />
-              <use fill='url(#na-linearGradient-2)' fillRule='evenodd' xlinkHref='#na-path-3' />
-            </g>
-            <g id='na-Star-31'>
-              <use fill='black' fillOpacity='1' filter='url(#na-filter-7)' xlinkHref='#na-path-6' />
-              <use fill='url(#na-linearGradient-5)' fillRule='evenodd' xlinkHref='#na-path-6' />
-            </g>
-            <g id='na-Rectangle-2'>
-              <use
-                fill='black'
-                fillOpacity='1'
-                filter='url(#na-filter-10)'
-                xlinkHref='#na-path-9'
-              />
-              <use fill='url(#na-linearGradient-8)' fillRule='evenodd' xlinkHref='#na-path-9' />
-            </g>
-            <g id='na-Rectangle-2'>
-              <use
-                fill='black'
-                fillOpacity='1'
-                filter='url(#na-filter-12)'
-                xlinkHref='#na-path-11'
-              />
-              <use fill='url(#na-linearGradient-1)' fillRule='evenodd' xlinkHref='#na-path-11' />
-            </g>
-            <polygon
-              id='na-Rectangle-2'
-              fill='url(#na-linearGradient-13)'
-              points='2.64959632 19.6078991 27.2429911 4.24024048 24.5933948 1.77635684e-15 -1.77635684e-14 15.3676587'
-            />
+      <g clipPath='url(#na-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#na-a)' d='M0 0h21v15H0z' />
+          <g transform='translate(-3.12 -2.3)'>
+            <use xlinkHref='#na-c' fill='#000' filter='url(#na-b)' />
+            <use xlinkHref='#na-c' fill='url(#na-d)' />
           </g>
+          <g transform='translate(-3.12 -2.3)'>
+            <use xlinkHref='#na-f' fill='#000' filter='url(#na-e)' />
+            <use xlinkHref='#na-f' fill='url(#na-g)' />
+          </g>
+          <g transform='translate(-3.12 -2.3)'>
+            <use xlinkHref='#na-i' fill='#000' filter='url(#na-h)' />
+            <use xlinkHref='#na-i' fill='url(#na-j)' />
+          </g>
+          <g transform='translate(-3.12 -2.3)'>
+            <use xlinkHref='#na-l' fill='#000' filter='url(#na-k)' />
+            <use xlinkHref='#na-l' fill='url(#na-a)' />
+          </g>
+          <path
+            fill='url(#na-m)'
+            d='M2.65 19.608 27.243 4.24 24.593 0 0 15.368z'
+            transform='translate(-3.12 -2.3)'
+          />
         </g>
       </g>
     </svg>

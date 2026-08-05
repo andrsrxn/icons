@@ -21,109 +21,45 @@ export const IconFlagZW: FlagIcon = ({
       <title>ZW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='zw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='zw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='zw-linearGradient-2'>
-          <stop stopColor='#369D0C' offset='0%' />
-          <stop stopColor='#319209' offset='100%' />
+        <linearGradient id='zw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#369d0c' />
+          <stop offset='100%' stopColor='#319209' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='zw-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='zw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='zw-linearGradient-4'>
-          <stop stopColor='#FFD40E' offset='0%' />
-          <stop stopColor='#FFD201' offset='100%' />
+        <linearGradient id='zw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd40e' />
+          <stop offset='100%' stopColor='#ffd201' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='zw-linearGradient-5'>
-          <stop stopColor='#F12F1F' offset='0%' />
-          <stop stopColor='#DE2010' offset='100%' />
+        <linearGradient id='zw-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f12f1f' />
+          <stop offset='100%' stopColor='#de2010' />
         </linearGradient>
+        <clipPath id='zw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='zw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='zw-ZW'>
-          <rect
-            id='zw-FlagBackground'
-            fill='url(#zw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='2'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-2)'
-            x='0'
-            y='13'
-            width='21'
-            height='2'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-2)'
-            x='0'
-            y='4'
-            width='21'
-            height='2'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-2)'
-            x='0'
-            y='9'
-            width='21'
-            height='2'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-3)'
-            x='0'
-            y='6'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-4)'
-            x='0'
-            y='2'
-            width='21'
-            height='2'
-          />
-          <rect
-            id='zw-Rectangle-2'
-            fill='url(#zw-linearGradient-4)'
-            x='0'
-            y='11'
-            width='21'
-            height='2'
-          />
-          <polygon
-            id='zw-Rectangle-83'
-            fill='url(#zw-linearGradient-3)'
-            fillRule='nonzero'
-            points='-1 15 -1 0 0 0 10 7.5 0 15'
-          />
-          <polygon
-            id='zw-Rectangle-83'
-            fill='url(#zw-linearGradient-1)'
-            fillRule='nonzero'
-            points='0 13.75 8.33333333 7.5 6.66133815e-16 1.25'
-          />
-          <polygon
-            id='zw-Star-8'
-            fill='url(#zw-linearGradient-5)'
-            points='3 8.47500004 1.53053687 9.52254249 2.07271986 7.80129158 0.622358709 6.72745751 2.42690936 6.7112084 3 5 3.57309064 6.7112084 5.37764129 6.72745751 3.92728014 7.80129158 4.46946313 9.52254249'
+      <g clipPath='url(#zw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#zw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#zw-b)' d='M0 0h21v2H0z' />
+          <path fill='url(#zw-b)' d='M0 13h21v2H0z' />
+          <path fill='url(#zw-b)' d='M0 4h21v2H0z' />
+          <path fill='url(#zw-b)' d='M0 9h21v2H0z' />
+          <path fill='url(#zw-c)' d='M0 6h21v3H0z' />
+          <path fill='url(#zw-d)' d='M0 2h21v2H0z' />
+          <path fill='url(#zw-d)' d='M0 11h21v2H0z' />
+          <path fill='url(#zw-c)' fillRule='nonzero' d='M-1 15V0h1l10 7.5L0 15z' />
+          <path fill='url(#zw-a)' fillRule='nonzero' d='M0 13.75 8.333 7.5 0 1.25z' />
+          <path
+            fill='url(#zw-e)'
+            d='M3 8.475 1.53 9.523 2.074 7.8.623 6.727l1.804-.016L3 5l.573 1.711 1.805.016-1.45 1.074.541 1.722z'
           />
         </g>
       </g>

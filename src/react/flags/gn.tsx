@@ -21,50 +21,32 @@ export const IconFlagGN: FlagIcon = ({
       <title>GN</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gn-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gn-linearGradient-2'>
-          <stop stopColor='#1DBE5E' offset='0%' />
-          <stop stopColor='#169E4D' offset='100%' />
+        <linearGradient id='gn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1dbe5e' />
+          <stop offset='100%' stopColor='#169e4d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gn-linearGradient-3'>
-          <stop stopColor='#E72B42' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='gn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e72b42' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gn-linearGradient-4'>
-          <stop stopColor='#FFD952' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='gn-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd952' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
+        <clipPath id='gn-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gn-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gn-GN'>
-          <rect
-            id='gn-FlagBackground'
-            fill='url(#gn-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='gn-Mask' fill='url(#gn-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='gn-Rectangle-2'
-            fill='url(#gn-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='gn-Rectangle-2-Copy'
-            fill='url(#gn-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#gn-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gn-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gn-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#gn-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#gn-d)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

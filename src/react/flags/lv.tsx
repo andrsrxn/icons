@@ -21,49 +21,24 @@ export const IconFlagLV: FlagIcon = ({
       <title>LV</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lv-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='lv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lv-linearGradient-2'>
-          <stop stopColor='#B9414B' offset='0%' />
-          <stop stopColor='#9D323B' offset='100%' />
+        <linearGradient id='lv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#b9414b' />
+          <stop offset='100%' stopColor='#9d323b' />
         </linearGradient>
+        <clipPath id='lv-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='lv-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='lv-LV'>
-          <rect
-            id='lv-FlagBackground'
-            fill='url(#lv-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='lv-Rectangle-2'
-            fill='url(#lv-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='6'
-          />
-          <rect
-            id='lv-Rectangle-2'
-            fill='url(#lv-linearGradient-2)'
-            x='0'
-            y='9'
-            width='21'
-            height='6'
-          />
-          <rect
-            id='lv-Rectangle-2'
-            fill='url(#lv-linearGradient-1)'
-            x='0'
-            y='6'
-            width='21'
-            height='3'
-          />
+      <g clipPath='url(#lv-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#lv-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#lv-b)' d='M0 0h21v6H0z' />
+          <path fill='url(#lv-b)' d='M0 9h21v6H0z' />
+          <path fill='url(#lv-a)' d='M0 6h21v3H0z' />
         </g>
       </g>
     </svg>

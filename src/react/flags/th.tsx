@@ -21,61 +21,29 @@ export const IconFlagTH: FlagIcon = ({
       <title>TH</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='th-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='th-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='th-linearGradient-2'>
-          <stop stopColor='#F12532' offset='0%' />
-          <stop stopColor='#EB212E' offset='100%' />
+        <linearGradient id='th-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f12532' />
+          <stop offset='100%' stopColor='#eb212e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='th-linearGradient-3'>
-          <stop stopColor='#322B6C' offset='0%' />
-          <stop stopColor='#241F4E' offset='100%' />
+        <linearGradient id='th-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#322b6c' />
+          <stop offset='100%' stopColor='#241f4e' />
         </linearGradient>
+        <clipPath id='th-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='th-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='th-TH'>
-          <rect
-            id='th-FlagBackground'
-            fill='url(#th-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='th-Rectangle-2'
-            fill='url(#th-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='th-Rectangle-2'
-            fill='url(#th-linearGradient-2)'
-            x='0'
-            y='12'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='th-Rectangle-2'
-            fill='url(#th-linearGradient-1)'
-            x='0'
-            y='3'
-            width='21'
-            height='9'
-          />
-          <rect
-            id='th-Rectangle-2-Copy-4'
-            fill='url(#th-linearGradient-3)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#th-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#th-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#th-b)' d='M0 0h21v3H0z' />
+          <path fill='url(#th-b)' d='M0 12h21v3H0z' />
+          <path fill='url(#th-a)' d='M0 3h21v9H0z' />
+          <path fill='url(#th-c)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

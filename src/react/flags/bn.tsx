@@ -21,55 +21,28 @@ export const IconFlagBN: FlagIcon = ({
       <title>BN</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bn-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bn-linearGradient-2'>
-          <stop stopColor='#F7E250' offset='0%' />
-          <stop stopColor='#F7DF38' offset='100%' />
+        <linearGradient id='bn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f7e250' />
+          <stop offset='100%' stopColor='#f7df38' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bn-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='bn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='bn-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bn-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bn-BN'>
-          <rect
-            id='bn-FlagBackground'
-            fill='url(#bn-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bn-Mask-Copy'
-            fill='url(#bn-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bn-Rectangle-2-Copy-4'
-            fill='url(#bn-linearGradient-1)'
-            transform='translate(11.013030, 6.090461) rotate(20.000000) translate(-11.013030, -6.090461) '
-            x='-3.48696979'
-            y='4.59046107'
-            width='29'
-            height='3'
-          />
-          <rect
-            id='bn-Rectangle-2-Copy-4'
-            fill='url(#bn-linearGradient-3)'
-            transform='translate(9.986970, 8.909539) rotate(20.000000) translate(-9.986970, -8.909539) '
-            x='-4.51303021'
-            y='7.40953893'
-            width='29'
-            height='3'
-          />
+      <g clipPath='url(#bn-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bn-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bn-b)' d='M0 0h21v15H0z' />
+          <path fill='url(#bn-a)' d='M-3.487 4.59h29v3h-29z' transform='rotate(20 11.013 6.09)' />
+          <path fill='url(#bn-c)' d='M-4.513 7.41h29v3h-29z' transform='rotate(20 9.987 8.91)' />
         </g>
       </g>
     </svg>

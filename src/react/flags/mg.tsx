@@ -21,53 +21,28 @@ export const IconFlagMG: FlagIcon = ({
       <title>MG</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mg-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mg-linearGradient-2'>
-          <stop stopColor='#149047' offset='0%' />
-          <stop stopColor='#0F7E3D' offset='100%' />
+        <linearGradient id='mg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#149047' />
+          <stop offset='100%' stopColor='#0f7e3d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mg-linearGradient-3'>
-          <stop stopColor='#F84F4B' offset='0%' />
-          <stop stopColor='#FA3F3B' offset='100%' />
+        <linearGradient id='mg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f84f4b' />
+          <stop offset='100%' stopColor='#fa3f3b' />
         </linearGradient>
+        <clipPath id='mg-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mg-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mg-MG'>
-          <rect
-            id='mg-FlagBackground'
-            fill='url(#mg-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mg-Rectangle-2'
-            fill='url(#mg-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='mg-Rectangle-2'
-            fill='url(#mg-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='mg-Rectangle-2'
-            fill='url(#mg-linearGradient-1)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#mg-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mg-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mg-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#mg-c)' d='M0 0h21v7H0z' />
+          <path fill='url(#mg-a)' d='M0 0h7v15H0z' />
         </g>
       </g>
     </svg>

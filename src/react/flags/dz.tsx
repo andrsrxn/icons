@@ -21,54 +21,34 @@ export const IconFlagDZ: FlagIcon = ({
       <title>DZ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='dz-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='dz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='dz-linearGradient-2'>
-          <stop stopColor='#048345' offset='0%' />
-          <stop stopColor='#04753E' offset='100%' />
+        <linearGradient id='dz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#048345' />
+          <stop offset='100%' stopColor='#04753e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='dz-linearGradient-3'>
-          <stop stopColor='#E81B42' offset='0%' />
-          <stop stopColor='#D20F34' offset='100%' />
+        <linearGradient id='dz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e81b42' />
+          <stop offset='100%' stopColor='#d20f34' />
         </linearGradient>
+        <clipPath id='dz-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='dz-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='dz-DZ'>
-          <rect
-            id='dz-FlagBackground'
-            fill='url(#dz-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='dz-Rectangle-2'
-            fill='url(#dz-linearGradient-2)'
-            x='0'
-            y='0'
-            width='11'
-            height='15'
-          />
-          <rect
-            id='dz-Rectangle-2-Copy-2'
-            fill='url(#dz-linearGradient-1)'
-            x='11'
-            y='0'
-            width='10'
-            height='15'
-          />
-          <polygon
-            id='dz-Star-8'
-            fill='url(#dz-linearGradient-3)'
-            points='13 8.28000003 11.8244295 9.11803399 12.2581759 7.74103327 11.097887 6.88196601 12.5415275 6.86896672 13 5.5 13.4584725 6.86896672 14.902113 6.88196601 13.7418241 7.74103327 14.1755705 9.11803399'
+      <g clipPath='url(#dz-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#dz-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#dz-b)' d='M0 0h11v15H0z' />
+          <path fill='url(#dz-a)' d='M11 0h10v15H11z' />
+          <path
+            fill='url(#dz-c)'
+            d='m13 8.28-1.176.838.434-1.377-1.16-.859 1.444-.013L13 5.5l.458 1.369 1.444.013-1.16.859.434 1.377z'
           />
           <path
-            d='M13.2600002,4.21400036 C12.4889281,3.46100558 11.4526533,3 10.3131751,3 C7.93107426,3 6,5.01471863 6,7.5 C6,9.98528137 7.93107426,12 10.3131751,12 C11.4526533,12 12.4889281,11.5389944 13.2600002,10.7859996 C12.7281556,11.0391564 12.1265684,11.1818182 11.4894956,11.1818182 C9.32394935,11.1818182 7.5684273,9.53341203 7.5684273,7.5 C7.5684273,5.46658797 9.32394935,3.81818182 11.4894956,3.81818182 C12.1265684,3.81818182 12.7281556,3.96084355 13.2600002,4.21400036 L13.2600002,4.21400036 Z'
-            id='dz-Oval-3'
-            fill='url(#dz-linearGradient-3)'
+            fill='url(#dz-c)'
+            d='M13.26 4.214A4.2 4.2 0 0 0 10.313 3C7.931 3 6 5.015 6 7.5S7.931 12 10.313 12c1.14 0 2.176-.461 2.947-1.214a4.1 4.1 0 0 1-1.77.396c-2.166 0-3.922-1.649-3.922-3.682s1.756-3.682 3.921-3.682c.638 0 1.24.143 1.771.396'
           />
         </g>
       </g>

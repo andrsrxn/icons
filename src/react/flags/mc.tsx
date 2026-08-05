@@ -21,41 +21,23 @@ export const IconFlagMC: FlagIcon = ({
       <title>MC</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mc-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mc-linearGradient-2'>
-          <stop stopColor='#EA233B' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='mc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ea233b' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
+        <clipPath id='mc-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mc-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mc-MC'>
-          <rect
-            id='mc-FlagBackground'
-            fill='url(#mc-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mc-Rectangle-2'
-            fill='url(#mc-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='mc-Rectangle-2'
-            fill='url(#mc-linearGradient-1)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#mc-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mc-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mc-b)' d='M0 0h21v8H0z' />
+          <path fill='url(#mc-a)' d='M0 8h21v7H0z' />
         </g>
       </g>
     </svg>

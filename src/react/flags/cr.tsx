@@ -21,61 +21,29 @@ export const IconFlagCR: FlagIcon = ({
       <title>CR</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cr-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cr-linearGradient-2'>
-          <stop stopColor='#06358F' offset='0%' />
-          <stop stopColor='#042E7D' offset='100%' />
+        <linearGradient id='cr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#06358f' />
+          <stop offset='100%' stopColor='#042e7d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cr-linearGradient-3'>
-          <stop stopColor='#E61F37' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='cr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e61f37' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
+        <clipPath id='cr-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cr-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cr-CR'>
-          <rect
-            id='cr-FlagBackground'
-            fill='url(#cr-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='cr-Rectangle-2'
-            fill='url(#cr-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cr-Rectangle-2'
-            fill='url(#cr-linearGradient-2)'
-            x='0'
-            y='12'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cr-Rectangle-2'
-            fill='url(#cr-linearGradient-1)'
-            x='0'
-            y='3'
-            width='21'
-            height='9'
-          />
-          <rect
-            id='cr-Rectangle-2-Copy-4'
-            fill='url(#cr-linearGradient-3)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#cr-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cr-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cr-b)' d='M0 0h21v3H0z' />
+          <path fill='url(#cr-b)' d='M0 12h21v3H0z' />
+          <path fill='url(#cr-a)' d='M0 3h21v9H0z' />
+          <path fill='url(#cr-c)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

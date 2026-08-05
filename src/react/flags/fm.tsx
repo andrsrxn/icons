@@ -21,37 +21,25 @@ export const IconFlagFM: FlagIcon = ({
       <title>FM</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='fm-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='fm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='fm-linearGradient-2'>
-          <stop stopColor='#95CEF5' offset='0%' />
-          <stop stopColor='#78B3DC' offset='100%' />
+        <linearGradient id='fm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#95cef5' />
+          <stop offset='100%' stopColor='#78b3dc' />
         </linearGradient>
+        <clipPath id='fm-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='fm-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='fm-FM'>
-          <rect
-            id='fm-FlagBackground'
-            fill='url(#fm-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='fm-Mask-Copy'
-            fill='url(#fm-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#fm-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#fm-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#fm-b)' d='M0 0h21v15H0z' />
           <path
-            d='M10.5,4.31999999 L9.3244295,5.11803399 L9.72013366,3.75339393 L8.59788697,2.88196601 L10.0180161,2.83660607 L10.5,1.5 L10.9819839,2.83660607 L12.402113,2.88196601 L11.2798663,3.75339393 L11.6755705,5.11803399 L10.5,4.31999999 Z M10.5,12.32 L9.3244295,13.118034 L9.72013366,11.7533939 L8.59788697,10.881966 L10.0180161,10.8366061 L10.5,9.5 L10.9819839,10.8366061 L12.402113,10.881966 L11.2798663,11.7533939 L11.6755705,13.118034 L10.5,12.32 Z M14.5,8.31999999 L13.3244295,9.11803399 L13.7201337,7.75339393 L12.597887,6.88196601 L14.0180161,6.83660607 L14.5,5.5 L14.9819839,6.83660607 L16.402113,6.88196601 L15.2798663,7.75339393 L15.6755705,9.11803399 L14.5,8.31999999 Z M6.5,8.31999999 L5.3244295,9.11803399 L5.72013366,7.75339393 L4.59788697,6.88196601 L6.0180161,6.83660607 L6.5,5.5 L6.9819839,6.83660607 L8.40211303,6.88196601 L7.27986634,7.75339393 L7.6755705,9.11803399 L6.5,8.31999999 Z'
-            id='fm-Star-33'
-            fill='url(#fm-linearGradient-1)'
+            fill='url(#fm-a)'
+            d='m10.5 4.32-1.176.798.396-1.365-1.122-.871 1.42-.045L10.5 1.5l.482 1.337 1.42.045-1.122.871.396 1.365zm0 8-1.176.798.396-1.365-1.122-.871 1.42-.045L10.5 9.5l.482 1.337 1.42.045-1.122.871.396 1.365zm4-4-1.176.798.396-1.365-1.122-.871 1.42-.045L14.5 5.5l.482 1.337 1.42.045-1.122.871.396 1.365zm-8 0-1.176.798.396-1.365-1.122-.871 1.42-.045L6.5 5.5l.482 1.337 1.42.045-1.122.871.396 1.365z'
           />
         </g>
       </g>

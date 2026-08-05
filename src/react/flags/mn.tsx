@@ -21,61 +21,35 @@ export const IconFlagMN: FlagIcon = ({
       <title>MN</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mn-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mn-linearGradient-2'>
-          <stop stopColor='#146BBC' offset='0%' />
-          <stop stopColor='#0B5396' offset='100%' />
+        <linearGradient id='mn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#146bbc' />
+          <stop offset='100%' stopColor='#0b5396' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mn-linearGradient-3'>
-          <stop stopColor='#E43642' offset='0%' />
-          <stop stopColor='#C32A34' offset='100%' />
+        <linearGradient id='mn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e43642' />
+          <stop offset='100%' stopColor='#c32a34' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mn-linearGradient-4'>
-          <stop stopColor='#F8D246' offset='0%' />
-          <stop stopColor='#F9CE2F' offset='100%' />
+        <linearGradient id='mn-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f8d246' />
+          <stop offset='100%' stopColor='#f9ce2f' />
         </linearGradient>
+        <clipPath id='mn-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mn-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mn-MN'>
-          <rect
-            id='mn-FlagBackground'
-            fill='url(#mn-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mn-Rectangle-2-Copy'
-            fill='url(#mn-linearGradient-2)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='mn-Rectangle-2'
-            fill='url(#mn-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='mn-Rectangle-2'
-            fill='url(#mn-linearGradient-3)'
-            x='14'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#mn-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mn-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mn-b)' d='M7 0h7v15H7z' />
+          <path fill='url(#mn-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#mn-c)' d='M14 0h7v15h-7z' />
           <path
-            d='M4,9 L5,9 L5,12 L4,12 L4,9 Z M2,9 L3,9 L3,12 L2,12 L2,9 Z M3,11 L4,11 L3.5,12 L3,11 Z M3,9 L4,9 L3.5,10 L3,9 Z M3,8 L3.5,7.5 L4,8 L3,8 Z M3.5,9 C3.22385763,9 3,8.77614237 3,8.5 C3,8.22385763 3.22385763,8 3.5,8 C3.77614237,8 4,8.22385763 4,8.5 C4,8.77614237 3.77614237,9 3.5,9 Z M3.5,11 C3.22385763,11 3,10.7761424 3,10.5 C3,10.2238576 3.22385763,10 3.5,10 C3.77614237,10 4,10.2238576 4,10.5 C4,10.7761424 3.77614237,11 3.5,11 Z'
-            id='mn-Rectangle-1611'
-            fill='url(#mn-linearGradient-4)'
+            fill='url(#mn-d)'
+            d='M4 9h1v3H4zM2 9h1v3H2zm1 2h1l-.5 1zm0-2h1l-.5 1zm0-1 .5-.5.5.5zm.5 1a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

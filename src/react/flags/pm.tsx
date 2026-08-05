@@ -21,136 +21,81 @@ export const IconFlagPM: FlagIcon = ({
       <title>PM</title>
 
       <defs>
+        <linearGradient id='pm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='pm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#138e16' />
+          <stop offset='100%' stopColor='#0f7f12' />
+        </linearGradient>
+        <linearGradient id='pm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#26a7dc' />
+          <stop offset='100%' stopColor='#1b94c6' />
+        </linearGradient>
+        <linearGradient id='pm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fbcd3f' />
+          <stop offset='100%' stopColor='#ffce2f' />
+        </linearGradient>
+        <linearGradient id='pm-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f03633' />
+          <stop offset='100%' stopColor='#d82a28' />
+        </linearGradient>
+        <linearGradient id='pm-g' x1='82.842%' x2='20.426%' y1='18.137%' y2='78.479%'>
+          <stop offset='0%' stopColor='#2aa854' />
+          <stop offset='100%' stopColor='#219447' />
+        </linearGradient>
+        <linearGradient id='pm-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient id='pm-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#d7181d' />
+          <stop offset='100%' stopColor='#c60e13' />
+        </linearGradient>
+        <linearGradient id='pm-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fbcd3f' />
+          <stop offset='100%' stopColor='#fecb2f' />
+        </linearGradient>
+        <path id='pm-e' d='M0 0h7v5H0z' />
         <clipPath id='pm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-2'>
-          <stop stopColor='#138E16' offset='0%' />
-          <stop stopColor='#0F7F12' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-3'>
-          <stop stopColor='#26A7DC' offset='0%' />
-          <stop stopColor='#1B94C6' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-4'>
-          <stop stopColor='#FBCD3F' offset='0%' />
-          <stop stopColor='#FFCE2F' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-5'>
-          <stop stopColor='#F03633' offset='0%' />
-          <stop stopColor='#D82A28' offset='100%' />
-        </linearGradient>
-        <rect id='pm-path-6' x='0' y='0' width='7' height='5' />
-        <linearGradient
-          x1='82.8416049%'
-          y1='18.1366533%'
-          x2='20.4259648%'
-          y2='78.4787716%'
-          id='pm-linearGradient-8'>
-          <stop stopColor='#2AA854' offset='0%' />
-          <stop stopColor='#219447' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-9'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-10'>
-          <stop stopColor='#D7181D' offset='0%' />
-          <stop stopColor='#C60E13' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pm-linearGradient-11'>
-          <stop stopColor='#FBCD3F' offset='0%' />
-          <stop stopColor='#FECB2F' offset='100%' />
-        </linearGradient>
       </defs>
-      <g
-        clipPath='url(#pm-clip)'
-        id='pm-Symbols'
-        stroke='none'
-        strokeWidth='1'
-        fill='none'
-        fillRule='evenodd'>
-        <g id='pm-PM'>
-          <rect
-            id='pm-FlagBackground'
-            fill='url(#pm-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pm-Rectangle-2'
-            fill='url(#pm-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <polygon
-            id='pm-Rectangle-2'
-            fill='url(#pm-linearGradient-3)'
-            points='0 15 7 15 21 15 21 0 7 0 0 0'
+      <g clipPath='url(#pm-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pm-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pm-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#pm-c)' d='M0 15h21V0H0z' />
+          <path
+            fill='url(#pm-d)'
+            d='M17.326 6.429C18.353 6.176 19 6.109 19 7c0 1.657-2.239 3-5 3S9 8.657 9 7c0-.89.647-.824 1.674-.571a4 4 0 0 1-.161-.563c-.287-1.35.137-2.584.947-2.757.81-.172 1.7.783 1.987 2.134.136.636.113 1.247-.034 1.733a7.4 7.4 0 0 0 1.174 0c-.147-.486-.17-1.097-.034-1.733.287-1.35 1.176-2.306 1.987-2.134.81.173 1.234 1.407.947 2.757a4 4 0 0 1-.161.563'
           />
           <path
-            d='M17.3255147,6.42868342 C18.3529675,6.17626317 19,6.10923857 19,7 C19,8.65685425 16.7614237,10 14,10 C11.2385763,10 9,8.65685425 9,7 C9,6.10923857 9.64703249,6.17626317 10.6744853,6.42868342 C10.6092993,6.25116276 10.5547704,6.06301595 10.5129994,5.86649853 C10.2259332,4.51595853 10.6501175,3.28150168 11.4604415,3.109262 C12.2707656,2.93702231 13.160376,3.89222345 13.4474422,5.24276346 C13.5827623,5.8793947 13.5600365,6.49023126 13.413319,6.97616846 C13.6057537,6.99144098 13.8015264,7 14,7 C14.1984736,7 14.3942463,6.99144098 14.586681,6.97616846 C14.4399635,6.49023126 14.4172377,5.8793947 14.5525578,5.24276346 C14.839624,3.89222345 15.7292344,2.93702231 16.5395585,3.109262 C17.3498825,3.28150168 17.7740668,4.51595853 17.4870006,5.86649853 C17.4452296,6.06301595 17.3907007,6.25116276 17.3255147,6.42868342 L17.3255147,6.42868342 Z'
-            id='pm-Combined-Shape'
-            fill='url(#pm-linearGradient-4)'
-          />
-          <path
-            d='M15.7763932,12.9472136 C15.9171569,13.0175955 16.0828431,13.0175955 16.2236068,12.9472136 L18.2236068,11.9472136 C18.470596,11.823719 18.5707082,11.5233825 18.4472136,11.2763932 C18.323719,11.029404 18.0233825,10.9292918 17.7763932,11.0527864 L16,11.940983 L14.2236068,11.0527864 C14.0828431,10.9824045 13.9171569,10.9824045 13.7763932,11.0527864 L12,11.940983 L10.2236068,11.0527864 C9.97661755,10.9292918 9.67628103,11.029404 9.5527864,11.2763932 C9.42929178,11.5233825 9.52940395,11.823719 9.7763932,11.9472136 L11.7763932,12.9472136 C11.9171569,13.0175955 12.0828431,13.0175955 12.2236068,12.9472136 L14,12.059017 L15.7763932,12.9472136 Z'
-            id='pm-Line'
-            fill='url(#pm-linearGradient-1)'
+            fill='url(#pm-a)'
             fillRule='nonzero'
+            d='M15.776 12.947a.5.5 0 0 0 .448 0l2-1a.5.5 0 0 0-.448-.894L16 11.94l-1.776-.888a.5.5 0 0 0-.448 0L12 11.94l-1.776-.888a.5.5 0 0 0-.448.894l2 1a.5.5 0 0 0 .448 0L14 12.06z'
           />
-          <g id='pm-Group'>
-            <mask id='pm-mask-7' fill='white'>
-              <use xlinkHref='#pm-path-6' />
-            </mask>
-            <use id='pm-Rectangle-2' fill='url(#pm-linearGradient-5)' xlinkHref='#pm-path-6' />
-            <path
-              d='M4,2 L4,-2 L3,-2 L3,2 L-1,2 L-1,3 L3,3 L3,7 L4,7 L4,3 L8,3 L8,2 L4,2 Z'
-              id='pm-Combined-Shape'
-              fill='url(#pm-linearGradient-8)'
-              mask='url(#pm-mask-7)'
-              transform='translate(3.500000, 2.500000) rotate(-45.000000) translate(-3.500000, -2.500000) '
-            />
-            <path
-              d='M4,2 L4,-1 L3,-1 L3,2 L0,2 L0,3 L3,3 L3,6 L4,6 L4,3 L7,3 L7,2 L4,2 Z'
-              id='pm-Combined-Shape-Copy'
-              fill='url(#pm-linearGradient-1)'
-              mask='url(#pm-mask-7)'
-            />
-          </g>
-          <rect
-            id='pm-Rectangle-2-Copy'
-            fill='url(#pm-linearGradient-1)'
-            x='0'
-            y='5'
-            width='7'
-            height='5'
-          />
+          <mask id='pm-h' fill='#fff'>
+            <use xlinkHref='#pm-e' />
+          </mask>
+          <use xlinkHref='#pm-e' fill='url(#pm-f)' />
           <path
-            d='M1.5,7 C1.22385763,7 1,6.77614237 1,6.5 C1,6.22385763 1.22385763,6 1.5,6 C1.77614237,6 2,6.22385763 2,6.5 C2,6.77614237 1.77614237,7 1.5,7 Z M3.5,7 C3.22385763,7 3,6.77614237 3,6.5 C3,6.22385763 3.22385763,6 3.5,6 C3.77614237,6 4,6.22385763 4,6.5 C4,6.77614237 3.77614237,7 3.5,7 Z M5.5,7 C5.22385763,7 5,6.77614237 5,6.5 C5,6.22385763 5.22385763,6 5.5,6 C5.77614237,6 6,6.22385763 6,6.5 C6,6.77614237 5.77614237,7 5.5,7 Z M4.5,9 C4.22385763,9 4,8.77614237 4,8.5 C4,8.22385763 4.22385763,8 4.5,8 C4.77614237,8 5,8.22385763 5,8.5 C5,8.77614237 4.77614237,9 4.5,9 Z M2.5,9 C2.22385763,9 2,8.77614237 2,8.5 C2,8.22385763 2.22385763,8 2.5,8 C2.77614237,8 3,8.22385763 3,8.5 C3,8.77614237 2.77614237,9 2.5,9 Z'
-            id='pm-Combined-Shape'
-            fill='url(#pm-linearGradient-9)'
+            fill='url(#pm-g)'
+            d='M4 2v-4H3v4h-4v1h4v4h1V3h4V2z'
+            mask='url(#pm-h)'
+            transform='rotate(-45 3.5 2.5)'
           />
-          <rect
-            id='pm-Rectangle-2-Copy-2'
-            fill='url(#pm-linearGradient-10)'
-            x='0'
-            y='10'
-            width='7'
-            height='5'
-          />
+          <path fill='url(#pm-a)' d='M4 2v-3H3v3H0v1h3v3h1V3h3V2z' mask='url(#pm-h)' />
+          <path fill='url(#pm-a)' d='M0 5h7v5H0z' />
           <path
-            d='M3.5,12 C2.11928813,12 1,11.7761424 1,11.5 C1,11.2238576 2.11928813,11 3.5,11 C4.88071187,11 6,11.2238576 6,11.5 C6,11.7761424 4.88071187,12 3.5,12 Z M3.5,14 C2.11928813,14 1,13.7761424 1,13.5 C1,13.2238576 2.11928813,13 3.5,13 C4.88071187,13 6,13.2238576 6,13.5 C6,13.7761424 4.88071187,14 3.5,14 Z'
-            id='pm-Combined-Shape'
-            fill='url(#pm-linearGradient-11)'
+            fill='url(#pm-i)'
+            d='M1.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-1 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+          />
+          <path fill='url(#pm-j)' d='M0 10h7v5H0z' />
+          <path
+            fill='url(#pm-k)'
+            d='M3.5 12c-1.38 0-2.5-.224-2.5-.5s1.12-.5 2.5-.5 2.5.224 2.5.5-1.12.5-2.5.5m0 2c-1.38 0-2.5-.224-2.5-.5s1.12-.5 2.5-.5 2.5.224 2.5.5-1.12.5-2.5.5'
           />
         </g>
       </g>

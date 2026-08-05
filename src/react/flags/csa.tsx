@@ -11,7 +11,7 @@ export const IconFlagCSA: FlagIcon = ({
     <svg
       width={width}
       height={height}
-      viewBox='0 -4 28 28'
+      viewBox='0 0 21 15'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -20,33 +20,25 @@ export const IconFlagCSA: FlagIcon = ({
       {...props}>
       <title>CSA</title>
 
-      <g clipPath='url(#clip0_503_3400)'>
-        <rect width='28' height='20' fill='#fff' rx='2' />
-        <mask
-          id='mask0_503_3400'
-          width='28'
-          height='20'
-          x='0'
-          y='0'
-          maskUnits='userSpaceOnUse'
-          style={{ maskType: 'alpha' }}>
-          <rect width='28' height='20' fill='#fff' rx='2' />
-        </mask>
-        <g mask='url(#mask0_503_3400)'>
-          <path fill='#19bfbf' d='M0 0h28v20H0z' />
+      <defs>
+        <clipPath id='csa-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
+        <clipPath id='csa-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
+      </defs>
+      <g clipPath='url(#csa-clip)'>
+        <g clipPath='url(#csa-a)'>
+          <path fill='#19bfbf' d='M0 0h21v15H0z' />
           <path
             fill='#fff'
             fillRule='evenodd'
-            d='M10 16.041q0-.04.01-.08l.657-2.628.643-2.572a.33.33 0 0 0-.007-.186l-.593-1.777a.33.33 0 0 0-.167-.193l-1.025-.513a.33.33 0 0 1-.185-.298V5.412q0-.079.036-.15L10 4l.575-1.15a.33.33 0 0 1 .298-.183h3.46c.184 0 .334.149.334.333v.667c0 .184.149.333.333.333h.667c.184 0 .333.15.333.333v.794c0 .127.071.242.184.298l2.298 1.15a.33.33 0 0 1 .185.298V7.92a.3.3 0 0 1-.036.15l-.591 1.183a.33.33 0 0 1-.114.128l-1.852 1.236a.33.33 0 0 0-.114.128l-1.254 2.508a.33.33 0 0 1-.113.128l-1.853 1.236a.33.33 0 0 0-.113.128l-1.202 2.403a.33.33 0 0 1-.298.184h-.794A.333.333 0 0 1 10 17z'
+            d='M8.102 12.314q0-.03.008-.06l.975-3.9a.25.25 0 0 0-.005-.14l-.445-1.333a.25.25 0 0 0-.125-.144l-.77-.385a.25.25 0 0 1-.138-.224V4.342q0-.06.027-.113l.905-1.809a.25.25 0 0 1 .223-.137h2.595a.25.25 0 0 1 .25.25v.5c0 .138.112.25.25.25h.5a.25.25 0 0 1 .25.25v.595c0 .095.054.182.138.224l1.724.862a.25.25 0 0 1 .139.224v.785q0 .06-.027.112l-.444.888a.25.25 0 0 1-.085.096l-1.39.927a.25.25 0 0 0-.085.096l-.94 1.88a.25.25 0 0 1-.085.097l-1.39.927a.25.25 0 0 0-.084.096l-.902 1.802a.25.25 0 0 1-.223.138h-.596a.25.25 0 0 1-.25-.249z'
             clipRule='evenodd'
           />
         </g>
       </g>
-      <defs>
-        <clipPath id='clip0_503_3400'>
-          <rect width='28' height='20' fill='#fff' rx='2' />
-        </clipPath>
-      </defs>
     </svg>
   )
 }

@@ -21,46 +21,28 @@ export const IconFlagCI: FlagIcon = ({
       <title>CI</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ci-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ci-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ci-linearGradient-2'>
-          <stop stopColor='#1DC87D' offset='0%' />
-          <stop stopColor='#169E62' offset='100%' />
+        <linearGradient id='ci-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1dc87d' />
+          <stop offset='100%' stopColor='#169e62' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ci-linearGradient-3'>
-          <stop stopColor='#F89242' offset='0%' />
-          <stop stopColor='#F67F22' offset='100%' />
+        <linearGradient id='ci-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f89242' />
+          <stop offset='100%' stopColor='#f67f22' />
         </linearGradient>
+        <clipPath id='ci-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ci-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ci-CI'>
-          <rect
-            id='ci-FlagBackground'
-            fill='url(#ci-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='ci-Mask' fill='url(#ci-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='ci-Rectangle-2'
-            fill='url(#ci-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='ci-Rectangle-2-Copy'
-            fill='url(#ci-linearGradient-1)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#ci-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ci-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ci-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#ci-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#ci-a)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

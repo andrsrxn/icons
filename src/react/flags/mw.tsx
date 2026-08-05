@@ -21,58 +21,33 @@ export const IconFlagMW: FlagIcon = ({
       <title>MW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mw-linearGradient-2'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='mw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mw-linearGradient-3'>
-          <stop stopColor='#E42038' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='mw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e42038' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mw-linearGradient-4'>
-          <stop stopColor='#47B849' offset='0%' />
-          <stop stopColor='#399E3B' offset='100%' />
+        <linearGradient id='mw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#47b849' />
+          <stop offset='100%' stopColor='#399e3b' />
         </linearGradient>
+        <clipPath id='mw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mw-MW'>
-          <rect
-            id='mw-FlagBackground'
-            fill='url(#mw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mw-Rectangle-2'
-            fill='url(#mw-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <circle id='mw-Oval-200' fill='url(#mw-linearGradient-3)' cx='10.5' cy='5.5' r='3.5' />
-          <rect
-            id='mw-Rectangle-2'
-            fill='url(#mw-linearGradient-3)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='mw-Rectangle-2'
-            fill='url(#mw-linearGradient-4)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#mw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mw-b)' d='M0 0h21v5H0z' />
+          <circle cx='10.5' cy='5.5' r='3.5' fill='url(#mw-c)' />
+          <path fill='url(#mw-c)' d='M0 5h21v5H0z' />
+          <path fill='url(#mw-d)' d='M0 10h21v5H0z' />
         </g>
       </g>
     </svg>

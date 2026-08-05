@@ -21,26 +21,22 @@ export const IconFlagJP: FlagIcon = ({
       <title>JP</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jp-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='jp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jp-linearGradient-2'>
-          <stop stopColor='#D81441' offset='0%' />
-          <stop stopColor='#BB0831' offset='100%' />
+        <linearGradient id='jp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#d81441' />
+          <stop offset='100%' stopColor='#bb0831' />
         </linearGradient>
+        <clipPath id='jp-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='jp-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='jp-JP'>
-          <rect
-            id='jp-FlagBackground'
-            fill='url(#jp-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <circle id='jp-Oval-9' fill='url(#jp-linearGradient-2)' cx='10.5' cy='7.5' r='4.5' />
+      <g clipPath='url(#jp-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#jp-a)' d='M0 0h21v15H0z' />
+          <circle cx='10.5' cy='7.5' r='4.5' fill='url(#jp-b)' />
         </g>
       </g>
     </svg>

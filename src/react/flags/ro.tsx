@@ -21,50 +21,32 @@ export const IconFlagRO: FlagIcon = ({
       <title>RO</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ro-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ro-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ro-linearGradient-2'>
-          <stop stopColor='#E5253D' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='ro-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e5253d' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ro-linearGradient-3'>
-          <stop stopColor='#0A3D9C' offset='0%' />
-          <stop stopColor='#042E7D' offset='100%' />
+        <linearGradient id='ro-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0a3d9c' />
+          <stop offset='100%' stopColor='#042e7d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ro-linearGradient-4'>
-          <stop stopColor='#FFD955' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='ro-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd955' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
+        <clipPath id='ro-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ro-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ro-RO'>
-          <rect
-            id='ro-FlagBackground'
-            fill='url(#ro-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='ro-Mask' fill='url(#ro-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='ro-Rectangle-2'
-            fill='url(#ro-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='ro-Rectangle-2-Copy'
-            fill='url(#ro-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#ro-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ro-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ro-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#ro-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#ro-d)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

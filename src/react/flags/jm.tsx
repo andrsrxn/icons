@@ -21,65 +21,35 @@ export const IconFlagJM: FlagIcon = ({
       <title>JM</title>
 
       <defs>
+        <linearGradient id='jm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='jm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1dbe4f' />
+          <stop offset='100%' stopColor='#159b3f' />
+        </linearGradient>
+        <linearGradient id='jm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient id='jm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd646' />
+          <stop offset='100%' stopColor='#fed02f' />
+        </linearGradient>
         <clipPath id='jm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jm-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jm-linearGradient-2'>
-          <stop stopColor='#1DBE4F' offset='0%' />
-          <stop stopColor='#159B3F' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jm-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='jm-linearGradient-4'>
-          <stop stopColor='#FFD646' offset='0%' />
-          <stop stopColor='#FED02F' offset='100%' />
-        </linearGradient>
       </defs>
-      <g
-        clipPath='url(#jm-clip)'
-        id='jm-Symbols'
-        stroke='none'
-        strokeWidth='1'
-        fill='none'
-        fillRule='evenodd'>
-        <g id='jm-JM'>
-          <rect
-            id='jm-FlagBackground'
-            fill='url(#jm-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='jm-Mask-Copy'
-            fill='url(#jm-linearGradient-2)'
-            x='0.000237781813'
-            y='-0.00266538434'
-            width='21'
-            height='15'
-          />
-          <polygon
-            id='jm-Rectangle-253'
-            fill='url(#jm-linearGradient-3)'
-            points='0.000237781813 -0.00266538434 9.00023778 7.49733462 0.000237781813 14.9973346'
-          />
-          <polygon
-            id='jm-Rectangle-253'
-            fill='url(#jm-linearGradient-3)'
-            transform='translate(16.500238, 7.497335) scale(-1, 1) translate(-16.500238, -7.497335) '
-            points='12.0002378 -0.00266538434 21.0002378 7.49733462 12.0002378 14.9973346'
-          />
+      <g clipPath='url(#jm-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#jm-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#jm-b)' d='M0-.003h21v15H0z' />
+          <path fill='url(#jm-c)' d='m0-.003 9 7.5-9 7.5z' />
+          <path fill='url(#jm-c)' d='m12-.003 9 7.5-9 7.5z' transform='matrix(-1 0 0 1 33 0)' />
           <path
-            d='M10.5002378,6.29111667 L-0.961614117,-1.44000006 L-2.07999992,0.218075088 L8.71194613,7.49733462 L-2.07999992,14.7765941 L-0.961614117,16.4346693 L10.5002378,8.70355256 L21.9620897,16.4346693 L23.0804755,14.7765941 L12.2885294,7.49733462 L23.0804755,0.218075088 L21.9620897,-1.44000006 L10.5002378,6.29111667 Z'
-            id='jm-Rectangle-2'
-            fill='url(#jm-linearGradient-4)'
+            fill='url(#jm-d)'
+            d='M10.5 6.291-.962-1.44-2.08.218l10.792 7.28-10.792 7.279 1.118 1.658L10.5 8.704l11.462 7.73 1.118-1.657-10.791-7.28L23.08.218 21.962-1.44z'
           />
         </g>
       </g>

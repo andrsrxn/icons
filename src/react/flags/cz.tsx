@@ -21,46 +21,28 @@ export const IconFlagCZ: FlagIcon = ({
       <title>CZ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cz-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cz-linearGradient-2'>
-          <stop stopColor='#E8252A' offset='0%' />
-          <stop stopColor='#D7151A' offset='100%' />
+        <linearGradient id='cz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e8252a' />
+          <stop offset='100%' stopColor='#d7151a' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cz-linearGradient-3'>
-          <stop stopColor='#17579E' offset='0%' />
-          <stop stopColor='#10457F' offset='100%' />
+        <linearGradient id='cz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#17579e' />
+          <stop offset='100%' stopColor='#10457f' />
         </linearGradient>
+        <clipPath id='cz-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cz-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cz-CZ'>
-          <rect
-            id='cz-FlagBackground'
-            fill='url(#cz-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='cz-Rectangle-2'
-            fill='url(#cz-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='cz-Rectangle-2'
-            fill='url(#cz-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <polygon id='cz-Rectangle-83' fill='url(#cz-linearGradient-3)' points='0 0 10 7.5 0 15' />
+      <g clipPath='url(#cz-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cz-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cz-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#cz-a)' d='M0 0h21v7H0z' />
+          <path fill='url(#cz-c)' d='m0 0 10 7.5L0 15z' />
         </g>
       </g>
     </svg>

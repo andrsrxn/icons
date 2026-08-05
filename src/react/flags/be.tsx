@@ -21,50 +21,32 @@ export const IconFlagBE: FlagIcon = ({
       <title>BE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='be-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='be-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='be-linearGradient-2'>
-          <stop stopColor='#FF4453' offset='0%' />
-          <stop stopColor='#EE2A39' offset='100%' />
+        <linearGradient id='be-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff4453' />
+          <stop offset='100%' stopColor='#ee2a39' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='be-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='be-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='be-linearGradient-4'>
-          <stop stopColor='#FFCF3C' offset='0%' />
-          <stop stopColor='#FECB2F' offset='100%' />
+        <linearGradient id='be-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffcf3c' />
+          <stop offset='100%' stopColor='#fecb2f' />
         </linearGradient>
+        <clipPath id='be-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='be-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='be-BE'>
-          <rect
-            id='be-FlagBackground'
-            fill='url(#be-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='be-Mask' fill='url(#be-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='be-Rectangle-2'
-            fill='url(#be-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='be-Rectangle-2-Copy'
-            fill='url(#be-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#be-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#be-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#be-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#be-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#be-d)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

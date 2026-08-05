@@ -21,50 +21,32 @@ export const IconFlagML: FlagIcon = ({
       <title>ML</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ml-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ml-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ml-linearGradient-2'>
-          <stop stopColor='#E2233A' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='ml-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e2233a' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ml-linearGradient-3'>
-          <stop stopColor='#2ECB4D' offset='0%' />
-          <stop stopColor='#24B441' offset='100%' />
+        <linearGradient id='ml-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2ecb4d' />
+          <stop offset='100%' stopColor='#24b441' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ml-linearGradient-4'>
-          <stop stopColor='#FFD749' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='ml-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd749' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
+        <clipPath id='ml-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ml-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ml-ML'>
-          <rect
-            id='ml-FlagBackground'
-            fill='url(#ml-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='ml-Mask' fill='url(#ml-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='ml-Rectangle-2'
-            fill='url(#ml-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='ml-Rectangle-2-Copy'
-            fill='url(#ml-linearGradient-4)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#ml-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ml-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ml-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#ml-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#ml-d)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

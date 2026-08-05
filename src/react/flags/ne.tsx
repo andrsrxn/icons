@@ -21,58 +21,33 @@ export const IconFlagNE: FlagIcon = ({
       <title>NE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ne-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ne-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ne-linearGradient-2'>
-          <stop stopColor='#F0642F' offset='0%' />
-          <stop stopColor='#DF531D' offset='100%' />
+        <linearGradient id='ne-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f0642f' />
+          <stop offset='100%' stopColor='#df531d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ne-linearGradient-3'>
-          <stop stopColor='#2DCC45' offset='0%' />
-          <stop stopColor='#1FAF35' offset='100%' />
+        <linearGradient id='ne-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2dcc45' />
+          <stop offset='100%' stopColor='#1faf35' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ne-linearGradient-4'>
-          <stop stopColor='#E85C27' offset='0%' />
-          <stop stopColor='#DF531D' offset='100%' />
+        <linearGradient id='ne-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e85c27' />
+          <stop offset='100%' stopColor='#df531d' />
         </linearGradient>
+        <clipPath id='ne-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ne-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ne-NE'>
-          <rect
-            id='ne-FlagBackground'
-            fill='url(#ne-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ne-Rectangle-2'
-            fill='url(#ne-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ne-Rectangle-2'
-            fill='url(#ne-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ne-Rectangle-2-Copy-4'
-            fill='url(#ne-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <circle id='ne-Oval-12' fill='url(#ne-linearGradient-4)' cx='10.5' cy='7.5' r='2' />
+      <g clipPath='url(#ne-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ne-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ne-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#ne-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#ne-a)' d='M0 5h21v5H0z' />
+          <circle cx='10.5' cy='7.5' r='2' fill='url(#ne-d)' />
         </g>
       </g>
     </svg>

@@ -21,57 +21,32 @@ export const IconFlagBO: FlagIcon = ({
       <title>BO</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bo-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bo-linearGradient-2'>
-          <stop stopColor='#058C3F' offset='0%' />
-          <stop stopColor='#007A34' offset='100%' />
+        <linearGradient id='bo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#058c3f' />
+          <stop offset='100%' stopColor='#007a34' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bo-linearGradient-3'>
-          <stop stopColor='#E63426' offset='0%' />
-          <stop stopColor='#D52B1E' offset='100%' />
+        <linearGradient id='bo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e63426' />
+          <stop offset='100%' stopColor='#d52b1e' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bo-linearGradient-4'>
-          <stop stopColor='#FFEB1F' offset='0%' />
-          <stop stopColor='#FAE400' offset='100%' />
+        <linearGradient id='bo-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffeb1f' />
+          <stop offset='100%' stopColor='#fae400' />
         </linearGradient>
+        <clipPath id='bo-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bo-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bo-BO'>
-          <rect
-            id='bo-FlagBackground'
-            fill='url(#bo-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bo-Rectangle-2'
-            fill='url(#bo-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bo-Rectangle-2'
-            fill='url(#bo-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bo-Rectangle-2'
-            fill='url(#bo-linearGradient-4)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#bo-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bo-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bo-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#bo-c)' d='M0 0h21v5H0z' />
+          <path fill='url(#bo-d)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

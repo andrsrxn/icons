@@ -21,63 +21,44 @@ export const IconFlagER: FlagIcon = ({
       <title>ER</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='er-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='er-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='er-linearGradient-2'>
-          <stop stopColor='#29C53F' offset='0%' />
-          <stop stopColor='#21AC35' offset='100%' />
+        <linearGradient id='er-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#29c53f' />
+          <stop offset='100%' stopColor='#21ac35' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='er-linearGradient-3'>
-          <stop stopColor='#579DED' offset='0%' />
-          <stop stopColor='#458BDB' offset='100%' />
+        <linearGradient id='er-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#579ded' />
+          <stop offset='100%' stopColor='#458bdb' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='er-linearGradient-4'>
-          <stop stopColor='#F42D56' offset='0%' />
-          <stop stopColor='#E9103D' offset='100%' />
+        <linearGradient id='er-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f42d56' />
+          <stop offset='100%' stopColor='#e9103d' />
         </linearGradient>
+        <clipPath id='er-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='er-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='er-ER'>
-          <rect
-            id='er-FlagBackground'
-            fill='url(#er-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='er-Rectangle-2'
-            fill='url(#er-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='7.5'
-          />
-          <rect
-            id='er-Rectangle-2'
-            fill='url(#er-linearGradient-3)'
-            x='0'
-            y='7.5'
-            width='21'
-            height='8'
-          />
-          <polygon id='er-Rectangle-2' fill='url(#er-linearGradient-4)' points='0 15 21 7.5 0 0' />
+      <g clipPath='url(#er-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#er-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#er-b)' d='M0 0h21v7.5H0z' />
+          <path fill='url(#er-c)' d='M0 7.5h21v8H0z' />
+          <path fill='url(#er-d)' d='m0 15 21-7.5L0 0z' />
           <path
-            d='M6.5,10 C7.88071187,10 9,8.88071187 9,7.5 C9,6.11928813 7.88071187,5 6.5,5 C5.11928813,5 4,6.11928813 4,7.5 C4,8.88071187 5.11928813,10 6.5,10 Z M6.5,11 C4.56700338,11 3,9.43299662 3,7.5 C3,5.56700338 4.56700338,4 6.5,4 C8.43299662,4 10,5.56700338 10,7.5 C10,9.43299662 8.43299662,11 6.5,11 Z'
-            id='er-Oval-87'
-            fill='#FFC63C'
+            fill='#ffc63c'
             fillRule='nonzero'
+            d='M6.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m0 1a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7'
           />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='6' cy='6.5' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='7' cy='7' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='6.5' cy='6' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='6' cy='7.5' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='7' cy='8' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='6' cy='8.5' r='1' />
-          <circle id='er-Oval-88' fill='#FFC63C' cx='7' cy='9' r='1' />
+          <circle cx='6' cy='6.5' r='1' fill='#ffc63c' />
+          <circle cx='7' cy='7' r='1' fill='#ffc63c' />
+          <circle cx='6.5' cy='6' r='1' fill='#ffc63c' />
+          <circle cx='6' cy='7.5' r='1' fill='#ffc63c' />
+          <circle cx='7' cy='8' r='1' fill='#ffc63c' />
+          <circle cx='6' cy='8.5' r='1' fill='#ffc63c' />
+          <circle cx='7' cy='9' r='1' fill='#ffc63c' />
         </g>
       </g>
     </svg>

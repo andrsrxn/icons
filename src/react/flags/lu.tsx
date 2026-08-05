@@ -21,53 +21,28 @@ export const IconFlagLU: FlagIcon = ({
       <title>LU</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lu-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='lu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lu-linearGradient-2'>
-          <stop stopColor='#F14455' offset='0%' />
-          <stop stopColor='#EB2D3F' offset='100%' />
+        <linearGradient id='lu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f14455' />
+          <stop offset='100%' stopColor='#eb2d3f' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='lu-linearGradient-3'>
-          <stop stopColor='#29B4EE' offset='0%' />
-          <stop stopColor='#1AA3DC' offset='100%' />
+        <linearGradient id='lu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#29b4ee' />
+          <stop offset='100%' stopColor='#1aa3dc' />
         </linearGradient>
+        <clipPath id='lu-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='lu-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='lu-LU'>
-          <rect
-            id='lu-FlagBackground'
-            fill='url(#lu-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='lu-Rectangle-2'
-            fill='url(#lu-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='lu-Rectangle-2'
-            fill='url(#lu-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='lu-Rectangle-2'
-            fill='url(#lu-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#lu-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#lu-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#lu-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#lu-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#lu-a)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

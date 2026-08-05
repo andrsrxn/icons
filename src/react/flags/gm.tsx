@@ -21,65 +21,33 @@ export const IconFlagGM: FlagIcon = ({
       <title>GM</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gm-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='gm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gm-linearGradient-2'>
-          <stop stopColor='#DF2237' offset='0%' />
-          <stop stopColor='#CE1126' offset='100%' />
+        <linearGradient id='gm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#df2237' />
+          <stop offset='100%' stopColor='#ce1126' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gm-linearGradient-3'>
-          <stop stopColor='#4B9334' offset='0%' />
-          <stop stopColor='#3B7828' offset='100%' />
+        <linearGradient id='gm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#4b9334' />
+          <stop offset='100%' stopColor='#3b7828' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='gm-linearGradient-4'>
-          <stop stopColor='#1526A7' offset='0%' />
-          <stop stopColor='#0C1B8D' offset='100%' />
+        <linearGradient id='gm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1526a7' />
+          <stop offset='100%' stopColor='#0c1b8d' />
         </linearGradient>
+        <clipPath id='gm-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='gm-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='gm-GM'>
-          <rect
-            id='gm-FlagBackground'
-            fill='url(#gm-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='gm-Rectangle-2'
-            fill='url(#gm-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='gm-Rectangle-2'
-            fill='url(#gm-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='gm-Rectangle-2'
-            fill='url(#gm-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='gm-Rectangle-2-Copy-4'
-            fill='url(#gm-linearGradient-4)'
-            x='0'
-            y='6'
-            width='21'
-            height='3'
-          />
+      <g clipPath='url(#gm-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#gm-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#gm-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#gm-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#gm-a)' d='M0 5h21v5H0z' />
+          <path fill='url(#gm-d)' d='M0 6h21v3H0z' />
         </g>
       </g>
     </svg>

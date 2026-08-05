@@ -21,61 +21,29 @@ export const IconFlagBW: FlagIcon = ({
       <title>BW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bw-linearGradient-2'>
-          <stop stopColor='#8BBDEA' offset='0%' />
-          <stop stopColor='#78ABDA' offset='100%' />
+        <linearGradient id='bw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#8bbdea' />
+          <stop offset='100%' stopColor='#78abda' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bw-linearGradient-3'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='bw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
+        <clipPath id='bw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bw-BW'>
-          <rect
-            id='bw-FlagBackground'
-            fill='url(#bw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bw-Rectangle-2'
-            fill='url(#bw-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bw-Rectangle-2'
-            fill='url(#bw-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bw-Rectangle-2'
-            fill='url(#bw-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='bw-Rectangle-2-Copy-4'
-            fill='url(#bw-linearGradient-3)'
-            x='0'
-            y='6'
-            width='21'
-            height='3'
-          />
+      <g clipPath='url(#bw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bw-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#bw-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#bw-a)' d='M0 5h21v5H0z' />
+          <path fill='url(#bw-c)' d='M0 6h21v3H0z' />
         </g>
       </g>
     </svg>

@@ -21,71 +21,45 @@ export const IconFlagET: FlagIcon = ({
       <title>ET</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='et-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-2'>
-          <stop stopColor='#20AA46' offset='0%' />
-          <stop stopColor='#168835' offset='100%' />
+        <linearGradient id='et-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#20aa46' />
+          <stop offset='100%' stopColor='#168835' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-3'>
-          <stop stopColor='#E92F3B' offset='0%' />
-          <stop stopColor='#D81824' offset='100%' />
+        <linearGradient id='et-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e92f3b' />
+          <stop offset='100%' stopColor='#d81824' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-4'>
-          <stop stopColor='#FADF50' offset='0%' />
-          <stop stopColor='#FCDC34' offset='100%' />
+        <linearGradient id='et-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fadf50' />
+          <stop offset='100%' stopColor='#fcdc34' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-5'>
-          <stop stopColor='#205CCA' offset='0%' />
-          <stop stopColor='#154BAD' offset='100%' />
+        <linearGradient id='et-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#205cca' />
+          <stop offset='100%' stopColor='#154bad' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='et-linearGradient-6'>
-          <stop stopColor='#FFDB3D' offset='0%' />
-          <stop stopColor='#FDD420' offset='100%' />
+        <linearGradient id='et-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffdb3d' />
+          <stop offset='100%' stopColor='#fdd420' />
         </linearGradient>
+        <clipPath id='et-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='et-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='et-ET'>
-          <rect
-            id='et-FlagBackground'
-            fill='url(#et-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='et-Rectangle-2'
-            fill='url(#et-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='et-Rectangle-2'
-            fill='url(#et-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='et-Rectangle-2'
-            fill='url(#et-linearGradient-4)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <circle id='et-Oval-95' fill='url(#et-linearGradient-5)' cx='10.5' cy='7.5' r='3.5' />
+      <g clipPath='url(#et-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#et-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#et-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#et-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#et-d)' d='M0 5h21v5H0z' />
+          <circle cx='10.5' cy='7.5' r='3.5' fill='url(#et-e)' />
           <path
-            d='M10.5,8.47500004 L9.03053687,9.52254249 L9.57271986,7.80129158 L8.12235871,6.72745751 L9.92690936,6.7112084 L10.5,5 L11.0730906,6.7112084 L12.8776413,6.72745751 L11.4272801,7.80129158 L11.9694631,9.52254249 L10.5,8.47500004 Z M10.5,7.86095816 L11.0440151,8.2487725 L10.8432916,7.61154221 L11.3802349,7.21399436 L10.7121659,7.20797871 L10.5,6.57446629 L10.2878341,7.20797871 L9.61976514,7.21399436 L10.1567084,7.61154221 L9.95598494,8.2487725 L10.5,7.86095816 Z'
-            id='et-Star-8'
-            fill='url(#et-linearGradient-6)'
+            fill='url(#et-f)'
             fillRule='nonzero'
+            d='M10.5 8.475 9.03 9.523 9.574 7.8l-1.45-1.074 1.804-.016L10.5 5l.573 1.711 1.805.016-1.45 1.074.541 1.722zm0-.614.544.388-.2-.637.536-.398-.668-.006-.212-.634-.212.634-.668.006.537.398-.201.637z'
           />
         </g>
       </g>

@@ -21,57 +21,32 @@ export const IconFlagGA: FlagIcon = ({
       <title>GA</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ga-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ga-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ga-linearGradient-2'>
-          <stop stopColor='#09B470' offset='0%' />
-          <stop stopColor='#019F60' offset='100%' />
+        <linearGradient id='ga-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#09b470' />
+          <stop offset='100%' stopColor='#019f60' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ga-linearGradient-3'>
-          <stop stopColor='#508CDE' offset='0%' />
-          <stop stopColor='#3A75C5' offset='100%' />
+        <linearGradient id='ga-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#508cde' />
+          <stop offset='100%' stopColor='#3a75c5' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ga-linearGradient-4'>
-          <stop stopColor='#FFD935' offset='0%' />
-          <stop stopColor='#FDD216' offset='100%' />
+        <linearGradient id='ga-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd935' />
+          <stop offset='100%' stopColor='#fdd216' />
         </linearGradient>
+        <clipPath id='ga-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ga-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ga-GA'>
-          <rect
-            id='ga-FlagBackground'
-            fill='url(#ga-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ga-Rectangle-2'
-            fill='url(#ga-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ga-Rectangle-2'
-            fill='url(#ga-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ga-Rectangle-2'
-            fill='url(#ga-linearGradient-4)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#ga-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ga-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ga-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#ga-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#ga-d)' d='M0 5h21v5H0z' />
         </g>
       </g>
     </svg>

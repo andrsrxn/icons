@@ -21,37 +21,25 @@ export const IconFlagTN: FlagIcon = ({
       <title>TN</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='tn-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='tn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='tn-linearGradient-2'>
-          <stop stopColor='#E92434' offset='0%' />
-          <stop stopColor='#E11324' offset='100%' />
+        <linearGradient id='tn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e92434' />
+          <stop offset='100%' stopColor='#e11324' />
         </linearGradient>
+        <clipPath id='tn-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='tn-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='tn-TN'>
-          <rect
-            id='tn-FlagBackground'
-            fill='url(#tn-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='tn-Mask-Copy'
-            fill='url(#tn-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
+      <g clipPath='url(#tn-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#tn-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#tn-b)' d='M0 0h21v15H0z' />
           <path
-            d='M11.858354,4.27335677 C11.4406897,4.09731458 10.9817094,4 10.5,4 C8.56700338,4 7,5.56700338 7,7.5 C7,9.43299662 8.56700338,11 10.5,11 C10.9817094,11 11.4406897,10.9026854 11.858354,10.7266432 C10.248101,10.5332377 9,9.16237367 9,7.5 C9,5.83762633 10.248101,4.46676227 11.858354,4.27335677 L11.858354,4.27335677 Z M10.5,12 C8.01471863,12 6,9.98528137 6,7.5 C6,5.01471863 8.01471863,3 10.5,3 C12.9852814,3 15,5.01471863 15,7.5 C15,9.98528137 12.9852814,12 10.5,12 Z M12.2656441,8.37757672 L13.6180572,8.88279532 L12.8426963,7.66497659 L13.7411064,6.53487647 L12.3432923,6.89596178 L11.5461272,5.69230289 L11.4575914,7.13328462 L10.0665062,7.51948263 L11.4096022,8.048973 L11.3470294,9.49131539 L12.2656441,8.37757672 Z'
-            id='tn-Oval-41'
-            fill='url(#tn-linearGradient-1)'
+            fill='url(#tn-a)'
+            d='M11.858 4.273a3.5 3.5 0 1 0 0 6.453 3.25 3.25 0 0 1 0-6.453M10.5 12a4.5 4.5 0 1 1 0-9 4.5 4.5 0 0 1 0 9m1.766-3.622 1.352.505-.775-1.218.898-1.13-1.398.361-.797-1.204-.088 1.441-1.391.386 1.343.53-.063 1.442z'
           />
         </g>
       </g>

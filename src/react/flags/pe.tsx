@@ -21,42 +21,24 @@ export const IconFlagPE: FlagIcon = ({
       <title>PE</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pe-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pe-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pe-linearGradient-2'>
-          <stop stopColor='#E82438' offset='0%' />
-          <stop stopColor='#D7172B' offset='100%' />
+        <linearGradient id='pe-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e82438' />
+          <stop offset='100%' stopColor='#d7172b' />
         </linearGradient>
+        <clipPath id='pe-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pe-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pe-PE'>
-          <rect
-            id='pe-FlagBackground'
-            fill='url(#pe-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='pe-Mask' fill='url(#pe-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='pe-Rectangle-2'
-            fill='url(#pe-linearGradient-2)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='pe-Rectangle-2-Copy'
-            fill='url(#pe-linearGradient-1)'
-            x='7'
-            y='0'
-            width='7'
-            height='15'
-          />
+      <g clipPath='url(#pe-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pe-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pe-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#pe-b)' d='M0 0h7v15H0z' />
+          <path fill='url(#pe-a)' d='M7 0h7v15H7z' />
         </g>
       </g>
     </svg>

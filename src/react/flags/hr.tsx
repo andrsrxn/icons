@@ -21,70 +21,44 @@ export const IconFlagHR: FlagIcon = ({
       <title>HR</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='hr-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='hr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='hr-linearGradient-2'>
-          <stop stopColor='#FF202D' offset='0%' />
-          <stop stopColor='#FD0D1B' offset='100%' />
+        <linearGradient id='hr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff202d' />
+          <stop offset='100%' stopColor='#fd0d1b' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='hr-linearGradient-3'>
-          <stop stopColor='#2027AC' offset='0%' />
-          <stop stopColor='#191F94' offset='100%' />
+        <linearGradient id='hr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#2027ac' />
+          <stop offset='100%' stopColor='#191f94' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='hr-linearGradient-4'>
-          <stop stopColor='#FF212E' offset='0%' />
-          <stop stopColor='#FD0D1B' offset='100%' />
+        <linearGradient id='hr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ff212e' />
+          <stop offset='100%' stopColor='#fd0d1b' />
         </linearGradient>
+        <clipPath id='hr-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='hr-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='hr-HR'>
-          <rect
-            id='hr-FlagBackground'
-            fill='url(#hr-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#hr-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#hr-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#hr-b)' d='M0 0h21v5H0z' />
+          <path
+            fill='#1895db'
+            d='m8 4 .5-.5.5.5v1H8zm2 0 .5-.5.5.5v1h-1zm2 0 .5-.5.5.5v1h-1z'
+            opacity='.5'
           />
-          <rect
-            id='hr-Rectangle-2'
-            fill='url(#hr-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
+          <path fill='#191f94' d='m9 4 .5-.5.5.5v1H9zm2 0 .5-.5.5.5v1h-1z' opacity='.5' />
+          <path fill='url(#hr-c)' d='M0 10h21v5H0z' />
+          <path
+            fill='url(#hr-a)'
+            d='M0 10V5h21v5zm12 0h1l-.273.547c-.126.25-.454.453-.727.453zm-2 0h1v1h-1zm-2 0h1v1a.88.88 0 0 1-.727-.453z'
           />
           <path
-            d='M8,4 L8.5,3.5 L9,4 L9,5 L8,5 L8,4 Z M10,4 L10.5,3.5 L11,4 L11,5 L10,5 L10,4 Z M12,4 L12.5,3.5 L13,4 L13,5 L12,5 L12,4 Z'
-            id='hr-Rectangle-675'
-            fill='#1895DB'
-            opacity='0.5'
-          />
-          <path
-            d='M9,4 L9.5,3.5 L10,4 L10,5 L9,5 L9,4 Z M11,4 L11.5,3.5 L12,4 L12,5 L11,5 L11,4 Z'
-            id='hr-Rectangle-675'
-            fill='#191F94'
-            opacity='0.5'
-          />
-          <rect
-            id='hr-Rectangle-2'
-            fill='url(#hr-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <path
-            d='M0,10 L0,5 L21,5 L21,10 L0,10 Z M12,10 L13,10 L12.726593,10.546814 C12.6014491,10.7971017 12.273407,11 12,11 L12,10 Z M10,10 L11,10 L11,11 L10,11 L10,10 Z M8,10 L9,10 L9,11 C8.72385763,11 8.40359497,10.8071899 8.27340698,10.546814 L8,10 Z'
-            id='hr-Rectangle-2'
-            fill='url(#hr-linearGradient-1)'
-          />
-          <path
-            d='M10,5 L11,5 L11,6 L10,6 L10,5 Z M12,5 L12.5,5 L13,6 L12,6 L12,5 Z M8.5,5 L9,5 L9,6 L8,6 L8.5,5 Z M9,6 L10,6 L10,7 L9,7 L9,6 Z M11,6 L12,6 L12,7 L11,7 L11,6 Z M10,7 L11,7 L11,8 L10,8 L10,7 Z M12,7 L13,7 L13,8 L12,8 L12,7 Z M11,8 L12,8 L12,9 L11,9 L11,8 Z M8,7 L9,7 L9,8 L8,8 L8,7 Z M9,8 L10,8 L10,9 L9,9 L9,8 Z M8,9 L9,9 L9,10 L8,10 L8,9 Z M10,9 L11,9 L11,10 L10,10 L10,9 Z M12,9 L13,9 L13,10 L12,10 L12,9 Z M11,10 L12,10 L12,11 L11,11 L11,10 Z M9,10 L10,10 L10,11 L9,11 L9,10 Z'
-            id='hr-Rectangle-657'
-            fill='url(#hr-linearGradient-4)'
+            fill='url(#hr-d)'
+            d='M10 5h1v1h-1zm2 0h.5l.5 1h-1zM8.5 5H9v1H8zM9 6h1v1H9zm2 0h1v1h-1zm-1 1h1v1h-1zm2 0h1v1h-1zm-1 1h1v1h-1zM8 7h1v1H8zm1 1h1v1H9zM8 9h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm-1 1h1v1h-1zm-2 0h1v1H9z'
           />
         </g>
       </g>

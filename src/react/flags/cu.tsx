@@ -21,74 +21,34 @@ export const IconFlagCU: FlagIcon = ({
       <title>CU</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cu-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='cu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cu-linearGradient-2'>
-          <stop stopColor='#0B389F' offset='0%' />
-          <stop stopColor='#052E8D' offset='100%' />
+        <linearGradient id='cu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0b389f' />
+          <stop offset='100%' stopColor='#052e8d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='cu-linearGradient-3'>
-          <stop stopColor='#E12A43' offset='0%' />
-          <stop stopColor='#CD1931' offset='100%' />
+        <linearGradient id='cu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e12a43' />
+          <stop offset='100%' stopColor='#cd1931' />
         </linearGradient>
+        <clipPath id='cu-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='cu-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='cu-CU'>
-          <rect
-            id='cu-FlagBackground'
-            fill='url(#cu-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='cu-Rectangle-2'
-            fill='url(#cu-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cu-Rectangle-2'
-            fill='url(#cu-linearGradient-2)'
-            x='0'
-            y='6'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cu-Rectangle-2'
-            fill='url(#cu-linearGradient-1)'
-            x='0'
-            y='3'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cu-Rectangle-2'
-            fill='url(#cu-linearGradient-2)'
-            x='0'
-            y='12'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='cu-Rectangle-2'
-            fill='url(#cu-linearGradient-1)'
-            x='0'
-            y='9'
-            width='21'
-            height='3'
-          />
-          <polygon id='cu-Rectangle-83' fill='url(#cu-linearGradient-3)' points='0 0 10 7.5 0 15' />
-          <polygon
-            id='cu-Star-53'
-            fill='url(#cu-linearGradient-1)'
-            points='3.5 8.26701627 2.3244295 9.11803399 2.77052418 7.73702106 1.59788697 6.88196601 3.04915915 6.8794708 3.5 5.5 3.95084085 6.8794708 5.40211303 6.88196601 4.22947582 7.73702106 4.6755705 9.11803399'
+      <g clipPath='url(#cu-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#cu-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#cu-b)' d='M0 0h21v3H0z' />
+          <path fill='url(#cu-b)' d='M0 6h21v3H0z' />
+          <path fill='url(#cu-a)' d='M0 3h21v3H0z' />
+          <path fill='url(#cu-b)' d='M0 12h21v3H0z' />
+          <path fill='url(#cu-a)' d='M0 9h21v3H0z' />
+          <path fill='url(#cu-c)' d='m0 0 10 7.5L0 15z' />
+          <path
+            fill='url(#cu-a)'
+            d='m3.5 8.267-1.176.851.447-1.381-1.173-.855 1.451-.003L3.5 5.5l.45 1.38 1.452.002-1.173.855.447 1.381z'
           />
         </g>
       </g>

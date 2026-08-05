@@ -11,7 +11,7 @@ export const IconFlagCOC: FlagIcon = ({
     <svg
       width={width}
       height={height}
-      viewBox='0 -4 28 28'
+      viewBox='0 0 21 15'
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
@@ -19,43 +19,26 @@ export const IconFlagCOC: FlagIcon = ({
       className={`ui-icon-flag ${className ?? ''}`}
       {...props}>
       <title>COC</title>
-      <g clipPath='url(#clip0_503_4098)'>
-        <rect width='28' height='20' fill='#fff' rx='2' />
-        <mask
-          id='mask0_503_4098'
-          width='28'
-          height='20'
-          x='0'
-          y='0'
-          maskUnits='userSpaceOnUse'
-          style={{ maskType: 'alpha' }}>
-          <rect width='28' height='20' fill='#fff' rx='2' />
-        </mask>
-        <g mask='url(#mask0_503_4098)'>
-          <path fill='url(#paint0_linear_503_4098)' d='M0 0h28v20H0z' />
+
+      <defs>
+        <clipPath id='coc-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
+        <clipPath id='coc-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
+      </defs>
+      <g clipPath='url(#coc-clip)'>
+        <g clipPath='url(#coc-a)'>
+          <path fill='#19bfbf' d='M0 0h21v15H0z' />
           <path
             fill='#fff'
             fillRule='evenodd'
-            d='M13.444 3.333a.33.33 0 0 0-.2.067L10.72 5.293a.3.3 0 0 1-.119.057l-2.566.641a.3.3 0 0 0-.068.025L5.433 7.284a.33.33 0 0 0-.15.149L4.086 9.827a.33.33 0 0 0 .021.334l1.17 1.755c.037.055.056.12.056.185v1.76c0 .09.035.174.098.237l1.066 1.066a.33.33 0 0 0 .384.062l3.715-1.858a.3.3 0 0 1 .15-.035h2.466c.078 0 .154.028.214.078l3.814 3.178c.06.05.136.078.214.078h2.367a.33.33 0 0 0 .278-.149l2.511-3.767a.33.33 0 0 0 .056-.185V10.1q0-.1-.056-.185L20 6l-1.903-3.171a.33.33 0 0 0-.286-.162h-.419a.3.3 0 0 0-.212.513.3.3 0 0 1 .056.347l-.477.955a.33.33 0 0 1-.299.185h-1.588a.33.33 0 0 1-.298-.185l-.482-.964a.33.33 0 0 0-.298-.185zm5.89 14H18l.43.431c.131.13.342.13.472 0z'
+            d='M10.564 2.562a.25.25 0 0 0-.15.05l-1.893 1.42a.2.2 0 0 1-.089.043l-1.924.48a.2.2 0 0 0-.051.02l-1.901.95a.25.25 0 0 0-.112.112l-.898 1.796a.25.25 0 0 0 .016.25l.877 1.316a.25.25 0 0 1 .042.139v1.32c0 .067.026.13.074.178l.799.8a.25.25 0 0 0 .288.046l2.786-1.394a.2.2 0 0 1 .113-.026h1.85c.058 0 .115.021.16.059l2.86 2.383a.25.25 0 0 0 .16.059h1.776a.25.25 0 0 0 .209-.112l1.883-2.825a.25.25 0 0 0 .042-.14V7.638a.25.25 0 0 0-.042-.138L15.48 4.562l-1.427-2.378a.25.25 0 0 0-.215-.122h-.314a.225.225 0 0 0-.159.385.23.23 0 0 1 .042.26l-.357.717a.25.25 0 0 1-.225.139h-1.19a.25.25 0 0 1-.224-.14l-.362-.722a.25.25 0 0 0-.223-.139zm4.418 10.5h-1l.322.323a.25.25 0 0 0 .354 0z'
             clipRule='evenodd'
           />
         </g>
       </g>
-      <defs>
-        <linearGradient
-          id='paint0_linear_503_4098'
-          x1='0'
-          x2='0'
-          y1='0'
-          y2='20'
-          gradientUnits='userSpaceOnUse'>
-          <stop stopColor='#19bfbf' />
-          <stop offset='1' stopColor='#10acac' />
-        </linearGradient>
-        <clipPath id='clip0_503_4098'>
-          <rect width='28' height='20' fill='#fff' rx='2' />
-        </clipPath>
-      </defs>
     </svg>
   )
 }

@@ -21,56 +21,26 @@ export const IconFlagAR: FlagIcon = ({
       <title>AR</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ar-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='ar-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='ar-linearGradient-2'>
-          <stop stopColor='#88BBE8' offset='0%' />
-          <stop stopColor='#76ADDD' offset='100%' />
+        <linearGradient id='ar-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#88bbe8' />
+          <stop offset='100%' stopColor='#76addd' />
         </linearGradient>
+        <clipPath id='ar-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='ar-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='ar-AR'>
-          <rect
-            id='ar-FlagBackground'
-            fill='url(#ar-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='ar-Rectangle-2'
-            fill='url(#ar-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ar-Rectangle-2'
-            fill='url(#ar-linearGradient-2)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='ar-Rectangle-2'
-            fill='url(#ar-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <path
-            d='M10.5,9.5 C9.3954305,9.5 8.5,8.6045695 8.5,7.5 C8.5,6.3954305 9.3954305,5.5 10.5,5.5 C11.6045695,5.5 12.5,6.3954305 12.5,7.5 C12.5,8.6045695 11.6045695,9.5 10.5,9.5 Z'
-            id='ar-Oval-1'
-            fill='#DB7A2C'
-            fillRule='nonzero'
-          />
-          <circle id='ar-Oval-1' fill='#F4B32E' cx='10.5' cy='7.5' r='1.5' />
+      <g clipPath='url(#ar-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#ar-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#ar-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#ar-b)' d='M0 10h21v5H0z' />
+          <path fill='url(#ar-a)' d='M0 5h21v5H0z' />
+          <path fill='#db7a2c' fillRule='nonzero' d='M10.5 9.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4' />
+          <circle cx='10.5' cy='7.5' r='1.5' fill='#f4b32e' />
         </g>
       </g>
     </svg>

@@ -21,38 +21,27 @@ export const IconFlagPW: FlagIcon = ({
       <title>PW</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pw-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pw-linearGradient-2'>
-          <stop stopColor='#65C6EE' offset='0%' />
-          <stop stopColor='#4FAED5' offset='100%' />
+        <linearGradient id='pw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#65c6ee' />
+          <stop offset='100%' stopColor='#4faed5' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pw-linearGradient-3'>
-          <stop stopColor='#FFE044' offset='0%' />
-          <stop stopColor='#FFDD32' offset='100%' />
+        <linearGradient id='pw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffe044' />
+          <stop offset='100%' stopColor='#ffdd32' />
         </linearGradient>
+        <clipPath id='pw-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pw-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pw-PW'>
-          <rect
-            id='pw-FlagBackground'
-            fill='url(#pw-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pw-Mask-Copy'
-            fill='url(#pw-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <circle id='pw-Oval-9' fill='url(#pw-linearGradient-3)' cx='9.5' cy='7.5' r='4.5' />
+      <g clipPath='url(#pw-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pw-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pw-b)' d='M0 0h21v15H0z' />
+          <circle cx='9.5' cy='7.5' r='4.5' fill='url(#pw-c)' />
         </g>
       </g>
     </svg>

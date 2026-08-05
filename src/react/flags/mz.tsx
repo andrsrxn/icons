@@ -21,78 +21,45 @@ export const IconFlagMZ: FlagIcon = ({
       <title>MZ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-2'>
-          <stop stopColor='#FFE547' offset='0%' />
-          <stop stopColor='#FCE032' offset='100%' />
+        <linearGradient id='mz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffe547' />
+          <stop offset='100%' stopColor='#fce032' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-3'>
-          <stop stopColor='#118C81' offset='0%' />
-          <stop stopColor='#0D7168' offset='100%' />
+        <linearGradient id='mz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#118c81' />
+          <stop offset='100%' stopColor='#0d7168' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-4'>
-          <stop stopColor='#262626' offset='0%' />
-          <stop stopColor='#0D0D0D' offset='100%' />
+        <linearGradient id='mz-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#262626' />
+          <stop offset='100%' stopColor='#0d0d0d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-5'>
-          <stop stopColor='#EF2147' offset='0%' />
-          <stop stopColor='#D01739' offset='100%' />
+        <linearGradient id='mz-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ef2147' />
+          <stop offset='100%' stopColor='#d01739' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mz-linearGradient-6'>
-          <stop stopColor='#FDE444' offset='0%' />
-          <stop stopColor='#FCE032' offset='100%' />
+        <linearGradient id='mz-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fde444' />
+          <stop offset='100%' stopColor='#fce032' />
         </linearGradient>
+        <clipPath id='mz-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mz-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mz-MZ'>
-          <rect
-            id='mz-FlagBackground'
-            fill='url(#mz-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mz-Rectangle-2'
-            fill='url(#mz-linearGradient-2)'
-            x='0'
-            y='11'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='mz-Rectangle-2'
-            fill='url(#mz-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='mz-Rectangle-2'
-            fill='url(#mz-linearGradient-1)'
-            x='0'
-            y='4'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='mz-Rectangle-2'
-            fill='url(#mz-linearGradient-4)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
-          <polygon id='mz-Rectangle-83' fill='url(#mz-linearGradient-5)' points='0 0 10 7.5 0 15' />
-          <polygon
-            id='mz-Star-27'
-            fill='url(#mz-linearGradient-6)'
-            points='3.5 8.45555972 2.03053687 9.52254249 2.5912087 7.79528419 1.12235871 6.72745751 2.93833609 6.72693595 3.5 5 4.06166391 6.72693595 5.87764129 6.72745751 4.4087913 7.79528419 4.96946313 9.52254249'
+      <g clipPath='url(#mz-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mz-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mz-b)' d='M0 11h21v4H0z' />
+          <path fill='url(#mz-c)' d='M0 0h21v4H0z' />
+          <path fill='url(#mz-a)' d='M0 4h21v7H0z' />
+          <path fill='url(#mz-d)' d='M0 5h21v5H0z' />
+          <path fill='url(#mz-e)' d='m0 0 10 7.5L0 15z' />
+          <path
+            fill='url(#mz-f)'
+            d='M3.5 8.456 2.03 9.523l.561-1.728-1.469-1.068h1.816L3.5 5l.562 1.727h1.816l-1.47 1.068.561 1.728z'
           />
         </g>
       </g>

@@ -21,57 +21,31 @@ export const IconFlagUZ: FlagIcon = ({
       <title>UZ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='uz-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='uz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='uz-linearGradient-2'>
-          <stop stopColor='#04AAC8' offset='0%' />
-          <stop stopColor='#009AB6' offset='100%' />
+        <linearGradient id='uz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#04aac8' />
+          <stop offset='100%' stopColor='#009ab6' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='uz-linearGradient-3'>
-          <stop stopColor='#23C840' offset='0%' />
-          <stop stopColor='#1EB639' offset='100%' />
+        <linearGradient id='uz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#23c840' />
+          <stop offset='100%' stopColor='#1eb639' />
         </linearGradient>
+        <clipPath id='uz-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='uz-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='uz-UZ'>
-          <rect
-            id='uz-FlagBackground'
-            fill='url(#uz-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='uz-Rectangle-2'
-            fill='url(#uz-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='uz-Rectangle-2'
-            fill='url(#uz-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
-          <rect
-            id='uz-Rectangle-2-Copy-4'
-            fill='url(#uz-linearGradient-1)'
-            x='0'
-            y='5'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#uz-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#uz-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#uz-b)' d='M0 0h21v5H0z' />
+          <path fill='url(#uz-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#uz-a)' d='M0 5h21v5H0z' />
           <path
-            d='M4.33356893,1.25274924 C4.09517255,1.0931066 3.80845938,1 3.5,1 C2.67157288,1 2,1.67157288 2,2.5 C2,3.32842712 2.67157288,4 3.5,4 C3.80845938,4 4.09517255,3.9068934 4.33356893,3.74725076 C4.30594816,3.74907396 4.27808222,3.75 4.25,3.75 C3.55964406,3.75 3,3.19035594 3,2.5 C3,1.80964406 3.55964406,1.25 4.25,1.25 C4.27808222,1.25 4.30594816,1.25092604 4.33356893,1.25274924 Z M5.5,4 C5.22385763,4 5,3.77614237 5,3.5 C5,3.22385763 5.22385763,3 5.5,3 C5.77614237,3 6,3.22385763 6,3.5 C6,3.77614237 5.77614237,4 5.5,4 Z M7.5,2 C7.22385763,2 7,1.77614237 7,1.5 C7,1.22385763 7.22385763,1 7.5,1 C7.77614237,1 8,1.22385763 8,1.5 C8,1.77614237 7.77614237,2 7.5,2 Z M9.5,2 C9.22385763,2 9,1.77614237 9,1.5 C9,1.22385763 9.22385763,1 9.5,1 C9.77614237,1 10,1.22385763 10,1.5 C10,1.77614237 9.77614237,2 9.5,2 Z M9.5,4 C9.22385763,4 9,3.77614237 9,3.5 C9,3.22385763 9.22385763,3 9.5,3 C9.77614237,3 10,3.22385763 10,3.5 C10,3.77614237 9.77614237,4 9.5,4 Z M7.5,4 C7.22385763,4 7,3.77614237 7,3.5 C7,3.22385763 7.22385763,3 7.5,3 C7.77614237,3 8,3.22385763 8,3.5 C8,3.77614237 7.77614237,4 7.5,4 Z'
-            id='uz-Oval-68'
-            fill='url(#uz-linearGradient-1)'
+            fill='url(#uz-a)'
+            d='M4.334 1.253a1.5 1.5 0 1 0 0 2.495l-.084.002a1.25 1.25 0 1 1 .084-2.497M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

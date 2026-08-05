@@ -21,49 +21,30 @@ export const IconFlagSI: FlagIcon = ({
       <title>SI</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='si-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='si-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='si-linearGradient-2'>
-          <stop stopColor='#0C47B7' offset='0%' />
-          <stop stopColor='#073DA4' offset='100%' />
+        <linearGradient id='si-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0c47b7' />
+          <stop offset='100%' stopColor='#073da4' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='si-linearGradient-3'>
-          <stop stopColor='#E53B35' offset='0%' />
-          <stop stopColor='#D32E28' offset='100%' />
+        <linearGradient id='si-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e53b35' />
+          <stop offset='100%' stopColor='#d32e28' />
         </linearGradient>
+        <clipPath id='si-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='si-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='si-SI'>
-          <rect
-            id='si-FlagBackground'
-            fill='url(#si-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='si-Rectangle-2'
-            fill='url(#si-linearGradient-2)'
-            x='0'
-            y='3'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='si-Rectangle-2'
-            fill='url(#si-linearGradient-3)'
-            x='0'
-            y='10'
-            width='21'
-            height='5'
-          />
+      <g clipPath='url(#si-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#si-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#si-b)' d='M0 3h21v7H0z' />
+          <path fill='url(#si-c)' d='M0 10h21v5H0z' />
           <path
-            d='M0,5 L0,0 L21,0 L21,5 L6.9329834,5 L6.9329834,4 C6.9329834,4 6.22775438,3.5 5.5,3.5 C4.77224562,3.5 4,4 4,4 L4,5 L0,5 Z M5.5,7 C4.94771525,7 4.5,6.55228475 4.5,6 C4.5,5.44771525 4.94771525,5 5.5,5 C6.05228475,5 6.5,5.44771525 6.5,6 C6.5,6.55228475 6.05228475,7 5.5,7 Z'
-            id='si-Rectangle-2'
-            fill='url(#si-linearGradient-1)'
+            fill='url(#si-a)'
+            d='M0 5V0h21v5H6.933V4s-.705-.5-1.433-.5S4 4 4 4v1zm5.5 2a1 1 0 1 1 0-2 1 1 0 0 1 0 2'
           />
         </g>
       </g>

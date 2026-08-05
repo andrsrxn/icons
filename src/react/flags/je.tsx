@@ -21,56 +21,40 @@ export const IconFlagJE: FlagIcon = ({
       <title>JE</title>
 
       <defs>
+        <linearGradient id='je-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='je-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ef273f' />
+          <stop offset='100%' stopColor='#db1c33' />
+        </linearGradient>
+        <linearGradient id='je-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f22a41' />
+          <stop offset='100%' stopColor='#e51d34' />
+        </linearGradient>
+        <linearGradient id='je-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fadf46' />
+          <stop offset='100%' stopColor='#f9dc38' />
+        </linearGradient>
         <clipPath id='je-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='je-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='je-linearGradient-2'>
-          <stop stopColor='#EF273F' offset='0%' />
-          <stop stopColor='#DB1C33' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='je-linearGradient-3'>
-          <stop stopColor='#F22A41' offset='0%' />
-          <stop stopColor='#E51D34' offset='100%' />
-        </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='je-linearGradient-4'>
-          <stop stopColor='#FADF46' offset='0%' />
-          <stop stopColor='#F9DC38' offset='100%' />
-        </linearGradient>
       </defs>
-      <g
-        clipPath='url(#je-clip)'
-        id='je-Symbols'
-        stroke='none'
-        strokeWidth='1'
-        fill='none'
-        fillRule='evenodd'>
-        <g id='je-JE'>
-          <rect
-            id='je-FlagBackground'
-            fill='url(#je-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
+      <g clipPath='url(#je-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#je-a)' d='M0 0h21v15H0z' />
+          <path
+            fill='url(#je-b)'
+            d='M10.5 6.291-.962-1.44-2.08.218l10.792 7.28-10.792 7.279 1.118 1.658L10.5 8.704l11.462 7.73 1.118-1.657-10.791-7.28L23.08.218 21.962-1.44z'
           />
           <path
-            d='M10.5002378,6.29111667 L-0.961614117,-1.44000006 L-2.07999992,0.218075088 L8.71194613,7.49733462 L-2.07999992,14.7765941 L-0.961614117,16.4346693 L10.5002378,8.70355256 L21.9620897,16.4346693 L23.0804755,14.7765941 L12.2885294,7.49733462 L23.0804755,0.218075088 L21.9620897,-1.44000006 L10.5002378,6.29111667 Z'
-            id='je-Rectangle-2'
-            fill='url(#je-linearGradient-2)'
+            fill='url(#je-c)'
+            d='M9 2.502c0-.279.216-.505.496-.505h2.009c.273 0 .495.214.495.505v.99c0 .28-.16.666-.348.853l-.804.804a.496.496 0 0 1-.696 0l-.804-.804A1.35 1.35 0 0 1 9 3.493z'
           />
           <path
-            d='M9.00023778,2.50201906 C9.00023778,2.22328954 9.21599038,1.99733462 9.49562677,1.99733462 L11.5048488,1.99733462 C11.7784446,1.99733462 12.0002378,2.21136965 12.0002378,2.50201906 L12.0002378,3.49265017 C12.0002378,3.77137969 11.8397115,4.15786089 11.6523374,4.34523501 L10.8481382,5.14943423 C10.6559981,5.34157431 10.3397115,5.33680834 10.1523374,5.14943423 L9.34813817,4.34523501 C9.15599809,4.15309493 9.00023778,3.78329958 9.00023778,3.49265017 L9.00023778,2.50201906 Z'
-            id='je-Rectangle-1462'
-            fill='url(#je-linearGradient-3)'
-          />
-          <path
-            d='M10.5002378,3.99733462 C10.2240954,3.99733462 10.0002378,3.77347699 10.0002378,3.49733462 C10.0002378,3.22119224 10.2240954,2.99733462 10.5002378,2.99733462 C10.7763802,2.99733462 11.0002378,3.22119224 11.0002378,3.49733462 C11.0002378,3.77347699 10.7763802,3.99733462 10.5002378,3.99733462 Z M10.5002378,1.99733462 C9.67181066,1.99733462 9.00023778,1.77347699 9.00023778,1.49733462 C9.00023778,1.22119224 9.67181066,0.997334616 10.5002378,0.997334616 C11.3286649,0.997334616 12.0002378,1.22119224 12.0002378,1.49733462 C12.0002378,1.77347699 11.3286649,1.99733462 10.5002378,1.99733462 Z'
-            id='je-Combined-Shape'
-            fill='url(#je-linearGradient-4)'
+            fill='url(#je-d)'
+            d='M10.5 3.997a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0-2c-.828 0-1.5-.224-1.5-.5s.672-.5 1.5-.5c.829 0 1.5.224 1.5.5s-.671.5-1.5.5'
           />
         </g>
       </g>

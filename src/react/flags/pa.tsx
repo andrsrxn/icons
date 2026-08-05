@@ -21,59 +21,35 @@ export const IconFlagPA: FlagIcon = ({
       <title>PA</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pa-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='pa-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pa-linearGradient-2'>
-          <stop stopColor='#E52448' offset='0%' />
-          <stop stopColor='#D01739' offset='100%' />
+        <linearGradient id='pa-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e52448' />
+          <stop offset='100%' stopColor='#d01739' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='pa-linearGradient-3'>
-          <stop stopColor='#1367AE' offset='0%' />
-          <stop stopColor='#0A5492' offset='100%' />
+        <linearGradient id='pa-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1367ae' />
+          <stop offset='100%' stopColor='#0a5492' />
         </linearGradient>
+        <clipPath id='pa-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='pa-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='pa-PA'>
-          <rect
-            id='pa-FlagBackground'
-            fill='url(#pa-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='pa-Rectangle-2'
-            fill='url(#pa-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='pa-Rectangle-2'
-            fill='url(#pa-linearGradient-3)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
+      <g clipPath='url(#pa-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#pa-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#pa-b)' d='M0 0h21v7H0z' />
+          <path fill='url(#pa-c)' d='M0 7h21v8H0z' />
+          <path fill='url(#pa-a)' d='M0 7V0h10v7zm10 8V7h11v8z' />
+          <path
+            fill='url(#pa-c)'
+            d='m5 4.32-1.176.798.396-1.365-1.122-.871 1.42-.045L5 1.5l.482 1.337 1.42.045-1.122.871.396 1.365z'
           />
           <path
-            d='M0,7 L0,0 L10,0 L10,7 L0,7 Z M10,15 L10,7 L21,7 L21,15 L10,15 Z'
-            id='pa-Rectangle-2'
-            fill='url(#pa-linearGradient-1)'
-          />
-          <polygon
-            id='pa-Star-33'
-            fill='url(#pa-linearGradient-3)'
-            points='5 4.31999999 3.8244295 5.11803399 4.22013366 3.75339393 3.09788697 2.88196601 4.5180161 2.83660607 5 1.5 5.4819839 2.83660607 6.90211303 2.88196601 5.77986634 3.75339393 6.1755705 5.11803399'
-          />
-          <polygon
-            id='pa-Star-33'
-            fill='url(#pa-linearGradient-2)'
-            points='15.5 11.82 14.3244295 12.618034 14.7201337 11.2533939 13.597887 10.381966 15.0180161 10.3366061 15.5 9 15.9819839 10.3366061 17.402113 10.381966 16.2798663 11.2533939 16.6755705 12.618034'
+            fill='url(#pa-b)'
+            d='m15.5 11.82-1.176.798.396-1.365-1.122-.871 1.42-.045L15.5 9l.482 1.337 1.42.045-1.122.871.396 1.365z'
           />
         </g>
       </g>

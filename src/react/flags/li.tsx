@@ -21,45 +21,27 @@ export const IconFlagLI: FlagIcon = ({
       <title>LI</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='li-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='li-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='li-linearGradient-2'>
-          <stop stopColor='#0A3B97' offset='0%' />
-          <stop stopColor='#042E7D' offset='100%' />
+        <linearGradient id='li-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0a3b97' />
+          <stop offset='100%' stopColor='#042e7d' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='li-linearGradient-3'>
-          <stop stopColor='#E6273E' offset='0%' />
-          <stop stopColor='#CC162C' offset='100%' />
+        <linearGradient id='li-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#e6273e' />
+          <stop offset='100%' stopColor='#cc162c' />
         </linearGradient>
+        <clipPath id='li-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='li-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='li-LI'>
-          <rect
-            id='li-FlagBackground'
-            fill='url(#li-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='li-Rectangle-2'
-            fill='url(#li-linearGradient-2)'
-            x='0'
-            y='0'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='li-Rectangle-2'
-            fill='url(#li-linearGradient-3)'
-            x='0'
-            y='8'
-            width='21'
-            height='7'
-          />
+      <g clipPath='url(#li-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#li-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#li-b)' d='M0 0h21v8H0z' />
+          <path fill='url(#li-c)' d='M0 8h21v7H0z' />
         </g>
       </g>
     </svg>

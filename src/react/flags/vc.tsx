@@ -21,58 +21,39 @@ export const IconFlagVC: FlagIcon = ({
       <title>VC</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='vc-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='vc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='vc-linearGradient-2'>
-          <stop stopColor='#08C47A' offset='0%' />
-          <stop stopColor='#009F60' offset='100%' />
+        <linearGradient id='vc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#08c47a' />
+          <stop offset='100%' stopColor='#009f60' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='vc-linearGradient-3'>
-          <stop stopColor='#0C87E1' offset='0%' />
-          <stop stopColor='#0073C7' offset='100%' />
+        <linearGradient id='vc-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#0c87e1' />
+          <stop offset='100%' stopColor='#0073c7' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='vc-linearGradient-4'>
-          <stop stopColor='#FFD147' offset='0%' />
-          <stop stopColor='#FECA2F' offset='100%' />
+        <linearGradient id='vc-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd147' />
+          <stop offset='100%' stopColor='#feca2f' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='vc-linearGradient-5'>
-          <stop stopColor='#00C778' offset='0%' />
-          <stop stopColor='#009F60' offset='100%' />
+        <linearGradient id='vc-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#00c778' />
+          <stop offset='100%' stopColor='#009f60' />
         </linearGradient>
+        <clipPath id='vc-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='vc-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='vc-VC'>
-          <rect
-            id='vc-FlagBackground'
-            fill='url(#vc-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect id='vc-Mask' fill='url(#vc-linearGradient-2)' x='10' y='0' width='11' height='15' />
-          <rect
-            id='vc-Rectangle-2'
-            fill='url(#vc-linearGradient-3)'
-            x='0'
-            y='0'
-            width='7'
-            height='15'
-          />
-          <rect
-            id='vc-Rectangle-2-Copy'
-            fill='url(#vc-linearGradient-4)'
-            x='6'
-            y='0'
-            width='9'
-            height='15'
-          />
+      <g clipPath='url(#vc-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#vc-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#vc-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#vc-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#vc-d)' d='M6 0h9v15H6z' />
           <path
-            d='M11,6 L12.5,3 L14,6 L12.5,9 L11,6 Z M7,6 L8.5,3 L10,6 L8.5,9 L7,6 Z M9,10 L10.5,7 L12,10 L10.5,13 L9,10 Z'
-            id='vc-Rectangle-1194'
-            fill='url(#vc-linearGradient-5)'
+            fill='url(#vc-e)'
+            d='m11 6 1.5-3L14 6l-1.5 3zM7 6l1.5-3L10 6 8.5 9zm2 4 1.5-3 1.5 3-1.5 3z'
           />
         </g>
       </g>

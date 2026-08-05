@@ -21,69 +21,37 @@ export const IconFlagMU: FlagIcon = ({
       <title>MU</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mu-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='mu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mu-linearGradient-2'>
-          <stop stopColor='#1DBB63' offset='0%' />
-          <stop stopColor='#17A455' offset='100%' />
+        <linearGradient id='mu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#1dbb63' />
+          <stop offset='100%' stopColor='#17a455' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mu-linearGradient-3'>
-          <stop stopColor='#222B82' offset='0%' />
-          <stop stopColor='#1B236C' offset='100%' />
+        <linearGradient id='mu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#222b82' />
+          <stop offset='100%' stopColor='#1b236c' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mu-linearGradient-4'>
-          <stop stopColor='#FFD741' offset='0%' />
-          <stop stopColor='#FFD430' offset='100%' />
+        <linearGradient id='mu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd741' />
+          <stop offset='100%' stopColor='#ffd430' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='mu-linearGradient-5'>
-          <stop stopColor='#F4374A' offset='0%' />
-          <stop stopColor='#E92C3F' offset='100%' />
+        <linearGradient id='mu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f4374a' />
+          <stop offset='100%' stopColor='#e92c3f' />
         </linearGradient>
+        <clipPath id='mu-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='mu-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='mu-MU'>
-          <rect
-            id='mu-FlagBackground'
-            fill='url(#mu-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='mu-Rectangle-2'
-            fill='url(#mu-linearGradient-2)'
-            x='0'
-            y='12'
-            width='21'
-            height='3'
-          />
-          <rect
-            id='mu-Rectangle-2'
-            fill='url(#mu-linearGradient-3)'
-            x='0'
-            y='4'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='mu-Rectangle-2'
-            fill='url(#mu-linearGradient-4)'
-            x='0'
-            y='8'
-            width='21'
-            height='4'
-          />
-          <rect
-            id='mu-Rectangle-2'
-            fill='url(#mu-linearGradient-5)'
-            x='0'
-            y='0'
-            width='21'
-            height='4'
-          />
+      <g clipPath='url(#mu-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#mu-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#mu-b)' d='M0 12h21v3H0z' />
+          <path fill='url(#mu-c)' d='M0 4h21v4H0z' />
+          <path fill='url(#mu-d)' d='M0 8h21v4H0z' />
+          <path fill='url(#mu-e)' d='M0 0h21v4H0z' />
         </g>
       </g>
     </svg>

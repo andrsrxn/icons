@@ -21,57 +21,32 @@ export const IconFlagBJ: FlagIcon = ({
       <title>BJ</title>
 
       <defs>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bj-linearGradient-1'>
-          <stop stopColor='#FFFFFF' offset='0%' />
-          <stop stopColor='#F0F0F0' offset='100%' />
+        <linearGradient id='bj-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#fff' />
+          <stop offset='100%' stopColor='#f0f0f0' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bj-linearGradient-2'>
-          <stop stopColor='#F12641' offset='0%' />
-          <stop stopColor='#E71834' offset='100%' />
+        <linearGradient id='bj-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#f12641' />
+          <stop offset='100%' stopColor='#e71834' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bj-linearGradient-3'>
-          <stop stopColor='#FFD648' offset='0%' />
-          <stop stopColor='#FCD036' offset='100%' />
+        <linearGradient id='bj-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#ffd648' />
+          <stop offset='100%' stopColor='#fcd036' />
         </linearGradient>
-        <linearGradient x1='50%' y1='0%' x2='50%' y2='100%' id='bj-linearGradient-4'>
-          <stop stopColor='#17A668' offset='0%' />
-          <stop stopColor='#118653' offset='100%' />
+        <linearGradient id='bj-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+          <stop offset='0%' stopColor='#17a668' />
+          <stop offset='100%' stopColor='#118653' />
         </linearGradient>
+        <clipPath id='bj-clip'>
+          <rect x='0' y='0' width='21' height='15' />
+        </clipPath>
       </defs>
-      <g id='bj-Symbols' stroke='none' strokeWidth='1' fill='none' fillRule='evenodd'>
-        <g id='bj-BJ'>
-          <rect
-            id='bj-FlagBackground'
-            fill='url(#bj-linearGradient-1)'
-            x='0'
-            y='0'
-            width='21'
-            height='15'
-          />
-          <rect
-            id='bj-Rectangle-2'
-            fill='url(#bj-linearGradient-2)'
-            x='0'
-            y='7'
-            width='21'
-            height='8'
-          />
-          <rect
-            id='bj-Rectangle-2'
-            fill='url(#bj-linearGradient-3)'
-            x='0'
-            y='0'
-            width='21'
-            height='7'
-          />
-          <rect
-            id='bj-Rectangle-2'
-            fill='url(#bj-linearGradient-4)'
-            x='0'
-            y='0'
-            width='8'
-            height='15'
-          />
+      <g clipPath='url(#bj-clip)'>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bj-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bj-b)' d='M0 7h21v8H0z' />
+          <path fill='url(#bj-c)' d='M0 0h21v7H0z' />
+          <path fill='url(#bj-d)' d='M0 0h8v15H0z' />
         </g>
       </g>
     </svg>
