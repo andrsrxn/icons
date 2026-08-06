@@ -113,7 +113,6 @@
     "@types/react": "19.2.18",
     "@types/react-dom": "19.2.4",
     "@vitejs/plugin-react": "6.0.5",
-    "@vitejs/plugin-react-swc": "4.3.3",
     "jsdom": "30.0.1",
     "lefthook": "2.1.10",
     "lightningcss-cli": "1.33.0",
