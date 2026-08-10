@@ -26,28 +26,25 @@ export const IconUngroup: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        x='12.64'
-        y='12.64'
         width='7.36'
         height='7.36'
         rx='1.5'
+        transform='matrix(-1 0 0 1 11.36 12.64)'
         fill='currentColor'
       />
       <rect
-        x='4'
-        y='4'
         width='7.36'
         height='7.36'
         rx='1.5'
+        transform='matrix(-1 0 0 1 20 4)'
         stroke='currentColor'
         strokeWidth='1.5'
       />
       <rect
-        x='12.64'
-        y='12.64'
         width='7.36'
         height='7.36'
         rx='1.5'
+        transform='matrix(-1 0 0 1 11.36 12.64)'
         stroke='currentColor'
         strokeWidth='1.5'
       />

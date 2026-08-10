@@ -26,7 +26,7 @@ export const IconBatteryMedium: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.63 11c0-1.89 0-2.83.59-3.41C4.8 7 5.74 7 7.63 7h3.14v10H7.63c-1.89 0-2.83 0-3.41-.59-.59-.58-.59-1.52-.59-3.41z'
+        d='M3.63 11c0-1.89 0-2.83.65-3.41C4.94 7 5.98 7 8.1 7h3.5v10H8.1c-2.1 0-3.15 0-3.8-.59-.66-.58-.66-1.52-.66-3.41z'
         fill='currentColor'
       />
       <path

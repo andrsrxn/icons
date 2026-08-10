@@ -29,7 +29,7 @@ export const IconOrbit: Icon = ({
       <circle cx='12' cy='12' r='4.18' stroke='currentColor' strokeWidth='1.5' />
       <circle cx='17.9' cy='6.03' r='1.59' stroke='currentColor' strokeWidth='1.5' />
       <path
-        d='M19.03 7.41A8.39 8.39 0 1 1 12 3.61c1.4 0 3.03.33 4.44 1.34'
+        d='M19.03 7.41A8.4 8.4 0 1 1 12 3.61c1.4 0 3.03.33 4.44 1.34'
         stroke='currentColor'
         strokeWidth='1.5'
         strokeLinecap='round'

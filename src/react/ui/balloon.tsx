@@ -30,7 +30,7 @@ export const IconBalloon: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M17.62 8.97c0 2.81-2.28 7.39-5.1 7.39-2.8 0-5.08-4.58-5.08-7.39a5.09 5.09 0 1 1 10.18 0Z'
+        d='M17.62 8.97c0 2.81-2.28 7.39-5.1 7.39-2.8 0-5.08-4.58-5.08-7.39a5.09 5.09 0 0 1 10.18 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
       />

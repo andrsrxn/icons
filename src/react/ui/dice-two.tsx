@@ -30,7 +30,7 @@ export const IconDiceTwo: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M8.66 16.1a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0m7.96-8.45a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0'
+        d='M8.91 15.78a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m7.35-7.8a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0'
         fill='currentColor'
       />
       <path
@@ -40,7 +40,7 @@ export const IconDiceTwo: Icon = ({
         strokeLinecap='round'
       />
       <path
-        d='M8.66 16.1a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0Zm7.96-8.45a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0Z'
+        d='M8.91 15.78a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0Zm7.35-7.8a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
         strokeLinecap='round'

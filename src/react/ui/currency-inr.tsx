@@ -25,7 +25,7 @@ export const IconCurrencyInr: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M6.28 7.41H18M6.28 3.75H18m-8.43 0a4.76 4.76 0 0 1 0 9.52h-3.3l8.07 7.33'
+        d='M6.28 7.41H18M6.28 3.75H18m-8.43 0a4.76 4.76 0 1 1 0 9.52h-3.3l8.07 7.33'
         stroke='currentColor'
         strokeWidth='1.5'
         strokeLinecap='round'

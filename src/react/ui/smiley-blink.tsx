@@ -31,7 +31,7 @@ export const IconSmileyBlink: Icon = ({
       />
       <path d='M9.91 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0' fill='currentColor' />
       <path
-        d='M9 15s1.05 1 3 1c1.96 0 3-1 3-1m-1.18-5.51h2M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0ZM9.9 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0Z'
+        d='M9 15s1.04 1 3 1 3-1 3-1m-1.18-5.51h2M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0ZM9.9 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
         strokeLinecap='round'

@@ -24,18 +24,24 @@ export const IconGroup: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='11.28' y='11' width='5.72' height='5.72' rx='1.5' fill='currentColor' />
+      <rect
+        opacity='.2'
+        width='5.72'
+        height='5.72'
+        rx='1.5'
+        transform='matrix(-1 0 0 1 13.16 11)'
+        fill='currentColor'
+      />
       <path
-        d='M13.16 10.88v-.74c0-1.27 0-1.91-.37-2.33l-.15-.16c-.43-.37-1.07-.37-2.34-.37-1.28 0-1.92 0-2.34.37l-.16.16c-.36.42-.36 1.06-.36 2.33 0 1.28 0 1.92.36 2.34l.16.16c.42.36 1.06.36 2.34.36h.7'
+        d='M11.28 10.88v-.74c0-1.27 0-1.91.37-2.33l.16-.16c.42-.37 1.06-.37 2.33-.37 1.28 0 1.92 0 2.34.37l.16.16c.36.42.36 1.06.36 2.33 0 1.28 0 1.92-.36 2.34l-.16.16c-.42.36-1.06.36-2.34.36h-.7'
         stroke='currentColor'
         strokeWidth='1.5'
       />
       <rect
-        x='11.28'
-        y='11'
         width='5.72'
         height='5.72'
         rx='1.5'
+        transform='matrix(-1 0 0 1 13.16 11)'
         stroke='currentColor'
         strokeWidth='1.5'
       />
