@@ -8,7 +8,7 @@ import * as icons from '../src/react/ui/index'
 const uiIcons = Object.entries(icons).map(([name, Icon]) => (
   <div key={name} className='icon-card'>
     <Icon />
-    <span>{name}</span>
+    <span>{name.slice(name.lastIndexOf('Icon') + 4)}</span>
   </div>
 ))
 
@@ -18,7 +18,7 @@ const flagIcons = Object.entries(fIcons)
   .map(([name, Icon]) => (
     <div key={name} className='icon-card'>
       <Icon />
-      <span>{name}</span>
+      <span>{name.slice(name.lastIndexOf('IconFlag') + 8)}</span>
     </div>
   ))
 
