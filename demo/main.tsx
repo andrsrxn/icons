@@ -1,4 +1,5 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: it exists */
+/** biome-ignore-all lint/style/noMagicNumbers: to not take the literal 'Icon' */
 /** biome-ignore-all lint/performance/noNamespaceImport: to automate all icons importing */
 
 import { createRoot } from 'react-dom/client'
@@ -13,7 +14,6 @@ const uiIcons = Object.entries(icons).map(([name, Icon]) => (
 ))
 
 const flagIcons = Object.entries(fIcons)
-  // biome-ignore lint/style/noMagicNumbers: to not take the literal `IconFlag`
   .filter(([name]) => name.startsWith('IconFlag') && name.length > 8)
   .map(([name, Icon]) => (
     <div key={name} className='icon-card'>
