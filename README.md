@@ -12,6 +12,24 @@
 
 React icon library with 800+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
+## Motivation
+
+This library was built to serve as the icon foundation for **[@andrsrxn/ui](https://ui.andrsrxn.com)**, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
+
+While `@andrsrxn/icons` is tightly coupled to that vision, it is intentionally published as a **standalone package**. This keeps it lightweight, independently versioned, and freely usable by anyone (regardless of whether they adopt `@andrsrxn/ui`). Icon documentation will be available at [ui.andrsrxn.com/icons](https://ui.andrsrxn.com/icons) once the UI package is released.
+
+### Why another icon library?
+
+The short answer: **there are no free duotone icon sets with the right style**.
+
+Most libraries offer only outline or solid variants. [Phosphor Icons](https://phosphoricons.com/) does include free duotone variants, but its implementation applies a duotone layer to every icon unconditionally, even purely geometric ones like arrows or plus signs that have no meaningful background shape. This results in unnecessary visual noise and icons that feel semantically inconsistent.
+
+`@andrsrxn/icons` takes a more deliberate approach:
+
+- **Duotone by default**: Icons that have a meaningful path/fill distinction are always duotone.
+- **Outline when appropriate**: Simple geometric icons such as `+`, `/`, or `×` do not receive a decorative background layer that would only reduce clarity.
+- **Filled on demand**: A `filled` variant is included only for icons that have a meaningful active or selected state, such as `like`, `bookmark`, or `star`, not as a blanket alternative style.
+
 ## Requirements
 
 You only need to be using `react` and `react-dom` version 19.
@@ -30,10 +48,8 @@ import '@andrsrxn/icons/styles.css'
 
 ## Categories
 
-All of them are optimized and scalable SVGs.
-
 - **UI**: 800+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagUS`, `IconFlagMX`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
 ## Usage
 
