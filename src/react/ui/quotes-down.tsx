@@ -11,9 +11,9 @@ export const IconQuotesDown: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='quotes-down'
@@ -25,15 +25,15 @@ export const IconQuotesDown: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M20.3 15.94a3.44 3.44 0 1 1-6.87 0 3.44 3.44 0 0 1 6.87 0m-9.73 0a3.44 3.44 0 1 1-6.87 0 3.44 3.44 0 0 1 6.87 0'
         fill='currentColor'
-        d='M20.302 15.938a3.436 3.436 0 1 1-6.871 0 3.436 3.436 0 0 1 6.871 0Zm-9.733 0a3.436 3.436 0 1 1-6.871 0 3.436 3.436 0 0 1 6.87 0Z'
         opacity='.2'
       />
       <path
+        d='M13.43 15.83s.15-4.38 1.07-6.72c1.77-4.48 4.43-4.48 4.43-4.48M3.7 15.83s.15-4.38 1.07-6.72C6.54 4.63 9.2 4.63 9.2 4.63m11.1 11.3a3.44 3.44 0 1 1-6.87 0 3.44 3.44 0 0 1 6.87 0Zm-9.73 0a3.44 3.44 0 1 1-6.87 0 3.44 3.44 0 0 1 6.87 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M13.431 15.832s.15-4.383 1.074-6.722c1.769-4.484 4.43-4.484 4.43-4.484M3.698 15.832s.15-4.383 1.073-6.722c1.77-4.484 4.43-4.484 4.43-4.484m11.101 11.312a3.436 3.436 0 1 1-6.87 0 3.436 3.436 0 0 1 6.87 0Zm-9.733 0a3.435 3.435 0 1 1-6.871 0 3.435 3.435 0 0 1 6.87 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

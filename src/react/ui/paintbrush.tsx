@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconPaintbrush: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='paintbrush'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='6.19'
+        y='8.83'
+        width='11.62'
+        height='3.97'
+        rx='1.99'
+        fill='currentColor'
+      />
+      <path
+        d='M6.2 11.83c0-1.42 0-2.13.43-2.57.44-.43 1.15-.43 2.56-.43h5.62c1.41 0 2.12 0 2.56.43.44.44.44 1.15.44 2.57v.97H6.19z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M6.19 10.57v7.97a1.94 1.94 0 0 0 3.24 1.44l.31-.28c.29-.26.43-.4.59-.46a1 1 0 0 1 .8 0c.15.07.29.2.57.47.25.23.38.35.52.44a2 2 0 0 0 .76.3c.17.03.34.03.69.03h.35c1.68 0 2.52 0 3.08-.47l.24-.24c.47-.56.47-1.4.47-3.08v-6.12'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinejoin='round'
+      />
+      <path d='M10.6 8.83V4.9a1.4 1.4 0 1 1 2.8 0v3.93z' stroke='currentColor' strokeWidth='1.5' />
+    </svg>
+  )
+}

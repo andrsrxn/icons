@@ -11,9 +11,9 @@ export const IconWaveTriangle: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wave-triangle'
@@ -25,10 +25,10 @@ export const IconWaveTriangle: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m3.65 8.1.94-1.07C5.86 5.61 6.5 4.9 7.25 4.97s1.24.9 2.2 2.56l5.15 9.01c.93 1.63 1.4 2.44 2.15 2.52.76.09 1.4-.6 2.66-1.97l.95-1.03'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m3.654 8.093.938-1.059c1.265-1.427 1.897-2.14 2.662-2.062.766.079 1.24.906 2.187 2.56l5.163 9.013c.93 1.623 1.395 2.434 2.15 2.52.755.085 1.39-.602 2.658-1.977l.951-1.031'
+        strokeLinecap='round'
       />
     </svg>
   )

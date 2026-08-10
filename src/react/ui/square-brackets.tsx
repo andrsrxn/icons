@@ -11,9 +11,9 @@ export const IconSquareBrackets: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='square-brackets'
@@ -25,10 +25,10 @@ export const IconSquareBrackets: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M8.9 3.75h-.12c-1.89 0-2.83 0-3.41.58-.59.6-.59 1.53-.59 3.42v8.5c0 1.89 0 2.83.59 3.42.58.58 1.52.58 3.41.58h.13m6.18-16.5h.13c1.89 0 2.83 0 3.41.58.59.6.59 1.53.59 3.42v8.5c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.41.58h-.13'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.906 3.749H8.78c-1.885 0-2.828 0-3.414.586-.586.586-.586 1.528-.586 3.414v8.502c0 1.886 0 2.828.586 3.414.586.586 1.529.586 3.414.586h.126m6.188-16.502h.126c1.885 0 2.828 0 3.414.586.586.586.586 1.528.586 3.414v8.502c0 1.886 0 2.828-.586 3.414-.586.586-1.529.586-3.414.586h-.126'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconListAsterik: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='list-asterik'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M11.5 5.25a.75.75 0 0 0 0 1.5zm8.76 1.5a.75.75 0 1 0 0-1.5zm-8.76 4.5a.75.75 0 0 0 0 1.5zm8.76 1.5a.75.75 0 1 0 0-1.5zm-8.76 4.5a.75.75 0 0 0 0 1.5zm8.76 1.5a.75.75 0 1 0 0-1.5zM11.5 6v.75h8.76v-1.5H11.5zm0 6v.75h8.76v-1.5H11.5zm0 6v.75h8.76v-1.5H11.5z'
+        fill='currentColor'
+      />
+      <path
+        d='M6.04 10.5V4.85m0 14.29v-5.63'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='m3.6 6.26 4.9 2.82m-4.9 5.83 4.89 2.82m0-11.47L3.6 9.08m4.89 5.83L3.6 17.73'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

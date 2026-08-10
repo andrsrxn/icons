@@ -11,9 +11,9 @@ export const IconPresentation: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='presentation'
@@ -25,15 +25,15 @@ export const IconPresentation: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4.89 4H19.1v10.64H4.9zm8.77 14.95c0 .94-.74 1.7-1.66 1.7s-1.66-.76-1.66-1.7a1.66 1.66 0 1 1 3.32 0'
         fill='currentColor'
-        d='M4.89 4h14.22v10.638H4.89V4Zm8.77 14.954c0 .932-.743 1.687-1.66 1.687-.917 0-1.66-.755-1.66-1.686 0-.932.743-1.687 1.66-1.687.917 0 1.66.755 1.66 1.686Z'
         opacity='.2'
       />
       <path
+        d='M3.45 14.64h17.1m-11.8-2.78V8.32m6.55 3.54V9.83M12 16.94v-2.03m0-3.05V6.78M3.45 4h17.1M4.89 4H19.1v10.64H4.9zm8.77 14.95c0 .94-.74 1.7-1.66 1.7s-1.66-.76-1.66-1.7a1.66 1.66 0 1 1 3.32 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.45 14.638h17.1M8.753 11.86V8.32m6.545 3.54V9.827M12 16.941v-2.033m0-3.048V6.778M3.45 4h17.1M4.89 4h14.22v10.638H4.89V4Zm8.77 14.954c0 .932-.743 1.687-1.66 1.687-.917 0-1.66-.755-1.66-1.686 0-.932.743-1.687 1.66-1.687.917 0 1.66.755 1.66 1.686Z'
+        strokeLinecap='round'
       />
     </svg>
   )

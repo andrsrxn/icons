@@ -11,9 +11,9 @@ export const IconBroadcast: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='broadcast'
@@ -25,16 +25,16 @@ export const IconBroadcast: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M13.953 12a1.953 1.953 0 1 1-3.906 0 1.953 1.953 0 0 1 3.906 0Z'
         opacity='.2'
+        d='M13.95 12a1.95 1.95 0 1 1-3.9 0 1.95 1.95 0 0 1 3.9 0'
+        fill='currentColor'
       />
       <path
+        d='M16.2 8.82s1 1.3 1 3.18c0 2-1 3.18-1 3.18M7.8 8.82s-1 1.3-1 3.18c0 2 1 3.18 1 3.18m10.82-9.04c0 .02 1.85 2.4 1.85 5.86 0 3.7-1.85 5.86-1.85 5.86M5.38 6.14c0 .02-1.85 2.4-1.85 5.86a9.5 9.5 0 0 0 1.85 5.86M13.95 12a1.95 1.95 0 1 1-3.9 0 1.95 1.95 0 0 1 3.9 0'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M16.202 8.818c0 .01 1.005 1.3 1.005 3.182 0 2.006-1.005 3.182-1.005 3.182M7.798 8.818c0 .01-1.005 1.3-1.005 3.182 0 2.006 1.005 3.182 1.005 3.182m10.82-9.04c0 .018 1.85 2.392 1.85 5.858 0 3.694-1.85 5.858-1.85 5.858M5.382 6.142c0 .018-1.849 2.392-1.849 5.858 0 3.694 1.85 5.858 1.85 5.858M13.951 12a1.953 1.953 0 1 1-3.905 0 1.953 1.953 0 0 1 3.906 0Z'
       />
     </svg>
   )

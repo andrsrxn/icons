@@ -11,9 +11,9 @@ export const IconTextUnderline: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='text-underline'
@@ -25,10 +25,10 @@ export const IconTextUnderline: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4.53 20h14.94M6.4 4.13v6.92A5.74 5.74 0 0 0 12 17c2.88 0 5.6-2.38 5.6-5.95V4.12'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4.526 20h14.948M6.394 4.127v6.926c0 3.566 2.723 5.943 5.606 5.943s5.606-2.377 5.606-5.943v-6.93'
+        strokeLinecap='round'
       />
     </svg>
   )

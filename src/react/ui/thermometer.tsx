@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconThermometer: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='thermometer'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M10.3 13.87V5.16a1.7 1.7 0 0 1 3.4 0v8.71s1.47 1.6 1.47 2.99a3.17 3.17 0 1 1-6.34 0c0-1.38 1.47-3 1.47-3'
+        fill='currentColor'
+      />
+      <path
+        d='M10.16 14.19a3.42 3.42 0 1 0 3.68 0m-.06-.09v-9a1.78 1.78 0 0 0-3.56 0v9'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path d='M12.42 16.99a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0' fill='currentColor' />
+      <path
+        d='M12.42 16.99a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

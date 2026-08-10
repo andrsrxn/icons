@@ -5,9 +5,9 @@ export const IconX: Icon = ({ size = 24, className, title, 'aria-label': ariaLab
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='x'
@@ -19,11 +19,11 @@ export const IconX: Icon = ({ size = 24, className, title, 'aria-label': ariaLab
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M5 19 19 5m0 14L5 5'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M4.993 19.004 19 4.997m0 14.016L4.993 5.006'
       />
     </svg>
   )

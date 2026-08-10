@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconSkull: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='skull'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M4.57 11.1a7.43 7.43 0 1 1 12.22 5.68c-.42 2.75-3.06 2.78-4.79 2.75-1.76.02-4.37-.17-4.8-2.75a7.4 7.4 0 0 1-2.63-5.69M9 9.61 7.65 11.3 9 12.42l1.47-1.12zm4.72 1.89 1.14-1.56 1.5 1.14-1.16 1.8z'
+        fill='currentColor'
+      />
+      <path
+        d='M12 3.66a7.43 7.43 0 0 0-7.43 7.43c0 1.9 1.08 3.62 2.35 4.94.38.4.63.92.63 1.48 0 1.09.88 1.97 1.96 1.97h4.92c1.09 0 1.97-.88 1.97-1.97 0-.56.24-1.08.63-1.48 1.28-1.31 2.4-3.04 2.4-4.94 0-4.1-3.32-7.43-7.43-7.43Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M10.5 19.4v-1.83m3 1.83v-1.83m-3.17-6.46a1.26 1.26 0 1 1-2.53 0 1.26 1.26 0 0 1 2.53 0Zm5.87 0a1.26 1.26 0 1 1-2.53 0 1.26 1.26 0 0 1 2.53 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='m10.65 15 .58-.34a1.5 1.5 0 0 1 1.54 0l.58.35'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

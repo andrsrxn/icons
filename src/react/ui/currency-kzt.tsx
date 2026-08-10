@@ -11,9 +11,9 @@ export const IconCurrencyKzt: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='currency-kzt'
@@ -25,11 +25,11 @@ export const IconCurrencyKzt: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M5.25 8.75h13.5M5.25 5h13.5M12 8.75V20'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M5.25 8.75h13.5M5.25 5h13.5M12 8.75V20'
       />
     </svg>
   )

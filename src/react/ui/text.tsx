@@ -11,9 +11,9 @@ export const IconText: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='text'
@@ -25,11 +25,11 @@ export const IconText: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M19 6.13V5.9A2 2 0 0 0 17.1 4H7a2 2 0 0 0-1.9 1.9v.23M12.05 4v16m0 0h-2.2m2.2 0h2.2'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M19 6.133c0-.123 0-.185-.003-.238a2 2 0 0 0-1.892-1.892C17.052 4 16.99 4 16.867 4H7.235c-.124 0-.186 0-.238.003a2 2 0 0 0-1.893 1.892c-.002.053-.002.115-.002.238M12.05 4v16m0 0H9.846m2.205 0h2.205'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconTrendUp: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='trend-up'
@@ -25,10 +25,10 @@ export const IconTrendUp: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M20.25 12.6V9.11c0-.83-.68-1.5-1.5-1.5H15.3M3.75 16.96l4.98-4.98a1 1 0 0 1 1.43.01l2.25 2.33a1 1 0 0 0 1.44 0l6-6.23'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M20.245 12.59V9.119a1.5 1.5 0 0 0-1.5-1.5h-3.433M3.755 16.963l4.978-4.978a1 1 0 0 1 1.424.01l2.258 2.324a1 1 0 0 0 1.438-.004l5.988-6.222'
+        strokeLinecap='round'
       />
     </svg>
   )

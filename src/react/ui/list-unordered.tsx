@@ -11,9 +11,9 @@ export const IconListUnordered: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='list-unordered'
@@ -25,10 +25,10 @@ export const IconListUnordered: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M8.66 6h11.6m-11.6 6h11.6m-11.6 6h11.6M5.44 6a.78.78 0 1 1-1.56 0 .78.78 0 0 1 1.56 0Zm0 6a.78.78 0 1 1-1.56 0 .78.78 0 0 1 1.56 0Zm0 6a.78.78 0 1 1-1.56 0 .78.78 0 0 1 1.56 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.656 6h11.609M8.656 12h11.609M8.656 18h11.609M5.44 6a.779.779 0 1 1-1.558 0A.779.779 0 0 1 5.44 6Zm0 6.004a.779.779 0 1 1-1.558 0 .779.779 0 0 1 1.558 0Zm0 6.003a.779.779 0 1 1-1.558 0 .779.779 0 0 1 1.558 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

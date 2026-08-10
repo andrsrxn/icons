@@ -11,9 +11,9 @@ export const IconLuggage: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='luggage'
@@ -24,16 +24,29 @@ export const IconLuggage: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        fill='currentColor'
-        d='M5.908 7.302c0-1.682 0-2.523.433-3.046.433-.523 1.13-.523 2.524-.523h6.27c1.394 0 2.091 0 2.524.523.433.523.433 1.364.433 3.046v7.569c0 1.682 0 2.523-.433 3.046-.433.522-1.13.522-2.523.522H8.864c-1.394 0-2.091 0-2.524-.522-.433-.523-.433-1.364-.433-3.046V7.302Z'
+      <rect
         opacity='.2'
+        x='6.57'
+        y='8.13'
+        width='10.86'
+        height='10.86'
+        rx='2'
+        fill='currentColor'
+      />
+      <rect
+        x='6.57'
+        y='8.13'
+        width='10.86'
+        height='10.86'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth='1.5'
       />
       <path
+        d='M9.83 7.93V3.59m.56 11.94v-4.34m-1.65 9.22V19m5.43-11.07V3.59m-.56 11.94v-4.34m1.65 9.22V19m1.08-15.41H7.66'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M9.763 15.224V6.95m-1.4 13.571v-2.08m5.874-3.216V6.95m1.4 13.571v-2.08m-5.729 0h4.184c1.886 0 2.828 0 3.414-.586.586-.586.586-1.529.586-3.414V7.733c0-1.885 0-2.828-.586-3.414-.586-.586-1.528-.586-3.414-.586H9.908c-1.886 0-2.828 0-3.414.586-.586.586-.586 1.529-.586 3.414v6.707c0 1.885 0 2.828.586 3.414.586.585 1.528.585 3.414.585Z'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconDivide: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='divide'
@@ -25,15 +25,15 @@ export const IconDivide: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M14.16 6.16a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0m0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0'
         fill='currentColor'
-        d='M14.16 6.16a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Zm0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Z'
         opacity='.2'
       />
       <path
+        d='M3.64 12h16.72m-6.2-5.84a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Zm0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.636 12h16.728M14.16 6.16a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Zm0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

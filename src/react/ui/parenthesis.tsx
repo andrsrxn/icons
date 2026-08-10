@@ -11,9 +11,9 @@ export const IconParenthesis: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='parenthesis'
@@ -25,10 +25,10 @@ export const IconParenthesis: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M15.6 3.75s3.88 2.14 3.88 8.32c0 6.19-3.88 8.18-3.88 8.18M8.42 3.75S4.54 5.9 4.54 12.07c0 6.19 3.88 8.18 3.88 8.18'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M15.604 3.754s3.879 2.132 3.879 8.317c0 6.184-3.879 8.175-3.879 8.175M8.418 3.754S4.54 5.886 4.54 12.07c0 6.184 3.88 8.175 3.88 8.175'
+        strokeLinecap='round'
       />
     </svg>
   )

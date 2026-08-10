@@ -11,9 +11,9 @@ export const IconMinus: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='minus'
@@ -25,11 +25,11 @@ export const IconMinus: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.61 12H20.4'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M3.613 12h16.774'
       />
     </svg>
   )

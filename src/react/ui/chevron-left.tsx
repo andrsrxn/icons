@@ -11,9 +11,9 @@ export const IconChevronLeft: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='chevron-left'
@@ -25,10 +25,10 @@ export const IconChevronLeft: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m14.96 19.58-4.94-4.67c-1.44-1.36-2.16-2.04-2.16-2.9s.72-1.55 2.16-2.9l4.94-4.69'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m14.956 19.576-4.935-4.664c-1.442-1.363-2.162-2.044-2.163-2.905 0-.86.72-1.543 2.16-2.906l4.938-4.678'
+        strokeLinecap='round'
       />
     </svg>
   )

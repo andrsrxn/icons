@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconMagnet: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='magnet'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path opacity='.2' fill='currentColor' d='M4.35 4.47H8v3.65H4.35zm11.85 0h3.65v3.65H16.2z' />
+      <path
+        d='M12 19.76c4.55 0 8.25-3.7 8.25-8.25V5.24a1 1 0 0 0-1-1h-2.52a1 1 0 0 0-1 1v4.87c0 3.1-.9 5.56-3.73 5.56s-3.73-2.4-3.73-5.56V5.24a1 1 0 0 0-1-1H4.75a1 1 0 0 0-1 1v6.27c0 4.56 3.7 8.25 8.25 8.25Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M3.75 8.41H8m7.8 0h4.45'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

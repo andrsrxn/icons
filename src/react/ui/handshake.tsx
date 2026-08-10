@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconHandshake: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='handshake'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M6.2 8.58H3.3v7.57h1.53L7.53 18h4.7l2.47-1.85.3-2.83-2.41-1.44-2.67.63-1.61-2.5 2.01-2.8-1.42-.23z'
+        fill='currentColor'
+      />
+      <path
+        d='M20.54 8.05s-1.34.11-2.33-.05c-1.21-.2-1.59-1.2-2.68-1.73-1.1-.53-2.4-.44-3.73 0-1.35.44-2.47 1.9-3.18 3.09l-.13.25c-.3.68-.09 1.7.44 2.23l.33.26c.23.17.35.26.46.32a2 2 0 0 0 2.2-.16c.1-.08.2-.18.41-.39l1.95-1.95'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M3.54 8.66s1.64.24 2.64 0c1.15-.28 1.48-1.24 2.64-1.47.73-.14 1.42 0 1.42 0m10.32 8.11s-1.61-.26-2.59 0c-1.03.26-1.31 1.18-2.37 1.36-.5.08-1.29 0-1.29 0'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M3.44 16.13s1.12-.14 1.82 0C6.4 16.36 6.78 18 8.1 18h3.26c1.41 0 1.86-.2 2.45-.8a3.8 3.8 0 0 0 1.04-3.66c-.32-1.06-2.08-1.71-2.08-1.71'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

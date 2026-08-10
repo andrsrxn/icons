@@ -11,9 +11,9 @@ export const IconCurrencyGtq: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='currency-gtq'
@@ -25,15 +25,15 @@ export const IconCurrencyGtq: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M18.674 12a7.488 7.488 0 1 1-14.975 0 7.488 7.488 0 0 1 14.975 0Z'
         opacity='.2'
+        d='M18.67 12A7.49 7.49 0 1 1 3.7 12a7.49 7.49 0 0 1 14.97 0'
+        fill='currentColor'
       />
       <path
+        d='m12.82 13.65 7.51 5.64M18.67 12A7.49 7.49 0 1 1 3.7 12a7.49 7.49 0 0 1 14.97 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m12.82 13.65 7.511 5.642M18.674 12a7.488 7.488 0 1 1-14.975 0 7.488 7.488 0 0 1 14.975 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconSmileyBlank: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='smiley-blank'
@@ -25,25 +25,25 @@ export const IconSmileyBlank: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M20.358 12a8.358 8.358 0 1 1-16.716 0 8.358 8.358 0 0 1 16.716 0Z'
         opacity='.2'
-      />
-      <path
+        d='M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0'
         fill='currentColor'
-        d='M9.915 9.49a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Zm5.358 0a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Z'
       />
       <path
-        stroke='currentColor'
-        strokeLinecap='round'
-        strokeWidth='1.5'
-        d='M20.358 12a8.358 8.358 0 1 1-16.716 0 8.358 8.358 0 0 1 16.716 0Z'
+        d='M9.91 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0m5.36 0a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0'
+        fill='currentColor'
       />
       <path
+        d='M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M9.915 9.49a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Zm5.358 0a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Z'
+        strokeLinecap='round'
+      />
+      <path
+        d='M9.91 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0Zm5.36 0a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
       />
     </svg>
   )

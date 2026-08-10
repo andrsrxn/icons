@@ -11,9 +11,9 @@ export const IconWifiMedium: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wifi-medium'
@@ -25,10 +25,10 @@ export const IconWifiMedium: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M8.23 15.25S9.5 13.69 12 13.69s3.77 1.56 3.77 1.56M5.61 12.33S7.77 9.55 12 9.55a8.4 8.4 0 0 1 6.39 2.78m-5.57 6.09a.82.82 0 1 1-1.64 0 .82.82 0 0 1 1.64 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.228 15.25S9.501 13.69 12 13.69c2.499 0 3.772 1.56 3.772 1.56M5.61 12.33S7.766 9.55 12 9.55s6.39 2.78 6.39 2.78m-5.568 6.087a.822.822 0 1 1-1.643 0 .822.822 0 0 1 1.643 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

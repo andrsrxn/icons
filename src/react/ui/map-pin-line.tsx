@@ -11,9 +11,9 @@ export const IconMapPinLine: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='map-pin-line'
@@ -25,15 +25,15 @@ export const IconMapPinLine: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.817 7.63a3.817 3.817 0 1 1-7.634 0 3.817 3.817 0 0 1 7.634 0Z'
         opacity='.2'
+        d='M15.82 7.63a3.82 3.82 0 1 1-7.64 0 3.82 3.82 0 0 1 7.64 0'
+        fill='currentColor'
       />
       <path
+        d='M12 11.56v9.07m3.82-13a3.82 3.82 0 1 1-7.64 0 3.82 3.82 0 0 1 7.64 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 11.56v9.066M15.817 7.63a3.817 3.817 0 1 1-7.634 0 3.817 3.817 0 0 1 7.634 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

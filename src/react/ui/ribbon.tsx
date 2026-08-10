@@ -1,0 +1,56 @@
+import type { Icon } from './types'
+
+export const IconRibbon: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='ribbon'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m6.17 8.62 1.68-2.98 4.18 4.8-2.41 3.18zm6.06 8.28 2.31-3.07 3.71 3.7-.61 2.55-2.88.26z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m8.37 6.4-.33-.36a1 1 0 0 1-.11-1.22l.44-.68a1 1 0 0 1 .84-.46h5.63a1 1 0 0 1 .8.4l.5.67a1 1 0 0 1-.12 1.34l-.4.37a1 1 0 0 1-.67.26H9.1a1 1 0 0 1-.73-.32'
+        fill='currentColor'
+      />
+      <path
+        d='m17.77 7.77-1.2-2.13L6.54 17.1a1.5 1.5 0 0 0-.37.99v.75c0 .83.67 1.5 1.5 1.5H8.9c.48 0 .93-.23 1.2-.61L17.69 9.4a1.5 1.5 0 0 0 .1-1.63Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='m14.59 13.73 2.88 3.36q.36.42.36.97v.78c0 .83-.67 1.5-1.5 1.5H15.1a1.5 1.5 0 0 1-1.2-.6l-1.87-2.5m-.34-6.74L7.43 5.64l-1.2 2.13a1.5 1.5 0 0 0 .1 1.63l2.93 4.01'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M7.14 6.16 8 4.64a2 2 0 0 1 1.74-1.01h4.54a2 2 0 0 1 1.74 1.01l.86 1.52m-8.36.56h6.98'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

@@ -11,9 +11,9 @@ export const IconHashtag: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='hashtag'
@@ -25,15 +25,15 @@ export const IconHashtag: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M13.825 15.002H8.778a1 1 0 0 1-.922-1.385l1.669-4a1 1 0 0 1 .922-.615h4.844a1 1 0 0 1 .939 1.345l-1.466 4a1 1 0 0 1-.939.655Z'
         opacity='.2'
+        d='M13.83 15H8.78a1 1 0 0 1-.92-1.38l1.66-4a1 1 0 0 1 .93-.62h4.84a1 1 0 0 1 .94 1.35l-1.47 4a1 1 0 0 1-.93.65'
+        fill='currentColor'
       />
       <path
+        d='m5.5 20 6.02-16m.98 16 6-16M20 9H4m16 6H4'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M5.501 20.005 11.517 4m.984 16.005L18.5 4M20 9H4m16 6H4'
+        strokeLinecap='round'
       />
     </svg>
   )

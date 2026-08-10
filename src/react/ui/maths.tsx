@@ -11,9 +11,9 @@ export const IconMaths: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='maths'
@@ -25,10 +25,10 @@ export const IconMaths: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.71 7.3h6.5m4.08 6.92 5.52 5.52M6.96 4.04v6.5m12.85 3.68-5.52 5.52m6-12.45h-6.22m-3.85 11.18h-6.5m6.5-2.94h-6.5'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m3.713 7.294 6.506-.003m4.07 6.933 5.522 5.518M6.965 4.039l.002 6.506m12.841 3.677-5.517 5.522m5.996-12.45h-6.215M10.219 18.47H3.714m6.505-2.936H3.714'
+        strokeLinecap='round'
       />
     </svg>
   )

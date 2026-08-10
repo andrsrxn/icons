@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconBounceLeft: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='bounce-left'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <circle
+        opacity='.2'
+        cx='2.63'
+        cy='2.63'
+        r='2.63'
+        transform='matrix(-1 0 0 1 8.76 5.17)'
+        fill='currentColor'
+      />
+      <path
+        d='M20.5 14.15a5 5 0 0 0-2.84 1.88c-1.06 1.26-1.44 2.8-1.44 2.8s-.36-3.53-1.38-5.25a8.2 8.2 0 0 0-3.86-3.54'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <circle
+        cx='2.63'
+        cy='2.63'
+        r='2.63'
+        transform='matrix(-1 0 0 1 8.76 5.17)'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+    </svg>
+  )
+}

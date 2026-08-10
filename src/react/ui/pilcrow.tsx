@@ -11,9 +11,9 @@ export const IconPilcrow: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='pilcrow'
@@ -25,15 +25,15 @@ export const IconPilcrow: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M13.997 7.516c0-1.886 0-2.829.133-3.414.132-.586.345-.586.77-.586h1.916c.425 0 .638 0 .77.586.133.585.133 1.528.133 3.414V16c0 1.886 0 2.828-.133 3.414-.132.586-.345.586-.77.586H14.9c-.425 0-.638 0-.77-.586-.133-.586-.133-1.528-.133-3.414V7.516Z'
         opacity='.2'
+        d='M14 7.52c0-1.89 0-2.83.13-3.42s.34-.58.77-.58h1.92c.42 0 .63 0 .77.58.13.59.13 1.53.13 3.42V16c0 1.89 0 2.83-.13 3.41-.14.59-.35.59-.77.59H14.9c-.43 0-.64 0-.77-.59C14 18.83 14 17.9 14 16z'
+        fill='currentColor'
       />
       <path
+        d='M17.72 3.68v16.64m-3.8-16.64v16.64M19.8 3.68H9.4c-2.87 0-5.2 2.1-5.2 4.68s2.31 4.68 5.2 4.68h4.51m-1.85 7.28h7.74'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M17.719 3.682v16.636M13.915 3.682v16.636m5.883-16.636H9.401c-2.872 0-5.2 2.095-5.2 4.679s2.31 4.679 5.2 4.679h4.514m-1.858 7.278h7.741'
+        strokeLinecap='round'
       />
     </svg>
   )

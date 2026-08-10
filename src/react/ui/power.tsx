@@ -11,9 +11,9 @@ export const IconPower: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='power'
@@ -25,15 +25,15 @@ export const IconPower: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M19.73 12.734a7.73 7.73 0 1 1-15.46 0 7.73 7.73 0 0 1 15.46 0Z'
         opacity='.2'
+        d='M19.73 12.73a7.73 7.73 0 1 1-15.46 0 7.73 7.73 0 0 1 15.46 0'
+        fill='currentColor'
       />
       <path
+        d='M16.4 6.37a7.72 7.72 0 1 1-8.8 0M12 13.1V3.64'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M16.396 6.374a7.73 7.73 0 1 1-8.791 0M12 13.102V3.635'
+        strokeLinecap='round'
       />
     </svg>
   )

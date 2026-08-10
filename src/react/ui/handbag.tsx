@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconHandbag: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='handbag'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M4 9.18h16v2c0 3.77 0 5.65-1.17 6.82-1.17 1.18-3.06 1.18-6.83 1.18s-5.66 0-6.83-1.18C4 16.83 4 14.95 4 11.18z'
+        fill='currentColor'
+      />
+      <path
+        d='M16 9.18c0-2.43-.59-4.36-4-4.36s-4 2.1-4 4.36'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M3.75 12.5c0-1.24 0-1.86.26-2.32a2 2 0 0 1 .74-.74c.46-.26 1.08-.26 2.33-.26h9.84c1.25 0 1.87 0 2.33.26a2 2 0 0 1 .74.74c.26.46.26 1.08.26 2.33 0 2.5 0 3.74-.53 4.67a4 4 0 0 1-1.47 1.46c-.92.54-2.17.54-4.66.54H10.4c-2.49 0-3.74 0-4.66-.54a4 4 0 0 1-1.47-1.46c-.53-.93-.53-2.18-.53-4.67Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+    </svg>
+  )
+}

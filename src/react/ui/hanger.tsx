@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconHanger: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='hanger'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M3.62 16.08v-.18a2 2 0 0 1 1.3-1.79l5.33-2.27c.74-.31 1.11-.47 1.5-.48.4 0 .77.14 1.51.43l5.34 2.06.33.14a2 2 0 0 1 1.1 2.14c-.01.23-.02.35-.04.45a2 2 0 0 1-1.77 1.64l-.44.01H5.5a2 2 0 0 1-1.89-1.89z'
+        fill='currentColor'
+      />
+      <path
+        d='M4.44 16.72c-.23-.65-.35-.98-.34-1.28q.04-.57.44-.99c.21-.2.54-.34 1.18-.6l5.24-2.15c.57-.23.85-.35 1.15-.35s.58.12 1.15.35l5.1 2.13c.65.27.98.4 1.19.63q.39.4.42.97c.02.3-.1.64-.35 1.3-.19.5-.28.75-.43.94q-.28.34-.7.48c-.23.08-.5.08-1.02.08H6.59c-.53 0-.8 0-1.02-.07a1.5 1.5 0 0 1-.71-.5c-.15-.2-.24-.44-.42-.94Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M10.14 6.86a1.86 1.86 0 1 1 3.72 0q0 .42-.17.74c-.51.97-1.69 1.77-1.69 2.87v.73'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

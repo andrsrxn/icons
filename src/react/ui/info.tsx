@@ -11,9 +11,9 @@ export const IconInfo: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='info'
@@ -25,16 +25,16 @@ export const IconInfo: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M20.434 12a8.434 8.434 0 1 1-16.868 0 8.434 8.434 0 0 1 16.868 0Z'
         opacity='.2'
+        d='M20.43 12a8.43 8.43 0 1 1-16.86 0 8.43 8.43 0 0 1 16.86 0'
+        fill='currentColor'
       />
-      <path fill='currentColor' d='M12.271 7.93a.52.52 0 1 1-1.042 0 .52.52 0 0 1 1.042 0Z' />
+      <path d='M12.27 7.93a.52.52 0 1 1-1.04 0 .52.52 0 0 1 1.04 0' fill='currentColor' />
       <path
+        d='M11.75 11.18v4.64c0 .82.58 1.38 1.48 1.38M12 20.43a8.43 8.43 0 1 0 0-16.86 8.43 8.43 0 0 0 0 16.86Zm.27-12.5a.52.52 0 1 1-1.04 0 .52.52 0 0 1 1.04 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M11.75 11.179v4.637c0 .824.579 1.384 1.482 1.384M12 20.434a8.434 8.434 0 1 0 0-16.868 8.434 8.434 0 0 0 0 16.868Zm.271-12.504a.52.52 0 1 1-1.042 0 .52.52 0 0 1 1.042 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

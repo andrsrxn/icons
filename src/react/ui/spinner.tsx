@@ -11,9 +11,9 @@ export const IconSpinner: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='spinner'
@@ -25,10 +25,10 @@ export const IconSpinner: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M12 20.5v-3.05m-6 .56 2.14-2.15M6.54 12H3.5m4.64-3.86L6 6m6.01.56V3.5m3.86 4.64L18 6m0 12.02-2.15-2.15M20.5 12h-3.05'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 20.495v-3.04m-6.007.552 2.15-2.15M6.545 12h-3.04m4.638-3.857-2.15-2.15M12 6.545v-3.04m3.857 4.638 2.15-2.15m0 12.014-2.15-2.15M20.495 12h-3.04'
+        strokeLinecap='round'
       />
     </svg>
   )

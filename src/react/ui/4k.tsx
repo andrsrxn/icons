@@ -11,9 +11,9 @@ export const Icon4k: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='4k'
@@ -25,11 +25,11 @@ export const Icon4k: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.54 4.48h16.92M3.54 19.52h16.92M9.3 13.45H4.57a.2.2 0 0 1-.16-.32l4.53-5.7a.2.2 0 0 1 .36.12zm0 0h1.22m-1.22 0v3.22m3.81-9.4v4.7m0 0v4.7m0-4.7 4.94-4.5m-4.94 4.5 4.93 4.58'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M3.542 4.481h16.916M3.542 19.52h16.916M9.3 13.45H4.571a.2.2 0 0 1-.157-.324l4.529-5.702a.2.2 0 0 1 .356.124v5.902Zm0 0h1.219m-1.219 0v3.219m3.812-9.398v4.699m0 0v4.699m0-4.7 4.938-4.5m-4.938 4.5 4.929 4.576'
       />
     </svg>
   )

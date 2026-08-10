@@ -11,9 +11,9 @@ export const IconSearchMinus: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='search-minus'
@@ -25,15 +25,15 @@ export const IconSearchMinus: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M17.337 10.546a6.873 6.873 0 1 1-13.746 0 6.873 6.873 0 0 1 13.746 0Z'
         opacity='.2'
+        d='M17.34 10.55a6.87 6.87 0 1 1-13.75 0 6.87 6.87 0 0 1 13.75 0'
+        fill='currentColor'
       />
       <path
+        d='M7.17 10.55h6.59m1.62 4.8a6.87 6.87 0 1 0-9.82-9.62 6.87 6.87 0 0 0 9.82 9.62Zm0 0 4.9 4.9'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M7.171 10.546h6.585m1.62 4.807a6.873 6.873 0 1 0-9.824-9.615 6.873 6.873 0 0 0 9.824 9.615Zm0 0 4.9 4.9'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconGitPrDraft: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='git-pr-draft'
@@ -25,19 +25,19 @@ export const IconGitPrDraft: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m0 11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m11 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'
         fill='currentColor'
-        d='M9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0 11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm11 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z'
         opacity='.2'
       />
       <path
+        d='M18 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0-4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
         fill='currentColor'
-        d='M18 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm0-4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z'
       />
       <path
-        stroke='currentColor'
-        strokeLinecap='round'
-        strokeWidth='1.5'
         d='M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0v6m0 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM20 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM18 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm0-4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
       />
     </svg>
   )

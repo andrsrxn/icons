@@ -1,0 +1,56 @@
+import type { Icon } from './types'
+
+export const IconUnplug: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='unplug'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M4.89 13.12c.44-1 .67-1.51 1.07-1.66a1 1 0 0 1 .3-.05c.44-.01.83.38 1.6 1.15l3.83 3.83c.74.74 1.12 1.11 1.12 1.53a1 1 0 0 1-.06.33c-.14.4-.62.62-1.57 1.07-1.01.48-1.52.72-2.03.69a2 2 0 0 1-.43-.08c-.5-.14-.89-.53-1.68-1.32l-1.4-1.4c-.78-.79-1.17-1.18-1.32-1.67l-.07-.39c-.04-.51.18-1.02.64-2.03m14.22-2.24c-.44 1-.67 1.51-1.07 1.66a1 1 0 0 1-.3.05c-.44.01-.83-.37-1.6-1.15L12.3 7.6c-.74-.74-1.12-1.11-1.12-1.53a1 1 0 0 1 .06-.33c.14-.4.62-.62 1.57-1.07 1.01-.48 1.52-.72 2.03-.69a2 2 0 0 1 .43.08c.5.14.89.53 1.68 1.32l1.4 1.4c.78.79 1.17 1.18 1.32 1.67l.07.39c.04.51-.18 1.02-.64 2.03'
+        fill='currentColor'
+      />
+      <path
+        d='M4.45 13.62c.52-1.01.79-1.52 1.18-1.74a1.5 1.5 0 0 1 1.04-.17c.44.1.84.5 1.65 1.31l2.86 2.86c.8.8 1.21 1.2 1.3 1.65q.12.55-.16 1.03c-.21.4-.72.66-1.72 1.19-.58.3-.87.45-1.17.48a1.5 1.5 0 0 1-.71-.1c-.28-.12-.5-.35-.97-.82l-2.86-2.86a3 3 0 0 1-.8-.96 1.5 1.5 0 0 1-.11-.7c.02-.3.17-.59.47-1.17Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='m8.13 12.83 2.28-2.29m.95 5.52 2.28-2.29M3.98 20.2l2.33-2.32'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M19.55 10.38c-.52 1.01-.79 1.52-1.18 1.74a1.5 1.5 0 0 1-1.04.17c-.44-.1-.84-.5-1.65-1.31l-2.86-2.86c-.8-.8-1.21-1.2-1.3-1.65a1.5 1.5 0 0 1 .16-1.03c.21-.4.72-.66 1.72-1.19.58-.3.87-.45 1.17-.48q.37-.03.71.1c.28.12.5.35.97.82l2.86 2.86c.46.46.69.68.8.96q.14.34.11.7c-.02.3-.17.59-.47 1.17Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='m20.02 3.8-2.33 2.32'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

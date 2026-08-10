@@ -11,9 +11,9 @@ export const IconWebcam: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='webcam'
@@ -25,15 +25,15 @@ export const IconWebcam: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.828 10.186a3.828 3.828 0 1 1-7.656 0 3.828 3.828 0 0 1 7.656 0Z'
         opacity='.2'
+        d='M15.83 10.19a3.83 3.83 0 1 1-7.66 0 3.83 3.83 0 0 1 7.66 0'
+        fill='currentColor'
       />
       <path
+        d='M12 16.64a6.45 6.45 0 1 0 0-12.9 6.45 6.45 0 0 0 0 12.9Zm0 0v3.63m-3.73 0h7.46m.1-10.08a3.83 3.83 0 1 1-7.66 0 3.83 3.83 0 0 1 7.66 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 16.637a6.451 6.451 0 1 0 0-12.902 6.451 6.451 0 0 0 0 12.902Zm0 0v3.628m-3.733 0h7.466m.095-10.08a3.828 3.828 0 1 1-7.656 0 3.828 3.828 0 0 1 7.656 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

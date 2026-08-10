@@ -11,9 +11,9 @@ export const IconWaveSawtooth: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wave-sawtooth'
@@ -25,10 +25,10 @@ export const IconWaveSawtooth: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m3.72 9 6.76-4.08a1 1 0 0 1 1.52.85v12.28a1 1 0 0 0 1.58.82L20.35 14'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m3.715 9 6.768-4.085A1 1 0 0 1 12 5.771v12.281a1 1 0 0 0 1.583.813l6.765-4.851'
+        strokeLinecap='round'
       />
     </svg>
   )

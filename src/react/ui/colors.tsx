@@ -11,9 +11,9 @@ export const IconColors: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='colors'
@@ -25,16 +25,16 @@ export const IconColors: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M16.544 8.819a4.55 4.55 0 0 1-.39 1.847 4.537 4.537 0 0 0-4.671 2.668 4.53 4.53 0 0 0-.392 1.847c0 1.023.338 1.968.909 2.727a4.545 4.545 0 1 1-4.153-7.242 4.544 4.544 0 1 1 8.698-1.847Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M16.54 8.82q0 1-.39 1.85l-.51-.03A4.54 4.54 0 0 0 12 17.9a4.54 4.54 0 1 1-4.15-7.24A4.53 4.53 0 0 1 12 4.27a4.54 4.54 0 0 1 4.54 4.55'
+        fill='currentColor'
       />
       <path
+        d='M16.15 10.67q.39-.87.4-1.85a4.54 4.54 0 1 0-5.07 4.51m0 0a4.55 4.55 0 1 1 8.3 3.7 4.55 4.55 0 0 1-8.3-3.7Zm-3.63-2.66A4.55 4.55 0 1 0 12 17.9'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M16.153 10.666a4.545 4.545 0 1 0-4.671 2.668m0 0a4.537 4.537 0 0 1 4.671-2.668 4.545 4.545 0 1 1-4.67 2.668Zm-3.635-2.668A4.545 4.545 0 1 0 12 17.908'
       />
     </svg>
   )

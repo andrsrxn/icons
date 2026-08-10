@@ -11,9 +11,9 @@ export const IconTree: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='tree'
@@ -25,15 +25,15 @@ export const IconTree: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.263 16.175H8.737a2 2 0 0 1-2-2V8.833A5.252 5.252 0 0 1 12 3.587a5.252 5.252 0 0 1 5.263 5.245v5.343a2 2 0 0 1-2 2Z'
         opacity='.2'
+        d='M15.26 16.17H8.74a2 2 0 0 1-2-2V8.84a5.25 5.25 0 0 1 10.52 0v5.34a2 2 0 0 1-2 2'
+        fill='currentColor'
       />
       <path
+        d='M12 20.23V8m0 3 2.4-1.39M12 12.7l-2.4-1.38m-.64 8.92h6.08m-6.3-4.06h6.52a2 2 0 0 0 2-2V8.83a5.25 5.25 0 0 0-10.52 0v5.35c0 1.1.9 2 2 2Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 20.23V8m0 3 2.4-1.385M12 12.693l-2.4-1.386m-.642 8.924h6.084m-6.305-4.056h6.526a2 2 0 0 0 2-2V8.832A5.252 5.252 0 0 0 12 3.587a5.252 5.252 0 0 0-5.263 5.245v5.344a2 2 0 0 0 2 1.999Z'
+        strokeLinecap='round'
       />
     </svg>
   )

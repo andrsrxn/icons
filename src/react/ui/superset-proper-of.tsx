@@ -11,9 +11,9 @@ export const IconSupersetProperOf: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='superset-proper-of'
@@ -25,10 +25,10 @@ export const IconSupersetProperOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4.88 5.61h8.34a6.3 6.3 0 0 1 3.33 11.66l-.23.14a6.4 6.4 0 0 1-3.4.98H4.87'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4.885 5.612h8.334c1.01 0 2.006.243 2.902.708 4.34 2.25 4.58 8.37.429 10.952l-.227.141a6.458 6.458 0 0 1-3.411.974H4.885'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconTextAlignLeft: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='text-align-left'
@@ -25,10 +25,10 @@ export const IconTextAlignLeft: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4 4.98h16M4 9.66h10M4 14.34h16M4 19.02h10'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4 4.975h16M4 9.658h10M4 14.342h16M4 19.025h10'
+        strokeLinecap='round'
       />
     </svg>
   )

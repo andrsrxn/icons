@@ -1,0 +1,40 @@
+import type { Icon } from './types'
+
+export const IconFemale: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='female'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M7.23 8.31c0 1.05-.41 2.4-.85 3.48-.28.7.21 1.51.97 1.51h1.78a1 1 0 0 1 1 1v.25c0 .47-.32.88-.77 1.02-.92.3-2.44.9-3.14 1.86a6 6 0 0 0-.76 1.7.9.9 0 0 0 .9 1.17h11.29c.62 0 1.08-.56.9-1.15a6 6 0 0 0-.74-1.72c-.71-.99-2.3-1.59-3.26-1.87a1.1 1.1 0 0 1-.79-1.03v-.23a1 1 0 0 1 1-1h1.87c.76 0 1.26-.82.98-1.53a11 11 0 0 1-.76-2.8c-.17-1.69.42-3.67-1.14-4.14-.91-.28-1.61-.28-2.27.03a.6.6 0 0 1-.76-.18c-.37-.47-1-.98-2.37-.98-2.28 0-3.1 2.55-3.08 4.61'
+        fill='currentColor'
+      />
+      <path
+        d='M7.23 8.31c0 1.05-.41 2.4-.85 3.48-.28.7.21 1.51.97 1.51h1.78a1 1 0 0 1 1 1v.25c0 .47-.32.88-.77 1.02-.92.3-2.44.9-3.14 1.86a6 6 0 0 0-.76 1.7.9.9 0 0 0 .9 1.17h11.29c.62 0 1.08-.56.9-1.15a6 6 0 0 0-.74-1.72c-.71-.99-2.3-1.59-3.26-1.87a1.1 1.1 0 0 1-.79-1.03v-.23a1 1 0 0 1 1-1h1.87c.76 0 1.26-.82.98-1.53a11 11 0 0 1-.76-2.8c-.17-1.69.42-3.67-1.14-4.14-.91-.28-1.61-.28-2.27.03a.6.6 0 0 1-.76-.18c-.37-.47-1-.98-2.37-.98-2.28 0-3.1 2.55-3.08 4.61Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

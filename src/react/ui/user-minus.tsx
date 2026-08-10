@@ -11,9 +11,9 @@ export const IconUserMinus: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='user-minus'
@@ -26,19 +26,16 @@ export const IconUserMinus: Icon = ({
       {title ? <title>{title}</title> : null}
       <g opacity='.2'>
         <path
+          d='M12 13.07a7.6 7.6 0 0 0-7.41 6.48c-.07.55.38 1 .93 1h12.96c.55 0 1-.45.93-1A7.6 7.6 0 0 0 12 13.07'
           fill='currentColor'
-          d='M12 13.068c-3.572 0-6.904 2.716-7.41 6.48-.074.547.38.998.933.998h12.954c.553 0 1.008-.45.934-.998-.507-3.764-3.84-6.48-7.411-6.48Z'
         />
-        <path
-          fill='currentColor'
-          d='M16.807 8.261a4.807 4.807 0 1 1-9.614 0 4.807 4.807 0 0 1 9.614 0Z'
-        />
+        <path d='M16.8 8.26a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0' fill='currentColor' />
       </g>
       <path
+        d='M12 13.07a4.8 4.8 0 1 0 0-9.62 4.8 4.8 0 0 0 0 9.62Zm0 0a7.54 7.54 0 0 0-7.48 7.48M12 13.07q1.31 0 2.52.46m6.09 4.26H15'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 13.068a4.807 4.807 0 1 0 0-9.613 4.807 4.807 0 0 0 0 9.613Zm0 0c-3.88 0-7.477 3.205-7.477 7.478M12 13.068c.868 0 1.721.16 2.524.457m6.082 4.262H15'
+        strokeLinecap='round'
       />
     </svg>
   )

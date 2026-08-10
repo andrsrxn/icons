@@ -11,9 +11,9 @@ export const IconTextItalic: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='text-italic'
@@ -25,10 +25,10 @@ export const IconTextItalic: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M13.67 4 9.38 20m2.24-16h4.1M7.33 20h4.1'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M13.67 4 9.381 20m2.237-16h4.1M7.332 20h4.1'
+        strokeLinecap='round'
       />
     </svg>
   )

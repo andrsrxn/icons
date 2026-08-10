@@ -11,9 +11,9 @@ export const IconGitCommit: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='git-commit'
@@ -25,15 +25,15 @@ export const IconGitCommit: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.324 12a3.324 3.324 0 1 1-6.648 0 3.324 3.324 0 0 1 6.648 0Z'
         opacity='.2'
+        d='M15.32 12a3.32 3.32 0 1 1-6.64 0 3.32 3.32 0 0 1 6.64 0'
+        fill='currentColor'
       />
       <path
+        d='M8.68 12a3.32 3.32 0 0 1 6.64 0m-6.64 0a3.32 3.32 0 1 0 6.64 0m-6.64 0H4m11.32 0h5.18'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.676 12a3.324 3.324 0 0 1 6.648 0m-6.648 0a3.324 3.324 0 1 0 6.648 0m-6.648 0H4m11.324 0h5.171'
+        strokeLinecap='round'
       />
     </svg>
   )

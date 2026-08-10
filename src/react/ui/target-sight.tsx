@@ -11,9 +11,9 @@ export const IconTargetSight: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='target-sight'
@@ -24,16 +24,12 @@ export const IconTargetSight: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <path opacity='.2' d='M14.6 12a2.6 2.6 0 1 1-5.2 0 2.6 2.6 0 0 1 5.2 0' fill='currentColor' />
       <path
-        fill='currentColor'
-        d='M14.605 12a2.605 2.605 0 1 1-5.21 0 2.605 2.605 0 0 1 5.21 0Z'
-        opacity='.2'
-      />
-      <path
+        d='M12 6.6V2.86m0 18.28V17.4M6.6 12H2.86m18.28 0H17.4m1.87 0a7.27 7.27 0 1 1-14.54 0 7.27 7.27 0 0 1 14.54 0Zm-4.66 0a2.6 2.6 0 1 1-5.22 0 2.6 2.6 0 0 1 5.22 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M11.995 6.595V2.856m0 18.288v-3.74m-5.4-5.399H2.856m18.288 0h-3.74m1.87-.005a7.274 7.274 0 1 1-14.548 0 7.274 7.274 0 0 1 14.548 0Zm-4.669 0a2.605 2.605 0 1 1-5.21 0 2.605 2.605 0 0 1 5.21 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -11,9 +11,9 @@ export const IconAt: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='at'
@@ -25,16 +25,16 @@ export const IconAt: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.86 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0Z'
         opacity='.2'
+        d='M15.86 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0'
+        fill='currentColor'
       />
       <path
+        d='M15.13 19.73q-1.46.6-3.13.61A8.34 8.34 0 1 1 20.34 12a7.3 7.3 0 0 1-1.03 4.02c-.39.63-.94 1.2-1.7 1.2-1.7 0-1.7-2.1-1.7-2.1V7.84M15.85 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M15.127 19.734A8.34 8.34 0 1 1 20.34 12c0 1.456-.253 2.75-1.028 4.016-.386.631-.943 1.196-1.697 1.196-1.71 0-1.71-2.085-1.71-2.085V7.83M15.86 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0Z'
       />
     </svg>
   )

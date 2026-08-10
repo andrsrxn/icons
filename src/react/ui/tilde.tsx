@@ -11,9 +11,9 @@ export const IconTilde: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='tilde'
@@ -25,10 +25,10 @@ export const IconTilde: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.63 12.93s1.8-1.86 4.65-1.86 5.55 1.86 8.37 1.86 3.72-1.86 3.72-1.86'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.627 12.93s1.795-1.86 4.652-1.86c2.856 0 5.556 1.86 8.373 1.86 2.817 0 3.721-1.86 3.721-1.86'
+        strokeLinecap='round'
       />
     </svg>
   )

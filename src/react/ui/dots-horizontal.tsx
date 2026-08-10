@@ -11,9 +11,9 @@ export const IconDotsHorizontal: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='dots-horizontal'
@@ -25,14 +25,14 @@ export const IconDotsHorizontal: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M6 12a1.25 1.25 0 1 1-2.5 0A1.25 1.25 0 0 1 6 12m7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0m7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0'
         fill='currentColor'
-        d='M6 12a1.252 1.252 0 1 1-2.504 0A1.252 1.252 0 0 1 6 12Zm7.252 0a1.252 1.252 0 1 1-2.504 0 1.252 1.252 0 0 1 2.504 0Zm7.252 0A1.252 1.252 0 1 1 18 12a1.252 1.252 0 0 1 2.504 0Z'
       />
       <path
+        d='M6 12a1.25 1.25 0 1 1-2.5 0A1.25 1.25 0 0 1 6 12Zm7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M6 12a1.252 1.252 0 1 1-2.504 0A1.252 1.252 0 0 1 6 12Zm7.252 0a1.252 1.252 0 1 1-2.504 0 1.252 1.252 0 0 1 2.504 0Zm7.252 0A1.252 1.252 0 1 1 18 12a1.252 1.252 0 0 1 2.504 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

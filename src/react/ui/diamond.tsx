@@ -11,9 +11,9 @@ export const IconDiamond: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='diamond'
@@ -25,15 +25,15 @@ export const IconDiamond: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='m3.616 10.474 2.687-5.366a1 1 0 0 1 .894-.552h9.581a1 1 0 0 1 .893.549l2.71 5.367a1 1 0 0 1-.146 1.116l-7.497 8.422a1 1 0 0 1-1.495-.001l-7.48-8.423a1 1 0 0 1-.147-1.112Z'
         opacity='.2'
+        d='M3.62 10.47 6.3 5.11a1 1 0 0 1 .9-.55h9.58a1 1 0 0 1 .9.54l2.7 5.37a1 1 0 0 1-.14 1.12L12.74 20a1 1 0 0 1-1.5 0l-7.48-8.42a1 1 0 0 1-.14-1.12'
+        fill='currentColor'
       />
       <path
+        d='M3.62 10.47 6.3 5.11a1 1 0 0 1 .9-.55h9.58a1 1 0 0 1 .9.54l2.7 5.37a1 1 0 0 1-.14 1.12L12.74 20a1 1 0 0 1-1.5 0l-7.48-8.42a1 1 0 0 1-.14-1.12Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m3.616 10.474 2.687-5.366a1 1 0 0 1 .894-.552h9.581a1 1 0 0 1 .893.549l2.71 5.367a1 1 0 0 1-.146 1.116l-7.497 8.422a1 1 0 0 1-1.495-.001l-7.48-8.423a1 1 0 0 1-.147-1.112Z'
+        strokeLinecap='round'
       />
     </svg>
   )

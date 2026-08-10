@@ -11,9 +11,9 @@ export const IconChartLineDown: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='chart-line-down'
@@ -25,10 +25,10 @@ export const IconChartLineDown: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4 4v14.61c0 .83.67 1.5 1.5 1.5H20M6.87 8.6l3.76 3.76a1 1 0 0 0 1.43-.01l1.71-1.77a1 1 0 0 1 1.44 0l4.31 4.5'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4 4v14.611a1.5 1.5 0 0 0 1.5 1.5H20M6.87 8.587l3.762 3.761a1 1 0 0 0 1.424-.01l1.715-1.764a1 1 0 0 1 1.438.004l4.315 4.49'
+        strokeLinecap='round'
       />
     </svg>
   )

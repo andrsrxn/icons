@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconApple: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='apple'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M19.74 13.34c0 4.27-2.06 7.8-7.74 6.68-5.13 1.68-7.74-2.4-7.74-6.68s1.9-8.28 7.74-6.7c4.89-2.13 7.74 2.42 7.74 6.7'
+        fill='currentColor'
+      />
+      <path
+        d='M4.26 13.34c0 3.31 1.57 7.42 5 7.24 1.14-.06 1.78-.95 2.74-.95s1.6.9 2.73.95c3.44.18 5-3.93 5-7.24s-1.16-7.24-5-7.24c-1.14 0-1.59.7-2.73.7s-1.59-.7-2.73-.7c-3.75 0-5 3.93-5 7.24Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M7.41 13.26c-.08-.88.02-1.58.34-2.39.37-.94.7-1.34 1.53-1.9M12 6.6c-.11-.61-.1-1.16.02-1.84.15-.8.86-1.59 2.44-1.25'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

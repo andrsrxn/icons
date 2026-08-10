@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconTextLigature: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='text-ligature'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M13.66 20.17H17m-10.65 0h3.51'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M14.6 20.17a.75.75 0 0 0 1.5 0zm-8.4-7.9a.75.75 0 0 0 0 1.5zm9.15 7.9h.75v-6.15h-1.5v6.15zM6.2 13.02v.75h8.15v-1.5H6.2zm9.15 1h.75c0-.96-.79-1.75-1.75-1.75v1.5q.23.02.25.25z'
+        fill='currentColor'
+      />
+      <path
+        d='M8.1 20.17V7.68A3.94 3.94 0 0 1 12 3.81a3.9 3.9 0 0 1 3.88 3.87'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

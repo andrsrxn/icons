@@ -11,9 +11,9 @@ export const IconControls: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='controls'
@@ -25,15 +25,15 @@ export const IconControls: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M6.85 8.16a2.21 2.21 0 1 0 4.43 0 2.21 2.21 0 0 0-4.43 0m10.31 7.67a2.23 2.23 0 1 1-4.45 0 2.23 2.23 0 0 1 4.45 0'
         fill='currentColor'
-        d='M6.852 8.156a2.213 2.213 0 1 0 4.426 0 2.213 2.213 0 0 0-4.426 0Zm10.312 7.676a2.229 2.229 0 1 1-4.457 0 2.229 2.229 0 0 1 4.457 0Z'
         opacity='.2'
       />
       <path
+        d='M11.3 8.16a2.22 2.22 0 1 0-4.44 0m4.44 0a2.22 2.22 0 1 1-4.44 0m4.44 0h8.93m-13.37 0h-3.1m8.94 7.67a2.22 2.22 0 1 1 4.44 0m-4.44 0a2.22 2.22 0 1 0 4.44 0m-4.44 0H3.77m13.37 0h3.1'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M11.3 8.161a2.222 2.222 0 1 0-4.444 0m4.444 0a2.222 2.222 0 1 1-4.444 0m4.444 0h8.93m-13.374 0H3.769m8.931 7.671a2.222 2.222 0 0 1 4.444 0m-4.444 0a2.222 2.222 0 0 0 4.444 0m-4.444 0H3.77m13.374 0h3.087'
+        strokeLinecap='round'
       />
     </svg>
   )

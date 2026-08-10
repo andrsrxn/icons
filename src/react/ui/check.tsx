@@ -11,9 +11,9 @@ export const IconCheck: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='check'
@@ -25,10 +25,10 @@ export const IconCheck: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m4.24 12.99 1.93 2.87c1.52 2.25 2.28 3.37 3.35 3.37 1.07-.01 1.82-1.14 3.31-3.4L19.76 5.3'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m4.239 12.986 1.936 2.871c1.516 2.25 2.275 3.374 3.345 3.369 1.07-.006 1.817-1.138 3.31-3.403l6.932-10.51'
+        strokeLinecap='round'
       />
     </svg>
   )

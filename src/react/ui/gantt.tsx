@@ -11,9 +11,9 @@ export const IconGantt: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='gantt'
@@ -25,10 +25,10 @@ export const IconGantt: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M7.1 7H13m-5.11 4H18m-5 4h6M3.89 4v14.61c0 .83.67 1.5 1.5 1.5H20'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M7.092 7H13m-5.113 4H18m-5 4h6M3.889 4v14.611a1.5 1.5 0 0 0 1.5 1.5H20'
+        strokeLinecap='round'
       />
     </svg>
   )

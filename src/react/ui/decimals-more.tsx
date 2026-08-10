@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconDecimalsMore: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='decimals-more'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M16.12 5.54a1.98 1.98 0 0 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zM9.53 15.6a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0zm6.59 0a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0z'
+        fill='currentColor'
+      />
+      <path
+        d='M16.12 5.54a1.98 1.98 0 0 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zM9.53 15.6a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0zm6.59 0a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinejoin='round'
+      />
+      <path d='M13.48 10.1a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0' fill='currentColor' />
+      <path
+        d='M13.48 10.1a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path d='M6.9 20.15a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0' fill='currentColor' />
+      <path
+        d='M6.9 20.15a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0ZM6.5 3.88l-.29.29c-1.33 1.33-2 2-2 2.83s.66 1.5 2 2.83l.3.3M11 7H4.45'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

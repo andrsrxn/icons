@@ -11,9 +11,9 @@ export const IconTextAlignJustify: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='text-align-justify'
@@ -25,10 +25,10 @@ export const IconTextAlignJustify: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4 4.95h16M4 9.63h16M4 14.32h16M4 19h16'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4 4.95h16M4 9.633h16M4 14.317h16M4 19h16'
+        strokeLinecap='round'
       />
     </svg>
   )

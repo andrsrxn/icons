@@ -11,9 +11,9 @@ export const IconPaperClip: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='paper-clip'
@@ -25,10 +25,10 @@ export const IconPaperClip: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m15.48 7.06-7.27 7.27a1.5 1.5 0 1 0 2.12 2.12l7.59-7.59a3 3 0 1 0-4.25-4.24L5.8 12.49a4.5 4.5 0 1 0 6.37 6.37l4.73-4.73'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m15.481 7.056-7.27 7.27a1.5 1.5 0 0 0 2.122 2.122l7.584-7.583a3.001 3.001 0 1 0-4.245-4.245l-7.87 7.871a4.502 4.502 0 0 0 6.366 6.367l4.729-4.73'
+        strokeLinecap='round'
       />
     </svg>
   )

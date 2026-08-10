@@ -11,9 +11,9 @@ export const IconScissors: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='scissors'
@@ -25,15 +25,15 @@ export const IconScissors: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M9.4 6.73a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0m0 10.54a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0'
         fill='currentColor'
-        d='M9.395 6.726a2.698 2.698 0 1 1-5.395 0 2.698 2.698 0 0 1 5.395 0Zm0 10.548a2.698 2.698 0 1 1-5.395 0 2.698 2.698 0 0 1 5.395 0Z'
         opacity='.2'
       />
       <path
+        d='M8.88 15.6 20 6.5M8.88 8.4 20 17.5M9.4 6.73a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0Zm0 10.54a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.875 15.591 20 6.502M8.875 8.408 20 17.499M9.395 6.727a2.698 2.698 0 1 1-5.395 0 2.698 2.698 0 0 1 5.395 0Zm0 10.548a2.698 2.698 0 1 1-5.395 0 2.698 2.698 0 0 1 5.395 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

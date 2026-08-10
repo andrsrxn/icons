@@ -11,9 +11,9 @@ export const IconWarningCircle: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='warning-circle'
@@ -25,16 +25,16 @@ export const IconWarningCircle: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M20.291 12A8.291 8.291 0 1 1 3.71 12a8.291 8.291 0 0 1 16.582 0Z'
         opacity='.2'
+        d='M20.3 12a8.3 8.3 0 1 1-16.6 0 8.3 8.3 0 0 1 16.6 0'
+        fill='currentColor'
       />
-      <path fill='currentColor' d='M12.392 16.392a.392.392 0 1 1-.784 0 .392.392 0 0 1 .784 0Z' />
+      <path d='M12.4 16.4a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
       <path
+        d='M12 13.34V7.41M20.3 12a8.3 8.3 0 1 1-16.6 0 8.3 8.3 0 0 1 16.6 0Zm-7.9 4.4a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 13.345V7.413M20.291 12A8.291 8.291 0 1 1 3.71 12a8.291 8.291 0 0 1 16.582 0Zm-7.899 4.392a.392.392 0 1 1-.784 0 .392.392 0 0 1 .784 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

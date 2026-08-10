@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconAirportTower: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='airport-tower'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fill='currentColor'
+        d='M9.61 13.52h4.26v7.13H9.61zm5.63-6.82 4.47.71-1.22 5.69h-3.25zm-11.3.92 4.65-.66v6.4H5.31z'
+      />
+      <path
+        d='M13.79 20.53v-7.01h-4.1v7.01'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M4.59 11.16c-.5-1.6-.75-2.4-.54-3.02a2 2 0 0 1 .7-.95c.53-.4 1.37-.4 3.04-.4h8.14c1.78 0 2.66 0 3.2.42a2 2 0 0 1 .7 1c.19.66-.12 1.49-.75 3.14-.33.84-.49 1.27-.78 1.56a2 2 0 0 1-.63.44c-.38.17-.83.17-1.74.17H7.8c-.95 0-1.43 0-1.83-.19a2 2 0 0 1-.65-.47c-.3-.33-.44-.78-.72-1.7Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M12.05 6.47v-2.7m-3.46 9.75V6.96m6.39 6.56V6.96m-1.09-3.19h-3.75'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

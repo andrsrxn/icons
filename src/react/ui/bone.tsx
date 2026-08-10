@@ -1,0 +1,40 @@
+import type { Icon } from './types'
+
+export const IconBone: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='bone'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M5.05 14.04H6.3a1 1 0 0 0 .69-.28l6.74-6.38a1 1 0 0 0 .31-.73V5.1c0-.36.2-.7.52-.87l.69-.39a1 1 0 0 1 1.33.35l.9 1.44a1 1 0 0 0 .47.4l1.57.63a1 1 0 0 1 .62.93v1.1a1 1 0 0 1-1 1H17.5a1 1 0 0 0-.71.3l-6.66 6.78a1 1 0 0 0-.28.76l.07 1.3a1 1 0 0 1-.85 1.04l-.98.16a1 1 0 0 1-1.03-.52l-.85-1.57a1 1 0 0 0-.33-.35l-1.49-1a1 1 0 0 1-.43-.97l.1-.73a1 1 0 0 1 1-.85'
+        fill='currentColor'
+      />
+      <path
+        d='M17.12 6.9a1.91 1.91 0 1 0-3.2-.85c.17.6.25.91.22 1.04-.04.13-.17.26-.42.52l-6.09 6.12c-.26.27-.4.4-.52.44-.13.03-.44-.05-1.04-.22a1.9 1.9 0 0 0-1.87.47 1.91 1.91 0 1 0 2.7 2.7M17.1 6.88a1.91 1.91 0 1 1 .85 3.2 3 3 0 0 0-1.04-.22c-.13.04-.26.17-.52.43l-6.1 6.1c-.27.26-.4.39-.43.52s.05.43.21 1.04a1.9 1.9 0 1 1-3.19-.85'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

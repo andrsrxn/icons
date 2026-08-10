@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconBbqGrill: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='bbq-grill'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M5.36 10.16h13.28C18.64 13.4 15.67 16 12 16s-6.64-2.61-6.64-5.84'
+        fill='#000'
+      />
+      <path
+        d='M5.36 10.16C5.36 13.4 8.33 16 12 16s6.64-2.61 6.64-5.84'
+        stroke='#000'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M4.19 10.16H19.8M12 16v4.15m-2.82-4.67-2.71 4.44m11.06 0-2.71-4.44M11.64 3.55l.51.55c.45.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37m3.37-4.28.52.55c.44.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37m-9.3-4.28.51.55c.44.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37'
+        stroke='#000'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

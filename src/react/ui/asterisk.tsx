@@ -11,9 +11,9 @@ export const IconAsterisk: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='asterisk'
@@ -25,11 +25,11 @@ export const IconAsterisk: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.64 12h16.72M12 20.36V3.65M5.6 18.4 18.4 5.6m0 12.81L5.6 5.61'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M3.641 12H20.36m-8.364 8.364V3.646m-6.403 14.76 12.809-12.81m0 12.817L5.592 5.604'
       />
     </svg>
   )

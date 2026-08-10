@@ -1,0 +1,57 @@
+import type { Icon } from './types'
+
+export const IconFireExtinguisher: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='fire-extinguisher'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fill='currentColor'
+        d='M9.11 12.94h6.56v6.92H9.11zm1.84-9.05h2.88v3.03h-2.88z'
+      />
+      <rect
+        x='8.86'
+        y='7.3'
+        width='7.07'
+        height='13.1'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path d='M15.93 12.94H9.1' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
+      <path
+        d='M14.24 7.3V5.45c0-.8 0-1.19-.21-1.46l-.18-.17c-.27-.21-.66-.21-1.46-.21s-1.19 0-1.46.2l-.17.18c-.21.27-.21.67-.21 1.46V7.3'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M10.55 5.2s-1.2-.11-2.44 0c-1.49.14-2.06 1.7-2.06 2.84 0 1.15 0 2.51-.68 3.52'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path d='M17.63 5.2h-3.4' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
+    </svg>
+  )
+}

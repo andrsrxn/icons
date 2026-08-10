@@ -11,9 +11,9 @@ export const IconWind: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wind'
@@ -25,10 +25,10 @@ export const IconWind: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M7.19 7.01c.14-1.41 1.2-2.3 2.69-2.3a2.7 2.7 0 0 1 0 5.38H3.53m12.81 3.65c.22.6.9 1.35 1.94 1.35a2.1 2.1 0 0 0 0-4.2h-4.3m-4.81 6.13c.17 1 1.2 2.24 2.69 2.24a2.7 2.7 0 1 0 0-5.38H3.53'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M7.189 7.014c.145-1.417 1.204-2.301 2.69-2.301a2.69 2.69 0 0 1 0 5.381H3.534m12.81 3.646c.212.597.9 1.351 1.94 1.351a2.103 2.103 0 0 0 0-4.206h-4.3m-4.815 6.138c.17 1.003 1.205 2.24 2.69 2.24a2.69 2.69 0 1 0 0-5.382H3.535'
+        strokeLinecap='round'
       />
     </svg>
   )

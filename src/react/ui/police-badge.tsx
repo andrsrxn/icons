@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconPoliceBadge: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='police-badge'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12.23 3.55a1 1 0 0 0-.46 0l-5.5 1.27a1 1 0 0 0-.77.97v2.65a1 1 0 0 1-.12.47l-1.87 3.52q-.16.3-.1.63C4.03 16.04 6.6 21 12 21c5.5 0 7.88-5.19 8.48-7.91a1 1 0 0 0-.11-.68l-2.2-3.69a1 1 0 0 1-.12-.64l.29-2.18a1 1 0 0 0-.77-1.1zm.4 5.01.47.89a1 1 0 0 0 .72.51l.98.18c.62.09.93.13 1 .34s-.15.43-.6.87l-.7.72a1 1 0 0 0-.27.83l.14 1c.1.61.16.92-.02 1.05s-.46-.01-1.01-.3l-.9-.45a1 1 0 0 0-.88 0l-.9.44c-.55.3-.83.44-1.01.31s-.13-.44-.02-1.06l.14-.99a1 1 0 0 0-.27-.83l-.7-.72c-.45-.44-.67-.66-.6-.87s.38-.25 1-.34l.98-.18a1 1 0 0 0 .72-.51l.46-.89c.28-.56.42-.84.64-.84s.36.28.64.84'
+        fill='currentColor'
+      />
+      <path
+        d='M11.36 8.56c.28-.56.42-.84.64-.84s.36.28.64.84l.5 1.02c.08.17.12.25.2.3q.09.07.34.1l1.12.16c.62.09.93.13 1 .34s-.15.43-.6.87l-.82.8c-.13.12-.2.18-.22.27q-.04.1.02.35l.19 1.12c.1.62.16.93-.02 1.06s-.46-.01-1.01-.3l-1-.54c-.17-.08-.25-.12-.34-.12s-.17.04-.33.12l-1 .53c-.56.3-.84.44-1.02.31s-.13-.44-.02-1.06l.2-1.12c.02-.18.04-.27.01-.35-.03-.09-.1-.15-.22-.28l-.82-.8c-.45-.43-.67-.65-.6-.86s.38-.25 1-.34l1.12-.17q.25-.02.35-.09c.07-.05.1-.13.19-.3z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinejoin='round'
+      />
+      <path
+        d='M18.54 5.1A13 13 0 0 0 12 3.6a13 13 0 0 0-6.54 1.5'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M5.4 5.2c.38 1.4.44 2.11.25 3.4-.18 1.27-1.23 2.65-1.79 3.3q-.32.4-.22.88c.46 1.78 2.43 7.69 8.36 7.69 5.83 0 7.83-5.7 8.34-7.59a1 1 0 0 0-.33-1c-.67-.61-1.85-1.88-2-3.28a5.5 5.5 0 0 1 .58-3.4'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

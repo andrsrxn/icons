@@ -11,9 +11,9 @@ export const IconWaveSquare: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wave-square'
@@ -25,10 +25,10 @@ export const IconWaveSquare: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M20.28 15v1c0 1.89 0 2.83-.58 3.41-.59.59-1.53.59-3.42.59h-.24c-1.89 0-2.83 0-3.42-.59-.58-.58-.58-1.52-.58-3.41V8c0-1.89 0-2.83-.59-3.41C10.87 4 9.92 4 8.04 4h-.3c-1.9 0-2.83 0-3.42.59-.59.58-.59 1.52-.59 3.41'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M20.283 15v1c0 1.886 0 2.828-.586 3.414-.586.586-1.528.586-3.414.586h-.244c-1.886 0-2.829 0-3.414-.586-.586-.586-.586-1.528-.586-3.414V8c0-1.886 0-2.828-.586-3.414C10.867 4 9.924 4 8.04 4h-.304c-1.886 0-2.829 0-3.414.586-.586.586-.586 1.528-.586 3.414'
+        strokeLinecap='round'
       />
     </svg>
   )

@@ -1,0 +1,39 @@
+import type { Icon } from './types'
+
+export const IconFlipHorizontal: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='flip-horizontal'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M13.28 10.63c0-4.08 0-6.12.82-6.27.81-.16 1.56 1.74 3.04 5.54l2.5 6.37c.5 1.24.73 1.86.44 2.3-.3.43-.97.43-2.3.43h-2.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-2.56 0c0-4.08 0-6.12-.82-6.27C9.1 4.2 8.34 6.1 6.86 9.9l-2.5 6.37c-.5 1.24-.73 1.86-.44 2.3.3.43.97.43 2.3.43h2.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
+        fill='currentColor'
+      />
+      <path
+        d='M13.28 10.63c0-4.08 0-6.12.82-6.27.81-.16 1.56 1.74 3.04 5.54l2.5 6.37c.5 1.24.73 1.86.44 2.3-.3.43-.97.43-2.3.43h-2.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-2.56 0c0-4.08 0-6.12-.82-6.27C9.1 4.2 8.34 6.1 6.86 9.9l-2.5 6.37c-.5 1.24-.73 1.86-.44 2.3.3.43.97.43 2.3.43h2.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+    </svg>
+  )
+}

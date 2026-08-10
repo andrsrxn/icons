@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconHandGrabbing: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='hand-grabbing'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M8.25 8.18v2.28c-.53-.82-1.36-.9-2.28-.43-1.36.7-1.74 2.69-1.23 3.66.5.97 1.12 1.83 2.17 2.74 2 1.74 4.8 2.04 6.86 2.04 2.05 0 6.07-1.13 6-4.68V8.96c0-.95-.8-1.77-1.86-1.77-1.07 0-1.93.76-1.93 1.71V7.25c0-.95-.87-1.72-1.94-1.72s-1.93.77-1.93 1.72v.93c0-.95-.86-1.71-1.93-1.71s-1.93.76-1.93 1.71'
+        fill='currentColor'
+      />
+      <path
+        d='M12.11 8.18v1.3m0-1.3c0-.95-.86-1.71-1.93-1.71s-1.93.76-1.93 1.71v3.48-1.54s-1.21-.6-2.13-.12c-1.36.7-1.36 2.53-1.02 3.69a6.5 6.5 0 0 0 2.1 3.07c2 1.74 3.91 1.7 6.57 1.7s6-1.2 6-4.67V8.96c0-.95-.8-1.77-1.86-1.77-1.07 0-1.93.76-1.93 1.71m-3.87-.72v-.93c0-.95.87-1.72 1.93-1.72 1.07 0 1.94.77 1.94 1.72V8.9m0 0v.57'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

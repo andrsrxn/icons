@@ -11,9 +11,9 @@ export const IconWaveSine: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wave-sine'
@@ -25,10 +25,10 @@ export const IconWaveSine: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.69 8.14S4.37 4 7.39 4c7.2 0 2.01 16 9.23 16 2.96 0 3.7-4 3.7-4'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.688 8.139s.68-4.14 3.695-4.14c7.214 0 2.021 16 9.236 16 2.961.001 3.71-3.99 3.71-3.99'
+        strokeLinecap='round'
       />
     </svg>
   )

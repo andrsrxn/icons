@@ -11,9 +11,9 @@ export const IconListPlus: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='list-plus'
@@ -25,10 +25,10 @@ export const IconListPlus: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4 6h16M4 12h16m-5.02 6H20m-2.51 2.5v-5M4 18h7.4'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M4 6h16M4 12h16m-5.016 5.996H20m-2.512 2.512v-5.016M4 18h7.394'
+        strokeLinecap='round'
       />
     </svg>
   )

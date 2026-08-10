@@ -11,9 +11,9 @@ export const IconIntersection: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='intersection'
@@ -25,10 +25,10 @@ export const IconIntersection: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M18.39 19v-8.33A6.3 6.3 0 0 0 6.73 7.33l-.14.23a6.5 6.5 0 0 0-.98 3.41V19'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M18.388 19v-8.334c0-1.01-.243-2.006-.708-2.902-2.25-4.34-8.37-4.58-10.952-.43l-.141.228a6.458 6.458 0 0 0-.975 3.411V19'
+        strokeLinecap='round'
       />
     </svg>
   )

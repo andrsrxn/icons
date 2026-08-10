@@ -1,0 +1,40 @@
+import type { Icon } from './types'
+
+export const IconKnife: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='knife'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M12.73 5.81c2.98-.76 7.45.3 7.45.3L10 16.28l-4.7-4.7s3.74-4.83 7.42-5.77'
+        fill='currentColor'
+      />
+      <path
+        d='m5.77 20.52 4.19-4.18m0 0 9.83-9.84c.26-.26.16-.69-.2-.77-1.21-.3-3.75-.72-6.63-.01-2.9.7-6 3.67-7.29 5.03a.95.95 0 0 0 .03 1.33z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

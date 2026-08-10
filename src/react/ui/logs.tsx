@@ -1,0 +1,33 @@
+import type { Icon } from './types'
+
+export const IconLogs: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='logs'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M13.82 5.25a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zm-6.59 4.5a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zm-6.59 4.5a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zM13.82 6v.75h6.59v-1.5h-6.59zm0 6v.75h6.59v-1.5h-6.59zm0 6v.75h6.59v-1.5h-6.59zM3.6 5.25a.75.75 0 1 0 0 1.5zm1.13 1.5a.75.75 0 1 0 0-1.5zm-1.14 4.5a.75.75 0 0 0 0 1.5zm1.14 1.5a.75.75 0 0 0 0-1.5zm-1.14 4.5a.75.75 0 0 0 0 1.5zm1.14 1.5a.75.75 0 0 0 0-1.5zM3.6 6v.75h1.14v-1.5H3.6zm0 6v.75h1.14v-1.5H3.6zm0 6v.75h1.14v-1.5H3.6zM7.96 5.25a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zm-2.63 4.5a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zm-2.63 4.5a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zM7.96 6v.75h2.63v-1.5H7.96zm0 6v.75h2.63v-1.5H7.96zm0 6v.75h2.63v-1.5H7.96z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

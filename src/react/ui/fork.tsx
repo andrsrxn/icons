@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconFork: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='fork'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m10.8 7.94.45-.51a1 1 0 0 1 1.46-.05l3.88 3.87a1 1 0 0 1 0 1.42l-.49.48a1 1 0 0 1-.97.26l-.95-.27a1 1 0 0 0-.96.24l-6.88 6.45a1 1 0 0 1-1 .22l-.5-.17a1 1 0 0 1-.63-.65l-.14-.44a1 1 0 0 1 .21-.97l6.37-7.05a1 1 0 0 0 .22-.93l-.27-.99a1 1 0 0 1 .21-.9'
+        fill='currentColor'
+      />
+      <path
+        d='m14.58 9.34 3.1-3.1m-.29 5.91-5.5-5.5'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M14.99 3.54 10.7 7.81l-.02.03a2 2 0 0 0-.44 2.12l.01.03.01.03a2 2 0 0 1-.44 2.12l-.02.02-5.53 5.53a1.5 1.5 0 0 0 2.12 2.12l5.55-5.56a2 2 0 0 1 2.12-.45 2 2 0 0 0 2.13-.45l4.3-4.3'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

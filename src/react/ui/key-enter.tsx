@@ -11,9 +11,9 @@ export const IconKeyEnter: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='key-enter'
@@ -25,10 +25,10 @@ export const IconKeyEnter: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M19.49 8.57v.48c0 1.88 0 2.83-.6 3.41-.58.59-1.52.59-3.4.59H3.97M6.7 9.49l-.73.73c-1.33 1.33-2 2-2 2.82 0 .83.67 1.5 2 2.84l.73.73'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M19.485 8.572v.475c0 1.886 0 2.829-.586 3.414-.585.586-1.528.586-3.414.586H3.98M6.71 9.49l-.727.726c-1.336 1.334-2.004 2-2.004 2.83 0 .828.666 1.495 2.001 2.83l.73.73'
+        strokeLinecap='round'
       />
     </svg>
   )

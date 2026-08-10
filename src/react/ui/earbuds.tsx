@@ -11,9 +11,9 @@ export const IconEarbuds: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='earbuds'
@@ -25,15 +25,15 @@ export const IconEarbuds: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M10.36 8.04c.04.14.06 1.34.06 1.34v8.04a1.78 1.78 0 1 1-3.56 0v-5.2a3.55 3.55 0 1 1 3.5-4.18m3.29 0a18 18 0 0 0-.06 1.34v8.04a1.78 1.78 0 0 0 3.55 0v-5.2a3.55 3.55 0 1 0-3.5-4.18'
         fill='currentColor'
-        d='M10.36 8.038c.037.143.056 1.342.056 1.342v8.036a1.776 1.776 0 1 1-3.551 0v-5.19a3.552 3.552 0 1 1 3.495-4.188Zm3.285 0c-.037.143-.057 1.342-.057 1.342v8.036a1.776 1.776 0 0 0 3.552 0v-5.19a3.552 3.552 0 1 0-3.495-4.188Z'
         opacity='.2'
       />
       <path
+        d='M10.36 8.04c.04.14.06 1.34.06 1.34v8.04a1.78 1.78 0 1 1-3.56 0v-5.2a3.55 3.55 0 1 1 3.5-4.18Zm3.29 0a18 18 0 0 0-.06 1.34v8.04a1.78 1.78 0 0 0 3.55 0v-5.2a3.55 3.55 0 1 0-3.5-4.18Z'
         stroke='currentColor'
-        strokeLinejoin='round'
         strokeWidth='1.5'
-        d='M10.36 8.038c.037.143.056 1.342.056 1.342v8.036a1.776 1.776 0 1 1-3.551 0v-5.19a3.552 3.552 0 1 1 3.495-4.188Zm3.285 0c-.037.143-.057 1.342-.057 1.342v8.036a1.776 1.776 0 0 0 3.552 0v-5.19a3.552 3.552 0 1 0-3.495-4.188Z'
+        strokeLinejoin='round'
       />
     </svg>
   )

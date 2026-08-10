@@ -11,9 +11,9 @@ export const IconUserProhibit: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='user-prohibit'
@@ -25,22 +25,19 @@ export const IconUserProhibit: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <g opacity='.2'>
+        <path d='M16.8 8.26a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0' fill='currentColor' />
         <path
-          fill='currentColor'
-          d='M16.807 8.261a4.807 4.807 0 1 1-9.614 0 4.807 4.807 0 0 1 9.614 0Z'
-        />
-        <path
-          fill='currentColor'
           fillRule='evenodd'
-          d='M4.59 19.548c.506-3.764 3.838-6.48 7.41-6.48 2.216 0 4.34 1.046 5.755 2.74-1.159.275-2.187 1.164-2.187 2.407 0 .905.624 1.857 1.32 2.33H5.524c-.553 0-1.007-.45-.934-.997Z'
           clipRule='evenodd'
+          d='M4.59 19.55A7.6 7.6 0 0 1 12 13.07a7.6 7.6 0 0 1 5.75 2.74c-1.15.27-2.18 1.16-2.18 2.4 0 .91.62 1.86 1.32 2.34H5.52c-.55 0-1-.45-.93-1'
+          fill='currentColor'
         />
       </g>
       <path
+        d='M12 13.07a4.8 4.8 0 1 0 0-9.62 4.8 4.8 0 0 0 0 9.62Zm0 0a7.54 7.54 0 0 0-7.48 7.48M12 13.07q1.31 0 2.52.46m5.03 6.02-3.5-3.5m4.63 1.86a2.77 2.77 0 1 1-5.54 0 2.77 2.77 0 0 1 5.54 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 13.068a4.807 4.807 0 1 0 0-9.613 4.807 4.807 0 0 0 0 9.613Zm0 0c-3.88 0-7.477 3.205-7.477 7.478M12 13.068c.868 0 1.721.16 2.524.457m5.028 6.027L16.04 16.04m4.635 1.869a2.766 2.766 0 1 1-5.532 0 2.766 2.766 0 0 1 5.532 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

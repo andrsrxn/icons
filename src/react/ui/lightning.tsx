@@ -11,9 +11,9 @@ export const IconLightning: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='lightning'
@@ -25,15 +25,15 @@ export const IconLightning: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='m6.222 12.298 6.79-8.567c.332-.417.999-.097.88.422L12.58 9.886a.5.5 0 0 0 .487.612h4.483a.5.5 0 0 1 .391.811l-7.116 8.92c-.334.418-1.004.09-.877-.431l1.48-6.071a.5.5 0 0 0-.485-.619H6.614a.5.5 0 0 1-.392-.81Z'
         opacity='.2'
+        d='m6.22 12.3 6.8-8.57c.32-.42 1-.1.87.42L12.58 9.9a.5.5 0 0 0 .49.6h4.48a.5.5 0 0 1 .4.82l-7.13 8.92c-.33.42-1 .09-.87-.43l1.48-6.07a.5.5 0 0 0-.49-.62H6.61a.5.5 0 0 1-.39-.81'
+        fill='currentColor'
       />
       <path
+        d='m6.22 12.3 6.8-8.57c.32-.42 1-.1.87.42L12.58 9.9a.5.5 0 0 0 .49.6h4.48a.5.5 0 0 1 .4.82l-7.13 8.92c-.33.42-1 .09-.87-.43l1.48-6.07a.5.5 0 0 0-.49-.62H6.61a.5.5 0 0 1-.39-.81Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m6.222 12.298 6.79-8.567c.332-.417.999-.097.88.422L12.58 9.886a.5.5 0 0 0 .487.612h4.483a.5.5 0 0 1 .391.811l-7.116 8.92c-.334.418-1.004.09-.877-.431l1.48-6.071a.5.5 0 0 0-.485-.619H6.614a.5.5 0 0 1-.392-.81Z'
+        strokeLinecap='round'
       />
     </svg>
   )

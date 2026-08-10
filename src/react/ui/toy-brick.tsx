@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconToyBrick: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='toy-brick'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='3.44' y='9.58' width='17.13' height='8.69' rx='2' fill='currentColor' />
+      <path
+        d='M3.44 13.58c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h9.12c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v.69c0 1.88 0 2.83-.58 3.41-.59.59-1.53.59-3.42.59H7.44c-1.89 0-2.83 0-3.42-.59-.58-.58-.58-1.53-.58-3.41z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <rect
+        x='6.01'
+        y='5.73'
+        width='4.33'
+        height='3.85'
+        rx='1'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <rect
+        x='13.67'
+        y='5.73'
+        width='4.34'
+        height='3.85'
+        rx='1'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+    </svg>
+  )
+}

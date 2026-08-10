@@ -11,9 +11,9 @@ export const IconSmileyBlink: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='smiley-blink'
@@ -25,16 +25,16 @@ export const IconSmileyBlink: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M20.358 12a8.358 8.358 0 1 1-16.716 0 8.358 8.358 0 0 1 16.716 0Z'
         opacity='.2'
+        d='M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0'
+        fill='currentColor'
       />
-      <path fill='currentColor' d='M9.915 9.49a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Z' />
+      <path d='M9.91 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0' fill='currentColor' />
       <path
+        d='M9 15s1.05 1 3 1c1.96 0 3-1 3-1m-1.18-5.51h2M20.36 12a8.36 8.36 0 1 1-16.72 0 8.36 8.36 0 0 1 16.72 0ZM9.9 9.49a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M9.009 15s1.036 1.006 2.995 1.006C13.964 16.006 15 15 15 15m-1.184-5.51h2M20.358 12a8.358 8.358 0 1 1-16.716 0 8.358 8.358 0 0 1 16.716 0ZM9.915 9.49a.594.594 0 1 1-1.188 0 .594.594 0 0 1 1.188 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

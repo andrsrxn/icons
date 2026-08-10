@@ -11,9 +11,9 @@ export const IconSticker: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='sticker'
@@ -25,17 +25,17 @@ export const IconSticker: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M20.5 12a8.5 8.5 0 1 0-8.5 8.5s-.883-4.519 1.464-6.866C15.81 11.287 20.5 12 20.5 12Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M20.5 12a8.5 8.5 0 1 0-8.5 8.5s-.88-4.52 1.46-6.87C15.81 11.3 20.5 12 20.5 12'
+        fill='currentColor'
       />
       <path
+        d='M12 20.5s2.77-2.7 4.31-4.25L20.5 12a8.5 8.5 0 1 0-8.5 8.5Zm8.5-8.5s-4.69-.71-7.04 1.63C11.12 15.98 12 20.5 12 20.5'
         stroke='currentColor'
-        strokeLinejoin='round'
         strokeWidth='1.5'
-        d='M12 20.5s2.772-2.704 4.311-4.248A880.978 880.978 0 0 0 20.5 12a8.5 8.5 0 1 0-8.5 8.5Zm8.5-8.5s-4.689-.713-7.036 1.634C11.116 15.981 12 20.5 12 20.5'
+        strokeLinejoin='round'
       />
     </svg>
   )

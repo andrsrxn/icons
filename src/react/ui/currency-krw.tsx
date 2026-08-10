@@ -11,9 +11,9 @@ export const IconCurrencyKrw: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='currency-krw'
@@ -24,17 +24,13 @@ export const IconCurrencyKrw: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <path opacity='.2' d='m5.98 12.75 2 6.25L12 6.5 16.01 19l2-6.25z' fill='currentColor' />
       <path
-        fill='currentColor'
-        d='M5.984 12.75 7.99 19 12 6.5 16.01 19l2.006-6.25H5.984Z'
-        opacity='.2'
-      />
-      <path
+        d='M3.98 6.5 7.99 19 12 6.5 16.01 19l4.01-12.5M3.36 12.75h17.28'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M3.979 6.5 7.989 19 12 6.5 16.01 19l4.011-12.5M3.362 12.75h17.276'
       />
     </svg>
   )

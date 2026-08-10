@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconVehiculeBattery: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='vehicule-battery'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='3.75' y='7.7' width='16.51' height='11' rx='2' fill='currentColor' />
+      <rect
+        x='3.75'
+        y='7.7'
+        width='16.51'
+        height='11'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M18.08 7.7v-.6c0-.75 0-1.12-.2-1.39a1 1 0 0 0-.21-.22c-.27-.19-.64-.19-1.39-.19s-1.12 0-1.39.2a1 1 0 0 0-.22.21c-.19.27-.19.64-.19 1.39v.6m-4.88 0v-.6c0-.75 0-1.12-.2-1.39a1 1 0 0 0-.21-.22c-.27-.19-.64-.19-1.4-.19-.74 0-1.11 0-1.38.2a1 1 0 0 0-.22.21C6 5.98 6 6.35 6 7.1v.6'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M16.28 13.2v-3.06m-7.24 1.54H6.56m11.24 0h-3.05'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

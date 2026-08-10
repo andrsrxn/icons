@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconSpeech: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='speech'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <g opacity='.2'>
+        <path
+          d='M10.03 14.36a6.3 6.3 0 0 0-6.18 5.4c-.06.46.32.83.78.83h10.8c.45 0 .83-.37.77-.83a6.3 6.3 0 0 0-6.17-5.4'
+          fill='currentColor'
+        />
+        <path d='M14.03 10.36a4 4 0 1 1-8.01 0 4 4 0 0 1 8.01 0' fill='currentColor' />
+      </g>
+      <path
+        d='M10.03 14.36a4 4 0 1 0 0-8.01 4 4 0 0 0 0 8.01Zm0 0a6.3 6.3 0 0 0-6.24 6.23m6.24-6.23a6.3 6.3 0 0 1 6.23 6.23'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M15.59 4.82a.73.73 0 0 0-1.02.25c-.21.36-.1.82.26 1.04l.38-.64zm1.68 3.42-.72.18zm-1.16 2.98a.77.77 0 0 0 .33 1.02c.37.19.82.04 1-.33l-.66-.34zm-.9-5.75-.38.64a3.8 3.8 0 0 1 1.72 2.3l.72-.17.72-.18a5.3 5.3 0 0 0-2.4-3.24zm2.06 2.77-.72.18c.24.97-.02 1.95-.44 2.8l.67.35.66.34c.5-1 .92-2.37.55-3.85zm.5-5.48a.73.73 0 0 0-1.02.25c-.22.35-.1.82.25 1.04l.38-.64zm2.57 4.7.73-.17zm-1.36 5a.77.77 0 0 0 .34 1.01c.37.2.81.05 1-.32l-.67-.35zm-1.6-9.05-.38.64c1.28.8 2.2 1.82 2.62 3.57l.72-.16.73-.17a7 7 0 0 0-3.3-4.53zm2.96 4.05-.72.16c.4 1.68.01 3.51-.64 4.83l.67.35.67.35a9 9 0 0 0 .75-5.86z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

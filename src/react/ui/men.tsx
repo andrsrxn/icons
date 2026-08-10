@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconMen: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='men'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <circle opacity='.2' cx='12' cy='5.57' r='2' fill='currentColor' />
+      <circle cx='12' cy='5.57' r='2' stroke='currentColor' strokeWidth='1.5' />
+      <path
+        d='M8 12.57c0-1.42 0-2.12.44-2.56s1.15-.44 2.56-.44h2c1.41 0 2.12 0 2.56.44s.44 1.14.44 2.56v1.38c0 .62-.4 1.18-1 1.36s-1.01.74-1.01 1.36v1.8c0 .43 0 .65-.05.83a1.5 1.5 0 0 1-1.09 1.09c-.18.04-.4.04-.83.04s-.65 0-.83-.04a1.5 1.5 0 0 1-1.1-1.1c-.04-.17-.04-.4-.04-.83V16.7c0-.63-.41-1.2-1.02-1.38A1.44 1.44 0 0 1 8 13.93z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        opacity='.2'
+        d='M8 12.57c0-1.42 0-2.12.44-2.56s1.15-.44 2.56-.44h2c1.41 0 2.12 0 2.56.44s.44 1.14.44 2.56v1.38c0 .62-.4 1.18-1 1.36s-1.01.74-1.01 1.36v1.8c0 .43 0 .65-.05.83a1.5 1.5 0 0 1-1.09 1.09c-.18.04-.4.04-.83.04s-.65 0-.83-.04a1.5 1.5 0 0 1-1.1-1.1c-.04-.17-.04-.4-.04-.83V16.7c0-.63-.41-1.2-1.02-1.38A1.44 1.44 0 0 1 8 13.93z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

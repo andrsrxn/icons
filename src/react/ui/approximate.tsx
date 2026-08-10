@@ -11,9 +11,9 @@ export const IconApproximate: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='approximate'
@@ -25,10 +25,10 @@ export const IconApproximate: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.64 10.32s1.8-1.85 4.64-1.85c2.86 0 5.55 1.85 8.36 1.85 2.82 0 3.72-1.85 3.72-1.85M3.64 15.53s1.8-1.85 4.64-1.85c2.86 0 5.55 1.85 8.36 1.85 2.82 0 3.72-1.85 3.72-1.85'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.64 10.324s1.792-1.858 4.644-1.858c2.852 0 5.548 1.858 8.36 1.858 2.814 0 3.717-1.858 3.717-1.858M3.639 15.534s1.793-1.858 4.645-1.858c2.852 0 5.548 1.858 8.36 1.858 2.814 0 3.717-1.858 3.717-1.858'
+        strokeLinecap='round'
       />
     </svg>
   )

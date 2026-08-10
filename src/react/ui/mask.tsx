@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconMask: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='mask'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path opacity='.2' d='m6.72 8.2 10.75-.16.96 6.9-6.7 2.67-6.19-2.88z' fill='currentColor' />
+      <path
+        d='M6.33 10.34a7 7 0 0 1-1.1 3.54c-.17.26-.5.41-.71.2-.55-.52-.95-2-.95-3.74 0-1.12.36-2.13.72-2.85.29-.58 1.03-.58 1.32 0 .35.72.72 1.73.72 2.85Zm11.34 0a7 7 0 0 0 1.1 3.54c.17.26.5.41.71.2.55-.52.95-2 .95-3.74a6.5 6.5 0 0 0-.72-2.85c-.29-.58-1.03-.58-1.32 0a7 7 0 0 0-.72 2.85Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M17.24 8.5c-1.98-.61-3.17-.8-5.24-.8s-3.26.19-5.25.8m6.88 2.37a5 5 0 0 0-1.63-.25 5 5 0 0 0-1.63.25m4.48 2.7A8 8 0 0 1 12 14a8 8 0 0 1-2.85-.43m10.06.63c-2.46 1.58-4.35 2.8-7.19 2.8s-4.94-1.42-7.35-2.8'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

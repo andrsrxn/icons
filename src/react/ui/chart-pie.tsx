@@ -11,9 +11,9 @@ export const IconChartPie: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='chart-pie'
@@ -25,16 +25,16 @@ export const IconChartPie: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M12 3.567a8.433 8.433 0 0 0-5.963 14.396L12 12V3.567Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12 3.57a8.43 8.43 0 0 0-5.96 14.4L12 12z'
+        fill='currentColor'
       />
       <path
+        d='M12 3.57a8.43 8.43 0 1 0 0 16.86 8.43 8.43 0 0 0 0-16.86Zm0 0v6.77c0 .82 0 1.23-.15 1.6-.15.36-.44.65-1.02 1.23l-4.7 4.7'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M12 3.567a8.433 8.433 0 1 0 0 16.866 8.433 8.433 0 0 0 0-16.866Zm0 0v6.776c0 .818 0 1.226-.152 1.594-.153.368-.442.657-1.02 1.235l-4.693 4.693'
       />
     </svg>
   )

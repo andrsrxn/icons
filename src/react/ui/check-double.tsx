@@ -11,9 +11,9 @@ export const IconCheckDouble: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='check-double'
@@ -25,10 +25,10 @@ export const IconCheckDouble: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='m3.8 13.57.61 1.22c1.58 3.14 2.36 4.71 3.6 4.7s2.02-1.58 3.57-4.74l4.63-9.44m-8.42 8.25.62 1.23c1.57 3.14 2.36 4.71 3.6 4.7s2.02-1.58 3.56-4.74l4.63-9.44'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m3.798 13.565.612 1.221c1.576 3.144 2.364 4.716 3.605 4.71 1.24-.005 2.015-1.584 3.563-4.742l4.627-9.442m-8.41 8.253.612 1.221c1.576 3.144 2.364 4.716 3.604 4.71 1.241-.005 2.015-1.584 3.563-4.742l4.628-9.442'
+        strokeLinecap='round'
       />
     </svg>
   )

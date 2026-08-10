@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconInbox: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='inbox'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M3.78 7.78c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.44c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v3.33c0 .88 0 1.32-.13 1.67a2 2 0 0 1-1.14 1.14c-.35.14-.8.14-1.68.14-.36 0-.55 0-.72.03a2 2 0 0 0-.73.29c-.15.1-.29.22-.56.47l-.18.17c-.44.41-.66.62-.93.75l-.3.12c-.29.09-.6.09-1.2.09h-1.3c-.6 0-.91 0-1.2-.09l-.3-.12c-.27-.13-.49-.34-.93-.75l-.18-.17c-.27-.25-.4-.38-.56-.47a2 2 0 0 0-.73-.3c-.17-.02-.36-.02-.72-.02-.89 0-1.33 0-1.68-.14a2 2 0 0 1-1.14-1.14c-.13-.35-.13-.79-.13-1.67z'
+        fill='currentColor'
+      />
+      <rect
+        x='3.78'
+        y='3.78'
+        width='16.45'
+        height='16.45'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M20.22 14.06h-2.78c-.66 0-.99 0-1.3.1-.3.1-.56.3-1.1.69l-.45.34c-.53.39-.8.58-1.1.69s-.63.1-1.29.1h-.38c-.65 0-.97 0-1.27-.1s-.57-.3-1.09-.67l-.52-.38c-.52-.39-.78-.58-1.08-.68s-.63-.1-1.28-.1h-2.8'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+    </svg>
+  )
+}

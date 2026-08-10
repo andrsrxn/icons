@@ -11,9 +11,9 @@ export const IconMosaic: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='mosaic'
@@ -25,18 +25,18 @@ export const IconMosaic: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M20.13 16.484V8c0-1.886 0-2.828-.586-3.414C18.96 4 18.016 4 16.13 4H7.646c-1.886 0-2.828 0-3.414.586L20.13 16.484Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M20.13 16.48V8c0-1.89 0-2.83-.59-3.41C18.96 4 18.02 4 16.13 4H7.65c-1.89 0-2.83 0-3.42.59z'
+        fill='currentColor'
       />
       <path
+        d='m4.46 5 8.2 6.13m0 0 7.34 5m-7.33-5L8 20m-.35.48h8.48c1.89 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42V8c0-1.89 0-2.83-.59-3.41C18.96 4 18.02 4 16.13 4H7.65c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.52-.58 3.41v8.48c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='m4.458 5 8.209 6.133m0 0L20 16.122m-7.333-4.989L8 20m-.354.484h8.484c1.886 0 2.829 0 3.414-.586.586-.585.586-1.528.586-3.414V8c0-1.886 0-2.828-.586-3.414C18.96 4 18.016 4 16.13 4H7.646c-1.886 0-2.828 0-3.414.586-.586.586-.586 1.528-.586 3.414v8.484c0 1.886 0 2.828.586 3.414.586.586 1.528.586 3.414.586Z'
       />
     </svg>
   )

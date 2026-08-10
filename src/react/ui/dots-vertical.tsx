@@ -11,9 +11,9 @@ export const IconDotsVertical: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='dots-vertical'
@@ -25,14 +25,14 @@ export const IconDotsVertical: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M12 18a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m0-7.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m0-7.25A1.25 1.25 0 1 1 12 6a1.25 1.25 0 0 1 0-2.5'
         fill='currentColor'
-        d='M12 18a1.252 1.252 0 1 1 0 2.504A1.252 1.252 0 0 1 12 18Zm0-7.252a1.252 1.252 0 1 1 0 2.504 1.252 1.252 0 0 1 0-2.504Zm0-7.252A1.252 1.252 0 1 1 12 6a1.252 1.252 0 0 1 0-2.504Z'
       />
       <path
+        d='M12 18a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Zm0-7.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5Zm0-7.25A1.25 1.25 0 1 1 12 6a1.25 1.25 0 0 1 0-2.5Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12 18a1.252 1.252 0 1 1 0 2.504A1.252 1.252 0 0 1 12 18Zm0-7.252a1.252 1.252 0 1 1 0 2.504 1.252 1.252 0 0 1 0-2.504Zm0-7.252A1.252 1.252 0 1 1 12 6a1.252 1.252 0 0 1 0-2.504Z'
+        strokeLinecap='round'
       />
     </svg>
   )

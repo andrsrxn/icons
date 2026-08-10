@@ -11,9 +11,9 @@ export const IconChevronUpDouble: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='chevron-up-double'
@@ -25,10 +25,10 @@ export const IconChevronUpDouble: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M4.42 11.46 9.1 6.52c1.36-1.44 2.04-2.16 2.9-2.16s1.55.72 2.9 2.16l4.69 4.94m-15.16 8 4.67-4.94c1.36-1.44 2.04-2.16 2.9-2.16s1.55.72 2.9 2.16l4.69 4.94'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='m4.423 11.456 4.665-4.935c1.363-1.442 2.044-2.162 2.905-2.163.86 0 1.543.72 2.906 2.16l4.678 4.938m-15.154 8 4.665-4.935c1.363-1.442 2.044-2.163 2.905-2.163.86 0 1.543.72 2.906 2.16l4.678 4.938'
+        strokeLinecap='round'
       />
     </svg>
   )

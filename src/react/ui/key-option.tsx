@@ -11,9 +11,9 @@ export const IconKeyOption: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='key-option'
@@ -25,10 +25,10 @@ export const IconKeyOption: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.64 7.36h4.38a2 2 0 0 1 1.76 1.06L14 16.3a2 2 0 0 0 1.76 1.05h4.6m-5.64-10h5.63'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.638 7.363h4.378a2 2 0 0 1 1.762 1.054l4.233 7.891a2 2 0 0 0 1.763 1.055h4.588m-5.628-10h5.628'
+        strokeLinecap='round'
       />
     </svg>
   )

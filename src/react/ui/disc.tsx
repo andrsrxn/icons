@@ -11,9 +11,9 @@ export const IconDisc: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='disc'
@@ -25,17 +25,17 @@ export const IconDisc: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17Zm3-8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12 20.5a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17m3-8.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0'
+        fill='currentColor'
       />
       <path
+        d='M6.52 12a5.47 5.47 0 0 1 5.47-5.48m.02 10.96a5.47 5.47 0 0 0 5.47-5.47M20.5 12a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Zm-5.88 0a2.62 2.62 0 1 1-5.24 0 2.62 2.62 0 0 1 5.24 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M6.517 11.995a5.465 5.465 0 0 1 1.606-3.872 5.465 5.465 0 0 1 3.872-1.606m.01 10.966a5.465 5.465 0 0 0 3.872-1.606 5.465 5.465 0 0 0 1.606-3.872M20.5 12a8.5 8.5 0 1 1-17 0 8.5 8.5 0 0 1 17 0Zm-5.876 0a2.624 2.624 0 1 1-5.248 0 2.624 2.624 0 0 1 5.248 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

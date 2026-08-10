@@ -11,9 +11,9 @@ export const IconEye: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='eye'
@@ -25,19 +25,21 @@ export const IconEye: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M14.773 12a2.773 2.773 0 1 1-5.546 0 2.773 2.773 0 0 1 5.546 0Z'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M11.99 7.07c-3.7 0-6.53 2.56-7.99 4.4a.9.9 0 0 0 .04 1.19C5.6 14.4 8.5 17.1 12 17.15c3.58.05 6.8-2.83 8.12-4.6a.8.8 0 0 0 .03-.95C18.93 9.75 15.78 7.07 12 7.07m2.6 5.01a2.65 2.65 0 1 1-5.3 0 2.65 2.65 0 0 1 5.3 0'
+        fill='currentColor'
       />
       <path
+        d='M12 7c-3.43 0-6.39 2.35-7.9 3.83a1.6 1.6 0 0 0 0 2.34C5.63 14.65 8.6 17 12 17s6.37-2.35 7.9-3.83a1.6 1.6 0 0 0 0-2.34C18.4 9.35 15.44 7 12 7Z'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M12 7c-3.43 0-6.386 2.348-7.906 3.826a1.612 1.612 0 0 0 .004 2.344C5.626 14.648 8.593 17 12 17s6.374-2.352 7.902-3.83c.674-.652.677-1.69.004-2.344C18.386 9.348 15.43 7 12 7Z'
       />
       <path
+        d='M14.77 12a2.77 2.77 0 1 1-5.54 0 2.77 2.77 0 0 1 5.54 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M14.773 12a2.773 2.773 0 1 1-5.546 0 2.773 2.773 0 0 1 5.546 0Z'
       />
     </svg>
   )

@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconFootprints: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='footprints'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m3.43 9.8 2.33 6.87 3.45-.8V8.72L7.95 6.36l-2.91.34zm17.14-2.7-2.33 6.93-3.45-.81V6.05l1.26-2.38 2.91.34z'
+        fill='currentColor'
+      />
+      <path
+        d='m9.32 15.8-3.7.98m9.06-3.66 3.71.98'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+      <path
+        d='M5.47 16.72c-.55-2.98-1.8-3.77-1.77-6.95.02-1.67 1.12-3.45 3.17-3.6S9.81 8.05 9.9 10c.13 2.83-.9 3.4-.44 5.76q.13.64.43 1.31c.57 1.33-.1 3-1.51 3.27l-.2.04a2.03 2.03 0 0 1-2.39-1.7zm13.06-2.5c.55-2.98 1.8-3.78 1.77-6.95-.02-1.68-1.12-3.46-3.17-3.6S14.19 5.54 14.1 7.5c-.13 2.82.9 3.4.44 5.75q-.12.64-.43 1.32c-.57 1.32.1 2.99 1.51 3.27l.2.03a2.03 2.03 0 0 0 2.39-1.7c.1-.66.21-1.37.32-1.95Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+    </svg>
+  )
+}

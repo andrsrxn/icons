@@ -11,9 +11,9 @@ export const IconSubsetProperOf: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='subset-proper-of'
@@ -25,10 +25,10 @@ export const IconSubsetProperOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M19.2 5.61h-8.33a6.3 6.3 0 0 0-3.33 11.66l.23.14a6.4 6.4 0 0 0 3.4.98h8.03'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M19.205 5.612H10.87a6.31 6.31 0 0 0-2.903.708c-4.34 2.25-4.58 8.37-.428 10.952l.227.141a6.458 6.458 0 0 0 3.41.974h8.028'
+        strokeLinecap='round'
       />
     </svg>
   )

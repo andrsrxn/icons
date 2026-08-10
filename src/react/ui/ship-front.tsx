@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconShipFront: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='ship-front'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path opacity='.2' fill='currentColor' d='M7.01 5.62h9.91v4.83H7.01z' />
+      <path
+        d='M17.41 11.4V9.3c0-1.89 0-2.83-.58-3.41-.59-.59-1.53-.59-3.42-.59H10.6c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.52-.58 3.41v2.1'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='m10.81 9.95-3.36 1.04c-1.62.5-2.42.75-2.8 1.48-.4.73-.18 1.44.26 2.88a10 10 0 0 0 .7 1.72c.76 1.43 1.14 2.14 2.1 2.71.94.57 1.96.57 3.99.57h1.2c1.74 0 2.6 0 3.48-.45.25-.13.6-.38.81-.56.74-.66.98-1.3 1.46-2.6q.23-.6.42-1.32c.42-1.52.63-2.28.24-2.98-.4-.71-1.2-.97-2.83-1.47l-3.3-1.02c-.58-.19-.88-.28-1.18-.28s-.6.1-1.19.28ZM12 5.3V3.06m0 10.82v-4'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

@@ -11,9 +11,9 @@ export const IconRecord: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='record'
@@ -25,19 +25,19 @@ export const IconRecord: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M17.154 12a5.154 5.154 0 1 1-10.308 0 5.154 5.154 0 0 1 10.308 0Z'
         opacity='.2'
+        d='M17.15 12a5.15 5.15 0 1 1-10.3 0 5.15 5.15 0 0 1 10.3 0'
+        fill='currentColor'
       />
       <path
+        d='M17.15 12a5.15 5.15 0 1 1-10.3 0 5.15 5.15 0 0 1 10.3 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M17.154 12a5.154 5.154 0 1 1-10.308 0 5.154 5.154 0 0 1 10.308 0Z'
       />
       <path
+        d='M20.45 12a8.45 8.45 0 1 1-16.9 0 8.45 8.45 0 0 1 16.9 0Z'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M20.453 12a8.453 8.453 0 1 1-16.906 0 8.453 8.453 0 0 1 16.906 0Z'
       />
     </svg>
   )

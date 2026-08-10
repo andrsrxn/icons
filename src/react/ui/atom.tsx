@@ -11,9 +11,9 @@ export const IconAtom: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='atom'
@@ -25,28 +25,28 @@ export const IconAtom: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        d='M15.01 15.112c-4.034 4.034-8.698 5.912-10.417 4.193-1.718-1.718.16-6.382 4.194-10.417 4.035-4.034 8.698-5.912 10.417-4.193 1.718 1.718-.159 6.382-4.194 10.417Z'
         opacity='.2'
+        d='M15.01 15.11c-4.03 4.04-8.7 5.91-10.42 4.2-1.72-1.72.16-6.39 4.2-10.42s8.7-5.91 10.41-4.2c1.72 1.72-.15 6.39-4.19 10.42'
+        fill='currentColor'
       />
-      <path fill='currentColor' d='M12.924 12a.924.924 0 1 1-1.848 0 .924.924 0 0 1 1.848 0Z' />
+      <path d='M12.92 12a.92.92 0 1 1-1.84 0 .92.92 0 0 1 1.84 0' fill='currentColor' />
       <path
+        d='M15.01 15.11c-4.03 4.04-8.7 5.91-10.42 4.2-1.72-1.72.16-6.39 4.2-10.42s8.7-5.91 10.41-4.2c1.72 1.72-.15 6.39-4.19 10.42Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M15.01 15.112c-4.034 4.034-8.698 5.912-10.417 4.193-1.718-1.718.16-6.382 4.194-10.417 4.035-4.034 8.698-5.912 10.417-4.193 1.718 1.718-.159 6.382-4.194 10.417Z'
-      />
-      <path
-        stroke='currentColor'
         strokeLinecap='round'
-        strokeWidth='1.5'
-        d='M8.784 15.115c4.034 4.034 8.698 5.912 10.416 4.194 1.719-1.718-.16-6.382-4.194-10.417C10.972 4.858 6.308 2.98 4.59 4.698c-1.718 1.719.16 6.382 4.194 10.417Z'
       />
       <path
+        d='M8.78 15.12c4.04 4.03 8.7 5.9 10.42 4.19 1.72-1.72-.16-6.38-4.2-10.42S6.3 2.98 4.6 4.7c-1.72 1.73.16 6.39 4.2 10.43Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M12.924 12a.924.924 0 1 1-1.848 0 .924.924 0 0 1 1.848 0Z'
+        strokeLinecap='round'
+      />
+      <path
+        d='M12.92 12a.92.92 0 1 1-1.84 0 .92.92 0 0 1 1.84 0Z'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
       />
     </svg>
   )

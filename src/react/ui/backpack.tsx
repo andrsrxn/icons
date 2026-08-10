@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconBackpack: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='backpack'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M6.48 9.73c0-1.41 0-2.11.18-2.69A4 4 0 0 1 9.31 4.4c.58-.18 1.28-.18 2.69-.18s2.11 0 2.69.18a4 4 0 0 1 2.65 2.65c.18.58.18 1.28.18 2.69v.73c0 1.34 0 2-.27 2.46a2 2 0 0 1-1.24.95c-.51.13-1.16-.04-2.44-.4l-.62-.16a4 4 0 0 0-.85-.19h-.2c-.22.01-.43.07-.85.19l-.62.17c-1.28.35-1.93.52-2.44.4a2 2 0 0 1-1.24-.96c-.27-.46-.27-1.12-.27-2.46z'
+        fill='#000'
+      />
+      <path
+        d='M6.48 9.48c0-1.4 0-2.11.18-2.68a4 4 0 0 1 2.65-2.66c.58-.17 1.28-.17 2.69-.17s2.11 0 2.69.17a4 4 0 0 1 2.65 2.66c.18.57.18 1.27.18 2.68v6.55c0 1.89 0 2.83-.6 3.42-.58.58-1.52.58-3.4.58h-3.04c-1.88 0-2.82 0-3.4-.58-.6-.59-.6-1.53-.6-3.42z'
+        stroke='#000'
+        strokeWidth='1.5'
+      />
+      <path
+        d='M13.82 7.52A4 4 0 0 0 12 7.15c-.76 0-1.25.1-1.82.37m7.34 6.68A12.4 12.4 0 0 0 12 13.06c-2.3 0-4.09.5-5.52 1.12m-.33-5.16c-2.04 1.56-2.53 2.85-2.53 4.3 0 1.32 1 2.44 2.27 2.44m11.96-6.74c2.04 1.56 2.53 2.85 2.53 4.3 0 1.32-1 2.44-2.27 2.44'
+        stroke='#000'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+      />
+    </svg>
+  )
+}

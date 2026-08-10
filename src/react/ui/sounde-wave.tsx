@@ -11,9 +11,9 @@ export const IconSoundeWave: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='sounde-wave'
@@ -25,10 +25,10 @@ export const IconSoundeWave: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M3.82 15.08V8.93m9.82 6.15V8.93m-3.28 8.2V6.88m9.82 9.21V7.9M7.1 19.18V4.84m9.82 14.33V4.84'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M3.818 15.078V8.932m9.818 6.146V8.932m-3.272 8.192V6.886m9.818 9.215V7.91M7.091 19.169V4.841m9.818 14.328V4.841'
+        strokeLinecap='round'
       />
     </svg>
   )

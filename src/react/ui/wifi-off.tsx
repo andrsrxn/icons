@@ -11,9 +11,9 @@ export const IconWifiOff: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='wifi-off'
@@ -25,10 +25,10 @@ export const IconWifiOff: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M8.23 15.25S9.5 13.69 12 13.69c.79 0 1.46.16 2 .37m-8.39-1.73S7.77 9.55 12 9.55s6.39 2.78 6.39 2.78M3.48 8.81S6.35 5.3 12 5.3s8.52 3.5 8.52 3.5M3.5 3.5l17 17m-7.68-2.08a.82.82 0 1 1-1.64 0 .82.82 0 0 1 1.64 0Z'
         stroke='currentColor'
-        strokeLinecap='round'
         strokeWidth='1.5'
-        d='M8.228 15.25S9.501 13.69 12 13.69c.79 0 1.457.155 2 .368M5.61 12.33S7.766 9.55 12 9.55s6.39 2.78 6.39 2.78M3.48 8.806S6.355 5.318 12 5.318s8.52 3.488 8.52 3.488M3.496 3.496l17.008 17.008m-7.682-2.087a.822.822 0 1 1-1.643 0 .822.822 0 0 1 1.643 0Z'
+        strokeLinecap='round'
       />
     </svg>
   )

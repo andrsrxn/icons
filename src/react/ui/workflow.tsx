@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconWorkflow: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='workflow'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M15.18 17.81H8.17c-.88 0-1.32 0-1.67-.13a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.8-.14-1.67s0-1.31.14-1.66a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.67-.14h7.5c.8 0 1.2 0 1.51-.11a2 2 0 0 0 1.23-1.23c.12-.32.12-.72.12-1.51 0-.8 0-1.2-.12-1.51a2 2 0 0 0-1.23-1.23c-.32-.12-.71-.12-1.5-.12h-7.4'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <rect opacity='.2' x='3.61' y='4' width='4.45' height='4.45' rx='1' fill='currentColor' />
+      <rect
+        x='3.61'
+        y='4'
+        width='4.45'
+        height='4.45'
+        rx='1'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <circle opacity='.2' cx='17.92' cy='17.81' r='2.47' fill='currentColor' />
+      <circle cx='17.92' cy='17.81' r='2.47' stroke='currentColor' strokeWidth='1.5' />
+    </svg>
+  )
+}

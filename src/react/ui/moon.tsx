@@ -11,9 +11,9 @@ export const IconMoon: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='moon'
@@ -25,17 +25,17 @@ export const IconMoon: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fill='currentColor'
-        fillRule='evenodd'
-        d='M5.652 15.434a8.94 8.94 0 0 1-.519-.015c-.956-.055-1.434-.083-1.587.19-.153.273.077.603.536 1.264a8.87 8.87 0 1 0 11.71-12.749c-.698-.401-1.046-.602-1.305-.426-.259.175-.19.65-.055 1.598a8.87 8.87 0 0 1-8.78 10.138Z'
-        clipRule='evenodd'
         opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='m5.65 15.43-.52-.01c-.95-.06-1.43-.08-1.58.19s.07.6.53 1.26A8.86 8.86 0 1 0 15.8 4.12c-.7-.4-1.04-.6-1.3-.42s-.2.65-.06 1.6q.1.62.1 1.26c0 4.9-3.98 8.87-8.88 8.87'
+        fill='currentColor'
       />
       <path
+        clipRule='evenodd'
+        d='m5.65 15.43-.52-.01c-.95-.06-1.43-.08-1.58.19s.07.6.53 1.26A8.86 8.86 0 1 0 15.8 4.12c-.7-.4-1.04-.6-1.3-.42s-.2.65-.06 1.6q.1.62.1 1.26c0 4.9-3.98 8.87-8.88 8.87Z'
         stroke='currentColor'
         strokeWidth='1.5'
-        d='M5.652 15.434a8.94 8.94 0 0 1-.519-.015c-.956-.055-1.434-.083-1.587.19-.153.273.077.603.536 1.264a8.87 8.87 0 1 0 11.71-12.749c-.698-.401-1.046-.602-1.305-.426-.259.175-.19.65-.055 1.598a8.87 8.87 0 0 1-8.78 10.138Z'
-        clipRule='evenodd'
       />
     </svg>
   )

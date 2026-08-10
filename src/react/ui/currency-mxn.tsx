@@ -11,9 +11,9 @@ export const IconCurrencyMxn: Icon = ({
 
   return (
     <svg
-      xmlns='http://www.w3.org/2000/svg'
-      fill='none'
       viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       data-slot='currency-mxn'
@@ -25,11 +25,11 @@ export const IconCurrencyMxn: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M12 3.32v2m0 13.35v2m4.67-12a3.34 3.34 0 0 0-3.34-3.34h-2.66a3.34 3.34 0 0 0 0 6.67H14a3.34 3.34 0 0 1 0 6.67h-4a3.34 3.34 0 0 1-3.34-3.33'
         stroke='currentColor'
+        strokeWidth='1.5'
         strokeLinecap='round'
         strokeLinejoin='round'
-        strokeWidth='1.5'
-        d='M12 3.324v2.002m0 13.348v2.002m4.672-12.013a3.337 3.337 0 0 0-3.337-3.337h-2.67a3.337 3.337 0 0 0 0 6.674h3.337a3.337 3.337 0 0 1 0 6.674H9.998a3.337 3.337 0 0 1-3.337-3.337'
       />
     </svg>
   )

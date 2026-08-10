@@ -1,0 +1,57 @@
+import type { Icon } from './types'
+
+export const IconAd: Icon = ({
+  size = 24,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      data-slot='ad'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M19.71 6.76H4.3v10.48h15.4z'
+        fill='currentColor'
+      />
+      <rect
+        x='3.75'
+        y='6.4'
+        width='16.5'
+        height='11.21'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth='1.5'
+      />
+      <path
+        d='m14.69 14.7.03.74zm0-5.25-.03.75zm-.85 5.12-.52.55zm0-5 .52.54zm-.15.87h-.75v3.27h1.5v-3.27zm1 4.25.03.75c.8-.03 1.72-.14 2.45-.65q1.2-.83 1.2-2.72h-1.5c0 .92-.28 1.3-.56 1.49q-.53.35-1.65.38zm2.93-2.62h.75q0-1.88-1.19-2.72a4.6 4.6 0 0 0-2.46-.65l-.03.75-.03.75q1.16.03 1.66.38c.27.2.55.57.55 1.5zm-3.93 1.64h-.75c0 .21 0 .46.03.66.03.22.1.51.35.75l.52-.55.52-.54q.06.06.08.12t.01.01V14l-.01-.3zm1 .98-.03-.75-.43.01h.02l.11.08-.52.54-.52.55c.25.23.53.3.76.32q.31.02.64 0zm-1-4.25h.75v-.3l.01-.16V10l-.09.11-.52-.54-.52-.54c-.24.24-.32.52-.35.75q-.04.31-.03.66zm1-.99.03-.75h-.65c-.22.03-.5.1-.75.33l.52.54.52.54-.11.08h-.02.14l.29.01z'
+        fill='currentColor'
+      />
+      <path
+        d='m6.55 14.7 1.48-3.73c.4-1 .59-1.49.93-1.49s.54.5.93 1.49l1.48 3.73'
+        stroke='currentColor'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
+      />
+      <path d='M7.45 13.32h3.02' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
+    </svg>
+  )
+}
