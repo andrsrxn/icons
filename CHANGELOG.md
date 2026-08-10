@@ -1,5 +1,46 @@
 # @andrsrxn/icons
 
+## 4.1.0
+
+### Minor Changes
+
+- [`f0541af`](https://github.com/andrsrxn/icons/commit/f0541af3dc0d6964a640d703194ab61147d89807) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added 11 UI icons
+
+  - hammer
+  - crane
+  - split-horizontal
+  - split-vertical
+  - compare
+  - baby-bottle
+  - mountains
+  - mountain
+  - volcano
+  - camping
+  - file-reference
+
+### Patch Changes
+
+- [`6e2fe5f`](https://github.com/andrsrxn/icons/commit/6e2fe5f206420374cf8b07a272b574f077ac4f66) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Update fill position from 16 icons
+
+  - team
+  - box
+  - chats
+  - copy
+  - substract
+  - files
+  - users
+  - group
+  - ungroup
+  - battery-high
+  - battery-medium
+  - battery-full
+  - swatches
+  - heartpulse
+  - colors
+  - clouds
+
+  **Semi Breaking Change**: removed the `termometer` icon which was misspelled and renamed `houseglass` to `hourglass`.
+
 ## 4.0.0
 
 ### Major Changes
