@@ -10,7 +10,7 @@
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 [![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
-React icon library with 550+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
+React icon library with 800+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
 ## Requirements
 
@@ -32,7 +32,7 @@ import '@andrsrxn/icons/styles.css'
 
 All of them are optimized and scalable SVGs.
 
-- **UI**: 550+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **UI**: 800+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (e.g. `IconFlagUS`, `IconFlagMX`); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
 ## Usage
