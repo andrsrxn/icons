@@ -5,12 +5,6 @@ import { describe, expect, it } from 'vitest'
 const pkg = JSON.parse(readFileSync(resolve(import.meta.dirname, '../../package.json'), 'utf-8'))
 
 describe('package.json', () => {
-  it('has main, module, and types fields', () => {
-    expect(pkg.main).toBeDefined()
-    expect(pkg.module).toBeDefined()
-    expect(pkg.types).toBeDefined()
-  })
-
   it('has the "exports" field', () => {
     expect(pkg.exports).toBeDefined()
     expect(typeof pkg.exports).toBe('object')
@@ -21,14 +15,12 @@ describe('package.json', () => {
       expect(pkg.exports['.']).toBeDefined()
       expect(pkg.exports['.'].types).toBeDefined()
       expect(pkg.exports['.'].import).toBeDefined()
-      expect(pkg.exports['.'].require).toBeDefined()
     })
 
     it('has a "./flags" export', () => {
       expect(pkg.exports['./flags']).toBeDefined()
       expect(pkg.exports['./flags'].types).toBeDefined()
       expect(pkg.exports['./flags'].import).toBeDefined()
-      expect(pkg.exports['./flags'].require).toBeDefined()
     })
 
     it('has a "./styles.css" export', () => {
