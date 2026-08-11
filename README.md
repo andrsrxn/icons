@@ -1,4 +1,4 @@
-<img src="https://res.cloudinary.com/dq5nfyajn/image/upload/v1781545765/symbol_p9zdmn.svg" alt="andrsrxn/ui symbol" width="64" height="64" />
+<img src="https://res.cloudinary.com/dq5nfyajn/image/upload/v1786396828/symbol_bo4gxs.svg" alt="andrsrxn/ui symbol" width="64" height="64" />
 
 # andrsrxn/icons
 
@@ -12,7 +12,9 @@
 
 React icon library with 800+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
-## Motivation
+![Icons banner with logo in the center](https://res.cloudinary.com/dq5nfyajn/image/upload/v1786409382/banner-og_ostf0x.webp)
+
+## Overview
 
 This library was built to serve as the icon foundation for **[@andrsrxn/ui](https://ui.andrsrxn.com)**, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
 
