@@ -1,5 +1,13 @@
 # @andrsrxn/icons
 
+## 4.1.1
+
+### Patch Changes
+
+- [`53aa95f`](https://github.com/andrsrxn/icons/commit/53aa95f3c60e8a379927be3ed82ad5efd353b318) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Update library logo and banner on README.md
+
+- [`53aa95f`](https://github.com/andrsrxn/icons/commit/53aa95f3c60e8a379927be3ed82ad5efd353b318) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Ensure the fill on `bookmarks` icon is always in the back
+
 ## 4.1.0
 
 ### Minor Changes
