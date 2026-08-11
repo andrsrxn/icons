@@ -36,6 +36,8 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 You only need to be using `react` and `react-dom` version 19.
 
+> **Warning**: This is an ESM-only package, make sure your project is using Node `20.16.0`, `22.19.0`, `24.0.0` or higher, and has the `"type": "module"` field in your `package.json`.
+
 ## Installation
 
 ```bash

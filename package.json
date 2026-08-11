@@ -29,6 +29,13 @@
     "url": "git+https://github.com/andrsrxn/icons.git"
   },
   "homepage": "https://github.com/andrsrxn/icons#readme",
+  "bugs": {
+    "url": "https://github.com/andrsrxn/icons/issues"
+  },
+  "funding": {
+    "type": "GitHub Sponsors",
+    "url": "https://github.com/sponsors/andrsrxn"
+  },
   "sideEffects": [
     "dist/**/*.css"
   ],
@@ -44,43 +51,36 @@
     "pnpm": "^11"
   },
   "packageManager": "pnpm@11.20.0",
-  "main": "./dist/ui/index.cjs",
-  "module": "./dist/ui/index.js",
-  "types": "./dist/ui/index.d.ts",
   "exports": {
-    "./styles.css": "./dist/styles.css",
     ".": {
       "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.js",
-      "require": "./dist/ui/index.cjs"
+      "import": "./dist/ui/index.js"
     },
     "./types": {
       "types": "./dist/ui/types.d.ts"
     },
     "./flags": {
       "types": "./dist/flags/index.d.ts",
-      "import": "./dist/flags/index.js",
-      "require": "./dist/flags/index.cjs"
+      "import": "./dist/flags/index.js"
     },
     "./flags/types": {
       "types": "./dist/flags/types.d.ts"
     },
     "./flags/*": {
       "types": "./dist/flags/*.d.ts",
-      "import": "./dist/flags/*.js",
-      "require": "./dist/flags/*.cjs"
+      "import": "./dist/flags/*.js"
     },
     "./*": {
       "types": "./dist/ui/*.d.ts",
-      "import": "./dist/ui/*.js",
-      "require": "./dist/ui/*.cjs"
-    }
+      "import": "./dist/ui/*.js"
+    },
+    "./styles.css": "./dist/styles.css"
   },
   "scripts": {
     "dev": "vite",
-    "build:icons": "tsdown && tsc -p ./tsconfig.build.json && node ./scripts/inject-dts-previews.js",
+    "build:icons": "tsdown && node ./scripts/fix-types-exports.js && node ./scripts/inject-dts-previews.js",
     "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
-    "build": "pnpm build:icons && tsc && pnpm build:css && echo Build finished.",
+    "build": "pnpm build:icons && pnpm build:css && pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only --exclude-entrypoints styles.css && pnpm dlx publint . && echo Build finished.",
     "format": "prettier --write . && echo Format finished.",
     "format:check": "prettier --check . && echo Format finished.",
     "lint": "biome check && echo Lint finished.",

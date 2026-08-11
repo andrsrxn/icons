@@ -100,8 +100,7 @@ function processCategory(category) {
       skipped++
       continue
     }
-
-    dts = dts.replace(/(export\s+declare\s+const\s+\w+\s*:)/u, `${preview}\n$1`)
+    dts = dts.replace(/(^|\n)(\s*)(declare\s+const\s+\w+\s*:)/u, `$1$2${preview}\n$2$3`)
 
     fs.writeFileSync(dtsPath, dts, 'utf8')
 

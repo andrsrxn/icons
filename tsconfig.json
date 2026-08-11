@@ -1,13 +1,14 @@
 {
   "compilerOptions": {
     "target": "ES2024",
-    "useDefineForClassFields": true,
     "lib": ["ES2024", "DOM"],
     "module": "ESNext",
+    "moduleResolution": "bundler",
     "skipLibCheck": true,
     "types": ["node"],
+    "useDefineForClassFields": true,
+
     /* Bundler mode */
-    "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",

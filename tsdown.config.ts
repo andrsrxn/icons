@@ -2,11 +2,11 @@ import { defineConfig } from 'tsdown'
 
 export default defineConfig({
   entry: ['./src/react/ui/index.ts', './src/react/flags/index.ts'],
-  format: ['esm', 'cjs'],
+  format: ['esm'],
   outDir: 'dist',
-  cjsDefault: false,
 
-  dts: false,
+  dts: true,
+
   clean: true,
   tsconfig: './tsconfig.json',
   target: 'es2024',
