@@ -12,7 +12,7 @@
 
 React icon library with 800+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
-![Icons banner with logo in the center](https://res.cloudinary.com/dq5nfyajn/image/upload/v1786409382/banner-og_ostf0x.webp)
+![Icons banner with logo in the center](https://res.cloudinary.com/dq5nfyajn/image/upload/v1786933080/banner-github_jupx5b.webp)
 
 ## Overview
 
