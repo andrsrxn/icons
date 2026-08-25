@@ -42,5 +42,6 @@
 
     "skipDefaultLibCheck": true
   },
-  "include": ["src", "tsdown.config.ts", "demo", "__tests__"]
+  "include": ["src", "tsdown.config.ts", "demo", "__tests__"],
+  "exclude": ["node_modules", "dist"]
 }
