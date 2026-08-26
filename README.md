@@ -110,7 +110,7 @@ All of the categories have an `Icon` prefix to differentiate them from other com
 All of the icons have a specific className to style them globally or individualy
 
 - **UI icons**: `ui-icon`
-- **Flag icons**: `flag-icon`
+- **Flag icons**: `ui-flag`
 
 Or you can use the custom props as the next examples:
 
