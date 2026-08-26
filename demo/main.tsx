@@ -26,6 +26,14 @@ const App = () => {
   return (
     <div className='icon-grid-container'>
       <div className='icon-grid-category'>
+        <div className='icon-grid'>
+          <h2>UI: {uiIcons.length}</h2>
+          <h2>Flags: {flagIcons.length}</h2>
+          <h2>Total: {uiIcons.length + flagIcons.length}</h2>
+        </div>
+      </div>
+
+      <div className='icon-grid-category'>
         <h2>UI Icons</h2>
         <div className='icon-grid'>{uiIcons}</div>
       </div>
