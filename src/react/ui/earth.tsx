@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEarth: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEarth: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='earth'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-earth'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,18 @@ export const IconEarth: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M11.91 3.56q1.81.01 3.37.73l.56 4.82-3.6 1.53-2.55 2.55L7.46 10l.25-5.27a8 8 0 0 1 4.2-1.17M9.95 20.2q.4.1.8.16l5.09-3.78V13.6l-6.15-.42L11.51 16z'
+        d='M8 3.46A9.43 9.43 0 0 1 20.63 8.2L18 9l-1.2 3-2.7.7-1.08 4.3 2.26 3.84a9 9 0 0 1-3.28.59c-4.68 0-8.65-4-9.4-8.47L6.35 12 7.8 9h1.53l.9-2.61z'
         fill='currentColor'
       />
       <path
-        d='M7.86 4.89c-.04 1.57-.82 4.72.19 6.24.47.72 1.3 1.48 2.01 2.3m0 0Zm0 0a5 5 0 0 1 1.33 2.44c.23 2.02-2.29 4.21-1.26 4.49 1.85.5 2.85-1.36 4.47-2.99 1.15-1.16 1.97-2.13.9-3.74-1.3-1.96-5.13.14-5.44-.2Zm0 0c-.64-.78.72-2.87 3.6-3.36 2.08-.34 2.42-2.9 2-4.17s-.88-1.67-.96-1.78m5.88 8.04a8.44 8.44 0 1 1-16.88 0 8.44 8.44 0 0 1 16.88 0Z'
+        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m8.67 3.99 1.5 1.34c.7.61.87 1.64.4 2.44l-.14.23a1.5 1.5 0 0 1-1.38.74 1.5 1.5 0 0 0-1.54 1.15l-.24 1.02A2.74 2.74 0 0 1 4.32 13l-1.3-.14m17.24-4.64-.24-.03a2.1 2.1 0 0 0-2.38 1.84l-.03.29a1.8 1.8 0 0 1-1.91 1.6 1.8 1.8 0 0 0-1.85 1.3l-.32 1.12-.01.07c-.27 1.32-.4 1.98-.26 2.61.15.64.56 1.17 1.38 2.24l.75.97'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

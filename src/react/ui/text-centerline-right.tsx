@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextCenterlineRight: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextCenterlineRight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-centerline-right'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-centerline-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,25 +29,24 @@ export const IconTextCenterlineRight: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        width='6.16'
-        height='6.16'
+        width='6.8'
+        height='6.8'
         rx='2'
-        transform='matrix(-1 0 0 1 19.89 8.88)'
+        transform='matrix(-1 0 0 1 20.7 8.56)'
         fill='currentColor'
       />
       <rect
-        width='6.16'
-        height='6.16'
+        width='6.8'
+        height='6.8'
         rx='2'
-        transform='matrix(-1 0 0 1 19.89 8.88)'
+        transform='matrix(-1 0 0 1 20.7 8.56)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M3.63 9.88h7.43m-7.43 8.77h16.74M3.63 14.12h7.43M3.63 5.35h16.74'
+        d='M2.77 9.66h8.19m-8.19 9.68h18.47m-18.47-5h8.19m-8.2-9.68h18.48'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

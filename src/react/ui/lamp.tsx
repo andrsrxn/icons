@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLamp: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLamp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='lamp'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-lamp'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,19 +29,13 @@ export const IconLamp: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6.46 5.46c.59-.83.88-1.24 1.31-1.47s.94-.22 1.96-.22h4.6c1.02 0 1.53 0 1.96.22.44.23.73.65 1.32 1.49l1 1.43c.95 1.38 1.44 2.07 1.16 2.6s-1.13.54-2.8.54h-9.9c-1.7 0-2.54 0-2.82-.54s.21-1.23 1.19-2.61z'
+        d='M5.95 4.43c.59-.83.88-1.24 1.31-1.46.44-.23.94-.23 1.96-.23h5.62c1.02 0 1.53 0 1.97.23s.73.65 1.31 1.49l1.51 2.16C20.6 8 21.07 8.7 20.8 9.22c-.28.55-1.12.55-2.8.55H6.04c-1.7 0-2.54 0-2.82-.54s.21-1.24 1.19-2.62z'
         fill='currentColor'
       />
       <path
-        d='M12 20.37V10.05m2.92 10.32H9.08'
+        d='M12 21.3V9.76m3.26 11.54H8.74M5.95 4.43c.59-.83.88-1.24 1.31-1.46.44-.23.94-.23 1.96-.23h5.62c1.02 0 1.53 0 1.97.23s.73.65 1.31 1.49l1.51 2.16C20.6 8 21.07 8.7 20.8 9.22c-.28.55-1.12.55-2.8.55H6.04c-1.7 0-2.54 0-2.82-.54s.21-1.24 1.19-2.62z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path
-        d='M6.46 5.46c.59-.83.88-1.24 1.31-1.47s.94-.22 1.96-.22h4.6c1.02 0 1.53 0 1.96.22.44.23.73.65 1.32 1.49l1 1.43c.95 1.38 1.44 2.07 1.16 2.6s-1.13.54-2.8.54h-9.9c-1.7 0-2.54 0-2.82-.54s.21-1.23 1.19-2.61z'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

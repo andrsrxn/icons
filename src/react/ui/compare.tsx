@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCompare: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCompare: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='compare'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-compare'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,21 +27,20 @@ export const IconCompare: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.75' y='6' width='16.51' height='12' rx='2' fill='#000' />
-      <path
-        d='M11.6 6H7.76c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.52-.58 3.41v4c0 1.89 0 2.83.58 3.41.59.59 1.53.59 3.42.59h3.86'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+      <rect
+        opacity='.2'
+        x='2.77'
+        y='5.29'
+        width='18.72'
+        height='13.42'
+        rx='3'
+        fill='currentColor'
       />
       <path
-        d='M14.36 6h1.45m4.44 7.34V10.7m0-3.21c0-.83-.67-1.5-1.5-1.5h-.35m1.85 10.5c0 .83-.67 1.5-1.5 1.5h-.35m-4.04.04h1.45'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        d='M11.56 5.29h-2.8c-2.82 0-4.24 0-5.12.88-.87.87-.87 2.29-.87 5.12v1.42c0 2.83 0 4.25.87 5.12.88.88 2.3.88 5.13.88h2.8m3.07-13.42h1.62m4.97 8.2v-2.93m0-3.6c0-.92-.75-1.67-1.67-1.67h-.4m2.07 11.74c0 .93-.75 1.68-1.67 1.68h-.4m-4.52.04h1.62m-4.7-15.7v17.9'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
-      <path d='M11.6 4v16' stroke='#000' strokeWidth='1.5' strokeLinecap='round' />
     </svg>
   )
 }

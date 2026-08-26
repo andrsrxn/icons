@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconVersus: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconVersus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='versus'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-versus'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,15 +28,9 @@ export const IconVersus: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M15.78 4.04a.75.75 0 1 1 1.3.75l-.65-.38zM8.14 20.27a.75.75 0 0 1-1.3-.75l.65.37zM16.43 4.4l.65.38-4.47 7.74-.65-.38-.65-.37 4.47-7.74zm-4.47 7.74.65.38-4.47 7.74-.65-.38-.65-.37 4.47-7.74z'
-        fill='currentColor'
-      />
-      <path
-        d='m3.77 3.88 2.55 7.5a1 1 0 0 0 1.88.04l2.9-7.54m9.13 9.54c-.25-.74-1.06-1.57-2.5-1.57-1.45 0-2.6.77-2.6 2.09 0 2.8 5.1 1.1 5.1 4.04 0 1.55-1.27 2.14-2.5 2.14-1.45 0-2.6-.59-2.6-1.68'
+        d='m16.7 3.95-4.74 8.21-4.75 8.22M3.27 3.39l1.86 5.5c.75 2.18 1.12 3.28 1.82 3.3.7 0 1.12-1.07 1.95-3.23l2.14-5.57m9.46 9.86c-.24-.88-1.35-1.54-2.65-1.54s-2.89.75-2.73 2.32c.35 3.4 5.22.76 5.45 4.13.12 1.6-1.4 2.47-2.72 2.47s-2.3-.67-2.73-1.56'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

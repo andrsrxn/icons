@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUnlink: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUnlink: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='unlink'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-unlink'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,20 @@ export const IconUnlink: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M12.77 5.08a4.35 4.35 0 0 1 6.15 6.15l-7.69 7.7a4.35 4.35 0 1 1-6.15-6.16z'
+        x='16.46'
+        y='.7'
+        width='9.67'
+        height='22.29'
+        rx='4.83'
+        transform='rotate(45 16.46 .7)'
         fill='currentColor'
       />
       <path
-        d='M16.09 13a.75.75 0 0 0 1.06 1.07l-.53-.53zm-2.02 4.15A.75.75 0 1 0 13 16.09l.53.53zm-2.84 1.77.53.53zm-6.15-6.15.53.53zm2.83-1.78a.75.75 0 0 0-1.06-1.06l.53.53zm2.02-4.14A.75.75 0 0 0 11 7.92l-.53-.54zm8.32 8.5a.75.75 0 1 0-.48 1.42l.24-.72zm1.2 1.98a.75.75 0 0 0 .48-1.43l-.24.72zM7.24 6.23a.75.75 0 1 0 1.43-.48L7.95 6zm.87-2.16a.75.75 0 1 0-1.43.47l.71-.23zm8.62 13.75a.75.75 0 1 0-1.43.48l.71-.24zm-.87 2.16a.75.75 0 0 0 1.43-.47l-.72.23zM5.7 8.71a.75.75 0 0 0 .48-1.43L5.94 8zM4.5 6.72a.75.75 0 1 0-.48 1.43l.24-.71zm14.42 4.51-.53-.53-2.3 2.3.53.54.53.53 2.3-2.3zm-5.38 5.39-.53-.53-2.31 2.3.53.53.53.53 2.3-2.3zm-8.46-3.85.53.53L7.9 11l-.53-.54-.53-.53-2.3 2.3zm5.38-5.39.53.54L13.3 5.6l-.53-.53-.53-.53-2.3 2.3zM5.08 18.92l.53-.53a3.6 3.6 0 0 1 0-5.09l-.53-.53-.53-.53c-2 2-2 5.22 0 7.21zm0 0-.53.53c1.99 2 5.22 2 7.21 0l-.53-.53-.53-.53a3.6 3.6 0 0 1-5.1 0zM18.92 5.08l-.53.53a3.6 3.6 0 0 1 0 5.09l.53.53.53.53c2-2 2-5.22 0-7.21zm0 0 .53-.53c-1.99-2-5.22-2-7.21 0l.53.53.53.53a3.6 3.6 0 0 1 5.1 0zm-.91 10.97-.24.72 1.69.56.23-.71.24-.72-1.68-.56zM7.95 6l.7-.24-.55-1.68-.72.24-.7.23.55 1.69zM16 18.06l-.7.24.55 1.68.71-.24.72-.23-.56-1.69zM5.94 8l.24-.72-1.69-.56-.23.72-.24.7 1.68.57z'
-        fill='currentColor'
+        d='m9.36 14.64 5.83-5.83M6.86 10.3l-2.83 2.83a4.83 4.83 0 0 0 6.84 6.84l2.76-2.76M8 5.21l-.48-1.8m8.99 14.79L17 20M5.8 7.41 4 6.93M18.72 16l1.8.48M10.31 6.85l2.82-2.82a4.83 4.83 0 0 1 6.84 6.84l-2.82 2.82'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

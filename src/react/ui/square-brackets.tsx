@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSquareBrackets: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSquareBrackets: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='square-brackets'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-square-brackets'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconSquareBrackets: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.9 3.75h-.12c-1.89 0-2.83 0-3.41.58-.59.6-.59 1.53-.59 3.42v8.5c0 1.89 0 2.83.59 3.42.58.58 1.52.58 3.41.58h.13m6.18-16.5h.13c1.89 0 2.83 0 3.41.58.59.6.59 1.53.59 3.42v8.5c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.41.58h-.13'
+        d='M8.23 21c-1.08 0-1.62 0-2.06-.14A3 3 0 0 1 4.2 18.9c-.13-.44-.13-.98-.13-2.06V7.16c0-1.08 0-1.62.13-2.06a3 3 0 0 1 1.97-1.96C6.6 3 7.15 3 8.23 3m7.54 18c1.08 0 1.62 0 2.06-.14a3 3 0 0 0 1.97-1.96c.13-.44.13-.98.13-2.06V7.16c0-1.08 0-1.62-.13-2.06a3 3 0 0 0-1.97-1.96C17.4 3 16.85 3 15.77 3'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

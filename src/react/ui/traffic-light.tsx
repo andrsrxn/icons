@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTrafficLight: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTrafficLight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='traffic-light'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-traffic-light'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,22 +29,20 @@ export const IconTrafficLight: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M15.84 8.13c0-1.74 0-2.6-.5-3.17l-.17-.17c-.57-.5-1.44-.5-3.17-.5s-2.6 0-3.17.5l-.17.17c-.5.57-.5 1.43-.5 3.17v4.18c0 1.74 0 2.6.5 3.17l.17.18c.57.5 1.44.5 3.17.5s2.6 0 3.17-.5l.17-.18c.5-.57.5-1.43.5-3.17zm-2.65-.44a1.2 1.2 0 1 1-2.38 0 1.2 1.2 0 0 1 2.38 0m0 5.09a1.2 1.2 0 1 1-2.38 0 1.2 1.2 0 0 1 2.38 0'
+        d='M16.27 7.49c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58h-.54c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v5.2c0 1.89 0 2.83.58 3.41.59.59 1.53.59 3.42.59h.54c1.89 0 2.83 0 3.42-.59.58-.58.58-1.52.58-3.41zm-2.95-.21a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0m0 5.65a1.32 1.32 0 1 1-2.64 0 1.32 1.32 0 0 1 2.64 0'
         fill='currentColor'
       />
       <path
-        d='M8.27 7.92c-.22-1.85-.33-2.78.14-3.41l.25-.27c.57-.54 1.5-.54 3.37-.54 1.84 0 2.76 0 3.33.53l.25.27c.47.62.37 1.54.18 3.37l-.2 1.94-.03.41.03.41.2 1.94c.2 1.83.29 2.75-.18 3.38l-.25.26c-.57.54-1.5.54-3.33.54-1.87 0-2.8 0-3.37-.54l-.25-.28c-.47-.63-.36-1.56-.14-3.4l.21-1.85c.03-.23.04-.34.04-.46s0-.23-.04-.46z'
+        d='M7.82 7.3c-.24-2.09-.36-3.13.24-3.8s1.64-.67 3.74-.67h.46c2.07 0 3.1 0 3.7.66s.5 1.7.28 3.75L16 9.68l-.03.4c0 .11 0 .21.03.42l.25 2.43c.21 2.06.32 3.1-.27 3.75-.6.67-1.64.67-3.7.67h-.47c-2.1 0-3.15 0-3.74-.68-.6-.67-.48-1.7-.24-3.79l.28-2.33.04-.46c0-.12-.02-.23-.04-.47zM12 21.52v-4.17'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path d='M12 20.5v-3.75' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
-      <circle cx='12' cy='7.69' r='1.19' stroke='currentColor' strokeWidth='1.5' />
-      <circle cx='12' cy='12.78' r='1.19' stroke='currentColor' strokeWidth='1.5' />
+      <circle cx='12' cy='7.28' r='1.32' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='12' cy='12.93' r='1.32' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='M8.02 6.3H6.88a1 1 0 0 0-.69 1.72l1.95 1.86m7.93-3.58h1.05a1 1 0 0 1 .69 1.72l-1.95 1.86m-8.03 2.04H6.9a1 1 0 0 0-.68 1.73l1.6 1.51m8.35-3.24h.92a1 1 0 0 1 .68 1.73l-1.6 1.51'
+        d='M7.58 5.72c-1.3 0-1.94 0-2.22.26a1 1 0 0 0-.33.81c.03.39.5.83 1.43 1.72l1.25 1.2m8.82-3.99c1.2 0 1.8 0 2.07.23a1 1 0 0 1 .36.89c-.04.36-.47.77-1.34 1.6l-1.33 1.27m-8.93 2.27c-1.08 0-1.62 0-1.88.19a1 1 0 0 0-.4 1.01c.06.31.45.68 1.24 1.42l1.04.98m9.28-3.6c1.08 0 1.62 0 1.88.19a1 1 0 0 1 .4 1.01c-.06.31-.45.68-1.24 1.42l-1.04.98'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

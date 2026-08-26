@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMinus: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMinus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='minus'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-minus'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,13 +27,7 @@ export const IconMinus: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M3.61 12H20.4'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
+      <path d='M4.07 12h15.86' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

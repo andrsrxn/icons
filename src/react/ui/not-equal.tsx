@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconNotEqual: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconNotEqual: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='not-equal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-not-equal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconNotEqual: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m3.5 3.5 17 17M3.61 8.5H20.4m-16.78 7H20.4'
+        d='M4.21 4.21 19.8 19.8M4.07 9h15.86M4.07 15h15.86'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

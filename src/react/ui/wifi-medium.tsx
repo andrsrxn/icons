@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWifiMedium: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWifiMedium: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='wifi-medium'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-wifi-medium'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,15 @@ export const IconWifiMedium: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.23 15.25S9.5 13.69 12 13.69s3.77 1.56 3.77 1.56M5.61 12.33S7.77 9.55 12 9.55a8.4 8.4 0 0 1 6.39 2.78m-5.57 6.09a.82.82 0 1 1-1.64 0 .82.82 0 0 1 1.64 0Z'
+        d='M12.9 18.51a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M7.63 15.79c1.06-1.29 2.43-1.87 4.37-1.87s3.3.58 4.37 1.87M4.77 12.6C6.52 10.47 8.79 9.5 12 9.5s5.48.97 7.23 3.1'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

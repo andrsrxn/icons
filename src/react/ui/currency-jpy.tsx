@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyJpy: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyJpy: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-jpy'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-jpy'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconCurrencyJpy: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M7.35 15.5h9.32m-9.32-3.11h9.32m-4.66 0v7.76m0-7.76L19 3.85m-6.99 8.54L5.02 3.85'
+        d='M4.83 3 12 11.92M19.17 3l-7.16 8.92m0 .18v9.2m-4.25-5.6h8.48m-9.66-3.78h10.84'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

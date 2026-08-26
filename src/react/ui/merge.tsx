@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMerge: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMerge: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='merge'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-merge'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconMerge: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m8.52 17.88.65.65c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.65-.65M12 20.54v-5.87m0 0 3-2.85c.62-.58.93-.87 1.1-1.25.16-.38.16-.8.16-1.65v-5.3M12 14.67l-3.01-2.86a4 4 0 0 1-1.09-1.25c-.16-.38-.16-.8-.16-1.65V3.62'
+        d='m15.72 18.6-.89.9c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.89-.9M12 13.84v7.3M7.68 2.75V6.5c0 1.83 0 2.75.38 3.56.38.8 1.08 1.4 2.5 2.57L12 13.84m4.32-11.09V6.5c0 1.83 0 2.75-.38 3.56-.38.8-1.08 1.4-2.5 2.57L12 13.84'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

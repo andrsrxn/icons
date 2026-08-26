@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLogs: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLogs: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='logs'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-logs'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconLogs: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M13.82 5.25a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zm-6.59 4.5a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zm-6.59 4.5a.75.75 0 0 0 0 1.5zm6.59 1.5a.75.75 0 0 0 0-1.5zM13.82 6v.75h6.59v-1.5h-6.59zm0 6v.75h6.59v-1.5h-6.59zm0 6v.75h6.59v-1.5h-6.59zM3.6 5.25a.75.75 0 1 0 0 1.5zm1.13 1.5a.75.75 0 1 0 0-1.5zm-1.14 4.5a.75.75 0 0 0 0 1.5zm1.14 1.5a.75.75 0 0 0 0-1.5zm-1.14 4.5a.75.75 0 0 0 0 1.5zm1.14 1.5a.75.75 0 0 0 0-1.5zM3.6 6v.75h1.14v-1.5H3.6zm0 6v.75h1.14v-1.5H3.6zm0 6v.75h1.14v-1.5H3.6zM7.96 5.25a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zm-2.63 4.5a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zm-2.63 4.5a.75.75 0 0 0 0 1.5zm2.63 1.5a.75.75 0 0 0 0-1.5zM7.96 6v.75h2.63v-1.5H7.96zm0 6v.75h2.63v-1.5H7.96zm0 6v.75h2.63v-1.5H7.96z'
-        fill='currentColor'
+        d='M13.9 5.76h6.85M13.9 12h6.85m-6.85 6.24h6.85M3.25 5.76h1.19M3.25 12h1.19m-1.19 6.24h1.19M7.8 5.76h2.73M7.8 12h2.73M7.8 18.24h2.73'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

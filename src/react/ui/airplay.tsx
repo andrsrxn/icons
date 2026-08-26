@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAirplay: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAirplay: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='airplay'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-airplay'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,16 +29,18 @@ export const IconAirplay: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M20.4 9.3c0-1.9 0-2.83-.58-3.42s-1.53-.59-3.41-.59H7.59c-1.88 0-2.83 0-3.41.6-.59.58-.59 1.52-.59 3.4v3.23c0 1.88 0 2.83.59 3.41.58.59 1.53.59 3.41.59h2.04q.69-.01 1.2-.47a1.8 1.8 0 0 1 2.36-.03l.05.04c.33.3.77.46 1.21.46h1.96c1.88 0 2.83 0 3.41-.59.59-.58.59-1.53.59-3.41z'
+        d='M2.7 10.5c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h6.6c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12v2.09c0 1.28 0 1.92-.19 2.44a3 3 0 0 1-1.75 1.74c-.5.2-1.15.2-2.43.2h-1.2a2.2 2.2 0 0 1-1.87-1.03 2.2 2.2 0 0 0-3.73 0 2.2 2.2 0 0 1-1.87 1.03H7.07c-1.28 0-1.92 0-2.43-.2a3 3 0 0 1-1.75-1.75c-.2-.5-.2-1.15-.2-2.43z'
         fill='currentColor'
       />
       <path
-        d='M9.85 16.52c-1.1 0-4.73 0-5.15-.21a2 2 0 0 1-.9-.9c-.2-.42-.2-.97-.2-2.08V9.3c0-1.88 0-2.82.58-3.4.58-.6 1.53-.6 3.41-.6h8.82c1.88 0 2.83 0 3.41.6.59.58.59 1.52.59 3.4v4.05c0 1.1 0 1.65-.21 2.07a2 2 0 0 1-.9.9c-.42.2-4.05.2-5.15.2M10 19.36h4c1.19 0 1.78 0 1.94-.35.17-.35-.23-.78-1.02-1.64l-2.01-2.18c-.43-.47-.64-.7-.92-.7s-.49.23-.92.7l-2.01 2.18c-.8.86-1.19 1.29-1.02 1.64s.75.35 1.94.35Z'
+        d='M15.03 16.97h.27c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-.47c0-2.83 0-4.24-.87-5.12-.88-.88-2.3-.88-5.13-.88H8.7c-2.83 0-4.25 0-5.13.88s-.87 2.3-.87 5.12v.47c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88H9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m9.64 16.77.75-1c.74-1 1.1-1.5 1.61-1.5.5 0 .87.5 1.6 1.5l.76 1h0c1.03 1.4 1.55 2.1 1.27 2.65-.27.55-1.14.55-2.88.55h-1.5c-1.74 0-2.6 0-2.88-.55-.28-.56.24-1.25 1.27-2.65'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

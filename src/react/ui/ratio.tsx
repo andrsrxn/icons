@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRatio: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRatio: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ratio'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ratio'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,25 +27,33 @@ export const IconRatio: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='7' y='7' width='10' height='10' rx='2' fill='currentColor' />
       <rect
-        x='3.75'
-        y='7'
-        width='16.51'
-        height='10'
-        rx='2'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        opacity='.2'
+        x='6.39'
+        y='6.39'
+        width='11.22'
+        height='11.22'
+        rx='3'
+        fill='currentColor'
       />
       <rect
-        x='7'
-        y='20.25'
-        width='16.51'
-        height='10'
-        rx='2'
-        transform='rotate(-90 7 20.25)'
+        x='2.74'
+        y='6.39'
+        width='18.53'
+        height='11.22'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='6.39'
+        y='21.26'
+        width='18.53'
+        height='11.22'
+        rx='3'
+        transform='rotate(-90 6.39 21.26)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPanelLeft: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPanelLeft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='panel-left'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-panel-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,27 @@ export const IconPanelLeft: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.73 15.86V8.14c0-1.06 0-1.6.2-2a2 2 0 0 1 .93-.94c.41-.2.94-.2 2-.2s1.6 0 2 .2a2 2 0 0 1 .94.94c.2.4.2.94.2 2v7.72c0 1.06 0 1.6-.2 2a2 2 0 0 1-.94.94c-.4.2-.94.2-2 .2s-1.59 0-2-.2a2 2 0 0 1-.94-.94c-.2-.4-.2-.94-.2-2'
+        x='9.35'
+        y='20.36'
+        width='6.62'
+        height='16.71'
+        rx='2'
+        transform='rotate(-180 9.35 20.36)'
         fill='currentColor'
       />
-      <path
-        d='M9.25 19a.75.75 0 0 0 1.5 0zm1.5-14a.75.75 0 0 0-1.5 0zM7.73 5v.75h8.54v-1.5H7.73zm12.54 4h-.75v6h1.5V9zm-4 10v-.75H7.73v1.5h8.54zM3.73 15h.75V9h-1.5v6zm4 4v-.75c-.97 0-1.62 0-2.1-.07-.46-.06-.66-.17-.79-.3l-.53.53-.53.53c.46.46 1.02.65 1.65.73q.9.1 2.3.08zm-4-4h-.75c0 .92 0 1.69.08 2.3.08.62.27 1.19.72 1.64l.53-.53.53-.53c-.13-.13-.24-.32-.3-.79s-.06-1.13-.06-2.09zm16.54 0h-.75c0 .96 0 1.61-.06 2.1-.06.46-.17.65-.3.78l.53.53.53.53a2.7 2.7 0 0 0 .72-1.65c.09-.6.08-1.37.08-2.29zm-4 4v.75q1.4.02 2.3-.08c.63-.08 1.2-.27 1.65-.73l-.53-.53-.53-.53c-.13.13-.33.24-.8.3-.47.07-1.12.07-2.09.07zm0-14v.75c.97 0 1.62 0 2.1.07.46.06.66.17.79.3l.53-.53.53-.53a2.7 2.7 0 0 0-1.65-.73c-.6-.08-1.37-.08-2.3-.08zm4 4h.75q.02-1.38-.08-2.3a2.7 2.7 0 0 0-.72-1.64l-.53.53-.53.53c.13.13.24.32.3.79s.06 1.13.06 2.09zM7.73 5v-.75c-.93 0-1.7 0-2.3.08-.63.08-1.2.27-1.65.73l.53.53.53.53c.13-.13.33-.24.8-.3.47-.07 1.12-.07 2.09-.07zm-4 4h.75c0-.96 0-1.61.06-2.1.06-.46.17-.65.3-.78l-.53-.53-.53-.53a2.7 2.7 0 0 0-.72 1.65c-.09.6-.08 1.37-.08 2.29zM10 19h.75V5h-1.5v14z'
-        fill='currentColor'
+      <rect
+        x='21.27'
+        y='20.36'
+        width='18.53'
+        height='16.71'
+        rx='3'
+        transform='rotate(-180 21.27 20.36)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
+      <path d='M9.35 4v16' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

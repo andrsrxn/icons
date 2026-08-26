@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconScissors: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconScissors: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='scissors'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-scissors'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,15 +28,24 @@ export const IconScissors: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M9.4 6.73a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0m0 10.54a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0'
-        fill='currentColor'
         opacity='.2'
+        d='M3.02 5.74a3.3 3.3 0 1 0 6.58 0 3.3 3.3 0 0 0-6.58 0'
+        fill='currentColor'
       />
       <path
-        d='M8.88 15.6 20 6.5M8.88 8.4 20 17.5M9.4 6.73a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0Zm0 10.54a2.7 2.7 0 1 1-5.4 0 2.7 2.7 0 0 1 5.4 0Z'
+        d='M3.02 5.74a3.3 3.3 0 0 0 3.3 3.29 3.3 3.3 0 1 0-3.3-3.3'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        opacity='.2'
+        d='M3.02 18.26a3.3 3.3 0 1 0 6.58 0 3.3 3.3 0 0 0-6.58 0'
+        fill='currentColor'
+      />
+      <path
+        d='M3.02 18.26a3.3 3.3 0 0 0 3.3 3.3 3.3 3.3 0 1 0-3.3-3.3M21.1 5.75 9.04 15.99m0-8.17L21.1 18.07'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

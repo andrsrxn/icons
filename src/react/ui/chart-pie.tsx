@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconChartPie: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconChartPie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='chart-pie'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-chart-pie'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,21 @@ export const IconChartPie: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M12 3.57a8.43 8.43 0 0 0-5.96 14.4L12 12z'
+        d='M12 21.43c-2.19 0-4.2-.75-5.8-2L12 12V2.57a9.43 9.43 0 1 1 0 18.86'
         fill='currentColor'
       />
-      <path
-        d='M12 3.57a8.43 8.43 0 1 0 0 16.86 8.43 8.43 0 0 0 0-16.86Zm0 0v6.77c0 .82 0 1.23-.15 1.6-.15.36-.44.65-1.02 1.23l-4.7 4.7'
+      <circle
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m6.23 19.09 4.82-5.67c.47-.56.7-.83.83-1.17.12-.33.12-.7.12-1.42V2.57'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

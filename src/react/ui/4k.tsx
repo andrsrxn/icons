@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const Icon4k: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const Icon4k: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='4k'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-4k'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const Icon4k: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.54 4.48h16.92M3.54 19.52h16.92M9.3 13.45H4.57a.2.2 0 0 1-.16-.32l4.53-5.7a.2.2 0 0 1 .36.12zm0 0h1.22m-1.22 0v3.22m3.81-9.4v4.7m0 0v4.7m0-4.7 4.94-4.5m-4.94 4.5 4.93 4.58'
+        d='M13.77 7.1v9.8m-4.37.14V9c0-1.3 0-1.94-.36-2.05-.34-.11-.72.42-1.46 1.47l-2.56 3.61c-.49.7-.73 1.04-.6 1.3.15.28.57.28 1.42.28h5.25m2.68-1.51 5-5m-5 5 5 4.8m2.42 3.1H2.8M21.19 4H2.8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

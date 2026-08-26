@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextSection: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextSection: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-section'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-section'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,20 +28,16 @@ export const IconTextSection: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M15.4 5.7c-.33-.99-1.41-2.1-3.33-2.1S8.6 4.65 8.6 6.39c0 3.73 6.78 1.47 6.78 5.38 0 2.07-1.69 2.84-3.32 2.84-1.92 0-3.46-.77-3.46-2.23'
+        d='M15.56 5.38c-.34-1.03-1.47-2.2-3.49-2.2S8.44 4.28 8.44 6.1c0 3.92 7.12 1.54 7.12 5.64 0 2.18-1.77 3-3.49 3-2.02 0-3.63-.82-3.63-2.35'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M15.4 11.54c0-.95-1.41-2.14-3.33-2.14S8.6 10.43 8.6 12.17c0 3.73 6.78 1.47 6.78 5.38 0 1.74-1.4 2.84-3.32 2.84S9 19.34 8.6 18.4'
+        d='M15.56 11.51c0-.99-1.47-2.24-3.49-2.24s-3.63 1.08-3.63 2.91c0 3.92 7.12 1.54 7.12 5.64 0 1.84-1.47 3-3.49 3s-3.2-1.11-3.63-2.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
-      <ellipse opacity='.2' cx='12' cy='12' rx='3.39' ry='2.34' fill='currentColor' />
+      <ellipse opacity='.2' cx='12' cy='12' rx='3.56' ry='2.45' fill='currentColor' />
     </svg>
   )
 }

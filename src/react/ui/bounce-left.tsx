@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBounceLeft: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBounceLeft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bounce-left'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bounce-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,26 +29,24 @@ export const IconBounceLeft: Icon = ({
       {title ? <title>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='2.63'
-        cy='2.63'
-        r='2.63'
-        transform='matrix(-1 0 0 1 8.76 5.17)'
+        cx='2.93'
+        cy='2.93'
+        r='2.93'
+        transform='matrix(-1 0 0 1 8.4 4.38)'
         fill='currentColor'
       />
       <path
-        d='M20.5 14.15a5 5 0 0 0-2.84 1.88c-1.06 1.26-1.44 2.8-1.44 2.8s-.36-3.53-1.38-5.25a8.2 8.2 0 0 0-3.86-3.54'
+        d='M21.46 14.4c-1.14.32-1.97.7-3.15 2.1s-1.6 3.12-1.6 3.12-.4-3.94-1.54-5.85a9 9 0 0 0-4.3-3.96'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <circle
-        cx='2.63'
-        cy='2.63'
-        r='2.63'
-        transform='matrix(-1 0 0 1 8.76 5.17)'
+        cx='2.93'
+        cy='2.93'
+        r='2.93'
+        transform='matrix(-1 0 0 1 8.4 4.38)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

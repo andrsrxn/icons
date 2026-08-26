@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMicroscope: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMicroscope: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='microscope'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-microscope'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,45 @@ export const IconMicroscope: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M5.18 6.07c0-1.01 0-1.52.16-1.83.17-.32.43-.32.95-.32h2.33c.52 0 .78 0 .95.32.16.31.16.82.16 1.83v4.56c0 1.01 0 1.52-.16 1.83-.17.32-.43.32-.95.32H6.3c-.52 0-.78 0-.95-.32-.16-.31-.16-.82-.16-1.83zM18 16.27c.72 0 1.09 0 1.31.15.23.15.23.4.23.88v2.18c0 .48 0 .72-.23.87-.22.15-.59.15-1.31.15h-3.26c-.73 0-1.1 0-1.32-.15s-.22-.39-.22-.87V17.3c0-.49 0-.73.22-.88.23-.15.6-.15 1.32-.15z'
-        fill='currentColor'
-        opacity='.2'
+      <rect
+        x='10.36'
+        y='12.69'
+        width='3.67'
+        height='6.86'
+        rx='1.5'
+        transform='rotate(90 10.36 12.7)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M5.18 13.48V5.35A2 2 0 0 1 7.05 3.5h.67a2 2 0 0 1 1.85 2.18v7.8m0 0 .03.02q.6.31.8.86c.07.19.07.42.07.88s0 .7-.07.88c-.2.55-.8.99-1.58 1.13-.27.05-.59.05-1.24.05h-.4c-.65 0-.97 0-1.24-.05-.77-.14-1.38-.58-1.58-1.13-.06-.19-.06-.42-.06-.88s0-.7.06-.88a1.7 1.7 0 0 1 .92-.92q.3-.15.66-.21c.27-.05.6-.05 1.24-.05h.4c.65 0 .97 0 1.24.05q.41.08.75.25Zm-5.13 6.9h12.2M9.56 5.57c7.1-.91 9.13 3.24 9.13 6.37 0 1.6-.34 3.52-.93 4.33m-4.74 2.12c0-.94 0-1.41.29-1.7.3-.3.77-.3 1.7-.3h2.7c.95 0 1.42 0 1.7.29.3.3.3.77.3 1.7 0 .94 0 1.41-.29 1.7s-.76.3-1.7.3h-2.7c-.94 0-1.41 0-1.7-.29-.3-.3-.3-.77-.3-1.7Z'
+        d='M9.2 12.32V4.25a2 2 0 0 0-1.78-1.77h-1a2 2 0 0 0-1.76 1.77c-.02.11-.02.24-.02.5v7.57'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        opacity='.2'
+        x='9.21'
+        y='2.47'
+        width='10.49'
+        height='4.45'
+        rx='2.23'
+        transform='rotate(90 9.2 2.47)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        x='20.51'
+        y='21.16'
+        width='7.58'
+        height='3.71'
+        rx='1.86'
+        transform='rotate(-180 20.5 21.16)'
+        fill='currentColor'
+      />
+      <path
+        d='M13.16 21.38v-.55c0-1.5 0-2.25.38-2.78a2 2 0 0 1 .44-.44c.53-.38 1.28-.38 2.78-.38s2.26 0 2.79.38a2 2 0 0 1 .44.44c.38.53.38 1.28.38 2.78v.55m-16.27 0h16.27M9.54 5.4c3.18-.7 7.01 0 8.99 2.98 1.85 2.8.79 6.07 0 8.6'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRecord: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRecord: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='record'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-record'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,18 +29,18 @@ export const IconRecord: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M17.15 12a5.15 5.15 0 1 1-10.3 0 5.15 5.15 0 0 1 10.3 0'
+        d='M17.67 12a5.66 5.66 0 1 0-11.33 0 5.66 5.66 0 0 0 11.33 0'
         fill='currentColor'
       />
       <path
-        d='M17.15 12a5.15 5.15 0 1 1-10.3 0 5.15 5.15 0 0 1 10.3 0Z'
+        d='M17.66 12A5.65 5.65 0 0 0 12 6.34 5.66 5.66 0 1 0 17.66 12'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M20.45 12a8.45 8.45 0 1 1-16.9 0 8.45 8.45 0 0 1 16.9 0Z'
+        d='M21.3 12A9.26 9.26 0 0 0 12 2.7a9.3 9.3 0 1 0 9.3 9.3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

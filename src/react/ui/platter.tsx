@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPlatter: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPlatter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='platter'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-platter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,19 +29,13 @@ export const IconPlatter: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M18.95 16.31H5.05c0-4.33 3.11-7.85 6.95-7.85s6.95 3.52 6.95 7.85'
+        d='M19.8 16.91H4.2c0-4.86 3.5-8.8 7.8-8.8s7.8 3.94 7.8 8.8'
         fill='currentColor'
       />
       <path
-        d='M18.95 16.31c0-4.33-3.11-7.85-6.95-7.85s-6.95 3.52-6.95 7.85'
+        d='M19.8 16.91c0-4.86-3.5-8.8-7.8-8.8s-7.8 3.94-7.8 8.8M12 7.86v-2.1m9.76 11.15H2.24'
         stroke='currentColor'
-        strokeWidth='1.5'
-      />
-      <path
-        d='M12 8.23V6.35m8.7 9.96H3.3'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

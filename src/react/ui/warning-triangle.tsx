@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWarningTriangle: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWarningTriangle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='warning-triangle'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-warning-triangle'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,19 @@ export const IconWarningTriangle: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M10.26 6.5c.78-1.41 1.17-2.12 1.76-2.12s.98.7 1.75 2.12l5.57 10.14c.72 1.32 1.08 1.98.8 2.47-.3.49-1.05.49-2.56.49H6.45c-1.5 0-2.26 0-2.55-.5-.29-.48.08-1.14.8-2.46z'
+        d='M8.47 7.32 4.4 14.74c-1.46 2.64-2.18 3.96-1.6 4.94s2.09.98 5.1.98h8.18c3.02 0 4.53 0 5.11-.98.58-.99-.15-2.3-1.61-4.95l-4.1-7.42c-1.55-2.8-2.33-4.2-3.5-4.2-1.2 0-1.96 1.4-3.5 4.2'
         fill='currentColor'
       />
-      <path d='M12.4 16.49a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
       <path
-        d='M12.02 13.65V9.5M6.45 19.6h11.13c1.5 0 2.26 0 2.55-.5.3-.48-.07-1.14-.8-2.46L13.78 6.5c-.77-1.41-1.16-2.12-1.75-2.12s-.98.7-1.76 2.12L4.7 16.64c-.72 1.32-1.09 1.98-.8 2.47s1.05.49 2.55.49Zm5.94-3.11a.4.4 0 1 1-.78 0 .4.4 0 0 1 .78 0Z'
+        d='M8.47 7.32 4.4 14.74c-1.46 2.64-2.18 3.96-1.6 4.94s2.09.98 5.1.98h8.18c3.02 0 4.53 0 5.11-.98.58-.99-.15-2.3-1.61-4.95l-4.1-7.42c-1.55-2.8-2.33-4.2-3.5-4.2-1.2 0-1.96 1.4-3.5 4.2M12 8.77v4.37'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M12.53 16.87a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

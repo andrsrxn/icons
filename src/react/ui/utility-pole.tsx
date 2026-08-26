@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUtilityPole: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUtilityPole: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='utility-pole'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-utility-pole'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconUtilityPole: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M12 20.53V3.47m8.28 2.07H3.72m12.42 3.44H7.86M6 4.38V6.7m12-2.32V6.7'
+        d='M12 21.53V2.47M21.25 5H2.75m13.87 4.36H7.38M5.27 3.44v3.12M18.7 3.44v3.12'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

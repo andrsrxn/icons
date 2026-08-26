@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTerminal: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTerminal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='terminal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-terminal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconTerminal: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4.18 5.77a.75.75 0 0 0-1.02 1.1l.5-.55zm2.43 3.3-.51.55zm0 5.84.52.55zm-3.46 2.22a.75.75 0 1 0 1.03 1.1l-.51-.55zm5.65-5.14h.75zm1.86 4.94a.75.75 0 1 0 0 1.5zm9.67 1.5a.75.75 0 0 0 0-1.5zM3.67 6.32l-.51.54L6.1 9.62l.51-.55.51-.54-2.94-2.76zM6.6 14.9l-.5-.55-2.96 2.77.52.55.51.54 2.95-2.76zm0-5.84-.51.55c.74.7 1.24 1.17 1.57 1.57.31.39.38.61.38.8h1.5c0-.67-.3-1.23-.72-1.74-.4-.5-1-1.05-1.7-1.72zm0 5.84.52.55q1.08-1 1.7-1.73c.42-.51.72-1.07.72-1.74h-1.5c0 .2-.07.42-.38.8-.32.4-.82.87-1.57 1.57zm4.05 2.77v.75h9.67v-1.5h-9.67z'
-        fill='currentColor'
+        d='m3.28 5 3.47 2.49c2.07 1.48 3.1 2.22 3.1 3.25s-1.03 1.77-3.1 3.25l-3.47 2.5M20.47 18H10'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

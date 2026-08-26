@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconChartBubble: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconChartBubble: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='chart-bubble'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-chart-bubble'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,57 +29,56 @@ export const IconChartBubble: Icon = ({
       {title ? <title>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='9.69'
-        cy='8.01'
-        r='2.32'
-        transform='rotate(30 9.69 8)'
+        cx='9.09'
+        cy='7.56'
+        r='2.53'
+        transform='rotate(30 9.1 7.56)'
         fill='currentColor'
       />
       <circle
         opacity='.2'
-        cx='16.5'
-        cy='13.13'
-        r='3.16'
-        transform='rotate(30 16.5 13.13)'
+        cx='16.53'
+        cy='13.15'
+        r='3.45'
+        transform='rotate(30 16.53 13.15)'
         fill='currentColor'
       />
       <circle
         opacity='.2'
-        cx='8.91'
-        cy='15.2'
-        r='1.6'
-        transform='rotate(30 8.91 15.2)'
+        cx='8.25'
+        cy='15.41'
+        r='1.74'
+        transform='rotate(30 8.25 15.41)'
         fill='currentColor'
       />
       <circle
-        cx='9.69'
-        cy='8.01'
-        r='2.32'
-        transform='rotate(30 9.69 8)'
+        cx='9.09'
+        cy='7.56'
+        r='2.53'
+        transform='rotate(30 9.1 7.56)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <circle
-        cx='16.68'
-        cy='13.23'
-        r='3.16'
-        transform='rotate(30 16.68 13.23)'
+        cx='16.72'
+        cy='13.26'
+        r='3.45'
+        transform='rotate(30 16.72 13.26)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <circle
-        cx='8.91'
-        cy='15.2'
-        r='1.6'
-        transform='rotate(30 8.91 15.2)'
+        cx='8.25'
+        cy='15.41'
+        r='1.74'
+        transform='rotate(30 8.25 15.41)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M4 4v14.61c0 .83.67 1.5 1.5 1.5H20'
+        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

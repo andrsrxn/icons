@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWaves: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWaves: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='waves'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-waves'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconWaves: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.58 6.93S5.38 5 8.26 5s5.58 1.93 8.42 1.93S20.42 5 20.42 5M3.58 12.96s1.8-1.92 4.68-1.92 5.58 1.92 8.42 1.92 3.74-1.92 3.74-1.92M3.58 19s1.8-1.93 4.68-1.93S13.84 19 16.68 19s3.74-1.93 3.74-1.93'
+        d='M3.45 6.58A7.8 7.8 0 0 1 8.5 4.84c2.52 0 5.54 2.22 7.99 2.22s3.59-1.2 4.07-1.85M3.45 12.62A7.8 7.8 0 0 1 8.5 10.9c2.52 0 5.54 2.22 7.99 2.22s3.59-1.2 4.07-1.85m-17.11 7.4a7.8 7.8 0 0 1 5.04-1.73c2.52 0 5.54 2.22 7.99 2.22s3.59-1.2 4.07-1.86'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

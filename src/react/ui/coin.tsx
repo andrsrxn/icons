@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCoin: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCoin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='coin'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-coin'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,28 @@ export const IconCoin: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <ellipse
         opacity='.2'
-        d='M13.99 12c0 4.55-1.86 8.24-4.16 8.24S5.67 16.55 5.67 12s1.87-8.24 4.16-8.24S14 7.45 14 12'
+        cx='10.25'
+        cy='12'
+        rx='9.43'
+        ry='4.57'
+        transform='rotate(90 10.25 12)'
         fill='currentColor'
       />
+      <ellipse
+        cx='10.25'
+        cy='12'
+        rx='9.43'
+        ry='4.57'
+        transform='rotate(90 10.25 12)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
       <path
-        d='M13.76 8.26a.75.75 0 0 0 0 1.5zm4.13 1.5a.75.75 0 0 0 0-1.5zm-4.13 4.48a.75.75 0 0 0 0 1.5zm4.13 1.5a.75.75 0 0 0 0-1.5zM13.99 12h-.75c0 2.18-.45 4.12-1.14 5.49-.7 1.41-1.55 2-2.27 2V21c1.58 0 2.82-1.25 3.61-2.82a14 14 0 0 0 1.3-6.17zm-4.16 8.24v-.75c-.71 0-1.56-.59-2.27-2A12.5 12.5 0 0 1 6.42 12h-1.5a14 14 0 0 0 1.3 6.17c.8 1.57 2.03 2.82 3.61 2.82zM5.67 12h.75c0-2.18.45-4.12 1.14-5.49.71-1.41 1.56-2 2.27-2V3c-1.58 0-2.81 1.25-3.6 2.82A14 14 0 0 0 4.92 12zm4.16-8.24v.75c.72 0 1.56.59 2.27 2 .7 1.37 1.14 3.3 1.14 5.49h1.5a14 14 0 0 0-1.3-6.17c-.8-1.57-2.03-2.82-3.6-2.82zm8.5 8.24h-.75c0 2.18-.45 4.12-1.14 5.49-.71 1.41-1.56 2-2.27 2V21c1.58 0 2.81-1.25 3.6-2.82a14 14 0 0 0 1.3-6.17zm-4.16-8.24v.75c.71 0 1.56.59 2.27 2A12.5 12.5 0 0 1 17.58 12h1.5a14 14 0 0 0-1.3-6.17c-.8-1.57-2.03-2.82-3.61-2.82zm-4.52 0v.75h4.52V3H9.65zm4.52 16.48v-.75H9.65V21h4.52zm-.4-11.23v.75h4.12v-1.5h-4.13zm0 5.98v.75h4.12v-1.5h-4.13z'
-        fill='currentColor'
+        d='M14.57 21.43c2.52 0 4.57-4.22 4.57-9.43s-2.05-9.43-4.57-9.43m-4.32 0h4.32M14 6.22h4M15.14 12h4M14 17.76h4m-7.75 3.67h4.32'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

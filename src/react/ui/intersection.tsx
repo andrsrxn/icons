@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconIntersection: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconIntersection: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='intersection'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-intersection'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconIntersection: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M18.39 19v-8.33A6.3 6.3 0 0 0 6.73 7.33l-.14.23a6.5 6.5 0 0 0-.98 3.41V19'
+        d='M18.62 19.5v-8.38a6.62 6.62 0 1 0-13.24 0v8.38'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

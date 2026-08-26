@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMountain: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMountain: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='mountain'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-mountain'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,20 @@ export const IconMountain: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' d='M7.19 9.28h4.84l2.09.74 2.74-.74 2.7 10.5H4.5z' fill='#000' />
       <path
-        d='M12 3.68c3.77 0 6.05 7.22 7.16 12.15.45 2 .67 3 .07 3.75s-1.67.75-3.81.75H8.76c-2.22 0-3.33 0-3.93-.77-.6-.78-.33-1.81.2-3.88 1.27-4.92 3.66-12 6.97-12Z'
-        stroke='#000'
-        strokeWidth='1.5'
+        opacity='.2'
+        d='M6.59 8.73h5.44l2.35.84 3.08-.84 3.04 11.82H3.57z'
+        fill='currentColor'
       />
       <path
-        d='M16.61 9.28s-1.42 1.13-2.68 1.13c-1.4 0-2.23-1.34-3.6-1.34C8.77 9.07 7 10.1 7 10.1'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        d='M12 2.43c4.4 0 6.98 8.69 8.18 14.23.43 2.01.65 3.02.05 3.76s-1.67.74-3.81.74H7.76c-2.21 0-3.32 0-3.92-.76-.6-.77-.34-1.8.17-3.88C5.4 10.97 8.14 2.43 12 2.43'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M17.19 8.73S15.59 10 14.17 10c-1.58 0-2.5-1.5-4.06-1.5-1.73 0-3.73 1.15-3.73 1.15'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

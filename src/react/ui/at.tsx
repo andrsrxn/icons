@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAt: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAt: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='at'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-at'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,12 @@ export const IconAt: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <circle opacity='.2' cx='11.66' cy='12' r='4.79' fill='currentColor' />
+      <circle cx='11.66' cy='12' r='4.79' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        opacity='.2'
-        d='M15.86 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0'
-        fill='currentColor'
-      />
-      <path
-        d='M15.13 19.73q-1.46.6-3.13.61A8.34 8.34 0 1 1 20.34 12a7.3 7.3 0 0 1-1.03 4.02c-.39.63-.94 1.2-1.7 1.2-1.7 0-1.7-2.1-1.7-2.1V7.84M15.85 12a3.86 3.86 0 1 1-7.72 0 3.86 3.86 0 0 1 7.72 0'
+        d='M15.41 20.58a7.4 7.4 0 0 1-3.41.8A9.38 9.38 0 1 1 21.38 12c0 2.28-.88 5.27-2.17 6-1.3.73-2.74 0-2.74-1.97V7.56'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

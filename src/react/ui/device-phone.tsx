@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDevicePhone: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDevicePhone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='device-phone'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-device-phone'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,27 @@ export const IconDevicePhone: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M10.56 20.38c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42V7.62c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h2.88c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v8.76c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58z'
+        x='6'
+        y='21.3'
+        width='18.61'
+        height='12'
+        rx='3'
+        transform='rotate(-90 6 21.3)'
         fill='currentColor'
       />
-      <path
-        d='M13.44 20.38v.75zm4-4h-.75zm-4-12.76v.75zm4 4h.75zm-6.88-4v-.75zm-4 12.76H5.8zm4 4v-.75zm.1-14.77a.75.75 0 0 0 0 1.5V5.6m2.68 1.5a.75.75 0 0 0 0-1.5zm-6.78 9.27h.75V7.62H5.8v8.76zm4-12.76v.75h2.88v-1.5h-2.88zm2.88 16.76v-.75h-2.88v1.5h2.88zm0 0v.75q1.39.02 2.3-.08c.62-.08 1.2-.27 1.65-.72l-.53-.53-.53-.53c-.13.13-.33.24-.8.3s-1.12.06-2.09.06zm4-4h-.75c0 .97 0 1.62-.06 2.1-.07.46-.17.66-.3.79l.53.53.53.53c.45-.46.64-1.02.72-1.65q.1-.9.08-2.3zm-4-12.76v.75c.97 0 1.61 0 2.1.06.46.06.66.17.79.3l.53-.53.53-.53a2.7 2.7 0 0 0-1.65-.72c-.6-.09-1.38-.08-2.3-.08zm4 4h.75q.02-1.4-.08-2.3a2.7 2.7 0 0 0-.72-1.65l-.53.53-.53.53c.13.13.23.33.3.8s.06 1.12.06 2.09zm-10.88 0h.75c0-.97 0-1.62.06-2.1.07-.46.17-.66.3-.79l-.53-.53-.53-.53a2.7 2.7 0 0 0-.72 1.65q-.1.9-.08 2.3zm4-4v-.75c-.92 0-1.7 0-2.3.08-.62.08-1.2.27-1.65.72l.53.53.53.53c.13-.13.33-.24.8-.3s1.12-.06 2.09-.06zm-4 12.76H5.8q-.02 1.4.08 2.3c.08.63.27 1.2.72 1.65l.53-.53.53-.53c-.13-.13-.23-.33-.3-.8s-.06-1.12-.06-2.09zm4 4v-.75c-.97 0-1.61 0-2.1-.06-.46-.06-.66-.17-.79-.3l-.53.53-.53.53c.46.45 1.03.64 1.65.72.6.09 1.38.08 2.3.08zm.1-14.02v.75h2.68V5.6h-2.68zm6.78 1.26h-.75v8.76h1.5V7.62z'
-        fill='currentColor'
+      <rect
+        x='6'
+        y='21.3'
+        width='18.61'
+        height='12'
+        rx='3'
+        transform='rotate(-90 6 21.3)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
+      <path d='M14.32 5.79H9.68' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

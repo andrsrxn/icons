@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCigarette: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCigarette: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='cigarette'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-cigarette'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,27 +29,26 @@ export const IconCigarette: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        x='3.66'
-        y='11.06'
-        width='4.43'
-        height='4.5'
+        x='2.79'
+        y='11.17'
+        width='4.89'
+        height='4.97'
         rx='1.5'
         fill='currentColor'
       />
       <rect
-        x='3.57'
-        y='11.06'
-        width='16.86'
-        height='4.5'
+        x='2.69'
+        y='11.17'
+        width='18.61'
+        height='4.97'
         rx='1.5'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M8.09 15.56v-4.5m7.84-6.7.46.54c.39.46.35 1.15-.1 1.57a1.14 1.14 0 0 0 0 1.66l.38.36m2.6-4.13.46.54c.39.46.35 1.15-.1 1.57a1.14 1.14 0 0 0 0 1.66l.39.36'
+        d='M7.68 16.15v-4.98m8.66-7.4.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4m2.87-4.57.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

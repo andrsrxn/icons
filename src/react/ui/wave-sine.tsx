@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWaveSine: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWaveSine: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='wave-sine'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-wave-sine'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconWaveSine: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.69 8.14S4.37 4 7.39 4c7.2 0 2.01 16 9.23 16 2.96 0 3.7-4 3.7-4'
+        d='M2.96 8.3C2.96 5.61 5.06 2.74 8 3c6.58.57.78 17.28 8.14 18 3.13.3 4.9-3.32 4.9-6.05'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

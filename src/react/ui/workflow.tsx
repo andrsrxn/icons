@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWorkflow: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWorkflow: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='workflow'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-workflow'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,24 +28,22 @@ export const IconWorkflow: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M15.18 17.81H8.17c-.88 0-1.32 0-1.67-.13a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.8-.14-1.67s0-1.31.14-1.66a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.67-.14h7.5c.8 0 1.2 0 1.51-.11a2 2 0 0 0 1.23-1.23c.12-.32.12-.72.12-1.51 0-.8 0-1.2-.12-1.51a2 2 0 0 0-1.23-1.23c-.32-.12-.71-.12-1.5-.12h-7.4'
+        d='M15.57 18.35H7.7c-1.21 0-1.82 0-2.27-.25a2 2 0 0 1-.78-.78c-.25-.45-.25-1.05-.25-2.26s0-1.82.25-2.27a2 2 0 0 1 .78-.77c.45-.26 1.06-.26 2.27-.26h8.4c1.12 0 1.68 0 2.1-.21a2 2 0 0 0 .88-.88c.22-.43.22-.99.22-2.1 0-1.12 0-1.68-.22-2.1a2 2 0 0 0-.88-.88c-.42-.22-.98-.22-2.1-.22H7.84'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
-      <rect opacity='.2' x='3.61' y='4' width='4.45' height='4.45' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='2.61' y='2.88' width='4.98' height='4.98' rx='1' fill='currentColor' />
       <rect
-        x='3.61'
-        y='4'
-        width='4.45'
-        height='4.45'
+        x='2.61'
+        y='2.88'
+        width='4.98'
+        height='4.98'
         rx='1'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <circle opacity='.2' cx='17.92' cy='17.81' r='2.47' fill='currentColor' />
-      <circle cx='17.92' cy='17.81' r='2.47' stroke='currentColor' strokeWidth='1.5' />
+      <circle opacity='.2' cx='18.63' cy='18.35' r='2.77' fill='currentColor' />
+      <circle cx='18.63' cy='18.35' r='2.77' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

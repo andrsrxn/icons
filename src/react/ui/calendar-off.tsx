@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCalendarOff: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCalendarOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='calendar-off'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-calendar-off'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,20 @@ export const IconCalendarOff: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M3.78 8.81c0-1.88 0-2.82.59-3.41.58-.59 1.53-.59 3.41-.59h8.44c1.88 0 2.83 0 3.41.59s.59 1.53.59 3.41v.11H3.78z'
-        fill='currentColor'
+      <rect opacity='.2' x='3.23' y='3.66' width='17.54' height='5.12' rx='1' fill='currentColor' />
+      <rect
+        x='3.23'
+        y='3.66'
+        width='17.54'
+        height='17.54'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M19.49 20.55a.75.75 0 1 0 1.06-1.06l-.53.53zM4.5 3.45a.75.75 0 0 0-1.06 1.06l.53-.53zM7.14 6a.75.75 0 1 0 1.5 0zm1.5-2.59a.75.75 0 1 0-1.5 0zm6.72 2.6a.75.75 0 0 0 1.5 0zm1.5-2.6a.75.75 0 0 0-1.5 0zm3.16 16.6.53-.52L4.5 3.45l-.53.53-.53.53L19.5 20.55zM7.78 4.82v.75h8.44v-1.5H7.78zm8.44 15.41v-.75H7.78v1.5h8.44zm4-11.4h-.75v.1h1.5v-.1zm0 .1h-.75v7.3h1.5v-7.3zm-16.44 7.3h.75v-7.3h-1.5v7.3zm0-7.3h.75v-.1h-1.5v.1zm16.44 0v-.75H3.78v1.5h16.44zM7.78 20.22v-.75c-.96 0-1.61 0-2.1-.06-.45-.07-.65-.17-.78-.3l-.53.53-.53.53a2.7 2.7 0 0 0 1.65.72c.6.09 1.37.08 2.3.08zm-4-4h-.75c0 .93 0 1.7.08 2.3.09.63.27 1.2.73 1.65l.53-.53.53-.53c-.13-.13-.24-.33-.3-.8-.07-.47-.07-1.12-.07-2.09zm12.44 4v.75q1.38.02 2.3-.08a2.7 2.7 0 0 0 1.64-.72l-.53-.53-.53-.53c-.13.13-.33.23-.79.3-.48.06-1.13.06-2.1.06zm4-4h-.75c0 .97 0 1.62-.07 2.1-.06.46-.17.66-.3.79l.53.53.53.53c.46-.46.64-1.02.73-1.65q.1-.9.08-2.3zm-4-11.4v.74c.96 0 1.61 0 2.1.07.45.06.65.17.78.3l.53-.53.53-.53a2.7 2.7 0 0 0-1.65-.73c-.6-.08-1.37-.08-2.3-.08zm4 4h.75q.02-1.4-.08-2.3a2.7 2.7 0 0 0-.73-1.65l-.53.53-.53.53c.13.13.24.33.3.79.07.48.07 1.13.07 2.1zm-12.44-4v-.76c-.92 0-1.69 0-2.3.08-.62.09-1.19.27-1.64.73l.53.53.53.53c.13-.13.33-.24.79-.3.48-.06 1.13-.07 2.1-.07zm-4 4h.75c0-.97 0-1.62.07-2.1.06-.46.17-.66.3-.79l-.53-.53-.53-.53a2.7 2.7 0 0 0-.73 1.65c-.08.6-.08 1.37-.08 2.3zM7.9 6h.75V3.41h-1.5v2.6zm8.22 0h.75V3.41h-1.5v2.6z'
-        fill='currentColor'
+        d='M7.8 2v3.31M16.26 2v3.31m4.1 3.47H4.03M3.3 3.3l17.4 17.4'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPlay: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPlay: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='play'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-play'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconPlay: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M4.96 14.85V9.09c0-3.03 0-4.55.99-5.13s2.31.16 4.96 1.63l5.08 2.83c2.74 1.52 4.1 2.28 4.11 3.44s-1.34 1.95-4.05 3.52l-5.09 2.93c-2.66 1.54-4 2.31-5 1.73-1-.57-1-2.11-1-5.2'
+        d='M4.44 11.08c0-4.74 0-7.11 1.53-7.97 1.54-.86 3.56.38 7.6 2.85l1.5.92c3.75 2.3 5.62 3.44 5.62 5.12s-1.87 2.83-5.61 5.12l-1.5.92c-4.05 2.47-6.07 3.71-7.6 2.85-1.54-.86-1.54-3.23-1.54-7.97z'
         fill='currentColor'
       />
       <path
-        d='M4.96 14.85V9.09c0-3.03 0-4.55.99-5.13s2.31.16 4.96 1.63l5.08 2.83c2.74 1.52 4.1 2.28 4.11 3.44s-1.34 1.95-4.05 3.52l-5.09 2.93c-2.66 1.54-4 2.31-5 1.73-1-.57-1-2.11-1-5.2Z'
+        d='M4.44 11.08c0-4.74 0-7.11 1.53-7.97 1.54-.86 3.56.38 7.6 2.85l1.5.92c3.75 2.3 5.62 3.44 5.62 5.12s-1.87 2.83-5.61 5.12l-1.5.92c-4.05 2.47-6.07 3.71-7.6 2.85-1.54-.86-1.54-3.23-1.54-7.97z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEllipse: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEllipse: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ellipse'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ellipse'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,8 +27,15 @@ export const IconEllipse: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <ellipse opacity='.2' cx='12' cy='12' rx='8.5' ry='5.55' fill='currentColor' />
-      <ellipse cx='12' cy='12' rx='8.5' ry='5.55' stroke='currentColor' strokeWidth='1.5' />
+      <ellipse opacity='.2' cx='12' cy='12' rx='9.51' ry='6.21' fill='currentColor' />
+      <ellipse
+        cx='12'
+        cy='12'
+        rx='9.51'
+        ry='6.21'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

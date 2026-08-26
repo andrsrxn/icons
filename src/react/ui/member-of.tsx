@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMemberOf: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMemberOf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='member-of'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-member-of'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconMemberOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M19.15 6.36a.75.75 0 0 0 0-1.5zm-8.33-.75v-.75zM7.48 17.27l.4-.64zm.23.14-.4.64zm3.41.98v-.75zm8.03.75a.75.75 0 1 0 0-1.5zM7.91 6.32l.35.67zm-3.4 4.93a.75.75 0 0 0 0 1.5zm14.64 1.5a.75.75 0 0 0 0-1.5zm0-7.14v-.75h-8.33v1.5h8.33zM7.48 17.27l-.4.64.24.14.4-.64.39-.63-.23-.15zm3.64 1.12v.75h8.03v-1.5h-8.03zm-3.4-.98-.4.64a7 7 0 0 0 3.8 1.09v-1.5a5.7 5.7 0 0 1-3.01-.86zm3.1-11.8v-.75c-1.13 0-2.25.27-3.25.8l.34.66.35.67a5.6 5.6 0 0 1 2.56-.63zm-2.9.71-.35-.67a7.06 7.06 0 0 0-.48 12.26l.4-.64.4-.64A5.56 5.56 0 0 1 8.25 7zM4.5 12v.75h14.64v-1.5H4.51z'
-        fill='currentColor'
+        d='M19.5 5h-8a7 7 0 1 0 0 14h8m-15-7h15'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

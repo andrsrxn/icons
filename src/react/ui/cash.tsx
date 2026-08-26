@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconCash: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-cash'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M21.28 12c0 .94-.56 1.8-1.42 2.18l-.31.14a3 3 0 0 0-1.3 1.1l-.26.44a7 7 0 0 1-.98 1.35 3 3 0 0 1-1.24.68c-.39.11-.81.11-1.66.11H9.54c-.43 0-.65 0-.85-.03a3 3 0 0 1-1.97-1.14 7 7 0 0 1-.45-.72l-.25-.44a2.5 2.5 0 0 0-1.48-1.16 2.5 2.5 0 0 1-1.82-2.4V12c0-1.1.73-2.06 1.78-2.36l.09-.02c.69-.2 1.26-.67 1.59-1.3l.2-.39c.14-.29.21-.43.3-.56a3 3 0 0 1 2.21-1.35C9.04 6 9.21 6 9.53 6h4.89c.57 0 .85 0 1.11.05a3 3 0 0 1 1.67.9c.18.2.33.44.64.91l.09.14.14.22a3 3 0 0 0 1.02.9q.06.05.24.12l.33.17A2.9 2.9 0 0 1 21.28 12m-7.1 0a2.19 2.19 0 1 1-4.37 0 2.19 2.19 0 0 1 4.38 0'
+        fill='currentColor'
+      />
+      <rect
+        width='12'
+        height='18.56'
+        rx='3'
+        transform='matrix(0 -1 -1 0 21.28 18)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M7 6.11a4.3 4.3 0 0 1-4.28 4.28M17 6.11a4.3 4.3 0 0 0 4.28 4.28M7 18a4.3 4.3 0 0 0-4.28-4.28M17 18a4.3 4.3 0 0 1 4.28-4.28'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle cx='12' cy='12' r='2.19' stroke='currentColor' strokeWidth={strokeWidth} />
+    </svg>
+  )
+}

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMetronome: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMetronome: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='metronome'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-metronome'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,22 +29,16 @@ export const IconMetronome: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M7.87 9.2c1.57-3.55 2.36-5.33 3.66-5.33s2.1 1.78 3.66 5.34l2.4 5.43c1.11 2.53 1.67 3.8 1.08 4.7-.6.91-1.98.91-4.74.91h-4.8c-2.76 0-4.15 0-4.74-.9-.59-.91-.03-2.18 1.09-4.71z'
+        d='M7.86 8.04c1.57-3.57 2.35-5.35 3.66-5.35 1.3 0 2.09 1.78 3.66 5.35l3.44 7.8c1.12 2.53 1.68 3.8 1.08 4.7-.59.92-1.97.92-4.74.92H8.08c-2.77 0-4.16 0-4.75-.91-.59-.9-.03-2.18 1.09-4.7z'
         fill='currentColor'
       />
       <path
-        d='M7.78 9.1c1.55-3.61 2.33-5.42 3.64-5.43 1.3 0 2.1 1.8 3.7 5.4l2.46 5.57c1.12 2.53 1.68 3.8 1.09 4.7-.6.91-1.98.91-4.75.91H9.07c-2.74 0-4.11 0-4.7-.9-.6-.9-.06-2.15 1.02-4.67z'
+        d='M7.75 7.9c1.55-3.6 2.33-5.42 3.65-5.43 1.3 0 2.1 1.8 3.7 5.4l3.52 7.97c1.12 2.53 1.68 3.8 1.1 4.7-.6.92-1.98.92-4.76.92H8.01c-2.74 0-4.11 0-4.7-.9-.6-.9-.06-2.16 1.02-4.68zm3.77 3.98V7.5m0 10.18 6.96-10.44'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M11.53 11.72v-3.9m0 9.08 6.2-9.31'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <circle opacity='.2' cx='18.65' cy='6.22' r='1.63' fill='currentColor' />
-      <circle cx='18.65' cy='6.22' r='1.63' stroke='currentColor' strokeWidth='1.5' />
+      <circle opacity='.2' cx='19.51' cy='5.7' r='1.83' fill='currentColor' />
+      <circle cx='19.51' cy='5.7' r='1.83' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

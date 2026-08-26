@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconKeyEnter: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconKeyEnter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='key-enter'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-key-enter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,14 @@ export const IconKeyEnter: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M19.49 8.57v.48c0 1.88 0 2.83-.6 3.41-.58.59-1.52.59-3.4.59H3.97M6.7 9.49l-.73.73c-1.33 1.33-2 2-2 2.82 0 .83.67 1.5 2 2.84l.73.73'
+        d='M3.38 13.53H16.7c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41V7.49'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.11 17.38 5.1 16.36c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l1-1.02'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

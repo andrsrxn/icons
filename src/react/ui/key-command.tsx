@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconKeyCommand: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconKeyCommand: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='key-command'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-key-command'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,14 +28,14 @@ export const IconKeyCommand: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M9.19 6.37v2.8l-2.82.02a2.81 2.81 0 1 1 2.82-2.82m0 11.26v-2.8l-2.82-.02a2.81 2.81 0 1 0 2.82 2.82m5.63-11.26v2.8l2.81.02a2.81 2.81 0 1 0-2.81-2.82m0 11.26v-2.8l2.81-.02a2.81 2.81 0 1 1-2.81 2.82'
-        fill='currentColor'
         opacity='.2'
+        d='M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7z'
+        fill='currentColor'
       />
       <path
-        d='M9.19 6.37v2.8l-2.82.02a2.81 2.81 0 1 1 2.82-2.82Zm0 11.26v-2.8l-2.82-.02a2.81 2.81 0 1 0 2.82 2.82Zm5.63-11.26v2.8l2.81.02a2.81 2.81 0 1 0-2.81-2.82Zm0 11.26v-2.8l2.81-.02a2.81 2.81 0 1 1-2.81 2.82ZM9.19 9.19h5.63v5.63H9.18z'
+        d='M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7zM8.41 8.36v7.35m7.18-.03V8.32m-7.18 7.39h7.18m0-7.39H8.4'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

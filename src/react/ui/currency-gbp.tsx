@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyGbp: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyGbp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-gbp'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-gbp'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconCurrencyGbp: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M5.84 12.39H9.7m0 0h3.85m-3.85 0v4.23a3.46 3.46 0 0 1-3.46 3.46h11.93m-8.47-7.7V8.16a4.23 4.23 0 0 1 6.93-3.27'
+        d='M5.31 12.43h9.7m-9.7 8.54H18.3m-13-.09c1.6 0 4.58-.38 4.58-3.36V6.68c0-1.6 1.19-3.96 4.32-3.96s4.1 2.1 4.1 2.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

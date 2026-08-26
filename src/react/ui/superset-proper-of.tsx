@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSupersetProperOf: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSupersetProperOf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='superset-proper-of'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-superset-proper-of'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconSupersetProperOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4.88 5.61h8.34a6.3 6.3 0 0 1 3.33 11.66l-.23.14a6.4 6.4 0 0 1-3.4.98H4.87'
+        d='M4.5 5.38h8.38a6.62 6.62 0 1 1 0 13.24H4.5'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

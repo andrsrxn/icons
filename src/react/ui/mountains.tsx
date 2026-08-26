@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMountains: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMountains: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='mountains'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-mountains'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,25 +29,23 @@ export const IconMountains: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m19.1 10.92-5.1.37-1.16-.66-2.43.14-2.97.78-2.57-.78-1.15 7.99h17.1z'
-        fill='#000'
+        d='m19.75 10.83-5.56.4-1.28-.71-2.65.15-3.24.85-2.8-.85-1.27 8.73h18.68z'
+        fill='currentColor'
       />
       <path
-        d='M9.64 4.47c-2.89 0-4.72 5.98-5.67 10.34-.43 1.99-.64 2.98-.04 3.73.6.74 1.66.74 3.8.74h3.24c2.14 0 3.2 0 3.8-.74s.4-1.74-.03-3.76c-.91-4.35-2.62-10.3-5.1-10.3Z'
-        stroke='#000'
-        strokeWidth='1.5'
+        d='M9.43 3.79c-3.26 0-5.28 6.91-6.29 11.7-.42 2-.63 3-.03 3.74s1.67.74 3.8.74h4.38c2.14 0 3.21 0 3.81-.74.6-.73.4-1.74-.02-3.76-.97-4.8-2.87-11.68-5.65-11.68'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M13.33 10.32s.86-3.03 3.17-3.03 3.42 4.38 3.92 7.85c.27 1.84.4 2.76-.2 3.45s-1.58.7-3.56.7h-4.13'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        d='M13.45 10.18s.94-3.32 3.47-3.32c2.62 0 3.81 5.12 4.33 8.96.26 1.85.38 2.78-.22 3.46s-1.58.69-3.55.69h-4.9'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M5.4 10.66s1.27.77 2.43.76c1.38-.01 1.7-1.08 3-1.08 1.62 0 2.99 1 2.99 1m-.17-.39s.53.42 1.33.41c.94 0 1.61-.7 2.4-.7.73 0 2.02.56 2.02.56'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        d='M4.8 10.55s1.38.83 2.65.82c1.5 0 1.84-1.17 3.26-1.17A6.3 6.3 0 0 1 14 11.28m-.2-.41s.58.45 1.46.45c1.03-.01 1.76-.77 2.61-.77.8 0 2.21.6 2.21.6'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

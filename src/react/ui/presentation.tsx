@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPresentation: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPresentation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='presentation'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-presentation'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,30 @@ export const IconPresentation: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M4.89 4H19.1v10.64H4.9zm8.77 14.95c0 .94-.74 1.7-1.66 1.7s-1.66-.76-1.66-1.7a1.66 1.66 0 1 1 3.32 0'
-        fill='currentColor'
+      <rect
         opacity='.2'
+        x='5.3'
+        y='14.43'
+        width='11.78'
+        height='13.99'
+        rx='1'
+        transform='rotate(-90 5.3 14.43)'
+        fill='currentColor'
       />
       <path
-        d='M3.45 14.64h17.1m-11.8-2.78V8.32m6.55 3.54V9.83M12 16.94v-2.03m0-3.05V6.78M3.45 4h17.1M4.89 4H19.1v10.64H4.9zm8.77 14.95c0 .94-.74 1.7-1.66 1.7s-1.66-.76-1.66-1.7a1.66 1.66 0 1 1 3.32 0Z'
+        d='M12.12 17.3v-2.57m8.57-.3H3.3M20.69 2.64H3.3m8.7 8.8v-5.8m-6.99 8.79V2.64M19.3 14.43V2.64m-11.01 8.8V7.07m7.42 4.37V8.78'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        opacity='.2'
+        d='M14 19.47a1.89 1.89 0 1 1-3.76 0 1.89 1.89 0 0 1 3.77 0'
+        fill='currentColor'
+      />
+      <path
+        d='M14 19.47a1.9 1.9 0 0 1-1.88 1.89 1.89 1.89 0 1 1 1.89-1.89'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

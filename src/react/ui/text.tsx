@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconText: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconText: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconText: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M19 6.13V5.9A2 2 0 0 0 17.1 4H7a2 2 0 0 0-1.9 1.9v.23M12.05 4v16m0 0h-2.2m2.2 0h2.2'
+        d='M12 3.75v16.5m2.74 0H9.26m9.41-14.58c0-1.06-.86-1.92-1.92-1.92h-9.5c-1.06 0-1.92.86-1.92 1.92'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

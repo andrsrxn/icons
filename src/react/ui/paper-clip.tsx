@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPaperClip: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPaperClip: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='paper-clip'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-paper-clip'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconPaperClip: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m15.48 7.06-7.27 7.27a1.5 1.5 0 1 0 2.12 2.12l7.59-7.59a3 3 0 1 0-4.25-4.24L5.8 12.49a4.5 4.5 0 1 0 6.37 6.37l4.73-4.73'
+        d='m15.85 7.08-7.78 7.77a1.64 1.64 0 1 0 2.32 2.32l9.06-9.06a3.28 3.28 0 0 0-4.64-4.64l-9.63 9.64a4.92 4.92 0 0 0 6.95 6.95l5.2-5.2'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

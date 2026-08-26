@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLibrary: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLibrary: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='library'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-library'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,52 +27,50 @@ export const IconLibrary: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' fill='currentColor' d='M3.83 4.92h4.52v5H3.83z' />
-      <path opacity='.2' fill='currentColor' d='M8.34 4.92h4.52v5H8.34z' />
+      <path
+        opacity='.2'
+        fill='currentColor'
+        d='M2.81 4.08h5.05v5.58H2.81zm5.05 0h5.05v5.58H7.86z'
+      />
       <rect
         opacity='.2'
-        x='12.86'
-        y='5.53'
-        width='4.52'
-        height='4.98'
+        x='12.9'
+        y='4.77'
+        width='5.05'
+        height='5.56'
         rx='2'
-        transform='rotate(-15 12.86 5.53)'
+        transform='rotate(-15 12.9 4.77)'
         fill='currentColor'
       />
       <rect
-        x='3.83'
-        y='4.7'
-        width='4.52'
-        height='14.6'
+        x='2.81'
+        y='3.84'
+        width='5.05'
+        height='16.32'
         rx='1.5'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='8.34'
-        y='4.7'
-        width='4.52'
-        height='14.6'
+        x='7.86'
+        y='3.84'
+        width='5.05'
+        height='16.32'
         rx='1.5'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='12.86'
-        y='5.53'
-        width='4.52'
-        height='14.6'
+        x='12.9'
+        y='4.77'
+        width='5.05'
+        height='16.32'
         rx='1.5'
-        transform='rotate(-15 12.86 5.53)'
+        transform='rotate(-15 12.9 4.77)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M3.98 9.55h8.73m1.62 0 3.76-1.14'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
+      <path d='M2.98 9.26h9.75m1.82 0L18.75 8' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

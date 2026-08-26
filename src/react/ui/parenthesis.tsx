@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconParenthesis: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconParenthesis: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='parenthesis'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-parenthesis'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconParenthesis: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M15.6 3.75s3.88 2.14 3.88 8.32c0 6.19-3.88 8.18-3.88 8.18M8.42 3.75S4.54 5.9 4.54 12.07c0 6.19 3.88 8.18 3.88 8.18'
+        d='M7.13 21A12.8 12.8 0 0 1 4 12c0-3.72.82-6.08 3.13-9m9.74 18A12.8 12.8 0 0 0 20 12c0-3.72-.82-6.08-3.13-9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

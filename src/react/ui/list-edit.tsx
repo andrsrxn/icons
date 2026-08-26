@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconListEdit: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-list-edit'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M21.42 6H2.67m9.13 6H2.68m5.05 6H2.67'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        opacity='.2'
+        width='2.95'
+        height='3.31'
+        rx='1'
+        transform='scale(1 -1)rotate(45 27.14 17.43)'
+        fill='currentColor'
+      />
+      <path
+        d='M13.24 20.49c.21 0 .32.01.42-.03.1-.03.17-.11.33-.26l7.25-7.26c.47-.47.7-.7.77-.98a1 1 0 0 0 0-.46c-.06-.27-.3-.5-.77-.98-.46-.47-.7-.7-.98-.77a1 1 0 0 0-.45 0c-.28.07-.51.3-.98.77l-7.26 7.26c-.15.15-.23.23-.27.33s-.03.2-.02.42l.04.96c.02.44.03.65.16.8.14.13.36.14.8.16zm7.06-6.86-1.97-1.97'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

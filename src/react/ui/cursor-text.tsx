@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCursorText: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCursorText: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='cursor-text'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-cursor-text'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconCursorText: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.88 20.34c1.05 0 1.58 0 1.98-.2a2 2 0 0 0 .96-.95c.19-.4.19-.93.19-1.98V6.79c0-1.05 0-1.57-.2-1.98a2 2 0 0 0-.95-.95c-.4-.2-.93-.2-1.98-.2m6.24 16.68c-1.05 0-1.58 0-1.98-.2a2 2 0 0 1-.96-.95c-.19-.4-.19-.93-.19-1.98V6.79c0-1.05 0-1.57.2-1.98a2 2 0 0 1 .95-.95c.4-.2.93-.2 1.98-.2'
+        d='M9 21c.93 0 1.4 0 1.77-.15a2 2 0 0 0 1.08-1.08c.15-.37.15-.84.15-1.77V6c0-.93 0-1.4-.15-1.77a2 2 0 0 0-1.08-1.08C10.4 3 9.93 3 9 3m6 18c-.93 0-1.4 0-1.77-.15a2 2 0 0 1-1.08-1.08C12 19.4 12 18.93 12 18V6c0-.93 0-1.4.15-1.77a2 2 0 0 1 1.08-1.08C13.6 3 14.07 3 15 3'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

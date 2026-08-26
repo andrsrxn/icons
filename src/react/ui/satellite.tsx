@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSatellite: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSatellite: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='satellite'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-satellite'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,34 +29,28 @@ export const IconSatellite: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        x='15.01'
-        y='4.04'
-        width='7.04'
-        height='11.45'
+        x='15.17'
+        y='3.29'
+        width='7.83'
+        height='12.72'
         rx='2'
-        transform='rotate(45 15.01 4.04)'
+        transform='rotate(45 15.17 3.3)'
         fill='currentColor'
       />
       <rect
-        x='15.01'
-        y='4.04'
-        width='7.04'
-        height='11.45'
+        x='15.17'
+        y='3.29'
+        width='7.83'
+        height='12.72'
         rx='2'
-        transform='rotate(45 15.01 4.04)'
+        transform='rotate(45 15.17 3.3)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m18.3 10.71.74.74c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.12l-.47.47c-1 1-1.5 1.5-2.12 1.5s-1.12-.5-2.12-1.5l-.73-.74zM8.34 5c1-1 1.5-1.5 2.12-1.5s1.12.5 2.12 1.5l.74.73-4.7 4.71-.74-.74c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.12z'
+        d='m18.82 10.71 1.06 1.06c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.12l-1 1c-1 1-1.5 1.5-2.11 1.5-.62 0-1.12-.5-2.12-1.5l-1.06-1.06zM7.99 4.12c1-1 1.5-1.5 2.12-1.5s1.12.5 2.12 1.5l1.06 1.06-5.24 5.23L7 9.35c-1-1-1.5-1.5-1.5-2.12S6 6.11 7 5.11zm9.95 1.94L20 4M5.44 15.61c.1.75.42 1.36 1 1.93q.82.84 1.92 1M2.67 17.1a4.5 4.5 0 0 0 1.38 2.85 4.5 4.5 0 0 0 2.86 1.38'
         stroke='currentColor'
-        strokeWidth='1.5'
-      />
-      <path
-        d='m17.5 6.53 1.86-1.86M6.26 15.12c.1.67.38 1.22.9 1.74q.75.76 1.73.9m-5.12-1.31c.1 1.01.5 1.83 1.24 2.57a4 4 0 0 0 2.57 1.25'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

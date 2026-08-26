@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMapPin: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMapPin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='map-pin'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-map-pin'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,18 +31,21 @@ export const IconMapPin: Icon = ({
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M13.2 19.83C14.95 17.32 18 12.5 18 9.46c0-3.64-2.69-5.74-6-5.74S6 5.79 6 9.46c0 3.12 3.04 7.89 4.8 10.37.58.83 1.82.83 2.4 0m1.62-10.4A2.76 2.76 0 0 1 12 12.12a2.76 2.76 0 0 1-2.82-2.7c0-1.49 1.46-2.7 2.82-2.7s2.82 1.21 2.82 2.7'
+        d='M5.32 9.32c0 3.69 4.38 12.03 6.68 12.03s6.68-8.34 6.68-12.03a6.68 6.68 0 1 0-13.36 0M12 12a3.13 3.13 0 1 1 0-6.27A3.13 3.13 0 0 1 12 12'
         fill='currentColor'
       />
       <path
-        d='M18 9.46c0 3.1-3.13 7.99-4.87 10.46-.56.8-1.7.8-2.27 0C9.12 17.48 6 12.63 6 9.47c0-3.67 2.69-5.74 6-5.74s6 2.1 6 5.74Z'
+        d='M14.53 19.43c-1.04 1.3-1.56 1.96-2.53 1.96s-1.48-.66-2.52-1.97c-1.98-2.48-4.4-6.25-4.4-9.86a6.92 6.92 0 1 1 13.84 0c0 3.64-2.42 7.4-4.39 9.87'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M14.71 9.44a2.71 2.71 0 0 1-5.42 0c0-1.5 1-2.71 2.71-2.71s2.71 1.21 2.71 2.7Z'
+      <circle
+        cx='12'
+        cy='9.28'
+        r='3.28'
+        transform='rotate(90 12 9.28)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

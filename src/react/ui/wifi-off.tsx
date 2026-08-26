@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWifiOff: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWifiOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='wifi-off'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-wifi-off'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,15 @@ export const IconWifiOff: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.23 15.25S9.5 13.69 12 13.69c.79 0 1.46.16 2 .37m-8.39-1.73S7.77 9.55 12 9.55s6.39 2.78 6.39 2.78M3.48 8.81S6.35 5.3 12 5.3s8.52 3.5 8.52 3.5M3.5 3.5l17 17m-7.68-2.08a.82.82 0 1 1-1.64 0 .82.82 0 0 1 1.64 0Z'
+        d='M12.9 18.51a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M7.63 15.79c1.06-1.29 2.43-1.87 4.37-1.87.7 0 1.53.13 2.09.28m-9.32-1.6C6.52 10.47 8.79 9.5 12 9.5s5.48.97 7.23 3.1M2.22 9.5C4.6 6.62 7.66 5.3 12 5.3s7.4 1.32 9.78 4.2M3.3 3.3l17.4 17.4'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

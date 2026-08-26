@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMenu: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMenu: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='menu'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-menu'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconMenu: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.61 9.21H20.4M3.6 14.8h16.8'
+        d='M2.99 8.01h18.17m-18.17 0h18.17M2.99 15.99h18.17'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

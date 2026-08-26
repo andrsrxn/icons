@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGitMerge: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGitMerge: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='git-merge'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-git-merge'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,17 @@ export const IconGitMerge: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <circle opacity='.2' cx='7.01' cy='5.73' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='7.01' cy='18.46' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='17.52' cy='12.24' r='3.07' fill='currentColor' />
       <path
-        d='M9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m0 11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M20 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'
-        fill='currentColor'
-        opacity='.2'
+        d='M7.01 9.1v6.28m-.08-6.41L8.8 10.7a6 6 0 0 0 1.8 1.37c.53.2 1.1.2 2.26.2h1.58'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='m8.86 11.12-.5.56.02.01.02.02zm2.5.88v.75zM10 11.89l.25-.71zM9 6.5h-.75c0 .97-.78 1.75-1.75 1.75v1.5c1.8 0 3.25-1.46 3.25-3.25zM6.5 9v-.75c-.97 0-1.75-.78-1.75-1.75h-1.5c0 1.8 1.46 3.25 3.25 3.25zM4 6.5h.75c0-.97.78-1.75 1.75-1.75v-1.5A3.25 3.25 0 0 0 3.25 6.5zM6.5 4v.75c.97 0 1.75.78 1.75 1.75h1.5c0-1.8-1.46-3.25-3.25-3.25zM9 17.5h-.75c0 .97-.78 1.75-1.75 1.75v1.5c1.8 0 3.25-1.46 3.25-3.25zM6.5 20v-.75c-.97 0-1.75-.78-1.75-1.75h-1.5c0 1.8 1.46 3.25 3.25 3.25zM4 17.5h.75c0-.97.78-1.75 1.75-1.75v-1.5a3.25 3.25 0 0 0-3.25 3.25zM6.5 15v.75c.97 0 1.75.78 1.75 1.75h1.5c0-1.8-1.46-3.25-3.25-3.25zM20 12h-.75c0 .97-.78 1.75-1.75 1.75v1.5c1.8 0 3.25-1.46 3.25-3.25zm-2.5 2.5v-.75c-.97 0-1.75-.78-1.75-1.75h-1.5c0 1.8 1.46 3.25 3.25 3.25zM15 12h.75c0-.97.78-1.75 1.75-1.75v-1.5A3.25 3.25 0 0 0 14.25 12zm2.5-2.5v.75c.97 0 1.75.78 1.75 1.75h1.5c0-1.8-1.46-3.25-3.25-3.25zM6.5 15h.75V9h-1.5v6zm0-6-.5.56 2.36 2.12.5-.56.5-.56L7 8.44zm4.87 3v.75H15v-1.5h-3.63zm-2.5-.88-.47.59c.5.4.88.72 1.35.88l.25-.7.25-.71a4 4 0 0 1-.92-.64zm2.5.88v-.75a4 4 0 0 1-1.12-.07l-.25.7-.25.71c.47.17.97.16 1.62.16z'
-        fill='currentColor'
-      />
+      <circle cx='7.01' cy='5.73' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='7.01' cy='18.46' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='17.52' cy='12.24' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

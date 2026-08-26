@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTree: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTree: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='tree'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-tree'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,26 @@ export const IconTree: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M15.26 16.17H8.74a2 2 0 0 1-2-2V8.84a5.25 5.25 0 0 1 10.52 0v5.34a2 2 0 0 1-2 2'
+        width='14.62'
+        height='13.52'
+        rx='4'
+        transform='matrix(0 1 1 0 5.24 2.71)'
         fill='currentColor'
       />
-      <path
-        d='M12 20.23V8m0 3 2.4-1.39M12 12.7l-2.4-1.38m-.64 8.92h6.08m-6.3-4.06h6.52a2 2 0 0 0 2-2V8.83a5.25 5.25 0 0 0-10.52 0v5.35c0 1.1.9 2 2 2Z'
+      <rect
+        width='14.62'
+        height='13.52'
+        rx='4'
+        transform='matrix(0 1 1 0 5.24 2.71)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M12 21.08V6.33M8.44 21.34h7.12M12 14l-2.9-2.9m2.9 0 2.9-2.9'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

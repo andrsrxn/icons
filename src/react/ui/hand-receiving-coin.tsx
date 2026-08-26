@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHandReceivingCoin: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHandReceivingCoin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hand-receiving-coin'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hand-receiving-coin'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,33 +27,43 @@ export const IconHandReceivingCoin: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.88' y='13.39' width='3.36' height='6.63' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='2.76' y='12.94' width='3.81' height='7.52' rx='1' fill='currentColor' />
       <path
-        opacity='.2'
-        d='M16.13 7.17c0 2.05-1 3.71-2.23 3.71-1.24 0-2.24-1.66-2.24-3.7s1-3.71 2.24-3.71c1.23 0 2.23 1.66 2.23 3.7'
-        fill='currentColor'
-      />
-      <path
-        d='M7.25 18.9s.96.77 2.35 1.09c2.76.63 4.18.45 6.63-.39 1.79-.61 3.2-2.25 3.91-3.23a1.4 1.4 0 0 0 .04-1.56 1.66 1.66 0 0 0-2.49-.37c-.86.74-2 1.62-3.1 2.27-.66.37-2.01.3-3.3.3m3.3-.3c.53-1.32.37-2.37-.21-2.57A9 9 0 0 0 11 13.6c-3.13 0-3.75.73-3.75.73'
+        d='M6.57 19.2s1.1.86 2.67 1.22c3.14.72 4.74.52 7.52-.44 2.03-.7 3.63-2.55 4.44-3.66.38-.52.37-1.21.04-1.76a1.88 1.88 0 0 0-2.82-.42 25 25 0 0 1-3.53 2.56c-.74.43-2.27.34-3.73.34m3.73-.34c.6-1.49.43-2.68-.23-2.91a11 11 0 0 0-3.83-.6c-3.55 0-4.26.83-4.26.83'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='3.88'
-        y='13.39'
-        width='3.36'
-        height='6.63'
+        x='2.76'
+        y='12.94'
+        width='3.81'
+        height='7.52'
         rx='1'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <ellipse
+        opacity='.2'
+        cx='14.43'
+        cy='6.5'
+        rx='3.93'
+        ry='2.04'
+        transform='rotate(90 14.43 6.5)'
+        fill='currentColor'
+      />
+      <ellipse
+        cx='14.19'
+        cy='6.5'
+        rx='3.93'
+        ry='1.8'
+        transform='rotate(90 14.2 6.5)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M13.67 10.88c1.16 0 2-1.66 2-3.7s-.84-3.71-2-3.71m0 7.41c-1.16 0-2-1.66-2-3.7s.84-3.71 2-3.71m0 7.41h2.56c1.23 0 2.23-1.66 2.23-3.7s-1-3.71-2.23-3.71h-2.56m1.9 2.5h2.77m-2.78 2.44h2.78'
+        d='M16.61 10.44c1.13 0 2.04-1.76 2.04-3.94s-.91-3.93-2.04-3.93m-2.11 0h1.8m.31 2.58h1.79m-1.79 2.7h1.79m-4.1 2.59h2.24'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

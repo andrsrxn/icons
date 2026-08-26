@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMoon: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMoon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='moon'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-moon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,16 +29,15 @@ export const IconMoon: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='m5.65 15.43-.52-.01c-.95-.06-1.43-.08-1.58.19s.07.6.53 1.26A8.86 8.86 0 1 0 15.8 4.12c-.7-.4-1.04-.6-1.3-.42s-.2.65-.06 1.6q.1.62.1 1.26c0 4.9-3.98 8.87-8.88 8.87'
+        d='M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4Z'
         fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        clipRule='evenodd'
-        d='m5.65 15.43-.52-.01c-.95-.06-1.43-.08-1.58.19s.07.6.53 1.26A8.86 8.86 0 1 0 15.8 4.12c-.7-.4-1.04-.6-1.3-.42s-.2.65-.06 1.6q.1.62.1 1.26c0 4.9-3.98 8.87-8.88 8.87Z'
+        d='M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

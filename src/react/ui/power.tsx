@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPower: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPower: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='power'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-power'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconPower: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M19.73 12.73a7.73 7.73 0 1 1-15.46 0 7.73 7.73 0 0 1 15.46 0'
+        d='M20.59 12.76a8.59 8.59 0 1 1-17.17 0 8.59 8.59 0 0 1 17.17 0'
         fill='currentColor'
       />
       <path
-        d='M16.4 6.37a7.72 7.72 0 1 1-8.8 0M12 13.1V3.64'
+        d='M6.83 5.9A8.57 8.57 0 0 0 12 21.35a8.56 8.56 0 0 0 8.58-8.6c0-2.8-1.34-5.28-3.41-6.85M12 13.38V2.93'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

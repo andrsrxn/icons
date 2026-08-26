@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGreaterOrEqualThan: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGreaterOrEqualThan: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='greater-or-equal-than'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-greater-or-equal-than'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconGreaterOrEqualThan: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M6.06 3.88a.75.75 0 1 0-.42 1.44l.21-.72zm4.92 2.23-.2.71zm.2 7.6.25.71zM5.6 14.9a.75.75 0 0 0 .5 1.41l-.25-.7zm12.92 5.26a.75.75 0 1 0 0-1.5zm-13.04-1.5a.75.75 0 0 0 0 1.5zM5.85 4.6l-.2.72 5.12 1.5.21-.71.21-.72-5.13-1.51zm5.34 9.11-.25-.7-5.34 1.88.25.7.25.71 5.33-1.88zm-.2-7.6-.22.71c2.47.73 4.24 1.25 5.41 1.77q.87.39 1.18.7c.2.18.24.32.24.45l.75-.02.75-.02a2 2 0 0 0-.71-1.5q-.62-.57-1.6-.98c-1.28-.57-3.17-1.12-5.6-1.83zm.2 7.6.24.71c2.38-.84 4.24-1.5 5.5-2.13a6 6 0 0 0 1.54-1.06c.4-.42.65-.93.63-1.53l-.75.02-.75.02c0 .12-.03.26-.22.46q-.29.33-1.13.76a54 54 0 0 1-5.31 2.05zm7.33 5.7v-.76H5.48v1.5h13.04z'
-        fill='currentColor'
+        d='M5.11 19.46h13.72M5.51 4.54l5.61 1.75c5.03 1.56 7.54 2.34 7.54 3.81s-2.51 2.26-7.53 3.83L5.5 15.68'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

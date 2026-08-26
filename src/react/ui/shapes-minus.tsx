@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconShapesMinus: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconShapesMinus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='shapes-minus'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-shapes-minus'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,47 @@ export const IconShapesMinus: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M3.88 16.81c0-1.26 0-1.9.27-2.36a2 2 0 0 1 .71-.71c.47-.28 1.1-.28 2.37-.28 1.26 0 1.9 0 2.37.28a2 2 0 0 1 .7.7c.28.48.28 1.1.28 2.37s0 1.9-.27 2.37a2 2 0 0 1-.71.71c-.47.28-1.1.28-2.37.28s-1.9 0-2.37-.28a2 2 0 0 1-.7-.71c-.28-.47-.28-1.1-.28-2.37m10.61-.7c.92-1.72 1.38-2.58 2.05-2.73q.32-.08.66 0c.67.15 1.13 1 2.04 2.73.83 1.55 1.25 2.33 1.03 2.95q-.1.3-.32.53c-.44.48-1.32.48-3.08.48s-2.64 0-3.09-.48a2 2 0 0 1-.32-.53c-.21-.62.2-1.4 1.03-2.95M5.16 5.22c.95-.95 1.42-1.42 2-1.44h.13c.59.02 1.06.5 2 1.44.95.95 1.42 1.42 1.45 2v.13c-.03.58-.5 1.06-1.44 2-.95.95-1.42 1.42-2.01 1.45h-.12c-.59-.03-1.06-.5-2-1.45-.95-.94-1.43-1.42-1.45-2v-.12c.02-.59.5-1.06 1.44-2'
-        fill='currentColor'
+      <path d='M14.2 7H21' stroke='currentColor' strokeWidth={strokeWidth} />
+      <rect opacity='.2' x='2.92' y='14' width='7.43' height='7.43' rx='2' fill='currentColor' />
+      <rect
         opacity='.2'
+        x='2.29'
+        y='7.21'
+        width='6.15'
+        height='6.15'
+        rx='1'
+        transform='rotate(-45 2.3 7.21)'
+        fill='currentColor'
       />
       <path
-        d='M3.88 16.81c0-1.26 0-1.9.27-2.36a2 2 0 0 1 .71-.71c.47-.28 1.1-.28 2.37-.28 1.26 0 1.9 0 2.37.28a2 2 0 0 1 .7.7c.28.48.28 1.1.28 2.37s0 1.9-.27 2.37a2 2 0 0 1-.71.71c-.47.28-1.1.28-2.37.28s-1.9 0-2.37-.28a2 2 0 0 1-.7-.71c-.28-.47-.28-1.1-.28-2.37ZM5.16 5.22c.95-.95 1.42-1.42 2-1.44h.13c.59.02 1.06.5 2 1.44.95.95 1.42 1.42 1.45 2v.13c-.03.58-.5 1.06-1.44 2-.95.95-1.42 1.42-2.01 1.45h-.12c-.59-.03-1.06-.5-2-1.45-.95-.94-1.43-1.42-1.45-2v-.12c.02-.59.5-1.06 1.44-2Zm9.36 11c.9-1.67 1.34-2.5 1.98-2.66q.37-.09.73 0c.65.16 1.1 1 1.98 2.66.8 1.5 1.2 2.26 1.02 2.86q-.12.34-.36.6c-.45.45-1.3.45-3 .45s-2.56 0-3-.45a1.5 1.5 0 0 1-.36-.6c-.2-.6.21-1.35 1.01-2.86Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        opacity='.2'
+        d='M14.95 21.05c-.62-.35-.93-.53-1.07-.8a1 1 0 0 1-.1-.37c-.02-.31.16-.62.52-1.24l1.33-2.28c.77-1.34 1.16-2 1.74-2s.96.67 1.72 2.01l1.42 2.48c.24.42.35.62.38.84a1 1 0 0 1-.09.5c-.08.2-.26.35-.62.67-.17.16-.26.24-.36.3l-.26.1q-.13.02-.46.02h-3.28c-.2 0-.3 0-.4-.02l-.12-.03q-.12-.04-.35-.18'
+        fill='currentColor'
       />
-      <path d='M13.99 7H20' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
+      <rect
+        x='2.92'
+        y='14'
+        width='7.43'
+        height='7.43'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='2.29'
+        y='7.21'
+        width='6.15'
+        height='6.15'
+        rx='1'
+        transform='rotate(-45 2.3 7.21)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M16.01 21.29c-1.53 0-2.3 0-2.59-.5-.28-.5.1-1.16.86-2.5l1.29-2.25c.77-1.35 1.15-2.02 1.73-2.02s.97.67 1.74 2.02l1.29 2.26c.76 1.33 1.14 2 .85 2.5-.29.49-1.06.49-2.59.49z'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

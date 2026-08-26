@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWind: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWind: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='wind'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-wind'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconWind: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M7.19 7.01c.14-1.41 1.2-2.3 2.69-2.3a2.7 2.7 0 1 1 0 5.38H3.53m12.81 3.65c.22.6.9 1.35 1.94 1.35a2.1 2.1 0 0 0 0-4.2h-4.3m-4.81 6.13c.17 1 1.2 2.24 2.69 2.24a2.7 2.7 0 0 0 0-5.38H3.53'
+        d='M9.45 10.62a3.78 3.78 0 1 0-3.77-3.78m6.42 7.73a2.9 2.9 0 1 1-2.56 4.23m9.49-8.18a2.31 2.31 0 1 1-1.64 3.94 2 2 0 0 1-.36-.56m-7.45-3.38H2.65m9.39 3.95H3.76m15.32-3.95H15'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

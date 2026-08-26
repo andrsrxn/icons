@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconIntersect: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconIntersect: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='intersect'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-intersect'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,29 +27,28 @@ export const IconIntersect: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <g opacity='.2'>
-        <path
-          fillRule='evenodd'
-          clipRule='evenodd'
-          d='M4.28 14.54c-.58-.57-.58-1.5-.58-3.34V7.62c0-1.85 0-2.77.58-3.34.57-.57 1.5-.57 3.33-.57h3.6c1.83 0 2.76 0 3.33.57s.57 1.5.57 3.34v1.12H12.8c-1.84 0-2.77 0-3.34.57-.57.58-.57 1.5-.57 3.34v2.46H7.6c-1.84 0-2.76 0-3.33-.57'
-          fill='currentColor'
-        />
-        <path
-          fillRule='evenodd'
-          clipRule='evenodd'
-          d='M9.46 19.57c-.57-.57-.57-1.49-.57-3.33V15.1h2.31c1.84 0 2.77 0 3.34-.57s.57-1.5.57-3.34V8.74h1.28c1.84 0 2.76 0 3.33.57.58.58.58 1.5.58 3.34v3.59c0 1.84 0 2.76-.58 3.33-.57.58-1.5.58-3.33.58h-3.6c-1.83 0-2.76 0-3.33-.58'
-          fill='currentColor'
-        />
-      </g>
       <path
-        d='M3.7 11.2c0 1.85 0 2.77.58 3.34.57.57 1.5.57 3.33.57h3.6c1.83 0 2.76 0 3.33-.57s.57-1.5.57-3.34V7.62c0-1.85 0-2.77-.57-3.34s-1.5-.57-3.34-.57H7.61c-1.84 0-2.76 0-3.33.57s-.58 1.5-.58 3.34z'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        opacity='.2'
+        d='M2.74 8.7c0-2.82 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h4.01a3 3 0 0 1 2.97 2.97v.17a3 3 0 0 1-2.97 2.96h-.49c-.38 0-.57 0-.74.02a3 3 0 0 0-2.58 2.26c-.04.16-.06.35-.11.72l-.18 1.3a2.97 2.97 0 0 1-5.91-.38zm18.52 6.42c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87h-3.99a2.96 2.96 0 0 1-.23-5.9l.83-.06c.53-.04.79-.06 1.01-.12a3 3 0 0 0 2.27-2.36c.04-.23.05-.5.06-1.02l.02-.6v-.03a3 3 0 0 1 2.99-2.89h.06a3 3 0 0 1 2.98 2.99z'
+        fill='currentColor'
       />
-      <path
-        d='M8.89 16.24c0 1.84 0 2.76.57 3.33s1.5.58 3.34.58h3.59c1.84 0 2.76 0 3.33-.58.58-.57.58-1.49.58-3.33v-3.59c0-1.84 0-2.76-.58-3.34-.57-.57-1.5-.57-3.33-.57h-3.6c-1.83 0-2.76 0-3.33.57-.57.58-.57 1.5-.57 3.34z'
+      <rect
+        x='2.74'
+        y='2.7'
+        width='12.98'
+        height='12.98'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='8.28'
+        y='8.31'
+        width='12.98'
+        height='12.98'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

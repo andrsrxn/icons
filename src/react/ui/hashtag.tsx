@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHashtag: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHashtag: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hashtag'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hashtag'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,16 +28,11 @@ export const IconHashtag: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        opacity='.2'
-        d='M13.83 15H8.78a1 1 0 0 1-.92-1.38l1.66-4a1 1 0 0 1 .93-.62h4.84a1 1 0 0 1 .94 1.35l-1.47 4a1 1 0 0 1-.93.65'
-        fill='currentColor'
-      />
-      <path
-        d='m5.5 20 6.02-16m.98 16 6-16M20 9H4m16 6H4'
+        d='M4.18 8.21h17.53M2.22 15.22h17.53m-6.01 5.25 4.54-16.94M5.75 20.47l4.53-16.94'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
+      <path opacity='.2' d='m14.94 15.15 1.75-6.94H8.84l-1.48 6.94z' fill='currentColor' />
     </svg>
   )
 }

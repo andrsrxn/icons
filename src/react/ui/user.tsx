@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUser: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUser: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='user'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-user'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,18 +27,25 @@ export const IconUser: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <g opacity='.2'>
-        <path
-          d='M12 13.07a7.6 7.6 0 0 0-7.41 6.48c-.07.55.38 1 .93 1h12.96c.55 0 1-.45.93-1A7.6 7.6 0 0 0 12 13.07'
-          fill='currentColor'
-        />
-        <path d='M16.8 8.26a4.8 4.8 0 1 1-9.6 0 4.8 4.8 0 0 1 9.6 0' fill='currentColor' />
-      </g>
       <path
-        d='M12 13.07a4.8 4.8 0 1 0 0-9.62 4.8 4.8 0 0 0 0 9.62Zm0 0a7.54 7.54 0 0 0-7.48 7.48M12 13.07c3.88 0 7.48 3.2 7.48 7.48'
+        opacity='.2'
+        d='M17.33 7.92a5.33 5.33 0 1 1-10.66 0 5.33 5.33 0 0 1 10.66 0'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M20.27 21.68H3.73c0-4.65 3.7-8.43 8.27-8.43a8.35 8.35 0 0 1 8.27 8.43'
+        fill='currentColor'
+      />
+      <path
+        d='M17.33 7.92A5.3 5.3 0 0 1 12 13.25a5.33 5.33 0 1 1 5.33-5.33'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M20.27 21.52a8.27 8.27 0 1 0-16.54 0'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

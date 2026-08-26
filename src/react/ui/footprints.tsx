@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconFootprints: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconFootprints: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='footprints'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-footprints'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,19 +29,13 @@ export const IconFootprints: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m3.43 9.8 2.33 6.87 3.45-.8V8.72L7.95 6.36l-2.91.34zm17.14-2.7-2.33 6.93-3.45-.81V6.05l1.26-2.38 2.91.34z'
+        d='M2.37 9.5 5 17.25l3.88-.91.44-8.28-1.86-2.4-3.27.38zm19.26-3.01L19 14.26l-3.88-.9-.35-7.97 1.77-2.76 3.27.38z'
         fill='currentColor'
       />
       <path
-        d='m9.32 15.8-3.7.98m9.06-3.66 3.71.98'
+        d='m9 16.27-4.17 1.1M15 13.25l4.18 1.1M4.67 17.3c-.62-3.35-2.04-4.25-2-7.81.03-1.89.42-3.82 3.57-4.05 2.9-.2 3.3 2.11 3.4 4.3.14 3.18-1 3.83-.5 6.47q.14.66.43 1.36h0l.5 1.22c.28 1.14-.17 1.98-1.28 2.38a15 15 0 0 1-1.62.31 2 2 0 0 1-2.04-1.43l-.12-.64c-.1-.72-.23-1.49-.34-2.12m14.66-2.81c.62-3.35 2.04-4.25 2-7.8-.03-1.9-.5-3.84-3.57-4.05-2.9-.21-3.3 2.1-3.4 4.3-.14 3.18 1 3.82.5 6.46q-.14.66-.43 1.36l-.5 1.22c-.28 1.14.17 1.99 1.28 2.38.14.05.42.1.99.22h0c.33.06.5.1.63.1.94.06 1.77-.52 2.04-1.43.04-.13.06-.3.12-.65z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path
-        d='M5.47 16.72c-.55-2.98-1.8-3.77-1.77-6.95.02-1.67 1.12-3.45 3.17-3.6S9.81 8.05 9.9 10c.13 2.83-.9 3.4-.44 5.76q.13.64.43 1.31c.57 1.33-.1 3-1.51 3.27l-.2.04a2.03 2.03 0 0 1-2.39-1.7zm13.06-2.5c.55-2.98 1.8-3.78 1.77-6.95-.02-1.68-1.12-3.46-3.17-3.6S14.19 5.54 14.1 7.5c-.13 2.82.9 3.4.44 5.75q-.12.64-.43 1.32c-.57 1.32.1 2.99 1.51 3.27l.2.03a2.03 2.03 0 0 0 2.39-1.7c.1-.66.21-1.37.32-1.95Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

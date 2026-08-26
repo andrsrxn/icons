@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextInitial: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextInitial: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-initial'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-initial'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,15 +28,9 @@ export const IconTextInitial: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        opacity='.2'
-        d='M8.95 8.06 7.93 5.5c-.22-.55-1.15-.55-1.36 0L5.55 8.06c-.15.38.2.78.68.78h2.04c.48 0 .83-.4.68-.78'
-        fill='currentColor'
-      />
-      <path
-        d='M20.37 6h-7.42m7.42 8.78H3.63m16.74-4.53h-7.42m7.42 8.91H3.63M9.26 8.84l-.92-2.32c-.45-1.13-.68-1.7-1.1-1.7-.4 0-.63.57-1.08 1.7l-.92 2.32m4.02 0 1 2.53m-1-2.53H5.24m-1 2.53 1-2.53'
+        d='M21.3 5.35h-8.25m8.25 9.75H2.7m18.6-5.04h-8.25m8.25 9.9H2.7M4 11.42 4.98 8c.78-2.75 1.17-4.12 1.93-4.12s1.14 1.38 1.92 4.13l.96 3.41m-1-3.08H5.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

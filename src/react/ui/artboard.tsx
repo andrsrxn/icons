@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconArtboard: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconArtboard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='artboard'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-artboard'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,18 +29,17 @@ export const IconArtboard: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        x='5.42'
-        y='5.42'
-        width='13.15'
-        height='13.15'
+        x='4.38'
+        y='4.38'
+        width='15.24'
+        height='15.24'
         rx='2'
         fill='currentColor'
       />
       <path
-        d='M18.58 3.64v16.72M3.64 5.42h16.72M3.64 18.58h16.72M5.42 3.64v16.72'
+        d='M19.62 2.32v19.36M2.32 4.38h19.36M2.32 19.62h19.36M4.38 2.32v19.36'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

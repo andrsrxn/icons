@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAtom: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAtom: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='atom'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-atom'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,27 +29,24 @@ export const IconAtom: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M15.01 15.11c-4.03 4.04-8.7 5.91-10.42 4.2-1.72-1.72.16-6.39 4.2-10.42s8.7-5.91 10.41-4.2c1.72 1.72-.15 6.39-4.19 10.42'
+        d='M15.33 8.67c4.67 4.67 6.97 9.95 5.13 11.79s-7.12-.46-11.8-5.13C4 10.66 1.7 5.38 3.55 3.53c1.84-1.83 7.12.46 11.8 5.14'
         fill='currentColor'
       />
-      <path d='M12.92 12a.92.92 0 1 1-1.84 0 .92.92 0 0 1 1.84 0' fill='currentColor' />
       <path
-        d='M15.01 15.11c-4.03 4.04-8.7 5.91-10.42 4.2-1.72-1.72.16-6.39 4.2-10.42s8.7-5.91 10.41-4.2c1.72 1.72-.15 6.39-4.19 10.42Z'
+        d='M8.67 8.67a24 24 0 0 0-4.97 6.87c-.96 2.17-1.1 3.99-.16 4.92 1.84 1.84 7.12-.45 11.8-5.13C20 10.66 22.3 5.38 20.45 3.54S13.34 4 8.66 8.67'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M8.78 15.12c4.04 4.03 8.7 5.9 10.42 4.19 1.72-1.72-.16-6.38-4.2-10.42S6.3 2.98 4.6 4.7c-1.72 1.73.16 6.39 4.2 10.43Z'
+        d='M15.33 8.67c2.3 2.3 4.03 4.75 4.97 6.87.96 2.17 1.1 3.99.16 4.92-1.84 1.84-7.12-.45-11.8-5.13C4 10.66 1.7 5.38 3.55 3.54s7.12.46 11.8 5.13'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12.92 12a.92.92 0 1 1-1.84 0 .92.92 0 0 1 1.84 0Z'
+        d='M13.09 12a1.09 1.09 0 1 1-2.18 0 1.09 1.09 0 0 1 2.18 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

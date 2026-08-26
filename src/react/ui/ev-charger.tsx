@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEvCharger: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEvCharger: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ev-charger'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ev-charger'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,44 +29,32 @@ export const IconEvCharger: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M13.78 3.97H4.82v13.49h8.96zm3.25 6.41a.75.75 0 0 1 .1-1.23l1.9-1.1a.74.74 0 0 1 1.1.5c.12.62-.17 1.25-.71 1.56l-.7.4a1.5 1.5 0 0 1-1.69-.13'
+        d='M13.92 8.01c0-1.9 0-2.85-.42-3.55a3 3 0 0 0-1.06-1.07c-.7-.41-1.65-.41-3.56-.41-1.9 0-2.85 0-3.55.41a3 3 0 0 0-1.06 1.07c-.42.7-.42 1.65-.42 3.55v10.13h10.07zm3.68 2.27a.95.95 0 0 1 .16-1.53l1.98-1.15a.94.94 0 0 1 1.39.61c.18.8-.18 1.63-.9 2.04l-.43.25c-.7.4-1.58.32-2.2-.22'
         fill='currentColor'
       />
       <path
-        d='M13.86 17.46V7.73c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H8.74c-1.89 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v9.73'
+        d='M14 18.14V7.83c0-1.99 0-2.98-.44-3.7a3 3 0 0 0-.97-.97c-.72-.46-1.72-.46-3.7-.46-2 0-2.99 0-3.71.46a3 3 0 0 0-.97.96c-.45.73-.45 1.72-.45 3.71v10.3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='4.08'
-        y='17.46'
-        width='10.45'
-        height='2.81'
+        x='3.02'
+        y='18.14'
+        width='11.74'
+        height='3.16'
         rx='1'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m13.85 12.67.9 1.04c.35.4.53.6.72.75a2 2 0 0 0 1.53.33c.24-.04.48-.15.97-.37.45-.2.67-.3.85-.44a2 2 0 0 0 .77-1.27c.03-.22.02-.47-.01-.96l-.05-.75'
+        d='m14 12.75 1.01 1.17c.5.6.76.89 1.07 1.06a2 2 0 0 0 1.13.25c.35-.03.7-.19 1.41-.51.66-.3.99-.45 1.23-.67a2 2 0 0 0 .56-.93c.09-.32.07-.68.02-1.4l-.05-.84'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M17.33 10.9c-.24-.26-.37-.39-.43-.51a1 1 0 0 1 .17-1.16c.1-.1.25-.2.55-.37l.9-.52c.3-.17.45-.26.59-.3a1 1 0 0 1 1.09.44 3 3 0 0 1 .22.62c.07.22.1.33.11.43a1 1 0 0 1-.33.83q-.1.09-.37.25l-.9.52c-.2.1-.3.17-.4.2a1 1 0 0 1-.88-.13 2 2 0 0 1-.32-.3Z'
+        d='M17.9 10.76c-.37-.4-.55-.59-.62-.79a1 1 0 0 1 .13-.92c.12-.17.36-.3.82-.57l1.01-.59c.47-.27.7-.4.91-.42a1 1 0 0 1 .86.34c.14.16.22.42.37.93.1.34.16.5.15.66a1 1 0 0 1-.26.65c-.1.12-.25.2-.56.38l-1 .59c-.31.17-.46.26-.62.3a1 1 0 0 1-.69-.1c-.13-.08-.25-.2-.5-.46m-9-3.31-1.73 2.8h3.28l-1.52 2.69m8.38-4.51-.88-1.52m3.04.28-.88-1.53'
         stroke='currentColor'
-        strokeWidth='1.5'
-      />
-      <path
-        d='M16.44 9.47c.2.36.63.48.99.26a.8.8 0 0 0 .28-1.06l-.64.4zm.53-2.17a.7.7 0 0 0-.98-.27.8.8 0 0 0-.29 1.06l.64-.4zm.1 1.77.64-.4-.74-1.37-.63.4-.64.4.74 1.37zm1.17-.72c.2.36.63.48.99.26.35-.22.47-.7.28-1.06l-.64.4zm.53-2.17a.7.7 0 0 0-.98-.27.8.8 0 0 0-.29 1.06l.64-.4zm.1 1.77.64-.4-.74-1.37-.63.4-.64.39.74 1.38z'
-        fill='currentColor'
-      />
-      <path
-        d='m9.32 7.95-1.55 2.48h2.92l-1.35 2.4'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

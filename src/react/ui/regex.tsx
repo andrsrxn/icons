@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRegex: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRegex: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='regex'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-regex'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,29 +27,20 @@ export const IconRegex: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='2.65' y='12.66' width='8.5' height='8.5' rx='2' fill='currentColor' />
       <rect
-        opacity='.2'
-        x='3.7'
-        y='12.59'
-        width='7.54'
-        height='7.54'
-        rx='1.5'
-        fill='currentColor'
-      />
-      <rect
-        x='3.7'
-        y='12.59'
-        width='7.54'
-        height='7.54'
-        rx='1.5'
+        x='2.65'
+        y='12.66'
+        width='8.5'
+        height='8.5'
+        rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M16.52 12.59V3.87m3.78 2.18-7.55 4.36m0-4.36 7.55 4.36'
+        d='M17.09 12.66V2.84m4.26 2.46-8.5 4.91m0-4.91 8.5 4.91'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

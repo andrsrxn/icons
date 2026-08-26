@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPilcrow: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPilcrow: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='pilcrow'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-pilcrow'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconPilcrow: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M14 7.52c0-1.89 0-2.83.13-3.42s.34-.58.77-.58h1.92c.42 0 .63 0 .77.58.13.59.13 1.53.13 3.42V16c0 1.89 0 2.83-.13 3.41-.14.59-.35.59-.77.59H14.9c-.43 0-.64 0-.77-.59C14 18.83 14 17.9 14 16z'
+        d='M15.55 21.33c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7V4.6c0-.95 0-1.42-.3-1.71-.29-.3-.76-.3-1.7-.3h-.81c-.94 0-1.42 0-1.7.3-.3.3-.3.76-.3 1.7v14.73c0 .94 0 1.41.3 1.7.28.3.76.3 1.7.3z'
         fill='currentColor'
       />
       <path
-        d='M17.72 3.68v16.64m-3.8-16.64v16.64M19.8 3.68H9.4c-2.87 0-5.2 2.1-5.2 4.68s2.31 4.68 5.2 4.68h4.51m-1.85 7.28h7.74'
+        d='M19.76 2.6H8.68a4.85 4.85 0 0 0-4.86 4.86v.25a4.85 4.85 0 0 0 4.86 4.85h4.3M20 21.33h-9.26M13.07 2.7v18.63M17.23 2.7v18.63'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

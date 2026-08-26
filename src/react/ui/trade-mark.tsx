@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTradeMark: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTradeMark: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='trade-mark'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-trade-mark'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,26 +27,15 @@ export const IconTradeMark: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='12' r='8.43' fill='currentColor' />
-      <circle cx='12' cy='12' r='8.43' stroke='currentColor' strokeWidth='1.5' />
       <path
-        d='M8.81 13.9v-3.8m4.27 3.8v-3.8'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        opacity='.2'
+        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
+        fill='currentColor'
       />
       <path
-        d='m16.88 10.1-1.9 1.5-1.9-1.5'
+        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12M8.5 9.4v5.23m4.6-5.23v5.23m4.33-5.23v5.23m-4.26-5.26 2.16 2.6m2.1-2.6-2.1 2.6M6.58 9.4h3.85'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M16.88 13.9v-3.8m-6.16 0H6.9'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPaintBoard: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPaintBoard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='paint-board'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-paint-board'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,17 +29,17 @@ export const IconPaintBoard: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.5 12c0 4.7 3.8 8.5 8.5 8.5 1.7 0 1.4-1.77 1.1-3.58-.22-1.4-.46-2.84.21-3.5s2.12-.47 3.54-.26c1.85.26 3.65.52 3.65-1.16a8.5 8.5 0 0 0-17 0m11.73-4.27a1.27 1.27 0 1 1-2.54 0 1.27 1.27 0 0 1 2.54 0M9.93 9A1.27 1.27 0 1 1 7.4 9a1.27 1.27 0 0 1 2.54 0m-.65 5.03a1.27 1.27 0 1 1-2.53 0 1.27 1.27 0 0 1 2.53 0'
+        d='M2.7 12a9.3 9.3 0 0 0 9.3 9.3c1.85 0 1.54-1.93 1.21-3.92-.25-1.53-.2-2.64.53-3.38.74-.73 2.02-.96 3.57-.73 2.02.28 4 .57 4-1.27a9.3 9.3 0 1 0-18.62 0m12.83-4.67a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0M9.74 8.72a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0m-.28 5.74c0 .76-.54 1.29-1.3 1.29-.77 0-1.47-.53-1.47-1.3 0-.76.6-1.34 1.37-1.34s1.4.58 1.4 1.35'
         fill='currentColor'
       />
       <path
-        d='M20.5 12c0 2.97-4.91-.19-6.89 1.78C11.44 15.94 15 20.5 12 20.5a8.5 8.5 0 1 1 8.5-8.5Z'
+        d='M21.3 12c0 2.8-5.3.29-7.26 2.24-1.95 1.95.75 7.07-2.04 7.07A9.3 9.3 0 1 1 21.3 12'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <circle cx='13.96' cy='7.73' r='1.27' stroke='currentColor' strokeWidth='1.5' />
-      <circle cx='8.73' cy='8.96' r='1.27' stroke='currentColor' strokeWidth='1.5' />
-      <circle cx='8.05' cy='14.08' r='1.27' stroke='currentColor' strokeWidth='1.5' />
+      <circle cx='14.17' cy='7.61' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='8.61' cy='9.08' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='8.32' cy='14.61' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

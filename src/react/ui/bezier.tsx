@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBezier: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBezier: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bezier'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bezier'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,58 @@ export const IconBezier: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M13.43 9.64a2.03 2.03 0 1 1-2.86-2.87 2.03 2.03 0 0 1 2.86 2.87M6.9 17.55a2.03 2.03 0 1 1-2.86-2.87 2.03 2.03 0 0 1 2.87 2.87m13.05 0a2.03 2.03 0 1 1-2.87-2.87 2.03 2.03 0 0 1 2.87 2.87'
-        fill='currentColor'
+      <circle
         opacity='.2'
+        cx='4.99'
+        cy='16.14'
+        r='2.39'
+        transform='rotate(90 5 16.14)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='11.95'
+        cy='7.53'
+        r='2.39'
+        transform='rotate(90 11.95 7.53)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='19.01'
+        cy='16.14'
+        r='2.39'
+        transform='rotate(90 19 16.14)'
+        fill='currentColor'
+      />
+      <circle
+        cx='4.99'
+        cy='16.14'
+        r='2.39'
+        transform='rotate(90 5 16.14)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='11.95'
+        cy='7.53'
+        r='2.39'
+        transform='rotate(90 11.95 7.53)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='19.01'
+        cy='16.14'
+        r='2.39'
+        transform='rotate(90 19 16.14)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M17.83 14.1a.75.75 0 1 0 1.5 0zM3.54 7.45a.75.75 0 0 0 0 1.5zm6.43 1.5a.75.75 0 0 0 0-1.5zm4.06-1.45a.75.75 0 0 0 0 1.5zM20.46 9a.75.75 0 0 0 0-1.5zm-7.03.64-.53-.54c-.5.5-1.3.5-1.8 0l-.53.54-.54.53a2.8 2.8 0 0 0 3.94 0zm-2.86 0 .53-.54c-.5-.5-.5-1.3 0-1.8l-.53-.53-.54-.53a2.8 2.8 0 0 0 0 3.93zm0-2.87.53.53c.5-.5 1.3-.5 1.8 0l.53-.53.54-.53a2.8 2.8 0 0 0-3.94 0zm2.86 0-.53.53c.5.5.5 1.3 0 1.8l.53.54.54.53a2.8 2.8 0 0 0 0-3.93zM6.91 17.55l-.53-.53c-.5.5-1.31.5-1.81 0l-.53.53-.53.53a2.8 2.8 0 0 0 3.93 0zm-2.87 0 .53-.53c-.5-.5-.5-1.31 0-1.81l-.53-.53-.53-.53a2.8 2.8 0 0 0 0 3.93zm0-2.87.53.53c.5-.5 1.31-.5 1.8 0l.54-.53.53-.53a2.8 2.8 0 0 0-3.93 0zm2.87 0-.53.53c.5.5.5 1.3 0 1.8l.53.54.53.53a2.8 2.8 0 0 0 0-3.93zm13.05 2.87-.53-.53c-.5.5-1.31.5-1.8 0l-.54.53-.53.53a2.8 2.8 0 0 0 3.93 0zm-2.87 0 .53-.53c-.5-.5-.5-1.31 0-1.81l-.53-.53-.53-.53a2.8 2.8 0 0 0 0 3.93zm0-2.87.53.53c.5-.5 1.31-.5 1.81 0l.53-.53.53-.53a2.8 2.8 0 0 0-3.93 0zm2.87 0-.53.53c.5.5.5 1.3 0 1.8l.53.54.53.53a2.8 2.8 0 0 0 0-3.93zm-5.97-6.09-.18.73c2.48.63 4.02 2.4 4.02 4.78h1.5c0-3.17-2.12-5.47-5.16-6.23zm-8.57 5.5h.75c0-2.04 1.78-4.05 4.07-4.84l-.24-.7-.24-.71c-2.68.92-5.09 3.37-5.09 6.26zM3.54 8.2v.75h6.43v-1.5H3.54zm10.49.05V9h6.43V7.5h-6.43z'
-        fill='currentColor'
+        d='M9.56 7.53H2.6m18.8 0h-7.06m-9.39 6c0-2.5 1.78-4.64 4.31-5.54m9.69 5.54c0-2.5-1.78-4.64-4.31-5.54'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconJustice: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconJustice: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='justice'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-justice'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,31 @@ export const IconJustice: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M13.71 5.54c0 .85-.74 1.53-1.66 1.53S10.4 6.4 10.4 5.54 11.14 4 12.05 4c.92 0 1.66.69 1.66 1.54m-4.55 7.7c0 1.12-1.12 2.03-2.49 2.03s-2.48-.91-2.48-2.03c0-2.01 2.48-3.9 2.48-3.9s2.49 1.9 2.49 3.9m10.75 0c0 1.12-1.1 2.03-2.48 2.03s-2.48-.9-2.48-2.03c0-2 2.48-3.88 2.48-3.88s2.48 1.9 2.48 3.88'
-        fill='currentColor'
+      <circle
         opacity='.2'
+        cx='12'
+        cy='5.01'
+        r='2.46'
+        transform='rotate(90 12 5)'
+        fill='currentColor'
       />
       <path
-        d='M12.05 7.12a1.66 1.66 0 1 0 0-3.32 1.66 1.66 0 0 0 0 3.32m0 0V20m-3.44 0h6.9m3.32-11.25c-3.8 0-6.78-1.03-6.78-1.03s-3.09 1-6.94 1m4.05 4.25c0 1.23-1.12 2.22-2.49 2.22s-2.48-1-2.48-2.22c0-2.2 2.48-4.3 2.48-4.3s2.49 2.12 2.49 4.3m10.75.04c0 1.23-1.11 2.22-2.48 2.22s-2.47-1-2.47-2.22c0-2.2 2.47-4.3 2.47-4.3s2.48 2.12 2.48 4.3'
+        opacity='.2'
+        d='M6.53 16.63a2.46 2.46 0 0 1-2.46-2.46c0-1.36 1.1-4.08 2.46-4.08s2.46 2.72 2.46 4.08-1.1 2.46-2.46 2.46m10.93 0A2.46 2.46 0 0 1 15 14.17c0-1.36 1.1-4.08 2.46-4.08s2.46 2.72 2.46 4.08-1.1 2.46-2.46 2.46'
+        fill='currentColor'
+      />
+      <circle
+        cx='12'
+        cy='5.01'
+        r='2.46'
+        transform='rotate(90 12 5)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.53 16.63a2.46 2.46 0 0 1-2.46-2.46c0-2.11 2.46-4.44 2.46-4.44s2.46 2.17 2.46 4.44c0 1.36-1.1 2.46-2.46 2.46m10.93 0A2.46 2.46 0 0 1 15 14.17c0-2.11 2.46-4.44 2.46-4.44s2.46 2.17 2.46 4.44c0 1.36-1.1 2.46-2.46 2.46m-8.81 4.7h6.67M11.99 7.47v13.86M12 8.27c-.51.16-1.82.63-3.1.76a8 8 0 0 1-3.6-.3m6.7-.46c.51.16 1.82.63 3.1.76a8 8 0 0 0 3.6-.3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDiceOne: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDiceOne: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='dice-one'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-dice-one'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,23 +27,27 @@ export const IconDiceOne: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.76 7.64c0-1.83 0-2.75.57-3.31s1.48-.57 3.3-.57h8.73c1.83 0 2.75 0 3.31.57s.57 1.48.57 3.3v8.73c0 1.83 0 2.75-.57 3.31s-1.48.57-3.3.57H7.63c-1.83 0-2.75 0-3.31-.57s-.57-1.48-.57-3.3z'
+        width='18.78'
+        height='18.78'
+        rx='3'
+        transform='matrix(0 -1 -1 0 21.4 21.4)'
         fill='currentColor'
       />
-      <path d='M12.65 11.95a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0' fill='currentColor' />
-      <path
-        d='M3.76 7.76c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.48c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v8.48c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58H7.76c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z'
+      <rect
+        width='18.78'
+        height='18.78'
+        rx='3'
+        transform='matrix(0 -1 -1 0 21.4 21.4)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12.65 11.95a.65.65 0 1 1-1.3 0 .65.65 0 0 1 1.3 0Z'
+        d='M12.9 12a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

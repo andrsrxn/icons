@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconArrowCornerLeftDown: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconArrowCornerLeftDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='arrow-corner-left-down'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-arrow-corner-left-down'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,14 @@ export const IconArrowCornerLeftDown: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M13.07 15.58a.75.75 0 0 1 1.06 1.06l-.53-.53zm-.47 1.54-.54-.53zm-6.84 0 .53-.53zm-1.54-.48a.75.75 0 0 1 1.06-1.06l-.53.53zm4.9 2.9v-.74zm.8 0a.75.75 0 0 1-1.5 0zM19.25 4.5a.75.75 0 0 1 0 1.5zM13.6 16.1l.53.53-1 1-.53-.52-.54-.53 1-1zm-7.84 1.01-.53.53-1.01-1 .53-.54.53-.53 1 1.01zm6.84 0 .53.53q-1.18 1.2-2.05 1.89c-.6.45-1.23.76-1.96.76v-1.5c.28 0 .59-.1 1.06-.46.5-.37 1.07-.93 1.88-1.75zm-6.84 0 .53-.53c.83.83 1.37 1.4 1.84 1.76.45.35.73.45 1 .45v1.5c-.74 0-1.34-.31-1.92-.77-.56-.44-1.2-1.1-1.98-1.88zm3.41 2.43h-.75V10.3h1.5v9.25zm0-9.25h-.75c0-1.6.56-3.06 1.59-4.12a5.8 5.8 0 0 1 4.23-1.68V6c-1.36 0-2.43.48-3.15 1.23a4.3 4.3 0 0 0-1.17 3.07zm5.07-5.05V4.5h5.01V6h-5.01z'
-        fill='currentColor'
+        d='M8.5 18.18v-5.52c0-3.77 0-5.66 1.17-6.83s3.05-1.17 6.82-1.17h3.28'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m4.23 16.04 1.43 1.44c1.34 1.34 2 2 2.83 2s1.5-.66 2.83-2l1.44-1.44'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

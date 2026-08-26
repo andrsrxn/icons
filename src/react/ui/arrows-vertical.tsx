@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconArrowsVertical: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconArrowsVertical: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='arrows-vertical'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-arrows-vertical'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconArrowsVertical: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M7.4 6.18a.75.75 0 1 0 1.05 1.06l-.53-.53zm1.77-.72.53.53zm5.66 0 .53-.54zm.72 1.78a.75.75 0 0 0 1.06-1.06l-.53.53zm-7.1 9.52a.75.75 0 1 0-1.06 1.06l.53-.53zm.72 1.78.53-.53zm5.66 0-.54-.52zm1.78-.72a.75.75 0 0 0-1.06-1.06l.53.53zm-4.62 2.73v-.75zm-.74 0a.75.75 0 1 0 1.5 0zM7.92 6.7l.53.53L9.7 5.99l-.53-.53-.53-.53-1.25 1.25zm6.9-1.26-.52.53 1.25 1.26.53-.53.53-.53-1.25-1.26zm-5.65 0L9.7 6c.68-.69 1.14-1.14 1.53-1.44.37-.28.58-.35.77-.35V2.7c-.65 0-1.18.27-1.68.66q-.72.57-1.68 1.57zm5.66 0 .53-.53c-.65-.65-1.2-1.2-1.68-1.56A2.7 2.7 0 0 0 12 2.7v1.5c.18 0 .4.07.77.35.39.3.85.75 1.53 1.43zM7.92 17.3l-.53.53 1.24 1.25.54-.53.53-.53-1.25-1.25zm6.9 1.26.54.53 1.25-1.26-.53-.53-.53-.53-1.26 1.26zm-5.65 0-.54.52q.97 1 1.68 1.57c.5.39 1.04.66 1.68.66v-1.5c-.18 0-.4-.07-.77-.35-.38-.3-.84-.75-1.52-1.44zm5.66 0-.54-.53a20 20 0 0 1-1.52 1.43c-.38.28-.6.35-.78.35v1.5c.65 0 1.18-.27 1.69-.66q.7-.57 1.68-1.56zm-2.83 2h.75V3.45h-1.5v17.1z'
-        fill='currentColor'
+        d='M12.09 2.74V21.1m4.81-3.67-1.98 1.99c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-2-2M16.9 6.57l-1.98-1.99c-1.33-1.33-2-2-2.83-2s-1.5.67-2.83 2l-2 2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

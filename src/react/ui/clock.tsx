@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconClock: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconClock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='clock'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-clock'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,12 @@ export const IconClock: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <circle opacity='.2' cx='12' cy='12' r='9.32' fill='currentColor' />
+      <circle cx='12' cy='12' r='9.32' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        opacity='.2'
-        d='M20.4 12a8.4 8.4 0 1 1-16.8 0 8.4 8.4 0 0 1 16.8 0'
-        fill='currentColor'
-      />
-      <path
-        d='M10.95 7.52v3.06c0 1.18 0 1.77.29 2.25s.81.75 1.86 1.3l2.3 1.2m5-3.33a8.4 8.4 0 1 1-16.8 0 8.4 8.4 0 0 1 16.8 0Z'
+        d='m15.67 15.44-2.5-1.67c-.87-.58-1.3-.87-1.54-1.31s-.24-.97-.24-2.02V6.83'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

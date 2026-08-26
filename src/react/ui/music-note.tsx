@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMusicNote: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMusicNote: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='music-note'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-music-note'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,14 +28,14 @@ export const IconMusicNote: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M11.06 17.6c0 1.49-1.2 2.7-2.67 2.7a2.7 2.7 0 0 1-2.68-2.7 2.7 2.7 0 0 1 2.68-2.71 2.7 2.7 0 0 1 2.67 2.7m.01-11.06v1.16a1 1 0 0 0 1.24.97l5.07-1.28a1 1 0 0 0 .76-.97V5.25a1 1 0 0 0-1.25-.97l-5.07 1.28a1 1 0 0 0-.75.97'
-        fill='currentColor'
         opacity='.2'
+        d='M16.86 6.78c.63-.24.94-.36 1.11-.6l.1-.17c.12-.28.07-.6-.04-1.27-.17-.99-.25-1.49-.58-1.73l-.22-.11c-.38-.16-.84.04-1.77.43l-3.19 1.35c-.6.25-.9.38-1.06.62l-.12.23c-.1.27-.02.59.12 1.22.2.86.3 1.28.58 1.5a1 1 0 0 0 .28.15c.35.12.76-.04 1.57-.36zm-5.88 11.83a2.82 2.82 0 1 1-5.63 0 2.82 2.82 0 0 1 5.63 0'
+        fill='currentColor'
       />
       <path
-        d='M11.06 17.6V9.2m0 0v-.6c0-1.51 0-2.27.43-2.82s1.17-.72 2.64-1.07l3.12-.75c.39-.09.58-.13.73-.07q.13.05.22.17c.1.13.1.33.1.72 0 1.03 0 1.54-.21 1.96a2 2 0 0 1-.51.65c-.36.3-.86.42-1.85.67zm0 8.4c0 1.49-1.2 2.7-2.67 2.7a2.7 2.7 0 0 1-2.68-2.7 2.7 2.7 0 0 1 2.68-2.71 2.7 2.7 0 0 1 2.67 2.7Z'
+        d='M10.98 18.61a2.8 2.8 0 0 1-2.81 2.82 2.82 2.82 0 1 1 2.81-2.82m0-.18L11 9.3m0 0v-.45c-.01-2.06-.01-3.1.54-3.88s1.53-1.12 3.48-1.8l1.58-.56c.38-.13.56-.2.71-.2a1 1 0 0 1 1 .7c.04.15.04.35.04.74 0 .63 0 .94-.05 1.22a3 3 0 0 1-1.4 2c-.24.15-.54.26-1.13.47z'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

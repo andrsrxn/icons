@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBbqGrill: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBbqGrill: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bbq-grill'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bbq-grill'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,19 +29,13 @@ export const IconBbqGrill: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M5.36 10.16h13.28C18.64 13.4 15.67 16 12 16s-6.64-2.61-6.64-5.84'
-        fill='#000'
+        d='M4.35 10.06h15.3c0 3.71-3.42 6.73-7.65 6.73-4.22 0-7.65-3.02-7.65-6.73'
+        fill='currentColor'
       />
       <path
-        d='M5.36 10.16C5.36 13.4 8.33 16 12 16s6.64-2.61 6.64-5.84'
-        stroke='#000'
-        strokeWidth='1.5'
-      />
-      <path
-        d='M4.19 10.16H19.8M12 16v4.15m-2.82-4.67-2.71 4.44m11.06 0-2.71-4.44M11.64 3.55l.51.55c.45.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37m3.37-4.28.52.55c.44.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37m-9.3-4.28.51.55c.44.47.4 1.22-.1 1.64a1.13 1.13 0 0 0 0 1.72l.44.37'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        d='M4.35 10.06c0 3.71 3.43 6.73 7.65 6.73s7.65-3.02 7.65-6.73M3 10.06h18m-9 6.73v4.78m-3.25-5.39L5.63 21.3m12.74 0-3.12-5.12M11.58 2.44l.6.64c.5.54.46 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.51.44m3.88-4.94.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44M6.72 2.44l.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

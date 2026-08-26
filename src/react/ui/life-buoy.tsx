@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLifeBuoy: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLifeBuoy: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='life-buoy'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-life-buoy'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,15 +28,30 @@ export const IconLifeBuoy: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.93 8.92 5.84 5.84C4.74 6.86 3.45 9.37 3.34 12a8.4 8.4 0 0 0 2.5 6.16l3.09-3.08A7.5 7.5 0 0 1 7.9 12a5 5 0 0 1 1.03-3.08m6.14 0 3.09-3.08c1.1 1.02 2.39 3.53 2.5 6.16a8.4 8.4 0 0 1-2.5 6.16l-3.09-3.08A7.5 7.5 0 0 0 16.1 12a5 5 0 0 0-1.03-3.08'
-        fill='currentColor'
         opacity='.2'
+        d='m8.3 15.54-2.37 2.42a1 1 0 0 1-1.56-.16l-1.49-2.33a1 1 0 0 1-.15-.46l-.34-4.17a1 1 0 0 1 .13-.57l2.12-3.74a1 1 0 0 1 1.5-.28l2.2 1.82a1 1 0 0 1 .3 1.1l-.87 2.5a1 1 0 0 0 0 .66l.76 2.18a1 1 0 0 1-.23 1.03m7.63 0 2.37 2.42a1 1 0 0 0 1.56-.16l1.5-2.33a1 1 0 0 0 .14-.46l.34-4.17a1 1 0 0 0-.13-.57L19.6 6.53a1 1 0 0 0-1.5-.28l-2.2 1.82a1 1 0 0 0-.3 1.1l.88 2.5a1 1 0 0 1 0 .66l-.77 2.18a1 1 0 0 0 .23 1.03'
+        fill='currentColor'
+      />
+      <circle
+        cx='11.99'
+        cy='12'
+        r='4.34'
+        transform='rotate(90 11.99 12)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='11.99'
+        cy='12'
+        r='9.41'
+        transform='rotate(90 11.99 12)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M5.88 18.13a8.64 8.64 0 0 1 0-12.26 8.64 8.64 0 0 1 12.25 0 8.64 8.64 0 0 1 0 12.26 8.64 8.64 0 0 1-12.25 0ZM18.13 5.87l-3.25 3.26m0 5.74a4.05 4.05 0 0 0-2.87-6.93c-1.12 0-2.14.45-2.87 1.19m0 0L5.88 5.87m9 9A4.05 4.05 0 0 1 7.95 12c0-1.12.45-2.14 1.19-2.87m-3.26 9 3.26-3.26m5.74 0 3.25 3.26'
+        d='M8.58 8.59 5.43 5.44M18.5 18.51l-3.32-3.32m3.43-9.8-3.37 3.37m-6.5 6.5L5.48 18.5'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

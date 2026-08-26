@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconKnife: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconKnife: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='knife'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-knife'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconKnife: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12.73 5.81c2.98-.76 7.45.3 7.45.3L10 16.28l-4.7-4.7s3.74-4.83 7.42-5.77'
+        d='M12.98 4.82c3.43-.87 8.56.34 8.56.34L9.86 16.85l-5.4-5.4s4.3-5.56 8.52-6.63'
         fill='currentColor'
       />
       <path
-        d='m5.77 20.52 4.19-4.18m0 0 9.83-9.84c.26-.26.16-.69-.2-.77-1.21-.3-3.75-.72-6.63-.01-2.9.7-6 3.67-7.29 5.03a.95.95 0 0 0 .03 1.33z'
+        d='m4.99 21.71 4.8-4.8m0 0L20.68 6.04c.47-.48.71-.72.63-1s-.4-.35-1.01-.5a14.4 14.4 0 0 0-7.05.17 16.6 16.6 0 0 0-8.17 5.31c-.43.52-.64.78-.63 1.17s.29.65.81 1.17z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

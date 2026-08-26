@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLightning: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLightning: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='lightning'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-lightning'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconLightning: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m6.22 12.3 6.8-8.57c.32-.42 1-.1.87.42L12.58 9.9a.5.5 0 0 0 .49.6h4.48a.5.5 0 0 1 .4.82l-7.13 8.92c-.33.42-1 .09-.87-.43l1.48-6.07a.5.5 0 0 0-.49-.62H6.61a.5.5 0 0 1-.39-.81'
+        d='m7 10.76 3.18-4.52c1.78-2.54 2.67-3.81 3.31-3.67a1 1 0 0 1 .35.14c.55.37.26 1.9-.31 4.94-.18.94-.27 1.4-.05 1.74l.15.2c.3.26.77.26 1.73.26h.17c1.68 0 2.52 0 2.8.54s-.2 1.23-1.15 2.6L14 17.55c-1.83 2.65-2.75 3.97-3.42 3.81a1 1 0 0 1-.3-.12c-.57-.37-.27-1.95.33-5.12.18-.96.27-1.44.05-1.78l-.13-.16c-.3-.29-.79-.29-1.77-.29h-.13c-1.67 0-2.5 0-2.8-.53v-.02c-.27-.53.2-1.22 1.17-2.58'
         fill='currentColor'
       />
       <path
-        d='m6.22 12.3 6.8-8.57c.32-.42 1-.1.87.42L12.58 9.9a.5.5 0 0 0 .49.6h4.48a.5.5 0 0 1 .4.82l-7.13 8.92c-.33.42-1 .09-.87-.43l1.48-6.07a.5.5 0 0 0-.49-.62H6.61a.5.5 0 0 1-.39-.81Z'
+        d='m7 10.76 3.18-4.52c1.78-2.54 2.67-3.81 3.31-3.67a1 1 0 0 1 .35.14c.55.37.26 1.9-.31 4.94h0c-.18.94-.27 1.4-.05 1.74l.15.2c.3.26.77.26 1.73.26h.17c1.68 0 2.52 0 2.8.54s-.2 1.23-1.15 2.6L14 17.55h0c-1.83 2.65-2.75 3.97-3.42 3.81a1 1 0 0 1-.3-.12c-.57-.37-.27-1.95.33-5.12.18-.96.27-1.44.05-1.78l-.13-.16c-.3-.29-.79-.29-1.77-.29h-.13c-1.67 0-2.5 0-2.8-.53v-.02c-.27-.53.2-1.22 1.17-2.58'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

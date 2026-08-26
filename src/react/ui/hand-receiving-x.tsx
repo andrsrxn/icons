@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHandReceivingX: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHandReceivingX: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hand-receiving-x'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hand-receiving-x'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,29 +27,25 @@ export const IconHandReceivingX: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.88' y='13.39' width='3.36' height='6.63' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='2.8' y='13.5' width='3.8' height='7.49' rx='1' fill='currentColor' />
       <path
-        d='M7.25 18.9s.96.77 2.35 1.09c2.76.63 4.18.45 6.63-.39 1.79-.61 3.2-2.25 3.91-3.23a1.4 1.4 0 0 0 .04-1.56 1.66 1.66 0 0 0-2.49-.37c-.86.74-2 1.62-3.1 2.27-.66.37-2.01.3-3.3.3m3.3-.3c.53-1.32.37-2.37-.21-2.57A9 9 0 0 0 11 13.6c-3.13 0-3.75.73-3.75.73'
+        d='M6.6 19.73s1.09.86 2.65 1.21c3.13.72 4.72.52 7.5-.43 2.01-.7 3.6-2.55 4.4-3.65.39-.52.38-1.2.05-1.76a1.87 1.87 0 0 0-2.8-.41c-.98.82-2.26 1.82-3.52 2.55-.73.42-2.26.33-3.71.33m3.71-.33c.6-1.48.43-2.67-.23-2.9a11 11 0 0 0-3.8-.6c-3.55 0-4.25.83-4.25.83'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='3.88'
-        y='13.39'
-        width='3.36'
-        height='6.63'
+        x='2.8'
+        y='13.5'
+        width='3.8'
+        height='7.49'
         rx='1'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m13 10.25 5.46-5.46m0 5.46L13 4.79'
+        d='m13.1 9.94 6.16-6.16m0 6.17-6.17-6.17'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

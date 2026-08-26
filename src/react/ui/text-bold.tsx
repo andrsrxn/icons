@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextBold: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextBold: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-bold'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-bold'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,18 @@ export const IconTextBold: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M7.35 18.5v-13c0-.83.67-1.5 1.5-1.5h4.5c.41 0 .81.17 1.07.5.61.76 1.66 2.26 1.58 3.5-.04.72-.47 1.5-.92 2.15a2 2 0 0 0 .16 2.45c.84.9 1.8 2.2 1.76 3.4-.05 1.37-1.41 2.9-2.12 3.61-.25.26-.6.39-.97.39H8.85a1.5 1.5 0 0 1-1.5-1.5'
+        d='M6.77 19.02V3.87l6.73-.29 3.05 3.16-1.15 4.93 2.77 4.55-2.77 4-6.91.22z'
         fill='currentColor'
       />
       <path
-        d='M7.33 4v16.01m0-16.02h3.7c1.71 0 4.9 0 4.9 3.7 0 3.84-3.23 3.69-4.9 3.69h-3.7 3.74c1.92 0 5.93 0 5.93 4.3 0 4.5-4.06 4.32-5.93 4.32H7.33'
+        d='M9.37 3.57h3.46a3.9 3.9 0 0 1 0 7.79h-2.02m0 0h2.71a4.54 4.54 0 1 1 0 9.09H9.61'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M9.64 3.57c-1 0-1.5 0-1.9.18a2 2 0 0 0-1 1c-.17.4-.17.9-.17 1.9v10.72c0 1 0 1.5.17 1.89a2 2 0 0 0 1 1c.4.18.9.18 1.9.18'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconOilBarrel: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconOilBarrel: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='oil-barrel'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-oil-barrel'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,21 +29,27 @@ export const IconOilBarrel: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M13.11 11.25a1.11 1.11 0 0 1-2.22 0c0-.4.44-.99.77-1.37.18-.21.5-.21.68 0 .33.38.77.98.77 1.37m-7.01 2.1 5.9.9 5.74-.9v5.98L12 20.68l-5.9-1.35z'
+        d='M13.25 11.14a1.25 1.25 0 0 1-2.5 0c0-.46.54-1.15.91-1.58.18-.2.5-.2.68 0 .37.43.9 1.12.9 1.58M5.39 13.5l6.61 1 6.42-1v6.68L12 21.68l-6.61-1.5z'
         fill='currentColor'
       />
-      <ellipse cx='12' cy='5.7' rx='6.64' ry='2.04' stroke='currentColor' strokeWidth='1.5' />
-      <ellipse opacity='.2' cx='12' cy='5.7' rx='6.64' ry='2.04' fill='currentColor' />
-      <path
-        d='M18.64 12.2c0 1.26-2.97 2.28-6.64 2.28s-6.64-1.02-6.64-2.28m13.28 5.99c0 1.26-2.97 2.28-6.64 2.28s-6.64-1.02-6.64-2.28M6.1 6.84V19.1M17.74 6.84V19.1'
+      <ellipse opacity='.2' cx='12' cy='4.93' rx='7.43' ry='2.29' fill='currentColor' />
+      <ellipse
+        cx='12'
+        cy='4.93'
+        rx='7.43'
+        ry='2.29'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M13.11 11.25a1.11 1.11 0 0 1-2.22 0c0-.4.44-.99.77-1.37.18-.21.5-.21.68 0 .33.38.77.98.77 1.37Z'
+        d='M19.43 12.45C19.43 13.86 16.1 15 12 15s-7.43-1.14-7.43-2.55m14.86 6.45c0 1.41-3.33 2.55-7.43 2.55s-7.43-1.14-7.43-2.54M5.39 6.2v13.72M18.42 6.2v13.72'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M13.5 11.39a1.5 1.5 0 0 1-3 0c0-.44.43-1.09.83-1.59.29-.35.43-.53.67-.53s.38.18.67.53c.4.5.83 1.15.83 1.59'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

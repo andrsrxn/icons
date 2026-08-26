@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWaveTriangle: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWaveTriangle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='wave-triangle'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-wave-triangle'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconWaveTriangle: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m3.65 8.1.94-1.07C5.86 5.61 6.5 4.9 7.25 4.97s1.24.9 2.2 2.56l5.15 9.01c.93 1.63 1.4 2.44 2.15 2.52.76.09 1.4-.6 2.66-1.97l.95-1.03'
+        d='M2.92 8.09C4.4 5.66 5.14 4.45 6.21 4.4h.2c1.06.07 1.78 1.3 3.22 3.74l4.28 7.3c1.58 2.7 2.36 4.04 3.52 4.02 1.17-.01 1.92-1.37 3.43-4.1l.14-.25'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

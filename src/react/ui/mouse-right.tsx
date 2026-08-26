@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMouseRight: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMouseRight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='mouse-right'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-mouse-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,32 @@ export const IconMouseRight: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M11.98 6.15V5.4zm0 3.26v.75zm5.23-.7h-.75v6.64h1.5V8.7zM6.75 15.34h.75V8.7H6v6.65zm5.23 5.23v-.75c-2.48 0-4.48-2-4.48-4.48H6c0 3.3 2.68 5.98 5.98 5.98zm5.23-5.23h-.75c0 2.48-2 4.48-4.48 4.48v1.5c3.3 0 5.98-2.68 5.98-5.98zM11.98 3.47v.75a4.5 4.5 0 0 1 4.48 4.48h1.5c0-3.3-2.68-5.98-5.98-5.98zm0 0v-.75A6 6 0 0 0 6 8.7h1.5c0-2.47 2-4.48 4.48-4.48zm1.25 4.69h.75V7.4h-1.5v.76zm0-.76h.75a2 2 0 0 0-2-2v1.5c.28 0 .5.22.5.5zm-1.25-1.25V5.4h-.03v.75l.01.75H12zm-.02 0-.01-.75a2 2 0 0 0-1.97 2h1.5c0-.28.22-.5.49-.5zM10.73 7.4h-.75v.76h1.5V7.4zm0 .76h-.75a2 2 0 0 0 1.97 2v-.75l.02-.75a.5.5 0 0 1-.5-.5zm1.23 1.25v.75h.01zl.02-.75h-.03zm.02 0v.75a2 2 0 0 0 2-2h-1.5a.5.5 0 0 1-.5.5zm-.02 2.15v-.75h-5.1v1.5h5.1zm0 0v.75h5.27v-1.5h-5.27zm0-7.56h-.75v2.15h1.5V4zm0 5.41h-.75v2.15h1.5V9.4z'
-        fill='currentColor'
-      />
+      <path opacity='.2' d='M6 12.33h11.9v3.36a5.94 5.94 0 1 1-11.89 0z' fill='currentColor' />
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M11.98 5.34c0-.86.9-1.41 1.67-1.03l2.12 1.07a2.6 2.6 0 0 1 1.44 2.34v7.6a5.23 5.23 0 0 1-5.23 5.23h-.73a4.5 4.5 0 0 1-4.5-4.5v-1.88a2.6 2.6 0 0 1 2.61-2.61h1.44c.65 0 1.18-.53 1.18-1.18V9.7c0-.28.23-.51.5-.51a.5.5 0 0 0 .52-.51V7a.5.5 0 0 0-.51-.5.5.5 0 0 1-.51-.52z'
+        d='M11.94 13v-1.6q0-1 .58-1.81l.15-.2a2.8 2.8 0 0 0-.1-3.4c-.4-.5-.63-1.13-.63-1.77v-1.6A6.06 6.06 0 0 1 18 8.68V13z'
         fill='currentColor'
       />
+      <rect
+        x='6'
+        y='2.42'
+        width='11.88'
+        height='19.21'
+        rx='5.94'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path d='M6 12.48h11.89' stroke='currentColor' strokeWidth={strokeWidth} />
+      <rect
+        x='10.35'
+        y='5.46'
+        width='3.31'
+        height='4.65'
+        rx='1.65'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path d='M11.98 12.45V10.1m0-4.68V3.03' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

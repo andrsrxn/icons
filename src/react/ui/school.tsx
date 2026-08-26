@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSchool: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSchool: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='school'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-school'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,29 +31,32 @@ export const IconSchool: Icon = ({
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M12 3.4 7.27 6.82v13.47h2.82l.23-4.65 1.72-.43 1.7.43.27 4.65h2.74V6.82zm1.87 5.59c0 1.01-.85 1.83-1.9 1.83S10.07 10 10.07 9s.85-1.84 1.9-1.84 1.9.82 1.9 1.84'
+        d='M12 2.52 6.76 6.3v14.9h3.12l.26-5.13 1.9-.48 1.89.48.29 5.14h3.04V6.3zm2.07 6.18c0 1.13-.94 2.04-2.1 2.04s-2.1-.91-2.1-2.04.94-2.03 2.1-2.03 2.1.9 2.1 2.03'
         fill='currentColor'
       />
       <path
-        d='M17.58 11.16a5 5 0 0 1 1.33.09 2 2 0 0 1 1.33 1.33c.09.28.09.63.09 1.33v2.38c0 1.88 0 2.83-.59 3.41-.58.59-1.53.59-3.41.59H7.67c-1.88 0-2.83 0-3.41-.59-.59-.58-.59-1.53-.59-3.41v-2.45c0-.63 0-.95.07-1.2a2 2 0 0 1 1.4-1.4c.26-.08.58-.08 1.2-.08'
+        d='M18.17 11.1h.08a3 3 0 0 1 2.97 3.05v2c0 1.93 0 2.88-.43 3.6a3 3 0 0 1-1.04 1.04c-.7.42-1.67.42-3.58.42H7.83c-1.91 0-2.87 0-3.58-.42a3 3 0 0 1-1.04-1.05c-.43-.7-.43-1.66-.43-3.58v-2.09a2.96 2.96 0 0 1 2.97-2.96'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M16.75 20.29V8.43c0-1 0-1.51-.22-1.95s-.63-.72-1.46-1.3l-.74-.53c-1.12-.8-1.68-1.2-2.32-1.2s-1.2.4-2.32 1.2l-.74.52c-.82.59-1.24.88-1.46 1.31s-.22.94-.22 1.95V20.3'
+        d='M17.26 21.2V8.53c0-1.14 0-1.7-.19-2.21a3 3 0 0 0-.33-.64c-.3-.45-.76-.77-1.69-1.43-1.25-.9-1.88-1.34-2.58-1.45a3 3 0 0 0-.92 0c-.7.11-1.33.56-2.58 1.45-.92.66-1.38.98-1.69 1.43a3 3 0 0 0-.33.64c-.19.5-.19 1.07-.19 2.2v12.7'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M13.87 20.29v-2.97c0-.33 0-.5-.03-.64a1.5 1.5 0 0 0-1.19-1.19c-.14-.03-.3-.03-.64-.03-.33 0-.5 0-.64.03a1.5 1.5 0 0 0-1.2 1.2c-.02.13-.02.3-.02.63v2.97'
+        d='M14.07 21.2v-3.27c0-.52 0-.78-.06-1a1.5 1.5 0 0 0-1-1c-.22-.06-.48-.06-1-.06s-.78 0-.99.07a1.5 1.5 0 0 0-1 1c-.07.21-.07.47-.07.99v3.28'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <ellipse cx='11.97' cy='8.99' rx='1.9' ry='1.84' stroke='currentColor' strokeWidth='1.5' />
+      <ellipse
+        cx='12.01'
+        cy='8.88'
+        rx='2.1'
+        ry='2.04'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

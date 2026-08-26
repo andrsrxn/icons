@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconProhibit: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconProhibit: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='prohibit'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-prohibit'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,23 @@ export const IconProhibit: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <circle
         opacity='.2'
-        d='M20.18 12a8.18 8.18 0 1 1-16.36 0 8.18 8.18 0 0 1 16.36 0'
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <path
-        d='M19.49 20.55a.75.75 0 0 0 1.06-1.06l-.53.53zM4.5 3.45a.75.75 0 0 0-1.06 1.06l.53-.53zM20.18 12h-.75c0 4.1-3.33 7.43-7.43 7.43v1.5c4.93 0 8.93-4 8.93-8.93zM12 20.18v-.75A7.43 7.43 0 0 1 4.57 12h-1.5c0 4.93 4 8.93 8.93 8.93zM3.82 12h.75c0-4.1 3.33-7.43 7.43-7.43v-1.5c-4.93 0-8.93 4-8.93 8.93zM12 3.82v.75c4.1 0 7.43 3.33 7.43 7.43h1.5c0-4.93-4-8.93-8.93-8.93zm8.02 16.2.53-.53L4.5 3.45l-.53.53-.53.53L19.5 20.55z'
-        fill='currentColor'
+      <circle
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
+      <path d='m5.53 5.53 12.94 12.94' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

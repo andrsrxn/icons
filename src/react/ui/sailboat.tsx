@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSailboat: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSailboat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='sailboat'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-sailboat'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,21 +29,13 @@ export const IconSailboat: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M4.96 17.3c-.46-1.23-.69-1.84-.39-2.27s.96-.43 2.27-.43h10.3c1.3 0 1.96 0 2.26.43s.07 1.04-.4 2.27l-.67 1.82c-.24.63-.36.94-.61 1.12-.26.18-.6.18-1.27.18H7.52c-.68 0-1.01 0-1.27-.18s-.37-.5-.6-1.12zm4.46-7.23-5.57-.44 5.33-5.76z'
+        d='M3.94 17.64c-.46-1.23-.69-1.84-.39-2.27s.95-.43 2.26-.43H18.1c1.31 0 1.97 0 2.26.43.3.43.07 1.04-.39 2.27l-.95 2.54c-.23.63-.35.94-.6 1.12-.27.18-.6.18-1.27.18H6.76c-.67 0-1 0-1.26-.18s-.38-.5-.61-1.12zm5.14-7.78-6.27-.5 6-6.48z'
         fill='currentColor'
       />
-      <path d='M9.45 14.31V3.58' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
       <path
-        d='M8.39 4.33 5.84 6.88C4.38 8.33 3.65 9.06 3.9 9.68s1.28.61 3.34.61h7.1c3.08 0 4.61 0 4.8-.74.2-.75-1.14-1.5-3.82-3L10.78 4c-.64-.35-.95-.53-1.29-.48-.33.04-.59.3-1.1.81'
+        d='M9.1 14.62V2.55m-1.05.72L4.62 6.7C3.17 8.14 2.44 8.87 2.7 9.49s1.29.61 3.35.61h9.53c3.07 0 4.6 0 4.8-.75.2-.74-1.14-1.5-3.83-3h0l-6.1-3.4c-.64-.36-.96-.54-1.29-.5s-.59.3-1.1.82M4 19c-1-1.96-1.52-2.94-1.08-3.66s1.54-.72 3.75-.72h10.66c2.18 0 3.26 0 3.7.7.44.72-.04 1.7-1.02 3.64l-.1.22c-.54 1.07-.81 1.61-1.3 1.9-.48.3-1.08.3-2.28.3H7.68c-1.19 0-1.78 0-2.26-.28-.48-.3-.75-.82-1.3-1.87z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M4.98 18.35c-.85-1.64-1.27-2.46-1.01-3.1q.09-.24.25-.41c.45-.53 1.37-.53 3.22-.53h9.18c1.82 0 2.72 0 3.17.51q.17.2.26.42c.26.63-.15 1.44-.96 3.06-.45.9-.67 1.35-1.05 1.64l-.3.18c-.43.22-.93.22-1.94.22H8.25c-1 0-1.49 0-1.9-.21l-.3-.18c-.38-.28-.6-.72-1.07-1.6Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

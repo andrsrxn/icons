@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSubsetProperOf: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSubsetProperOf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='subset-proper-of'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-subset-proper-of'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconSubsetProperOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M19.2 5.61h-8.33a6.3 6.3 0 0 0-3.33 11.66l.23.14a6.4 6.4 0 0 0 3.4.98h8.03'
+        d='M19.5 5.38h-8.38a6.62 6.62 0 0 0 0 13.24h8.38'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

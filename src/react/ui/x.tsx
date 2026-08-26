@@ -1,6 +1,13 @@
 import type { Icon } from './types'
 
-export const IconX: Icon = ({ size = 24, className, title, 'aria-label': ariaLabel, ...props }) => {
+export const IconX: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
@@ -10,7 +17,9 @@ export const IconX: Icon = ({ size = 24, className, title, 'aria-label': ariaLab
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='x'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-x'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -19,11 +28,9 @@ export const IconX: Icon = ({ size = 24, className, title, 'aria-label': ariaLab
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M5 19 19 5m0 14L5 5'
+        d='m5.16 5.15 13.7 13.7m-13.71-.01 13.7-13.69'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCircleHalfHorizontal: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCircleHalfHorizontal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='circle-half-horizontal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-circle-half-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,18 +27,9 @@ export const IconCircleHalfHorizontal: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M3.52 12a8.48 8.48 0 0 0 16.96 0z'
-        fill='currentColor'
-      />
-      <path
-        d='M20.48 12a8.48 8.48 0 1 0-16.96 0m16.96 0a8.48 8.48 0 0 1-16.96 0m16.96 0H3.52'
-        stroke='currentColor'
-        strokeWidth='1.5'
-      />
+      <path opacity='.2' d='M21.43 12a9.43 9.43 0 0 1-18.86 0z' fill='currentColor' />
+      <circle cx='12' cy='12' r='9.43' stroke='currentColor' strokeWidth={strokeWidth} />
+      <path d='M2.79 12H21.2' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

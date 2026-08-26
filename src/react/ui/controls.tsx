@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconControls: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconControls: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='controls'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-controls'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,42 @@ export const IconControls: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M6.85 8.16a2.21 2.21 0 1 0 4.43 0 2.21 2.21 0 0 0-4.43 0m10.31 7.67a2.23 2.23 0 1 1-4.45 0 2.23 2.23 0 0 1 4.45 0'
-        fill='currentColor'
+      <circle
         opacity='.2'
+        cx='8.98'
+        cy='7.88'
+        r='2.79'
+        transform='rotate(90 8.98 7.88)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='2.79'
+        cy='2.79'
+        r='2.79'
+        transform='matrix(0 1 1 0 12.23 13.33)'
+        fill='currentColor'
       />
       <path
-        d='M11.3 8.16a2.22 2.22 0 1 0-4.44 0m4.44 0a2.22 2.22 0 1 1-4.44 0m4.44 0h8.93m-13.37 0h-3.1m8.94 7.67a2.22 2.22 0 1 1 4.44 0m-4.44 0a2.22 2.22 0 0 0 4.44 0m-4.44 0H3.77m13.37 0h3.1'
+        d='M21.5 7.88h-9.73M2.5 16.12h9.73M6.18 7.88H2.5m15.32 8.24h3.68'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='8.98'
+        cy='7.88'
+        r='2.79'
+        transform='rotate(90 8.98 7.88)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='2.79'
+        cy='2.79'
+        r='2.79'
+        transform='matrix(0 1 1 0 12.23 13.33)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

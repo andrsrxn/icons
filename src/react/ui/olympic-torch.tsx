@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconOlympicTorch: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-olympic-torch'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M19.86 7.04A7 7 0 0 1 21.16 3c.2-.27.1-.62-.24-.61-.57 0-1.43.13-2.33.57a8 8 0 0 0-2.66 2.34c-.18.24-.55.3-.71.04-.38-.6-.27-1.26-.17-1.73.05-.26-.14-.46-.4-.36-.61.23-1.55.86-2.34 2.07-1.67 2.54-.83 4.84.56 5.98 1.11.91 3.17 2 5.35.1 1.04-.9 1.68-2.2 1.64-4.37M3.36 19.06l4.57-6.24a1 1 0 0 1 1.48-.15l2.05 1.86a1 1 0 0 1-.1 1.56L4.9 20.62a1 1 0 0 1-1.28-.1l-.15-.15a1 1 0 0 1-.1-1.3'
+        fill='currentColor'
+      />
+      <path
+        d='M19.86 7.04a7 7 0 0 1 .94-3.46c.28-.47.41-.7.23-.96s-.37-.23-.78-.17a6 6 0 0 0-1.66.52 8 8 0 0 0-2.3 1.9c-.38.43-.56.65-.86.58s-.35-.26-.43-.62q-.08-.38-.03-.74c.03-.3.05-.45-.2-.62-.26-.17-.35-.12-.54 0-.58.31-1.3.9-1.92 1.86-1.67 2.54-.83 4.84.56 5.98 1.11.91 3.17 2 5.35.1 1.04-.9 1.68-2.2 1.64-4.37m-7.14 8.44-7.4 5.56c-.3.22-.44.33-.6.39a1 1 0 0 1-.65-.01c-.16-.06-.3-.18-.59-.4a3 3 0 0 1-.62-.6 1 1 0 0 1-.1-.74c.05-.19.19-.37.46-.73l5.52-7.44m8.06 3.85L8.85 7.4'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M16.8 15.4a6.5 6.5 0 0 1-6.42-1.58C8.71 12.15 8.11 9.97 8.8 7.41'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

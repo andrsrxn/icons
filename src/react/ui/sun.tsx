@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSun: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSun: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='sun'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-sun'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,26 @@ export const IconSun: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <circle
         opacity='.2'
-        d='M15.77 12a3.77 3.77 0 1 1-7.54 0 3.77 3.77 0 0 1 7.54 0'
+        cx='11.97'
+        cy='11.99'
+        r='4.62'
+        transform='rotate(90 11.97 11.99)'
         fill='currentColor'
       />
-      <path
-        d='m16.7 7.3 1.38-1.38M12 5.35V3.4M7.3 7.3 5.92 5.92M5.35 12H3.4m8.6 8.6v-1.95m-6.08-.57L7.3 16.7m10.78 1.38L16.7 16.7m3.9-4.7h-1.95m-2.88 0a3.77 3.77 0 1 1-7.54 0 3.77 3.77 0 0 1 7.54 0Z'
+      <circle
+        cx='11.97'
+        cy='11.99'
+        r='4.62'
+        transform='rotate(90 11.97 11.99)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M2.27 11.99H4.3m15.28.01h2.15m-9.77 9.64v-2.08m0-15.25V2.36m6.2 3.36 1.31-1.31M4.55 19.33l1.22-1.22m-.02-12.4-1.3-1.3m15.02 15.02-1.32-1.32'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

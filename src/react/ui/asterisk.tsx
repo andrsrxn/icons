@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAsterisk: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAsterisk: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='asterisk'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-asterisk'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconAsterisk: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.64 12h16.72M12 20.36V3.65M5.6 18.4 18.4 5.6m0 12.81L5.6 5.61'
+        d='M3.65 12h16.7M12 20.35V3.65M5.53 18.46 18.46 5.53m0 12.93L5.53 5.53'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

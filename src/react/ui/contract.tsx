@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconContract: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconContract: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='contract'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-contract'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconContract: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4 5.25a.75.75 0 0 0 0 1.5zm16 1.5a.75.75 0 0 0 0-1.5zm-16 4.5a.75.75 0 0 0 0 1.5zm8 1.5a.75.75 0 0 0 0-1.5zm-8 4.5a.75.75 0 0 0 0 1.5zm8 1.5a.75.75 0 0 0 0-1.5zm3.28-8.03a.75.75 0 0 0-1.06 1.06l.53-.53zm.1 1.15.53-.53zm4.24 0 .53.54zm1.16-.1a.75.75 0 0 0-1.06-1.05l.53.53zm-3.28 1.6v.76zm-3.28 5.1a.75.75 0 0 0 1.06 1.06l-.53-.53zm1.16-.1.53.53zm4.24 0-.53.53zm.1 1.16a.75.75 0 1 0 1.06-1.06l-.53.53zm-2.22-2.66v-.75zM4 6v.75h16v-1.5H4zm0 6v.75h8v-1.5H4zm0 6v.75h8v-1.5H4zm10.75-6.75-.53.53.63.62.53-.53.53-.53-.63-.62zm4.87.63.53.53.63-.63-.53-.53-.53-.53-.63.63zm-4.24 0-.54.52q.72.74 1.28 1.2c.4.3.84.53 1.38.53v-1.5c-.08 0-.2-.02-.47-.22-.27-.22-.6-.55-1.12-1.07zm4.24 0-.53-.53c-.52.51-.85.84-1.13 1.06-.26.2-.38.22-.46.22v1.5c.54 0 .98-.23 1.37-.53q.56-.44 1.28-1.2zM14.75 19l.53.53.63-.63-.53-.53-.54-.53-.62.63zm4.87-.63-.53.53.63.63.53-.53.53-.53-.63-.63zm-4.24 0 .53.53c.51-.51.85-.84 1.12-1.06.27-.2.39-.22.47-.22v-1.5c-.54 0-.98.23-1.38.53q-.55.44-1.28 1.2zm4.24 0 .53-.53q-.71-.73-1.28-1.2c-.4-.3-.83-.52-1.37-.52v1.5c.08 0 .2.02.46.22.28.21.61.55 1.13 1.06z'
-        fill='currentColor'
+        d='M5.13 13.78H6.3c1.89 0 2.83 0 3.42.58.59.59.59 1.53.59 3.42v1.19m8.47-8.68h-1c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42v-1M3.58 20.52l5.83-5.83M20.52 3.55l-5.83 5.83'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

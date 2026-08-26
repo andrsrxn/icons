@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconComponent: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconComponent: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='component'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-component'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -27,82 +30,82 @@ export const IconComponent: Icon = ({
       <rect
         opacity='.2'
         x='12'
-        y='3.12'
-        width='5.02'
-        height='5.02'
+        y='2'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(45 12 3.12)'
+        transform='rotate(45 12 2)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
         x='12'
-        y='13.77'
-        width='5.02'
-        height='5.02'
+        y='14'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(45 12 13.77)'
+        transform='rotate(45 12 14)'
         fill='currentColor'
       />
       <rect
         x='12'
-        y='3.12'
-        width='5.02'
-        height='5.02'
+        y='2'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(45 12 3.12)'
+        transform='rotate(45 12 2)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
         x='12'
-        y='13.77'
-        width='5.02'
-        height='5.02'
+        y='14'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(45 12 13.77)'
+        transform='rotate(45 12 14)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
         opacity='.2'
-        x='3.12'
+        x='2'
         y='12'
-        width='5.02'
-        height='5.02'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(-45 3.12 12)'
+        transform='rotate(-45 2 12)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        x='13.77'
+        x='14'
         y='12'
-        width='5.02'
-        height='5.02'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(-45 13.77 12)'
+        transform='rotate(-45 14 12)'
         fill='currentColor'
       />
       <rect
-        x='3.12'
+        x='2'
         y='12'
-        width='5.02'
-        height='5.02'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(-45 3.12 12)'
+        transform='rotate(-45 2 12)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='13.77'
+        x='14'
         y='12'
-        width='5.02'
-        height='5.02'
+        width='5.66'
+        height='5.66'
         rx='1'
-        transform='rotate(-45 13.77 12)'
+        transform='rotate(-45 14 12)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEraser: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEraser: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='eraser'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-eraser'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,16 +29,18 @@ export const IconEraser: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m16.02 12.4-4.45-4.44a2 2 0 0 1 0-2.82l.62-.63a2 2 0 0 1 2.83 0l4.45 4.44a2 2 0 0 1 0 2.83l-.62.63a2 2 0 0 1-2.83 0'
+        d='M16.22 4.59c-.45-.45-.67-.67-.9-.83a3 3 0 0 0-3.42 0c-.22.16-.44.38-.89.83-.15.15-.22.22-.27.3a1 1 0 0 0 0 1.14l.27.3 6.67 6.66c.15.15.22.22.3.27a1 1 0 0 0 1.14 0l.3-.27c.44-.45.66-.67.82-.9a3 3 0 0 0 0-3.42c-.16-.22-.38-.44-.83-.89z'
         fill='currentColor'
       />
-      <path
-        d='m10.89 5.6-.1.1m0 0-.73.73m0 0-4.48 4.48c-1.31 1.32-1.97 1.97-1.97 2.79s.65 1.47 1.97 2.8l1.83 1.83c1.32 1.32 1.97 1.97 2.8 1.98.8 0 1.47-.66 2.79-1.98l4.48-4.48.73-.73c1.32-1.32 1.97-1.98 1.97-2.8s-.65-1.47-1.97-2.78L16.37 5.7c-1.31-1.32-1.97-1.97-2.79-1.97-.81 0-1.47.65-2.79 1.97m-.73.73 7.42 7.42'
+      <rect
+        width='17.39'
+        height='12.56'
+        rx='3'
+        transform='scale(1 -1)rotate(45 32.41 1.13)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
+      <path d='m9.9 5.21 8.89 8.88' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

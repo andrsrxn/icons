@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHighDefinition: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHighDefinition: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='high-definition'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-high-definition'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconHighDefinition: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m15.27 16.44-.17-.73zm0-8.91.15-.74zm-1.62.04.48.58zM3.55 3.74a.75.75 0 1 0 0 1.5zm16.9 1.5a.75.75 0 0 0 0-1.5zM3.55 18.76a.75.75 0 0 0 0 1.5zm16.9 1.5a.75.75 0 0 0 0-1.5zm-15-12.74a.75.75 0 0 0-1.5 0zm-1.5 8.96a.75.75 0 0 0 1.5 0zM11 7.52a.75.75 0 0 0-1.5 0zm-1.5 8.96a.75.75 0 0 0 1.5 0zm3.8-7.18h-.75v5.4h1.5V9.3zm1.98 7.14.17.73c1-.24 2.22-.68 3.21-1.54a5 5 0 0 0 1.75-4h-1.5c0 1.37-.52 2.26-1.23 2.87a6 6 0 0 1-2.57 1.2zm4.38-4.8h.75c0-1.64-.77-2.78-1.79-3.54a8 8 0 0 0-3.19-1.3l-.15.73-.15.73c.89.18 1.86.5 2.6 1.04.7.53 1.18 1.25 1.18 2.34zM13.3 14.7h-.75q-.01.69.06 1.23c.06.4.23.78.6 1.08l.47-.59.46-.58s-.03-.01-.06-.16c-.03-.2-.03-.48-.03-.98zm1.98 1.74-.17-.73a5 5 0 0 1-.93.15l-.04-.02-.46.58-.47.6q.54.39 1.13.34c.34 0 .73-.1 1.1-.2zM13.29 9.3h.75a7 7 0 0 1 .07-1.12l.02-.03-.48-.58-.47-.58c-.37.3-.52.69-.59 1.08q-.06.54-.05 1.23zm1.98-1.77.15-.74a6 6 0 0 0-1.12-.16c-.39-.01-.77.08-1.12.36l.47.58.48.58c.02 0 .03-.03.14-.03.18 0 .41.05.85.14zM3.55 4.49v.75h16.9v-1.5H3.55zm0 15.02v.75h16.9v-1.5H3.55zM4.7 7.52h-.75V12h1.5V7.52zm0 4.48h-.75v4.48h1.5V12zm0 0v.75h4.55v-1.5H4.7zm5.55 0H11V7.52H9.5V12zm0 0H9.5v4.48H11V12zm-1 0v.75h1v-1.5h-1z'
-        fill='currentColor'
+        d='M10.45 7.35v9.3m-6.28-9.3v9.3m0-4.65h6.28m3.32-3.03v6.06c0 .82 0 1.23.31 1.53.32.3.67.27 1.38.23 1.93-.12 4.8-.94 4.8-4.79s-2.87-4.67-4.8-4.79c-.7-.04-1.06-.06-1.38.23s-.31.71-.31 1.53M21.19 20H2.8M21.19 4H2.8'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

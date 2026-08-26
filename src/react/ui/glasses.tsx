@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGlasses: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGlasses: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='glasses'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-glasses'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,16 +28,19 @@ export const IconGlasses: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M10.18 14.13a3.35 3.35 0 1 1-6.7 0 3.35 3.35 0 0 1 6.7 0m10.34 0a3.35 3.35 0 1 1-6.7 0 3.35 3.35 0 0 1 6.7 0'
-        fill='currentColor'
         opacity='.2'
+        d='M2.52 14.24a3.76 3.76 0 1 0 7.52 0 3.76 3.76 0 0 0-7.52 0m11.43 0a3.76 3.76 0 1 0 7.53 0 3.76 3.76 0 0 0-7.53 0'
+        fill='currentColor'
       />
       <path
-        d='M10.18 13.83s1-.7 1.82-.7c.81 0 1.83.7 1.83.7m-9.91-1.38 2.76-5.27c.5-.96 1.9-.9 2.32.1m11.08 5.17-2.76-5.27c-.5-.96-1.9-.9-2.32.1m-4.82 6.85a3.35 3.35 0 1 1-6.7 0 3.35 3.35 0 0 1 6.7 0m10.34 0a3.35 3.35 0 1 1-6.7 0 3.35 3.35 0 0 1 6.7 0'
+        d='M2.52 14.24A3.75 3.75 0 0 0 6.3 18a3.76 3.76 0 1 0-3.77-3.76m11.43 0A3.75 3.75 0 0 0 17.72 18a3.76 3.76 0 1 0-3.76-3.76'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m3.4 11.79 2.77-4.86a1.88 1.88 0 0 1 3.06-.28m11.37 5.14-2.75-4.83a1.88 1.88 0 0 0-3.08-.27m-4.72 7.07a2.5 2.5 0 0 1 1.95-.83c.8 0 1.33.22 1.95.83'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

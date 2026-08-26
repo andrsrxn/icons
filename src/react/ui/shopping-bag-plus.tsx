@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconShoppingBagPlus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-shopping-bag-plus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M18.92 18.7h2.59L18.89 7.77c-.53-2.2-.8-3.31-1.6-3.95-.83-.65-1.96-.65-4.23-.65h-2.21c-2.35 0-3.52 0-4.35.68-.83.67-1.06 1.82-1.53 4.12l-1.3 6.32c-.67 3.34-1.01 5-.11 6.1s2.6 1.1 6 1.1h9.36z'
+        fill='currentColor'
+      />
+      <path
+        d='m20.04 11.84-.8-4.2c-.43-2.33-.65-3.5-1.49-4.2-.83-.68-2.02-.68-4.4-.68h-2.84c-2.38 0-3.57 0-4.4.69S5.06 5.3 4.6 7.65l-1.26 6.74c-.62 3.3-.93 4.94-.03 6.02.9 1.09 2.58 1.09 5.93 1.09h4.12'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M8.78 7a3.22 3.22 0 0 0 6.44 0m.36 11.79H22M18.79 22v-6.42'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

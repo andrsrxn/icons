@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextCenterlineLeft: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextCenterlineLeft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-centerline-left'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-centerline-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,21 +27,20 @@ export const IconTextCenterlineLeft: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='4.11' y='8.88' width='6.16' height='6.16' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='3.3' y='8.56' width='6.8' height='6.8' rx='2' fill='currentColor' />
       <rect
-        x='4.11'
-        y='8.88'
-        width='6.16'
-        height='6.16'
+        x='3.3'
+        y='8.56'
+        width='6.8'
+        height='6.8'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M20.37 9.88h-7.43m7.43 8.77H3.63m16.74-4.53h-7.43m7.43-8.77H3.63'
+        d='M21.23 9.66h-8.19m8.19 9.68H2.77m18.46-5h-8.19m8.19-9.68H2.77'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHeater: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHeater: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='heater'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-heater'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,21 +27,20 @@ export const IconHeater: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.75' y='9.86' width='16.51' height='9' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.7' y='9.59' width='18.6' height='10.14' rx='2' fill='currentColor' />
       <rect
-        x='3.75'
-        y='9.86'
-        width='16.51'
-        height='9'
-        rx='2'
+        x='2.7'
+        y='9.59'
+        width='18.6'
+        height='10.14'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M7 18.86v1.54m10-1.54v1.54m-9-7.84v3.6m8-3.6v3.6m-4-3.6v3.6m1.13-12.68.58.5c.5.43.45 1.2-.09 1.57a.98.98 0 0 0 0 1.63l.52.36M9.23 3.48l.56.5a1 1 0 0 1-.09 1.57 1 1 0 0 0 0 1.63l.5.36'
+        d='M6.37 19.73v1.74m11.26-1.74v1.74M7.5 12.63v4.06m9-4.06v4.06M12 12.63v4.06m1.27-14.28.66.56c.56.48.5 1.36-.1 1.77a1.1 1.1 0 0 0 0 1.84l.58.4M8.88 2.41l.63.57c.54.48.5 1.34-.1 1.76a1.13 1.13 0 0 0 0 1.84l.56.4'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

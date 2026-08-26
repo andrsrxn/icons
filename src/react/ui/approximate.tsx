@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconApproximate: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconApproximate: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='approximate'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-approximate'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconApproximate: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.64 10.32s1.8-1.85 4.64-1.85c2.86 0 5.55 1.85 8.36 1.85 2.82 0 3.72-1.85 3.72-1.85M3.64 15.53s1.8-1.85 4.64-1.85c2.86 0 5.55 1.85 8.36 1.85 2.82 0 3.72-1.85 3.72-1.85'
+        d='M3.2 9.79A8 8 0 0 1 8.4 8c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9M3.2 15.5a8 8 0 0 1 5.2-1.79c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

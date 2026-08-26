@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconZzz: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconZzz: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='zzz'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-zzz'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconZzz: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M9.8 11.25H6.03c-1.07 0-1.6 0-1.73-.32-.13-.31.26-.68 1.05-1.41l3.3-3.09c.8-.73 1.18-1.1 1.06-1.41-.13-.32-.66-.32-1.73-.32H4.12M20.1 15.22h-5c-1.07 0-1.6 0-1.72-.32-.13-.31.26-.68 1.03-1.41L19.15 9c.77-.73 1.16-1.1 1.03-1.41s-.66-.31-1.72-.31h-5.14M10.34 19.3H8.8c-1.06 0-1.59 0-1.71-.31-.13-.32.25-.68 1.02-1.41l.9-.86c.76-.73 1.14-1.1 1.01-1.4C9.9 15 9.37 15 8.32 15h-1.4'
+        d='M9.52 11.17H5.08c-1.07 0-1.6 0-1.73-.32-.13-.31.27-.68 1.05-1.41l4.08-3.8c.78-.74 1.18-1.1 1.05-1.42S8.87 3.9 7.8 3.9H3.23m17.73 11.67h-5.82c-1.07 0-1.6 0-1.73-.32-.12-.31.27-.68 1.04-1.4L20.1 8.5c.78-.74 1.16-1.1 1.04-1.42-.13-.31-.66-.31-1.72-.31h-5.98M10.08 20.1H7.7c-1.06 0-1.59 0-1.72-.31-.12-.32.26-.68 1.02-1.41l1.85-1.76c.76-.73 1.14-1.1 1.02-1.41-.13-.31-.66-.31-1.72-.31h-2.2'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

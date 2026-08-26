@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTrendUpDown: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTrendUpDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='trend-up-down'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-trend-up-down'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,14 @@ export const IconTrendUpDown: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M20.22 9.77V6.25c0-.84-.68-1.52-1.52-1.52h-3.48M3.51 14.2l5.04-5.05c.4-.4 1.05-.4 1.45.01l2.29 2.36c.4.41 1.06.4 1.45 0l6.07-6.31m.41 9.02v3.52c0 .84-.68 1.52-1.52 1.52h-3.48m.19-4.89 4.4 4.41'
+        d='m2.6 14.68 4.74-4.84c.65-.67.98-1 1.39-1.01.4 0 .74.32 1.42.96l1.58 1.51c.7.67 1.06 1 1.48 1 .42-.02.75-.39 1.4-1.1L20.14 5'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M21.26 9.19v-1.2c0-1.89 0-2.83-.58-3.42-.59-.59-1.53-.59-3.42-.59h-1.2m5.16 11.59v1.2c0 1.89 0 2.83-.58 3.42s-1.53.59-3.41.59h-1.21M20.5 20l-5.06-5.06'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

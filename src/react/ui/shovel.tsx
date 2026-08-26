@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconShovel: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconShovel: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='shovel'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-shovel'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,13 @@ export const IconShovel: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M5.29 12.44c.5-.7.76-1.06 1.22-1.1s.8.3 1.5 1l1.78 1.78 1.78 1.78c.68.68 1.03 1.03.99 1.49s-.4.72-1.1 1.22C8.4 20.8 5.8 20.16 4.79 19.77a1 1 0 0 1-.41-.25c-.15-.15-.18-.23-.25-.4-.4-1.01-1.06-3.6 1.16-6.68'
+        d='M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88'
         fill='currentColor'
       />
-      <path d='M15.92 8 8.2 15.7' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
       <path
-        d='M16 4.21c.27-.35.41-.52.64-.53.22-.02.39.15.73.5l2.36 2.35c.34.34.5.51.5.74-.02.22-.19.36-.54.64-1.23.99-2.52 1.34-3.78.08s-.9-2.54.08-3.78ZM5.29 12.44c.5-.7.76-1.06 1.22-1.1s.8.3 1.5 1l1.78 1.78 1.78 1.78c.68.68 1.03 1.03.99 1.49s-.4.72-1.1 1.22C8.4 20.8 5.8 20.16 4.79 19.77a1 1 0 0 1-.41-.25c-.15-.15-.18-.23-.25-.4-.4-1.01-1.06-3.6 1.16-6.68Z'
+        d='m16.63 7.48-8.78 8.78m8.95-13.2c.29-.34.43-.52.65-.53.22 0 .4.16.74.5l1.43 1.44 1.44 1.44c.34.34.51.51.5.73 0 .22-.18.37-.53.65-1.44 1.2-2.94 1.65-4.4.18-1.48-1.46-1.02-2.97.17-4.4M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

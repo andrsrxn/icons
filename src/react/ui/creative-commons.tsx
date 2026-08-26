@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCreativeCommons: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCreativeCommons: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='creative-commons'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-creative-commons'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,13 +27,20 @@ export const IconCreativeCommons: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='12' r='8.43' fill='currentColor' />
-      <circle cx='12' cy='12' r='8.43' stroke='currentColor' strokeWidth='1.5' />
       <path
-        d='M10.77 9.41c-.44-.3-1.09-.3-1.09-.3-1.41 0-2.56 1.3-2.56 2.89 0 1.6 1.15 2.88 2.56 2.88 0 0 .72 0 1.09-.24m6.11-5.23c-.43-.3-1.08-.3-1.08-.3-1.42 0-2.57 1.3-2.57 2.89 0 1.6 1.15 2.88 2.57 2.88 0 0 .72 0 1.08-.24'
+        opacity='.2'
+        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
+        fill='currentColor'
+      />
+      <path
+        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M10.6 9.3a3.02 3.02 0 1 0 0 5.39m6.87-5.39a3.02 3.02 0 1 0 0 5.39'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

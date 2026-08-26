@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAlignCenterVertical: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAlignCenterVertical: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='align-center-vertical'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-align-center-vertical'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,47 @@ export const IconAlignCenterVertical: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M7.1 8c0-.9 0-1.35.18-1.68q.21-.38.6-.6c.33-.18.78-.18 1.67-.18h4.9c.9 0 1.34 0 1.68.19q.38.2.6.59c.18.33.18.78.18 1.68s0 1.35-.19 1.68a1.5 1.5 0 0 1-.59.6c-.34.18-.79.18-1.68.18h-4.9c-.9 0-1.34 0-1.68-.19a1.5 1.5 0 0 1-.6-.59C7.1 9.35 7.1 8.9 7.1 8m-1.63 8c0-.9 0-1.35.18-1.68q.22-.38.6-.6c.33-.18.78-.18 1.68-.18h8.14c.9 0 1.35 0 1.68.19q.38.2.6.59c.18.33.18.78.18 1.68s0 1.35-.18 1.68a1.5 1.5 0 0 1-.6.6c-.33.18-.78.18-1.68.18H7.93c-.9 0-1.35 0-1.68-.19a1.5 1.5 0 0 1-.6-.59c-.18-.33-.18-.78-.18-1.68'
-        fill='currentColor'
+      <rect
         opacity='.2'
+        x='20.2'
+        y='4.58'
+        width='5.8'
+        height='16.4'
+        rx='2'
+        transform='rotate(90 20.2 4.58)'
+        fill='currentColor'
       />
-      <path
-        d='M12 3.74v1.6m0 13.36v1.56m0-9.34v2.11m-2.45-2.57h4.9c.9 0 1.34 0 1.68-.19q.38-.2.6-.59c.18-.33.18-.78.18-1.68s0-1.35-.19-1.68a1.5 1.5 0 0 0-.59-.6c-.34-.18-.79-.18-1.68-.18h-4.9c-.9 0-1.34 0-1.68.19a1.5 1.5 0 0 0-.6.59C7.1 6.65 7.1 7.1 7.1 8s0 1.35.19 1.68q.21.38.6.6c.33.18.78.18 1.67.18Zm-1.62 8h8.14c.9 0 1.35 0 1.68-.19q.38-.2.6-.59c.18-.33.18-.78.18-1.68s0-1.35-.18-1.68a1.5 1.5 0 0 0-.6-.6c-.33-.18-.78-.18-1.68-.18H7.93c-.9 0-1.35 0-1.68.19a1.5 1.5 0 0 0-.6.59c-.18.33-.18.78-.18 1.68s0 1.35.18 1.68q.22.38.6.6c.33.18.78.18 1.68.18Z'
+      <rect
+        opacity='.2'
+        x='18.21'
+        y='13.62'
+        width='5.8'
+        height='12.42'
+        rx='2'
+        transform='rotate(90 18.21 13.62)'
+        fill='currentColor'
+      />
+      <rect
+        x='20.2'
+        y='4.58'
+        width='5.8'
+        height='16.4'
+        rx='2'
+        transform='rotate(90 20.2 4.58)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
+      <rect
+        x='18.21'
+        y='13.62'
+        width='5.8'
+        height='12.42'
+        rx='2'
+        transform='rotate(90 18.21 13.62)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path d='M12 2v2.58m0 14.84V22m0-11.3v2.59' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDiamond: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDiamond: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='diamond'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-diamond'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconDiamond: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.62 10.47 6.3 5.11a1 1 0 0 1 .9-.55h9.58a1 1 0 0 1 .9.54l2.7 5.37a1 1 0 0 1-.14 1.12L12.74 20a1 1 0 0 1-1.5 0l-7.48-8.42a1 1 0 0 1-.14-1.12'
+        d='m3.26 8.54 1.89-3.22c.57-.97.85-1.45 1.31-1.71.46-.27 1.02-.27 2.14-.27h6.8c1.12 0 1.68 0 2.14.27.46.26.74.74 1.31 1.7l1.9 3.23c.72 1.24 1.08 1.85 1 2.51-.06.66-.55 1.18-1.52 2.23l-5.3 5.73c-1.37 1.49-2.05 2.23-2.93 2.23-.87 0-1.56-.74-2.94-2.23l-5.29-5.73c-.97-1.05-1.46-1.57-1.53-2.23s.3-1.27 1.02-2.5'
         fill='currentColor'
       />
       <path
-        d='M3.62 10.47 6.3 5.11a1 1 0 0 1 .9-.55h9.58a1 1 0 0 1 .9.54l2.7 5.37a1 1 0 0 1-.14 1.12L12.74 20a1 1 0 0 1-1.5 0l-7.48-8.42a1 1 0 0 1-.14-1.12Z'
+        d='m3.26 8.54 1.89-3.22c.57-.97.85-1.45 1.31-1.71.46-.27 1.02-.27 2.14-.27h6.8c1.12 0 1.68 0 2.14.27.46.26.74.74 1.31 1.7l1.9 3.23c.72 1.24 1.08 1.85 1 2.51-.06.66-.55 1.18-1.52 2.23l-5.3 5.73c-1.37 1.49-2.05 2.23-2.93 2.23-.87 0-1.56-.74-2.94-2.23l-5.29-5.73c-.97-1.05-1.46-1.57-1.53-2.23s.3-1.27 1.02-2.5'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

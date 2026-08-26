@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDotsHorizontal: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDotsHorizontal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='dots-horizontal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-dots-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,14 +28,10 @@ export const IconDotsHorizontal: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M6 12a1.25 1.25 0 1 1-2.5 0A1.25 1.25 0 0 1 6 12m7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0m7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0'
+        d='M6.1 12a1.23 1.23 0 1 1-2.46 0 1.23 1.23 0 0 1 2.46 0m7.13 0a1.23 1.23 0 1 1-2.46 0 1.23 1.23 0 0 1 2.46 0m7.13 0a1.23 1.23 0 1 1-2.46 0 1.23 1.23 0 0 1 2.46 0'
         fill='currentColor'
-      />
-      <path
-        d='M6 12a1.25 1.25 0 1 1-2.5 0A1.25 1.25 0 0 1 6 12Zm7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Zm7.25 0a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

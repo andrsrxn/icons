@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCone: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='cone'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-cone'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,20 @@ export const IconCone: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <ellipse opacity='.2' cx='12' cy='17.79' rx='5.44' ry='2.63' fill='currentColor' />
+      <ellipse opacity='.2' cx='12' cy='18.61' rx='5.99' ry='2.89' fill='currentColor' />
       <path
-        d='m17.58 17.33-1.75-5.8c-1.57-5.16-2.35-7.74-3.84-7.74s-2.26 2.58-3.82 7.74l-1.75 5.8'
+        d='m18.15 18.1-2.32-7.65c-1.57-5.17-2.35-7.75-3.84-7.75s-2.26 2.6-3.82 7.75L5.85 18.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <ellipse cx='12' cy='17.79' rx='5.65' ry='2.63' stroke='currentColor' strokeWidth='1.5' />
+      <ellipse
+        cx='12'
+        cy='18.53'
+        rx='6.22'
+        ry='2.89'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

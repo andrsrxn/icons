@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSignalMedium: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSignalMedium: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='signal-medium'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-signal-medium'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconSignalMedium: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m6.4 14.2 2.48-1.83c1.4-1.02 2.09-1.53 2.64-1.26.55.28.55 1.14.55 2.87v1.84c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-2.5c-2.5 0-3.76 0-3.98-.69s.78-1.43 2.8-2.92'
+        d='M3.29 17.96c-.45-.6-.67-.9-.68-1.22a1 1 0 0 1 .05-.31c.1-.31.4-.53 1-.98l5.1-3.8c1.39-1.05 2.08-1.57 2.64-1.3.55.28.55 1.15.55 2.9v3.44c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H4.73c-.4 0-.59 0-.76-.07l-.17-.09a2 2 0 0 1-.51-.57'
         fill='currentColor'
       />
       <path
-        d='m7.7 12.89-1.4 1.03c-1.7 1.26-2.56 1.88-2.68 2.43-.12.54.06 1.1.48 1.46.42.37 1.48.37 3.6.37m0-5.3v5.3m8.2-11.34-4.1 3.03-4.1 3.02m0 5.29h4.1m0 0V9.87m0 8.3h4.1m0 0H17c1.41 0 2.12 0 2.56-.43.44-.44.44-1.15.44-2.56V8.92c0-1.84 0-2.75-.44-3.2a1.5 1.5 0 0 0-.83-.41c-.62-.1-1.35.45-2.83 1.53m0 11.34V6.84'
+        d='m15.07 7.22-6.25 4.22c-4.42 3-6.63 4.49-6.2 5.9.44 1.42 3.1 1.42 8.44 1.42h6.25c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41v-4.23c0-3.3 0-4.97-1.06-5.53s-2.43.36-5.18 2.22M7.3 12.53v6.23m4.7-9v9m4.7-12.58v12.58'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

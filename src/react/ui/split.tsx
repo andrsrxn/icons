@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSplit: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSplit: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='split'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-split'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,14 @@ export const IconSplit: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m3.49 18.34.16.17c1.34 1.33 2 2 2.83 2m3-2.17-.17.17c-1.33 1.33-2 2-2.83 2m0 0v-4.1c0-.87 0-1.3.17-1.69s.49-.68 1.13-1.26L12 9.59m2.49 8.75.17.17c1.33 1.33 2.06 2 2.89 2 .82 0 1.43-.67 2.77-2l.16-.17m-2.93 2.17v-4.1c0-.87 0-1.3-.18-1.69s-.49-.68-1.13-1.26L12 9.59m0 0v-6'
+        d='m9.65 19-.5.5c-1.32 1.33-2 2-2.82 2-.83 0-1.5-.67-2.83-2L3 19m18 0-.5.5c-1.33 1.33-2 2-2.82 2-.83 0-1.5-.67-2.83-2l-.5-.5M12 2.75v7.3'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.3 21.13v-2.42c0-1.75 0-2.63.34-3.4.34-.78.99-1.36 2.29-2.54L12 10m5.68 11.13v-2.51c0-1.75 0-2.62-.35-3.4s-.99-1.36-2.28-2.53L12.08 10'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

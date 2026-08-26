@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextLigature: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextLigature: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-ligature'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-ligature'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,21 +28,14 @@ export const IconTextLigature: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M13.66 20.17H17m-10.65 0h3.51'
+        d='M13.85 20.92h3.64m-11.62 0H9.7m6 0v-5.8c0-.95 0-1.42-.3-1.71s-.77-.3-1.7-.3h-8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M14.6 20.17a.75.75 0 0 0 1.5 0zm-8.4-7.9a.75.75 0 0 0 0 1.5zm9.15 7.9h.75v-6.15h-1.5v6.15zM6.2 13.02v.75h8.15v-1.5H6.2zm9.15 1h.75c0-.96-.79-1.75-1.75-1.75v1.5q.23.02.25.25z'
-        fill='currentColor'
-      />
-      <path
-        d='M8.1 20.17V7.68A3.94 3.94 0 0 1 12 3.81a3.9 3.9 0 0 1 3.88 3.87'
+        d='M7.79 20.92V7.29a4.3 4.3 0 0 1 4.23-4.23c2.34 0 4.24 1.9 4.24 4.23'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

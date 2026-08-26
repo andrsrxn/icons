@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBinary: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBinary: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='binary'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-binary'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,16 +28,41 @@ export const IconBinary: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.74 5.69a1.98 1.98 0 0 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zm12.57 0a1.98 1.98 0 1 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zm-6.29 9.61a1.98 1.98 0 0 1 3.96 0v2.99a1.98 1.98 0 0 1-3.96 0z'
-        fill='currentColor'
         opacity='.2'
+        d='M2.67 5.37a2.23 2.23 0 1 1 4.47 0v3.09a2.23 2.23 0 1 1-4.47 0zm14.23 0a2.23 2.23 0 1 1 4.48 0v3.09a2.23 2.23 0 1 1-4.47 0zM9.84 15.68a2.23 2.23 0 1 1 4.47 0v3.09a2.23 2.23 0 0 1-4.47 0z'
+        fill='currentColor'
+      />
+      <rect
+        x='2.78'
+        y='3.33'
+        width='4.26'
+        height='7.36'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='17.01'
+        y='3.33'
+        width='4.26'
+        height='7.36'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='9.95'
+        y='13.64'
+        width='4.26'
+        height='7.36'
+        rx='2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12.66 10.4V3.7l-2.64 2.64M6.37 20v-6.68l-2.63 2.63M19.44 20v-6.68l-2.63 2.63m-11.1-5.3a1.97 1.97 0 0 1-1.97-1.97v-3a1.98 1.98 0 0 1 3.95 0v3c0 1.1-.89 1.98-1.98 1.98m12.58 0c-1.1 0-1.98-.88-1.98-1.97v-3a1.98 1.98 0 1 1 3.95 0v3c0 1.1-.88 1.98-1.97 1.98M12 20.27c-1.1 0-1.98-.88-1.98-1.97v-3a1.98 1.98 0 0 1 3.96 0v3c0 1.09-.89 1.97-1.98 1.97'
+        d='m10 5.6 1.52-1.35c.71-.65 1.07-.97 1.37-.84s.3.61.3 1.58v5.57M2.93 15.92l1.52-1.37c.72-.64 1.08-.96 1.37-.83s.3.61.3 1.58v5.57m10.95-4.95 1.51-1.37c.72-.64 1.08-.96 1.38-.83s.3.61.3 1.58v5.57'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

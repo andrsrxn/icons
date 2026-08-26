@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMaths: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMaths: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='maths'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-maths'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconMaths: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.71 7.3h6.5m4.08 6.92 5.52 5.52M6.96 4.04v6.5m12.85 3.68-5.52 5.52m6-12.45h-6.22m-3.85 11.18h-6.5m6.5-2.94h-6.5'
+        d='M10.85 7H3.01m17.72 7.52-5.8 5.8m-4.63-4.18H3.56m6.74 3.11H3.56M21 7h-6.34M6.94 3.07v7.85m8 3.58 5.79 5.8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconKeyboard: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconKeyboard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='keyboard'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-keyboard'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,29 @@ export const IconKeyboard: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.66 9.29c0-1.21 0-1.81.6-2.19.58-.37 1.54-.37 3.45-.37h8.58c1.91 0 2.87 0 3.46.37.6.38.6.98.6 2.19v5.42c0 1.21 0 1.81-.6 2.19s-1.55.37-3.46.37H7.71c-1.91 0-2.87 0-3.46-.37-.6-.38-.6-.98-.6-2.19z'
+        width='12'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 18)'
         fill='currentColor'
       />
-      <path
-        d='M8.02 14.1h7.96M6.9 10.89a.41.41 0 1 0 0-.82.41.41 0 0 0 0 .82Zm3.4 0a.41.41 0 1 0 0-.82.41.41 0 0 0 0 .82Zm3.39 0a.41.41 0 1 0 0-.82.41.41 0 0 0 0 .82Zm3.4 0a.41.41 0 1 0 0-.82.41.41 0 0 0 0 .82Zm-.76-4.15H7.66c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v2.54c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h8.68c1.89 0 2.83 0 3.42-.58.58-.59.58-1.53.58-3.42v-2.54c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58Z'
+      <rect
+        width='12'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 18)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
+      <path
+        d='M6.5 9.93a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.96-3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.96 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.97 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
+        fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path d='M14.54 13.76H9.46' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

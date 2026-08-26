@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPi: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPi: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='pi'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-pi'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,14 @@ export const IconPi: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M20.54 3.72a.75.75 0 0 0-1.5 0zM3.46 8.92a.75.75 0 0 0 1.5 0zm7.43-2.6a.75.75 0 0 0-1.5 0zM6.75 19.53a.75.75 0 0 0 0 1.5zM14.7 6.32a.75.75 0 0 0-1.5 0zm3.32 11.92h.75zm.75-.04a.75.75 0 1 0-1.5 0zM6.81 6.32v.75h10.38v-1.5H6.81zm10.38 0v.75c1.85 0 3.35-1.5 3.35-3.35h-1.5c0 1.02-.83 1.85-1.85 1.85zM4.21 8.92h.75c0-1.03.83-1.85 1.85-1.85v-1.5A3.35 3.35 0 0 0 3.46 8.9zm5.93-2.6h-.75v10.57h1.5V6.32zm0 10.57h-.75a2.64 2.64 0 0 1-2.64 2.64v1.5a4.14 4.14 0 0 0 4.14-4.14zm3.8-10.57h-.74v11.92h1.5V6.32zm4.08 11.92h.75v-.04h-1.5v.04zM16 20.28v.75a2.8 2.8 0 0 0 2.78-2.79h-1.5c0 .71-.57 1.29-1.28 1.29zm-2.04-2.04h-.75A2.8 2.8 0 0 0 16 21.03v-1.5a1.3 1.3 0 0 1-1.3-1.29z'
-        fill='currentColor'
+        d='M20.25 3.99v.16a2 2 0 0 1-1.93 1.93H5.6a2 2 0 0 0-1.84 1.85v.34'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.4 20.21s3.6.63 3.6-3.86V6.37m3.4 0v9.74c0 2.89.86 4.1 2.26 4.1s2.17-1.05 2.34-2.1'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

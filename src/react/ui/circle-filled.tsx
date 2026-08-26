@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCircleFilled: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCircleFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='circle-filled'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-circle-filled'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,7 +27,15 @@ export const IconCircleFilled: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path d='M12 21.23a9.23 9.23 0 1 0 0-18.46 9.23 9.23 0 0 0 0 18.46' fill='currentColor' />
+      <circle
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

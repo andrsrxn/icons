@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconQueue: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconQueue: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='queue'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-queue'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,15 @@ export const IconQueue: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.75' y='12.55' width='16.51' height='7.6' rx='2' fill='currentColor' />
-      <path d='M20 4.55H4m16 4H4' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
-      <rect
-        x='3.75'
-        y='12.55'
-        width='16.51'
-        height='7.6'
-        rx='2'
+      <path
+        opacity='.2'
+        d='M2.74 12.87h18.52v2.26c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H6.74c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z'
+        fill='currentColor'
+      />
+      <path
+        d='M17.73 10.27H6.27m11.46 5H6.27m11.46-10H6.27m-3.53 7.84v2.02c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h10.52c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42v-2.02'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

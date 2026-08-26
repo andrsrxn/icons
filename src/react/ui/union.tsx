@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUnion: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUnion: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='union'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-union'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconUnion: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M5.61 5v8.33a6.3 6.3 0 0 0 11.66 3.34l.14-.23c.64-1.03.98-2.2.98-3.41V5'
+        d='M18.62 4.5v8.38a6.62 6.62 0 1 1-13.24 0V4.5'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGitPrDraft: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGitPrDraft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='git-pr-draft'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-git-pr-draft'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,20 +27,18 @@ export const IconGitPrDraft: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <circle opacity='.2' cx='6.27' cy='5.63' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='6.27' cy='18.37' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='17.73' cy='18.37' r='3.07' fill='currentColor' />
+      <path d='M6.27 9v6.3' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='6.27' cy='5.63' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='6.27' cy='18.37' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='17.73' cy='18.37' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='M9 6.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m0 11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0m11 0a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0'
+        d='M18.44 10.6a.7.7 0 1 1-1.42 0 .7.7 0 0 1 1.42 0m0-5.59a.7.7 0 1 1-1.42 0 .7.7 0 0 1 1.42 0'
         fill='currentColor'
-        opacity='.2'
-      />
-      <path
-        d='M18 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0-4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
-        fill='currentColor'
-      />
-      <path
-        d='M6.5 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0v6m0 0a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5ZM20 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM18 11a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm0-4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

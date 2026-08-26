@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRepeat: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRepeat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='repeat'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-repeat'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,14 @@ export const IconRepeat: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m18.39 14.63.08.09c1.02 1.1 1.53 1.66 1.53 2.36s-.51 1.25-1.53 2.35l-.08.1M20 17.1H8.16c-1.81 0-2.72 0-3.28-.64s-.56-1.66-.56-3.72M4 6.92h11.84c1.81 0 2.72 0 3.28.64s.56 1.66.56 3.71M5.61 4.47l-.08.1C4.51 5.66 4 6.21 4 6.91s.51 1.25 1.53 2.36l.08.09'
+        d='M3.65 6h12.82c1.47 0 2.21 0 2.79.25A3 3 0 0 1 20.8 7.8c.25.58.25 1.32.25 2.8m-.7 7.4H7.51c-1.46 0-2.19 0-2.76-.25A3 3 0 0 1 3.2 16.2c-.25-.58-.25-1.3-.25-2.77'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m5.3 2.71-.47.46c-1.33 1.33-2 2-2 2.83s.67 1.5 2 2.83l.46.46m13.41 12 .47-.46c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83l-.46-.46'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

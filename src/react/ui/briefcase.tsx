@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBriefcase: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBriefcase: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='briefcase'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-briefcase'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,28 @@ export const IconBriefcase: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.74 9.86h16.52v6.34c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58H7.74c-1.89 0-2.83 0-3.42-.58-.58-.6-.58-1.53-.58-3.42z'
+        x='2.53'
+        y='10.78'
+        width='18.93'
+        height='10.41'
+        rx='2'
         fill='currentColor'
       />
-      <path
-        d='M20.26 9.85v6.35c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58H7.74c-1.89 0-2.83 0-3.42-.58-.58-.6-.58-1.53-.58-3.42V9.85c0-.92 0-1.38.15-1.74a2 2 0 0 1 1.1-1.1c.36-.14.82-.14 1.73-.14h.07m0 0 .14-.4c.46-1.3.69-1.94 1.2-2.3.52-.37 1.2-.37 2.57-.37h2.56c1.38 0 2.07 0 2.6.37.52.38.74 1.03 1.18 2.34l.12.36m-10.37 0h10.37m0 0h.12c.91 0 1.37 0 1.74.14.5.2.9.6 1.1 1.1.14.36.14.82.14 1.74m-16.52 0h16.52'
+      <rect
+        x='2.53'
+        y='7'
+        width='18.93'
+        height='14.19'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m6 7 .83-1.4c.57-.96.86-1.44 1.32-1.7s1.01-.26 2.12-.26h3.5c1.13 0 1.7 0 2.16.27s.75.76 1.3 1.75L18 7m3.47 4H2.54'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

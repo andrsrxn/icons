@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDrama: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDrama: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='drama'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-drama'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,24 +29,23 @@ export const IconDrama: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M13.8 15.7c3.69.55 6.24-4.88 6.67-7.79.28-1.93-.79-1.81-2.39-1.64-.8.08-1.76.18-2.73.04-.97-.15-1.85-.52-2.6-.83-1.48-.63-2.47-1.05-2.76.88-.1.7-.14 1.58-.09 2.53 0 0 3.29-1.88 3.9-.6.95 1.62 0 7.4 0 7.4'
+        d='M14.02 16.15c4.17.62 7.05-5.5 7.54-8.79.32-2.17-.9-2.04-2.7-1.85-.91.1-1.98.2-3.08.04s-2.09-.58-2.93-.94c-1.68-.7-2.8-1.18-3.12 1-.12.8-.16 1.8-.1 2.86 0 0 3.71-2.12 4.4-.68 1.07 1.83 0 8.36 0 8.36'
         fill='currentColor'
       />
       <path
-        d='M3.53 10.89c.43 2.9 2.83 8.42 6.52 7.87 3.7-.55 4.4-6.52 3.96-9.43-.43-2.9-2.47-.48-5.36-.05s-5.55-1.3-5.12 1.6Z'
+        d='M2.44 10.72c.49 3.28 3.2 9.5 7.36 8.89 4.17-.62 4.95-7.36 4.47-10.64s-2.79-.54-6.05-.06c-3.27.49-6.26-1.47-5.78 1.8'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M9.98 8.75c-.07-.89-.06-1.72.02-2.39.33-2.91 2.45-.55 5.35-.22s5.5-1.48 5.17 1.44-2.55 8.5-6.26 8.08a3 3 0 0 1-.65-.14'
+        d='M9.72 8.3c-.08-1-.07-1.93.02-2.68.38-3.3 2.76-.63 6.04-.25 3.28.37 6.21-1.68 5.83 1.61s-2.88 9.61-7.06 9.13q-.39-.04-.73-.16m-2.47-4.42-1.23.2m8.03-3.03-1.27-.12m-9.94 3.61-1.1.16m4.82 2.9c-.45.4-.8.56-1.4.64-.6.1-.99.04-1.54-.2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m11.43 11.6-1.1.17m7.12-2.67-1.13-.11m-8.8 3.2-.98.14m4.27 2.57c-.4.35-.71.5-1.24.57-.53.08-.88.03-1.37-.19m7.72-2.7c-.4-.36-.7-.51-1.23-.6-.28-.06-.28-.04-.51 0'
+        d='M16.43 12.64a2.5 2.5 0 0 0-1.4-.7c-.31-.05-.31-.03-.57 0'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

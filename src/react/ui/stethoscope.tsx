@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconStethoscope: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconStethoscope: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='stethoscope'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-stethoscope'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,13 @@ export const IconStethoscope: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <circle opacity='.2' cx='17.93' cy='11.83' r='2.4' fill='#000' />
+      <circle opacity='.2' cx='18.68' cy='11.8' r='2.7' fill='currentColor' />
       <path
-        d='M5.74 3.83h-.12a2 2 0 0 0-1.95 1.94v2.51c0 1.89 0 2.83.58 3.41.59.59 1.53.59 3.42.59h.45c1.89 0 2.83 0 3.42-.59.58-.58.58-1.52.58-3.41V5.64c0-1-.81-1.81-1.82-1.81m-2.4 8.45v2.87a5.02 5.02 0 1 0 10.03 0v-.84'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        d='M4.96 2.8c-.3 0-.46 0-.59.02a2 2 0 0 0-1.72 1.73c-.02.13-.02.28-.02.58v3.18c0 1.89 0 2.83.58 3.42.6.58 1.53.58 3.42.58h1.5c1.9 0 2.83 0 3.42-.58.59-.59.59-1.53.59-3.42V4.77a2 2 0 0 0-1.97-1.96h-.08m-2.71 9.5v3.24a5.65 5.65 0 0 0 11.3 0v-.95'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
-      <circle cx='17.93' cy='11.83' r='2.4' stroke='#000' strokeWidth='1.5' />
+      <circle cx='18.68' cy='11.8' r='2.7' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconArrowsDiagonalLeft: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconArrowsDiagonalLeft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='arrows-diagonal-left'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-arrows-diagonal-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconArrowsDiagonalLeft: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M3.45 13.01a.75.75 0 1 1 1.5 0zm.74 2.8h.75zm4 4v.75zm2.8-.75a.75.75 0 1 1 0 1.5zm-6.21.16-.53.53zM13 4.94a.75.75 0 0 1 0-1.5zm2.8-.75v.75zm4 4h.75zm.75 2.8a.75.75 0 0 1-1.5 0zm-1.34-6.22.53-.53zm-.52-.53a.75.75 0 1 1 1.06 1.06l-.53-.53zM4.2 13.01h.75v2.8H3.43V13zm4 6.8v-.75H11v1.5H8.2zm-4-4h.74c0 .96 0 1.6.07 2.1.06.45.17.65.3.78l-.53.53-.53.53a2.7 2.7 0 0 1-.73-1.65c-.08-.6-.08-1.37-.08-2.3zm4 4v.75q-1.4.02-2.3-.08a2.7 2.7 0 0 1-1.65-.73l.53-.53.53-.53c.13.13.33.24.79.3.48.07 1.13.07 2.1.07zM13 4.19v-.75h2.8v1.5H13zm6.8 4h.75v2.8h-1.5v-2.8zm-4-4v-.75c.92 0 1.68 0 2.3.08s1.19.26 1.64.72l-.53.53-.53.53c-.13-.13-.33-.24-.79-.3-.48-.06-1.13-.06-2.1-.06zm4 4h-.75c0-.97 0-1.62-.07-2.1-.06-.46-.17-.66-.3-.79l.53-.53.53-.53c.46.46.64 1.02.73 1.65q.1.91.08 2.3zm-.58-3.42.53.53L5.3 19.75l-.53-.53-.53-.53L18.7 4.24z'
-        fill='currentColor'
+        d='m4.38 4.47 14.93 14.92m-5.53 1.2h2.8c1.9 0 2.84 0 3.42-.58.59-.59.59-1.53.59-3.42v-2.81M10.22 3.41h-2.8c-1.9 0-2.84 0-3.42.58-.59.59-.59 1.53-.59 3.42v2.81'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

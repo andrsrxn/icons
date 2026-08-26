@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconArrowUUp: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconArrowUUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='arrow-u-up'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-arrow-u-up'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,14 @@ export const IconArrowUUp: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M11.14 5.98a.75.75 0 1 0 1.07 1.06l-.54-.53zm1.37-.3.53.53zm5.65 0-.53.53zm.31 1.36a.75.75 0 1 0 1.06-1.06l-.53.53zm-2.38-3.36a.75.75 0 0 0-1.5 0zM7.36 5.9a.75.75 0 0 0-1.5 0zm4.31.6.54.53.83-.83-.53-.53-.54-.53-.83.83zm6.5-.83-.54.53.84.83.53-.53.53-.53-.84-.83zm-5.67 0 .54.53c.68-.68 1.14-1.14 1.52-1.44.37-.28.59-.34.77-.34v-1.5c-.64 0-1.17.27-1.68.65-.48.37-1.02.92-1.68 1.57zm5.66 0 .54-.53q-.97-1-1.69-1.57a2.7 2.7 0 0 0-1.68-.65v1.5c.19 0 .4.06.77.34.4.3.85.76 1.53 1.44zm-2.82-2h-.75v12.28h1.5V3.68zM6.6 15.96h.75V5.91h-1.5v10.05zm4.36 4.36v-.75c-2 0-3.6-1.61-3.6-3.6H5.85a5.1 5.1 0 0 0 5.11 5.1zm4.37-4.36h-.75c0 2-1.62 3.61-3.62 3.61v1.5a5.1 5.1 0 0 0 5.12-5.1z'
-        fill='currentColor'
+        d='M7.88 4.69v9.8a5.66 5.66 0 0 0 11.32 0V7.24'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='m3.35 8.03 1.7-1.7c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l1.7 1.7'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

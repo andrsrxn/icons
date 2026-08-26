@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconNotSupersetOf: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconNotSupersetOf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='not-superset-of'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-not-superset-of'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,8 +28,9 @@ export const IconNotSupersetOf: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M5.22 4.25a.75.75 0 1 0 0 1.5zm7.96.75v-.75zm2.86 10.04.4.64zm-.2.12-.39-.64zm-2.93.84v.75zM6 15.25a.75.75 0 0 0 0 1.5zm9.68-9.64.34-.67zm2.88 14.23a.75.75 0 0 0 0-1.5zm-13.12-1.5a.75.75 0 0 0 0 1.5zM4.03 2.97a.75.75 0 0 0-1.06 1.06l.53-.53zm15.94 18.06a.75.75 0 0 0 1.06-1.06l-.53.53zM5.22 5v.75h7.96v-1.5H5.22zm10.82 10.04-.4-.64-.19.12.4.64.4.64.2-.12zm-3.13.96v-.75H6v1.5h6.91zm2.94-.84-.4-.64c-.76.48-1.64.73-2.54.73v1.5c1.18 0 2.33-.33 3.34-.95zM13.18 5v.75q1.13 0 2.15.53l.35-.67.34-.67a6 6 0 0 0-2.84-.69zm2.5.6-.35.68a4.68 4.68 0 0 1 .32 8.12l.4.64.39.64a6.18 6.18 0 0 0-.42-10.74zm2.88 13.5v-.76H5.44v1.5h13.12zM3.5 3.5l-.53.53 17 17 .53-.53.53-.53-17-17z'
-        fill='currentColor'
+        d='M5.1 5h7.4a5.5 5.5 0 1 1 0 11H5.54M3.3 3.3l17.4 17.4M5.11 19.46h14.12'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

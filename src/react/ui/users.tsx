@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUsers: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUsers: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='users'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-users'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,30 @@ export const IconUsers: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <g opacity='.2'>
-        <path
-          d='M9.67 14.46A6.3 6.3 0 0 0 3.5 19.7c-.08.55.37 1 .92 1H14.9c.55 0 1.01-.45.92-1a6.3 6.3 0 0 0-6.15-5.24'
-          fill='currentColor'
-        />
-        <path d='M13.68 10.46a4 4 0 1 1-8.02 0 4 4 0 0 1 8.02 0' fill='currentColor' />
-      </g>
       <path
-        d='M2.68 20.7a.75.75 0 0 0 1.5 0zm12.47 0a.75.75 0 1 0 1.5 0zm4.7-2.85a.75.75 0 0 0 1.5 0zM18.39 7.6h-.75zm-4.7 2.85h-.75c0 1.8-1.46 3.25-3.26 3.25v1.5a4.76 4.76 0 0 0 4.76-4.75zm-4.01 4v-.75a3.26 3.26 0 0 1-3.26-3.25h-1.5a4.76 4.76 0 0 0 4.76 4.75zm-4-4h.74c0-1.8 1.46-3.26 3.26-3.26V5.7a4.76 4.76 0 0 0-4.76 4.76zm4-4.01v.75c1.8 0 3.26 1.46 3.26 3.26h1.5A4.76 4.76 0 0 0 9.67 5.7zM3.43 20.7h.75a5.54 5.54 0 0 1 5.49-5.49v-1.5a7.04 7.04 0 0 0-6.99 6.99zm6.24-6.24v.75a5.54 5.54 0 0 1 5.48 5.49h1.5c0-4-3.36-6.99-6.98-6.99zm3.84-2.85v.75c1.42 0 3.04.6 4.29 1.62a5 5 0 0 1 2.06 3.87h1.5a6.6 6.6 0 0 0-2.62-5.04 8.6 8.6 0 0 0-5.23-1.95zm4.87-4h-.75c0 1.15-.52 1.93-1.28 2.45-.79.54-1.85.8-2.84.8v1.5c1.22 0 2.6-.31 3.69-1.06 1.12-.77 1.93-2 1.93-3.7zm-4-4.01v.75c1.8 0 3.25 1.46 3.25 3.26h1.5a4.76 4.76 0 0 0-4.76-4.76zm-3.92 3.17.73.15a3.26 3.26 0 0 1 3.18-2.57v-1.5a4.76 4.76 0 0 0-4.65 3.76z'
+        opacity='.2'
+        d='M14.75 18.42h6.54c-.74-4.24-3.16-7.41-6.88-7.41-1.32.12-1.26.87-2.49 2.5-.66.66-1.64 1.29-.58 1.84a12 12 0 0 1 3.4 3.07'
         fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M19.44 6.97a4.5 4.5 0 0 1-5.5 4.38c0-1.8-2.14-4.59-2.14-4.59s-1.33-.2-1.3-.4a4.5 4.5 0 0 1 8.94.61'
+        fill='currentColor'
+      />
+      <path
+        d='M10.55 6.08a4.5 4.5 0 1 1 3.11 5.19'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M13.7 10.39a4.5 4.5 0 0 1-4.49 4.5 4.5 4.5 0 1 1 4.5-4.5'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M15.85 21.52a6.64 6.64 0 0 0-13.28 0m19.03-3.29a6.64 6.64 0 0 0-6.64-6.63c-.58 0-.92.05-1.46.2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

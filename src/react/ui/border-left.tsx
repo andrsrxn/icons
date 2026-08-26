@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconBorderLeft: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-border-left'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='2.76'
+        y='2.76'
+        width='18.48'
+        height='18.48'
+        rx='3'
+        fill='currentColor'
+      />
+      <path
+        d='M9.22 2.76h6.02c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.48c0 2.83 0 4.25-.88 5.12s-2.3.88-5.12.88H9.22'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+        strokeDasharray='4 4'
+      />
+      <path
+        d='M12 15.37V8.63M15.37 12H8.63M6 2.76h-.43a3 3 0 0 0-2.8 2.8L2.75 6v12.43A3 3 0 0 0 6 21.24'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

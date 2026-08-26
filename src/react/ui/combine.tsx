@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCombine: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCombine: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='combine'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-combine'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,39 +27,43 @@ export const IconCombine: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='2.7' y='2.7' width='8.17' height='8.17' rx='2' fill='currentColor' />
       <rect
         opacity='.2'
-        x='3.76'
-        y='3.76'
-        width='7.24'
-        height='7.24'
-        rx='1.5'
+        x='13.13'
+        y='13.13'
+        width='8.17'
+        height='8.17'
+        rx='2'
         fill='currentColor'
       />
-      <rect opacity='.2' x='13' y='13' width='7.24' height='7.24' rx='1.5' fill='currentColor' />
       <rect
-        x='3.76'
-        y='3.76'
-        width='7.24'
-        height='7.24'
-        rx='1.5'
+        x='2.7'
+        y='2.7'
+        width='8.17'
+        height='8.17'
+        rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='13'
-        y='13'
-        width='7.24'
-        height='7.24'
-        rx='1.5'
+        x='13.13'
+        y='13.13'
+        width='8.17'
+        height='8.17'
+        rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M14 6.18h1.58c1.61 0 2.42 0 2.92.55s.5 1.42.5 3.18m-3.57-5.82c-.91.95-1.44 1.5-1.44 2.1 0 .59.53 1.14 1.44 2.09m-5.55 9.44H8.3c-1.62 0-2.42 0-2.92-.54-.5-.55-.5-1.42-.5-3.18m3.57 5.82c.9-.95 1.43-1.5 1.43-2.1 0-.59-.52-1.14-1.43-2.09'
+        d='M14.73 6h.9c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v.15M9.3 18h-.9c-1.88 0-2.82 0-3.41-.58-.59-.59-.59-1.53-.59-3.42v-.15'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M15.99 3.43c-1.03 1.02-1.55 1.54-1.66 2.16a2 2 0 0 0 0 .7c.1.62.62 1.13 1.66 2.17M8.05 20.57c1.03-1.02 1.55-1.54 1.66-2.16a2 2 0 0 0 0-.7c-.11-.62-.63-1.13-1.66-2.17'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

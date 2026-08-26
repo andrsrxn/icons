@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconShipFront: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconShipFront: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ship-front'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ship-front'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,16 @@ export const IconShipFront: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' fill='currentColor' d='M7.01 5.62h9.91v4.83H7.01z' />
+      <path opacity='.2' fill='currentColor' d='M6.54 5.15h10.85v5.29H6.54z' />
       <path
-        d='M17.41 11.4V9.3c0-1.89 0-2.83-.58-3.41-.59-.59-1.53-.59-3.42-.59H10.6c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.52-.58 3.41v2.1'
+        d='M17.93 11.49V8.8c0-1.88 0-2.83-.59-3.41s-1.53-.59-3.41-.59h-3.86c-1.88 0-2.82 0-3.41.59-.59.58-.59 1.53-.59 3.41v2.69'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m10.81 9.95-3.36 1.04c-1.62.5-2.42.75-2.8 1.48-.4.73-.18 1.44.26 2.88a10 10 0 0 0 .7 1.72c.76 1.43 1.14 2.14 2.1 2.71.94.57 1.96.57 3.99.57h1.2c1.74 0 2.6 0 3.48-.45.25-.13.6-.38.81-.56.74-.66.98-1.3 1.46-2.6q.23-.6.42-1.32c.42-1.52.63-2.28.24-2.98-.4-.71-1.2-.97-2.83-1.47l-3.3-1.02A4 4 0 0 0 12 9.67c-.3 0-.6.1-1.19.28ZM12 5.3V3.06m0 10.82v-4'
+        d='m10.81 9.85-4.1 1.28c-1.6.5-2.4.74-2.8 1.46-.38.71-.18 1.44.23 2.9a12 12 0 0 0 1.05 2.53c.81 1.44 1.22 2.16 2.15 2.71.94.55 1.94.55 3.96.55h1.68c2.17 0 3.25 0 4.26-.66l.13-.1c.98-.7 1.29-1.53 1.91-3.19.2-.52.38-1.14.55-1.77.4-1.53.6-2.3.2-3-.38-.7-1.2-.95-2.81-1.45l-4.03-1.26c-.6-.18-.89-.27-1.19-.27s-.6.09-1.19.27M12 4.8V2.34m0 11.86V9.82'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

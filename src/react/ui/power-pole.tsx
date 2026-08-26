@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPowerPole: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPowerPole: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='power-pole'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-power-pole'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconPowerPole: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M9.83 14.6V7.25M6.8 20.68l3.03-6.08m-4.58-3.47 4.58-3.88m8.92 3.88-4.58-3.88m3.03 13.43-3.03-6.08m0 0V7.25m-5.9 10.83h7.46M5.25 11.13h4.58m8.92 0h-4.58M9.83 7.25 12 3.32m2.17 3.93L12 3.32M9.83 14.6h4.34M7 13v-1.87M17 13v-1.87m-7.17 0h4.34M9.83 7.25h4.34'
+        d='M9.6 14.88V6.75M6.24 21.6l3.36-6.72m-5.06-3.84L9.6 6.75m9.86 4.29L14.4 6.75m3.36 14.85-3.36-6.72m0 0V6.75M7.87 18.72h8.26M4.54 11.04H9.6m9.86 0H14.4M9.6 6.75 12 2.4m2.4 4.35L12 2.4M9.6 14.88h4.8M6.47 13.1v-2.06m11.06 2.06v-2.06m-7.93 0h4.8M9.6 6.75h4.8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

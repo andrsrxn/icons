@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyRub: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyRub: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-rub'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-rub'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,13 +27,15 @@ export const IconCurrencyRub: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' d='M8.33 3.88h5.71a4.96 4.96 0 0 1 0 9.9H8.33z' fill='currentColor' />
       <path
-        d='M5.28 16.84h8.38m-5.33 3.8V13.8m0 0V3.88h5.71a4.96 4.96 0 1 1 0 9.9zm0 0H5.28'
+        opacity='.2'
+        d='M15.87 3.38 9.4 2.82a1 1 0 0 0-1.09 1v8.68a1 1 0 0 0 1.03 1l6.68-.2a1 1 0 0 0 .84-.51l2.29-4.1a1 1 0 0 0-.04-1.04l-2.47-3.81a1 1 0 0 0-.76-.46'
+        fill='currentColor'
+      />
+      <path
+        d='M8.3 3.03v18.2m0-18.2h5.5a5.34 5.34 0 0 1 0 10.68H5.04m-.11 3.26h8.67'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

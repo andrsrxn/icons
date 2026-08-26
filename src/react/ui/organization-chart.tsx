@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconOrganizationChart: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconOrganizationChart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='organization-chart'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-organization-chart'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,58 @@ export const IconOrganizationChart: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M9.06 6.6c0-.87 0-1.31.13-1.66a2 2 0 0 1 1.14-1.14c.35-.14.8-.14 1.67-.14.88 0 1.32 0 1.67.14a2 2 0 0 1 1.14 1.14 5 5 0 0 1 .13 1.67c0 .87 0 1.31-.13 1.66a2 2 0 0 1-1.14 1.14c-.35.14-.8.14-1.67.14-.88 0-1.32 0-1.67-.14A2 2 0 0 1 9.2 8.27c-.13-.35-.13-.79-.13-1.66M3.8 17.4c0-.88 0-1.32.13-1.67a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.67-.14s1.31 0 1.66.14a2 2 0 0 1 1.14 1.14 5 5 0 0 1 .14 1.66c0 .88 0 1.32-.14 1.67A2 2 0 0 1 8.4 20.2c-.35.14-.79.14-1.66.14-.88 0-1.32 0-1.67-.14a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.79-.14-1.67m10.53.01c0-.88 0-1.32.14-1.67a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.66-.14a5 5 0 0 1 1.67.14 2 2 0 0 1 1.14 1.14 5 5 0 0 1 .14 1.66c0 .88 0 1.32-.14 1.67a2 2 0 0 1-1.14 1.14 5 5 0 0 1-1.67.14c-.87 0-1.31 0-1.66-.14a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.79-.14-1.67'
-        fill='currentColor'
+      <rect
         opacity='.2'
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 15.29 9.58)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 9.38 21.28)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.19 21.28)'
+        fill='currentColor'
+      />
+      <rect
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 15.29 9.58)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 9.38 21.28)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        width='6.88'
+        height='6.36'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.19 21.28)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12 9.55c-.88 0-1.32 0-1.67-.14A2 2 0 0 1 9.2 8.27c-.13-.35-.13-.79-.13-1.66 0-.88 0-1.32.13-1.67a2 2 0 0 1 1.14-1.14c.35-.14.8-.14 1.67-.14.88 0 1.32 0 1.67.14a2 2 0 0 1 1.14 1.14 5 5 0 0 1 .13 1.67c0 .87 0 1.31-.13 1.66a2 2 0 0 1-1.14 1.14c-.35.14-.8.14-1.67.14Zm0 0V12m0 0H8.94c-.42 0-.63 0-.8.03a2 2 0 0 0-1.62 1.62c-.03.17-.03.38-.03.8M12 12h3.06c.42 0 .63 0 .8.03a2 2 0 0 1 1.62 1.62c.03.17.03.38.03.8M6.74 20.34c-.88 0-1.32 0-1.67-.14a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.79-.14-1.67s0-1.31.14-1.66a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.67-.14s1.31 0 1.66.14a2 2 0 0 1 1.14 1.14 5 5 0 0 1 .14 1.66c0 .88 0 1.32-.14 1.67A2 2 0 0 1 8.4 20.2c-.35.14-.79.14-1.66.14Zm10.52 0c-.87 0-1.31 0-1.66-.14a2 2 0 0 1-1.14-1.14c-.14-.35-.14-.79-.14-1.67s0-1.31.14-1.66a2 2 0 0 1 1.14-1.14c.35-.14.79-.14 1.66-.14a5 5 0 0 1 1.67.14 2 2 0 0 1 1.14 1.14 5 5 0 0 1 .14 1.66c0 .88 0 1.32-.14 1.67a2 2 0 0 1-1.14 1.14 5 5 0 0 1-1.67.14Z'
+        d='M18 14c0-.98-.79-1.77-1.76-1.77H7.97c-.98 0-1.77.8-1.77 1.77m5.9-2.34V9.58'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

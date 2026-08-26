@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconFlipHorizontal: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconFlipHorizontal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='flip-horizontal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-flip-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,13 +29,13 @@ export const IconFlipHorizontal: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M13.28 10.63c0-4.08 0-6.12.82-6.27.81-.16 1.56 1.74 3.04 5.54l2.5 6.37c.5 1.24.73 1.86.44 2.3-.3.43-.97.43-2.3.43h-2.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-2.56 0c0-4.08 0-6.12-.82-6.27C9.1 4.2 8.34 6.1 6.86 9.9l-2.5 6.37c-.5 1.24-.73 1.86-.44 2.3.3.43.97.43 2.3.43h2.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
+        d='M13.5 9.02c0-4.08 0-6.12.81-6.27s1.56 1.74 3.05 5.54l3.76 9.59c.49 1.23.73 1.85.43 2.29s-.96.44-2.29.44H15.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-3 0c0-4.08 0-6.12-.81-6.27S8.13 4.49 6.64 8.29l-3.76 9.59c-.49 1.23-.73 1.85-.43 2.29s.96.44 2.29.44H8.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
         fill='currentColor'
       />
       <path
-        d='M13.28 10.63c0-4.08 0-6.12.82-6.27.81-.16 1.56 1.74 3.04 5.54l2.5 6.37c.5 1.24.73 1.86.44 2.3-.3.43-.97.43-2.3.43h-2.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-2.56 0c0-4.08 0-6.12-.82-6.27C9.1 4.2 8.34 6.1 6.86 9.9l-2.5 6.37c-.5 1.24-.73 1.86-.44 2.3.3.43.97.43 2.3.43h2.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
+        d='M13.5 9.02c0-4.08 0-6.12.81-6.27s1.56 1.74 3.05 5.54l3.76 9.59c.49 1.23.73 1.85.43 2.29s-.96.44-2.29.44H15.5c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7zm-3 0c0-4.08 0-6.12-.81-6.27S8.13 4.49 6.64 8.29l-3.76 9.59c-.49 1.23-.73 1.85-.43 2.29s.96.44 2.29.44H8.5c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7z'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

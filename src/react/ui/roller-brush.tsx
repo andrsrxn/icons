@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRollerBrush: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRollerBrush: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='roller-brush'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-roller-brush'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,42 @@ export const IconRollerBrush: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M3.95 5.2c0-.53 0-.8.48-.96.49-.17 1.27-.17 2.83-.17h7.03c1.56 0 2.34 0 2.83.17.48.16.48.43.48.96v2.38c0 .53 0 .8-.48.96-.49.17-1.27.17-2.83.17H7.26c-1.56 0-2.34 0-2.83-.17-.48-.16-.48-.43-.48-.96zm7.22 15.2c-.35 0-.52 0-.63-.17s-.1-.45-.1-1v-2.47c0-.55 0-.83.1-1s.28-.17.63-.17h1.55c.35 0 .52 0 .63.17s.1.45.1 1v2.47c0 .55 0 .82-.1 1-.1.17-.28.17-.63.17z'
-        fill='currentColor'
+      <rect
         opacity='.2'
+        width='4.97'
+        height='15.15'
+        rx='2'
+        transform='matrix(0 -1 -1 0 17.94 8.12)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='3.69'
+        height='5.47'
+        rx='1'
+        transform='matrix(-1 0 0 1 14.75 15.73)'
+        fill='currentColor'
+      />
+      <rect
+        width='4.97'
+        height='15.15'
+        rx='2'
+        transform='matrix(0 -1 -1 0 17.94 8.12)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        width='3.69'
+        height='5.47'
+        rx='1'
+        transform='matrix(-1 0 0 1 14.75 15.73)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M11.95 15.26c.96 0 1.74.79 1.74 1.75v1.97a1.75 1.75 0 0 1-3.49 0v-1.97c0-.96.78-1.75 1.75-1.75m0 0v-1.18a2 2 0 0 1 1.46-1.93l5.5-1.53a2 2 0 0 0 1.47-1.92v-.31a2 2 0 0 0-2-2h-.4M5.94 8.71h9.69c.3 0 .44 0 .56-.02a2 2 0 0 0 1.74-1.73c.02-.13.02-.28.02-.57 0-.3 0-.44-.02-.57a2 2 0 0 0-1.74-1.73c-.12-.02-.27-.02-.56-.02h-9.7c-.29 0-.44 0-.56.02a2 2 0 0 0-1.74 1.73l-.01.57.01.57a2 2 0 0 0 1.74 1.73c.12.02.27.02.57.02'
+        d='M17.96 5.5h.85a2.6 2.6 0 0 1 .75 5.1l-3.63 1.08c-.84.25-1.26.38-1.6.58a3 3 0 0 0-1.32 1.78c-.1.39-.1.82-.1 1.7'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

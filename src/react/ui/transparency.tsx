@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTransparency: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTransparency: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='transparency'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-transparency'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,14 @@ export const IconTransparency: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6 18c-2.36-1.74-2.63-5.74-2.47-7.52L13 20c-1.35.06-4.64-.26-7-2M6 6l4.56-2L20 14l-2 4z'
+        d='M5.36 18.64c-2.62-1.93-2.91-6.35-2.74-8.32l10.49 10.54c-1.5.06-5.13-.29-7.75-2.22m0-13.28 5.05-2.22 10.45 11.07-2.22 4.43z'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='8.5' stroke='currentColor' strokeWidth='1.5' />
+      <circle cx='12' cy='12' r='9.41' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='m3.78 10.36 9.95 9.94M6.18 6.29l11.61 11.6m-7.6-14.06 10.06 10.06'
+        d='m2.9 10.18 11.01 11M5.56 5.68l12.85 12.85M10 2.96 21.14 14.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

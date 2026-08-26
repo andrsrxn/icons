@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextItems: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextItems: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-items'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-items'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,31 +27,30 @@ export const IconTextItems: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.92' y='4.21' width='6.16' height='6.16' rx='2' fill='currentColor' />
-      <rect opacity='.2' x='3.92' y='13.63' width='6.16' height='6.16' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.79' y='3.15' width='7.01' height='7.01' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.79' y='13.85' width='7.01' height='7.01' rx='2' fill='currentColor' />
       <rect
-        x='3.92'
-        y='4.21'
-        width='6.16'
-        height='6.16'
+        x='2.79'
+        y='3.15'
+        width='7.01'
+        height='7.01'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='3.92'
-        y='13.63'
-        width='6.16'
-        height='6.16'
+        x='2.79'
+        y='13.85'
+        width='7.01'
+        height='7.01'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M20.39 5.5h-7.43m7.43 9.42h-7.43M18.38 9h-5.42m5.42 9.4h-5.42'
+        d='M21.52 4.61h-8.45m8.45 10.71h-8.45m6.16-6.74h-6.16m6.16 10.7h-6.16'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

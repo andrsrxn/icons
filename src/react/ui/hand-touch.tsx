@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHandTouch: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHandTouch: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hand-touch'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hand-touch'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,15 +28,24 @@ export const IconHandTouch: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
+        d='M15.12 7.21a4.84 4.84 0 0 0-4.8-4.85 4.85 4.85 0 0 0-4.81 4.85'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
         opacity='.2'
-        d='m8.31 19.61-2.7-4.6c-.35-.6-.24-1.36.27-1.83l.57-.53a.7.7 0 0 1 .98.04.7.7 0 0 0 1.22-.48V8a1.48 1.48 0 0 1 2.45-1.12l.05.05c.33.29.52.71.52 1.16v1.3c0 .6.65 1 1.2.73a.8.8 0 0 1 .75.01l.83.45q.24.14.25.42c0 .34.34.57.66.45l.61-.24c.3-.1.62-.07.87.11l.33.23c.46.33.73.86.72 1.42l-.14 5.78a1.9 1.9 0 0 1-1.9 1.85h-5.81a2 2 0 0 1-1.73-.99'
+        d='m8.69 5.92 1.71-.58 1.32.58.7 5.08 2.64-.54 1.3 1.8h2.73l.4 7.97-1.2 1.66H8.87L5.84 18l-1.95-4.55 2.08-1.62 2.41 1.36z'
         fill='currentColor'
       />
       <path
-        d='M11.67 11.52V7.56c0-.88-.69-1.59-1.55-1.59-.85 0-1.55.71-1.55 1.59v6.6m3.1-2.64v2.64m0-2.64c0-.87.7-1.58 1.55-1.58s1.55.7 1.55 1.58v1.44m0 0v1.2m0-1.2c0-.87.7-1.58 1.55-1.58s1.55.7 1.55 1.58v3.86c0 1.39-.39 2.88-.96 3.57m-8.36-6.23-.54-.96a1.53 1.53 0 0 0-2.12-.59c-.74.44-1 1.41-.57 2.17l.48.85c.3.54 1.92 3.2 2.63 4.15.16.22.52.6.52.6M6.12 7.42c0-1.55 1.17-3.92 3.93-3.92a3.84 3.84 0 0 1 4.03 3.92'
+        d='M15.88 15.03v-2.85a1.86 1.86 0 1 0-3.71 0v2.85'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M15.88 14.71v-.95a1.86 1.86 0 0 1 3.7 0v3.72c0 2.24-1.3 4.19-1.3 4.19m-6.11-7.9V7.1a1.86 1.86 0 1 0-3.71 0v7.22m-.01.11-.9-1.56a2 2 0 0 0-2.73-.73 1.93 1.93 0 0 0-.83 2.43 28 28 0 0 0 1.93 3.81 37 37 0 0 0 2.53 3.25'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

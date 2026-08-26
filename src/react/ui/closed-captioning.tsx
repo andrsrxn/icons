@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconClosedCaptioning: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconClosedCaptioning: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='closed-captioning'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-closed-captioning'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,20 @@ export const IconClosedCaptioning: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M3.71 10.49c0-1.89 0-2.83.59-3.42.58-.58 1.53-.58 3.41-.58h8.58c1.88 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v3.02c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H7.7c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z'
-        fill='currentColor'
+      <rect opacity='.2' x='2.7' y='5.65' width='18.61' height='12.69' rx='3' fill='currentColor' />
+      <rect
+        x='2.7'
+        y='5.65'
+        width='18.61'
+        height='12.69'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M10.53 9.54c-1.66 0-3.43 0-3.43 2.46s1.85 2.46 3.43 2.46m5.88-4.92c-1.66 0-3.43 0-3.43 2.46s1.85 2.46 3.43 2.46m-8.7 3.05h8.58c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42V10.5c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H7.7c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v3.02c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58Z'
+        d='M10.7 9.33a3.02 3.02 0 1 0 0 5.39m7-5.39a3.02 3.02 0 1 0 0 5.39'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

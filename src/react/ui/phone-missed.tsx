@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconPhoneMissed: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-phone-missed'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M11.4 14.6h1.23c.6 0 .9 0 1.17.08a2 2 0 0 1 1.2.93c.13.23.2.52.36 1.11.11.45.17.68.27.87a2 2 0 0 0 .87.87c.2.1.42.16.86.28l1.79.48c.9.23 1.35.35 1.7.15.36-.2.49-.65.74-1.55l.12-.46c.14-.5.22-.76.17-1.15-.05-.4-.14-.55-.3-.85-.87-1.54-3.3-4.35-9.56-4.35-6.25 0-8.69 2.8-9.56 4.34-.17.3-.26.46-.3.86-.05.4.02.65.16 1.16l.13.45c.25.9.38 1.35.73 1.55.36.2.8.09 1.7-.15l1.8-.48c.45-.12.67-.17.86-.27a2 2 0 0 0 .89-.9c.1-.19.15-.4.26-.85.14-.58.22-.86.35-1.1a2 2 0 0 1 1.22-.95c.25-.07.55-.07 1.14-.07'
+        fill='currentColor'
+      />
+      <path
+        d='M11.4 14.6h1.23c.6 0 .9 0 1.17.08a2 2 0 0 1 1.2.93c.13.23.2.52.36 1.11h0c.11.45.17.68.27.87a2 2 0 0 0 .87.87c.2.1.42.16.86.28l1.79.48c.9.23 1.35.35 1.7.15.36-.2.49-.65.74-1.55l.12-.46c.14-.5.22-.76.17-1.15-.05-.4-.14-.55-.3-.85-.87-1.54-3.3-4.35-9.56-4.35-6.25 0-8.69 2.8-9.56 4.34-.17.3-.26.46-.3.86-.05.4.02.65.16 1.16l.13.45c.25.9.38 1.35.73 1.55.36.2.8.09 1.7-.15l1.8-.48c.45-.12.67-.17.86-.27a2 2 0 0 0 .89-.9c.1-.19.15-.4.26-.85h0c.14-.58.22-.86.35-1.1a2 2 0 0 1 1.22-.95c.25-.07.55-.07 1.14-.07M7.57 4.17l1.67 1.67c1.33 1.33 2 2 2.83 2s1.5-.67 2.83-2l1.66-1.67'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.72 6.73c0-1.31 0-1.97.3-2.45a2 2 0 0 1 .65-.66c.48-.3 1.14-.3 2.45-.3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

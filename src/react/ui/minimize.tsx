@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMinimize: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMinimize: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='minimize'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-minimize'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconMinimize: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M20.63 8.79h-1.41c-1.9 0-2.83 0-3.42-.58-.59-.59-.59-1.53-.59-3.42V3.37m5.42 11.84h-1.41c-1.9 0-2.83 0-3.42.58-.59.59-.59 1.53-.59 3.42v1.42M3.37 8.8h1.41c1.9 0 2.83 0 3.42-.58.59-.59.59-1.53.59-3.42V3.37M3.37 15.2h1.41c1.9 0 2.83 0 3.42.58.59.59.59 1.53.59 3.42v1.42'
+        d='M21 15.87h-1.09c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v1.1m-12.88-5.1h1.09c1.88 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v1.1M20.97 8.15H19.9c-1.89 0-2.83 0-3.42-.58-.58-.6-.58-1.53-.58-3.42V3.09M3.06 8.15h1.06c1.89 0 2.83 0 3.42-.58.58-.6.58-1.53.58-3.42V3.09'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

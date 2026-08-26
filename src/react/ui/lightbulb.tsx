@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconLightbulb: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconLightbulb: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='lightbulb'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-lightbulb'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,12 +29,19 @@ export const IconLightbulb: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M17.59 11.35a5.58 5.58 0 1 1-11.17 0 5.58 5.58 0 0 1 11.17 0'
+        d='M17.4 12.21a5.52 5.52 0 1 1-11.05 0 5.52 5.52 0 0 1 11.04 0'
         fill='currentColor'
       />
       <path
-        d='M3.92 12.1a.75.75 0 0 0 0-1.5zm-.96-1.5a.75.75 0 0 0 0 1.5zm18.32 1.5a.75.75 0 0 0 0-1.5zm-.96-1.5a.75.75 0 0 0 0 1.5zm-7.57-8.4a.75.75 0 0 0-1.5 0zm-1.5.96a.75.75 0 0 0 1.5 0zm-5.88 1.2A.75.75 0 0 0 4.3 5.38l.53-.53zM4.98 6.1A.75.75 0 0 0 6.05 5l-.54.53zm12.86-.99a.75.75 0 0 0 1.07 1.06l-.53-.53zm1.74.38a.75.75 0 0 0-1.06-1.06l.53.53zm-2 5.77h-.75c0 2.17-1.07 3.8-2.9 4.43l.24.71.25.71c2.52-.88 3.9-3.14 3.9-5.85zm-3.41 5.14v-.75H9.83v1.5h4.34zm-4.34 0 .25-.7c-1.84-.65-2.9-2.27-2.9-4.44h-1.5c0 2.71 1.38 4.97 3.9 5.85zm-3.4-5.14h.75A4.83 4.83 0 0 1 12 6.4V4.9a6.33 6.33 0 0 0-6.32 6.32zM12 5.65v.75a4.83 4.83 0 0 1 4.83 4.82h1.5c0-3.5-2.83-6.32-6.33-6.32zm2.17 10.71h-.75v1.66h1.5v-1.66zm0 1.66h-.75c0 .6-.17.92-.35 1.1-.2.18-.53.32-1.07.32v1.5c.78 0 1.54-.2 2.1-.73.56-.54.82-1.3.82-2.19zM12 20.2v-.75c-.52 0-.85-.15-1.06-.35-.2-.2-.36-.52-.36-1.07h-1.5c0 .85.26 1.6.81 2.15.55.53 1.3.77 2.11.77zm-2.17-2.17h.75v-1.66h-1.5v1.66zm-5.9-6.68v-.75h-.97v1.5h.96zm17.35 0v-.75h-.96v1.5h.95zM12 2.2h-.75v.96h1.5V2.2zM4.84 4.85l-.53.53.67.68.53-.53.54-.53-.68-.68zm13.54.75.53.53.67-.68-.53-.53-.53-.53-.68.68z'
-        fill='currentColor'
+        d='M12 4V2.25m8 8.87h1.75m-19.5 0H4m1.82-5.3L4.9 4.45m13.24 1.37.96-1.37'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle cx='11.87' cy='12.12' r='5.52' stroke='currentColor' strokeWidth={strokeWidth} />
+      <path
+        d='M9.31 17.3v1.6c0 .52 0 .78.05 1a2 2 0 0 0 1.52 1.51c.21.05.47.05 1 .05.52 0 .78 0 1-.05a2 2 0 0 0 1.5-1.51c.05-.22.05-.48.05-1v-1.6'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

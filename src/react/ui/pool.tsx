@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPool: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPool: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='pool'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-pool'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,19 +28,20 @@ export const IconPool: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.76 15.38V5.74c0-1.27.74-2.25 2.08-2.25 1.08 0 1.86.87 1.86 1.97m2.54 11.62V5.74c0-1.27.75-2.25 2.08-2.25 1.09 0 1.86.87 1.86 1.97m-3.94 2.59H8.76m6.48 3.93H8.76'
+        d='M8.42 15.74V5.08c0-1.4.82-2.48 2.3-2.48 1.2 0 2.05.96 2.05 2.17m2.81 12.84V5.08c0-1.4.82-2.48 2.3-2.48 1.2 0 2.06.96 2.06 2.17m-4.36 2.87H8.42m7.16 4.34H8.42'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M3.85 16.7a9.7 9.7 0 0 1 5.4-1.32c2.74.01 3.34 1.93 6.18 1.93 2.08 0 3.55-.45 4.72-1.46M3.85 19.9a9.6 9.6 0 0 1 5.4-1.32c2.74 0 3.34 1.93 6.18 1.93 2.08 0 3.55-.45 4.72-1.46'
+        d='M3 17.2c1.76-1.06 3.44-1.47 5.97-1.46 3.02 0 3.68 2.13 6.81 2.13 2.31 0 3.93-.5 5.22-1.61M3 20.73c1.76-1.06 3.44-1.47 5.97-1.46 3.02 0 3.68 2.13 6.81 2.13 2.31 0 3.93-.5 5.22-1.61'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <path opacity='.2' fill='currentColor' d='M8.76 8.04H15v3.95H8.76z' />
-      <path opacity='.2' d='M8.76 11.98H15V17l-3-1.16-3.24-.46z' fill='currentColor' />
+      <path
+        opacity='.2'
+        fill='currentColor'
+        d='M8.42 7.62h6.89v4.36H8.42zm0 4.36h6.9v5.54L12 16.24l-3.58-.5z'
+      />
     </svg>
   )
 }

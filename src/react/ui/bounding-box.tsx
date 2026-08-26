@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBoundingBox: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBoundingBox: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bounding-box'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bounding-box'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,74 @@ export const IconBoundingBox: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M7.5 5.49a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0m0 13.02a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0m13.02 0a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0m0-13.02a2.01 2.01 0 1 1-4.02 0 2.01 2.01 0 0 1 4.02 0'
-        fill='currentColor'
+      <circle
         opacity='.2'
+        cx='4.84'
+        cy='19.08'
+        r='2.39'
+        transform='rotate(90 4.84 19.08)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='4.84'
+        cy='4.97'
+        r='2.39'
+        transform='rotate(90 4.84 4.97)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='19.16'
+        cy='19.08'
+        r='2.39'
+        transform='rotate(90 19.16 19.08)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='19.16'
+        cy='4.97'
+        r='2.39'
+        transform='rotate(90 19.16 4.97)'
+        fill='currentColor'
+      />
+      <circle
+        cx='4.84'
+        cy='19.08'
+        r='2.39'
+        transform='rotate(90 4.84 19.08)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='4.84'
+        cy='4.97'
+        r='2.39'
+        transform='rotate(90 4.84 4.97)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='19.16'
+        cy='19.08'
+        r='2.39'
+        transform='rotate(90 19.16 19.08)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='19.16'
+        cy='4.97'
+        r='2.39'
+        transform='rotate(90 19.16 4.97)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M7.5 5.49a2 2 0 0 1-2.01 2m2-2a2.01 2.01 0 1 0-2 2m2-2h9.01m-11.01 2v9m2 2.02a2.01 2.01 0 1 1-4.01 0 2.01 2.01 0 0 1 4.02 0Zm0 0h9.01m0 0a2.01 2.01 0 1 0 4.02 0 2.01 2.01 0 0 0-4.02 0ZM18.51 7.5a2.01 2.01 0 1 0-2-2.01m2 2a2 2 0 0 1-2-2m2 2v9'
+        d='M16.77 4.97H7.23M5.05 7.36v9.33m11.72 2.4H7.23M19.16 7.36v9.33'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

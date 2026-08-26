@@ -1,0 +1,42 @@
+import type { Icon } from './types'
+
+export const IconUserFemale: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-user-female'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M6.57 7.8c0 1.27-.53 2.9-1.05 4.18-.3.7.2 1.5.96 1.5h2.39a1 1 0 0 1 1 1v.54c0 .46-.32.87-.77 1-1.03.33-2.85 1.04-3.68 2.16a7 7 0 0 0-.91 2.1c-.18.6.3 1.16.92 1.16h13.16c.62 0 1.08-.55.92-1.15-.2-.7-.49-1.55-.9-2.11-.84-1.16-2.73-1.85-3.81-2.17A1.1 1.1 0 0 1 14 15v-.52a1 1 0 0 1 1-1h2.5c.76 0 1.26-.82.97-1.52-.4-.95-.82-2.22-.95-3.4-.2-1.93.48-4.19-1.3-4.72-1.06-.33-1.88-.32-2.65.06a.6.6 0 0 1-.75-.17c-.41-.55-1.13-1.17-2.74-1.17-2.6 0-3.52 2.9-3.51 5.24'
+        fill='currentColor'
+      />
+      <path
+        d='M6.57 7.8c0 .84-.22 1.83-.53 2.78-.44 1.35-.66 2.02-.44 2.41l.12.16c.3.33.95.33 2.25.33h.6c.28 0 .42 0 .53.03a1 1 0 0 1 .74.74c.03.12.03.26.03.53 0 .24 0 .36-.02.45a1 1 0 0 1-.5.7c-.08.04-.2.08-.47.17-1.06.35-2.69 1.04-3.46 2.08q-.3.41-.52.97c-.4.93-.59 1.4-.3 1.85.3.44.88.44 2.02.44H17.4c1.14 0 1.7 0 2-.44s.11-.9-.26-1.83a5 5 0 0 0-.52-1c-.8-1.08-2.5-1.75-3.6-2.09h0q-.38-.11-.47-.16a1 1 0 0 1-.53-.71l-.01-.44c0-.27 0-.4.02-.5a1 1 0 0 1 .76-.76q.13-.04.5-.03h.65c1.35 0 2.03 0 2.33-.35l.08-.1c.25-.4.03-1.11-.41-2.54q-.3-.96-.42-1.94c-.2-1.92.48-4.18-1.3-4.71a4 4 0 0 0-2.14-.13c-.52.14-.78.22-.9.19-.14-.03-.33-.21-.72-.57-.45-.42-1.16-.77-2.38-.77-2.6 0-3.52 2.9-3.51 5.24'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

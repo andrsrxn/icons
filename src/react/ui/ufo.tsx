@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconUfo: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconUfo: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ufo'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ufo'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,41 +29,29 @@ export const IconUfo: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m4.17 11.61 3.35-1.55 4.65 1.55 4.42-1.55 3.18 1.55.48 2.41-8.26 3.3-8.4-3.3z'
+        d='m3.38 11.57 3.69-1.7 5.12 1.7 4.86-1.7 3.5 1.7.53 2.66L12 17.86l-9.25-3.63z'
         fill='currentColor'
       />
       <path
-        d='M16.44 10.16c0-2.38-1.99-4.3-4.45-4.3a4.4 4.4 0 0 0-4.44 4.3m8.89.14A7.4 7.4 0 0 1 12 11.54c-1.63 0-3.12-.22-4.44-1.22'
+        d='M16.9 9.98c0-2.62-2.2-4.75-4.9-4.75S7.1 7.36 7.1 9.98m9.8.15a8 8 0 0 1-4.9 1.35c-1.8 0-3.45-.25-4.9-1.35'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m7.56 10.05-1.75.91c-1.53.8-2.3 1.2-2.32 2.08s.63 1.27 1.93 2.03a13 13 0 0 0 6.57 1.84c2.73 0 4.97-.89 6.6-1.85 1.3-.76 1.94-1.14 1.92-2.02-.01-.88-.77-1.28-2.3-2.1l-1.7-.9'
+        d='m7.12 9.85-2.27 1.18c-1.54.8-2.3 1.2-2.34 2.08-.03.87.62 1.27 1.91 2.07A14.3 14.3 0 0 0 12 17.41c3.19 0 5.78-1.11 7.6-2.24 1.29-.8 1.93-1.2 1.9-2.07s-.79-1.27-2.3-2.08l-2.22-1.17'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <path d='M8.61 13.48a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
       <path
-        d='M8.61 13.48a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
+        d='M8.27 13.63a.44.44 0 1 1-.87 0 .44.44 0 0 1 .87 0m8.33 0a.44.44 0 1 1-.88 0 .44.44 0 0 1 .87 0m-4.16.67a.44.44 0 1 1-.87 0 .44.44 0 0 1 .87 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <path d='M16.17 13.48a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
       <path
-        d='M16.17 13.48a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
+        d='m7.1 16.95-1.82 1.82m11.62-1.82 1.82 1.82'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M12.4 14.09a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
-      <path
-        d='M12.4 14.09a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0ZM7.55 16.5 5.9 18.14m10.55-1.64 1.65 1.65'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

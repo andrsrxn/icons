@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextAlignCenter: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextAlignCenter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-align-center'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-align-center'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconTextAlignCenter: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4 4.98h16M7 9.66h10M4 14.34h16M7 19.02h10'
+        d='M3 5.18h18M3 14.27h18M6.27 9.73h11.46M6.27 18.82h11.46'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

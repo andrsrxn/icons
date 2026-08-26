@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconInfinite: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconInfinite: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='infinite'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-infinite'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,9 +28,9 @@ export const IconInfinite: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M12.02 11.91c-1.81 2.12-3.6 4.27-6.14 3.59C4.4 15.1 3.6 13.53 3.6 12s.8-3.1 2.27-3.5c2.6-.7 4.4 1.34 6.14 3.41Zm0 0c1.78-2.06 3.57-4.1 6.11-3.41 1.48.4 2.34 1.97 2.34 3.5s-.86 3.1-2.34 3.5c-2.56.69-4.31-1.47-6.1-3.59Z'
+        d='M12 12S9.12 7.83 6.34 7.83c-2.25 0-3.83 1.83-3.96 3.93C2.24 14 4 16.2 6.41 16.2c4.1 0 6.99-8.35 11.21-8.35 2.37 0 4 1.94 4 4.14s-1.7 4.17-4.07 4.17C14.65 16.17 12 12 12 12'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

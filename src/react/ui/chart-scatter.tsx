@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconChartScatter: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconChartScatter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='chart-scatter'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-chart-scatter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,14 +28,15 @@ export const IconChartScatter: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M8.98 8.4a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0m4.42 3.3a.56.56 0 1 1-1.12 0 .56.56 0 0 1 1.11 0M9.93 16a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0m7.81-.55a.56.56 0 1 1-1.11 0 .56.56 0 0 1 1.1 0m-1.1-8.59a.55.55 0 1 1-1.11 0 .55.55 0 0 1 1.1 0'
-        fill='currentColor'
+        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M4 4v14.61c0 .83.67 1.5 1.5 1.5H20M8.98 8.4a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0Zm4.41 3.3a.56.56 0 1 1-1.1 0 .56.56 0 0 1 1.1 0ZM9.93 16a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0Zm7.8-.55a.56.56 0 1 1-1.1 0 .56.56 0 0 1 1.1 0Zm-1.1-8.6a.55.55 0 1 1-1.11 0 .55.55 0 0 1 1.1 0Z'
+        d='M8.84 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0M11 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m5.54 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m1-8.16a1 1 0 1 1-2 0 1 1 0 0 1 2 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

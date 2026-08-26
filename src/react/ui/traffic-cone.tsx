@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTrafficCone: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTrafficCone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='traffic-cone'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-traffic-cone'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,27 +29,23 @@ export const IconTrafficCone: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m11.36 13.09-1.3-.44a1.94 1.94 0 0 1 1.03-3.72l.5.1a2 2 0 0 0 .81.01l.7-.13a1.91 1.91 0 0 1 .99 3.69l-1.45.49a2 2 0 0 1-1.28 0m-7.71 2.69 3.8-2.02v2.34L12 17.93l4.32-1.83-.22-2.34 4.03 2.02.23 1.1-8.36 3.9-8.15-3.9z'
+        d='m8.53 10.24.1-.23a2 2 0 0 1 2.26-1.17l.7.15a2 2 0 0 0 .81 0l.91-.17a2 2 0 0 1 2.28 1.32l.06.2a2 2 0 0 1-1.25 2.53l-1.76.6a2 2 0 0 1-1.28 0l-1.63-.55a2 2 0 0 1-1.2-2.68M2.8 16.4l4.18-2.22v2.58L12 18.77l4.76-2-.24-2.59 4.44 2.22.24 1.22-9.2 4.3-8.97-4.3z'
         fill='currentColor'
       />
       <path
-        d='m7.36 14.05-.98.42c-1.82.78-2.73 1.17-2.73 1.84-.01.67.9 1.08 2.7 1.89l.66.3 3.43 1.6a4 4 0 0 0 1.56.45 5 5 0 0 0 1.65-.5l3.34-1.56.66-.29c1.8-.81 2.71-1.22 2.7-1.89s-.9-1.06-2.73-1.84l-.86-.42'
+        d='m6.89 14.5-1.08.46c-2 .86-3 1.3-3.01 2.03 0 .74.99 1.19 2.98 2.08l.72.33 3.78 1.77c.43.19 1.14.5 1.72.5.52 0 1.39-.36 1.82-.55l3.68-1.72.72-.33c2-.9 2.99-1.34 2.98-2.08 0-.73-1-1.17-3-2.03l-.95-.46'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='m16.38 13.37-.54-1.84C14.28 6.19 13.49 3.52 12 3.52c-1.5 0-2.28 2.67-3.84 8.01l-.54 1.84c-.33 1.13-.5 1.69-.14 2.39.35.7.75.85 1.55 1.16a8.3 8.3 0 0 0 5.94 0c.8-.3 1.2-.46 1.55-1.16s.19-1.26-.14-2.39Z'
+        d='m16.89 13.99-1.05-3.6c-1.56-5.34-2.35-8-3.85-8s-2.27 2.66-3.83 8L7.1 14c-.33 1.13-.5 1.7-.16 2.38.33.7.73.86 1.55 1.2.9.37 2.07.68 3.5.68s2.6-.3 3.5-.68c.82-.34 1.22-.5 1.55-1.2.33-.69.17-1.25-.16-2.38'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M15.85 11.98s-1.39 1.17-3.85 1.17-3.85-1.17-3.85-1.17m6.53-3.62s-.97.8-2.68.8-2.68-.8-2.68-.8'
+        d='M16.24 12.23S14.71 13.5 12 13.5s-4.24-1.28-4.24-1.28m7.19-3.99s-1.06.9-2.95.9-2.95-.9-2.95-.9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

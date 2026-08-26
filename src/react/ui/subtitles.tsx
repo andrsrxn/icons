@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSubtitles: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSubtitles: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='subtitles'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-subtitles'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,29 +27,20 @@ export const IconSubtitles: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='3.79'
-        y='5.84'
-        width='16.42'
-        height='12.32'
-        rx='2'
-        fill='currentColor'
-      />
-      <rect
-        x='3.79'
-        y='5.84'
-        width='16.42'
-        height='12.32'
-        rx='2'
-        stroke='currentColor'
-        strokeWidth='1.5'
-      />
+      <rect opacity='.2' x='2.7' y='5.55' width='18.61' height='13.04' rx='3' fill='currentColor' />
       <path
-        d='M6.16 15.08h6.78M6.16 12h2.76m6.74 3.08h2.18M12 12h5.84'
+        d='M5.52 15.42h7.53m-7.53-3.24h3.06m7.49 3.24h2.41M12 12.18h6.48'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='2.7'
+        y='5.55'
+        width='18.61'
+        height='13.04'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

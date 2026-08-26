@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDecimalsMore: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDecimalsMore: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='decimals-more'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-decimals-more'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,28 +29,24 @@ export const IconDecimalsMore: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M16.12 5.54a1.98 1.98 0 0 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zM9.53 15.6a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0zm6.59 0a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0z'
+        d='M16.39 4.63a2.23 2.23 0 1 1 4.46 0v3.38a2.23 2.23 0 1 1-4.46 0zM8.95 15.99a2.23 2.23 0 1 1 4.46 0v3.38a2.23 2.23 0 0 1-4.46 0zm7.44 0a2.23 2.23 0 1 1 4.46 0v3.38a2.23 2.23 0 0 1-4.46 0z'
         fill='currentColor'
       />
       <path
-        d='M16.12 5.54a1.98 1.98 0 0 1 3.95 0v3a1.98 1.98 0 1 1-3.95 0zM9.53 15.6a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0zm6.59 0a1.98 1.98 0 0 1 3.95 0v2.99a1.98 1.98 0 0 1-3.95 0z'
+        d='M16.39 4.63a2.23 2.23 0 1 1 4.46 0v3.38a2.23 2.23 0 1 1-4.46 0zM8.95 15.99a2.23 2.23 0 0 1 4.46 0v3.38a2.23 2.23 0 0 1-4.46 0zm7.44 0a2.23 2.23 0 1 1 4.46 0v3.38a2.23 2.23 0 0 1-4.46 0z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
-      <path d='M13.48 10.1a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0' fill='currentColor' />
       <path
-        d='M13.48 10.1a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0Z'
+        d='M13.4 9.78a.47.47 0 1 1-.92 0 .47.47 0 0 1 .93 0M5.97 21.13a.47.47 0 1 1-.93 0 .47.47 0 0 1 .93 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <path d='M6.9 20.15a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0' fill='currentColor' />
       <path
-        d='M6.9 20.15a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0ZM6.5 3.88l-.29.29c-1.33 1.33-2 2-2 2.83s.66 1.5 2 2.83l.3.3M11 7H4.45'
+        d='m5.53 2.76-.7.7c-1.33 1.33-2 2-2 2.82 0 .83.67 1.5 2 2.83l.7.7m5.07-3.52H3.21'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

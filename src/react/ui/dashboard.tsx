@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDashboard: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDashboard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='dashboard'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-dashboard'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,27 @@ export const IconDashboard: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect opacity='.2' x='2.96' y='8.68' width='7.04' height='11.32' rx='1' fill='currentColor' />
+      <rect
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M20.27 6.67v-.23a2 2 0 0 0-1.9-1.9H7.74c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.53-.58 3.41v7.74c0 1.1 0 1.65.2 2.07q.3.6.9.9c.42.2.97.2 2.08.2 1.1 0 1.65 0 2.07-.2a2 2 0 0 0 .9-.9c.2-.42.2-.97.2-2.07V12.8c0-1.88 0-2.82.6-3.41.58-.59 1.52-.59 3.4-.59h4.3a2 2 0 0 0 1.9-2.13'
+        x='3'
+        y='9'
+        width='5'
+        height='17.73'
+        rx='1'
+        transform='rotate(-90 3 9)'
         fill='currentColor'
       />
-      <path
-        d='M9.25 19.46a.75.75 0 1 0 1.5 0zm1.5-10.66a.75.75 0 0 0-1.5 0zm-7.02-.75a.75.75 0 0 0 0 1.5zM20 9.55a.75.75 0 0 0 0-1.5zm-12.27-5v.74h8.54V3.8H7.73zm12.54 4h-.75v6.9h1.5v-6.9zm-4 10.9v-.74H7.73v1.5h8.54zm-12.54-4h.75v-6.9h-1.5v6.9zm4 4v-.74c-.97 0-1.62 0-2.1-.07-.46-.06-.66-.17-.79-.3l-.53.53-.53.53c.46.46 1.02.64 1.65.73q.9.1 2.3.08zm-4-4h-.75c0 .93 0 1.7.08 2.3.08.63.27 1.2.72 1.65l.53-.53.53-.53c-.13-.13-.24-.33-.3-.79-.06-.48-.06-1.13-.06-2.1zm16.54 0h-.75c0 .97 0 1.62-.06 2.1-.06.46-.17.66-.3.8l.53.52.53.53a2.7 2.7 0 0 0 .72-1.65c.09-.6.08-1.37.08-2.3zm-4 4v.76q1.4.02 2.3-.08c.63-.09 1.2-.27 1.65-.73l-.53-.53-.53-.53c-.13.13-.33.24-.8.3-.47.07-1.12.07-2.09.07zm0-14.9v.74c.97 0 1.62 0 2.1.07.46.06.66.17.79.3l.53-.53.53-.53a2.7 2.7 0 0 0-1.65-.73c-.6-.08-1.37-.08-2.3-.08zm4 4h.75q.02-1.4-.08-2.3a2.7 2.7 0 0 0-.72-1.65l-.53.53-.53.53c.13.13.24.33.3.79.06.48.06 1.13.06 2.1zm-12.54-4v-.76c-.93 0-1.7 0-2.3.08-.63.09-1.2.27-1.65.73l.53.53.53.53c.13-.13.33-.24.8-.3.47-.07 1.12-.07 2.09-.07zm-4 4h.75c0-.97 0-1.62.06-2.1.06-.46.17-.66.3-.8l-.53-.52-.53-.53a2.7 2.7 0 0 0-.72 1.65c-.09.6-.08 1.37-.08 2.3zM10 19.44h.75V8.8h-1.5v10.66zM3.73 8.8v.75H20v-1.5H3.73z'
-        fill='currentColor'
+      <rect
+        x='2.74'
+        y='3.64'
+        width='18.53'
+        height='16.71'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
+      <path d='M10 20V9M3 9h18' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

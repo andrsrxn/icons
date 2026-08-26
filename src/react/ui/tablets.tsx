@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTablets: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTablets: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='tablets'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-tablets'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,39 +29,40 @@ export const IconTablets: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        width='6.26'
-        height='3.37'
+        width='6.59'
+        height='3.07'
         rx='1'
-        transform='matrix(.96098 -.27661 .27239 .96219 3.98 14.95)'
+        transform='matrix(.96098 -.27661 .27239 .96219 3.47 15.82)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='6.31'
-        height='3.01'
+        width='6.66'
+        height='3.66'
         rx='1'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 20.08 10.1)'
+        transform='matrix(-.96098 -.27661 -.27239 .96219 20.8 9.7)'
         fill='currentColor'
       />
       <rect
-        width='6.26'
-        height='6.54'
-        rx='3.13'
-        transform='matrix(.96098 -.27661 .27239 .96219 3.15 12.02)'
+        width='7.68'
+        height='8.03'
+        rx='3.84'
+        transform='matrix(.96098 -.27661 .27239 .96219 1.8 11.87)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        width='6.31'
-        height='6.4'
-        rx='3.15'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 20.85 7.36)'
+        width='7.66'
+        height='7.77'
+        rx='3.83'
+        transform='matrix(-.96098 -.27661 -.27239 .96219 22.21 6.51)'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M4.77 15.82a.75.75 0 0 1-.92-.52c-.1-.4.13-.82.53-.93l.2.73zm4.63-2.8a.75.75 0 1 1 .39 1.45l-.2-.73zM4.57 15.1l-.19-.73 5.02-1.35.2.72.19.73-5.02 1.35zm14.71-4.13c.4.1.81-.13.92-.53a.75.75 0 0 0-.53-.92l-.2.73zm-4.67-2.82a.75.75 0 0 0-.92.53c-.1.4.14.82.54.92l.19-.72zm4.87 2.1.19-.73-5.06-1.37-.2.73-.18.72 5.05 1.37z'
-        fill='currentColor'
+        d='m20.33 10.1-5.71-1.8m-10.9 7.26 5.7-1.8'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

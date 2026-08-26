@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBalloon: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBalloon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='balloon'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-balloon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,20 +29,18 @@ export const IconBalloon: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M17.48 8.84c0 2.73-2.4 7.52-5.14 7.52s-4.76-4.8-4.76-7.52a4.95 4.95 0 0 1 9.9 0'
+        d='M18.3 8.29c0 3.15-2.78 8.69-5.94 8.69-3.15 0-5.5-5.54-5.5-8.7a5.72 5.72 0 0 1 11.44 0'
         fill='currentColor'
       />
       <path
-        d='M17.62 8.97c0 2.81-2.28 7.39-5.1 7.39-2.8 0-5.08-4.58-5.08-7.39a5.09 5.09 0 0 1 10.18 0Z'
+        d='M18.46 8.45c0 3.24-2.63 8.53-5.88 8.53s-5.87-5.29-5.87-8.53a5.88 5.88 0 1 1 11.75 0m-5.71 8.53c.56.92.36 1.89-.66 2.64-1.14.84-2.8-.1-4.28.31-1.43.4-1.69 1.38-1.93 2.27'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12.68 16.36c.48.8.3 1.64-.58 2.29-.99.73-2.42-.1-3.7.27-1.24.35-1.47 1.2-1.67 1.96M12.4 6.67c.54.06 1.2.24 1.7.76.57.56.74 1.31.74 1.9'
+        d='M12.43 5.78c.63.08 1.38.28 1.98.88.64.65.85 1.52.85 2.2'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

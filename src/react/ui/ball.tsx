@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBall: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBall: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ball'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ball'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,29 +29,25 @@ export const IconBall: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='m9.78 6.17 3.64-2.58L18 5.67 20.51 11 16 13.29l-7.43-.72z'
+        d='m9.54 5.53 4.04-2.87 5.08 2.31 2.79 5.92-5.01 2.54-8.25-.8z'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M5.36 11.28 4 9.2l-.44 3.47 2.85 6.14 6.24 1.7L10 18l-1.43-5.33z'
+        d='M4.63 11.2 3.12 8.9l-.5 3.84 3.17 6.82 6.94 1.88-2.95-2.78-1.59-5.92z'
         fill='currentColor'
         stroke='currentColor'
       />
-      <circle cx='12' cy='12' r='8.5' stroke='currentColor' strokeWidth='1.5' />
+      <circle cx='12' cy='12' r='9.43' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='M13.7 20.3c-2.83 0-5.12-3.7-5.12-8.28s2.29-8.27 5.12-8.27'
+        d='M13.88 21.2c-3.14 0-5.68-4.1-5.68-9.18s2.54-9.18 5.68-9.18'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M20.34 10.93c-.22 1.81-4.03 2.84-8.52 2.3-4.48-.55-7.94-2.46-7.72-4.27'
+        d='M21.26 10.81c-.25 2.01-4.48 3.16-9.46 2.55-4.97-.6-8.8-2.72-8.56-4.74'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

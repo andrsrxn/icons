@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconRouter: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconRouter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='router'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-router'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,40 +29,33 @@ export const IconRouter: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        x='3.68'
-        y='13.13'
-        width='16.65'
-        height='6.23'
+        x='2.72'
+        y='12.95'
+        width='18.56'
+        height='6.94'
         rx='2'
         fill='currentColor'
       />
-      <path
-        d='M9.64 7.9s.8-.5 2.36-.5 2.36.5 2.36.5M8 5.53s1.35-.88 4-.88 4 .88 4 .88'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
       <rect
-        x='3.68'
-        y='13.13'
-        width='16.65'
-        height='6.23'
+        x='2.72'
+        y='12.95'
+        width='18.56'
+        height='6.94'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
+      />
+      <path d='M12 12.95V9.61m5.96 6.87H14.6' stroke='currentColor' strokeWidth={strokeWidth} />
+      <path
+        d='M7.28 16.48a.62.62 0 1 1-1.24 0 .62.62 0 0 1 1.24 0'
+        fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M12 13.13v-3m5.5 6.11h-3'
+        d='M9.06 7.25c.72-.55 1.65-.8 2.97-.8s2.25.25 2.97.8M6.5 4.9C7.85 3.79 9.57 3.27 12 3.27s4.16.52 5.5 1.65'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M7.82 16.24a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0' fill='currentColor' />
-      <path
-        d='M7.82 16.24a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

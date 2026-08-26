@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconAlignHorizontally: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconAlignHorizontally: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='align-horizontally'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-align-horizontally'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,23 @@ export const IconAlignHorizontally: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M11.94 18.59c.9 0 1.35 0 1.68-.19q.38-.2.6-.59c.18-.34.18-.78.18-1.68V7.99c0-.9 0-1.35-.18-1.69a1.5 1.5 0 0 0-.6-.59c-.33-.18-.78-.18-1.68-.18s-1.34 0-1.68.18a1.5 1.5 0 0 0-.6.6c-.18.33-.18.78-.18 1.68v8.14c0 .9 0 1.34.19 1.68q.2.38.59.6c.34.18.78.18 1.68.18'
+        width='5.8'
+        height='15.49'
+        rx='2'
+        transform='matrix(1 0 0 -1 9.1 19.75)'
         fill='currentColor'
       />
-      <path
-        d='M5 3.79v16.54M19 3.79v16.54m-9.46-4.2V7.99c0-.9 0-1.35.19-1.69q.2-.37.59-.59c.33-.18.78-.18 1.68-.18s1.35 0 1.68.18q.38.22.6.6c.18.33.18.78.18 1.68v8.14c0 .9 0 1.34-.19 1.68a1.5 1.5 0 0 1-.59.6c-.33.18-.78.18-1.68.18s-1.35 0-1.68-.19a1.5 1.5 0 0 1-.6-.59c-.18-.34-.18-.78-.18-1.68Z'
+      <rect
+        width='5.8'
+        height='15.49'
+        rx='2'
+        transform='matrix(1 0 0 -1 9.1 19.75)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
+      <path d='M5 2.43v19.14M19 2.43v19.14' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

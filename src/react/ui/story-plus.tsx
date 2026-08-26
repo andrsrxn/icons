@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconStoryPlus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-story-plus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <circle
+        opacity='.2'
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        fill='currentColor'
+      />
+      <path
+        d='M12 16.55v-9.1M7.45 12h9.1M10.1 2.78c-4.87.74-8.23 5.49-7.45 10.64a9.3 9.3 0 0 0 6 7.33M14 2.81a8.9 8.9 0 0 1 6.36 4.89m-1.7 10.94a6 6 0 0 1-2.27 1.63m-3.09.96c-.2.05-.83.1-1.02.09m9.04-10.21a8.7 8.7 0 0 1-.85 4.99'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

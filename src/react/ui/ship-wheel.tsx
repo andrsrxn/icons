@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconShipWheel: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconShipWheel: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ship-wheel'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ship-wheel'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,14 +27,13 @@ export const IconShipWheel: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='12' r='3' fill='currentColor' />
-      <circle cx='12' cy='12' r='3' stroke='currentColor' strokeWidth='1.5' />
-      <circle cx='12' cy='12' r='7' stroke='currentColor' strokeWidth='1.5' />
+      <circle opacity='.2' cx='12' cy='12' r='3.35' fill='currentColor' />
+      <circle cx='12' cy='12' r='3.35' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='12' cy='12' r='7.83' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='M3.4 12H9m6 0h5.6M12 20.6V15m0-6V3.4M19 19l-4.56-4.55M9.56 9.57 5 5m0 14 4.56-4.55m4.88-4.88L18.99 5'
+        d='M2.38 12h6.27m6.7 0h6.27M12 21.62v-6.26m0-6.71V2.4m7.82 17.43-5.1-5.1M9.27 9.28l-5.1-5.1m0 15.65 5.1-5.1m5.45-5.45 5.1-5.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconApple: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconApple: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='apple'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-apple'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,20 +29,18 @@ export const IconApple: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M19.74 13.34c0 4.27-2.06 7.8-7.74 6.68-5.13 1.68-7.74-2.4-7.74-6.68S6.16 5.07 12 6.65c4.89-2.14 7.74 2.41 7.74 6.69'
+        d='M20.6 13.4c0 4.75-2.28 8.68-8.6 7.43-5.71 1.87-8.6-2.68-8.6-7.43S5.5 4.2 12 5.94c5.43-2.38 8.6 2.7 8.6 7.44'
         fill='currentColor'
       />
       <path
-        d='M4.26 13.34c0 3.31 1.57 7.42 5 7.24 1.14-.06 1.78-.95 2.74-.95s1.6.9 2.73.95c3.44.18 5-3.93 5-7.24s-1.16-7.24-5-7.24c-1.14 0-1.59.7-2.73.7s-1.59-.7-2.73-.7c-3.75 0-5 3.93-5 7.24Z'
+        d='M3.4 13.4c0 3.68 1.74 8.25 5.56 8.05 1.26-.06 1.97-1.06 3.04-1.06s1.78 1 3.04 1.06c3.82.2 5.57-4.37 5.57-8.06 0-3.68-1.3-8.05-5.57-8.05-1.27 0-1.77.78-3.04.78s-1.77-.78-3.04-.78C4.8 5.34 3.4 9.7 3.4 13.39'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M7.41 13.26c-.08-.88.02-1.58.34-2.39.37-.94.7-1.34 1.53-1.9M12 6.6c-.11-.61-.1-1.16.02-1.84.15-.8.86-1.59 2.44-1.25'
+        d='M6.9 13.3c-.1-.97.02-1.75.37-2.65a3.8 3.8 0 0 1 1.7-2.12M12 5.9a5 5 0 0 1 .02-2.05c.17-.88.96-1.77 2.72-1.38'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

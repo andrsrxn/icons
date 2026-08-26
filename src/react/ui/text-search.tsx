@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextSearch: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextSearch: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-search'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-search'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,18 +29,13 @@ export const IconTextSearch: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M19.1 13.43a3.23 3.23 0 1 1-6.47 0 3.23 3.23 0 0 1 6.47 0'
+        d='M20.19 14.83a3.84 3.84 0 1 1-7.68 0 3.84 3.84 0 0 1 7.68 0'
         fill='currentColor'
       />
       <path
-        d='M3.6 5.25a.75.75 0 0 0 0 1.5zM20 6.75a.75.75 0 0 0 0-1.5zm-16.4 4.5a.75.75 0 0 0 0 1.5zm5.83 1.5a.75.75 0 0 0 0-1.5zm-5.84 4.5a.75.75 0 0 0 0 1.5zm5.84 1.5a.75.75 0 0 0 0-1.5zM3.6 6v.75H20v-1.5H3.6zm0 6v.75h5.84v-1.5H3.6zm0 6v.75h5.84v-1.5H3.6z'
-        fill='currentColor'
-      />
-      <path
-        d='M18.18 15.7a3.22 3.22 0 0 0-2.31-5.5 3.23 3.23 0 1 0 2.3 5.5Zm0 0 2.3 2.3'
+        d='M21.32 6H2.6m6.72 6H2.6m6.72 6H2.6m16.92-.07 2.5 2.51m-1.72-5.56a3.9 3.9 0 0 1-3.9 3.9 3.9 3.9 0 1 1 3.9-3.9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

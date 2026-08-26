@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconNavigation: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconNavigation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='navigation'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-navigation'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,13 +29,13 @@ export const IconNavigation: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M9.15 19.16 5.12 7.6c-.6-1.7-.89-2.55-.45-3 .45-.43 1.3-.14 3 .45L19.25 9.1c1.04.36 1.56.55 1.57.89 0 .34-.5.56-1.52.98l-5.56 2.3q-.26.11-.35.2c-.08.07-.11.16-.2.36l-2.17 5.38c-.42 1.03-.63 1.55-.98 1.54s-.53-.54-.9-1.6'
+        d='M4.69 9.8C3.34 6.23 2.66 4.45 3.57 3.53c.92-.91 2.7-.24 6.27 1.12L16.11 7c3.59 1.36 5.39 2.04 5.55 3.22a2 2 0 0 1 0 .51c-.14 1.18-1.92 1.9-5.5 3.33-.68.28-1.03.41-1.3.66l-.13.14c-.25.26-.38.6-.66 1.3-1.4 3.51-2.1 5.27-3.25 5.43a2 2 0 0 1-.59 0c-1.15-.18-1.82-1.95-3.16-5.5z'
         fill='currentColor'
       />
       <path
-        d='M9.15 19.16 5.12 7.6c-.6-1.7-.89-2.55-.45-3 .45-.43 1.3-.14 3 .45L19.25 9.1c1.04.36 1.56.55 1.57.89 0 .34-.5.56-1.52.98l-5.56 2.3q-.26.11-.35.2c-.08.07-.11.16-.2.36l-2.17 5.38c-.42 1.03-.63 1.55-.98 1.54s-.53-.54-.9-1.6Z'
+        d='M4.69 9.8C3.34 6.23 2.66 4.45 3.57 3.53c.92-.91 2.7-.24 6.27 1.12L16.11 7c3.59 1.36 5.39 2.04 5.55 3.22a2 2 0 0 1 0 .51c-.14 1.18-1.92 1.9-5.5 3.33-.68.28-1.03.41-1.3.66l-.13.14c-.25.26-.38.6-.66 1.3-1.4 3.51-2.1 5.27-3.25 5.43a2 2 0 0 1-.59 0c-1.15-.18-1.82-1.95-3.16-5.5z'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

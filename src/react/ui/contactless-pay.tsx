@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconContactlessPay: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconContactlessPay: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='contactless-pay'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-contactless-pay'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,18 @@ export const IconContactlessPay: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.67 12a8.33 8.33 0 1 0 16.66 0 8.33 8.33 0 0 0-16.66 0'
+        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
         fill='currentColor'
       />
       <path
-        d='M8.1 9.92a4.4 4.4 0 0 1 0 4.16m6.14-6.94a10.3 10.3 0 0 1 0 9.72m-3.1-8.33a7.4 7.4 0 0 1 0 6.94m.86 4.86a8.33 8.33 0 1 1 0-16.66 8.33 8.33 0 0 1 0 16.66'
+        d='M7.57 15.02A4.6 4.6 0 0 0 8.54 12a4.6 4.6 0 0 0-.97-3.02m3.1 7.65a7 7 0 0 0 1.5-4.63c0-1.87-.37-3.01-1.5-4.63m3.62 10.47A9 9 0 0 0 16.18 12c0-2.36-.46-3.8-1.89-5.84'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

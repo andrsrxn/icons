@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconNotificationBox: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconNotificationBox: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='notification-box'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-notification-box'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,21 @@ export const IconNotificationBox: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M7.59 3.65h7.88l.75 4.61h4.13v8.15c0 1.85 0 2.78-.58 3.35-.57.58-1.5.58-3.35.58H7.6c-1.85 0-2.78 0-3.35-.58-.58-.57-.58-1.5-.58-3.35V7.58c0-1.85 0-2.78.58-3.35.57-.58 1.5-.58 3.35-.58'
+        d='M3.05 20.96V3.66h12.97L14.46 5.8l1.31 2.82 2.7.61 1.88-1.26v12.98z'
         fill='currentColor'
       />
       <path
-        d='M20.35 11.64v4.77c0 1.85 0 2.78-.58 3.35-.57.58-1.5.58-3.35.58H7.6c-1.85 0-2.78 0-3.35-.58-.58-.57-.58-1.5-.58-3.35V7.58c0-1.85 0-2.78.58-3.35.57-.58 1.5-.58 3.35-.58h4.71m8.54 2.26a2.74 2.74 0 1 1-5.49 0 2.74 2.74 0 0 1 5.49 0Z'
+        d='M20.34 12.47v2.78c0 2.83 0 4.24-.88 5.12-.87.88-2.29.88-5.12.88h-5.6c-2.82 0-4.23 0-5.11-.88s-.88-2.3-.88-5.12v-5.6c0-2.83 0-4.24.88-5.12s2.29-.88 5.12-.88h2.85'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='17.79'
+        cy='6.18'
+        r='3.39'
+        transform='rotate(90 17.8 6.18)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

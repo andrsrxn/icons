@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSearchPlus: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSearchPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='search-plus'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-search-plus'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,13 @@ export const IconSearchPlus: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M17.34 10.55a6.87 6.87 0 1 1-13.75 0 6.87 6.87 0 0 1 13.75 0'
+        d='M17.8 10.26a7.61 7.61 0 1 1-15.23 0 7.61 7.61 0 0 1 15.22 0'
         fill='currentColor'
       />
       <path
-        d='M7.17 10.55h6.59m-3.3-3.3v6.59m4.92 1.51a6.87 6.87 0 1 0-9.82-9.62 6.87 6.87 0 0 0 9.82 9.62Zm0 0 4.9 4.9'
+        d='M6.54 10.26h7.29m-3.65 3.64V6.63m5.42 8.93 5.78 5.77M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBridge: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBridge: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bridge'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bridge'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,18 +28,17 @@ export const IconBridge: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <g opacity='.2'>
-        <path d='M9.5 14.56H5.1v-7.4l4.26 2.28z' fill='currentColor' />
-        <path d='M9.5 14.56H5.1v-7.4l4.26 2.28z' fill='currentColor' />
+        <path d='M9.17 14.93h-5V6.55L9 9.13z' fill='currentColor' />
+        <path d='M9.17 14.93h-5V6.55L9 9.13z' fill='currentColor' />
       </g>
       <g opacity='.2'>
-        <path d='M14.4 14.56h4.4v-7.4l-4.27 2.28z' fill='currentColor' />
-        <path d='M14.4 14.56h4.4v-7.4l-4.27 2.28z' fill='currentColor' />
+        <path d='M14.71 14.93h5V6.55l-4.84 2.58z' fill='currentColor' />
+        <path d='M14.71 14.93h5V6.55l-4.84 2.58z' fill='currentColor' />
       </g>
       <path
-        d='M5.2 17.53V6m13.6 11.53V6m-9.35 8.44V9.56m5.1 4.88V9.56m5.95 4.99h-17M18.8 6.9A9 9 0 0 1 12 9.56c-2.85 0-4.7-.73-6.8-2.66m0 0q-.9.84-1.8 1.4m15.4-1.4q.9.84 1.8 1.4'
+        d='M4.29 18.3V5.23M19.71 18.3V5.23M9.1 14.8V9.26m5.8 5.54V9.26m6.74 5.66H2.36m17.35-8.67A10.2 10.2 0 0 1 12 9.26c-3.23 0-5.34-.82-7.71-3.01m0 0a13 13 0 0 1-2.05 1.58m17.47-1.58q1.04.96 2.05 1.58'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

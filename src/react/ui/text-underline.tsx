@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextUnderline: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextUnderline: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-underline'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-underline'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconTextUnderline: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4.53 20h14.94M6.4 4.13v6.92A5.74 5.74 0 0 0 12 17c2.88 0 5.6-2.38 5.6-5.95V4.12'
+        d='M17.08 3.76v7.49a5.09 5.09 0 1 1-10.17 0V3.76M19.64 20H4.36'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

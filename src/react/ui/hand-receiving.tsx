@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHandReceiving: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHandReceiving: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hand-receiving'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hand-receiving'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,22 +27,20 @@ export const IconHandReceiving: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.78' y='8.39' width='3.38' height='7.14' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='2.68' y='7.92' width='3.82' height='8.07' rx='1' fill='currentColor' />
       <path
-        d='M7.16 14.33s.98.82 2.37 1.16c2.78.68 4.2.5 6.67-.41 1.84-.68 3.28-2.5 3.99-3.55.3-.46.3-1.05.03-1.53a1.72 1.72 0 0 0-2.64-.39 22 22 0 0 1-3.03 2.35c-.66.4-2.02.32-3.32.32m3.32-.32c.53-1.41.37-2.54-.21-2.77a9 9 0 0 0-3.4-.56c-3.15 0-3.78.79-3.78.79'
+        d='M6.5 14.64s1.1.92 2.68 1.3c3.15.78 4.75.56 7.54-.46 2.08-.76 3.7-2.83 4.5-4.01.35-.52.35-1.18.04-1.73a1.94 1.94 0 0 0-2.98-.44c-.96.87-2.2 1.9-3.43 2.66-.74.45-2.28.36-3.74.36m3.74-.36c.6-1.6.43-2.88-.24-3.13a10 10 0 0 0-3.83-.64c-3.56 0-4.28.9-4.28.9'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='3.78'
-        y='8.39'
-        width='3.38'
-        height='7.14'
+        x='2.68'
+        y='7.92'
+        width='3.82'
+        height='8.07'
         rx='1'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

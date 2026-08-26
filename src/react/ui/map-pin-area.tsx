@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMapPinArea: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMapPinArea: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='map-pin-area'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-map-pin-area'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,16 +29,33 @@ export const IconMapPinArea: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M14.75 14.04c1.08-1.94 2.08-4.16 2.08-5.78 0-3.04-2.16-4.8-4.83-4.8S7.17 5.2 7.17 8.26c0 1.65.99 3.86 2.07 5.78-3.22.46-5.53 1.7-5.53 3.15 0 1.85 3.71 3.35 8.29 3.35s8.29-1.5 8.29-3.35c0-1.46-2.32-2.7-5.54-3.15M12 10.48a2.26 2.26 0 0 0 2.27-2.25c0-1.25-1.18-2.25-2.27-2.25-1.1 0-2.27 1-2.27 2.25A2.26 2.26 0 0 0 12 10.48'
+        d='M12.15 20.41c-4.5 0-8.13-1.38-8.13-3.08 0-1.38 2.35-2.54 5.61-2.94.8-.1 1.49 2.27 2.37 2.27.75 0 1.62-2.38 2.3-2.31 3.46.36 5.99 1.55 5.99 2.98 0 1.7-3.64 3.08-8.14 3.08'
         fill='currentColor'
       />
       <path
-        d='M17.71 14.98c1.6.59 2.58 1.42 2.58 2.33 0 1.78-3.71 3.23-8.29 3.23s-8.29-1.45-8.29-3.23c0-.91.99-1.74 2.58-2.33m10.75-6.7c0 2.5-2.43 6.4-3.91 8.54-.56.8-1.7.8-2.26 0-1.49-2.12-3.9-5.98-3.9-8.54 0-3.08 2.25-4.82 5.03-4.82s5.04 1.77 5.04 4.82Zm-2.76-.01a2.28 2.28 0 1 1-4.56 0c0-1.26.84-2.28 2.28-2.28S14.28 7 14.28 8.27Z'
+        d='M18 15.36c1.42.56 2.29 1.3 2.29 2.13 0 1.7-3.71 3.09-8.29 3.09s-8.29-1.38-8.29-3.09c0-.82.87-1.57 2.29-2.13'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M6.95 7.7c0 2.78 3.31 9.1 5.05 9.1s5.05-6.32 5.05-9.1a5.05 5.05 0 0 0-10.1 0M12 9.72a2.37 2.37 0 1 1 0-4.74 2.37 2.37 0 0 1 0 4.74'
+        fill='currentColor'
+      />
+      <path
+        d='M14.47 14.6c-.97 1.33-1.46 2-2.47 1.99-1 0-1.5-.66-2.47-1.99-1.35-1.84-2.76-4.33-2.76-6.72a5.23 5.23 0 1 1 10.46 0c0 2.4-1.4 4.9-2.76 6.73'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='12'
+        cy='7.67'
+        r='2.48'
+        transform='rotate(90 12 7.67)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

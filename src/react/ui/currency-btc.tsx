@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyBtc: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyBtc: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-btc'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-btc'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,15 +29,13 @@ export const IconCurrencyBtc: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M14.85 11.72H13.8c.83 0 1.63-.32 2.22-.9a3.07 3.07 0 0 0 0-4.38 3.2 3.2 0 0 0-2.22-.9H8.55V18.6h6.3c.93 0 1.81-.36 2.47-1a3.4 3.4 0 0 0 0-4.87 3.5 3.5 0 0 0-2.47-1'
+        d='M8.08 19.7V4.3h6l2.62 2.4-.93 4.98 2.64 3.84-2.64 3.97-6.16.2z'
         fill='currentColor'
       />
       <path
-        d='M7.16 5.53h1.4m0 13.07V5.53m0 0h5.24c.83 0 1.63.33 2.22.9a3.07 3.07 0 0 1 0 4.39c-.59.58-1.39.9-2.22.9m0 0h1.05c.93 0 1.81.36 2.47 1.01a3.4 3.4 0 0 1 0 4.86 3.5 3.5 0 0 1-2.47 1.01h-7.7m3.5-13.07V3.47m2.8 2.06V3.47m-2.8 17.2V18.6m2.8 2.06V18.6m-4.9-6.88h5.25'
+        d='M5.59 4.29h7.85a3.56 3.56 0 0 1 0 7.11h-1.92m0 0h2.57a4.15 4.15 0 1 1 0 8.3h-8.5M7.87 4.29v15.4m.21-17.22v1.64M7.87 19.9v1.63m4.02-19.06v1.64m0 15.79v1.63'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

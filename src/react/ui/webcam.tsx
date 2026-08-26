@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconWebcam: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconWebcam: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='webcam'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-webcam'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,14 +29,18 @@ export const IconWebcam: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M15.83 10.19a3.83 3.83 0 1 1-7.66 0 3.83 3.83 0 0 1 7.66 0'
+        d='M16.25 9.7a4.25 4.25 0 1 0-8.5 0 4.25 4.25 0 0 0 8.5 0'
         fill='currentColor'
       />
       <path
-        d='M12 16.64a6.45 6.45 0 1 0 0-12.9 6.45 6.45 0 0 0 0 12.9Zm0 0v3.63m-3.73 0h7.46m.1-10.08a3.83 3.83 0 1 1-7.66 0 3.83 3.83 0 0 1 7.66 0Z'
+        d='M16.25 9.7A4.23 4.23 0 0 0 12 5.45a4.25 4.25 0 1 0 4.25 4.25'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M19.27 9.7A7.25 7.25 0 0 0 12 2.43a7.27 7.27 0 1 0 7.27 7.27M12 21.4v-4.42M8.02 21.4h7.96'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

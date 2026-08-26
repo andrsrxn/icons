@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSpeaker: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSpeaker: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='speaker'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-speaker'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,32 +31,24 @@ export const IconSpeaker: Icon = ({
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M18 7.9c0-1.89 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-4c-1.89 0-2.83 0-3.41.59C6 5.07 6 6 6 7.9v8.5c0 1.9 0 2.84.59 3.42.58.59 1.52.59 3.41.59h4c1.89 0 2.83 0 3.41-.59.59-.58.59-1.53.59-3.41zm-3 6.6a3 3 0 1 1-6 0 3 3 0 0 1 6 0'
+        d='M18.77 6.7c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H9.23c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v10.63c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h5.54c1.89 0 2.83 0 3.42-.58.58-.6.58-1.53.58-3.42zm-3.38 7.97a3.39 3.39 0 1 1-6.78 0 3.39 3.39 0 0 1 6.78 0'
         fill='currentColor'
       />
       <rect
-        x='6'
-        y='3.9'
-        width='12'
-        height='16.51'
-        rx='2'
+        x='5.23'
+        y='2.7'
+        width='13.54'
+        height='18.63'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <circle cx='12' cy='14.5' r='3.17' stroke='currentColor' strokeWidth='1.5' />
-      <path d='M12.42 14.5a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0' fill='currentColor' />
+      <circle cx='12' cy='14.67' r='3.58' stroke='currentColor' strokeWidth={strokeWidth} />
       <path
-        d='M12.42 14.5a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0Z'
+        d='M12.47 14.67a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0m0-8a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M12.42 7.42a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0' fill='currentColor' />
-      <path
-        d='M12.42 7.42a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconMosaic: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconMosaic: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='mosaic'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-mosaic'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,18 +29,18 @@ export const IconMosaic: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M20.13 16.48V8c0-1.89 0-2.83-.59-3.41C18.96 4 18.02 4 16.13 4H7.65c-1.89 0-2.83 0-3.42.59z'
+        d='M4.74 2.74h14.52c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v7.06c0 1.44 0 2.16-.47 2.45s-1.12-.02-2.4-.65L3.86 6.55c-.55-.27-.82-.4-.98-.65-.15-.24-.15-.54-.15-1.15 0-.95 0-1.42.3-1.72.29-.29.76-.29 1.7-.29'
         fill='currentColor'
       />
-      <path
-        d='m4.46 5 8.2 6.13m0 0 7.34 5m-7.33-5L8 20m-.35.48h8.48c1.89 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42V8c0-1.89 0-2.83-.59-3.41C18.96 4 18.02 4 16.13 4H7.65c-1.89 0-2.83 0-3.42.59-.58.58-.58 1.52-.58 3.41v8.48c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58'
+      <rect
+        width='18.52'
+        height='18.52'
+        rx='3'
+        transform='scale(1 -1)rotate(90 21.26 0)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
+      <path d='m3 6 18.26 9M8 21l6-9.42' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

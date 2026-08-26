@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBlocks: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBlocks: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='blocks'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-blocks'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,53 +27,45 @@ export const IconBlocks: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.81' y='13.53' width='6.85' height='6.85' rx='2' fill='currentColor' />
-      <rect opacity='.2' x='3.81' y='6.68' width='6.85' height='6.85' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.84' y='13.71' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.84' y='6.05' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='10.5' y='13.71' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='13.76' y='2.75' width='7.48' height='7.48' rx='2' fill='currentColor' />
       <rect
-        opacity='.2'
-        x='10.66'
-        y='13.53'
-        width='6.85'
-        height='6.85'
-        rx='2'
-        fill='currentColor'
-      />
-      <rect opacity='.2' x='13.58' y='3.72' width='6.7' height='6.7' rx='2' fill='currentColor' />
-      <rect
-        x='3.81'
-        y='13.53'
-        width='6.85'
-        height='6.85'
+        x='2.84'
+        y='13.71'
+        width='7.65'
+        height='7.65'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='3.81'
-        y='6.68'
-        width='6.85'
-        height='6.85'
+        x='2.84'
+        y='6.05'
+        width='7.65'
+        height='7.65'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='10.66'
-        y='13.53'
-        width='6.85'
-        height='6.85'
+        x='10.5'
+        y='13.71'
+        width='7.65'
+        height='7.65'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <rect
-        x='13.58'
-        y='3.72'
-        width='6.7'
-        height='6.7'
+        x='13.76'
+        y='2.75'
+        width='7.48'
+        height='7.48'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

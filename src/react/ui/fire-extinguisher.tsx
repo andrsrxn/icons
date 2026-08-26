@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconFireExtinguisher: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconFireExtinguisher: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='fire-extinguisher'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-fire-extinguisher'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -27,31 +30,22 @@ export const IconFireExtinguisher: Icon = ({
       <path
         opacity='.2'
         fill='currentColor'
-        d='M9.11 12.94h6.56v6.92H9.11zm1.84-9.05h2.88v3.03h-2.88z'
+        d='M8.82 13.06h7.37v7.77H8.82zm2.07-10.18h3.23v3.41h-3.23z'
       />
       <rect
-        x='8.86'
-        y='7.3'
-        width='7.07'
-        height='13.1'
+        x='8.53'
+        y='6.72'
+        width='7.94'
+        height='14.71'
         rx='2'
         stroke='currentColor'
-        strokeWidth='1.5'
-      />
-      <path d='M15.93 12.94H9.1' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
-      <path
-        d='M14.24 7.3V5.45c0-.8 0-1.19-.21-1.46l-.18-.17c-.27-.21-.66-.21-1.46-.21s-1.19 0-1.46.2l-.17.18c-.21.27-.21.67-.21 1.46V7.3'
-        stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M10.55 5.2s-1.2-.11-2.44 0c-1.49.14-2.06 1.7-2.06 2.84 0 1.15 0 2.51-.68 3.52'
+        d='M16.47 13.06H8.82m5.76-6.34V4.57c0-.94 0-1.41-.3-1.7s-.76-.3-1.7-.3h-.15c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v2.15m0-2.36s-1.35-.13-2.74 0c-1.67.16-2.31 1.9-2.31 3.2 0 1.29 0 2.81-.76 3.95m13.76-7.15h-3.8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
-      <path d='M17.63 5.2h-3.4' stroke='currentColor' strokeWidth='1.5' strokeLinecap='round' />
     </svg>
   )
 }

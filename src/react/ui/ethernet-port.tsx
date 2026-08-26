@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEthernetPort: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEthernetPort: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ethernet-port'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ethernet-port'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,41 +29,19 @@ export const IconEthernetPort: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.62 10.5c0-1.88 0-2.83.59-3.41s1.53-.59 3.41-.59h8.76c1.88 0 2.82 0 3.41.59.59.58.59 1.53.59 3.41v2.66c0 .32 0 .48-.02.61a2 2 0 0 1-1.71 1.71c-.14.02-.3.02-.62.02h-.26a2 2 0 0 0-1.33.62l-.4.38a4 4 0 0 1-1.22.9c-.32.1-.66.1-1.34.1h-3.02c-.69 0-1.03 0-1.34-.11s-.59-.32-1.13-.74l-.88-.69-.08-.07a2 2 0 0 0-1.14-.39H5.5a2 2 0 0 1-1.87-1.87z'
+        d='M2.73 9.92c0-1.89 0-2.83.59-3.42.58-.58 1.52-.58 3.41-.58h10.54c1.89 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v3.36c0 .55 0 .83-.05 1.06a2 2 0 0 1-1.49 1.48c-.23.06-.5.06-1.05.06h-.46a2 2 0 0 0-.96.39c-.1.06-.18.14-.35.3l-.5.45c-.56.53-.84.79-1.2.93-.35.13-.73.13-1.5.13h-3.56c-.69 0-1.03 0-1.34-.1s-.59-.32-1.13-.74l-1.09-.86-.21-.16a2 2 0 0 0-1-.34h-.26c-.36 0-.54 0-.7-.03a2 2 0 0 1-1.67-1.67c-.02-.15-.02-.33-.02-.7z'
         fill='currentColor'
       />
       <path
-        d='M3.62 10.5c0-1.88 0-2.83.59-3.41s1.53-.59 3.41-.59h8.76c1.88 0 2.82 0 3.41.59.59.58.59 1.53.59 3.41v2.59a2 2 0 0 1-1.9 1.9h-.36a2 2 0 0 0-1.53.78l-.38.47c-.41.5-.62.76-.88.93a2 2 0 0 1-.48.23c-.3.1-.62.1-1.28.1H10.4c-.61 0-.91 0-1.19-.09a2 2 0 0 1-.6-.29c-.23-.16-.41-.4-.79-.88l-.33-.42q-.06-.09-.1-.12a2 2 0 0 0-1.45-.7l-.15-.01h-.3a2 2 0 0 1-1.86-1.87V10.5Z'
+        d='M2.73 10.61c0-1.58 0-2.37.3-2.98a3 3 0 0 1 1.4-1.43c.61-.3 1.4-.3 2.99-.3h9.14c1.59 0 2.38 0 2.99.3a3 3 0 0 1 1.42 1.42c.29.6.29 1.4.29 2.98v2.34c0 1.3-1.06 2.36-2.36 2.36-.7 0-1.38.32-1.83.87l-.42.51c-.22.28-.34.42-.46.54a3 3 0 0 1-1.75.83c-.17.02-.35.02-.7.02h-3.53l-.58-.01a3 3 0 0 1-1.9-.93l-.36-.45-.37-.46a2.4 2.4 0 0 0-1.89-.92 2.4 2.4 0 0 1-2.39-2.4z'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path d='M7.04 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
       <path
-        d='M7.04 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
+        d='M6.6 9.63a.55.55 0 1 1-1.11 0 .55.55 0 0 1 1.1 0m3.98 0a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0m3.97 0a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0m3.97 0a.55.55 0 1 1-1.1 0 .55.55 0 0 1 1.1 0'
+        fill='currentColor'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M10.62 9.67a.4.4 0 1 1-.81 0 .4.4 0 0 1 .8 0' fill='currentColor' />
-      <path
-        d='M10.62 9.67a.4.4 0 1 1-.81 0 .4.4 0 0 1 .8 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M14.19 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
-      <path
-        d='M14.19 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path d='M17.76 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0' fill='currentColor' />
-      <path
-        d='M17.76 9.67a.4.4 0 1 1-.8 0 .4.4 0 0 1 .8 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

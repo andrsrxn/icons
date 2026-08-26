@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyKzt: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyKzt: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-kzt'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-kzt'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,11 +28,9 @@ export const IconCurrencyKzt: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M5.25 8.75h13.5M5.25 5h13.5M12 8.75V20'
+        d='m11.95 7.75.01 13.44M4 7.75h15.9M5.73 3.7h12.44'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

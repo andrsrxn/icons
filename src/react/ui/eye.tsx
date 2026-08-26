@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEye: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEye: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='eye'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-eye'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,19 +31,15 @@ export const IconEye: Icon = ({
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M11.99 7.07c-3.7 0-6.53 2.56-7.99 4.4a.9.9 0 0 0 .04 1.19C5.6 14.4 8.5 17.1 12 17.15c3.58.05 6.8-2.83 8.12-4.6a.8.8 0 0 0 .03-.95C18.93 9.75 15.78 7.07 12 7.07m2.6 5.01a2.65 2.65 0 1 1-5.3 0 2.65 2.65 0 0 1 5.3 0'
+        d='M12 5.85c-4.83 0-7.67 3.64-8.72 5.31-.31.5-.32 1.13 0 1.64 1.03 1.68 3.86 5.35 8.72 5.35s7.7-3.67 8.73-5.35c.32-.51.31-1.13 0-1.64-1.05-1.67-3.9-5.3-8.73-5.3m.02 8.7a2.58 2.58 0 1 0 0-5.15 2.58 2.58 0 0 0 0 5.16'
         fill='currentColor'
       />
       <path
-        d='M12 7c-3.43 0-6.39 2.35-7.9 3.83a1.6 1.6 0 0 0 0 2.34C5.63 14.65 8.6 17 12 17s6.37-2.35 7.9-3.83a1.6 1.6 0 0 0 0-2.34C18.4 9.35 15.44 7 12 7Z'
+        d='M12 5.85c-4.37 0-7.21 2.65-8.64 4.47-.51.65-.77.97-.77 1.66s.25 1.02.75 1.67c1.42 1.83 4.25 4.5 8.66 4.5s7.24-2.67 8.66-4.5c.5-.65.76-.98.75-1.67 0-.69-.26-1.01-.77-1.66C19.21 8.5 16.37 5.85 12 5.85'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M14.77 12a2.77 2.77 0 1 1-5.54 0 2.77 2.77 0 0 1 5.54 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-      />
+      <circle cx='12.01' cy='11.98' r='3.22' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

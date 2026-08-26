@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPasscode: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPasscode: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='passcode'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-passcode'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,26 +27,27 @@ export const IconPasscode: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.59 9.7c0-1 0-1.52.6-1.83s1.56-.32 3.48-.32h8.66c1.92 0 2.88 0 3.48.32.6.31.6.82.6 1.84v4.58c0 1.02 0 1.53-.6 1.84s-1.56.32-3.48.32H7.67c-1.92 0-2.88 0-3.48-.32-.6-.31-.6-.82-.6-1.84z'
+        width='8.87'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 16.44)'
         fill='currentColor'
       />
+      <rect
+        width='8.87'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 16.44)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
       <path
-        d='M8.16 12.08a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0m4.42.01a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0m4.42.01a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0'
+        d='M7.4 12a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0'
         fill='currentColor'
-      />
-      <path
-        d='M3.59 11.55c0-1.89 0-2.83.59-3.42.58-.58 1.52-.58 3.41-.58h8.82c1.89 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v.9c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.41.58H7.59c-1.89 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
-      <path
-        d='M8.16 12.08a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0Zm4.42.01a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0Zm4.42.01a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0Z'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

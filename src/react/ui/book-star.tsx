@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconBookStar: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-book-star'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M20.17 6.67c0-1.89 0-2.83-.59-3.42s-1.53-.58-3.41-.58H7.83c-1.88 0-2.82 0-3.41.58-.59.59-.59 1.53-.59 3.42v7.24c0 1.88 0 2.82.59 3.4.59.6 1.53.6 3.41.6h8.34c1.88 0 2.82 0 3.41-.6.59-.58.59-1.52.59-3.4zm-7.25 1.42a1.25 1.25 0 0 0-2.04-.14l-.34.43q-.28.34-.68.46a1.38 1.38 0 0 0-.74 2.13l.35.5q.24.34.25.77c0 .95.96 1.6 1.84 1.24l.29-.11q.41-.16.86-.04c.9.26 1.77-.46 1.69-1.39l-.02-.2q-.04-.5.27-.9c.52-.67.27-1.65-.52-1.98l-.62-.26q-.37-.16-.59-.5'
+        fill='currentColor'
+      />
+      <path
+        d='M3.83 8.67c0-2.83 0-4.25.88-5.12s2.3-.88 5.12-.88h4.34c2.82 0 4.24 0 5.12.88.88.87.88 2.29.88 5.12v3.24c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88H3.83z'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M3.83 17.9c0 1.34 0 2 .31 2.5a2 2 0 0 0 .63.63c.49.3 1.16.3 2.5.3h8.04c1.34 0 2 0 2.5-.3a2 2 0 0 0 .62-.63c.3-.5.3-1.16.3-2.5M11.1 7.8c.4-.77.6-1.15.9-1.15s.5.38.9 1.14l.26.53c.11.22.17.33.27.4s.22.1.46.13l.59.1c.85.13 1.27.2 1.36.5.1.28-.2.59-.81 1.2l-.42.41c-.18.18-.26.27-.3.38s-.02.24.02.48l.1.59c.13.85.2 1.27-.05 1.45s-.63-.02-1.4-.4l-.53-.27c-.22-.12-.33-.17-.45-.17s-.23.05-.45.17l-.53.27c-.77.38-1.15.58-1.4.4-.24-.18-.18-.6-.04-1.45l.09-.59c.04-.24.06-.37.02-.48s-.12-.2-.3-.38l-.42-.42c-.6-.6-.9-.9-.81-1.2.1-.3.51-.36 1.36-.5l.59-.09q.34-.03.46-.12c.1-.08.16-.19.27-.4z'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

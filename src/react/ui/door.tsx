@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDoor: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDoor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='door'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-door'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,19 +27,11 @@ export const IconDoor: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' fill='currentColor' d='M6 3.85h12v16.3H6z' />
+      <path opacity='.2' fill='currentColor' d='M5.22 2.83h13.55v18.4H5.22z' />
       <path
-        d='M18 19.92V7.85c0-1.88 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-4c-1.89 0-2.83 0-3.41.59C6 5.02 6 5.97 6 7.85v12.07'
+        d='M18.78 20.97V6.83c0-1.88 0-2.82-.59-3.41s-1.53-.59-3.41-.59H9.22c-1.88 0-2.82 0-3.41.59s-.59 1.53-.59 3.41v14.14m15.81.27H2.97M13 12h2.96'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
-      />
-      <path
-        d='M20 20.15H4M13.29 12h2'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

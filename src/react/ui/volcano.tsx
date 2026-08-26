@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconVolcano: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconVolcano: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='volcano'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-volcano'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,23 +27,21 @@ export const IconVolcano: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' d='m8.26 12.46 3.4-.44 1.86.93 1.98-.5L17.7 20H5.79z' fill='#000' />
       <path
-        d='M9.87 20.35h3.73c2.42 0 3.63 0 4.08-.66s-.07-1.93-1.09-4.48q-.3-.74-.45-1.42c-.57-2.59-.1-4.53-1.34-4.53s-1.7.25-2.8.25-1.36-.25-2.8-.25-.62 1.46-1.5 4.53q-.24.81-.67 1.77c-1.03 2.28-1.55 3.42-1.1 4.1.44.7 1.6.7 3.94.7Z'
-        stroke='#000'
-        strokeWidth='1.5'
+        opacity='.2'
+        d='m7.1 11.87 4.45-.56 2.43 1.18 2.6-.62 1.76 4.52 2.36 5.01H3.34l2.4-4.77z'
+        fill='currentColor'
       />
       <path
-        d='M15.66 12.34s-1.1.79-2.08.79c-1.1 0-1.73-.94-2.8-.94-1.2 0-2.58.72-2.58.72'
-        stroke='#000'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        d='M16.65 11.76s-1.41.89-2.66.89c-1.38 0-2.2-1.05-3.56-1.05-1.52 0-3.28.8-3.28.8M12 1.88V4.8M7.52 1.79c.31.19.86.7 1.13 1.32.26.58.3 1.2.23 1.61m7.63-2.92c-.32.19-.87.68-1.16 1.3-.26.58-.3 1.2-.25 1.61'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M6.95 4.46c-.38-.03-.67-.4-.65-.84s.36-.78.75-.75l-.05.8zm3.16 1.9c.03.45-.26.83-.65.86-.38.02-.72-.3-.74-.75l.7-.05zM7 3.67l.05-.79q.6.04 1.15.3.53.3.96.8l-.5.56-.5.56a2 2 0 0 0-.54-.46 2 2 0 0 0-.67-.17zm1.66.87.5-.57a3.7 3.7 0 0 1 .95 2.4l-.7.06-.7.05a2 2 0 0 0-.14-.76q-.1-.27-.4-.62zm8.39-.08c.38-.03.67-.4.65-.84s-.36-.78-.75-.75l.05.8zm-3.16 1.9c-.03.45.26.83.65.86.38.02.72-.3.74-.75l-.7-.05zM17 3.67l-.05-.79q-.6.04-1.15.3a3 3 0 0 0-.96.8l.5.56.5.56q.3-.35.54-.46.24-.13.67-.17zm-1.66.87-.5-.57a3.7 3.7 0 0 0-.95 2.4l.7.06.7.05q.02-.5.14-.76.1-.27.4-.62z'
-        fill='#000'
+        d='M9.35 21.58h5.35c3.24 0 4.86 0 5.45-.93q0-.03.03-.05c.56-.95-.25-2.53-1.87-5.7h0a67 67 0 0 1-2.08-4.66c-.51-1.26-.77-1.89-1.28-2.23-.5-.34-1.17-.34-2.5-.34h-.84c-1.35 0-2.03 0-2.53.35-.51.34-.77.98-1.28 2.26a60 60 0 0 1-2.02 4.62c-1.6 3.15-2.41 4.72-1.89 5.66l.08.13c.6.89 2.2.89 5.38.89'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
-      <path d='M12 3.67V6.7' stroke='#000' strokeWidth='1.5' strokeLinecap='round' />
     </svg>
   )
 }

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyEur: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyEur: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-eur'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-eur'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,20 +27,11 @@ export const IconCurrencyEur: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <g clipPath='url(#a)'>
-        <path
-          d='M4.5 10.5h9m-9 3H12m6 5.03A6.75 6.75 0 0 1 6.75 13.5v-3A6.75 6.75 0 0 1 18 5.47'
-          stroke='currentColor'
-          strokeWidth='1.5'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-      </g>
-      <defs>
-        <clipPath id='a'>
-          <path fill='#fff' d='M0 0h24v24H0z' />
-        </clipPath>
-      </defs>
+      <path
+        d='M19 4.94s-1.24-1.8-4.84-1.8S6 5.68 6 11.97s4.46 8.89 8.16 8.89c3.45 0 4.84-1.63 4.84-1.63m-5.75-9.03H3.71m7.92 3.6H3.71'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

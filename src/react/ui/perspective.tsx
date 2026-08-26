@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPerspective: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPerspective: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='perspective'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-perspective'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,13 +29,13 @@ export const IconPerspective: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M4 10.74c0-1.66 0-2.49.49-3.05.49-.57 1.31-.68 2.95-.91l8-1.13c2.12-.3 3.18-.46 3.87.14S20 7.46 20 9.61v4.77c0 2.15 0 3.22-.7 3.82-.68.6-1.74.45-3.87.14l-8-1.15c-1.64-.24-2.45-.36-2.94-.92S4 14.87 4 13.23z'
+        d='M2.7 12.01c0-2.62 0-3.93.79-4.79.8-.87 2.1-.97 4.72-1.18l6.62-.52c3.03-.25 4.55-.37 5.51.52.96.9.96 2.42.96 5.46v1.01c0 3.04 0 4.55-.96 5.44s-2.47.78-5.5.55l-6.61-.51c-2.62-.2-3.93-.3-4.73-1.16l-.01-.01c-.8-.86-.8-2.18-.8-4.8'
         fill='currentColor'
       />
       <path
-        d='M4 10.8c0-1.65 0-2.47.49-3.04.48-.56 1.3-.68 2.93-.92l8-1.17c2.13-.31 3.2-.47 3.89.13S20 7.48 20 9.63v4.75c0 2.15 0 3.22-.7 3.82-.68.6-1.74.45-3.87.14l-8-1.15c-1.64-.24-2.45-.36-2.94-.92S4 14.87 4 13.23z'
+        d='M2.7 11.96c0-2.26 0-3.39.61-4.2l.25-.28c.72-.72 1.83-.88 4.07-1.2l6.84-.95c3.18-.45 4.77-.67 5.8.23s1.03 2.5 1.03 5.71v1.42c0 3.22 0 4.84-1.03 5.73-1.04.9-2.63.67-5.83.2l-6.83-.98c-2.23-.33-3.34-.49-4.05-1.2l-.25-.3c-.61-.8-.61-1.93-.61-4.18'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

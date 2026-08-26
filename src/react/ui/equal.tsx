@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEqual: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEqual: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='equal'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-equal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,12 +27,7 @@ export const IconEqual: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M3.61 8.5H20.4m-16.78 7H20.4'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
+      <path d='M4.07 9h15.86M4.07 15h15.86' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

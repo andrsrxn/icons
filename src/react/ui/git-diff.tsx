@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGitDiff: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGitDiff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='git-diff'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-git-diff'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,16 +28,19 @@ export const IconGitDiff: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M20 17.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0M3.97 6.5a2.5 2.5 0 1 1 5 0 2.5 2.5 0 0 1-5 0'
-        fill='currentColor'
-        opacity='.2'
+        d='M13.48 5.71h.45c1.89 0 2.83 0 3.41.59.6.58.6 1.53.6 3.41v5.58m-7.53 3h-.34c-1.89 0-2.83 0-3.41-.59-.6-.58-.6-1.53-.6-3.41V8.7'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M17.5 15a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Zm0 0V9.62c0-1.25 0-1.87-.27-2.34a2 2 0 0 0-.73-.73c-.46-.26-2.4-.26-3.65-.26M6.47 9a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm0 0v5.38c0 1.25 0 1.87.27 2.34a2 2 0 0 0 .73.73c.47.26 2.4.26 3.65.26m3.4-9.14-.17-.16c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.13l.17-.16M9.46 15.43l.16.16c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.13l-.16.16'
+        d='M14.75 3.2c-1.03 1.02-1.55 1.54-1.66 2.16a2 2 0 0 0 0 .7c.11.62.63 1.13 1.66 2.17M9.26 20.8c1.03-1.02 1.54-1.54 1.65-2.16a2 2 0 0 0 0-.7c-.1-.62-.62-1.13-1.65-2.17'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
+      <circle opacity='.2' cx='6.27' cy='5.63' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='17.73' cy='18.37' r='3.07' fill='currentColor' />
+      <circle cx='6.27' cy='5.63' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle cx='17.73' cy='18.37' r='3.07' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

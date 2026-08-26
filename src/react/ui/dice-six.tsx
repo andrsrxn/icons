@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDiceSix: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDiceSix: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='dice-six'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-dice-six'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,26 +27,27 @@ export const IconDiceSix: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M3.76 7.64c0-1.83 0-2.75.57-3.31s1.48-.57 3.3-.57h8.73c1.83 0 2.75 0 3.31.57s.57 1.48.57 3.3v8.73c0 1.83 0 2.75-.57 3.31s-1.48.57-3.3.57H7.63c-1.83 0-2.75 0-3.31-.57s-.57-1.48-.57-3.3z'
+        width='18.78'
+        height='18.78'
+        rx='3'
+        transform='matrix(0 -1 -1 0 21.4 21.4)'
         fill='currentColor'
       />
       <path
-        d='M16.48 11.95a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0m0 4.07a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0m-7.66-4.14a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0m0-4a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0m0 8.01a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0m7.66-8.01a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0'
+        d='M17.7 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m-9.68 0a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m9.68-4.9a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m.1 9.8a.9.9 0 1 1-1.82 0 .9.9 0 0 1 1.81 0m-9.77 0a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m0-9.8a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
         fill='currentColor'
-      />
-      <path
-        d='M3.76 7.76c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.48c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v8.48c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58H7.76c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M16.48 11.95a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Zm0 4.07a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Zm-7.66-4.14a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Zm0-4a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Zm0 8.01a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Zm7.66-8.01a.62.62 0 1 1-1.23 0 .62.62 0 0 1 1.23 0Z'
+      <rect
+        width='18.78'
+        height='18.78'
+        rx='3'
+        transform='matrix(0 -1 -1 0 21.4 21.4)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

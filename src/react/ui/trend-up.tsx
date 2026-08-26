@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTrendUp: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTrendUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='trend-up'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-trend-up'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,14 @@ export const IconTrendUp: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M20.25 12.6V9.11c0-.83-.68-1.5-1.5-1.5H15.3M3.75 16.96l4.98-4.98a1 1 0 0 1 1.43.01l2.25 2.33a1 1 0 0 0 1.44 0l6-6.23'
+        d='m2.6 17.47 4.74-4.84c.65-.67.98-1 1.39-1.01s.74.31 1.42.96l1.58 1.51c.7.67 1.06 1 1.48.99s.75-.38 1.4-1.1l5.54-6.19'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M21.26 11.98v-1.2c0-1.9 0-2.84-.58-3.42-.59-.59-1.53-.59-3.42-.59h-1.2'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

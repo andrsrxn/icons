@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDivide: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDivide: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='divide'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-divide'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,38 @@ export const IconDivide: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M14.16 6.16a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0m0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0'
-        fill='currentColor'
+      <path d='M20.35 11.95H3.6' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle
         opacity='.2'
+        cx='12.04'
+        cy='5.91'
+        r='2.4'
+        transform='rotate(90 12.04 5.91)'
+        fill='currentColor'
       />
-      <path
-        d='M3.64 12h16.72m-6.2-5.84a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Zm0 11.68a2.16 2.16 0 1 1-4.32 0 2.16 2.16 0 0 1 4.32 0Z'
+      <circle
+        opacity='.2'
+        cx='12.04'
+        cy='18'
+        r='2.39'
+        transform='rotate(90 12.04 18)'
+        fill='currentColor'
+      />
+      <circle
+        cx='12.04'
+        cy='5.91'
+        r='2.4'
+        transform='rotate(90 12.04 5.91)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <circle
+        cx='12.04'
+        cy='18'
+        r='2.39'
+        transform='rotate(90 12.04 18)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

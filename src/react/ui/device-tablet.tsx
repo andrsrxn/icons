@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconDeviceTablet: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconDeviceTablet: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='device-tablet'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-device-tablet'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,15 +27,31 @@ export const IconDeviceTablet: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <rect
         opacity='.2'
-        d='M9 20.23c-1.89 0-2.83 0-3.41-.58C5 19.06 5 18.12 5 16.23V7.77c0-1.89 0-2.83.59-3.42.58-.58 1.52-.58 3.41-.58h6c1.89 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v8.46c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.41.58z'
+        x='5'
+        y='21.3'
+        width='18.61'
+        height='14'
+        rx='3'
+        transform='rotate(-90 5 21.3)'
         fill='currentColor'
       />
-      <path d='M12.38 16.93a.38.38 0 1 1-.76 0 .38.38 0 0 1 .76 0' fill='currentColor' />
+      <rect
+        x='5'
+        y='21.3'
+        width='18.61'
+        height='14'
+        rx='3'
+        transform='rotate(-90 5 21.3)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
       <path
-        d='M15 20.23v.75zm4-4h.75zM15 3.77v-.75zm4 4h-.75zm-14 0h-.75zm4-4v.75zM5 16.23h.75zm4 4v-.75zm-4-4h.75V7.77h-1.5v8.46zM9 3.77v.75h6v-1.5H9zm6 16.46v-.75H9v1.5h6zm0 0v.75q1.38.02 2.3-.08a2.7 2.7 0 0 0 1.64-.72l-.53-.53-.53-.53c-.13.13-.32.24-.79.3s-1.13.06-2.09.06zm4-4h-.75c0 .97 0 1.62-.07 2.1-.06.46-.17.66-.3.79l.53.53.53.53c.46-.46.65-1.02.73-1.65q.1-.9.08-2.3zM15 3.77v.75c.96 0 1.61 0 2.1.06.46.06.65.17.78.3l.53-.53.53-.53a2.7 2.7 0 0 0-1.65-.72c-.6-.09-1.37-.08-2.29-.08zm4 4h.75q.02-1.4-.08-2.3a2.7 2.7 0 0 0-.73-1.65l-.53.53-.53.53c.13.13.24.33.3.8.07.47.07 1.12.07 2.09zm-14 0h.75c0-.97 0-1.62.07-2.1.06-.46.17-.66.3-.79l-.53-.53-.53-.53a2.7 2.7 0 0 0-.73 1.65c-.08.6-.08 1.37-.08 2.3zm4-4v-.75c-.92 0-1.69 0-2.3.08a2.7 2.7 0 0 0-1.64.72l.53.53.53.53c.13-.13.32-.24.79-.3S8.04 4.52 9 4.52zM5 16.23h-.75c0 .93 0 1.7.08 2.3.08.63.27 1.2.73 1.65l.53-.53.53-.53c-.13-.13-.24-.33-.3-.8-.07-.47-.07-1.12-.07-2.09zm4 4v-.75c-.96 0-1.61 0-2.1-.06-.46-.06-.65-.17-.78-.3l-.53.53-.53.53a2.7 2.7 0 0 0 1.65.72c.6.09 1.37.08 2.29.08zm3.38-3.3h-.75c0-.2.16-.37.37-.37v1.5c.62 0 1.13-.5 1.13-1.13zm-.38.38v-.75c.2 0 .37.17.37.37h-1.5c0 .62.5 1.13 1.13 1.13zm-.38-.38h.75c0 .2-.16.38-.37.38v-1.5c-.62 0-1.13.5-1.13 1.12zm.38-.37v.75a.37.37 0 0 1-.37-.38h1.5c0-.62-.5-1.12-1.13-1.12zm7-8.8h-.75v8.47h1.5V7.77z'
+        d='M12.76 17.08a.76.76 0 1 1-1.52 0 .76.76 0 0 1 1.52 0'
         fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

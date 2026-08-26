@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTouchpad: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTouchpad: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='touchpad'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-touchpad'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,22 +27,17 @@ export const IconTouchpad: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.81' y='12' width='16.38' height='6.14' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.71' y='12' width='18.58' height='6.97' rx='2' fill='currentColor' />
       <rect
-        x='3.81'
-        y='5.86'
-        width='16.38'
-        height='12.29'
-        rx='2'
+        x='2.71'
+        y='5.03'
+        width='18.58'
+        height='13.94'
+        rx='3'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
-      <path
-        d='M3.8 12h16.4M12 18.14V12'
-        stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-      />
+      <path d='M2.7 12h18.6M12 18.97V12' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

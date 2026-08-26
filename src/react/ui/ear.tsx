@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconEar: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconEar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='ear'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-ear'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,18 +28,14 @@ export const IconEar: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M6.42 7.92c1.11-3.41 3.54-4.4 6.12-4.4 2.93 0 5.73 1.3 5.82 4.4.14 4.25-2.53 4.78-2.9 7.2-.35 2.31-.1 2.87-.64 3.86-.82 1.54-2.71 1.72-4.17 1.2-1.52-.56-1.98-1.91-2.24-3.1'
+        d='M5.76 7.51C7 3.73 9.7 2.62 12.56 2.62c3.25 0 6.35 1.46 6.46 4.9.15 4.71-2.82 5.3-3.22 7.99-.39 2.57-.12 3.18-.7 4.29-.92 1.7-3.03 1.9-4.65 1.32-1.68-.61-2.19-2.12-2.48-3.44'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M8.41 11.76c.8.42 1.7.08 2.03-.85.33-.94-.37-1.65-1.25-1.9.09-1.48 1.92-2.76 3.39-2.76 1.59 0 2.45 1 2.54 2.31.19 2.45-1.18 3.1-2.29 4.88 0 0-.6.87-.35 2.12'
+        d='M7.97 11.77c.9.48 1.89.1 2.25-.94S9.82 9 8.84 8.73c.1-1.65 2.13-3.07 3.76-3.07 1.76 0 2.72 1.12 2.83 2.57.2 2.71-1.32 3.44-2.55 5.4 0 0-.67.98-.4 2.36'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

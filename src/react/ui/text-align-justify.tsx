@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconTextAlignJustify: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconTextAlignJustify: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='text-align-justify'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-text-align-justify'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconTextAlignJustify: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M4 4.95h16M4 9.63h16M4 14.32h16M4 19h16'
+        d='M3 5.18h18M3 14.27h18M3 9.73h18M3 18.82h18'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconSkew: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconSkew: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='skew'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-skew'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,13 +29,13 @@ export const IconSkew: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6.1 7.8c.4-1.4.6-2.1 1.14-2.5s1.26-.4 2.7-.4h5.9c2.43 0 3.65 0 4.25.8.6.79.26 1.96-.41 4.3l-1.78 6.2c-.4 1.4-.6 2.1-1.14 2.5s-1.26.4-2.7.4h-5.9c-2.43 0-3.65 0-4.25-.8-.6-.79-.26-1.96.41-4.3z'
+        d='M13.5 20.36c2.23 0 3.34 0 4.15-.63.8-.62 1.09-1.7 1.66-3.84l1.24-4.71c.92-3.46 1.38-5.2.48-6.37s-2.7-1.17-6.28-1.17h-4.3c-2.21 0-3.32 0-4.13.63-.81.62-1.1 1.7-1.66 3.84L3.4 12.82c-.92 3.46-1.38 5.2-.48 6.37s2.7 1.17 6.28 1.17z'
         fill='currentColor'
       />
       <path
-        d='M6.1 7.8c.4-1.4.6-2.1 1.14-2.5s1.26-.4 2.7-.4h5.9c2.43 0 3.65 0 4.25.8.6.79.26 1.96-.41 4.3l-1.78 6.2c-.4 1.4-.6 2.1-1.14 2.5s-1.26.4-2.7.4h-5.9c-2.43 0-3.65 0-4.25-.8-.6-.79-.26-1.96.41-4.3z'
+        d='M13.52 20.36c2.21 0 3.32 0 4.13-.62.8-.63 1.1-1.7 1.66-3.84l1.26-4.7c.93-3.48 1.4-5.21.5-6.38-.91-1.18-2.7-1.18-6.3-1.18h-4.29c-2.21 0-3.32 0-4.13.62-.8.63-1.1 1.7-1.66 3.84l-1.26 4.7c-.93 3.48-1.4 5.21-.5 6.38.91 1.18 2.7 1.18 6.3 1.18z'
         stroke='currentColor'
-        strokeWidth='1.5'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

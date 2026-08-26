@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconPipFilled: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconPipFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='pip-filled'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-pip-filled'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,22 @@ export const IconPipFilled: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M21.1 16.06V9.83q.02-1.32-.07-2.2a2.7 2.7 0 0 0-.72-1.61 2.7 2.7 0 0 0-1.62-.72q-.87-.09-2.19-.07h-9q-1.32-.02-2.2.07c-.6.09-1.16.27-1.61.72s-.63 1-.72 1.62q-.09.87-.07 2.19v4.34q-.02 1.32.07 2.2c.09.6.27 1.16.72 1.61s1 .63 1.62.72q.87.09 2.19.07h10.07q.91.01 1.55-.05a2.2 2.2 0 0 0 1.42-.68c.33-.37.45-.8.51-1.25q.04-.33.05-.73m-1.5-.86c0-.66 0-1.09-.04-1.4-.03-.3-.1-.4-.14-.44l-.05-.06c-.05-.04-.14-.1-.44-.14-.32-.04-.74-.04-1.4-.04h-2.19c-.66 0-1.08 0-1.4.04-.3.04-.39.1-.44.14l-.05.06c-.05.05-.1.14-.14.44-.04.31-.04.74-.04 1.4s0 1.08.04 1.4c.03.3.1.39.14.44l.05.05c.05.05.14.1.44.14.32.04.74.04 1.4.04h2.19c.66 0 1.08 0 1.4-.04.3-.03.39-.1.44-.14l.05-.05c.04-.05.1-.14.14-.44.04-.32.04-.74.04-1.4'
+        d='M2.53 6.4c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h14.94c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v4.5c0 .93 0 1.4-.3 1.7s-.76.3-1.7.3h-4.6c-.94 0-1.41 0-1.7.28-.3.3-.3.77-.3 1.71v2.7c0 .95 0 1.42-.29 1.71-.3.3-.76.3-1.7.3H4.52c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7z'
         fill='currentColor'
+      />
+      <rect
+        x='2.53'
+        y='4.4'
+        width='18.93'
+        height='15.19'
+        rx='3'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M21.47 14.71c0-.25 0-.37-.02-.48a2 2 0 0 0-1.77-1.78h-3.55c-1.48 0-2.22 0-2.74.36a2 2 0 0 0-.47.47c-.37.52-.37 1.26-.37 2.74s0 2.22.37 2.74a2 2 0 0 0 .47.46c.52.38 1.26.38 2.74.38h.52'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

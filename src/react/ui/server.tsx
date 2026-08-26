@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconServer: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconServer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='server'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-server'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,20 +27,61 @@ export const IconServer: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
-        d='M3.73 17.57c0-.73 0-1.1.1-1.4a2 2 0 0 1 1.3-1.3c.3-.09.66-.09 1.39-.09h10.96c.73 0 1.1 0 1.4.1a2 2 0 0 1 1.3 1.3c.09.3.09.66.09 1.39s0 1.1-.1 1.39a2 2 0 0 1-1.3 1.3c-.3.1-.66.1-1.39.1H6.52c-.73 0-1.1 0-1.4-.1a2 2 0 0 1-1.3-1.3c-.09-.3-.09-.66-.09-1.4m0-11.13a5 5 0 0 1 .1-1.39 2 2 0 0 1 1.3-1.3c.3-.1.66-.1 1.39-.1h10.96a5 5 0 0 1 1.4.1 2 2 0 0 1 1.3 1.3c.09.3.09.66.09 1.4 0 .72 0 1.09-.1 1.38a2 2 0 0 1-1.3 1.3c-.3.1-.66.1-1.39.1H6.52c-.73 0-1.1 0-1.4-.1a2 2 0 0 1-1.3-1.3c-.09-.3-.09-.66-.09-1.39'
-        fill='currentColor'
+      <rect
         opacity='.2'
-      />
-      <path
-        d='M7.32 6.43a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0m0 11.14a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0m0-5.57a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0m3.29 5.57a.4.4 0 1 1-.81 0 .4.4 0 0 1 .81 0m0-5.57a.4.4 0 1 1-.81 0 .4.4 0 0 1 .81 0m0-5.6a.4.4 0 1 1-.81 0 .4.4 0 0 1 .81 0'
+        x='2.83'
+        y='9'
+        width='6.11'
+        height='18.34'
+        rx='2'
+        transform='rotate(-90 2.83 9)'
         fill='currentColor'
       />
-      <path
-        d='M17.48 14.78H6.52m10.96 0c.73 0 1.1 0 1.4.1a2 2 0 0 1 1.3 1.3c.09.3.09.66.09 1.39s0 1.1-.1 1.39a2 2 0 0 1-1.3 1.3c-.3.1-.66.1-1.39.1H6.52c-.73 0-1.1 0-1.4-.1a2 2 0 0 1-1.3-1.3c-.09-.3-.09-.66-.09-1.4 0-.72 0-1.09.1-1.38a2 2 0 0 1 1.3-1.3c.3-.1.66-.1 1.39-.1m10.96 0c.73 0 1.1 0 1.4-.09a2 2 0 0 0 1.3-1.3c.09-.3.09-.66.09-1.39s0-1.1-.1-1.4a2 2 0 0 0-1.3-1.29c-.3-.1-.66-.1-1.39-.1M6.52 14.79c-.73 0-1.1 0-1.4-.09a2 2 0 0 1-1.3-1.3c-.09-.3-.09-.66-.09-1.39a5 5 0 0 1 .1-1.4 2 2 0 0 1 1.3-1.29c.3-.1.66-.1 1.39-.1m10.96 0H6.52m10.96 0c.73 0 1.1 0 1.4-.09a2 2 0 0 0 1.3-1.3c.09-.3.09-.66.09-1.39s0-1.1-.1-1.39a2 2 0 0 0-1.3-1.3c-.3-.1-.66-.1-1.39-.1H6.52a5 5 0 0 0-1.4.1 2 2 0 0 0-1.3 1.3c-.09.3-.09.66-.09 1.4a5 5 0 0 0 .1 1.38 2 2 0 0 0 1.3 1.3c.3.1.66.1 1.39.1m.8-2.79a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0Zm0 11.14a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0Zm0-5.57a.4.4 0 1 1-.82 0 .4.4 0 0 1 .82 0Zm3.3 5.57a.4.4 0 1 1-.82 0 .4.4 0 0 1 .81 0Zm0-5.57a.4.4 0 1 1-.82 0 .4.4 0 0 1 .81 0Zm0-5.6a.4.4 0 1 1-.82 0 .4.4 0 0 1 .81 0Z'
+      <rect
+        opacity='.2'
+        x='2.83'
+        y='21.23'
+        width='6.11'
+        height='18.34'
+        rx='2'
+        transform='rotate(-90 2.83 21.23)'
+        fill='currentColor'
+      />
+      <rect
+        x='2.83'
+        y='9'
+        width='6.11'
+        height='18.34'
+        rx='2'
+        transform='rotate(-90 2.83 9)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='2.83'
+        y='15.11'
+        width='6.11'
+        height='18.34'
+        rx='2'
+        transform='rotate(-90 2.83 15.11)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <rect
+        x='2.83'
+        y='21.23'
+        width='6.11'
+        height='18.34'
+        rx='2'
+        transform='rotate(-90 2.83 21.23)'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M6.83 5.94a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.12a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.11a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m4-12.23a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.12a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.11a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0'
+        fill='currentColor'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

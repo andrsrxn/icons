@@ -1,0 +1,37 @@
+import type { Icon } from './types'
+
+export const IconSquiggle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-squiggle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        d='M4.92 4.9s.84-1.12 1.95-1.58a5.2 5.2 0 0 1 4.4 0c1.32.68 1.59 2.57.63 3.36-1.96 1.64-5.02.28-6.66 2.07-1.58 1.72-.8 3.89 1.32 4.16 4.7.6 6.25-3.21 9.63-3.83 1.76-.33 3.4.61 3.4 2.68 0 2.26-3.88 6.2-8.58 8.73-2.96 1.6-5.72.23-5.04-2.3.46-1.74 2.56-3.1 5.3-2.95 1.48.08 2.92.96 3.97 1.86a19 19 0 0 1 2.15 2.19'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconGitCommit: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconGitCommit: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='git-commit'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-git-commit'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,16 +27,22 @@ export const IconGitCommit: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path
+      <circle
         opacity='.2'
-        d='M15.32 12a3.32 3.32 0 1 1-6.64 0 3.32 3.32 0 0 1 6.64 0'
+        cx='12'
+        cy='12'
+        r='3.51'
+        transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <path
-        d='M8.68 12a3.32 3.32 0 0 1 6.64 0m-6.64 0a3.32 3.32 0 1 0 6.64 0m-6.64 0H4m11.32 0h5.18'
+      <path d='M8.5 12h-6m19 0h-6' stroke='currentColor' strokeWidth={strokeWidth} />
+      <circle
+        cx='12'
+        cy='12'
+        r='3.51'
+        transform='rotate(90 12 12)'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

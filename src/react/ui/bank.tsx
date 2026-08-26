@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconBank: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconBank: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='bank'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-bank'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,17 +27,25 @@ export const IconBank: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
+      <rect opacity='.2' x='2.74' y='17.37' width='18.53' height='3.9' rx='1' fill='currentColor' />
       <path
-        d='M11.73 3.88 3.7 9.02a.5.5 0 0 0 .27.92h16.06c.5 0 .7-.65.27-.92l-8.03-5.14a.5.5 0 0 0-.54 0M3.75 18.85c0-.38 0-.57.05-.72a1 1 0 0 1 .63-.64c.16-.05.35-.05.72-.05h13.7c.37 0 .56 0 .72.05q.46.17.63.64c.05.15.05.34.05.72s0 .56-.05.72a1 1 0 0 1-.63.63c-.16.05-.35.05-.72.05H5.15c-.37 0-.56 0-.72-.05a1 1 0 0 1-.63-.63c-.05-.16-.05-.35-.05-.72'
-        fill='currentColor'
         opacity='.2'
+        d='M10.88 3.13c.54-.36.81-.55 1.12-.55.3 0 .58.19 1.12.55l5.14 3.48c2.21 1.5 3.32 2.24 3.1 2.95-.21.7-1.55.7-4.22.7H6.86c-2.67 0-4 0-4.22-.7s.89-1.46 3.1-2.95z'
+        fill='currentColor'
+      />
+      <rect
+        x='2.74'
+        y='17.37'
+        width='18.53'
+        height='3.9'
+        rx='1'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
       <path
-        d='M6.15 17.16V9.94m3.89 7.5v-7.5m3.94 7.5v-7.5m3.87 7.5v-7.5M3.7 9.02l8.03-5.14a.5.5 0 0 1 .54 0l8.03 5.14a.5.5 0 0 1-.27.92H3.97c-.5 0-.7-.65-.27-.92m1.45 11.23h13.7c.37 0 .56 0 .72-.05a1 1 0 0 0 .63-.63c.05-.16.05-.35.05-.72 0-.38 0-.57-.05-.72a1 1 0 0 0-.63-.64c-.16-.05-.35-.05-.72-.05H5.15c-.37 0-.56 0-.72.05a1 1 0 0 0-.63.64c-.05.15-.05.34-.05.72s0 .56.05.72q.16.46.63.63c.16.05.35.05.72.05'
+        d='M10.88 3.13c.54-.36.81-.55 1.12-.55.3 0 .58.19 1.12.55l5.14 3.48c2.21 1.5 3.32 2.24 3.1 2.95-.21.7-1.55.7-4.22.7H6.86c-2.67 0-4 0-4.22-.7s.89-1.46 3.1-2.95zm-5.66 7.14v7.1m4.52-7.1v7.1m4.52-7.1v7.1m4.52-7.1v7.1'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

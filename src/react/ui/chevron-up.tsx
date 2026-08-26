@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconChevronUp: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconChevronUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='chevron-up'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-chevron-up'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -25,10 +28,9 @@ export const IconChevronUp: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='m4.42 15 4.67-4.93c1.36-1.44 2.04-2.16 2.9-2.16s1.55.72 2.9 2.16l4.69 4.94'
+        d='m4.16 15.76 5-5.02c1.34-1.33 2-2 2.83-2s1.5.67 2.83 2l5.02 5.02'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )

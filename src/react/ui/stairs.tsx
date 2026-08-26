@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconStairs: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  title,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel || title)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-stairs'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable='false'
+      className={`ui-icon ${className ?? ''}`}
+      {...props}>
+      {title ? <title>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M3.46 17.66c0-.77 0-1.16.1-1.47a2 2 0 0 1 1.26-1.25c.3-.1.7-.1 1.47-.1h14.3v5.66H6.28c-.77 0-1.16 0-1.47-.11a2 2 0 0 1-1.26-1.25c-.1-.31-.1-.7-.1-1.48M7.64 12c0-.77 0-1.16.1-1.47A2 2 0 0 1 9 9.27c.31-.1.7-.1 1.47-.1h10.11v5.66h-10.1c-.78 0-1.17 0-1.48-.1a2 2 0 0 1-1.25-1.26c-.11-.3-.11-.7-.11-1.47m4.13-6.5c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h6.81v5.67h-6.8c-.95 0-1.42 0-1.71-.3-.3-.29-.3-.76-.3-1.7z'
+        fill='currentColor'
+      />
+      <path
+        d='M9.35 14.83h-1.9c-1.88 0-2.82 0-3.4.59-.6.58-.6 1.53-.6 3.41v1.4m4.19-5.4v-1.66c0-1.89 0-2.83.59-3.42.58-.58 1.52-.58 3.41-.58h1.65'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <path
+        d='M20.58 20.22V7.5c0-1.88 0-2.82-.58-3.41-.59-.59-1.53-.59-3.42-.59h-.8c-1.9 0-2.83 0-3.42.59s-.59 1.53-.59 3.41v1.67M21.83 20.5H2.17'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+    </svg>
+  )
+}

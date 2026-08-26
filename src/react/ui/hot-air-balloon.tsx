@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconHotAirBalloon: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconHotAirBalloon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='hot-air-balloon'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-hot-air-balloon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -26,16 +29,31 @@ export const IconHotAirBalloon: Icon = ({
       {title ? <title>{title}</title> : null}
       <path
         opacity='.2'
-        d='M9.81 9.91c0 3.12 1.36 6.75 1.36 6.75-2.64 0-4.81-3.63-4.81-6.75s2.8-6.37 4.8-6.37c0 0-1.35 3.25-1.35 6.37m4.21 0c0 3.12-1.36 6.75-1.36 6.75 2.64 0 4.82-3.63 4.82-6.75s-2.8-6.37-4.82-6.37c0 0 1.36 3.25 1.36 6.37'
-        fill='#000'
+        d='M9.55 9.67c0 3.49 1.52 7.55 1.52 7.55-2.96 0-5.39-4.06-5.39-7.55s3.14-7.13 5.39-7.13c0 0-1.52 3.64-1.52 7.13m4.71 0c0 3.49-1.52 7.55-1.52 7.55 2.96 0 5.39-4.06 5.39-7.55s-3.14-7.13-5.39-7.13c0 0 1.52 3.64 1.52 7.13'
+        fill='currentColor'
       />
       <path
-        d='M17.7 9.91c0 3.12-2.55 7.11-5.7 7.11s-5.7-4-5.7-7.1c0-3.13 2.55-6.36 5.7-6.36s5.7 3.23 5.7 6.35Z'
-        stroke='#000'
-        strokeWidth='1.5'
+        d='M18.38 9.67c0 3.49-2.86 7.96-6.38 7.96s-6.38-4.47-6.38-7.96S8.48 2.56 12 2.56s6.38 3.62 6.38 7.11'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
       />
-      <rect x='8.97' y='17.13' width='6.05' height='3.2' rx='1' stroke='#000' strokeWidth='1.5' />
-      <ellipse cx='12' cy='10.11' rx='2.04' ry='6.55' stroke='#000' strokeWidth='1.5' />
+      <rect
+        x='8.61'
+        y='17.75'
+        width='6.77'
+        height='3.59'
+        rx='1'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
+      <ellipse
+        cx='12'
+        cy='9.89'
+        rx='2.28'
+        ry='7.33'
+        stroke='currentColor'
+        strokeWidth={strokeWidth}
+      />
     </svg>
   )
 }

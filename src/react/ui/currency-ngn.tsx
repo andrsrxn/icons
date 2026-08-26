@@ -2,6 +2,7 @@ import type { Icon } from './types'
 
 export const IconCurrencyNgn: Icon = ({
   size = 24,
+  strokeWidth = 1.5,
   className,
   title,
   'aria-label': ariaLabel,
@@ -16,7 +17,9 @@ export const IconCurrencyNgn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      data-slot='currency-ngn'
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='ui-icon-currency-ngn'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -24,13 +27,10 @@ export const IconCurrencyNgn: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <path opacity='.2' d='M10.83 10.5 6 4.31v9.19h7.17L18 19.69V10.5z' fill='currentColor' />
       <path
-        d='M3.75 13.5h16.5m-16.5-3h16.5M6 19.69V4.3l12 15.4V4.3'
+        d='M17.88 3.43v17.14L6.09 3.43v17.14M2.6 10.1h18.8M2.6 13.9h18.8'
         stroke='currentColor'
-        strokeWidth='1.5'
-        strokeLinecap='round'
-        strokeLinejoin='round'
+        strokeWidth={strokeWidth}
       />
     </svg>
   )
