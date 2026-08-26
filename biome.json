@@ -5,6 +5,7 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
+      "!**/src/raw",
       "!**/dist",
       "!**/*.mjs",
       "!**/*.cjs",
