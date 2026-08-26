@@ -97,14 +97,9 @@ export function App() {
 
 The following UI icons automatically detect the `dir` attribute on the `html` or the closest parent element and add the `transform: scaleX(-1)` CSS property to the SVG element:
 
-- arrow-end
-- arrow-start
-- arrow-up-end
-- arrow-up-start
-- chevron-end
-- chevron-start
-- chevron-end-double
-- chevron-start-double
+- [List of RTL aware icons](./src/styles.css)
+
+If you want to keep them as there are regardless of direction, add `transform: scaleX(1)` to each icon on RTL direction.
 
 ## Naming
 
