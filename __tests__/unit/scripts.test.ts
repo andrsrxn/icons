@@ -49,7 +49,7 @@ describe('Generator: normalizeSvg', () => {
     // Simulate a malicious raw SVG (with hardcoded width and invalid attributes)
     const rawSvg = '<svg width="50" height="auto" stroke-width="2" fill="none"><path/></svg>'
 
-    const result = normalizeSvg(rawSvg, 'icon-test')
+    const result = normalizeSvg(rawSvg, 'test')
 
     // 1. Must have removed the original width and height
     expect(result).not.toContain('width="50"')
@@ -58,7 +58,7 @@ describe('Generator: normalizeSvg', () => {
     // 2. Must have injected the dynamic props
     expect(result).toContain('width={size}')
     expect(result).toContain('height={size}')
-    expect(result).toContain("data-slot='icon-test'")
+    expect(result).toContain("data-slot='ui-icon-test'")
     expect(result).toContain('{...props}')
 
     // 3. Must have camelCased the internal attributes

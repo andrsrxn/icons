@@ -56,10 +56,10 @@ describe('UI Icons', () => {
       expect(svg.classList.contains('custom-class')).toBe(true)
     })
 
-    it(`has data-slot="${slot}"`, () => {
+    it(`has data-slot="ui-icon-${slot}"`, () => {
       const { container } = render(<Component />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.getAttribute('data-slot')).toBe(slot)
+      expect(svg.getAttribute('data-slot')).toBe(`ui-icon-${slot}`)
     })
 
     it('is aria-hidden by default', () => {
