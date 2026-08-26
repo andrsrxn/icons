@@ -42,7 +42,7 @@ export const IconCoins: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M7.54 10.98c-2.8.45-4.81 1.68-4.81 3.13 0 1.82 3.2 3.3 7.16 3.3s7.17-1.48 7.17-3.3q0-.56-.38-1.06'
+        d='M7.26 11.17c-2.8.44-4.53 1.49-4.53 2.94 0 1.82 3.2 3.3 7.16 3.3s7.17-1.48 7.17-3.3q0-.56-.38-1.06'
         stroke='currentColor'
         strokeWidth={strokeWidth}
       />

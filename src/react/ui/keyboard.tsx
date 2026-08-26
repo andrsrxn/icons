@@ -29,27 +29,27 @@ export const IconKeyboard: Icon = ({
       {title ? <title>{title}</title> : null}
       <rect
         opacity='.2'
-        width='12'
-        height='18.81'
+        width='12.53'
+        height='19.09'
         rx='2'
-        transform='matrix(0 -1 -1 0 21.4 18)'
+        transform='matrix(0 -1 -1 0 21.54 18.27)'
         fill='currentColor'
       />
       <rect
-        width='12'
-        height='18.81'
+        width='12.53'
+        height='19.09'
         rx='2'
-        transform='matrix(0 -1 -1 0 21.4 18)'
+        transform='matrix(0 -1 -1 0 21.54 18.27)'
         stroke='currentColor'
         strokeWidth={strokeWidth}
       />
       <path
-        d='M6.5 9.93a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.96-3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.96 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m3.97 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 3.77a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
+        d='M6.5 9.85a.5.5 0 1 1-1.01 0 .5.5 0 0 1 1.01 0m-.06 4.3a.5.5 0 1 1-1.01 0 .5.5 0 0 1 1.01 0m4.09-4.3a.5.5 0 1 1-1.02 0 .5.5 0 0 1 1.02 0m4.02 0a.5.5 0 1 1-1.02 0 .5.5 0 0 1 1.02 0m4.02 0a.5.5 0 1 1-1.01 0 .5.5 0 0 1 1.01 0m-.06 4.3a.5.5 0 1 1-1.01 0 .5.5 0 0 1 1.01 0'
         fill='currentColor'
         stroke='currentColor'
         strokeWidth={strokeWidth}
       />
-      <path d='M14.54 13.76H9.46' stroke='currentColor' strokeWidth={strokeWidth} />
+      <path d='M14.61 14.2H9.45' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

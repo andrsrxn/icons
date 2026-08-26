@@ -27,12 +27,20 @@ export const IconClosedCaptioning: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='5.65' width='18.61' height='12.69' rx='3' fill='currentColor' />
       <rect
-        x='2.7'
-        y='5.65'
-        width='18.61'
-        height='12.69'
+        opacity='.2'
+        x='2.41'
+        y='5.46'
+        width='19.19'
+        height='13.09'
+        rx='3'
+        fill='currentColor'
+      />
+      <rect
+        x='2.41'
+        y='5.46'
+        width='19.19'
+        height='13.09'
         rx='3'
         stroke='currentColor'
         strokeWidth={strokeWidth}

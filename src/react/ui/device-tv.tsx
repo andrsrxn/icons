@@ -27,17 +27,17 @@ export const IconDeviceTv: Icon = ({
       className={`ui-icon ${className ?? ''}`}
       {...props}>
       {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='7.92' width='18.61' height='12.47' rx='3' fill='currentColor' />
+      <rect opacity='.2' x='2.7' y='6.91' width='18.61' height='12.47' rx='3' fill='currentColor' />
       <rect
         x='2.7'
-        y='7.92'
+        y='6.91'
         width='18.61'
         height='12.47'
         rx='3'
         stroke='currentColor'
         strokeWidth={strokeWidth}
       />
-      <path d='M11 7.92 8.52 3M13 7.92 14.52 4' stroke='currentColor' strokeWidth={strokeWidth} />
+      <path d='m11 6.91-2.19-4.5M13 6.91 14.52 3' stroke='currentColor' strokeWidth={strokeWidth} />
     </svg>
   )
 }

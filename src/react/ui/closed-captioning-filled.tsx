@@ -34,10 +34,10 @@ export const IconClosedCaptioningFilled: Icon = ({
         fill='currentColor'
       />
       <rect
-        x='2.7'
-        y='5.65'
-        width='18.61'
-        height='12.69'
+        x='2.43'
+        y='5.47'
+        width='19.15'
+        height='13.06'
         rx='3'
         stroke='currentColor'
         strokeWidth={strokeWidth}

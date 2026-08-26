@@ -28,7 +28,7 @@ export const IconArrowUpRight: Icon = ({
       {...props}>
       {title ? <title>{title}</title> : null}
       <path
-        d='M7.5 6.3h6.07c1.88 0 2.83-.01 3.41.58.6.58.6 1.53.6 3.41v6.08M5.96 17.9 16.32 7.56'
+        d='M7.1 6.1h6.66c1.9 0 2.83 0 3.42.58s.59 1.53.59 3.42v6.67M5.47 18.4 16.44 7.43'
         stroke='currentColor'
         strokeWidth={strokeWidth}
       />
