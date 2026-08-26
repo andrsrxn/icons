@@ -1,5 +1,69 @@
 # @andrsrxn/icons
 
+## 6.0.0
+
+### Major Changes
+
+- [`7624e2a`](https://github.com/andrsrxn/icons/commit/7624e2ae8515e5594c2447f5a308762b48407242) Thanks [@andrsrxn](https://github.com/andrsrxn)! - **Rebuilt all UI icons using strokes and shapes instead of flattened paths.**
+
+  Every UI icon's underlying SVG markup has changed. Previous versions shipped fully flattened path data; icons are now built from actual stroke and shape primitives instead. This reduces the size of each icon and lays the groundwork for animating individual strokes in the future.
+
+  **Renamed icons.** A number of icons were renamed to fix misspellings and to better reflect their intended meaning (e.g. `arrow-expand` to `expand`). Full
+  list of renames:
+
+  - `olimpyc-torch` to `olympic-torch`
+  - `vehicule-battery` to `vehicle-battery`
+  - `celcius` to `celsius`
+  - `resfresh` to `refresh`
+  - `trophie` to `trophy`
+  - `text-lowecase` to ``text-lowercase`
+  - `suffle` to ``shuffle`
+  - `phone-outcomming` to ``phone-outgoing`
+  - `text-aa` to ``text-case-sensitive`
+  - `text-clean` to ``text-clear`
+  - `substract` to ``subtract`
+  - `arrow-expand` to `expand`
+  - `arrow-contract` to `contract`
+  - `collapse` to `list-collapse`
+
+  **Removed `IconFaceId`.** This depicted Apple's Face ID feature and was removed for the same trademark reasons as the Brand icon removal.
+
+  **`data-slot` values changed.** UI icons now use `data-slot='ui-icon-{name}'` (previously just `{name}`). Flag icons now also carry a `data-slot`, using `data-slot='ui-flag-{name}'`. Update any selectors targeting these directly.
+
+  **Flag icon class name changed** from `ui-icon-flag` to `ui-flag`. Update any CSS targeting `.ui-icon-flag`.
+
+  **Migration:**
+
+  ```diff
+  - import { IconArrowExpand } from '@andrsrxn/icons'
+  + import { IconExpand } from '@andrsrxn/icons'
+
+  - import { IconFaceId } from '@andrsrxn/icons'
+  + import { IconFaceScan } from '@andrsrxn/icons' // alternative with the same meaning
+
+  - [data-slot='rocket'] { ... }
+  + [data-slot='ui-icon-rocket'] { ... }
+
+  - .ui-icon-flag { ... }
+  + .ui-flag { ... }
+  ```
+
+### Minor Changes
+
+- [`7624e2a`](https://github.com/andrsrxn/icons/commit/7624e2ae8515e5594c2447f5a308762b48407242) Thanks [@andrsrxn](https://github.com/andrsrxn)! - **Added new UI icons.**
+
+  More than a 100 icons were added, including new variants for current icons and specific use cases.
+
+  **Added a `strokeWidth` prop** to control an icon's stroke width, either
+  individually per icon or globally via `.ui-icon * { stroke-width: ... }`.
+  Changing it from the default is not recommended; since icons combine
+  strokes with filled shapes, altering `stroke-width` can produce unexpected
+  results where the stroke and fill no longer align cleanly.
+
+  **Support RTL for new icons**
+
+  Icon such as swipe-right/left, panels-right/left, keyboard keys, and more, now are RTL aware.
+
 ## 5.0.0
 
 ### Major Changes
