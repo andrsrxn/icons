@@ -1,10 +1,10 @@
 .ui-icon,
-.ui-icon-flag {
+.ui-flag {
   display: inline-block;
   flex-shrink: 0;
 }
 
-.ui-icon-flag {
+.ui-flag {
   height: auto;
 }
 
@@ -15,13 +15,74 @@
 }
 
 /* RTL aware icons */
-[data-slot='icon-arrow-start']:dir(rtl),
-[data-slot='icon-arrow-end']:dir(rtl),
-[data-slot='icon-arrow-up-end']:dir(rtl),
-[data-slot='icon-arrow-up-start']:dir(rtl),
-[data-slot='icon-chevron-end']:dir(rtl),
-[data-slot='icon-chevron-start']:dir(rtl),
-[data-slot='icon-chevron-end-double']:dir(rtl),
-[data-slot='icon-chevron-start-double']:dir(rtl) {
+
+/* Arrows and chevrons */
+[data-slot='ui-icon-arrow-left']:dir(rtl),
+[data-slot='ui-icon-arrow-right']:dir(rtl),
+[data-slot='ui-icon-arrow-up-left']:dir(rtl),
+[data-slot='ui-icon-arrow-up-right']:dir(rtl),
+[data-slot='ui-icon-chevron-left']:dir(rtl),
+[data-slot='ui-icon-chevron-right']:dir(rtl),
+[data-slot='ui-icon-chevron-left-double']:dir(rtl),
+[data-slot='ui-icon-chevron-right-double']:dir(rtl),
+
+/* U-turn arrows */
+[data-slot='ui-icon-arrow-u-left']:dir(rtl),
+[data-slot='ui-icon-arrow-u-right']:dir(rtl),
+
+/* Corner arrows */
+[data-slot='ui-icon-arrow-corner-down-left']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-down-right']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-left-down']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-left-up']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-right-down']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-right-up']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-up-left']:dir(rtl),
+[data-slot='ui-icon-arrow-corner-up-right']:dir(rtl),
+
+/* Swipe gestures */
+[data-slot='ui-icon-hand-swipe-left']:dir(rtl),
+[data-slot='ui-icon-hand-swipe-right']:dir(rtl),
+
+/* Bounce navigation */
+[data-slot='ui-icon-bounce-left']:dir(rtl),
+[data-slot='ui-icon-bounce-right']:dir(rtl),
+
+/* Auth/flow entry-exit */
+[data-slot='ui-icon-sign-in']:dir(rtl),
+[data-slot='ui-icon-sign-out']:dir(rtl),
+
+/* Text editing direction */
+[data-slot='ui-icon-text-indent']:dir(rtl),
+[data-slot='ui-icon-text-outdent']:dir(rtl),
+
+/* Key arrows */
+[data-slot='ui-icon-key-backspace']:dir(rtl),
+[data-slot='ui-icon-key-enter']:dir(rtl),
+
+/* External navigation and sharing */
+[data-slot='ui-icon-external-link']:dir(rtl),
+[data-slot='ui-icon-repeat']:dir(rtl),
+[data-slot='ui-icon-reload']:dir(rtl),
+[data-slot='ui-icon-resend']:dir(rtl),
+[data-slot='ui-icon-repost']:dir(rtl),
+[data-slot='ui-icon-navigation']:dir(rtl),
+
+/* Trend/chart direction */
+[data-slot='ui-icon-trend-up']:dir(rtl),
+[data-slot='ui-icon-trend-down']:dir(rtl),
+[data-slot='ui-icon-trend-up-down']:dir(rtl),
+
+/* Context-dependent: panels */
+[data-slot='ui-icon-panel-left']:dir(rtl),
+[data-slot='ui-icon-panel-right']:dir(rtl),
+[data-slot='ui-icon-panel-left-open']:dir(rtl),
+[data-slot='ui-icon-panel-right-open']:dir(rtl),
+[data-slot='ui-icon-panels-left']:dir(rtl),
+[data-slot='ui-icon-panels-right']:dir(rtl),
+
+/* Context-dependent: slides/carousel direction */
+[data-slot='ui-icon-slides-left']:dir(rtl),
+[data-slot='ui-icon-slides-right']:dir(rtl) {
   transform: scaleX(-1);
 }
