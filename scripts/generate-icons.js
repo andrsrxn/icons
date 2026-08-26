@@ -26,6 +26,7 @@ const ICONS_OUT = path.resolve('./src/react/ui')
 
 const CLASSNAME = 'ui-icon'
 const ICON_SIZE = 24
+const STROKE_WIDTH = 1.5
 
 // Helpers
 
@@ -46,16 +47,50 @@ function svgAttrsToJsx(svg) {
   })
 }
 
-// Custom props injection
-
-// Custom props injection
-
-function injectReactProps(svg, iconName) {
+// Strip one or more attributes from the root <svg> tag only, leaving any
+// identically-named attribute on child elements (paths, etc.) untouched.
+function stripRootAttrs(svg, attrNames) {
   return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
+    let cleanAttrs = attrs
+    for (const attr of attrNames) {
+      cleanAttrs = cleanAttrs.replace(new RegExp(`\\s${attr}=["'][^"']*["']`, 'giu'), '')
+    }
+    return `<svg${cleanAttrs}>`
+  })
+}
+
+// Strip every occurrence of an attribute, anywhere in the markup (any
+// path/shape element - the raw source never sets these on the root).
+function stripAllAttr(svg, attrName) {
+  return svg.replace(new RegExp(`\\s${attrName}=["'][^"']*["']`, 'giu'), '')
+}
+
+// True if the attribute appears anywhere in the markup.
+function hasAttr(svg, attrName) {
+  return new RegExp(`\\s${attrName}=["'][^"']*["']`, 'iu').test(svg)
+}
+
+// Any hardcoded stroke-width on a path/shape becomes a binding to the new
+// `strokeWidth` prop instead of a fixed value. `stroke` (the color) is
+// left untouched wherever it appears - only its width is made dynamic.
+function convertStrokeWidthToProp(svg) {
+  return svg.replace(/strokeWidth=["'][\d.]+["']/giu, 'strokeWidth={strokeWidth}')
+}
+
+// Custom props injection
+
+function injectReactProps(svg, iconName, injectStrokeLinecapLinejoin) {
+  return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
+    const strokeProps = injectStrokeLinecapLinejoin
+      ? `
+      strokeLinecap='round'
+      strokeLinejoin='round'`
+      : ''
+
     return `<svg${attrs}
       width={size}
-      height={size}
-      data-slot='${iconName}'
+      height={size}${strokeProps}
+      data-slot='${CLASSNAME}-${iconName}'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -69,13 +104,30 @@ function injectReactProps(svg, iconName) {
 function normalizeSvg(svg, iconName) {
   svg = svgAttrsToJsx(svg)
 
-  // 1. Clean the width and height attributes from the original <svg> tag
-  svg = svg.replace(/<svg([^>]*)>/u, (_, attrs) => {
-    const cleanAttrs = attrs.replace(/\b(width|height)=["'][^"']*["']/giu, '')
-    return `<svg${cleanAttrs}>`
-  })
+  // Strip width/height from the root <svg> tag - these become the
+  // controlled `size` prop. stroke/stroke-width/stroke-linecap/
+  // stroke-linejoin never appear on the root in the raw source, only on
+  // individual paths/shapes, so nothing else needs stripping from it.
+  svg = stripRootAttrs(svg, ['width', 'height'])
 
-  svg = injectReactProps(svg, iconName)
+  // strokeLinecap / strokeLinejoin live on individual paths in the raw
+  // source. If the icon uses them anywhere, consolidate them: strip
+  // every per-path occurrence and add exactly one global pair on the
+  // root <svg> tag. Icons that never use a stroke at all (pure fill /
+  // duotone icons) are left completely alone here - nothing gets added
+  // to their root unnecessarily.
+  const usesStrokeLinecapLinejoin = hasAttr(svg, 'strokeLinecap') || hasAttr(svg, 'strokeLinejoin')
+
+  if (usesStrokeLinecapLinejoin) {
+    svg = stripAllAttr(svg, 'strokeLinecap')
+    svg = stripAllAttr(svg, 'strokeLinejoin')
+  }
+
+  // Any hardcoded stroke-width - wherever it appears on a path/shape -
+  // becomes a binding to the strokeWidth prop instead of a fixed value.
+  svg = convertStrokeWidthToProp(svg)
+
+  svg = injectReactProps(svg, iconName, usesStrokeLinecapLinejoin)
 
   return svg
 }
@@ -97,6 +149,7 @@ function generateComponent(fileName, svgContent) {
 
 export const Icon${componentName}: Icon = ({
   size = ${ICON_SIZE},
+  strokeWidth = ${STROKE_WIDTH},
   className,
   title,
   'aria-label': ariaLabel,
@@ -147,7 +200,16 @@ function main() {
 }
 
 // testing porpuses
-export { generateComponent, normalizeSvg, svgAttrsToJsx, toPascalCase }
+export {
+  convertStrokeWidthToProp,
+  generateComponent,
+  hasAttr,
+  normalizeSvg,
+  stripAllAttr,
+  stripRootAttrs,
+  svgAttrsToJsx,
+  toPascalCase,
+}
 
 if (process?.argv?.[1]?.endsWith('generate-icons.js')) {
   main()
