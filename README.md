@@ -166,6 +166,21 @@ By default, the UI icons have `currentColor` set as fill and stroke value.
 
 It is not intended to change the stroke width of the icons (default `1.5`). It could lead to inconsistent results in some cases.
 
+if you still need to change it, add `strokeWidth` prop to each icon.
+
+```tsx
+<IconRocket strokeWidth={2} />
+<IconRocket className='**:stroke-2' />
+```
+
+Or set it globally yo all icons using `stroke-width` property.
+
+```css
+.ui-icon * {
+  stroke-width: 2px;
+}
+```
+
 ## Types
 
 We expose scoped types for each category:
@@ -178,7 +193,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 - **Icon**, **FlagIcon**: The SVG element
 - **IconProps**, **FlagIconProps**: Icon component props from SVG and custom props
 
-> **Note**: Named this way to avoid conficts with some Icon components names, such as `IconFlag` from UI icons.
+> **Note**: Types are named this way to avoid conficts with some Icon components names, such as `IconFlag` from UI icons.
 
 ## Contributing
 
@@ -206,10 +221,10 @@ See [THIRD-PARTY-LICENSES.md](THIRD-PARTY-LICENSES.md) for the full license text
 
 ## Next steps
 
-- Add more specific UI icons
-- Keep optimizing the icon library size
+- Documentation
+- Figma plugin
 - Consider adapting the icons to other frameworks (Svelte, Vue, Angular, etc.)
 
 ## License
 
-All icons are free to use, personal or commercial use allowed. [MIT License](LICENSE) - Copyright 2026 andrsrxn.
+All icons are free to use, personal or commercial use allowed. [MIT License](LICENSE) - Copyright 2026 Andrés Raxón (andrsrxn).
