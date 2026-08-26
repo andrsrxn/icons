@@ -1,4 +1,4 @@
-<img src="https://res.cloudinary.com/dq5nfyajn/image/upload/v1786396828/symbol_bo4gxs.svg" alt="andrsrxn/ui symbol" width="64" height="64" />
+<img src="./assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
 
 # andrsrxn/icons
 
@@ -12,7 +12,7 @@
 
 React icon library with 900+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.
 
-![Icons banner with logo in the center](https://res.cloudinary.com/dq5nfyajn/image/upload/v1786933080/banner-github_jupx5b.webp)
+![Icons banner with logo in the center](./assets/banner-github.webp)
 
 ## Overview
 
