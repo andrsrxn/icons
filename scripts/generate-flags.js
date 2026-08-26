@@ -26,7 +26,7 @@ import { optimize } from 'svgo'
 const FLAGS_DIR = path.resolve('./src/raw/flags')
 const FLAGS_OUT = path.resolve('./src/react/flags')
 
-const CLASSNAME = 'ui-icon-flag'
+const CLASSNAME = 'ui-flag'
 
 // Helpers
 
@@ -135,6 +135,7 @@ export const ${componentName}: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
+      data-slot='${CLASSNAME}-${countryCodeLower}'
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
