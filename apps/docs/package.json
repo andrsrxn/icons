@@ -1,0 +1,35 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "format": "prettier --write . && echo Format finished.",
+    "format:check": "prettier --check . && echo Format finished.",
+    "build": "next build",
+    "start": "next start",
+    "lint": "biome check && echo Lint finished.",
+    "lint:check": "biome ci && echo Lint finished.",
+    "type:check": "tsc --noEmit && echo Typecheck finished.",
+    "dep:check": "pnpm dlx knip && echo Depcheck finished.",
+    "react:check": "pnpm dlx react-doctor@latest . && echo React check finished."
+  },
+  "engines": {
+    "node": "^24",
+    "pnpm": "^11"
+  },
+  "packageManager": "pnpm@11.20.0",
+  "dependencies": {
+    "next": "16.3.3",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "@andrsrxn/icons": "workspace:*"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "4.3.3",
+    "@types/node": "24.13.3",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.5",
+    "tailwindcss": "4.3.3"
+  }
+}
