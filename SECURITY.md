@@ -6,8 +6,8 @@ We actively maintain and provide security updates for the latest major version o
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1.x     | :white_check_mark: |
-| < 1.0   | :x:                |
+| 6.x     | :white_check_mark: |
+| < 6.0   | :x:                |
 
 ---
 
