@@ -3,7 +3,7 @@ name: GitHub Release
 on:
   push:
     tags:
-      - 'v*'
+      - '@andrsrxn/icons@*'
 
 jobs:
   github-release:
@@ -12,20 +12,18 @@ jobs:
       contents: write
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Extract changelog section
         run: |
-          VERSION=${GITHUB_REF_NAME#v}
-          
-          # Extract the section from CHANGELOG.md
+          VERSION=${GITHUB_REF_NAME#@andrsrxn/icons@}
+
           awk -v ver="## $VERSION" '
             $0 == ver { found=1; next }
             found && /^## / { exit }
             found { print }
-          ' CHANGELOG.md > patch_changes.md
+          ' packages/icons/CHANGELOG.md > patch_changes.md
 
-          # FALLBACK CHECK: If the file is empty or only contains whitespace
           if [ ! -s patch_changes.md ] || ! grep -q '[^[:space:]]' patch_changes.md; then
             echo "### Release $GITHUB_REF_NAME" > patch_changes.md
             echo "See the automated changelog below for a full list of changes." >> patch_changes.md

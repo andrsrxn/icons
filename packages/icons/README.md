@@ -16,7 +16,7 @@ React icon library with 900+ duotone icons and 250+ flag icons. Fully typed, RTL
 
 ## Overview
 
-This repository is the official monorepo for `@andrsrxn/icons`, built to serve as the icon foundation for **[@andrsrxn/ui](https://ui.andrsrxn.com)**, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
+This library was built to serve as the icon foundation for **[@andrsrxn/ui](https://ui.andrsrxn.com)**, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
 
 While `@andrsrxn/icons` is tightly coupled to that vision, it is intentionally published as a **standalone package**. This keeps it lightweight, independently versioned, and freely usable by anyone (regardless of whether they adopt `@andrsrxn/ui`). Icon documentation will be available at [ui.andrsrxn.com/icons](https://ui.andrsrxn.com/icons) once the UI package is released.
 

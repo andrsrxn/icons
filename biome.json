@@ -5,6 +5,9 @@
     "ignoreUnknown": false,
     "includes": [
       "**",
+      "!**/.next",
+      "!**/.turbo",
+      "!**/.changeset/*.md",
       "!**/src/raw",
       "!**/dist",
       "!**/*.mjs",
@@ -226,7 +229,7 @@
       }
     },
     {
-      "includes": ["__tests__/**"],
+      "includes": ["**/__tests__/**"],
       "linter": {
         "rules": {
           "security": {
@@ -242,7 +245,7 @@
       }
     },
     {
-      "includes": ["src/**"],
+      "includes": ["packages/icons/src/**"],
       "linter": {
         "rules": {
           "complexity": {

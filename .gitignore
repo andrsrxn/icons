@@ -1,16 +1,41 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
+# dependencies
 node_modules
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+coverage
+
+# next.js
+.next
+out
+next-env.d.ts
+
+# production
+build
 dist
 dist-ssr
 *.local
+
+# misc
+.DS_Store
+*.pem
+
+# Logs
+logs
+*.log
+
+# debug
+.pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
 
 # Editor directories and files
 
@@ -24,3 +49,8 @@ dist-ssr
 
 .env*
 *.tsbuildinfo
+
+# Monorepo
+.turbo
+patch_changes.md
+

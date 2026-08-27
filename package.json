@@ -1,127 +1,40 @@
 {
-  "name": "@andrsrxn/icons",
-  "version": "6.0.0",
-  "publishConfig": {
-    "access": "public"
+  "name": "andrsrxn-icons-monorepo",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:icons": "turbo run dev --filter=@andrsrxn/icons",
+    "dev:docs": "turbo run dev --filter=docs",
+    "build": "turbo run build",
+    "build:icons": "turbo run build --filter=@andrsrxn/icons",
+    "build:docs": "turbo run build --filter=docs",
+    "lint": "turbo run lint",
+    "lint:check": "turbo run lint:check",
+    "format": "turbo run format",
+    "format:check": "turbo run format:check",
+    "type:check": "turbo run type:check",
+    "dep:check": "turbo run dep:check",
+    "react:check": "turbo run react:check",
+    "test": "turbo run test",
+    "test:check": "turbo run test:check",
+    "changeset": "changeset",
+    "version-package": "changeset version && pnpm install --no-frozen-lockfile",
+    "release": "pnpm build:icons && changeset publish",
+    "generate-icons": "turbo run generate-icons",
+    "generate-flags": "turbo run generate-flags"
   },
-  "description": "React icon library with 900+ duotone icons and 250+ flag icons. Fully typed, RTL-aware, and optimized SVGs.",
-  "type": "module",
-  "license": "MIT",
-  "author": {
-    "name": "Andrés Raxón",
-    "email": "info@andrsrxn.com",
-    "url": "https://andrsrxn.com"
-  },
-  "keywords": [
-    "icons",
-    "duotone",
-    "flags",
-    "react",
-    "ui",
-    "tree-shakeable",
-    "svg",
-    "typescript",
-    "icons-library",
-    "design-system"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andrsrxn/icons.git"
-  },
-  "homepage": "https://github.com/andrsrxn/icons#readme",
-  "bugs": {
-    "url": "https://github.com/andrsrxn/icons/issues"
-  },
-  "funding": {
-    "type": "GitHub Sponsors",
-    "url": "https://github.com/sponsors/andrsrxn"
-  },
-  "sideEffects": [
-    "dist/**/*.css"
-  ],
-  "files": [
-    "dist",
-    "LICENSE",
-    "README.md",
-    "CHANGELOG.md",
-    "THIRD-PARTY-LICENSES.md"
-  ],
   "engines": {
     "node": "^24",
     "pnpm": "^11"
   },
   "packageManager": "pnpm@11.20.0",
-  "exports": {
-    ".": {
-      "types": "./dist/ui/index.d.ts",
-      "import": "./dist/ui/index.js"
-    },
-    "./types": {
-      "types": "./dist/ui/types.d.ts"
-    },
-    "./flags": {
-      "types": "./dist/flags/index.d.ts",
-      "import": "./dist/flags/index.js"
-    },
-    "./flags/types": {
-      "types": "./dist/flags/types.d.ts"
-    },
-    "./flags/*": {
-      "types": "./dist/flags/*.d.ts",
-      "import": "./dist/flags/*.js"
-    },
-    "./*": {
-      "types": "./dist/ui/*.d.ts",
-      "import": "./dist/ui/*.js"
-    },
-    "./styles.css": "./dist/styles.css"
-  },
-  "scripts": {
-    "dev": "vite",
-    "build:icons": "tsdown && node ./scripts/fix-types-exports.js && node ./scripts/inject-dts-previews.js",
-    "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
-    "build": "pnpm build:icons && pnpm build:css && pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only --exclude-entrypoints styles.css && pnpm dlx publint . && echo Build finished.",
-    "format": "prettier --write . && echo Format finished.",
-    "format:check": "prettier --check . && echo Format finished.",
-    "lint": "biome check && echo Lint finished.",
-    "lint:check": "biome ci && echo Lint finished.",
-    "typecheck": "tsc --noEmit && echo Typecheck finished.",
-    "test": "vitest",
-    "test:check": "vitest run",
-    "changeset": "changeset",
-    "version-package": "changeset version",
-    "release": "pnpm build && changeset publish",
-    "generate-icons": "node ./scripts/generate-icons.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/ui && echo Icons generated and formatted.",
-    "generate-icons-index": "node ./scripts/generate-icons-index.js && echo Icons index generated.",
-    "generate-flags": "node ./scripts/generate-flags.js && node ./scripts/generate-icons-index.js && prettier --write ./src/react/flags && echo Flags generated and formatted.",
-    "typecoverage": "pnpm type-coverage -at-least=99 && echo Typecoverage finished.",
-    "depcheck": "pnpm dlx knip && echo Depcheck finished.",
-    "doctor": "pnpm dlx react-doctor@latest . && echo Doctor finished."
-  },
-  "peerDependencies": {
-    "react": "^19",
-    "react-dom": "^19"
-  },
   "devDependencies": {
-    "@biomejs/biome": "2.5.6",
-    "@changesets/changelog-github": "0.7.0",
-    "@changesets/cli": "2.31.1",
-    "@testing-library/dom": "10.4.1",
-    "@testing-library/jest-dom": "7.0.0",
-    "@testing-library/react": "16.3.2",
-    "@types/node": "24.12.4",
-    "@types/react": "19.2.18",
-    "@types/react-dom": "19.2.4",
-    "@vitejs/plugin-react": "6.0.5",
-    "jsdom": "30.0.1",
-    "lefthook": "2.1.10",
-    "lightningcss-cli": "1.33.0",
+    "turbo": "2.10.12",
     "prettier": "3.9.6",
-    "svgo": "4.0.2",
-    "tsdown": "0.22.14",
-    "type-coverage": "2.30.1",
+    "@biomejs/biome": "2.5.6",
     "typescript": "7.0.2",
-    "vite": "8.2.0",
-    "vitest": "4.1.10"
+    "lefthook": "2.1.10",
+    "@changesets/changelog-github": "0.7.0",
+    "@changesets/cli": "2.31.1"
   }
 }

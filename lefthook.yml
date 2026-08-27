@@ -9,10 +9,8 @@ pre-push:
   parallel: true
   commands:
     lint:
-      run: pnpm lint
-
-    typecheck:
-      run: pnpm typecheck
-
+      run: pnpm turbo run lint:check
+    type:
+      run: pnpm turbo run type:check
     test:
-      run: pnpm test
+      run: pnpm turbo run test:check

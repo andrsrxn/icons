@@ -1,3 +1,7 @@
+packages:
+  - 'packages/*'
+  - 'apps/*'
+
 saveExact: true
 autoInstallPeers: true
 minimumReleaseAge: 0
