@@ -10,8 +10,11 @@ export const IconFlagAT: FlagIcon = ({
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  
   const isHidden = ariaHidden === true
   const titleText = title ?? 'AT'
+  
+  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -25,30 +28,19 @@ export const IconFlagAT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'at-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'at-title'}>{titleText}</title> : null}
 
-      <defs>
-        <linearGradient id='at-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='at-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f64253' />
-          <stop offset='100%' stopColor='#ea2d3f' />
-        </linearGradient>
+      <defs><defs><linearGradient id="at-a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#fff"/><stop offset="100%" stopColor="#f0f0f0"/></linearGradient><linearGradient id="at-b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#f64253"/><stop offset="100%" stopColor="#ea2d3f"/></linearGradient></defs>
         <clipPath id='at-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#at-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#at-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#at-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#at-b)' d='M0 10h21v5H0z' />
-          <path fill='url(#at-a)' d='M0 5h21v5H0z' />
-        </g>
+        <g fill="none" fillRule="evenodd"><path fill="url(#at-a)" d="M0 0h21v15H0z"/><path fill="url(#at-b)" d="M0 0h21v5H0z"/><path fill="url(#at-b)" d="M0 10h21v5H0z"/><path fill="url(#at-a)" d="M0 5h21v5H0z"/></g>
       </g>
     </svg>
   )

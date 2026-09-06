@@ -13,6 +13,8 @@ export const IconFlagTW: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TW'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagTW: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tw-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tw-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='tw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tw-b' x1='50%' x2='50%' y1='0%' y2='93.767%'>
-          <stop offset='0%' stopColor='#fe3030' />
-          <stop offset='100%' stopColor='red' />
-        </linearGradient>
-        <linearGradient id='tw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0909b6' />
-          <stop offset='100%' stopColor='#000096' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='tw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tw-b' x1='50%' x2='50%' y1='0%' y2='93.767%'>
+            <stop offset='0%' stopColor='#fe3030' />
+            <stop offset='100%' stopColor='red' />
+          </linearGradient>
+          <linearGradient id='tw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0909b6' />
+            <stop offset='100%' stopColor='#000096' />
+          </linearGradient>
+        </defs>
         <clipPath id='tw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagFK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'FK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,43 +27,47 @@ export const IconFlagFK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'fk-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'fk-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='fk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='fk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07319c' />
-          <stop offset='100%' stopColor='#00247e' />
-        </linearGradient>
-        <linearGradient id='fk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1f8bde' />
-          <stop offset='100%' stopColor='#1075c2' />
-        </linearGradient>
-        <linearGradient id='fk-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='fk-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#187536' />
-          <stop offset='100%' stopColor='#0e5023' />
-        </linearGradient>
-        <linearGradient id='fk-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <path
-          id='fk-c'
-          d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
-        />
-        <path
-          id='fk-i'
-          d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
-        />
+        <defs>
+          <linearGradient id='fk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='fk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07319c' />
+            <stop offset='100%' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient id='fk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1f8bde' />
+            <stop offset='100%' stopColor='#1075c2' />
+          </linearGradient>
+          <linearGradient id='fk-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='fk-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#187536' />
+            <stop offset='100%' stopColor='#0e5023' />
+          </linearGradient>
+          <linearGradient id='fk-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <path
+            id='fk-c'
+            d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
+          />
+          <path
+            id='fk-i'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
+          />
+        </defs>
         <clipPath id='fk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

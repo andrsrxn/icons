@@ -13,6 +13,8 @@ export const IconFlagNG: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NG'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,19 +27,23 @@ export const IconFlagNG: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ng-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ng-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#189b62' />
-          <stop offset='100%' stopColor='#118653' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#189b62' />
+            <stop offset='100%' stopColor='#118653' />
+          </linearGradient>
+        </defs>
         <clipPath id='ng-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

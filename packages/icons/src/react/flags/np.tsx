@@ -13,6 +13,8 @@ export const IconFlagNP: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NP'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagNP: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'np-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'np-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='np-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='np-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ee1b44' />
-          <stop offset='100%' stopColor='#dd153c' />
-        </linearGradient>
-        <linearGradient id='np-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0543a8' />
-          <stop offset='100%' stopColor='#003893' />
-        </linearGradient>
-        <path
-          id='np-a'
-          d='M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0z'
-        />
-        <path
-          id='np-e'
-          d='M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0z'
-        />
+        <defs>
+          <linearGradient id='np-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='np-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ee1b44' />
+            <stop offset='100%' stopColor='#dd153c' />
+          </linearGradient>
+          <linearGradient id='np-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0543a8' />
+            <stop offset='100%' stopColor='#003893' />
+          </linearGradient>
+          <path
+            id='np-a'
+            d='M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0z'
+          />
+          <path
+            id='np-e'
+            d='M0 0h1.495c.279 0 .693.126.918.275L13.175 7.45c.456.304.372.55-.172.55H6l7.247 6.341c.416.364.303.659-.254.659H0z'
+          />
+        </defs>
         <clipPath id='np-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

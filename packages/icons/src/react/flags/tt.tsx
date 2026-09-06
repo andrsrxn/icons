@@ -13,6 +13,8 @@ export const IconFlagTT: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TT'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagTT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tt-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tt-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='tt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ed233c' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
-        <linearGradient id='tt-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='tt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ed233c' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient id='tt-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+        </defs>
         <clipPath id='tt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

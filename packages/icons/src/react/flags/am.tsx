@@ -10,8 +10,11 @@ export const IconFlagAM: FlagIcon = ({
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  
   const isHidden = ariaHidden === true
   const titleText = title ?? 'AM'
+  
+  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -25,38 +28,19 @@ export const IconFlagAM: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'am-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'am-title'}>{titleText}</title> : null}
 
-      <defs>
-        <linearGradient id='am-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='am-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1047b9' />
-          <stop offset='100%' stopColor='#06379d' />
-        </linearGradient>
-        <linearGradient id='am-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f01c31' />
-          <stop offset='100%' stopColor='#d70a1f' />
-        </linearGradient>
-        <linearGradient id='am-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f5b23e' />
-          <stop offset='100%' stopColor='#f0a728' />
-        </linearGradient>
+      <defs><defs><linearGradient id="am-a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#fff"/><stop offset="100%" stopColor="#f0f0f0"/></linearGradient><linearGradient id="am-b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#1047b9"/><stop offset="100%" stopColor="#06379d"/></linearGradient><linearGradient id="am-c" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#f01c31"/><stop offset="100%" stopColor="#d70a1f"/></linearGradient><linearGradient id="am-d" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#f5b23e"/><stop offset="100%" stopColor="#f0a728"/></linearGradient></defs>
         <clipPath id='am-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#am-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#am-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#am-b)' d='M0 5h21v5H0z' />
-          <path fill='url(#am-c)' d='M0 0h21v5H0z' />
-          <path fill='url(#am-d)' d='M0 10h21v5H0z' />
-        </g>
+        <g fill="none" fillRule="evenodd"><path fill="url(#am-a)" d="M0 0h21v15H0z"/><path fill="url(#am-b)" d="M0 5h21v5H0z"/><path fill="url(#am-c)" d="M0 0h21v5H0z"/><path fill="url(#am-d)" d="M0 10h21v5H0z"/></g>
       </g>
     </svg>
   )

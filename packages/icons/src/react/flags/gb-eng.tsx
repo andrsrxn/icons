@@ -13,6 +13,8 @@ export const IconFlagGBENG: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GB-ENG'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,19 +27,23 @@ export const IconFlagGBENG: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gb-eng-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gb-eng-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gb-eng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gb-eng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e82739' />
-          <stop offset='100%' stopColor='#ca1a2b' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='gb-eng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gb-eng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e82739' />
+            <stop offset='100%' stopColor='#ca1a2b' />
+          </linearGradient>
+        </defs>
         <clipPath id='gb-eng-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

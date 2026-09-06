@@ -13,6 +13,8 @@ export const IconFlagGT: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GT'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,19 +27,23 @@ export const IconFlagGT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gt-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gt-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#63aee3' />
-          <stop offset='100%' stopColor='#4998d0' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='gt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#63aee3' />
+            <stop offset='100%' stopColor='#4998d0' />
+          </linearGradient>
+        </defs>
         <clipPath id='gt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

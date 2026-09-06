@@ -13,6 +13,8 @@ export const IconFlagRS: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'RS'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagRS: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'rs-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'rs-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='rs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='rs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#17508f' />
-          <stop offset='100%' stopColor='#114175' />
-        </linearGradient>
-        <linearGradient id='rs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e1444d' />
-          <stop offset='100%' stopColor='#c53840' />
-        </linearGradient>
-        <path
-          id='rs-d'
-          d='M.5 2.5C.5 1.826.874.485.874.485A.67.67 0 0 1 1.495 0h2.01c.273 0 .552.214.621.481 0 0 .374 1.33.374 2.019 0 .645-.376 2.02-.376 2.02-.069.265-.269.654-.457.852 0 0-.417.628-1.167.628s-1.167-.628-1.167-.628a2.4 2.4 0 0 1-.46-.86S.5 3.162.5 2.5'
-        />
+        <defs>
+          <linearGradient id='rs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='rs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#17508f' />
+            <stop offset='100%' stopColor='#114175' />
+          </linearGradient>
+          <linearGradient id='rs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e1444d' />
+            <stop offset='100%' stopColor='#c53840' />
+          </linearGradient>
+          <path
+            id='rs-d'
+            d='M.5 2.5C.5 1.826.874.485.874.485A.67.67 0 0 1 1.495 0h2.01c.273 0 .552.214.621.481 0 0 .374 1.33.374 2.019 0 .645-.376 2.02-.376 2.02-.069.265-.269.654-.457.852 0 0-.417.628-1.167.628s-1.167-.628-1.167-.628a2.4 2.4 0 0 1-.46-.86S.5 3.162.5 2.5'
+          />
+        </defs>
         <clipPath id='rs-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

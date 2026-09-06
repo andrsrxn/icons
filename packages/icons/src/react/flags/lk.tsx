@@ -13,6 +13,8 @@ export const IconFlagLK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'LK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,35 +27,39 @@ export const IconFlagLK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'lk-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'lk-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='lk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='lk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffbf19' />
-          <stop offset='100%' stopColor='#ffb800' />
-        </linearGradient>
-        <linearGradient id='lk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#a52531' />
-          <stop offset='100%' stopColor='#8e1f29' />
-        </linearGradient>
-        <linearGradient id='lk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#03664f' />
-          <stop offset='100%' stopColor='#005642' />
-        </linearGradient>
-        <linearGradient id='lk-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ff6816' />
-          <stop offset='100%' stopColor='#ff5b01' />
-        </linearGradient>
-        <linearGradient id='lk-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffbf18' />
-          <stop offset='100%' stopColor='#ffb800' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='lk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='lk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffbf19' />
+            <stop offset='100%' stopColor='#ffb800' />
+          </linearGradient>
+          <linearGradient id='lk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#a52531' />
+            <stop offset='100%' stopColor='#8e1f29' />
+          </linearGradient>
+          <linearGradient id='lk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#03664f' />
+            <stop offset='100%' stopColor='#005642' />
+          </linearGradient>
+          <linearGradient id='lk-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ff6816' />
+            <stop offset='100%' stopColor='#ff5b01' />
+          </linearGradient>
+          <linearGradient id='lk-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffbf18' />
+            <stop offset='100%' stopColor='#ffb800' />
+          </linearGradient>
+        </defs>
         <clipPath id='lk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

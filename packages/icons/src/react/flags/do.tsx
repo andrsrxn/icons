@@ -13,6 +13,8 @@ export const IconFlagDO: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'DO'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagDO: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'do-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'do-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='do-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='do-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#083d7a' />
-          <stop offset='100%' stopColor='#032f61' />
-        </linearGradient>
-        <linearGradient id='do-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#df1e35' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='do-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='do-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#083d7a' />
+            <stop offset='100%' stopColor='#032f61' />
+          </linearGradient>
+          <linearGradient id='do-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#df1e35' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+        </defs>
         <clipPath id='do-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

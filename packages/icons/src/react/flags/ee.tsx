@@ -13,6 +13,8 @@ export const IconFlagEE: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'EE'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagEE: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ee-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ee-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ee-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ee-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='ee-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#5da8f1' />
-          <stop offset='100%' stopColor='#4892da' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ee-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ee-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='ee-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#5da8f1' />
+            <stop offset='100%' stopColor='#4892da' />
+          </linearGradient>
+        </defs>
         <clipPath id='ee-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

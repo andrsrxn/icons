@@ -13,6 +13,8 @@ export const IconFlagLU: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'LU'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagLU: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'lu-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'lu-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='lu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='lu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f14455' />
-          <stop offset='100%' stopColor='#eb2d3f' />
-        </linearGradient>
-        <linearGradient id='lu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#29b4ee' />
-          <stop offset='100%' stopColor='#1aa3dc' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='lu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='lu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f14455' />
+            <stop offset='100%' stopColor='#eb2d3f' />
+          </linearGradient>
+          <linearGradient id='lu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#29b4ee' />
+            <stop offset='100%' stopColor='#1aa3dc' />
+          </linearGradient>
+        </defs>
         <clipPath id='lu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

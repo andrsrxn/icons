@@ -13,6 +13,8 @@ export const IconFlagLB: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'LB'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagLB: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'lb-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'lb-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='lb-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='lb-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f03340' />
-          <stop offset='100%' stopColor='#eb212e' />
-        </linearGradient>
-        <linearGradient id='lb-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1fc065' />
-          <stop offset='100%' stopColor='#17a555' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='lb-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='lb-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f03340' />
+            <stop offset='100%' stopColor='#eb212e' />
+          </linearGradient>
+          <linearGradient id='lb-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1fc065' />
+            <stop offset='100%' stopColor='#17a555' />
+          </linearGradient>
+        </defs>
         <clipPath id='lb-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagSK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,35 +27,39 @@ export const IconFlagSK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sk-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sk-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0c47b7' />
-          <stop offset='100%' stopColor='#073da4' />
-        </linearGradient>
-        <linearGradient id='sk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e53b35' />
-          <stop offset='100%' stopColor='#d32e28' />
-        </linearGradient>
-        <linearGradient id='sk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sk-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f73744' />
-          <stop offset='100%' stopColor='#ec212f' />
-        </linearGradient>
-        <path
-          id='sk-e'
-          d='M1.711 2.001A1.05 1.05 0 0 1 2.751 1H7.25c.553 0 1.018.447 1.04 1.001L8.46 6.5c.022.553-.297 1.289-.72 1.652L6.146 9.518c-.633.542-1.662.54-2.292 0L2.259 8.15c-.419-.36-.742-1.098-.72-1.652z'
-        />
+        <defs>
+          <linearGradient id='sk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0c47b7' />
+            <stop offset='100%' stopColor='#073da4' />
+          </linearGradient>
+          <linearGradient id='sk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e53b35' />
+            <stop offset='100%' stopColor='#d32e28' />
+          </linearGradient>
+          <linearGradient id='sk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sk-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f73744' />
+            <stop offset='100%' stopColor='#ec212f' />
+          </linearGradient>
+          <path
+            id='sk-e'
+            d='M1.711 2.001A1.05 1.05 0 0 1 2.751 1H7.25c.553 0 1.018.447 1.04 1.001L8.46 6.5c.022.553-.297 1.289-.72 1.652L6.146 9.518c-.633.542-1.662.54-2.292 0L2.259 8.15c-.419-.36-.742-1.098-.72-1.652z'
+          />
+        </defs>
         <clipPath id='sk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

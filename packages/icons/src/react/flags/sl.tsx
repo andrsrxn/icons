@@ -13,6 +13,8 @@ export const IconFlagSL: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SL'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagSL: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sl-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sl-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#35ce4f' />
-          <stop offset='100%' stopColor='#2ab441' />
-        </linearGradient>
-        <linearGradient id='sl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1c87db' />
-          <stop offset='100%' stopColor='#1175c4' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='sl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#35ce4f' />
+            <stop offset='100%' stopColor='#2ab441' />
+          </linearGradient>
+          <linearGradient id='sl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1c87db' />
+            <stop offset='100%' stopColor='#1175c4' />
+          </linearGradient>
+        </defs>
         <clipPath id='sl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

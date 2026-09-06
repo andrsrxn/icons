@@ -13,6 +13,8 @@ export const IconFlagPH: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PH'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagPH: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ph-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ph-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ph-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ph-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#dd1c34' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
-        <linearGradient id='ph-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0d4bc3' />
-          <stop offset='100%' stopColor='#073da6' />
-        </linearGradient>
-        <linearGradient id='ph-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fdd64d' />
-          <stop offset='100%' stopColor='#fcd036' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ph-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ph-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#dd1c34' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient id='ph-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0d4bc3' />
+            <stop offset='100%' stopColor='#073da6' />
+          </linearGradient>
+          <linearGradient id='ph-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fdd64d' />
+            <stop offset='100%' stopColor='#fcd036' />
+          </linearGradient>
+        </defs>
         <clipPath id='ph-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

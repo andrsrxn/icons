@@ -13,6 +13,8 @@ export const IconFlagCK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'CK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagCK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ck-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ck-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ck-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ck-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0a17a7' />
-          <stop offset='100%' stopColor='#030e88' />
-        </linearGradient>
-        <linearGradient id='ck-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ck-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ck-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0a17a7' />
+            <stop offset='100%' stopColor='#030e88' />
+          </linearGradient>
+          <linearGradient id='ck-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+        </defs>
         <clipPath id='ck-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

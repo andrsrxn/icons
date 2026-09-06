@@ -13,6 +13,8 @@ export const IconFlagTK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagTK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tk-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tk-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='tk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0637c5' />
-          <stop offset='100%' stopColor='#002caa' />
-        </linearGradient>
-        <linearGradient id='tk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fdd33f' />
-          <stop offset='100%' stopColor='#fed02f' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='tk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0637c5' />
+            <stop offset='100%' stopColor='#002caa' />
+          </linearGradient>
+          <linearGradient id='tk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fdd33f' />
+            <stop offset='100%' stopColor='#fed02f' />
+          </linearGradient>
+        </defs>
         <clipPath id='tk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

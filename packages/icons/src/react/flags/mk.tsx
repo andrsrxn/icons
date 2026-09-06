@@ -13,6 +13,8 @@ export const IconFlagMK: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'MK'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagMK: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'mk-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'mk-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='mk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='mk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e81b26' />
-          <stop offset='100%' stopColor='#d00914' />
-        </linearGradient>
-        <linearGradient id='mk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffe94f' />
-          <stop offset='100%' stopColor='#ffe633' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='mk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='mk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e81b26' />
+            <stop offset='100%' stopColor='#d00914' />
+          </linearGradient>
+          <linearGradient id='mk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffe94f' />
+            <stop offset='100%' stopColor='#ffe633' />
+          </linearGradient>
+        </defs>
         <clipPath id='mk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

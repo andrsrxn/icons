@@ -13,6 +13,8 @@ export const IconFlagHR: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'HR'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagHR: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'hr-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'hr-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='hr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='hr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ff202d' />
-          <stop offset='100%' stopColor='#fd0d1b' />
-        </linearGradient>
-        <linearGradient id='hr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#2027ac' />
-          <stop offset='100%' stopColor='#191f94' />
-        </linearGradient>
-        <linearGradient id='hr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ff212e' />
-          <stop offset='100%' stopColor='#fd0d1b' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='hr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='hr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ff202d' />
+            <stop offset='100%' stopColor='#fd0d1b' />
+          </linearGradient>
+          <linearGradient id='hr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#2027ac' />
+            <stop offset='100%' stopColor='#191f94' />
+          </linearGradient>
+          <linearGradient id='hr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ff212e' />
+            <stop offset='100%' stopColor='#fd0d1b' />
+          </linearGradient>
+        </defs>
         <clipPath id='hr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

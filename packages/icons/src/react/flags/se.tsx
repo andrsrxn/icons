@@ -13,6 +13,8 @@ export const IconFlagSE: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SE'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagSE: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'se-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'se-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='se-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='se-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#157cbb' />
-          <stop offset='100%' stopColor='#0e6ca5' />
-        </linearGradient>
-        <linearGradient id='se-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd34d' />
-          <stop offset='100%' stopColor='#fecb2f' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='se-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='se-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#157cbb' />
+            <stop offset='100%' stopColor='#0e6ca5' />
+          </linearGradient>
+          <linearGradient id='se-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd34d' />
+            <stop offset='100%' stopColor='#fecb2f' />
+          </linearGradient>
+        </defs>
         <clipPath id='se-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

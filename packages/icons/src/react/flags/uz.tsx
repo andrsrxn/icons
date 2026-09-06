@@ -13,6 +13,8 @@ export const IconFlagUZ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'UZ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagUZ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'uz-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'uz-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='uz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='uz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#04aac8' />
-          <stop offset='100%' stopColor='#009ab6' />
-        </linearGradient>
-        <linearGradient id='uz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#23c840' />
-          <stop offset='100%' stopColor='#1eb639' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='uz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='uz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#04aac8' />
+            <stop offset='100%' stopColor='#009ab6' />
+          </linearGradient>
+          <linearGradient id='uz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#23c840' />
+            <stop offset='100%' stopColor='#1eb639' />
+          </linearGradient>
+        </defs>
         <clipPath id='uz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

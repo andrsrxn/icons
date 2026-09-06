@@ -13,6 +13,8 @@ export const IconFlagLA: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'LA'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagLA: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'la-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'la-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='la-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='la-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#073a88' />
-          <stop offset='100%' stopColor='#032a67' />
-        </linearGradient>
-        <linearGradient id='la-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e2273e' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='la-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='la-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#073a88' />
+            <stop offset='100%' stopColor='#032a67' />
+          </linearGradient>
+          <linearGradient id='la-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e2273e' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+        </defs>
         <clipPath id='la-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

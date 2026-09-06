@@ -13,6 +13,8 @@ export const IconFlagTH: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TH'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagTH: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'th-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'th-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='th-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='th-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f12532' />
-          <stop offset='100%' stopColor='#eb212e' />
-        </linearGradient>
-        <linearGradient id='th-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#322b6c' />
-          <stop offset='100%' stopColor='#241f4e' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='th-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='th-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f12532' />
+            <stop offset='100%' stopColor='#eb212e' />
+          </linearGradient>
+          <linearGradient id='th-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#322b6c' />
+            <stop offset='100%' stopColor='#241f4e' />
+          </linearGradient>
+        </defs>
         <clipPath id='th-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

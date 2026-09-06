@@ -13,6 +13,8 @@ export const IconFlagGP: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GP'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagGP: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gp-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gp-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#25a057' />
-          <stop offset='100%' stopColor='#1c8245' />
-        </linearGradient>
-        <linearGradient id='gp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#31b8f4' />
-          <stop offset='100%' stopColor='#1ea2dc' />
-        </linearGradient>
-        <linearGradient id='gp-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffe149' />
-          <stop offset='100%' stopColor='#ffdd32' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='gp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#25a057' />
+            <stop offset='100%' stopColor='#1c8245' />
+          </linearGradient>
+          <linearGradient id='gp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#31b8f4' />
+            <stop offset='100%' stopColor='#1ea2dc' />
+          </linearGradient>
+          <linearGradient id='gp-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffe149' />
+            <stop offset='100%' stopColor='#ffdd32' />
+          </linearGradient>
+        </defs>
         <clipPath id='gp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

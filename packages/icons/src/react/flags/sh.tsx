@@ -13,6 +13,8 @@ export const IconFlagSH: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SH'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,39 +27,43 @@ export const IconFlagSH: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sh-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sh-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sh-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sh-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07319c' />
-          <stop offset='100%' stopColor='#00247e' />
-        </linearGradient>
-        <linearGradient id='sh-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#a7d2ff' />
-          <stop offset='100%' stopColor='#91c6fd' />
-        </linearGradient>
-        <linearGradient id='sh-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ee7b2d' />
-          <stop offset='100%' stopColor='#cc621a' />
-        </linearGradient>
-        <linearGradient id='sh-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fffc4b' />
-          <stop offset='100%' stopColor='#fffc38' />
-        </linearGradient>
-        <linearGradient id='sh-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <path
-          id='sh-c'
-          d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 5.5 2.5 6 2.5 6S0 5.5 0 3.5'
-        />
+        <defs>
+          <linearGradient id='sh-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sh-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07319c' />
+            <stop offset='100%' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient id='sh-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#a7d2ff' />
+            <stop offset='100%' stopColor='#91c6fd' />
+          </linearGradient>
+          <linearGradient id='sh-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ee7b2d' />
+            <stop offset='100%' stopColor='#cc621a' />
+          </linearGradient>
+          <linearGradient id='sh-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fffc4b' />
+            <stop offset='100%' stopColor='#fffc38' />
+          </linearGradient>
+          <linearGradient id='sh-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <path
+            id='sh-c'
+            d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 5.5 2.5 6 2.5 6S0 5.5 0 3.5'
+          />
+        </defs>
         <clipPath id='sh-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

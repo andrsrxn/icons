@@ -13,6 +13,8 @@ export const IconFlagPR: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PR'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagPR: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'pr-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'pr-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='pr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='pr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fa2222' />
-          <stop offset='100%' stopColor='#ed0000' />
-        </linearGradient>
-        <linearGradient id='pr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1d63f9' />
-          <stop offset='100%' stopColor='#0650f0' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='pr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fa2222' />
+            <stop offset='100%' stopColor='#ed0000' />
+          </linearGradient>
+          <linearGradient id='pr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1d63f9' />
+            <stop offset='100%' stopColor='#0650f0' />
+          </linearGradient>
+        </defs>
         <clipPath id='pr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

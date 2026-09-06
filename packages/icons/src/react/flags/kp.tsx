@@ -13,6 +13,8 @@ export const IconFlagKP: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KP'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagKP: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'kp-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'kp-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='kp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='kp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1461b6' />
-          <stop offset='100%' stopColor='#0b52a1' />
-        </linearGradient>
-        <linearGradient id='kp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f53846' />
-          <stop offset='100%' stopColor='#eb2130' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='kp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='kp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1461b6' />
+            <stop offset='100%' stopColor='#0b52a1' />
+          </linearGradient>
+          <linearGradient id='kp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f53846' />
+            <stop offset='100%' stopColor='#eb2130' />
+          </linearGradient>
+        </defs>
         <clipPath id='kp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

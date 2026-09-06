@@ -13,6 +13,8 @@ export const IconFlagMS: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'MS'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,35 +27,39 @@ export const IconFlagMS: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ms-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ms-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ms-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ms-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07319c' />
-          <stop offset='100%' stopColor='#00247e' />
-        </linearGradient>
-        <linearGradient id='ms-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <linearGradient id='ms-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#08b9d6' />
-          <stop offset='100%' stopColor='#00a3be' />
-        </linearGradient>
-        <linearGradient id='ms-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <path
-          id='ms-d'
-          d='M0 3.5V1c0-.553.444-1 1-1h3c.552 0 1 .441 1 1v2.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
-        />
+        <defs>
+          <linearGradient id='ms-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ms-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07319c' />
+            <stop offset='100%' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient id='ms-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <linearGradient id='ms-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#08b9d6' />
+            <stop offset='100%' stopColor='#00a3be' />
+          </linearGradient>
+          <linearGradient id='ms-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <path
+            id='ms-d'
+            d='M0 3.5V1c0-.553.444-1 1-1h3c.552 0 1 .441 1 1v2.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
+          />
+        </defs>
         <clipPath id='ms-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

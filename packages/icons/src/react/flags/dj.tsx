@@ -13,6 +13,8 @@ export const IconFlagDJ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'DJ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagDJ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'dj-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'dj-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='dj-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='dj-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1dc837' />
-          <stop offset='100%' stopColor='#13ad2b' />
-        </linearGradient>
-        <linearGradient id='dj-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#82c5f5' />
-          <stop offset='100%' stopColor='#6ab3e8' />
-        </linearGradient>
-        <linearGradient id='dj-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e21c21' />
-          <stop offset='100%' stopColor='#d7151a' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='dj-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='dj-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1dc837' />
+            <stop offset='100%' stopColor='#13ad2b' />
+          </linearGradient>
+          <linearGradient id='dj-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#82c5f5' />
+            <stop offset='100%' stopColor='#6ab3e8' />
+          </linearGradient>
+          <linearGradient id='dj-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e21c21' />
+            <stop offset='100%' stopColor='#d7151a' />
+          </linearGradient>
+        </defs>
         <clipPath id='dj-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

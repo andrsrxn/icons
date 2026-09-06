@@ -13,6 +13,8 @@ export const IconFlagJO: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'JO'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagJO: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'jo-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'jo-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='jo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='jo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#199e56' />
-          <stop offset='100%' stopColor='#0f7a40' />
-        </linearGradient>
-        <linearGradient id='jo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='jo-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e6223a' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='jo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='jo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#199e56' />
+            <stop offset='100%' stopColor='#0f7a40' />
+          </linearGradient>
+          <linearGradient id='jo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='jo-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e6223a' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+        </defs>
         <clipPath id='jo-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagKN: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KN'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagKN: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'kn-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'kn-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='kn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='kn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1ec160' />
-          <stop offset='100%' stopColor='#169e4d' />
-        </linearGradient>
-        <linearGradient id='kn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#df2a40' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
-        <linearGradient id='kn-d' x1='50%' x2='50%' y1='16.742%' y2='82.422%'>
-          <stop offset='0%' stopColor='#ffd956' />
-          <stop offset='100%' stopColor='#fcd036' />
-        </linearGradient>
-        <linearGradient id='kn-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='kn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='kn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1ec160' />
+            <stop offset='100%' stopColor='#169e4d' />
+          </linearGradient>
+          <linearGradient id='kn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#df2a40' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient id='kn-d' x1='50%' x2='50%' y1='16.742%' y2='82.422%'>
+            <stop offset='0%' stopColor='#ffd956' />
+            <stop offset='100%' stopColor='#fcd036' />
+          </linearGradient>
+          <linearGradient id='kn-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+        </defs>
         <clipPath id='kn-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagCEU: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'CEU'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,14 +27,18 @@ export const IconFlagCEU: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ceu-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ceu-title'}>{titleText}</title> : null}
 
       <defs>
-        <clipPath id='ceu-a'>
-          <path fill='#fff' d='M0 0h21v15H0z' />
-        </clipPath>
+        <defs>
+          <clipPath id='ceu-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
+        </defs>
         <clipPath id='ceu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

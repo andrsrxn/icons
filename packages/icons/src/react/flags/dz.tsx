@@ -13,6 +13,8 @@ export const IconFlagDZ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'DZ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagDZ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'dz-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'dz-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='dz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='dz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#048345' />
-          <stop offset='100%' stopColor='#04753e' />
-        </linearGradient>
-        <linearGradient id='dz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e81b42' />
-          <stop offset='100%' stopColor='#d20f34' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='dz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='dz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#048345' />
+            <stop offset='100%' stopColor='#04753e' />
+          </linearGradient>
+          <linearGradient id='dz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e81b42' />
+            <stop offset='100%' stopColor='#d20f34' />
+          </linearGradient>
+        </defs>
         <clipPath id='dz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

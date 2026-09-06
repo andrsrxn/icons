@@ -13,6 +13,8 @@ export const IconFlagGBNIR: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GB-NIR'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagGBNIR: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gb-nir-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gb-nir-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gb-nir-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gb-nir-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e82739' />
-          <stop offset='100%' stopColor='#ca1a2b' />
-        </linearGradient>
-        <linearGradient id='gb-nir-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e6101e' />
-          <stop offset='100%' stopColor='#ca0814' />
-        </linearGradient>
-        <linearGradient id='gb-nir-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd148' />
-          <stop offset='100%' stopColor='#ffcb2f' />
-        </linearGradient>
-        <path
-          id='gb-nir-d'
-          d='M9 3.75 10 4l.5-.5.5.5 1-.25-.404 1.009a.4.4 0 0 1-.341.241h-1.51a.39.39 0 0 1-.341-.241zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
-        />
+        <defs>
+          <linearGradient id='gb-nir-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gb-nir-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e82739' />
+            <stop offset='100%' stopColor='#ca1a2b' />
+          </linearGradient>
+          <linearGradient id='gb-nir-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e6101e' />
+            <stop offset='100%' stopColor='#ca0814' />
+          </linearGradient>
+          <linearGradient id='gb-nir-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd148' />
+            <stop offset='100%' stopColor='#ffcb2f' />
+          </linearGradient>
+          <path
+            id='gb-nir-d'
+            d='M9 3.75 10 4l.5-.5.5.5 1-.25-.404 1.009a.4.4 0 0 1-.341.241h-1.51a.39.39 0 0 1-.341-.241zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+          />
+        </defs>
         <clipPath id='gb-nir-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagYT: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'YT'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,79 +27,83 @@ export const IconFlagYT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'yt-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'yt-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='yt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='yt-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1b2ca9' />
-          <stop offset='100%' stopColor='#132294' />
-        </linearGradient>
-        <linearGradient id='yt-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e6402c' />
-          <stop offset='100%' stopColor='#d1321f' />
-        </linearGradient>
-        <linearGradient id='yt-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#d0d0d0' />
-          <stop offset='100%' stopColor='#c4c4c4' />
-        </linearGradient>
-        <linearGradient id='yt-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='yt-l' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f7e04b' />
-          <stop offset='100%' stopColor='#ead135' />
-        </linearGradient>
-        <path
-          id='yt-b'
-          d='M0 .491A.49.49 0 0 1 .498 0h4.004A.5.5 0 0 1 5 .491v5.018a.535.535 0 0 1-.5.522S3 6 2.5 6.94C2 6 .5 6.03.5 6.03a.54.54 0 0 1-.5-.522z'
-        />
-        <path id='yt-e' d='M0 0h5v3H0z' />
-        <path id='yt-h' d='M0 3h5v4H0z' />
-        <filter
-          id='yt-d'
-          width='130%'
-          height='150%'
-          x='-15%'
-          y='-25%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
+        <defs>
+          <linearGradient id='yt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='yt-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1b2ca9' />
+            <stop offset='100%' stopColor='#132294' />
+          </linearGradient>
+          <linearGradient id='yt-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e6402c' />
+            <stop offset='100%' stopColor='#d1321f' />
+          </linearGradient>
+          <linearGradient id='yt-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#d0d0d0' />
+            <stop offset='100%' stopColor='#c4c4c4' />
+          </linearGradient>
+          <linearGradient id='yt-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='yt-l' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f7e04b' />
+            <stop offset='100%' stopColor='#ead135' />
+          </linearGradient>
+          <path
+            id='yt-b'
+            d='M0 .491A.49.49 0 0 1 .498 0h4.004A.5.5 0 0 1 5 .491v5.018a.535.535 0 0 1-.5.522S3 6 2.5 6.94C2 6 .5 6.03.5 6.03a.54.54 0 0 1-.5-.522z'
           />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <filter
-          id='yt-g'
-          width='130%'
-          height='137.5%'
-          x='-15%'
-          y='-18.8%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
+          <path id='yt-e' d='M0 0h5v3H0z' />
+          <path id='yt-h' d='M0 3h5v4H0z' />
+          <filter
+            id='yt-d'
+            width='130%'
+            height='150%'
+            x='-15%'
+            y='-25%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <filter
+            id='yt-g'
+            width='130%'
+            height='137.5%'
+            x='-15%'
+            y='-18.8%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+        </defs>
         <clipPath id='yt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

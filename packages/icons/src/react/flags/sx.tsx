@@ -13,6 +13,8 @@ export const IconFlagSX: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SX'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,35 +27,39 @@ export const IconFlagSX: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sx-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sx-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sx-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sx-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0740aa' />
-          <stop offset='100%' stopColor='#012f85' />
-        </linearGradient>
-        <linearGradient id='sx-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f02c33' />
-          <stop offset='100%' stopColor='#d82027' />
-        </linearGradient>
-        <linearGradient id='sx-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e72c33' />
-          <stop offset='100%' stopColor='#d82027' />
-        </linearGradient>
-        <linearGradient id='sx-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#78c1f0' />
-          <stop offset='100%' stopColor='#67b1e0' />
-        </linearGradient>
-        <linearGradient id='sx-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f7e14b' />
-          <stop offset='100%' stopColor='#f7df3e' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='sx-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sx-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0740aa' />
+            <stop offset='100%' stopColor='#012f85' />
+          </linearGradient>
+          <linearGradient id='sx-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f02c33' />
+            <stop offset='100%' stopColor='#d82027' />
+          </linearGradient>
+          <linearGradient id='sx-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e72c33' />
+            <stop offset='100%' stopColor='#d82027' />
+          </linearGradient>
+          <linearGradient id='sx-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#78c1f0' />
+            <stop offset='100%' stopColor='#67b1e0' />
+          </linearGradient>
+          <linearGradient id='sx-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f7e14b' />
+            <stop offset='100%' stopColor='#f7df3e' />
+          </linearGradient>
+        </defs>
         <clipPath id='sx-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

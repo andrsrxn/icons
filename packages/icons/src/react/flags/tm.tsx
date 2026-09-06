@@ -13,6 +13,8 @@ export const IconFlagTM: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TM'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,28 +27,32 @@ export const IconFlagTM: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tm-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tm-title'}>{titleText}</title> : null}
 
       <defs>
-        <ellipse id='tm-d' cx='1.5' cy='1' rx='1.5' ry='1' />
-        <ellipse id='tm-f' cx='1.5' cy='1' rx='1.5' ry='1' />
-        <ellipse id='tm-h' cx='1.5' cy='1' rx='1.5' ry='1' />
-        <ellipse id='tm-j' cx='1.5' cy='.5' rx='1.5' ry='1' />
-        <ellipse id='tm-k' cx='1.5' cy='1' rx='1.5' ry='1' />
-        <linearGradient id='tm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#30c375' />
-          <stop offset='100%' stopColor='#28ae67' />
-        </linearGradient>
-        <linearGradient id='tm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#de414f' />
-          <stop offset='100%' stopColor='#ca3745' />
-        </linearGradient>
+        <defs>
+          <ellipse id='tm-d' cx='1.5' cy='1' rx='1.5' ry='1' />
+          <ellipse id='tm-f' cx='1.5' cy='1' rx='1.5' ry='1' />
+          <ellipse id='tm-h' cx='1.5' cy='1' rx='1.5' ry='1' />
+          <ellipse id='tm-j' cx='1.5' cy='.5' rx='1.5' ry='1' />
+          <ellipse id='tm-k' cx='1.5' cy='1' rx='1.5' ry='1' />
+          <linearGradient id='tm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#30c375' />
+            <stop offset='100%' stopColor='#28ae67' />
+          </linearGradient>
+          <linearGradient id='tm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#de414f' />
+            <stop offset='100%' stopColor='#ca3745' />
+          </linearGradient>
+        </defs>
         <clipPath id='tm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

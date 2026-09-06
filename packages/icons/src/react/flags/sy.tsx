@@ -13,6 +13,8 @@ export const IconFlagSY: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SY'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagSY: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sy-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sy-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sy-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sy-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='sy-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e32139' />
-          <stop offset='100%' stopColor='#cc162c' />
-        </linearGradient>
-        <linearGradient id='sy-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#128a49' />
-          <stop offset='100%' stopColor='#0f7a40' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='sy-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sy-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='sy-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e32139' />
+            <stop offset='100%' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient id='sy-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#128a49' />
+            <stop offset='100%' stopColor='#0f7a40' />
+          </linearGradient>
+        </defs>
         <clipPath id='sy-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

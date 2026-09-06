@@ -13,6 +13,8 @@ export const IconFlagMP: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'MP'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagMP: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'mp-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'mp-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='mp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='mp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1e8bd6' />
-          <stop offset='100%' stopColor='#1074ba' />
-        </linearGradient>
-        <linearGradient id='mp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#a9a7a9' />
-          <stop offset='100%' stopColor='#8c8a8c' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='mp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='mp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1e8bd6' />
+            <stop offset='100%' stopColor='#1074ba' />
+          </linearGradient>
+          <linearGradient id='mp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#a9a7a9' />
+            <stop offset='100%' stopColor='#8c8a8c' />
+          </linearGradient>
+        </defs>
         <clipPath id='mp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

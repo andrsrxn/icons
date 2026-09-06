@@ -13,6 +13,8 @@ export const IconFlagPY: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PY'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagPY: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'py-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'py-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='py-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='py-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e33f39' />
-          <stop offset='100%' stopColor='#d32e28' />
-        </linearGradient>
-        <linearGradient id='py-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#124bba' />
-          <stop offset='100%' stopColor='#073da6' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='py-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='py-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e33f39' />
+            <stop offset='100%' stopColor='#d32e28' />
+          </linearGradient>
+          <linearGradient id='py-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#124bba' />
+            <stop offset='100%' stopColor='#073da6' />
+          </linearGradient>
+        </defs>
         <clipPath id='py-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

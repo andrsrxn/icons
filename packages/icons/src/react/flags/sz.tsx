@@ -13,6 +13,8 @@ export const IconFlagSZ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SZ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,32 +27,36 @@ export const IconFlagSZ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sz-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sz-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#486bca' />
-          <stop offset='100%' stopColor='#3e5fba' />
-        </linearGradient>
-        <linearGradient id='sz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffdf20' />
-          <stop offset='100%' stopColor='#ffda00' />
-        </linearGradient>
-        <linearGradient id='sz-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#cf1615' />
-          <stop offset='100%' stopColor='#b20d0c' />
-        </linearGradient>
-        <linearGradient id='sz-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <ellipse id='sz-e' cx='4.5' cy='2.5' rx='4.5' ry='2.5' />
+        <defs>
+          <linearGradient id='sz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#486bca' />
+            <stop offset='100%' stopColor='#3e5fba' />
+          </linearGradient>
+          <linearGradient id='sz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffdf20' />
+            <stop offset='100%' stopColor='#ffda00' />
+          </linearGradient>
+          <linearGradient id='sz-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#cf1615' />
+            <stop offset='100%' stopColor='#b20d0c' />
+          </linearGradient>
+          <linearGradient id='sz-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <ellipse id='sz-e' cx='4.5' cy='2.5' rx='4.5' ry='2.5' />
+        </defs>
         <clipPath id='sz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

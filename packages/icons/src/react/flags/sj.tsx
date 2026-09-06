@@ -13,6 +13,8 @@ export const IconFlagSJ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SJ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagSJ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sj-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sj-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sj-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sj-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f14247' />
-          <stop offset='100%' stopColor='#ed2f35' />
-        </linearGradient>
-        <linearGradient id='sj-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0a3a85' />
-          <stop offset='100%' stopColor='#032a67' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='sj-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sj-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f14247' />
+            <stop offset='100%' stopColor='#ed2f35' />
+          </linearGradient>
+          <linearGradient id='sj-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0a3a85' />
+            <stop offset='100%' stopColor='#032a67' />
+          </linearGradient>
+        </defs>
         <clipPath id='sj-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

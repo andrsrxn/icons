@@ -13,6 +13,8 @@ export const IconFlagKR: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KR'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,28 +27,32 @@ export const IconFlagKR: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'kr-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'kr-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='kr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='kr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e01b41' />
-          <stop offset='100%' stopColor='#c51335' />
-        </linearGradient>
-        <linearGradient id='kr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0e4b9c' />
-          <stop offset='100%' stopColor='#053677' />
-        </linearGradient>
-        <linearGradient id='kr-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <circle id='kr-b' cx='3.5' cy='3.5' r='3.5' />
+        <defs>
+          <linearGradient id='kr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='kr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e01b41' />
+            <stop offset='100%' stopColor='#c51335' />
+          </linearGradient>
+          <linearGradient id='kr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0e4b9c' />
+            <stop offset='100%' stopColor='#053677' />
+          </linearGradient>
+          <linearGradient id='kr-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <circle id='kr-b' cx='3.5' cy='3.5' r='3.5' />
+        </defs>
         <clipPath id='kr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

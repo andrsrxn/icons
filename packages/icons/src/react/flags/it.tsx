@@ -13,6 +13,8 @@ export const IconFlagIT: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'IT'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagIT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'it-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'it-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='it-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='it-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e43d4c' />
-          <stop offset='100%' stopColor='#cc2e3c' />
-        </linearGradient>
-        <linearGradient id='it-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1bb65d' />
-          <stop offset='100%' stopColor='#139149' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='it-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='it-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e43d4c' />
+            <stop offset='100%' stopColor='#cc2e3c' />
+          </linearGradient>
+          <linearGradient id='it-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1bb65d' />
+            <stop offset='100%' stopColor='#139149' />
+          </linearGradient>
+        </defs>
         <clipPath id='it-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

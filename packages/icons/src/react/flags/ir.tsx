@@ -13,6 +13,8 @@ export const IconFlagIR: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'IR'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagIR: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ir-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ir-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ir-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ir-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#38bb56' />
-          <stop offset='100%' stopColor='#2b9f45' />
-        </linearGradient>
-        <linearGradient id='ir-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#de1b27' />
-          <stop offset='100%' stopColor='#d80915' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ir-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ir-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#38bb56' />
+            <stop offset='100%' stopColor='#2b9f45' />
+          </linearGradient>
+          <linearGradient id='ir-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#de1b27' />
+            <stop offset='100%' stopColor='#d80915' />
+          </linearGradient>
+        </defs>
         <clipPath id='ir-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagNE: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NE'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagNE: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ne-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ne-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ne-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ne-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f0642f' />
-          <stop offset='100%' stopColor='#df531d' />
-        </linearGradient>
-        <linearGradient id='ne-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#2dcc45' />
-          <stop offset='100%' stopColor='#1faf35' />
-        </linearGradient>
-        <linearGradient id='ne-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e85c27' />
-          <stop offset='100%' stopColor='#df531d' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ne-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ne-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f0642f' />
+            <stop offset='100%' stopColor='#df531d' />
+          </linearGradient>
+          <linearGradient id='ne-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#2dcc45' />
+            <stop offset='100%' stopColor='#1faf35' />
+          </linearGradient>
+          <linearGradient id='ne-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e85c27' />
+            <stop offset='100%' stopColor='#df531d' />
+          </linearGradient>
+        </defs>
         <clipPath id='ne-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagPF: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PF'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,36 +27,40 @@ export const IconFlagPF: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'pf-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'pf-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='pf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='pf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e02639' />
-          <stop offset='100%' stopColor='#ca1a2c' />
-        </linearGradient>
-        <linearGradient id='pf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#dc2235' />
-          <stop offset='100%' stopColor='#ca1a2c' />
-        </linearGradient>
-        <linearGradient id='pf-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffa135' />
-          <stop offset='100%' stopColor='#fd9c2d' />
-        </linearGradient>
-        <linearGradient id='pf-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#df2034' />
-          <stop offset='100%' stopColor='#ca1a2c' />
-        </linearGradient>
-        <linearGradient id='pf-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0b4bad' />
-          <stop offset='100%' stopColor='#08429a' />
-        </linearGradient>
-        <circle id='pf-d' cx='2.5' cy='2.5' r='2.5' />
+        <defs>
+          <linearGradient id='pf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e02639' />
+            <stop offset='100%' stopColor='#ca1a2c' />
+          </linearGradient>
+          <linearGradient id='pf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#dc2235' />
+            <stop offset='100%' stopColor='#ca1a2c' />
+          </linearGradient>
+          <linearGradient id='pf-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffa135' />
+            <stop offset='100%' stopColor='#fd9c2d' />
+          </linearGradient>
+          <linearGradient id='pf-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#df2034' />
+            <stop offset='100%' stopColor='#ca1a2c' />
+          </linearGradient>
+          <linearGradient id='pf-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0b4bad' />
+            <stop offset='100%' stopColor='#08429a' />
+          </linearGradient>
+          <circle id='pf-d' cx='2.5' cy='2.5' r='2.5' />
+        </defs>
         <clipPath id='pf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

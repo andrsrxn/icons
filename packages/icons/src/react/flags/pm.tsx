@@ -13,6 +13,8 @@ export const IconFlagPM: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PM'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,48 +27,52 @@ export const IconFlagPM: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'pm-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'pm-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='pm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='pm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#138e16' />
-          <stop offset='100%' stopColor='#0f7f12' />
-        </linearGradient>
-        <linearGradient id='pm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#26a7dc' />
-          <stop offset='100%' stopColor='#1b94c6' />
-        </linearGradient>
-        <linearGradient id='pm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fbcd3f' />
-          <stop offset='100%' stopColor='#ffce2f' />
-        </linearGradient>
-        <linearGradient id='pm-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f03633' />
-          <stop offset='100%' stopColor='#d82a28' />
-        </linearGradient>
-        <linearGradient id='pm-g' x1='82.842%' x2='20.426%' y1='18.137%' y2='78.479%'>
-          <stop offset='0%' stopColor='#2aa854' />
-          <stop offset='100%' stopColor='#219447' />
-        </linearGradient>
-        <linearGradient id='pm-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='pm-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#d7181d' />
-          <stop offset='100%' stopColor='#c60e13' />
-        </linearGradient>
-        <linearGradient id='pm-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fbcd3f' />
-          <stop offset='100%' stopColor='#fecb2f' />
-        </linearGradient>
-        <path id='pm-e' d='M0 0h7v5H0z' />
+        <defs>
+          <linearGradient id='pm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#138e16' />
+            <stop offset='100%' stopColor='#0f7f12' />
+          </linearGradient>
+          <linearGradient id='pm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#26a7dc' />
+            <stop offset='100%' stopColor='#1b94c6' />
+          </linearGradient>
+          <linearGradient id='pm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fbcd3f' />
+            <stop offset='100%' stopColor='#ffce2f' />
+          </linearGradient>
+          <linearGradient id='pm-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f03633' />
+            <stop offset='100%' stopColor='#d82a28' />
+          </linearGradient>
+          <linearGradient id='pm-g' x1='82.842%' x2='20.426%' y1='18.137%' y2='78.479%'>
+            <stop offset='0%' stopColor='#2aa854' />
+            <stop offset='100%' stopColor='#219447' />
+          </linearGradient>
+          <linearGradient id='pm-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='pm-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#d7181d' />
+            <stop offset='100%' stopColor='#c60e13' />
+          </linearGradient>
+          <linearGradient id='pm-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fbcd3f' />
+            <stop offset='100%' stopColor='#fecb2f' />
+          </linearGradient>
+          <path id='pm-e' d='M0 0h7v5H0z' />
+        </defs>
         <clipPath id='pm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagKE: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KE'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,28 +27,32 @@ export const IconFlagKE: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ke-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ke-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ke-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ke-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='ke-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#018301' />
-          <stop offset='100%' stopColor='#006700' />
-        </linearGradient>
-        <linearGradient id='ke-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#dc0808' />
-          <stop offset='100%' stopColor='#bc0000' />
-        </linearGradient>
-        <path id='ke-e' d='M2.5 10.5c1 0 2.5-1.962 2.5-5S3.5.5 2.5.5 0 2.462 0 5.5s1.5 5 2.5 5' />
+        <defs>
+          <linearGradient id='ke-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ke-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='ke-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#018301' />
+            <stop offset='100%' stopColor='#006700' />
+          </linearGradient>
+          <linearGradient id='ke-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#dc0808' />
+            <stop offset='100%' stopColor='#bc0000' />
+          </linearGradient>
+          <path id='ke-e' d='M2.5 10.5c1 0 2.5-1.962 2.5-5S3.5.5 2.5.5 0 2.462 0 5.5s1.5 5 2.5 5' />
+        </defs>
         <clipPath id='ke-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

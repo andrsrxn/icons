@@ -13,6 +13,8 @@ export const IconFlagGU: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GU'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,48 +27,52 @@ export const IconFlagGU: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gu-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gu-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#de3149' />
-          <stop offset='100%' stopColor='#c2273d' />
-        </linearGradient>
-        <linearGradient id='gu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#053b94' />
-          <stop offset='100%' stopColor='#002e7a' />
-        </linearGradient>
-        <linearGradient id='gu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#de3149' />
-          <stop offset='100%' stopColor='#c2273d' />
-        </linearGradient>
-        <linearGradient id='gu-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#81c1f3' />
-          <stop offset='100%' stopColor='#6ab1e9' />
-        </linearGradient>
-        <linearGradient id='gu-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#27a07e' />
-          <stop offset='100%' stopColor='#1f9171' />
-        </linearGradient>
-        <linearGradient id='gu-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1e8ce8' />
-          <stop offset='100%' stopColor='#107fdc' />
-        </linearGradient>
-        <linearGradient id='gu-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff048' />
-          <stop offset='100%' stopColor='#ffef36' />
-        </linearGradient>
-        <linearGradient id='gu-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#8f5715' />
-          <stop offset='100%' stopColor='#7a480d' />
-        </linearGradient>
-        <path id='gu-e' d='M2.5 8.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+        <defs>
+          <linearGradient id='gu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#de3149' />
+            <stop offset='100%' stopColor='#c2273d' />
+          </linearGradient>
+          <linearGradient id='gu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#053b94' />
+            <stop offset='100%' stopColor='#002e7a' />
+          </linearGradient>
+          <linearGradient id='gu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#de3149' />
+            <stop offset='100%' stopColor='#c2273d' />
+          </linearGradient>
+          <linearGradient id='gu-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#81c1f3' />
+            <stop offset='100%' stopColor='#6ab1e9' />
+          </linearGradient>
+          <linearGradient id='gu-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#27a07e' />
+            <stop offset='100%' stopColor='#1f9171' />
+          </linearGradient>
+          <linearGradient id='gu-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1e8ce8' />
+            <stop offset='100%' stopColor='#107fdc' />
+          </linearGradient>
+          <linearGradient id='gu-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff048' />
+            <stop offset='100%' stopColor='#ffef36' />
+          </linearGradient>
+          <linearGradient id='gu-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#8f5715' />
+            <stop offset='100%' stopColor='#7a480d' />
+          </linearGradient>
+          <path id='gu-e' d='M2.5 8.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+        </defs>
         <clipPath id='gu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagCW: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'CW'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagCW: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'cw-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'cw-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='cw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='cw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0543a8' />
-          <stop offset='100%' stopColor='#00307d' />
-        </linearGradient>
-        <linearGradient id='cw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fcc747' />
-          <stop offset='100%' stopColor='#fec539' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='cw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='cw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0543a8' />
+            <stop offset='100%' stopColor='#00307d' />
+          </linearGradient>
+          <linearGradient id='cw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fcc747' />
+            <stop offset='100%' stopColor='#fec539' />
+          </linearGradient>
+        </defs>
         <clipPath id='cw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

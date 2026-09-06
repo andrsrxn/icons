@@ -13,6 +13,8 @@ export const IconFlagMM: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'MM'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagMM: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'mm-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'mm-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='mm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='mm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f13d4f' />
-          <stop offset='100%' stopColor='#e92c3f' />
-        </linearGradient>
-        <linearGradient id='mm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#4ac94b' />
-          <stop offset='100%' stopColor='#3bb13c' />
-        </linearGradient>
-        <linearGradient id='mm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd043' />
-          <stop offset='100%' stopColor='#feca2f' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='mm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='mm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f13d4f' />
+            <stop offset='100%' stopColor='#e92c3f' />
+          </linearGradient>
+          <linearGradient id='mm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#4ac94b' />
+            <stop offset='100%' stopColor='#3bb13c' />
+          </linearGradient>
+          <linearGradient id='mm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd043' />
+            <stop offset='100%' stopColor='#feca2f' />
+          </linearGradient>
+        </defs>
         <clipPath id='mm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

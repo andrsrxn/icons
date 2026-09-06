@@ -13,6 +13,8 @@ export const IconFlagZW: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'ZW'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagZW: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'zw-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'zw-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='zw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='zw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#369d0c' />
-          <stop offset='100%' stopColor='#319209' />
-        </linearGradient>
-        <linearGradient id='zw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#262626' />
-          <stop offset='100%' stopColor='#0d0d0d' />
-        </linearGradient>
-        <linearGradient id='zw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd40e' />
-          <stop offset='100%' stopColor='#ffd201' />
-        </linearGradient>
-        <linearGradient id='zw-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f12f1f' />
-          <stop offset='100%' stopColor='#de2010' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='zw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='zw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#369d0c' />
+            <stop offset='100%' stopColor='#319209' />
+          </linearGradient>
+          <linearGradient id='zw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='zw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd40e' />
+            <stop offset='100%' stopColor='#ffd201' />
+          </linearGradient>
+          <linearGradient id='zw-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f12f1f' />
+            <stop offset='100%' stopColor='#de2010' />
+          </linearGradient>
+        </defs>
         <clipPath id='zw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

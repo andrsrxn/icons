@@ -13,6 +13,8 @@ export const IconFlagNF: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NF'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagNF: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'nf-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'nf-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='nf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='nf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#219646' />
-          <stop offset='100%' stopColor='#197837' />
-        </linearGradient>
-        <linearGradient id='nf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#259d4b' />
-          <stop offset='100%' stopColor='#197837' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='nf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='nf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#219646' />
+            <stop offset='100%' stopColor='#197837' />
+          </linearGradient>
+          <linearGradient id='nf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#259d4b' />
+            <stop offset='100%' stopColor='#197837' />
+          </linearGradient>
+        </defs>
         <clipPath id='nf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

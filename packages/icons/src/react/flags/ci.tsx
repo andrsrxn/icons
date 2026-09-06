@@ -13,6 +13,8 @@ export const IconFlagCI: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'CI'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagCI: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ci-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ci-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ci-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ci-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1dc87d' />
-          <stop offset='100%' stopColor='#169e62' />
-        </linearGradient>
-        <linearGradient id='ci-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f89242' />
-          <stop offset='100%' stopColor='#f67f22' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ci-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ci-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1dc87d' />
+            <stop offset='100%' stopColor='#169e62' />
+          </linearGradient>
+          <linearGradient id='ci-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f89242' />
+            <stop offset='100%' stopColor='#f67f22' />
+          </linearGradient>
+        </defs>
         <clipPath id='ci-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

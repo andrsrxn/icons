@@ -13,6 +13,8 @@ export const IconFlagHT: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'HT'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,32 +27,36 @@ export const IconFlagHT: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ht-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ht-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ht-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ht-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#112ebc' />
-          <stop offset='100%' stopColor='#0620a0' />
-        </linearGradient>
-        <linearGradient id='ht-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e3264a' />
-          <stop offset='100%' stopColor='#d20f34' />
-        </linearGradient>
-        <path
-          id='ht-f'
-          d='m0 5 1.105-.553C1.6 4.2 2.443 4 3 4h1.002c.552 0 1.404.202 1.894.447L7 5v1H0z'
-        />
-        <path
-          id='ht-g'
-          d='M1 3.006c0-.28.18-.362.39-.193l1.72 1.374a.66.66 0 0 0 .78 0l1.72-1.375c.215-.172.39-.081.39.194v1.488c0 .28-.215.506-.498.506H1.498A.505.505 0 0 1 1 4.494z'
-        />
-        <rect id='ht-d' width='7' height='6' x='0' y='0' rx='.5' />
+        <defs>
+          <linearGradient id='ht-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ht-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#112ebc' />
+            <stop offset='100%' stopColor='#0620a0' />
+          </linearGradient>
+          <linearGradient id='ht-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e3264a' />
+            <stop offset='100%' stopColor='#d20f34' />
+          </linearGradient>
+          <path
+            id='ht-f'
+            d='m0 5 1.105-.553C1.6 4.2 2.443 4 3 4h1.002c.552 0 1.404.202 1.894.447L7 5v1H0z'
+          />
+          <path
+            id='ht-g'
+            d='M1 3.006c0-.28.18-.362.39-.193l1.72 1.374a.66.66 0 0 0 .78 0l1.72-1.375c.215-.172.39-.081.39.194v1.488c0 .28-.215.506-.498.506H1.498A.505.505 0 0 1 1 4.494z'
+          />
+          <rect id='ht-d' width='7' height='6' x='0' y='0' rx='.5' />
+        </defs>
         <clipPath id='ht-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

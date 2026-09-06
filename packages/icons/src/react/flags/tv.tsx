@@ -13,6 +13,8 @@ export const IconFlagTV: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TV'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagTV: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tv-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tv-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='tv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#72afc8' />
-          <stop offset='100%' stopColor='#5d98b0' />
-        </linearGradient>
-        <linearGradient id='tv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0a17a7' />
-          <stop offset='100%' stopColor='#030e88' />
-        </linearGradient>
-        <linearGradient id='tv-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='tv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#72afc8' />
+            <stop offset='100%' stopColor='#5d98b0' />
+          </linearGradient>
+          <linearGradient id='tv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0a17a7' />
+            <stop offset='100%' stopColor='#030e88' />
+          </linearGradient>
+          <linearGradient id='tv-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+        </defs>
         <clipPath id='tv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

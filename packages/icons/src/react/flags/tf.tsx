@@ -13,6 +13,8 @@ export const IconFlagTF: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'TF'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagTF: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'tf-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'tf-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='tf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='tf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#073ab6' />
-          <stop offset='100%' stopColor='#002b93' />
-        </linearGradient>
-        <linearGradient id='tf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f44653' />
-          <stop offset='100%' stopColor='#ee2a39' />
-        </linearGradient>
-        <linearGradient id='tf-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1035bb' />
-          <stop offset='100%' stopColor='#042396' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='tf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='tf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#073ab6' />
+            <stop offset='100%' stopColor='#002b93' />
+          </linearGradient>
+          <linearGradient id='tf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f44653' />
+            <stop offset='100%' stopColor='#ee2a39' />
+          </linearGradient>
+          <linearGradient id='tf-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1035bb' />
+            <stop offset='100%' stopColor='#042396' />
+          </linearGradient>
+        </defs>
         <clipPath id='tf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

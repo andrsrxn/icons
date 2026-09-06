@@ -13,6 +13,8 @@ export const IconFlagGL: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GL'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,39 +27,43 @@ export const IconFlagGL: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gl-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gl-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gl-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e82245' />
-          <stop offset='100%' stopColor='#cc1838' />
-        </linearGradient>
-        <filter
-          id='gl-b'
-          width='107.1%'
-          height='118.8%'
-          x='-3.6%'
-          y='-9.4%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <path id='gl-c' d='M0 0h21v8H0z' />
+        <defs>
+          <linearGradient id='gl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gl-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e82245' />
+            <stop offset='100%' stopColor='#cc1838' />
+          </linearGradient>
+          <filter
+            id='gl-b'
+            width='107.1%'
+            height='118.8%'
+            x='-3.6%'
+            y='-9.4%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <path id='gl-c' d='M0 0h21v8H0z' />
+        </defs>
         <clipPath id='gl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagVC: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'VC'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagVC: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'vc-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'vc-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='vc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='vc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#08c47a' />
-          <stop offset='100%' stopColor='#009f60' />
-        </linearGradient>
-        <linearGradient id='vc-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0c87e1' />
-          <stop offset='100%' stopColor='#0073c7' />
-        </linearGradient>
-        <linearGradient id='vc-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd147' />
-          <stop offset='100%' stopColor='#feca2f' />
-        </linearGradient>
-        <linearGradient id='vc-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#00c778' />
-          <stop offset='100%' stopColor='#009f60' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='vc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='vc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#08c47a' />
+            <stop offset='100%' stopColor='#009f60' />
+          </linearGradient>
+          <linearGradient id='vc-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0c87e1' />
+            <stop offset='100%' stopColor='#0073c7' />
+          </linearGradient>
+          <linearGradient id='vc-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd147' />
+            <stop offset='100%' stopColor='#feca2f' />
+          </linearGradient>
+          <linearGradient id='vc-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#00c778' />
+            <stop offset='100%' stopColor='#009f60' />
+          </linearGradient>
+        </defs>
         <clipPath id='vc-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

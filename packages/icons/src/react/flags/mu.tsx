@@ -13,6 +13,8 @@ export const IconFlagMU: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'MU'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagMU: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'mu-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'mu-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='mu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='mu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1dbb63' />
-          <stop offset='100%' stopColor='#17a455' />
-        </linearGradient>
-        <linearGradient id='mu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#222b82' />
-          <stop offset='100%' stopColor='#1b236c' />
-        </linearGradient>
-        <linearGradient id='mu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd741' />
-          <stop offset='100%' stopColor='#ffd430' />
-        </linearGradient>
-        <linearGradient id='mu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f4374a' />
-          <stop offset='100%' stopColor='#e92c3f' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='mu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='mu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1dbb63' />
+            <stop offset='100%' stopColor='#17a455' />
+          </linearGradient>
+          <linearGradient id='mu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#222b82' />
+            <stop offset='100%' stopColor='#1b236c' />
+          </linearGradient>
+          <linearGradient id='mu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd741' />
+            <stop offset='100%' stopColor='#ffd430' />
+          </linearGradient>
+          <linearGradient id='mu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f4374a' />
+            <stop offset='100%' stopColor='#e92c3f' />
+          </linearGradient>
+        </defs>
         <clipPath id='mu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

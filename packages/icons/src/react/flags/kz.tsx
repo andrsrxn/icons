@@ -13,6 +13,8 @@ export const IconFlagKZ: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KZ'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagKZ: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'kz-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'kz-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='kz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='kz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#30c6e0' />
-          <stop offset='100%' stopColor='#1cb0c9' />
-        </linearGradient>
-        <linearGradient id='kz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffcd4b' />
-          <stop offset='100%' stopColor='#fec531' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='kz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='kz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#30c6e0' />
+            <stop offset='100%' stopColor='#1cb0c9' />
+          </linearGradient>
+          <linearGradient id='kz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffcd4b' />
+            <stop offset='100%' stopColor='#fec531' />
+          </linearGradient>
+        </defs>
         <clipPath id='kz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

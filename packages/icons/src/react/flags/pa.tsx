@@ -13,6 +13,8 @@ export const IconFlagPA: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'PA'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagPA: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'pa-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'pa-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='pa-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='pa-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e52448' />
-          <stop offset='100%' stopColor='#d01739' />
-        </linearGradient>
-        <linearGradient id='pa-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1367ae' />
-          <stop offset='100%' stopColor='#0a5492' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='pa-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pa-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e52448' />
+            <stop offset='100%' stopColor='#d01739' />
+          </linearGradient>
+          <linearGradient id='pa-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1367ae' />
+            <stop offset='100%' stopColor='#0a5492' />
+          </linearGradient>
+        </defs>
         <clipPath id='pa-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

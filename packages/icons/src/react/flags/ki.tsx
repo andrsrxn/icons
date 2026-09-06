@@ -13,6 +13,8 @@ export const IconFlagKI: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KI'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagKI: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ki-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ki-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ki-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ki-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e62b3f' />
-          <stop offset='100%' stopColor='#ca1a2c' />
-        </linearGradient>
-        <linearGradient id='ki-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffda57' />
-          <stop offset='100%' stopColor='#fcd036' />
-        </linearGradient>
-        <linearGradient id='ki-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0752a2' />
-          <stop offset='100%' stopColor='#034285' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ki-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ki-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e62b3f' />
+            <stop offset='100%' stopColor='#ca1a2c' />
+          </linearGradient>
+          <linearGradient id='ki-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffda57' />
+            <stop offset='100%' stopColor='#fcd036' />
+          </linearGradient>
+          <linearGradient id='ki-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0752a2' />
+            <stop offset='100%' stopColor='#034285' />
+          </linearGradient>
+        </defs>
         <clipPath id='ki-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagKY: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'KY'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,28 +27,32 @@ export const IconFlagKY: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ky-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ky-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ky-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ky-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07319c' />
-          <stop offset='100%' stopColor='#00247e' />
-        </linearGradient>
-        <linearGradient id='ky-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <linearGradient id='ky-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#125fba' />
-          <stop offset='100%' stopColor='#0c50a1' />
-        </linearGradient>
-        <path id='ky-d' d='M0 3.5V0h5v3.5C5 6 2.5 7 2.5 7S0 6 0 3.5' />
+        <defs>
+          <linearGradient id='ky-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ky-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07319c' />
+            <stop offset='100%' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient id='ky-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <linearGradient id='ky-f' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#125fba' />
+            <stop offset='100%' stopColor='#0c50a1' />
+          </linearGradient>
+          <path id='ky-d' d='M0 3.5V0h5v3.5C5 6 2.5 7 2.5 7S0 6 0 3.5' />
+        </defs>
         <clipPath id='ky-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

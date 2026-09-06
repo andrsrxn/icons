@@ -13,6 +13,8 @@ export const IconFlagSV: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'SV'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagSV: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'sv-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'sv-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='sv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='sv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1b57c4' />
-          <stop offset='100%' stopColor='#154bad' />
-        </linearGradient>
-        <linearGradient id='sv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#3c7839' />
-          <stop offset='100%' stopColor='#31642e' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='sv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1b57c4' />
+            <stop offset='100%' stopColor='#154bad' />
+          </linearGradient>
+          <linearGradient id='sv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#3c7839' />
+            <stop offset='100%' stopColor='#31642e' />
+          </linearGradient>
+        </defs>
         <clipPath id='sv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

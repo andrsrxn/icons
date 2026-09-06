@@ -13,6 +13,8 @@ export const IconFlagNU: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NU'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,31 +27,35 @@ export const IconFlagNU: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'nu-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'nu-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='nu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='nu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fcd54e' />
-          <stop offset='100%' stopColor='#fcd036' />
-        </linearGradient>
-        <linearGradient id='nu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#053c8a' />
-          <stop offset='100%' stopColor='#002b67' />
-        </linearGradient>
-        <linearGradient id='nu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <linearGradient id='nu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fdd650' />
-          <stop offset='100%' stopColor='#fcd036' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='nu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='nu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fcd54e' />
+            <stop offset='100%' stopColor='#fcd036' />
+          </linearGradient>
+          <linearGradient id='nu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#053c8a' />
+            <stop offset='100%' stopColor='#002b67' />
+          </linearGradient>
+          <linearGradient id='nu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <linearGradient id='nu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fdd650' />
+            <stop offset='100%' stopColor='#fcd036' />
+          </linearGradient>
+        </defs>
         <clipPath id='nu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

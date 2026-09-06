@@ -13,6 +13,8 @@ export const IconFlagCV: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'CV'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagCV: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'cv-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'cv-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='cv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='cv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0c49ae' />
-          <stop offset='100%' stopColor='#063b91' />
-        </linearGradient>
-        <linearGradient id='cv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#cd232e' />
-          <stop offset='100%' stopColor='#cd232e' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='cv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='cv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0c49ae' />
+            <stop offset='100%' stopColor='#063b91' />
+          </linearGradient>
+          <linearGradient id='cv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#cd232e' />
+            <stop offset='100%' stopColor='#cd232e' />
+          </linearGradient>
+        </defs>
         <clipPath id='cv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagGS: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GS'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,73 +27,77 @@ export const IconFlagGS: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gs-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gs-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07319c' />
-          <stop offset='100%' stopColor='#00247e' />
-        </linearGradient>
-        <linearGradient id='gs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#db1e36' />
-          <stop offset='100%' stopColor='#d51931' />
-        </linearGradient>
-        <linearGradient id='gs-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1e1e1e' />
-          <stop offset='100%' />
-        </linearGradient>
-        <linearGradient id='gs-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#a2adb0' />
-          <stop offset='100%' stopColor='#8b9497' />
-        </linearGradient>
-        <linearGradient id='gs-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#4f4f4f' />
-          <stop offset='100%' stopColor='#2b2b2b' />
-        </linearGradient>
-        <linearGradient id='gs-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fec241' />
-          <stop offset='100%' stopColor='#febb2c' />
-        </linearGradient>
-        <linearGradient id='gs-l' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#a84b14' />
-          <stop offset='100%' stopColor='#913f0e' />
-        </linearGradient>
-        <linearGradient id='gs-m' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#cfb063' />
-          <stop offset='100%' stopColor='#bea157' />
-        </linearGradient>
-        <linearGradient id='gs-n' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#2d42ff' />
-          <stop offset='100%' stopColor='#0b24fc' />
-        </linearGradient>
-        <linearGradient id='gs-o' x1='0%' x2='100%' y1='0%' y2='50%'>
-          <stop offset='0%' stopColor='#e3dc3d' />
-          <stop offset='100%' stopColor='#cfc82a' />
-        </linearGradient>
-        <linearGradient id='gs-p' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#7f7d7d' />
-          <stop offset='100%' stopColor='#656263' />
-        </linearGradient>
-        <linearGradient id='gs-s' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0f8012' />
-          <stop offset='100%' stopColor='#0b6a0d' />
-        </linearGradient>
-        <linearGradient id='gs-t' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffcf44' />
-          <stop offset='100%' stopColor='#fcc72e' />
-        </linearGradient>
-        <ellipse id='gs-d' cx='.5' cy='1.5' rx='1' ry='1.5' />
-        <ellipse id='gs-g' cx='.5' cy='1.5' rx='1' ry='1.5' />
-        <path
-          id='gs-q'
-          d='M.007.506A.49.49 0 0 1 .495 0h2.01c.273 0 .498.23.502.506L3.03 2.25a.52.52 0 0 1-.207.388l-1.095.722a.41.41 0 0 1-.417 0L.24 2.639a.53.53 0 0 1-.21-.388z'
-        />
+        <defs>
+          <linearGradient id='gs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07319c' />
+            <stop offset='100%' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient id='gs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#db1e36' />
+            <stop offset='100%' stopColor='#d51931' />
+          </linearGradient>
+          <linearGradient id='gs-e' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1e1e1e' />
+            <stop offset='100%' />
+          </linearGradient>
+          <linearGradient id='gs-h' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#a2adb0' />
+            <stop offset='100%' stopColor='#8b9497' />
+          </linearGradient>
+          <linearGradient id='gs-i' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#4f4f4f' />
+            <stop offset='100%' stopColor='#2b2b2b' />
+          </linearGradient>
+          <linearGradient id='gs-k' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fec241' />
+            <stop offset='100%' stopColor='#febb2c' />
+          </linearGradient>
+          <linearGradient id='gs-l' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#a84b14' />
+            <stop offset='100%' stopColor='#913f0e' />
+          </linearGradient>
+          <linearGradient id='gs-m' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#cfb063' />
+            <stop offset='100%' stopColor='#bea157' />
+          </linearGradient>
+          <linearGradient id='gs-n' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#2d42ff' />
+            <stop offset='100%' stopColor='#0b24fc' />
+          </linearGradient>
+          <linearGradient id='gs-o' x1='0%' x2='100%' y1='0%' y2='50%'>
+            <stop offset='0%' stopColor='#e3dc3d' />
+            <stop offset='100%' stopColor='#cfc82a' />
+          </linearGradient>
+          <linearGradient id='gs-p' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#7f7d7d' />
+            <stop offset='100%' stopColor='#656263' />
+          </linearGradient>
+          <linearGradient id='gs-s' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0f8012' />
+            <stop offset='100%' stopColor='#0b6a0d' />
+          </linearGradient>
+          <linearGradient id='gs-t' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffcf44' />
+            <stop offset='100%' stopColor='#fcc72e' />
+          </linearGradient>
+          <ellipse id='gs-d' cx='.5' cy='1.5' rx='1' ry='1.5' />
+          <ellipse id='gs-g' cx='.5' cy='1.5' rx='1' ry='1.5' />
+          <path
+            id='gs-q'
+            d='M.007.506A.49.49 0 0 1 .495 0h2.01c.273 0 .498.23.502.506L3.03 2.25a.52.52 0 0 1-.207.388l-1.095.722a.41.41 0 0 1-.417 0L.24 2.639a.53.53 0 0 1-.21-.388z'
+          />
+        </defs>
         <clipPath id='gs-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

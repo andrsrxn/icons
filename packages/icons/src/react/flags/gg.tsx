@@ -13,6 +13,8 @@ export const IconFlagGG: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GG'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagGG: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'gg-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'gg-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='gg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='gg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#f33349' />
-          <stop offset='100%' stopColor='#e51d34' />
-        </linearGradient>
-        <linearGradient id='gg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fce24c' />
-          <stop offset='100%' stopColor='#f9dc38' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='gg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='gg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#f33349' />
+            <stop offset='100%' stopColor='#e51d34' />
+          </linearGradient>
+          <linearGradient id='gg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fce24c' />
+            <stop offset='100%' stopColor='#f9dc38' />
+          </linearGradient>
+        </defs>
         <clipPath id='gg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

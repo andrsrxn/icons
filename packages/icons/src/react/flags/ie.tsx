@@ -13,6 +13,8 @@ export const IconFlagIE: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'IE'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagIE: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ie-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ie-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ie-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ie-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ff8515' />
-          <stop offset='100%' stopColor='#ff7a00' />
-        </linearGradient>
-        <linearGradient id='ie-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#07bb59' />
-          <stop offset='100%' stopColor='#029c48' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ie-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ie-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ff8515' />
+            <stop offset='100%' stopColor='#ff7a00' />
+          </linearGradient>
+          <linearGradient id='ie-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#07bb59' />
+            <stop offset='100%' stopColor='#029c48' />
+          </linearGradient>
+        </defs>
         <clipPath id='ie-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

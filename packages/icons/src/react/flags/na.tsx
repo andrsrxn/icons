@@ -13,6 +13,8 @@ export const IconFlagNA: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'NA'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,108 +27,112 @@ export const IconFlagNA: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'na-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'na-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='na-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='na-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#0c4799' />
-          <stop offset='100%' stopColor='#05387e' />
-        </linearGradient>
-        <linearGradient id='na-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd243' />
-          <stop offset='100%' stopColor='#ffcd2f' />
-        </linearGradient>
-        <linearGradient id='na-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1bac55' />
-          <stop offset='100%' stopColor='#149447' />
-        </linearGradient>
-        <linearGradient id='na-m' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#e52347' />
-          <stop offset='100%' stopColor='#d01739' />
-        </linearGradient>
-        <filter
-          id='na-b'
-          width='107.1%'
-          height='115%'
-          x='-3.6%'
-          y='-7.5%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
+        <defs>
+          <linearGradient id='na-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='na-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#0c4799' />
+            <stop offset='100%' stopColor='#05387e' />
+          </linearGradient>
+          <linearGradient id='na-g' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd243' />
+            <stop offset='100%' stopColor='#ffcd2f' />
+          </linearGradient>
+          <linearGradient id='na-j' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1bac55' />
+            <stop offset='100%' stopColor='#149447' />
+          </linearGradient>
+          <linearGradient id='na-m' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e52347' />
+            <stop offset='100%' stopColor='#d01739' />
+          </linearGradient>
+          <filter
+            id='na-b'
+            width='107.1%'
+            height='115%'
+            x='-3.6%'
+            y='-7.5%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <filter
+            id='na-e'
+            width='112.5%'
+            height='125%'
+            x='-6.2%'
+            y='-6.2%'
+            filterUnits='objectBoundingBox'>
+            <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <filter
+            id='na-h'
+            width='107.1%'
+            height='115%'
+            x='-3.6%'
+            y='-7.5%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <filter
+            id='na-k'
+            width='106.2%'
+            height='107.9%'
+            x='-3.1%'
+            y='-3.9%'
+            filterUnits='objectBoundingBox'>
+            <feMorphology
+              in='SourceAlpha'
+              operator='dilate'
+              radius='.25'
+              result='shadowSpreadOuter1'
+            />
+            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            <feColorMatrix
+              in='shadowOffsetOuter1'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+            />
+          </filter>
+          <path id='na-c' d='m3.121 12.304 21-10h-21z' />
+          <path
+            id='na-f'
+            d='m6.621 6.804-.765.848.058-1.14-1.14.057.847-.765-.847-.765 1.14.058-.058-1.14.765.847.766-.848-.058 1.14 1.14-.057-.848.765.848.765-1.14-.058.058 1.14z'
           />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <filter
-          id='na-e'
-          width='112.5%'
-          height='125%'
-          x='-6.2%'
-          y='-6.2%'
-          filterUnits='objectBoundingBox'>
-          <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <filter
-          id='na-h'
-          width='107.1%'
-          height='115%'
-          x='-3.6%'
-          y='-7.5%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <filter
-          id='na-k'
-          width='106.2%'
-          height='107.9%'
-          x='-3.1%'
-          y='-3.9%'
-          filterUnits='objectBoundingBox'>
-          <feMorphology
-            in='SourceAlpha'
-            operator='dilate'
-            radius='.25'
-            result='shadowSpreadOuter1'
-          />
-          <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
-          <feColorMatrix
-            in='shadowOffsetOuter1'
-            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
-          />
-        </filter>
-        <path id='na-c' d='m3.121 12.304 21-10h-21z' />
-        <path
-          id='na-f'
-          d='m6.621 6.804-.765.848.058-1.14-1.14.057.847-.765-.847-.765 1.14.058-.058-1.14.765.847.766-.848-.058 1.14 1.14-.057-.848.765.848.765-1.14-.058.058 1.14z'
-        />
-        <path id='na-i' d='M3.121 17.304h21v-10z' />
-        <path id='na-l' d='M5.433 19.304 25.75 6.609 21.81.304 1.493 12.999z' />
+          <path id='na-i' d='M3.121 17.304h21v-10z' />
+          <path id='na-l' d='M5.433 19.304 25.75 6.609 21.81.304 1.493 12.999z' />
+        </defs>
         <clipPath id='na-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagIN: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'IN'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,23 +27,27 @@ export const IconFlagIN: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'in-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'in-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='in-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='in-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffa44a' />
-          <stop offset='100%' stopColor='#ff9934' />
-        </linearGradient>
-        <linearGradient id='in-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#1a9f0b' />
-          <stop offset='100%' stopColor='#138806' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='in-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='in-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffa44a' />
+            <stop offset='100%' stopColor='#ff9934' />
+          </linearGradient>
+          <linearGradient id='in-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#1a9f0b' />
+            <stop offset='100%' stopColor='#138806' />
+          </linearGradient>
+        </defs>
         <clipPath id='in-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -13,6 +13,8 @@ export const IconFlagGA: FlagIcon = ({
   const isHidden = ariaHidden === true
   const titleText = title ?? 'GA'
 
+  const showTitle = !(isHidden || ariaLabel)
+
   return (
     <svg
       width={width}
@@ -25,27 +27,31 @@ export const IconFlagGA: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? 'ga-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={`ui-flag ${className ?? ''}`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'ga-title'}>{titleText}</title> : null}
 
       <defs>
-        <linearGradient id='ga-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#fff' />
-          <stop offset='100%' stopColor='#f0f0f0' />
-        </linearGradient>
-        <linearGradient id='ga-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#09b470' />
-          <stop offset='100%' stopColor='#019f60' />
-        </linearGradient>
-        <linearGradient id='ga-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#508cde' />
-          <stop offset='100%' stopColor='#3a75c5' />
-        </linearGradient>
-        <linearGradient id='ga-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-          <stop offset='0%' stopColor='#ffd935' />
-          <stop offset='100%' stopColor='#fdd216' />
-        </linearGradient>
+        <defs>
+          <linearGradient id='ga-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='ga-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#09b470' />
+            <stop offset='100%' stopColor='#019f60' />
+          </linearGradient>
+          <linearGradient id='ga-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#508cde' />
+            <stop offset='100%' stopColor='#3a75c5' />
+          </linearGradient>
+          <linearGradient id='ga-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffd935' />
+            <stop offset='100%' stopColor='#fdd216' />
+          </linearGradient>
+        </defs>
         <clipPath id='ga-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
