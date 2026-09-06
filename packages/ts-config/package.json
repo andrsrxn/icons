@@ -1,0 +1,17 @@
+{
+  "name": "@andrsrxn/ts-config",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.json",
+    "./nextjs": "./src/nextjs.json",
+    "./react": "./src/nextjs.json"
+  },
+  "peerDependencies": {
+    "typescript": "^7"
+  },
+  "files": [
+    "src"
+  ]
+}

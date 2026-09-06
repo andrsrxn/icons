@@ -69,7 +69,7 @@ jobs:
       - name: Lint
         run: pnpm lint:check
 
-      - name: Typecheck
+      - name: Type check
         run: pnpm type:check
 
       - name: Run tests

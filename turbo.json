@@ -1,49 +1,47 @@
 {
   "$schema": "https://turborepo.com/schema.json",
-  "globalDependencies": [".env", "tsdown.config.ts", "tsconfig.json"],
+  "globalDependencies": [".env"],
+  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "inputs": ["$TURBO_DEFAULT$", ".env*", "tsconfig.json", "tsdown.config.ts"],
       "outputs": [".next/**", "!.next/cache/**", "!.next/dev/**", "dist/**"]
     },
     "lint": {
-      "outputs": []
+      "inputs": ["$TURBO_DEFAULT$", "$TURBO_ROOT$/biome.json"]
     },
     "lint:check": {
-      "outputs": []
+      "inputs": ["$TURBO_DEFAULT$", "$TURBO_ROOT$/biome.json"]
     },
     "type:check": {
       "dependsOn": ["^build"],
       "outputs": [".tsbuildinfo"]
     },
     "test": {
-      "outputs": []
+      "persistent": true,
+      "cache": false
     },
-    "format": {
-      "outputs": []
-    },
+    "format": {},
     "test:check": {
-      "outputs": []
+      "cache": false
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
     "dep:check": {
-      "cache": false,
-      "outputs": []
+      "cache": false
     },
     "react:check": {
-      "cache": false,
-      "outputs": []
+      "cache": false
     },
     "generate-icons": {
-      "outputs": [],
       "cache": false
     },
     "generate-flags": {
-      "outputs": [],
+      "cache": false
+    },
+    "generate-raw-metadata": {
       "cache": false
     }
   }
