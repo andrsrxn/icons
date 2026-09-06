@@ -11,42 +11,20 @@ export const IconHand: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hand'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m8.62 5 1.65-.56 1.26.56 1.99-2.37 1.77.88L16 7h2.8l.2 11.76-5 2.74L8.32 20 4 12.26l2-1.57L8.32 12z'
-        fill='currentColor'
-      />
-      <path
-        d='M15.53 12.62V4.55a1.78 1.78 0 1 0-3.57 0v8.07m7.14-1.99V8.27a1.78 1.78 0 1 0-3.57 0v4.35'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M11.96 12.55v-6.4a1.78 1.78 0 0 0-3.56 0v6.94'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m8.39 13.19-.92-1.59a1.83 1.83 0 0 0-3.2 1.75l2.19 4.3a6.9 6.9 0 0 0 6.16 3.74h1.35c2.6-.01 4.93-1.77 5.23-4.35.31-2.7-.1-3.85-.1-6.61'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hand-title'}>{title}</title> : null}<path opacity=".2" d="m8.62 5 1.65-.56 1.26.56 1.99-2.37 1.77.88L16 7h2.8l.2 11.76-5 2.74L8.32 20 4 12.26l2-1.57L8.32 12z" fill="currentColor"/><path d="M15.53 12.62V4.55a1.78 1.78 0 1 0-3.57 0v8.07m7.14-1.99V8.27a1.78 1.78 0 1 0-3.57 0v4.35" stroke="currentColor"/><path d="M11.96 12.55v-6.4a1.78 1.78 0 0 0-3.56 0v6.94" stroke="currentColor"/><path d="m8.39 13.19-.92-1.59a1.83 1.83 0 0 0-3.2 1.75l2.19 4.3a6.9 6.9 0 0 0 6.16 3.74h1.35c2.6-.01 4.93-1.77 5.23-4.35.31-2.7-.1-3.85-.1-6.61" stroke="currentColor"/></svg>
   )
 }

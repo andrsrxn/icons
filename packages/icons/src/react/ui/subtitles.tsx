@@ -11,37 +11,20 @@ export const IconSubtitles: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-subtitles'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'subtitles-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='5.55' width='18.61' height='13.04' rx='3' fill='currentColor' />
-      <path
-        d='M5.52 15.42h7.53m-7.53-3.24h3.06m7.49 3.24h2.41M12 12.18h6.48'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='2.7'
-        y='5.55'
-        width='18.61'
-        height='13.04'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'subtitles-title'}>{title}</title> : null}<rect opacity=".2" x="2.7" y="5.55" width="18.61" height="13.04" rx="3" fill="currentColor"/><path d="M5.52 15.42h7.53m-7.53-3.24h3.06m7.49 3.24h2.41M12 12.18h6.48" stroke="currentColor"/><rect x="2.7" y="5.55" width="18.61" height="13.04" rx="3" stroke="currentColor"/></svg>
   )
 }

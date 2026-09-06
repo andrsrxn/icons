@@ -11,42 +11,20 @@ export const IconRibbon: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-ribbon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'ribbon-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m5.44 8.2 1.9-3.35 4.69 5.4-2.71 3.58zm6.82 9.3 2.6-3.44 4.17 4.15-.7 2.88-3.23.29z'
-        fill='currentColor'
-      />
-      <path
-        opacity='.2'
-        d='m7.96 5.75-.48-.51A1 1 0 0 1 7.38 4l.58-.9a1 1 0 0 1 .84-.46h6.45a1 1 0 0 1 .8.4l.68.89a1 1 0 0 1-.12 1.34l-.58.52a1 1 0 0 1-.67.27H8.69a1 1 0 0 1-.73-.32'
-        fill='currentColor'
-      />
-      <path
-        d='m18.07 6.51-.94-1.66L6.01 17.56h0c-.2.22-.3.34-.37.46q-.12.22-.17.47c-.03.14-.03.29-.03.59 0 .74 0 1.12.13 1.4q.24.54.76.77c.3.13.67.13 1.41.13h.3c.55 0 .83 0 1.08-.1q.17-.05.32-.16c.22-.15.38-.37.7-.8l7.74-10.56c.56-.76.84-1.13.86-1.58.03-.44-.2-.85-.67-1.67m-3.16 7.43 3.09 3.6c.2.23.3.34.36.47q.12.21.17.45c.03.14.03.3.03.6 0 .76 0 1.15-.14 1.44a1.5 1.5 0 0 1-.73.74c-.3.14-.69.14-1.45.14h-.3c-.54 0-.82 0-1.06-.1l-.32-.15c-.22-.15-.38-.37-.71-.8l-1.82-2.45m-.38-7.57L6.87 4.85l-.94 1.66c-.47.82-.7 1.23-.67 1.67.02.45.3.82.86 1.58l2.8 3.83'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M6.54 5.44 7 4.62c.56-.99.84-1.48 1.3-1.76.48-.27 1.04-.27 2.18-.27h3.06c1.14 0 1.7 0 2.17.27.47.28.75.77 1.31 1.76l.46.82m-9.38.63h7.83'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'ribbon-title'}>{title}</title> : null}<path opacity=".2" d="m5.44 8.2 1.9-3.35 4.69 5.4-2.71 3.58zm6.82 9.3 2.6-3.44 4.17 4.15-.7 2.88-3.23.29z" fill="currentColor"/><path opacity=".2" d="m7.96 5.75-.48-.51A1 1 0 0 1 7.38 4l.58-.9a1 1 0 0 1 .84-.46h6.45a1 1 0 0 1 .8.4l.68.89a1 1 0 0 1-.12 1.34l-.58.52a1 1 0 0 1-.67.27H8.69a1 1 0 0 1-.73-.32" fill="currentColor"/><path d="m18.07 6.51-.94-1.66L6.01 17.56h0c-.2.22-.3.34-.37.46q-.12.22-.17.47c-.03.14-.03.29-.03.59 0 .74 0 1.12.13 1.4q.24.54.76.77c.3.13.67.13 1.41.13h.3c.55 0 .83 0 1.08-.1q.17-.05.32-.16c.22-.15.38-.37.7-.8l7.74-10.56c.56-.76.84-1.13.86-1.58.03-.44-.2-.85-.67-1.67m-3.16 7.43 3.09 3.6c.2.23.3.34.36.47q.12.21.17.45c.03.14.03.3.03.6 0 .76 0 1.15-.14 1.44a1.5 1.5 0 0 1-.73.74c-.3.14-.69.14-1.45.14h-.3c-.54 0-.82 0-1.06-.1l-.32-.15c-.22-.15-.38-.37-.71-.8l-1.82-2.45m-.38-7.57L6.87 4.85l-.94 1.66c-.47.82-.7 1.23-.67 1.67.02.45.3.82.86 1.58l2.8 3.83" stroke="currentColor"/><path d="M6.54 5.44 7 4.62c.56-.99.84-1.48 1.3-1.76.48-.27 1.04-.27 2.18-.27h3.06c1.14 0 1.7 0 2.17.27.47.28.75.77 1.31 1.76l.46.82m-9.38.63h7.83" stroke="currentColor"/></svg>
   )
 }

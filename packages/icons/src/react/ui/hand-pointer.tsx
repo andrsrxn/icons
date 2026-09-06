@@ -11,37 +11,20 @@ export const IconHandPointer: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hand-pointer'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-pointer-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m8.36 3.18 2-.67 1.53.67.81 5.93 3.09-.63 1.51 2.1h3.19l.45 9.28-1.4 1.93H8.58l-3.53-4.51-2.28-5.3 2.42-1.9L8 11.67z'
-        fill='currentColor'
-      />
-      <path
-        d='M16.74 13.8v-3.32a2.16 2.16 0 1 0-4.33 0v3.33'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M16.74 13.43v-1.11a2.16 2.16 0 0 1 4.32 0v4.34c0 2.6-1.52 4.88-1.52 4.88m-7.13-9.21V4.57a2.16 2.16 0 0 0-4.32 0V13m-.01.1-1.05-1.8a2.33 2.33 0 0 0-3.19-.86 2.25 2.25 0 0 0-.96 2.84 33 33 0 0 0 2.25 4.44c1.02 1.57 2.95 3.78 2.95 3.78'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hand-pointer-title'}>{title}</title> : null}<path opacity=".2" d="m8.36 3.18 2-.67 1.53.67.81 5.93 3.09-.63 1.51 2.1h3.19l.45 9.28-1.4 1.93H8.58l-3.53-4.51-2.28-5.3 2.42-1.9L8 11.67z" fill="currentColor"/><path d="M16.74 13.8v-3.32a2.16 2.16 0 1 0-4.33 0v3.33" stroke="currentColor"/><path d="M16.74 13.43v-1.11a2.16 2.16 0 0 1 4.32 0v4.34c0 2.6-1.52 4.88-1.52 4.88m-7.13-9.21V4.57a2.16 2.16 0 0 0-4.32 0V13m-.01.1-1.05-1.8a2.33 2.33 0 0 0-3.19-.86 2.25 2.25 0 0 0-.96 2.84 33 33 0 0 0 2.25 4.44c1.02 1.57 2.95 3.78 2.95 3.78" stroke="currentColor"/></svg>
   )
 }

@@ -11,37 +11,20 @@ export const IconStickyNote: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-sticky-note'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'sticky-note-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M7 3c-1.89 0-2.83 0-3.41.59C3 4.17 3 5.1 3 7v10.4c0 1.86 0 2.8.58 3.38s1.52.6 3.39.61l3.1.03c1.66.01 2.5.02 3.06-.47.57-.5.69-1.32.93-2.97l.08-.59c.17-1.17.25-1.76.58-2.18a2 2 0 0 1 .59-.51c.46-.26 1.05-.26 2.24-.26 1.36 0 2.03 0 2.53-.32a2 2 0 0 0 .6-.6c.32-.5.32-1.18.32-2.53V7c0-1.89 0-2.83-.59-3.41C19.83 3 18.9 3 17 3z'
-        fill='currentColor'
-      />
-      <path
-        d='M9 3c-2.83 0-4.24 0-5.12.88S3 6.18 3 9v6c0 2.83 0 4.24.88 5.12S6.18 21 9 21h4.16c1.2 0 1.8 0 2.34-.22.55-.22.98-.64 1.84-1.47l.97-.95.84-.8c.91-.87 1.37-1.3 1.6-1.87.25-.56.25-1.2.25-2.46V9c0-2.83 0-4.24-.88-5.12S17.82 3 15 3z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M13.9 21v-3.1c0-1.88 0-2.82.58-3.41.59-.59 1.53-.59 3.42-.59H21'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'sticky-note-title'}>{title}</title> : null}<path opacity=".2" d="M7 3c-1.89 0-2.83 0-3.41.59C3 4.17 3 5.1 3 7v10.4c0 1.86 0 2.8.58 3.38s1.52.6 3.39.61l3.1.03c1.66.01 2.5.02 3.06-.47.57-.5.69-1.32.93-2.97l.08-.59c.17-1.17.25-1.76.58-2.18a2 2 0 0 1 .59-.51c.46-.26 1.05-.26 2.24-.26 1.36 0 2.03 0 2.53-.32a2 2 0 0 0 .6-.6c.32-.5.32-1.18.32-2.53V7c0-1.89 0-2.83-.59-3.41C19.83 3 18.9 3 17 3z" fill="currentColor"/><path d="M9 3c-2.83 0-4.24 0-5.12.88S3 6.18 3 9v6c0 2.83 0 4.24.88 5.12S6.18 21 9 21h4.16c1.2 0 1.8 0 2.34-.22.55-.22.98-.64 1.84-1.47l.97-.95.84-.8c.91-.87 1.37-1.3 1.6-1.87.25-.56.25-1.2.25-2.46V9c0-2.83 0-4.24-.88-5.12S17.82 3 15 3z" stroke="currentColor"/><path d="M13.9 21v-3.1c0-1.88 0-2.82.58-3.41.59-.59 1.53-.59 3.42-.59H21" stroke="currentColor"/></svg>
   )
 }

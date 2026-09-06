@@ -11,37 +11,20 @@ export const IconTextCaseSensitive: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-text-case-sensitive'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-case-sensitive-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M17.8 19.03a3.33 3.33 0 0 1-3.28-3.38c0-1.87 1.47-2.43 3.28-2.43s3.28.56 3.28 2.43a3.33 3.33 0 0 1-3.28 3.38M4.58 11.69l1.7-5.79c.28-.96 1.64-.96 1.92 0l1.72 5.79a1 1 0 0 1-.96 1.28H5.54a1 1 0 0 1-.96-1.28'
-        fill='currentColor'
-      />
-      <path
-        d='M2.34 19.2 5.3 8.85c.79-2.74 1.18-4.11 1.93-4.11.76 0 1.15 1.37 1.92 4.12l2.91 10.32m5.74-.15c-1.81 0-3.28-1.27-3.28-2.85 0-2.09 1.47-2.85 3.28-2.85h3.28v2.85c0 1.58-1.47 2.85-3.28 2.85m-7.52-6.06H4.11'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M21.73 19.59s-.44-.33-.44-1.36V12.6c0-2.23-.51-3.56-2.66-3.94-1.38-.25-2.45.34-3.27 1.35'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-case-sensitive-title'}>{title}</title> : null}<path opacity=".2" d="M17.8 19.03a3.33 3.33 0 0 1-3.28-3.38c0-1.87 1.47-2.43 3.28-2.43s3.28.56 3.28 2.43a3.33 3.33 0 0 1-3.28 3.38M4.58 11.69l1.7-5.79c.28-.96 1.64-.96 1.92 0l1.72 5.79a1 1 0 0 1-.96 1.28H5.54a1 1 0 0 1-.96-1.28" fill="currentColor"/><path d="M2.34 19.2 5.3 8.85c.79-2.74 1.18-4.11 1.93-4.11.76 0 1.15 1.37 1.92 4.12l2.91 10.32m5.74-.15c-1.81 0-3.28-1.27-3.28-2.85 0-2.09 1.47-2.85 3.28-2.85h3.28v2.85c0 1.58-1.47 2.85-3.28 2.85m-7.52-6.06H4.11" stroke="currentColor"/><path d="M21.73 19.59s-.44-.33-.44-1.36V12.6c0-2.23-.51-3.56-2.66-3.94-1.38-.25-2.45.34-3.27 1.35" stroke="currentColor"/></svg>
   )
 }

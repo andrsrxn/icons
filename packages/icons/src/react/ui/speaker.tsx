@@ -11,45 +11,20 @@ export const IconSpeaker: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-speaker'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'speaker-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M18.77 6.7c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H9.23c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v10.63c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h5.54c1.89 0 2.83 0 3.42-.58.58-.6.58-1.53.58-3.42zm-3.38 7.97a3.39 3.39 0 1 1-6.78 0 3.39 3.39 0 0 1 6.78 0'
-        fill='currentColor'
-      />
-      <rect
-        x='5.23'
-        y='2.7'
-        width='13.54'
-        height='18.63'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <circle cx='12' cy='14.67' r='3.58' stroke='currentColor' strokeWidth={strokeWidth} />
-      <path
-        d='M12.47 14.67a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0m0-8a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0'
-        fill='currentColor'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'speaker-title'}>{title}</title> : null}<path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M18.77 6.7c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H9.23c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v10.63c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h5.54c1.89 0 2.83 0 3.42-.58.58-.6.58-1.53.58-3.42zm-3.38 7.97a3.39 3.39 0 1 1-6.78 0 3.39 3.39 0 0 1 6.78 0" fill="currentColor"/><rect x="5.23" y="2.7" width="13.54" height="18.63" rx="3" stroke="currentColor"/><circle cx="12" cy="14.67" r="3.58" stroke="currentColor"/><path d="M12.47 14.67a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0m0-8a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0" fill="currentColor" stroke="currentColor"/></svg>
   )
 }

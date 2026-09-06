@@ -11,35 +11,20 @@ export const IconPaintBoard: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-paint-board'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'paint-board-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.7 12a9.3 9.3 0 0 0 9.3 9.3c1.85 0 1.54-1.93 1.21-3.92-.25-1.53-.2-2.64.53-3.38.74-.73 2.02-.96 3.57-.73 2.02.28 4 .57 4-1.27a9.3 9.3 0 1 0-18.62 0m12.83-4.67a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0M9.74 8.72a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0m-.28 5.74c0 .76-.54 1.29-1.3 1.29-.77 0-1.47-.53-1.47-1.3 0-.76.6-1.34 1.37-1.34s1.4.58 1.4 1.35'
-        fill='currentColor'
-      />
-      <path
-        d='M21.3 12c0 2.8-5.3.29-7.26 2.24-1.95 1.95.75 7.07-2.04 7.07A9.3 9.3 0 1 1 21.3 12'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <circle cx='14.17' cy='7.61' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
-      <circle cx='8.61' cy='9.08' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
-      <circle cx='8.32' cy='14.61' r='1.39' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'paint-board-title'}>{title}</title> : null}<path opacity=".2" d="M2.7 12a9.3 9.3 0 0 0 9.3 9.3c1.85 0 1.54-1.93 1.21-3.92-.25-1.53-.2-2.64.53-3.38.74-.73 2.02-.96 3.57-.73 2.02.28 4 .57 4-1.27a9.3 9.3 0 1 0-18.62 0m12.83-4.67a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0M9.74 8.72a1.39 1.39 0 1 1-2.77 0 1.39 1.39 0 0 1 2.77 0m-.28 5.74c0 .76-.54 1.29-1.3 1.29-.77 0-1.47-.53-1.47-1.3 0-.76.6-1.34 1.37-1.34s1.4.58 1.4 1.35" fill="currentColor"/><path d="M21.3 12c0 2.8-5.3.29-7.26 2.24-1.95 1.95.75 7.07-2.04 7.07A9.3 9.3 0 1 1 21.3 12" stroke="currentColor"/><circle cx="14.17" cy="7.61" r="1.39" stroke="currentColor"/><circle cx="8.61" cy="9.08" r="1.39" stroke="currentColor"/><circle cx="8.32" cy="14.61" r="1.39" stroke="currentColor"/></svg>
   )
 }

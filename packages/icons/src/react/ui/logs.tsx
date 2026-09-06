@@ -11,27 +11,20 @@ export const IconLogs: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-logs'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'logs-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M13.9 5.76h6.85M13.9 12h6.85m-6.85 6.24h6.85M3.25 5.76h1.19M3.25 12h1.19m-1.19 6.24h1.19M7.8 5.76h2.73M7.8 12h2.73M7.8 18.24h2.73'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'logs-title'}>{title}</title> : null}<path d="M13.9 5.76h6.85M13.9 12h6.85m-6.85 6.24h6.85M3.25 5.76h1.19M3.25 12h1.19m-1.19 6.24h1.19M7.8 5.76h2.73M7.8 12h2.73M7.8 18.24h2.73" stroke="currentColor"/></svg>
   )
 }

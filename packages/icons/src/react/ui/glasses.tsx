@@ -11,37 +11,20 @@ export const IconGlasses: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-glasses'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'glasses-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.52 14.24a3.76 3.76 0 1 0 7.52 0 3.76 3.76 0 0 0-7.52 0m11.43 0a3.76 3.76 0 1 0 7.53 0 3.76 3.76 0 0 0-7.53 0'
-        fill='currentColor'
-      />
-      <path
-        d='M2.52 14.24A3.75 3.75 0 0 0 6.3 18a3.76 3.76 0 1 0-3.77-3.76m11.43 0A3.75 3.75 0 0 0 17.72 18a3.76 3.76 0 1 0-3.76-3.76'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m3.4 11.79 2.77-4.86a1.88 1.88 0 0 1 3.06-.28m11.37 5.14-2.75-4.83a1.88 1.88 0 0 0-3.08-.27m-4.72 7.07a2.5 2.5 0 0 1 1.95-.83c.8 0 1.33.22 1.95.83'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'glasses-title'}>{title}</title> : null}<path opacity=".2" d="M2.52 14.24a3.76 3.76 0 1 0 7.52 0 3.76 3.76 0 0 0-7.52 0m11.43 0a3.76 3.76 0 1 0 7.53 0 3.76 3.76 0 0 0-7.53 0" fill="currentColor"/><path d="M2.52 14.24A3.75 3.75 0 0 0 6.3 18a3.76 3.76 0 1 0-3.77-3.76m11.43 0A3.75 3.75 0 0 0 17.72 18a3.76 3.76 0 1 0-3.76-3.76" stroke="currentColor"/><path d="m3.4 11.79 2.77-4.86a1.88 1.88 0 0 1 3.06-.28m11.37 5.14-2.75-4.83a1.88 1.88 0 0 0-3.08-.27m-4.72 7.07a2.5 2.5 0 0 1 1.95-.83c.8 0 1.33.22 1.95.83" stroke="currentColor"/></svg>
   )
 }

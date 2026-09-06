@@ -11,27 +11,20 @@ export const IconListCheck: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-list-check'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-check-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M21.38 6H10m11.38 6H10m11.38 6H10M2.65 6.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 4.17M2.65 12.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 10.17M2.65 18.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 16.17'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'list-check-title'}>{title}</title> : null}<path d="M21.38 6H10m11.38 6H10m11.38 6H10M2.65 6.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 4.17M2.65 12.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 10.17M2.65 18.1l.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 16.17" stroke="currentColor"/></svg>
   )
 }

@@ -11,38 +11,20 @@ export const IconGamingPad: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-gaming-pad'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'gaming-pad-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M14.66 5.37H9.32c-2.2 0-3.3 0-4.12.62-.8.62-1.1 1.68-1.67 3.8l-1.18 4.34c-.13.45-.19.67-.21.88a3 3 0 0 0 1.09 2.71c.16.13.36.25.76.5.47.27.7.42.93.5a3 3 0 0 0 3.2-.62c.17-.17.34-.4.68-.85.22-.29.32-.43.43-.55a3 3 0 0 1 1.87-.93c.16-.02.33-.02.68-.02h.41c.63 0 .95 0 1.24.06a3 3 0 0 1 1.06.44c.25.17.47.39.92.83l.76.77c.2.2.3.3.4.38a3 3 0 0 0 3.53.26l.45-.33.36-.27a3 3 0 0 0 .86-3.3l-1.33-4.81c-.58-2.12-.87-3.18-1.68-3.8-.8-.6-1.9-.6-4.1-.6'
-        fill='currentColor'
-      />
-      <path
-        d='M14.66 5.37H9.32c-2.2 0-3.3 0-4.12.62-.8.62-1.1 1.68-1.67 3.8l-1.18 4.34c-.13.45-.19.67-.21.88a3 3 0 0 0 1.09 2.71c.16.13.36.25.76.5h0c.47.27.7.42.93.5a3 3 0 0 0 3.2-.62c.17-.17.34-.4.68-.85h0c.22-.29.32-.43.43-.55a3 3 0 0 1 1.87-.93c.16-.02.33-.02.68-.02h.41c.63 0 .95 0 1.24.06a3 3 0 0 1 1.06.44c.25.17.47.39.92.83l.76.77h0c.2.2.3.3.4.38a3 3 0 0 0 3.53.26l.45-.33.36-.27a3 3 0 0 0 .86-3.3l-1.33-4.81c-.58-2.12-.87-3.18-1.68-3.8-.8-.6-1.9-.6-4.1-.6m-8.11 5.38h3.75m-1.87 1.88V8.88'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M15.11 12.18a.46.46 0 1 1-.92 0 .46.46 0 0 1 .92 0m1.97-2.83a.46.46 0 1 1-.93 0 .46.46 0 0 1 .93 0'
-        fill='currentColor'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'gaming-pad-title'}>{title}</title> : null}<path opacity=".2" d="M14.66 5.37H9.32c-2.2 0-3.3 0-4.12.62-.8.62-1.1 1.68-1.67 3.8l-1.18 4.34c-.13.45-.19.67-.21.88a3 3 0 0 0 1.09 2.71c.16.13.36.25.76.5.47.27.7.42.93.5a3 3 0 0 0 3.2-.62c.17-.17.34-.4.68-.85.22-.29.32-.43.43-.55a3 3 0 0 1 1.87-.93c.16-.02.33-.02.68-.02h.41c.63 0 .95 0 1.24.06a3 3 0 0 1 1.06.44c.25.17.47.39.92.83l.76.77c.2.2.3.3.4.38a3 3 0 0 0 3.53.26l.45-.33.36-.27a3 3 0 0 0 .86-3.3l-1.33-4.81c-.58-2.12-.87-3.18-1.68-3.8-.8-.6-1.9-.6-4.1-.6" fill="currentColor"/><path d="M14.66 5.37H9.32c-2.2 0-3.3 0-4.12.62-.8.62-1.1 1.68-1.67 3.8l-1.18 4.34c-.13.45-.19.67-.21.88a3 3 0 0 0 1.09 2.71c.16.13.36.25.76.5h0c.47.27.7.42.93.5a3 3 0 0 0 3.2-.62c.17-.17.34-.4.68-.85h0c.22-.29.32-.43.43-.55a3 3 0 0 1 1.87-.93c.16-.02.33-.02.68-.02h.41c.63 0 .95 0 1.24.06a3 3 0 0 1 1.06.44c.25.17.47.39.92.83l.76.77h0c.2.2.3.3.4.38a3 3 0 0 0 3.53.26l.45-.33.36-.27a3 3 0 0 0 .86-3.3l-1.33-4.81c-.58-2.12-.87-3.18-1.68-3.8-.8-.6-1.9-.6-4.1-.6m-8.11 5.38h3.75m-1.87 1.88V8.88" stroke="currentColor"/><path d="M15.11 12.18a.46.46 0 1 1-.92 0 .46.46 0 0 1 .92 0m1.97-2.83a.46.46 0 1 1-.93 0 .46.46 0 0 1 .93 0" fill="currentColor" stroke="currentColor"/></svg>
   )
 }

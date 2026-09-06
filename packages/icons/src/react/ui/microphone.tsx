@@ -11,41 +11,20 @@ export const IconMicrophone: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-microphone'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'microphone-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M12 14.65a3.77 3.77 0 0 0 3.78-3.77V6.3a3.78 3.78 0 1 0-7.56 0v4.57c0 2.08 1.7 3.77 3.78 3.77'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M18.46 9v1.94a6.46 6.46 0 0 1-12.92 0V9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        opacity='.2'
-        width='11.56'
-        height='7.56'
-        rx='3.78'
-        transform='matrix(0 -1 -1 0 15.78 14.37)'
-        fill='currentColor'
-      />
-      <path d='M12.12 17.52v3.95m2.4 0h-4.8' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'microphone-title'}>{title}</title> : null}<path d="M12 14.65a3.77 3.77 0 0 0 3.78-3.77V6.3a3.78 3.78 0 1 0-7.56 0v4.57c0 2.08 1.7 3.77 3.78 3.77" stroke="currentColor"/><path d="M18.46 9v1.94a6.46 6.46 0 0 1-12.92 0V9" stroke="currentColor"/><rect opacity=".2" width="11.56" height="7.56" rx="3.78" transform="matrix(0 -1 -1 0 15.78 14.37)" fill="currentColor"/><path d="M12.12 17.52v3.95m2.4 0h-4.8" stroke="currentColor"/></svg>
   )
 }

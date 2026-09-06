@@ -11,32 +11,20 @@ export const IconKnife: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-knife'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'knife-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M12.98 4.82c3.43-.87 8.56.34 8.56.34L9.86 16.85l-5.4-5.4s4.3-5.56 8.52-6.63'
-        fill='currentColor'
-      />
-      <path
-        d='m4.99 21.71 4.8-4.8m0 0L20.68 6.04c.47-.48.71-.72.63-1s-.4-.35-1.01-.5a14.4 14.4 0 0 0-7.05.17 16.6 16.6 0 0 0-8.17 5.31c-.43.52-.64.78-.63 1.17s.29.65.81 1.17z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'knife-title'}>{title}</title> : null}<path opacity=".2" d="M12.98 4.82c3.43-.87 8.56.34 8.56.34L9.86 16.85l-5.4-5.4s4.3-5.56 8.52-6.63" fill="currentColor"/><path d="m4.99 21.71 4.8-4.8m0 0L20.68 6.04c.47-.48.71-.72.63-1s-.4-.35-1.01-.5a14.4 14.4 0 0 0-7.05.17 16.6 16.6 0 0 0-8.17 5.31c-.43.52-.64.78-.63 1.17s.29.65.81 1.17z" stroke="currentColor"/></svg>
   )
 }

@@ -11,28 +11,20 @@ export const IconLikeFilled: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-like-filled'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'like-filled-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M5.14 20.2c-.37 0-.55 0-.7-.02a2 2 0 0 1-1.67-1.66c-.02-.16-.02-.34-.02-.7v-5.03c0-.37 0-.55.02-.7a2 2 0 0 1 1.67-1.67c.15-.02.33-.02.7-.02h.18c.21.04.38.2.42.42v8.97a.5.5 0 0 1-.42.41zm8.93 0h-3.8 0c-.94 0-1.42 0-1.71-.29s-.3-.76-.3-1.7v-7.07c0-.53 0-.8.06-1.03.06-.24.2-.5.48-1.04.3-.6.67-1.36.84-1.98q.18-.64.22-1.3c.07-1.04.11-1.55.45-1.83.35-.27.71-.21 1.44-.1.75.12 1.51.4 1.9 1.06.45.75.5 1.82.4 2.82-.14 1.35-.21 2.03.07 2.36l.03.03c.3.32.9.32 2.08.32h0c2.7 0 4.04 0 4.64.86l.06.1c.55.9 0 2.13-1.1 4.59l-.3.65c-.77 1.72-1.15 2.58-1.9 3.06-.74.48-1.68.49-3.56.49'
-        fill='currentColor'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'like-filled-title'}>{title}</title> : null}<path d="M5.14 20.2c-.37 0-.55 0-.7-.02a2 2 0 0 1-1.67-1.66c-.02-.16-.02-.34-.02-.7v-5.03c0-.37 0-.55.02-.7a2 2 0 0 1 1.67-1.67c.15-.02.33-.02.7-.02h.18c.21.04.38.2.42.42v8.97a.5.5 0 0 1-.42.41zm8.93 0h-3.8 0c-.94 0-1.42 0-1.71-.29s-.3-.76-.3-1.7v-7.07c0-.53 0-.8.06-1.03.06-.24.2-.5.48-1.04.3-.6.67-1.36.84-1.98q.18-.64.22-1.3c.07-1.04.11-1.55.45-1.83.35-.27.71-.21 1.44-.1.75.12 1.51.4 1.9 1.06.45.75.5 1.82.4 2.82-.14 1.35-.21 2.03.07 2.36l.03.03c.3.32.9.32 2.08.32h0c2.7 0 4.04 0 4.64.86l.06.1c.55.9 0 2.13-1.1 4.59l-.3.65c-.77 1.72-1.15 2.58-1.9 3.06-.74.48-1.68.49-3.56.49" fill="currentColor" stroke="currentColor"/></svg>
   )
 }

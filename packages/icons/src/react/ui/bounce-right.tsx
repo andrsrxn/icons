@@ -11,29 +11,20 @@ export const IconBounceRight: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-bounce-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'bounce-right-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <circle opacity='.2' cx='18.54' cy='7.31' r='2.93' fill='currentColor' />
-      <path
-        d='M2.54 14.4c1.14.32 1.97.7 3.15 2.1s1.6 3.12 1.6 3.12.4-3.94 1.54-5.85a9 9 0 0 1 4.3-3.96'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <circle cx='18.54' cy='7.31' r='2.93' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'bounce-right-title'}>{title}</title> : null}<circle opacity=".2" cx="18.54" cy="7.31" r="2.93" fill="currentColor"/><path d="M2.54 14.4c1.14.32 1.97.7 3.15 2.1s1.6 3.12 1.6 3.12.4-3.94 1.54-5.85a9 9 0 0 1 4.3-3.96" stroke="currentColor"/><circle cx="18.54" cy="7.31" r="2.93" stroke="currentColor"/></svg>
   )
 }

@@ -11,39 +11,20 @@ export const IconFemale: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-female'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'female-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <circle
-        opacity='.2'
-        cx='12.06'
-        cy='9.04'
-        r='6.39'
-        transform='rotate(135 12.06 9.04)'
-        fill='currentColor'
-      />
-      <circle
-        cx='12.06'
-        cy='9.04'
-        r='6.39'
-        transform='rotate(135 12.06 9.04)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path d='M12.06 15.48v6.22m-3.17-2.73h6.2' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'female-title'}>{title}</title> : null}<circle opacity=".2" cx="12.06" cy="9.04" r="6.39" transform="rotate(135 12.06 9.04)" fill="currentColor"/><circle cx="12.06" cy="9.04" r="6.39" transform="rotate(135 12.06 9.04)" stroke="currentColor"/><path d="M12.06 15.48v6.22m-3.17-2.73h6.2" stroke="currentColor"/></svg>
   )
 }

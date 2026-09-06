@@ -11,46 +11,20 @@ export const IconPillBottle: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-pill-bottle'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'pill-bottle-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M5.8 8.74c0-.3 0-.44.02-.57a2 2 0 0 1 1.73-1.73c.13-.02.28-.02.57-.02h6.08c1.88 0 2.82 0 3.41.59s.59 1.53.59 3.41v6.87c0 1.89 0 2.83-.59 3.42s-1.53.58-3.41.58H8.23c-.4 0-.6 0-.76-.02a2 2 0 0 1-1.64-1.64c-.03-.17-.03-.37-.03-.76 0-.4 0-.6.03-.76a2 2 0 0 1 1.64-1.64c.17-.02.36-.02.76-.02h1.11c.64 0 .96 0 1.22-.08A2 2 0 0 0 11.95 15c.07-.26.08-.58.08-1.21.01-.65.01-.98-.06-1.24a2 2 0 0 0-1.39-1.41c-.26-.08-.59-.08-1.24-.08H8.12l-.57-.01a2 2 0 0 1-1.73-1.73c-.02-.13-.02-.28-.02-.58'
-        fill='currentColor'
-      />
-      <path
-        d='M5.8 7v10.3c0 1.88 0 2.82.59 3.4.59.6 1.53.6 3.41.6h4.4c1.88 0 2.82 0 3.41-.6.59-.58.59-1.52.59-3.4V7'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='4.07'
-        y='2.71'
-        width='15.85'
-        height='4.29'
-        rx='1'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M5.8 11.2H10c.94 0 1.41 0 1.7.3.3.28.3.76.3 1.7v1.32c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H5.8z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'pill-bottle-title'}>{title}</title> : null}<path opacity=".2" d="M5.8 8.74c0-.3 0-.44.02-.57a2 2 0 0 1 1.73-1.73c.13-.02.28-.02.57-.02h6.08c1.88 0 2.82 0 3.41.59s.59 1.53.59 3.41v6.87c0 1.89 0 2.83-.59 3.42s-1.53.58-3.41.58H8.23c-.4 0-.6 0-.76-.02a2 2 0 0 1-1.64-1.64c-.03-.17-.03-.37-.03-.76 0-.4 0-.6.03-.76a2 2 0 0 1 1.64-1.64c.17-.02.36-.02.76-.02h1.11c.64 0 .96 0 1.22-.08A2 2 0 0 0 11.95 15c.07-.26.08-.58.08-1.21.01-.65.01-.98-.06-1.24a2 2 0 0 0-1.39-1.41c-.26-.08-.59-.08-1.24-.08H8.12l-.57-.01a2 2 0 0 1-1.73-1.73c-.02-.13-.02-.28-.02-.58" fill="currentColor"/><path d="M5.8 7v10.3c0 1.88 0 2.82.59 3.4.59.6 1.53.6 3.41.6h4.4c1.88 0 2.82 0 3.41-.6.59-.58.59-1.52.59-3.4V7" stroke="currentColor"/><rect x="4.07" y="2.71" width="15.85" height="4.29" rx="1" stroke="currentColor"/><path d="M5.8 11.2H10c.94 0 1.41 0 1.7.3.3.28.3.76.3 1.7v1.32c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H5.8z" stroke="currentColor"/></svg>
   )
 }

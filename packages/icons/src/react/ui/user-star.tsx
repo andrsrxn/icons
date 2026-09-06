@@ -11,42 +11,20 @@ export const IconUserStar: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-user-star'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'user-star-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M17.33 7.92a5.33 5.33 0 1 1-10.66 0 5.33 5.33 0 0 1 10.66 0'
-        fill='currentColor'
-      />
-      <path
-        opacity='.2'
-        d='m15.56 18.88.57 2.8H3.73c0-4.65 3.7-8.43 8.27-8.43 2.2 0 4.19.87 5.67 2.3 0 0-2.64 1.8-2.11 3.33'
-        fill='currentColor'
-      />
-      <path
-        d='M17.33 7.92A5.3 5.3 0 0 1 12 13.25a5.33 5.33 0 1 1 5.33-5.33'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M3.73 21.52A8.27 8.27 0 0 1 15.2 13.9m2.39 2.03c.39-.77.58-1.15.89-1.15.3 0 .5.38.9 1.15l.22.45c.12.23.17.34.27.4.1.08.22.1.47.14l.5.08c.85.13 1.27.2 1.37.49.1.3-.21.6-.82 1.2l-.36.36c-.17.18-.26.27-.3.38-.04.12-.02.24.02.49l.08.5c.14.85.2 1.27-.05 1.45-.24.18-.63-.01-1.39-.4l-.46-.23c-.22-.12-.33-.17-.45-.17s-.23.05-.45.17l-.46.23c-.76.39-1.15.58-1.4.4-.24-.18-.17-.6-.04-1.45l.08-.5c.04-.25.06-.37.02-.49s-.13-.2-.3-.38l-.36-.36c-.61-.6-.91-.9-.82-1.2s.52-.36 1.37-.5l.5-.07c.25-.04.37-.06.47-.13s.15-.18.27-.4z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'user-star-title'}>{title}</title> : null}<path opacity=".2" d="M17.33 7.92a5.33 5.33 0 1 1-10.66 0 5.33 5.33 0 0 1 10.66 0" fill="currentColor"/><path opacity=".2" d="m15.56 18.88.57 2.8H3.73c0-4.65 3.7-8.43 8.27-8.43 2.2 0 4.19.87 5.67 2.3 0 0-2.64 1.8-2.11 3.33" fill="currentColor"/><path d="M17.33 7.92A5.3 5.3 0 0 1 12 13.25a5.33 5.33 0 1 1 5.33-5.33" stroke="currentColor"/><path d="M3.73 21.52A8.27 8.27 0 0 1 15.2 13.9m2.39 2.03c.39-.77.58-1.15.89-1.15.3 0 .5.38.9 1.15l.22.45c.12.23.17.34.27.4.1.08.22.1.47.14l.5.08c.85.13 1.27.2 1.37.49.1.3-.21.6-.82 1.2l-.36.36c-.17.18-.26.27-.3.38-.04.12-.02.24.02.49l.08.5c.14.85.2 1.27-.05 1.45-.24.18-.63-.01-1.39-.4l-.46-.23c-.22-.12-.33-.17-.45-.17s-.23.05-.45.17l-.46.23c-.76.39-1.15.58-1.4.4-.24-.18-.17-.6-.04-1.45l.08-.5c.04-.25.06-.37.02-.49s-.13-.2-.3-.38l-.36-.36c-.61-.6-.91-.9-.82-1.2s.52-.36 1.37-.5l.5-.07c.25-.04.37-.06.47-.13s.15-.18.27-.4z" stroke="currentColor"/></svg>
   )
 }

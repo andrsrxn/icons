@@ -11,28 +11,20 @@ export const IconShare: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-share'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'share-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='3.54' y='11.9' width='16.93' height='9.39' rx='3' fill='currentColor' />
-      <path
-        d='M17.66 11.9a2.8 2.8 0 0 1 2.8 2.8v1.9c0 1.58 0 2.37-.29 2.98A3 3 0 0 1 18.75 21c-.6.3-1.4.3-2.98.3H8.23c-1.58 0-2.37 0-2.98-.3a3 3 0 0 1-1.42-1.42c-.3-.61-.3-1.4-.3-2.98v-1.9a2.8 2.8 0 0 1 2.81-2.8m.86-5.4 1.97-1.97c1.33-1.34 2-2 2.83-2 .82 0 1.5.66 2.83 2L16.8 6.5M12 15.45V2.77'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'share-title'}>{title}</title> : null}<rect opacity=".2" x="3.54" y="11.9" width="16.93" height="9.39" rx="3" fill="currentColor"/><path d="M17.66 11.9a2.8 2.8 0 0 1 2.8 2.8v1.9c0 1.58 0 2.37-.29 2.98A3 3 0 0 1 18.75 21c-.6.3-1.4.3-2.98.3H8.23c-1.58 0-2.37 0-2.98-.3a3 3 0 0 1-1.42-1.42c-.3-.61-.3-1.4-.3-2.98v-1.9a2.8 2.8 0 0 1 2.81-2.8m.86-5.4 1.97-1.97c1.33-1.34 2-2 2.83-2 .82 0 1.5.66 2.83 2L16.8 6.5M12 15.45V2.77" stroke="currentColor"/></svg>
   )
 }

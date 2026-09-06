@@ -11,40 +11,20 @@ export const IconNuclearPower: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-nuclear-power'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'nuclear-power-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m7.58 20.04 2.25-4.74L8.21 13l-4.49.88-1.05 1.85 2.8 4.03zm8.84 0-2.25-4.74 1.62-2.3 4.49.88 1.05 1.85-2.8 4.03zm-3.34-9.9 2.6-4.52-1.52-2.36-4.65.6-1.18 1.76 2.6 4.12z'
-        fill='currentColor'
-      />
-      <circle
-        cx='11.99'
-        cy='12.8'
-        r='2.68'
-        transform='rotate(-120 11.99 12.8)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M10.69 10.14 9.36 7.8C8.59 6.45 8.2 5.77 8.2 5.2a2 2 0 0 1 .97-1.66c.48-.29 1.26-.29 2.82-.29s2.34 0 2.82.3a2 2 0 0 1 .96 1.66c.02.56-.37 1.23-1.15 2.59l-1.33 2.33m-2.91 5.13-1.27 2.46c-.71 1.39-1.07 2.08-1.55 2.37a2 2 0 0 1-1.9.1c-.5-.23-.93-.89-1.8-2.19-.85-1.3-1.28-1.95-1.3-2.51a2 2 0 0 1 .84-1.71c.45-.33 1.23-.38 2.8-.5l2.76-.19m4.66 2.17 1.27 2.46c.71 1.39 1.07 2.08 1.55 2.37a2 2 0 0 0 1.9.1c.5-.23.93-.89 1.8-2.19.85-1.3 1.28-1.95 1.3-2.51a2 2 0 0 0-.84-1.71c-.45-.33-1.23-.38-2.8-.5l-2.76-.19'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'nuclear-power-title'}>{title}</title> : null}<path opacity=".2" d="m7.58 20.04 2.25-4.74L8.21 13l-4.49.88-1.05 1.85 2.8 4.03zm8.84 0-2.25-4.74 1.62-2.3 4.49.88 1.05 1.85-2.8 4.03zm-3.34-9.9 2.6-4.52-1.52-2.36-4.65.6-1.18 1.76 2.6 4.12z" fill="currentColor"/><circle cx="11.99" cy="12.8" r="2.68" transform="rotate(-120 11.99 12.8)" stroke="currentColor"/><path d="M10.69 10.14 9.36 7.8C8.59 6.45 8.2 5.77 8.2 5.2a2 2 0 0 1 .97-1.66c.48-.29 1.26-.29 2.82-.29s2.34 0 2.82.3a2 2 0 0 1 .96 1.66c.02.56-.37 1.23-1.15 2.59l-1.33 2.33m-2.91 5.13-1.27 2.46c-.71 1.39-1.07 2.08-1.55 2.37a2 2 0 0 1-1.9.1c-.5-.23-.93-.89-1.8-2.19-.85-1.3-1.28-1.95-1.3-2.51a2 2 0 0 1 .84-1.71c.45-.33 1.23-.38 2.8-.5l2.76-.19m4.66 2.17 1.27 2.46c.71 1.39 1.07 2.08 1.55 2.37a2 2 0 0 0 1.9.1c.5-.23.93-.89 1.8-2.19.85-1.3 1.28-1.95 1.3-2.51a2 2 0 0 0-.84-1.71c-.45-.33-1.23-.38-2.8-.5l-2.76-.19" stroke="currentColor"/></svg>
   )
 }

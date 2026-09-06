@@ -11,39 +11,20 @@ export const IconPill: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-pill'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'pill-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        width='9.74'
-        height='11.35'
-        rx='2'
-        transform='matrix(.72005 .69393 -.69708 .71699 8.88 8.22)'
-        fill='currentColor'
-      />
-      <rect
-        width='9.74'
-        height='22.54'
-        rx='4.87'
-        transform='matrix(.72005 .69393 -.69708 .71699 16.35 .54)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path d='M15.32 15.32 8.68 8.68' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'pill-title'}>{title}</title> : null}<rect opacity=".2" width="9.74" height="11.35" rx="2" transform="matrix(.72005 .69393 -.69708 .71699 8.88 8.22)" fill="currentColor"/><rect width="9.74" height="22.54" rx="4.87" transform="matrix(.72005 .69393 -.69708 .71699 16.35 .54)" stroke="currentColor"/><path d="M15.32 15.32 8.68 8.68" stroke="currentColor"/></svg>
   )
 }

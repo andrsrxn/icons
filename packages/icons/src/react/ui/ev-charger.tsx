@@ -11,51 +11,20 @@ export const IconEvCharger: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-ev-charger'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'ev-charger-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M13.92 8.01c0-1.9 0-2.85-.42-3.55a3 3 0 0 0-1.06-1.07c-.7-.41-1.65-.41-3.56-.41-1.9 0-2.85 0-3.55.41a3 3 0 0 0-1.06 1.07c-.42.7-.42 1.65-.42 3.55v10.13h10.07zm3.68 2.27a.95.95 0 0 1 .16-1.53l1.98-1.15a.94.94 0 0 1 1.39.61c.18.8-.18 1.63-.9 2.04l-.43.25c-.7.4-1.58.32-2.2-.22'
-        fill='currentColor'
-      />
-      <path
-        d='M14 18.14V7.83c0-1.99 0-2.98-.44-3.7a3 3 0 0 0-.97-.97c-.72-.46-1.72-.46-3.7-.46-2 0-2.99 0-3.71.46a3 3 0 0 0-.97.96c-.45.73-.45 1.72-.45 3.71v10.3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='3.02'
-        y='18.14'
-        width='11.74'
-        height='3.16'
-        rx='1'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m14 12.75 1.01 1.17c.5.6.76.89 1.07 1.06a2 2 0 0 0 1.13.25c.35-.03.7-.19 1.41-.51.66-.3.99-.45 1.23-.67a2 2 0 0 0 .56-.93c.09-.32.07-.68.02-1.4l-.05-.84'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M17.9 10.76c-.37-.4-.55-.59-.62-.79a1 1 0 0 1 .13-.92c.12-.17.36-.3.82-.57l1.01-.59c.47-.27.7-.4.91-.42a1 1 0 0 1 .86.34c.14.16.22.42.37.93.1.34.16.5.15.66a1 1 0 0 1-.26.65c-.1.12-.25.2-.56.38l-1 .59c-.31.17-.46.26-.62.3a1 1 0 0 1-.69-.1c-.13-.08-.25-.2-.5-.46m-9-3.31-1.73 2.8h3.28l-1.52 2.69m8.38-4.51-.88-1.52m3.04.28-.88-1.53'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'ev-charger-title'}>{title}</title> : null}<path opacity=".2" d="M13.92 8.01c0-1.9 0-2.85-.42-3.55a3 3 0 0 0-1.06-1.07c-.7-.41-1.65-.41-3.56-.41-1.9 0-2.85 0-3.55.41a3 3 0 0 0-1.06 1.07c-.42.7-.42 1.65-.42 3.55v10.13h10.07zm3.68 2.27a.95.95 0 0 1 .16-1.53l1.98-1.15a.94.94 0 0 1 1.39.61c.18.8-.18 1.63-.9 2.04l-.43.25c-.7.4-1.58.32-2.2-.22" fill="currentColor"/><path d="M14 18.14V7.83c0-1.99 0-2.98-.44-3.7a3 3 0 0 0-.97-.97c-.72-.46-1.72-.46-3.7-.46-2 0-2.99 0-3.71.46a3 3 0 0 0-.97.96c-.45.73-.45 1.72-.45 3.71v10.3" stroke="currentColor"/><rect x="3.02" y="18.14" width="11.74" height="3.16" rx="1" stroke="currentColor"/><path d="m14 12.75 1.01 1.17c.5.6.76.89 1.07 1.06a2 2 0 0 0 1.13.25c.35-.03.7-.19 1.41-.51.66-.3.99-.45 1.23-.67a2 2 0 0 0 .56-.93c.09-.32.07-.68.02-1.4l-.05-.84" stroke="currentColor"/><path d="M17.9 10.76c-.37-.4-.55-.59-.62-.79a1 1 0 0 1 .13-.92c.12-.17.36-.3.82-.57l1.01-.59c.47-.27.7-.4.91-.42a1 1 0 0 1 .86.34c.14.16.22.42.37.93.1.34.16.5.15.66a1 1 0 0 1-.26.65c-.1.12-.25.2-.56.38l-1 .59c-.31.17-.46.26-.62.3a1 1 0 0 1-.69-.1c-.13-.08-.25-.2-.5-.46m-9-3.31-1.73 2.8h3.28l-1.52 2.69m8.38-4.51-.88-1.52m3.04.28-.88-1.53" stroke="currentColor"/></svg>
   )
 }

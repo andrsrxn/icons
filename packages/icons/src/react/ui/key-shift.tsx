@@ -11,32 +11,20 @@ export const IconKeyShift: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-key-shift'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'key-shift-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M9.2 4.57 6.22 7.5c-.55.55-.83.82-.9 1.04a1 1 0 0 0 .5 1.23c.2.1.6.1 1.38.1.35 0 .53 0 .68.04a1 1 0 0 1 .66.66c.04.15.04.33.04.68v6.71c0 1.35 0 2.02.31 2.51a2 2 0 0 0 .62.62c.5.31 1.16.31 2.5.31 1.35 0 2.02 0 2.51-.31a2 2 0 0 0 .62-.62c.31-.49.31-1.16.31-2.5v-6.73c0-.35 0-.52.05-.66a1 1 0 0 1 .67-.67c.14-.04.31-.04.65-.04.75 0 1.13 0 1.33-.1a1 1 0 0 0 .51-1.25c-.07-.2-.34-.47-.87-1l-2.98-2.94c-1.33-1.32-2-1.97-2.82-1.97s-1.48.65-2.8 1.96'
-        fill='currentColor'
-      />
-      <path
-        d='M9.2 4.57 6.22 7.5c-.55.55-.83.82-.9 1.04a1 1 0 0 0 .5 1.23c.2.1.6.1 1.38.1.35 0 .53 0 .68.04a1 1 0 0 1 .66.66c.04.15.04.33.04.68v6.71c0 1.35 0 2.02.31 2.51a2 2 0 0 0 .62.62c.5.31 1.16.31 2.5.31 1.35 0 2.02 0 2.51-.31a2 2 0 0 0 .62-.62c.31-.49.31-1.16.31-2.5v-6.73c0-.35 0-.52.05-.66a1 1 0 0 1 .67-.67c.14-.04.31-.04.65-.04.75 0 1.13 0 1.33-.1a1 1 0 0 0 .51-1.25c-.07-.2-.34-.47-.87-1l-2.98-2.94c-1.33-1.32-2-1.97-2.82-1.97s-1.48.65-2.8 1.96'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'key-shift-title'}>{title}</title> : null}<path opacity=".2" d="M9.2 4.57 6.22 7.5c-.55.55-.83.82-.9 1.04a1 1 0 0 0 .5 1.23c.2.1.6.1 1.38.1.35 0 .53 0 .68.04a1 1 0 0 1 .66.66c.04.15.04.33.04.68v6.71c0 1.35 0 2.02.31 2.51a2 2 0 0 0 .62.62c.5.31 1.16.31 2.5.31 1.35 0 2.02 0 2.51-.31a2 2 0 0 0 .62-.62c.31-.49.31-1.16.31-2.5v-6.73c0-.35 0-.52.05-.66a1 1 0 0 1 .67-.67c.14-.04.31-.04.65-.04.75 0 1.13 0 1.33-.1a1 1 0 0 0 .51-1.25c-.07-.2-.34-.47-.87-1l-2.98-2.94c-1.33-1.32-2-1.97-2.82-1.97s-1.48.65-2.8 1.96" fill="currentColor"/><path d="M9.2 4.57 6.22 7.5c-.55.55-.83.82-.9 1.04a1 1 0 0 0 .5 1.23c.2.1.6.1 1.38.1.35 0 .53 0 .68.04a1 1 0 0 1 .66.66c.04.15.04.33.04.68v6.71c0 1.35 0 2.02.31 2.51a2 2 0 0 0 .62.62c.5.31 1.16.31 2.5.31 1.35 0 2.02 0 2.51-.31a2 2 0 0 0 .62-.62c.31-.49.31-1.16.31-2.5v-6.73c0-.35 0-.52.05-.66a1 1 0 0 1 .67-.67c.14-.04.31-.04.65-.04.75 0 1.13 0 1.33-.1a1 1 0 0 0 .51-1.25c-.07-.2-.34-.47-.87-1l-2.98-2.94c-1.33-1.32-2-1.97-2.82-1.97s-1.48.65-2.8 1.96" stroke="currentColor"/></svg>
   )
 }

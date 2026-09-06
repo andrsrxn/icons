@@ -11,47 +11,20 @@ export const IconSlidesLeft: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-slides-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'slides-left-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='2.61'
-        y='19.7'
-        width='15.4'
-        height='12.05'
-        rx='3'
-        transform='rotate(-90 2.6 19.7)'
-        fill='currentColor'
-      />
-      <rect
-        x='2.61'
-        y='19.7'
-        width='15.4'
-        height='12.05'
-        rx='3'
-        transform='rotate(-90 2.6 19.7)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M21.34 18.08V5.92m-3.56 12.16V5.92'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'slides-left-title'}>{title}</title> : null}<rect opacity=".2" x="2.61" y="19.7" width="15.4" height="12.05" rx="3" transform="rotate(-90 2.6 19.7)" fill="currentColor"/><rect x="2.61" y="19.7" width="15.4" height="12.05" rx="3" transform="rotate(-90 2.6 19.7)" stroke="currentColor"/><path d="M21.34 18.08V5.92m-3.56 12.16V5.92" stroke="currentColor"/></svg>
   )
 }

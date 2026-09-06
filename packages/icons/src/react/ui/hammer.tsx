@@ -11,37 +11,20 @@ export const IconHammer: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hammer'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hammer-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m10.71 10.22 2.61 2.61-6.91 6.92c-.57.56-.85.84-1.2.89h-.23c-.34-.05-.62-.33-1.19-.89s-.84-.84-.88-1.18v-.24c.04-.35.32-.63.88-1.19z'
-        fill='currentColor'
-      />
-      <path
-        d='m10.91 10.02-7.6 7.6c-.57.57-.85.85-.89 1.2v.23c.04.35.32.63.89 1.19.56.56.84.84 1.18.88h.24c.34-.04.63-.32 1.19-.88l7.6-7.6'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m12.86 13.3.67-.68.3-.28a1 1 0 0 1 1.14 0q.09.07.3.29l.4.4c.26.26.26.67 0 .93a.65.65 0 0 0 0 .92l.74.73c.45.46.68.68.94.75a1 1 0 0 0 .5 0c.26-.07.49-.3.94-.75l2.26-2.26c.45-.45.68-.68.75-.95a1 1 0 0 0 0-.48c-.07-.27-.3-.5-.75-.95l-.74-.74a.64.64 0 0 0-.9 0 .64.64 0 0 1-.91 0l-.8-.8a.65.65 0 0 1 0-.92c.2-.2.25-.5.1-.74a9 9 0 0 0-1.36-1.73 12.4 12.4 0 0 0-5.82-3.35c-.7-.17-1.06-.25-1.25.05-.2.3.07.63.6 1.27 2.94 3.6 1.7 5.24.9 6.06m2.02 2.33-1.74-1.74'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hammer-title'}>{title}</title> : null}<path opacity=".2" d="m10.71 10.22 2.61 2.61-6.91 6.92c-.57.56-.85.84-1.2.89h-.23c-.34-.05-.62-.33-1.19-.89s-.84-.84-.88-1.18v-.24c.04-.35.32-.63.88-1.19z" fill="currentColor"/><path d="m10.91 10.02-7.6 7.6c-.57.57-.85.85-.89 1.2v.23c.04.35.32.63.89 1.19.56.56.84.84 1.18.88h.24c.34-.04.63-.32 1.19-.88l7.6-7.6" stroke="currentColor"/><path d="m12.86 13.3.67-.68.3-.28a1 1 0 0 1 1.14 0q.09.07.3.29l.4.4c.26.26.26.67 0 .93a.65.65 0 0 0 0 .92l.74.73c.45.46.68.68.94.75a1 1 0 0 0 .5 0c.26-.07.49-.3.94-.75l2.26-2.26c.45-.45.68-.68.75-.95a1 1 0 0 0 0-.48c-.07-.27-.3-.5-.75-.95l-.74-.74a.64.64 0 0 0-.9 0 .64.64 0 0 1-.91 0l-.8-.8a.65.65 0 0 1 0-.92c.2-.2.25-.5.1-.74a9 9 0 0 0-1.36-1.73 12.4 12.4 0 0 0-5.82-3.35c-.7-.17-1.06-.25-1.25.05-.2.3.07.63.6 1.27 2.94 3.6 1.7 5.24.9 6.06m2.02 2.33-1.74-1.74" stroke="currentColor"/></svg>
   )
 }

@@ -11,32 +11,20 @@ export const IconMilestone: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-milestone'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'milestone-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.72 9.17c0-1.39 0-2.08.33-2.58a2 2 0 0 1 .58-.57c.5-.33 1.19-.33 2.57-.33h10.7c.58 0 .86 0 1.14.08s.51.23 1 .54l.5.32c1.8 1.14 2.7 1.71 2.7 2.54 0 .82-.9 1.4-2.7 2.53l-.5.32c-.49.31-.73.46-1 .54-.28.08-.56.08-1.14.08H6.2c-1.38 0-2.07 0-2.57-.32a2 2 0 0 1-.58-.58c-.33-.5-.33-1.2-.33-2.57'
-        fill='currentColor'
-      />
-      <path
-        d='M2.72 9.17c0-1.39 0-2.08.33-2.58a2 2 0 0 1 .58-.57c.5-.33 1.19-.33 2.57-.33h10.45c.7 0 1.05 0 1.37.11s.6.33 1.14.77l.32.26c1.34 1.08 2.01 1.62 2.01 2.34s-.67 1.26-2.01 2.34l-.32.25c-.55.44-.82.66-1.14.77s-.67.11-1.37.11H6.2c-1.38 0-2.07 0-2.57-.32a2 2 0 0 1-.58-.58c-.33-.5-.33-1.2-.33-2.57m9.16-3.48v-3.2m0 19v-8.85'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'milestone-title'}>{title}</title> : null}<path opacity=".2" d="M2.72 9.17c0-1.39 0-2.08.33-2.58a2 2 0 0 1 .58-.57c.5-.33 1.19-.33 2.57-.33h10.7c.58 0 .86 0 1.14.08s.51.23 1 .54l.5.32c1.8 1.14 2.7 1.71 2.7 2.54 0 .82-.9 1.4-2.7 2.53l-.5.32c-.49.31-.73.46-1 .54-.28.08-.56.08-1.14.08H6.2c-1.38 0-2.07 0-2.57-.32a2 2 0 0 1-.58-.58c-.33-.5-.33-1.2-.33-2.57" fill="currentColor"/><path d="M2.72 9.17c0-1.39 0-2.08.33-2.58a2 2 0 0 1 .58-.57c.5-.33 1.19-.33 2.57-.33h10.45c.7 0 1.05 0 1.37.11s.6.33 1.14.77l.32.26c1.34 1.08 2.01 1.62 2.01 2.34s-.67 1.26-2.01 2.34l-.32.25c-.55.44-.82.66-1.14.77s-.67.11-1.37.11H6.2c-1.38 0-2.07 0-2.57-.32a2 2 0 0 1-.58-.58c-.33-.5-.33-1.2-.33-2.57m9.16-3.48v-3.2m0 19v-8.85" stroke="currentColor"/></svg>
   )
 }

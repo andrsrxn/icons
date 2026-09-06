@@ -11,55 +11,20 @@ export const IconMagicWand: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-magic-wand'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'magic-wand-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        width='15.45'
-        height='5.47'
-        rx='2'
-        transform='scale(-1 1)rotate(45 -15 -12.39)'
-        fill='currentColor'
-      />
-      <path
-        d='M4.28 19.72a5 5 0 0 0 1.2 1.03 2 2 0 0 0 1.69 0c.32-.15.6-.44 1.2-1.02L20.1 8a5 5 0 0 0 1.03-1.2 2 2 0 0 0 0-1.7 5 5 0 0 0-1.03-1.2c-.6-.58-.89-.88-1.2-1.03a2 2 0 0 0-1.7 0c-.31.15-.6.45-1.2 1.03L4.27 15.64a5 5 0 0 0-1.02 1.2 2 2 0 0 0 0 1.69 5 5 0 0 0 1.03 1.2M13 7.13 16.87 11m-1.14 7.4c1.4 0 2.9-1.5 2.9-2.89'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M21.51 18.4c-1.38 0-2.89-1.5-2.89-2.89m-2.89 2.89c1.39 0 2.9 1.53 2.9 2.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M21.51 18.4c-1.37 0-2.89 1.51-2.89 2.9M2.77 5.6c1.4 0 2.9-1.5 2.9-2.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M8.55 5.6c-1.39 0-2.89-1.5-2.89-2.9M2.77 5.6c1.39 0 2.9 1.53 2.9 2.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M8.55 5.6c-1.37 0-2.89 1.5-2.89 2.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'magic-wand-title'}>{title}</title> : null}<rect opacity=".2" width="15.45" height="5.47" rx="2" transform="scale(-1 1)rotate(45 -15 -12.39)" fill="currentColor"/><path d="M4.28 19.72a5 5 0 0 0 1.2 1.03 2 2 0 0 0 1.69 0c.32-.15.6-.44 1.2-1.02L20.1 8a5 5 0 0 0 1.03-1.2 2 2 0 0 0 0-1.7 5 5 0 0 0-1.03-1.2c-.6-.58-.89-.88-1.2-1.03a2 2 0 0 0-1.7 0c-.31.15-.6.45-1.2 1.03L4.27 15.64a5 5 0 0 0-1.02 1.2 2 2 0 0 0 0 1.69 5 5 0 0 0 1.03 1.2M13 7.13 16.87 11m-1.14 7.4c1.4 0 2.9-1.5 2.9-2.89" stroke="currentColor"/><path d="M21.51 18.4c-1.38 0-2.89-1.5-2.89-2.89m-2.89 2.89c1.39 0 2.9 1.53 2.9 2.9" stroke="currentColor"/><path d="M21.51 18.4c-1.37 0-2.89 1.51-2.89 2.9M2.77 5.6c1.4 0 2.9-1.5 2.9-2.9" stroke="currentColor"/><path d="M8.55 5.6c-1.39 0-2.89-1.5-2.89-2.9M2.77 5.6c1.39 0 2.9 1.53 2.9 2.9" stroke="currentColor"/><path d="M8.55 5.6c-1.37 0-2.89 1.5-2.89 2.9" stroke="currentColor"/></svg>
   )
 }

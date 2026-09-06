@@ -11,37 +11,20 @@ export const IconContactlessPay: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-contactless-pay'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'contactless-pay-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
-        fill='currentColor'
-      />
-      <path
-        d='M7.57 15.02A4.6 4.6 0 0 0 8.54 12a4.6 4.6 0 0 0-.97-3.02m3.1 7.65a7 7 0 0 0 1.5-4.63c0-1.87-.37-3.01-1.5-4.63m3.62 10.47A9 9 0 0 0 16.18 12c0-2.36-.46-3.8-1.89-5.84'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'contactless-pay-title'}>{title}</title> : null}<path opacity=".2" d="M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0" fill="currentColor"/><path d="M7.57 15.02A4.6 4.6 0 0 0 8.54 12a4.6 4.6 0 0 0-.97-3.02m3.1 7.65a7 7 0 0 0 1.5-4.63c0-1.87-.37-3.01-1.5-4.63m3.62 10.47A9 9 0 0 0 16.18 12c0-2.36-.46-3.8-1.89-5.84" stroke="currentColor"/><path d="M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12" stroke="currentColor"/></svg>
   )
 }

@@ -11,27 +11,20 @@ export const IconListCollapse: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-list-collapse'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-collapse-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M21.19 6H2.8m8.01 6h-8m8 6h-8m11.25-7.2.46.45c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.46-.45m-6.58 8.38.46-.45c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.46.45'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'list-collapse-title'}>{title}</title> : null}<path d="M21.19 6H2.8m8.01 6h-8m8 6h-8m11.25-7.2.46.45c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.46-.45m-6.58 8.38.46-.45c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.46.45" stroke="currentColor"/></svg>
   )
 }

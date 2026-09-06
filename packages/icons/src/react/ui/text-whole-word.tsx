@@ -11,42 +11,20 @@ export const IconTextWholeWord: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-text-whole-word'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-whole-word-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M21.58 14.53c0 1.65 0 2.48-.45 3.03l-.27.27c-.55.46-1.38.46-3.04.46H6.18c-1.66 0-2.49 0-3.04-.46l-.27-.27c-.45-.55-.45-1.38-.45-3.03'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        opacity='.2'
-        d='M16.06 14.8c-1.13 0-2.04-.98-2.04-2.2 0-1.2.91-1.56 2.04-1.56s2.04.36 2.04 1.57c0 1.2-.91 2.18-2.04 2.18m-8.99-5.6.77-2.7c.28-.97 1.65-.97 1.92 0l.78 2.7a1 1 0 0 1-.96 1.27H8.04a1 1 0 0 1-.97-1.27'
-        fill='currentColor'
-      />
-      <path
-        d='m5.43 14.9 1.41-5.36C7.63 6.58 8.02 5.1 8.8 5.1s1.15 1.48 1.92 4.45l1.4 5.35m3.94-.1c-1.13 0-2.04-.83-2.04-1.85 0-1.35.91-1.84 2.04-1.84h2.04v1.84c0 1.02-.91 1.84-2.04 1.84m-5.17-4H6.65'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M18.58 14.9s-.28-.22-.28-.9v-3.7c0-1.47-.33-2.35-1.69-2.6-.88-.17-1.56.22-2.08.89'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-whole-word-title'}>{title}</title> : null}<path d="M21.58 14.53c0 1.65 0 2.48-.45 3.03l-.27.27c-.55.46-1.38.46-3.04.46H6.18c-1.66 0-2.49 0-3.04-.46l-.27-.27c-.45-.55-.45-1.38-.45-3.03" stroke="currentColor"/><path opacity=".2" d="M16.06 14.8c-1.13 0-2.04-.98-2.04-2.2 0-1.2.91-1.56 2.04-1.56s2.04.36 2.04 1.57c0 1.2-.91 2.18-2.04 2.18m-8.99-5.6.77-2.7c.28-.97 1.65-.97 1.92 0l.78 2.7a1 1 0 0 1-.96 1.27H8.04a1 1 0 0 1-.97-1.27" fill="currentColor"/><path d="m5.43 14.9 1.41-5.36C7.63 6.58 8.02 5.1 8.8 5.1s1.15 1.48 1.92 4.45l1.4 5.35m3.94-.1c-1.13 0-2.04-.83-2.04-1.85 0-1.35.91-1.84 2.04-1.84h2.04v1.84c0 1.02-.91 1.84-2.04 1.84m-5.17-4H6.65" stroke="currentColor"/><path d="M18.58 14.9s-.28-.22-.28-.9v-3.7c0-1.47-.33-2.35-1.69-2.6-.88-.17-1.56.22-2.08.89" stroke="currentColor"/></svg>
   )
 }

@@ -11,32 +11,20 @@ export const IconCurrencyUsd: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-currency-usd'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-usd-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m8.08 5.64 2.6-.84a1 1 0 0 1 1.31.95v5.07a1 1 0 0 1-1.37.93l-2.93-1.18a1 1 0 0 1-.62-1.04l.32-3.05a1 1 0 0 1 .7-.84m7.81 7.62-2.6-.84a1 1 0 0 0-1.3.95v5.08a1 1 0 0 0 1.37.92l2.93-1.18a1 1 0 0 0 .62-1.03l-.32-3.06a1 1 0 0 0-.7-.84'
-        fill='currentColor'
-      />
-      <path
-        d='M17.05 7.04c-.45-1.47-2.57-2.6-5.06-2.6s-5.2.98-5.2 3.94c0 5.8 9.96 1.28 10.42 6.99.21 2.72-2.67 4.2-5.22 4.2S7.6 18.41 6.8 16.9m5.2 4.51V2.59'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'currency-usd-title'}>{title}</title> : null}<path opacity=".2" d="m8.08 5.64 2.6-.84a1 1 0 0 1 1.31.95v5.07a1 1 0 0 1-1.37.93l-2.93-1.18a1 1 0 0 1-.62-1.04l.32-3.05a1 1 0 0 1 .7-.84m7.81 7.62-2.6-.84a1 1 0 0 0-1.3.95v5.08a1 1 0 0 0 1.37.92l2.93-1.18a1 1 0 0 0 .62-1.03l-.32-3.06a1 1 0 0 0-.7-.84" fill="currentColor"/><path d="M17.05 7.04c-.45-1.47-2.57-2.6-5.06-2.6s-5.2.98-5.2 3.94c0 5.8 9.96 1.28 10.42 6.99.21 2.72-2.67 4.2-5.22 4.2S7.6 18.41 6.8 16.9m5.2 4.51V2.59" stroke="currentColor"/></svg>
   )
 }

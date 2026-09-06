@@ -11,32 +11,20 @@ export const IconBbqGrill: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-bbq-grill'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'bbq-grill-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M4.35 10.06h15.3c0 3.71-3.42 6.73-7.65 6.73-4.22 0-7.65-3.02-7.65-6.73'
-        fill='currentColor'
-      />
-      <path
-        d='M4.35 10.06c0 3.71 3.43 6.73 7.65 6.73s7.65-3.02 7.65-6.73M3 10.06h18m-9 6.73v4.78m-3.25-5.39L5.63 21.3m12.74 0-3.12-5.12M11.58 2.44l.6.64c.5.54.46 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.51.44m3.88-4.94.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44M6.72 2.44l.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'bbq-grill-title'}>{title}</title> : null}<path opacity=".2" d="M4.35 10.06h15.3c0 3.71-3.42 6.73-7.65 6.73-4.22 0-7.65-3.02-7.65-6.73" fill="currentColor"/><path d="M4.35 10.06c0 3.71 3.43 6.73 7.65 6.73s7.65-3.02 7.65-6.73M3 10.06h18m-9 6.73v4.78m-3.25-5.39L5.63 21.3m12.74 0-3.12-5.12M11.58 2.44l.6.64c.5.54.46 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.51.44m3.88-4.94.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44M6.72 2.44l.6.64c.5.54.45 1.4-.12 1.88a1.3 1.3 0 0 0 0 1.98l.5.44" stroke="currentColor"/></svg>
   )
 }

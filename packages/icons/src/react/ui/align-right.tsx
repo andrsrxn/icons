@@ -11,63 +11,20 @@ export const IconAlignRight: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-align-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-right-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='18.23'
-        y='4.63'
-        width='5.8'
-        height='15.49'
-        rx='2'
-        transform='rotate(90 18.23 4.63)'
-        fill='currentColor'
-      />
-      <rect
-        opacity='.2'
-        x='18.23'
-        y='13.68'
-        width='5.8'
-        height='11.62'
-        rx='2'
-        transform='rotate(90 18.23 13.68)'
-        fill='currentColor'
-      />
-      <rect
-        x='18.23'
-        y='13.68'
-        width='5.8'
-        height='11.62'
-        rx='2'
-        transform='rotate(90 18.23 13.68)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='18.23'
-        y='4.63'
-        width='5.8'
-        height='15.49'
-        rx='2'
-        transform='rotate(90 18.23 4.63)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path d='M21.26 3.76v16.58' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'align-right-title'}>{title}</title> : null}<rect opacity=".2" x="18.23" y="4.63" width="5.8" height="15.49" rx="2" transform="rotate(90 18.23 4.63)" fill="currentColor"/><rect opacity=".2" x="18.23" y="13.68" width="5.8" height="11.62" rx="2" transform="rotate(90 18.23 13.68)" fill="currentColor"/><rect x="18.23" y="13.68" width="5.8" height="11.62" rx="2" transform="rotate(90 18.23 13.68)" stroke="currentColor"/><rect x="18.23" y="4.63" width="5.8" height="15.49" rx="2" transform="rotate(90 18.23 4.63)" stroke="currentColor"/><path d="M21.26 3.76v16.58" stroke="currentColor"/></svg>
   )
 }

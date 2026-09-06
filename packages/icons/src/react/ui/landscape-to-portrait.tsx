@@ -11,42 +11,20 @@ export const IconLandscapeToPortrait: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-landscape-to-portrait'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'landscape-to-portrait-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.8' y='12.31' width='18.39' height='8.9' rx='2' fill='currentColor' />
-      <rect
-        x='2.8'
-        y='12.32'
-        width='18.39'
-        height='8.89'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M11.67 11.55V7.13c0-1.33 0-2-.2-2.53a3 3 0 0 0-1.7-1.69c-.53-.2-1.2-.2-2.53-.2-1.34 0-2 0-2.53.2A3 3 0 0 0 3 4.61c-.2.52-.2 1.19-.2 2.52v7.46m12.39-8.83h.7c1.8 0 2.7 0 3.28.54l.1.1c.53.58.53 1.48.53 3.27'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M16.37 3.34c-.9.9-1.34 1.34-1.47 1.86a2 2 0 0 0 0 1.02c.13.52.58.97 1.47 1.86'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'landscape-to-portrait-title'}>{title}</title> : null}<rect opacity=".2" x="2.8" y="12.31" width="18.39" height="8.9" rx="2" fill="currentColor"/><rect x="2.8" y="12.32" width="18.39" height="8.89" rx="3" stroke="currentColor"/><path d="M11.67 11.55V7.13c0-1.33 0-2-.2-2.53a3 3 0 0 0-1.7-1.69c-.53-.2-1.2-.2-2.53-.2-1.34 0-2 0-2.53.2A3 3 0 0 0 3 4.61c-.2.52-.2 1.19-.2 2.52v7.46m12.39-8.83h.7c1.8 0 2.7 0 3.28.54l.1.1c.53.58.53 1.48.53 3.27" stroke="currentColor"/><path d="M16.37 3.34c-.9.9-1.34 1.34-1.47 1.86a2 2 0 0 0 0 1.02c.13.52.58.97 1.47 1.86" stroke="currentColor"/></svg>
   )
 }

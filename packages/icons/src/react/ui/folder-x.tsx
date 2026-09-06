@@ -11,32 +11,20 @@ export const IconFolderX: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-folder-x'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'folder-x-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m19.34 17.43-.16.17c-.87.91-1.3 1.37-1.87 1.61s-1.2.24-2.47.24H8.7c-2.83 0-4.25 0-5.13-.88s-.87-2.29-.87-5.12V7.27a3 3 0 0 1 2.71-2.7c.14-.02.31-.02.65-.02h.75c1.1 0 1.64 0 2.14.18.5.19.92.54 1.75 1.25l.05.04c.83.7 1.24 1.06 1.75 1.25.5.18 1.04.18 2.14.18h.99c2.51 0 3.77 0 4.6.7a3 3 0 0 1 .37.37c.7.83.7 2.1.7 4.6 0 1.15 0 1.72-.2 2.24q-.03.12-.1.24c-.24.5-.65.89-1.49 1.67z'
-        fill='currentColor'
-      />
-      <path
-        d='M21.3 11c0-.54 0-.8-.03-1.03a3 3 0 0 0-2.51-2.51c-.23-.04-.5-.04-1.03-.04h-3.7c-.84 0-1.26 0-1.65-.1a3 3 0 0 1-.59-.24 6 6 0 0 1-1.27-1.04c-.61-.56-.92-.85-1.28-1.03a3 3 0 0 0-.59-.24c-.39-.1-.8-.1-1.64-.1H5.02A2.33 2.33 0 0 0 2.7 6.99v6.46c0 2.83 0 4.24.87 5.12.88.88 2.3.88 5.13.88h4.56m3.37-5.12L22 19.7m-5.37 0L22 14.33'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'folder-x-title'}>{title}</title> : null}<path opacity=".2" d="m19.34 17.43-.16.17c-.87.91-1.3 1.37-1.87 1.61s-1.2.24-2.47.24H8.7c-2.83 0-4.25 0-5.13-.88s-.87-2.29-.87-5.12V7.27a3 3 0 0 1 2.71-2.7c.14-.02.31-.02.65-.02h.75c1.1 0 1.64 0 2.14.18.5.19.92.54 1.75 1.25l.05.04c.83.7 1.24 1.06 1.75 1.25.5.18 1.04.18 2.14.18h.99c2.51 0 3.77 0 4.6.7a3 3 0 0 1 .37.37c.7.83.7 2.1.7 4.6 0 1.15 0 1.72-.2 2.24q-.03.12-.1.24c-.24.5-.65.89-1.49 1.67z" fill="currentColor"/><path d="M21.3 11c0-.54 0-.8-.03-1.03a3 3 0 0 0-2.51-2.51c-.23-.04-.5-.04-1.03-.04h-3.7c-.84 0-1.26 0-1.65-.1a3 3 0 0 1-.59-.24 6 6 0 0 1-1.27-1.04c-.61-.56-.92-.85-1.28-1.03a3 3 0 0 0-.59-.24c-.39-.1-.8-.1-1.64-.1H5.02A2.33 2.33 0 0 0 2.7 6.99v6.46c0 2.83 0 4.24.87 5.12.88.88 2.3.88 5.13.88h4.56m3.37-5.12L22 19.7m-5.37 0L22 14.33" stroke="currentColor"/></svg>
   )
 }

@@ -11,42 +11,20 @@ export const IconHandTouch: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hand-touch'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-touch-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M15.12 7.21a4.84 4.84 0 0 0-4.8-4.85 4.85 4.85 0 0 0-4.81 4.85'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        opacity='.2'
-        d='m8.69 5.92 1.71-.58 1.32.58.7 5.08 2.64-.54 1.3 1.8h2.73l.4 7.97-1.2 1.66H8.87L5.84 18l-1.95-4.55 2.08-1.62 2.41 1.36z'
-        fill='currentColor'
-      />
-      <path
-        d='M15.88 15.03v-2.85a1.86 1.86 0 1 0-3.71 0v2.85'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M15.88 14.71v-.95a1.86 1.86 0 0 1 3.7 0v3.72c0 2.24-1.3 4.19-1.3 4.19m-6.11-7.9V7.1a1.86 1.86 0 1 0-3.71 0v7.22m-.01.11-.9-1.56a2 2 0 0 0-2.73-.73 1.93 1.93 0 0 0-.83 2.43 28 28 0 0 0 1.93 3.81 37 37 0 0 0 2.53 3.25'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hand-touch-title'}>{title}</title> : null}<path d="M15.12 7.21a4.84 4.84 0 0 0-4.8-4.85 4.85 4.85 0 0 0-4.81 4.85" stroke="currentColor"/><path opacity=".2" d="m8.69 5.92 1.71-.58 1.32.58.7 5.08 2.64-.54 1.3 1.8h2.73l.4 7.97-1.2 1.66H8.87L5.84 18l-1.95-4.55 2.08-1.62 2.41 1.36z" fill="currentColor"/><path d="M15.88 15.03v-2.85a1.86 1.86 0 1 0-3.71 0v2.85" stroke="currentColor"/><path d="M15.88 14.71v-.95a1.86 1.86 0 0 1 3.7 0v3.72c0 2.24-1.3 4.19-1.3 4.19m-6.11-7.9V7.1a1.86 1.86 0 1 0-3.71 0v7.22m-.01.11-.9-1.56a2 2 0 0 0-2.73-.73 1.93 1.93 0 0 0-.83 2.43 28 28 0 0 0 1.93 3.81 37 37 0 0 0 2.53 3.25" stroke="currentColor"/></svg>
   )
 }

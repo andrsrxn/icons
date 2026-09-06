@@ -11,34 +11,20 @@ export const IconLighthouse: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-lighthouse'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'lighthouse-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fill='currentColor'
-        d='M9.37 13.16h5.26v4.17H9.37zm.17-9.95h4.93v4.87H9.54z'
-      />
-      <path
-        d='M7.7 8.66h8.6m-6.77 4.27h4.94m-8-9.95-1.3-.55m12.36.55 1.3-.55M6.13 5.91l-1.44.17m13.18-.17 1.44.17M9.07 17.33h5.86M5.42 21.3h13.16'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <circle cx='12' cy='5.74' r='2.93' stroke='currentColor' strokeWidth={strokeWidth} />
-      <path d='M9.9 8.66h4.31l1.53 12.63H8.26z' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'lighthouse-title'}>{title}</title> : null}<path opacity=".2" fill="currentColor" d="M9.37 13.16h5.26v4.17H9.37zm.17-9.95h4.93v4.87H9.54z"/><path d="M7.7 8.66h8.6m-6.77 4.27h4.94m-8-9.95-1.3-.55m12.36.55 1.3-.55M6.13 5.91l-1.44.17m13.18-.17 1.44.17M9.07 17.33h5.86M5.42 21.3h13.16" stroke="currentColor"/><circle cx="12" cy="5.74" r="2.93" stroke="currentColor"/><path d="M9.9 8.66h4.31l1.53 12.63H8.26z" stroke="currentColor"/></svg>
   )
 }

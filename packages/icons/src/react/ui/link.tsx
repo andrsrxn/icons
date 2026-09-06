@@ -11,37 +11,20 @@ export const IconLink: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-link'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'link-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='16.46'
-        y='.7'
-        width='9.67'
-        height='22.29'
-        rx='4.83'
-        transform='rotate(45 16.46 .7)'
-        fill='currentColor'
-      />
-      <path
-        d='m9.36 14.64 5.83-5.83M6.86 10.3l-2.83 2.83a4.83 4.83 0 1 0 6.84 6.84l2.76-2.76M10.31 6.85l2.82-2.82a4.83 4.83 0 0 1 6.84 6.84l-2.82 2.82'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'link-title'}>{title}</title> : null}<rect opacity=".2" x="16.46" y=".7" width="9.67" height="22.29" rx="4.83" transform="rotate(45 16.46 .7)" fill="currentColor"/><path d="m9.36 14.64 5.83-5.83M6.86 10.3l-2.83 2.83a4.83 4.83 0 1 0 6.84 6.84l2.76-2.76M10.31 6.85l2.82-2.82a4.83 4.83 0 0 1 6.84 6.84l-2.82 2.82" stroke="currentColor"/></svg>
   )
 }

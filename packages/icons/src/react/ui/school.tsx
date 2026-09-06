@@ -11,52 +11,20 @@ export const IconSchool: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-school'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'school-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M12 2.52 6.76 6.3v14.9h3.12l.26-5.13 1.9-.48 1.89.48.29 5.14h3.04V6.3zm2.07 6.18c0 1.13-.94 2.04-2.1 2.04s-2.1-.91-2.1-2.04.94-2.03 2.1-2.03 2.1.9 2.1 2.03'
-        fill='currentColor'
-      />
-      <path
-        d='M18.17 11.1h.08a3 3 0 0 1 2.97 3.05v2c0 1.93 0 2.88-.43 3.6a3 3 0 0 1-1.04 1.04c-.7.42-1.67.42-3.58.42H7.83c-1.91 0-2.87 0-3.58-.42a3 3 0 0 1-1.04-1.05c-.43-.7-.43-1.66-.43-3.58v-2.09a2.96 2.96 0 0 1 2.97-2.96'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M17.26 21.2V8.53c0-1.14 0-1.7-.19-2.21a3 3 0 0 0-.33-.64c-.3-.45-.76-.77-1.69-1.43-1.25-.9-1.88-1.34-2.58-1.45a3 3 0 0 0-.92 0c-.7.11-1.33.56-2.58 1.45-.92.66-1.38.98-1.69 1.43a3 3 0 0 0-.33.64c-.19.5-.19 1.07-.19 2.2v12.7'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M14.07 21.2v-3.27c0-.52 0-.78-.06-1a1.5 1.5 0 0 0-1-1c-.22-.06-.48-.06-1-.06s-.78 0-.99.07a1.5 1.5 0 0 0-1 1c-.07.21-.07.47-.07.99v3.28'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <ellipse
-        cx='12.01'
-        cy='8.88'
-        rx='2.1'
-        ry='2.04'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'school-title'}>{title}</title> : null}<path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M12 2.52 6.76 6.3v14.9h3.12l.26-5.13 1.9-.48 1.89.48.29 5.14h3.04V6.3zm2.07 6.18c0 1.13-.94 2.04-2.1 2.04s-2.1-.91-2.1-2.04.94-2.03 2.1-2.03 2.1.9 2.1 2.03" fill="currentColor"/><path d="M18.17 11.1h.08a3 3 0 0 1 2.97 3.05v2c0 1.93 0 2.88-.43 3.6a3 3 0 0 1-1.04 1.04c-.7.42-1.67.42-3.58.42H7.83c-1.91 0-2.87 0-3.58-.42a3 3 0 0 1-1.04-1.05c-.43-.7-.43-1.66-.43-3.58v-2.09a2.96 2.96 0 0 1 2.97-2.96" stroke="currentColor"/><path d="M17.26 21.2V8.53c0-1.14 0-1.7-.19-2.21a3 3 0 0 0-.33-.64c-.3-.45-.76-.77-1.69-1.43-1.25-.9-1.88-1.34-2.58-1.45a3 3 0 0 0-.92 0c-.7.11-1.33.56-2.58 1.45-.92.66-1.38.98-1.69 1.43a3 3 0 0 0-.33.64c-.19.5-.19 1.07-.19 2.2v12.7" stroke="currentColor"/><path d="M14.07 21.2v-3.27c0-.52 0-.78-.06-1a1.5 1.5 0 0 0-1-1c-.22-.06-.48-.06-1-.06s-.78 0-.99.07a1.5 1.5 0 0 0-1 1c-.07.21-.07.47-.07.99v3.28" stroke="currentColor"/><ellipse cx="12.01" cy="8.88" rx="2.1" ry="2.04" stroke="currentColor"/></svg>
   )
 }

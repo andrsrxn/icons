@@ -11,32 +11,20 @@ export const IconFork: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-fork'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'fork-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m10.82 7.33.63-.73a1 1 0 0 1 1.46-.06l4.56 4.56a1 1 0 0 1 0 1.41l-.69.7a1 1 0 0 1-.98.25l-1.2-.34a1 1 0 0 0-.96.23l-7.86 7.38a1 1 0 0 1-1.01.22l-.7-.24a1 1 0 0 1-.62-.65l-.2-.63a1 1 0 0 1 .21-.97l7.27-8.04a1 1 0 0 0 .22-.93l-.34-1.25a1 1 0 0 1 .21-.91'
-        fill='currentColor'
-      />
-      <path
-        d='m15.12 8.85 3.5-3.49m-.34 6.66-6.2-6.2m3.49-3.5-4.81 4.81-.24.25a2 2 0 0 0-.4 1.88l.13.32.12.33a2 2 0 0 1-.39 1.87q-.06.09-.24.25l-6.23 6.23a1.69 1.69 0 0 0 2.39 2.39l6.25-6.26.22-.21a2 2 0 0 1 2.17-.3l.3.1a2 2 0 0 0 1.88-.4l.22-.21 4.84-4.84'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'fork-title'}>{title}</title> : null}<path opacity=".2" d="m10.82 7.33.63-.73a1 1 0 0 1 1.46-.06l4.56 4.56a1 1 0 0 1 0 1.41l-.69.7a1 1 0 0 1-.98.25l-1.2-.34a1 1 0 0 0-.96.23l-7.86 7.38a1 1 0 0 1-1.01.22l-.7-.24a1 1 0 0 1-.62-.65l-.2-.63a1 1 0 0 1 .21-.97l7.27-8.04a1 1 0 0 0 .22-.93l-.34-1.25a1 1 0 0 1 .21-.91" fill="currentColor"/><path d="m15.12 8.85 3.5-3.49m-.34 6.66-6.2-6.2m3.49-3.5-4.81 4.81-.24.25a2 2 0 0 0-.4 1.88l.13.32.12.33a2 2 0 0 1-.39 1.87q-.06.09-.24.25l-6.23 6.23a1.69 1.69 0 0 0 2.39 2.39l6.25-6.26.22-.21a2 2 0 0 1 2.17-.3l.3.1a2 2 0 0 0 1.88-.4l.22-.21 4.84-4.84" stroke="currentColor"/></svg>
   )
 }

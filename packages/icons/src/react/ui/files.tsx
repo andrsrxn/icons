@@ -11,42 +11,20 @@ export const IconFiles: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-files'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'files-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M14.7 11.68c-.02-1.07-.03-1.6-.28-2.05-.26-.44-.71-.72-1.62-1.28l-2.32-1.42-.21-.14a2 2 0 0 1-.79-2.17l.06-.26a2 2 0 0 1 1.7-1.47l.27-.01 1.8-.1c.43-.02.65-.03.83 0a2 2 0 0 1 1.7 1.62c.04.18.04.4.04.83 0 .41 0 .62.03.8a2 2 0 0 0 1.62 1.61c.18.03.38.03.8.03h.05c.46 0 .7 0 .89.04a2 2 0 0 1 1.57 1.57c.04.2.04.43.04.9v4.56c0 .98 0 1.47-.17 1.86a2 2 0 0 1-1.02 1.02c-.39.17-.88.17-1.86.17-.97 0-1.45 0-1.83-.16a2 2 0 0 1-1.03-1 5 5 0 0 1-.2-1.83z'
-        fill='currentColor'
-      />
-      <path
-        d='M9.17 21.35c-2.86 0-4.3 0-5.17-.88s-.88-2.3-.88-5.12V11.7c0-2.28 0-3.42.59-4.21a3 3 0 0 1 .63-.63c.8-.6 1.93-.6 4.2-.6 1 0 1.5 0 1.95.16l.41.17c.43.22.78.57 1.48 1.27l.62.62.4.38c.9.87 1.34 1.3 1.58 1.87.23.56.23 1.18.23 2.43v2.18c0 2.83 0 4.24-.88 5.12s-2.3.88-5.16.88'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M15.29 17.8c2.43 0 3.65 0 4.47-.67a3 3 0 0 0 .46-.45c.66-.83.66-2.04.66-4.48V9.62c0-1.25 0-1.88-.24-2.44s-.68-1-1.57-1.86l-.4-.39-.64-.64a6 6 0 0 0-1.44-1.23 3 3 0 0 0-.46-.2c-.44-.13-.93-.13-1.89-.13h-2l-.7.01a3 3 0 0 0-2.69 2.73v.7'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M10.07 6.66v.76c0 1.9 0 2.83.58 3.42s1.53.59 3.42.59h.76m.9-8.33v.77c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h.77'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'files-title'}>{title}</title> : null}<path opacity=".2" d="M14.7 11.68c-.02-1.07-.03-1.6-.28-2.05-.26-.44-.71-.72-1.62-1.28l-2.32-1.42-.21-.14a2 2 0 0 1-.79-2.17l.06-.26a2 2 0 0 1 1.7-1.47l.27-.01 1.8-.1c.43-.02.65-.03.83 0a2 2 0 0 1 1.7 1.62c.04.18.04.4.04.83 0 .41 0 .62.03.8a2 2 0 0 0 1.62 1.61c.18.03.38.03.8.03h.05c.46 0 .7 0 .89.04a2 2 0 0 1 1.57 1.57c.04.2.04.43.04.9v4.56c0 .98 0 1.47-.17 1.86a2 2 0 0 1-1.02 1.02c-.39.17-.88.17-1.86.17-.97 0-1.45 0-1.83-.16a2 2 0 0 1-1.03-1 5 5 0 0 1-.2-1.83z" fill="currentColor"/><path d="M9.17 21.35c-2.86 0-4.3 0-5.17-.88s-.88-2.3-.88-5.12V11.7c0-2.28 0-3.42.59-4.21a3 3 0 0 1 .63-.63c.8-.6 1.93-.6 4.2-.6 1 0 1.5 0 1.95.16l.41.17c.43.22.78.57 1.48 1.27l.62.62.4.38c.9.87 1.34 1.3 1.58 1.87.23.56.23 1.18.23 2.43v2.18c0 2.83 0 4.24-.88 5.12s-2.3.88-5.16.88" stroke="currentColor"/><path d="M15.29 17.8c2.43 0 3.65 0 4.47-.67a3 3 0 0 0 .46-.45c.66-.83.66-2.04.66-4.48V9.62c0-1.25 0-1.88-.24-2.44s-.68-1-1.57-1.86l-.4-.39-.64-.64a6 6 0 0 0-1.44-1.23 3 3 0 0 0-.46-.2c-.44-.13-.93-.13-1.89-.13h-2l-.7.01a3 3 0 0 0-2.69 2.73v.7" stroke="currentColor"/><path d="M10.07 6.66v.76c0 1.9 0 2.83.58 3.42s1.53.59 3.42.59h.76m.9-8.33v.77c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h.77" stroke="currentColor"/></svg>
   )
 }

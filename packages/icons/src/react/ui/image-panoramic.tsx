@@ -11,43 +11,20 @@ export const IconImagePanoramic: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-image-panoramic'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'image-panoramic-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.63 7.32c0-1.07 0-1.6.34-1.9s.87-.23 1.92-.09l6.85.9.26.03.26-.03 6.84-.9c1.06-.13 1.58-.2 1.92.1s.34.82.34 1.89v4.13c0 2.21 0 3.32-.64 3.56-.65.25-1.38-.58-2.85-2.23l-.56-.64c-.61-.68-.91-1.02-1.32-1.05-.4-.03-.75.26-1.45.84l-2.7 2.22c-.41.35-.62.52-.88.57-.25.05-.51-.04-1.03-.21l-1.62-.55c-.45-.15-.67-.23-.9-.2s-.42.16-.82.41l-.88.57c-1.36.87-2.04 1.3-2.56 1.02s-.52-1.1-.52-2.7z'
-        fill='currentColor'
-      />
-      <path
-        d='M2.63 7.37c0-1.13 0-1.69.35-1.99s.92-.2 2.05-.03c1.98.32 4.8.7 6.97.7s4.99-.38 6.97-.7c1.13-.18 1.69-.27 2.04.03s.35.86.35 1.99v9.25c0 1.11 0 1.67-.34 1.97s-.91.21-2.03.05c-1.98-.3-4.83-.66-6.99-.66s-5.01.36-7 .66c-1.12.16-1.68.25-2.02-.05s-.35-.86-.35-1.97z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M21.23 16.77 17.4 12c-.64-.79-.96-1.18-1.4-1.21s-.8.32-1.54 1.02l-2.44 2.33c-.5.47-.74.7-1.05.75-.32.04-.62-.1-1.23-.41L8.6 13.9c-.54-.27-.8-.4-1.09-.37-.28.02-.52.2-1 .56l-3.57 2.67'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M7.97 9.98a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0'
-        fill='currentColor'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'image-panoramic-title'}>{title}</title> : null}<path opacity=".2" d="M2.63 7.32c0-1.07 0-1.6.34-1.9s.87-.23 1.92-.09l6.85.9.26.03.26-.03 6.84-.9c1.06-.13 1.58-.2 1.92.1s.34.82.34 1.89v4.13c0 2.21 0 3.32-.64 3.56-.65.25-1.38-.58-2.85-2.23l-.56-.64c-.61-.68-.91-1.02-1.32-1.05-.4-.03-.75.26-1.45.84l-2.7 2.22c-.41.35-.62.52-.88.57-.25.05-.51-.04-1.03-.21l-1.62-.55c-.45-.15-.67-.23-.9-.2s-.42.16-.82.41l-.88.57c-1.36.87-2.04 1.3-2.56 1.02s-.52-1.1-.52-2.7z" fill="currentColor"/><path d="M2.63 7.37c0-1.13 0-1.69.35-1.99s.92-.2 2.05-.03c1.98.32 4.8.7 6.97.7s4.99-.38 6.97-.7c1.13-.18 1.69-.27 2.04.03s.35.86.35 1.99v9.25c0 1.11 0 1.67-.34 1.97s-.91.21-2.03.05c-1.98-.3-4.83-.66-6.99-.66s-5.01.36-7 .66c-1.12.16-1.68.25-2.02-.05s-.35-.86-.35-1.97z" stroke="currentColor"/><path d="M21.23 16.77 17.4 12c-.64-.79-.96-1.18-1.4-1.21s-.8.32-1.54 1.02l-2.44 2.33c-.5.47-.74.7-1.05.75-.32.04-.62-.1-1.23-.41L8.6 13.9c-.54-.27-.8-.4-1.09-.37-.28.02-.52.2-1 .56l-3.57 2.67" stroke="currentColor"/><path d="M7.97 9.98a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0" fill="currentColor" stroke="currentColor"/></svg>
   )
 }

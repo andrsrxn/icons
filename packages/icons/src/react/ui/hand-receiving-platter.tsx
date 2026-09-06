@@ -11,47 +11,20 @@ export const IconHandReceivingPlatter: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hand-receiving-platter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-receiving-platter-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.74' y='13.59' width='3.82' height='7.53' rx='1' fill='currentColor' />
-      <path
-        opacity='.2'
-        d='M18.32 10.44H6.27c0-3.76 2.7-6.8 6.02-6.8 3.33 0 6.03 3.04 6.03 6.8'
-        fill='currentColor'
-      />
-      <path
-        d='M6.56 19.86s1.1.86 2.68 1.22c3.14.72 4.74.52 7.53-.44 2.03-.7 3.63-2.56 4.44-3.67a1.6 1.6 0 0 0 .05-1.76 1.88 1.88 0 0 0-2.83-.42c-.98.83-2.26 1.83-3.53 2.56-.74.43-2.28.34-3.74.34m3.74-.34c.6-1.49.43-2.68-.24-2.91-1.26-.45-2.36-.6-3.83-.6-3.56 0-4.27.83-4.27.83'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='2.74'
-        y='13.59'
-        width='3.82'
-        height='7.53'
-        rx='1'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M18.32 10.44c0-3.76-2.7-6.8-6.03-6.8-3.32 0-6.02 3.04-6.02 6.8m6.03-6.95V2.36m7.12 8.08H5.17'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hand-receiving-platter-title'}>{title}</title> : null}<rect opacity=".2" x="2.74" y="13.59" width="3.82" height="7.53" rx="1" fill="currentColor"/><path opacity=".2" d="M18.32 10.44H6.27c0-3.76 2.7-6.8 6.02-6.8 3.33 0 6.03 3.04 6.03 6.8" fill="currentColor"/><path d="M6.56 19.86s1.1.86 2.68 1.22c3.14.72 4.74.52 7.53-.44 2.03-.7 3.63-2.56 4.44-3.67a1.6 1.6 0 0 0 .05-1.76 1.88 1.88 0 0 0-2.83-.42c-.98.83-2.26 1.83-3.53 2.56-.74.43-2.28.34-3.74.34m3.74-.34c.6-1.49.43-2.68-.24-2.91-1.26-.45-2.36-.6-3.83-.6-3.56 0-4.27.83-4.27.83" stroke="currentColor"/><rect x="2.74" y="13.59" width="3.82" height="7.53" rx="1" stroke="currentColor"/><path d="M18.32 10.44c0-3.76-2.7-6.8-6.03-6.8-3.32 0-6.02 3.04-6.02 6.8m6.03-6.95V2.36m7.12 8.08H5.17" stroke="currentColor"/></svg>
   )
 }

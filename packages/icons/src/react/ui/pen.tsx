@@ -11,48 +11,20 @@ export const IconPen: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-pen'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'pen-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        width='11.63'
-        height='3.9'
-        rx='1'
-        transform='matrix(.70506 .70915 .70595 -.70827 10.81 4.98)'
-        fill='currentColor'
-      />
-      <circle
-        opacity='.2'
-        cx='9.43'
-        cy='14.65'
-        r='1.66'
-        transform='rotate(90 9.43 14.65)'
-        fill='currentColor'
-      />
-      <path
-        d='m12.01 7.12-3.51 1c-1.64.45-2.45.68-3.02 1.26s-.77 1.4-1.18 3.05l-.81 3.23c-.73 2.9-1.1 4.36-.29 5.16.8.8 2.26.43 5.16-.3l3.32-.85c1.6-.41 2.41-.62 2.98-1.16.57-.55.8-1.35 1.28-2.94L17 12.06m3.56-.13c.67-.67 1-1 1-1.42s-.33-.75-1-1.42l-5.64-5.67c-.66-.67-1-1-1.4-1-.42 0-.75.33-1.42 1l-.09.08c-.66.67-1 1-1 1.42s.34.75 1 1.42L17.65 12c.67.67 1 1 1.41 1 .42 0 .75-.33 1.42-1l.04-.04zM3.45 20.52 7.95 16'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M11.19 14.65a1.76 1.76 0 0 1-1.76 1.76 1.76 1.76 0 1 1 1.76-1.76'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'pen-title'}>{title}</title> : null}<rect opacity=".2" width="11.63" height="3.9" rx="1" transform="matrix(.70506 .70915 .70595 -.70827 10.81 4.98)" fill="currentColor"/><circle opacity=".2" cx="9.43" cy="14.65" r="1.66" transform="rotate(90 9.43 14.65)" fill="currentColor"/><path d="m12.01 7.12-3.51 1c-1.64.45-2.45.68-3.02 1.26s-.77 1.4-1.18 3.05l-.81 3.23c-.73 2.9-1.1 4.36-.29 5.16.8.8 2.26.43 5.16-.3l3.32-.85c1.6-.41 2.41-.62 2.98-1.16.57-.55.8-1.35 1.28-2.94L17 12.06m3.56-.13c.67-.67 1-1 1-1.42s-.33-.75-1-1.42l-5.64-5.67c-.66-.67-1-1-1.4-1-.42 0-.75.33-1.42 1l-.09.08c-.66.67-1 1-1 1.42s.34.75 1 1.42L17.65 12c.67.67 1 1 1.41 1 .42 0 .75-.33 1.42-1l.04-.04zM3.45 20.52 7.95 16" stroke="currentColor"/><path d="M11.19 14.65a1.76 1.76 0 0 1-1.76 1.76 1.76 1.76 0 1 1 1.76-1.76" stroke="currentColor"/></svg>
   )
 }

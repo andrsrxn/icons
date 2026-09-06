@@ -11,32 +11,20 @@ export const IconPentagon: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-pentagon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'pentagon-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M9.6 4.08c1.16-.86 1.73-1.3 2.4-1.3s1.24.44 2.4 1.3l2.47 1.86L19.4 7.7c1.18.83 1.77 1.25 1.98 1.88.2.64-.03 1.32-.5 2.69l-1 2.92-.9 2.95c-.43 1.38-.65 2.07-1.19 2.47-.53.39-1.26.38-2.7.36L12 20.93l-3.09.05c-1.44.02-2.17.03-2.7-.36-.54-.4-.76-1.09-1.18-2.47l-.91-2.95-1-2.92c-.47-1.37-.7-2.05-.5-2.69.21-.63.8-1.05 1.98-1.88l2.53-1.77z'
-        fill='currentColor'
-      />
-      <path
-        d='M9.6 4.08c1.16-.86 1.73-1.3 2.4-1.3s1.24.44 2.4 1.3l2.47 1.86L19.4 7.7c1.18.83 1.77 1.25 1.98 1.88.2.64-.03 1.32-.5 2.69l-1 2.92-.9 2.95c-.43 1.38-.65 2.07-1.19 2.47-.53.39-1.26.38-2.7.36L12 20.93l-3.09.05c-1.44.02-2.17.03-2.7-.36-.54-.4-.76-1.09-1.18-2.47l-.91-2.95-1-2.92c-.47-1.37-.7-2.05-.5-2.69.21-.63.8-1.05 1.98-1.88l2.53-1.77z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'pentagon-title'}>{title}</title> : null}<path opacity=".2" d="M9.6 4.08c1.16-.86 1.73-1.3 2.4-1.3s1.24.44 2.4 1.3l2.47 1.86L19.4 7.7c1.18.83 1.77 1.25 1.98 1.88.2.64-.03 1.32-.5 2.69l-1 2.92-.9 2.95c-.43 1.38-.65 2.07-1.19 2.47-.53.39-1.26.38-2.7.36L12 20.93l-3.09.05c-1.44.02-2.17.03-2.7-.36-.54-.4-.76-1.09-1.18-2.47l-.91-2.95-1-2.92c-.47-1.37-.7-2.05-.5-2.69.21-.63.8-1.05 1.98-1.88l2.53-1.77z" fill="currentColor"/><path d="M9.6 4.08c1.16-.86 1.73-1.3 2.4-1.3s1.24.44 2.4 1.3l2.47 1.86L19.4 7.7c1.18.83 1.77 1.25 1.98 1.88.2.64-.03 1.32-.5 2.69l-1 2.92-.9 2.95c-.43 1.38-.65 2.07-1.19 2.47-.53.39-1.26.38-2.7.36L12 20.93l-3.09.05c-1.44.02-2.17.03-2.7-.36-.54-.4-.76-1.09-1.18-2.47l-.91-2.95-1-2.92c-.47-1.37-.7-2.05-.5-2.69.21-.63.8-1.05 1.98-1.88l2.53-1.77z" stroke="currentColor"/></svg>
   )
 }

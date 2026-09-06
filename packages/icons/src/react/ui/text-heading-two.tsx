@@ -11,27 +11,20 @@ export const IconTextHeadingTwo: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-text-heading-two'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-heading-two-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M17.54 15.26c.5-.54.99-.96 2.02-.96 1.82 0 2.11 1.9 1.2 2.84-.53.56-1.7 1.39-2.61 2.18-.45.38-.67.58-.55.9s.44.33 1.09.33h2.58M4.18 4.03v14.74m9.1-14.74v14.74m-9.1-7.47h9.1m0-7.27v14.74m-1.45 0h2.9m-2.9-14.74h2.9m-12 0h2.9m-2.9 14.74h2.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-heading-two-title'}>{title}</title> : null}<path d="M17.54 15.26c.5-.54.99-.96 2.02-.96 1.82 0 2.11 1.9 1.2 2.84-.53.56-1.7 1.39-2.61 2.18-.45.38-.67.58-.55.9s.44.33 1.09.33h2.58M4.18 4.03v14.74m9.1-14.74v14.74m-9.1-7.47h9.1m0-7.27v14.74m-1.45 0h2.9m-2.9-14.74h2.9m-12 0h2.9m-2.9 14.74h2.9" stroke="currentColor"/></svg>
   )
 }

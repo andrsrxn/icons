@@ -11,37 +11,20 @@ export const IconHandshake: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-handshake'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'handshake-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M5.57 8.17H2.33v8.5h1.71l3.04 2.07h5.27l2.78-2.07.33-3.19-2.7-1.6-3 .7-1.81-2.8 2.25-3.14-1.59-.28z'
-        fill='currentColor'
-      />
-      <path
-        d='M21.68 7.57s-1.5.13-2.62-.06c-1.35-.22-1.78-1.34-3-1.94-1.24-.6-2.7-.49-4.2 0-1.51.5-2.76 2.14-3.56 3.47-.63 1.04-.27 2.35.7 3.07 1.06.79 2.53.68 3.46-.25l2.2-2.19'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M2.6 8.25s1.83.27 2.96 0c1.28-.3 1.66-1.39 2.96-1.65.82-.16 1.6 0 1.6 0m11.58 9.1s-1.8-.28-2.9 0c-1.16.3-1.48 1.34-2.66 1.54-.56.1-1.45 0-1.45 0m-12.31-1s1.35-.2 2.38.26c1.2.54 1.36 1.84 2.86 1.84h3.66c1.58 0 2.02-.3 2.75-.9 1.07-.88 1.07-2.15.86-3.75-.15-1.23-.86-1.8-1.7-2.36'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'handshake-title'}>{title}</title> : null}<path opacity=".2" d="M5.57 8.17H2.33v8.5h1.71l3.04 2.07h5.27l2.78-2.07.33-3.19-2.7-1.6-3 .7-1.81-2.8 2.25-3.14-1.59-.28z" fill="currentColor"/><path d="M21.68 7.57s-1.5.13-2.62-.06c-1.35-.22-1.78-1.34-3-1.94-1.24-.6-2.7-.49-4.2 0-1.51.5-2.76 2.14-3.56 3.47-.63 1.04-.27 2.35.7 3.07 1.06.79 2.53.68 3.46-.25l2.2-2.19" stroke="currentColor"/><path d="M2.6 8.25s1.83.27 2.96 0c1.28-.3 1.66-1.39 2.96-1.65.82-.16 1.6 0 1.6 0m11.58 9.1s-1.8-.28-2.9 0c-1.16.3-1.48 1.34-2.66 1.54-.56.1-1.45 0-1.45 0m-12.31-1s1.35-.2 2.38.26c1.2.54 1.36 1.84 2.86 1.84h3.66c1.58 0 2.02-.3 2.75-.9 1.07-.88 1.07-2.15.86-3.75-.15-1.23-.86-1.8-1.7-2.36" stroke="currentColor"/></svg>
   )
 }

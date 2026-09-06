@@ -11,38 +11,20 @@ export const IconWarningOctagon: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-warning-octagon'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'warning-octagon-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M10.28 3.3c.84-.4 1.27-.6 1.72-.6s.88.2 1.72.6l2.85 1.37 2.49 1.48c.9.53 1.35.8 1.6 1.23.26.43.29.95.34 2l.14 2.62-.14 2.62c-.05 1.05-.08 1.57-.34 2-.25.43-.7.7-1.6 1.23l-2.49 1.48-2.85 1.36c-.84.4-1.27.6-1.72.6s-.88-.2-1.72-.6l-2.85-1.36-2.49-1.48c-.9-.53-1.35-.8-1.6-1.23-.26-.43-.29-.95-.34-2L2.86 12 3 9.38c.05-1.05.08-1.57.34-2 .25-.43.7-.7 1.6-1.23l2.49-1.48z'
-        fill='currentColor'
-      />
-      <path
-        d='M10.11 3.31c.93-.49 1.39-.74 1.89-.74s.96.25 1.89.74l2.58 1.38 2.38 1.33c1 .55 1.5.83 1.77 1.3.28.46.28 1.03.3 2.16l.01 2.52-.02 2.52c0 1.13-.01 1.7-.29 2.17s-.77.74-1.77 1.29l-2.38 1.33-2.58 1.38c-.93.49-1.39.74-1.89.74s-.96-.25-1.89-.74L7.53 19.3l-2.38-1.33c-1-.55-1.5-.83-1.77-1.3-.28-.46-.28-1.03-.3-2.16V12l.02-2.52c0-1.13.01-1.7.29-2.17s.77-.74 1.77-1.29l2.38-1.33zM12 7.38v5.12'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M12.53 16.09a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
-        fill='currentColor'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'warning-octagon-title'}>{title}</title> : null}<path opacity=".2" d="M10.28 3.3c.84-.4 1.27-.6 1.72-.6s.88.2 1.72.6l2.85 1.37 2.49 1.48c.9.53 1.35.8 1.6 1.23.26.43.29.95.34 2l.14 2.62-.14 2.62c-.05 1.05-.08 1.57-.34 2-.25.43-.7.7-1.6 1.23l-2.49 1.48-2.85 1.36c-.84.4-1.27.6-1.72.6s-.88-.2-1.72-.6l-2.85-1.36-2.49-1.48c-.9-.53-1.35-.8-1.6-1.23-.26-.43-.29-.95-.34-2L2.86 12 3 9.38c.05-1.05.08-1.57.34-2 .25-.43.7-.7 1.6-1.23l2.49-1.48z" fill="currentColor"/><path d="M10.11 3.31c.93-.49 1.39-.74 1.89-.74s.96.25 1.89.74l2.58 1.38 2.38 1.33c1 .55 1.5.83 1.77 1.3.28.46.28 1.03.3 2.16l.01 2.52-.02 2.52c0 1.13-.01 1.7-.29 2.17s-.77.74-1.77 1.29l-2.38 1.33-2.58 1.38c-.93.49-1.39.74-1.89.74s-.96-.25-1.89-.74L7.53 19.3l-2.38-1.33c-1-.55-1.5-.83-1.77-1.3-.28-.46-.28-1.03-.3-2.16V12l.02-2.52c0-1.13.01-1.7.29-2.17s.77-.74 1.77-1.29l2.38-1.33zM12 7.38v5.12" stroke="currentColor"/><path d="M12.53 16.09a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0" fill="currentColor" stroke="currentColor"/></svg>
   )
 }

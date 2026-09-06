@@ -11,42 +11,20 @@ export const IconDrama: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-drama'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'drama-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M14.06 16.73c4.24.63 7.16-5.6 7.65-8.93.33-2.22-.9-2.08-2.73-1.89-.93.1-2.02.21-3.14.05-1.11-.17-2.12-.6-2.98-.96-1.7-.72-2.84-1.2-3.17 1.01-.12.81-.16 1.83-.1 2.9 0 0 3.77-2.15 4.47-.67 1.1 1.85 0 8.49 0 8.49'
-        fill='currentColor'
-      />
-      <path
-        d='M2.29 11.2c.5 3.34 3.24 9.67 7.48 9.04 4.24-.62 5.03-7.48 4.54-10.81s-2.84-.55-6.15-.06-6.37-1.5-5.87 1.84'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M9.68 8.76c-.08-1.02-.07-1.97.02-2.74.39-3.35 2.81-.64 6.15-.25 3.33.38 6.3-1.7 5.92 1.64-.38 3.35-2.92 9.77-7.18 9.28q-.38-.05-.74-.16m-2.51-4.5-1.25.2m8.16-3.07-1.3-.13M6.86 12.7l-1.13.17m4.91 2.93c-.46.41-.82.58-1.43.67s-1 .03-1.56-.22'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M16.5 13.16c-.45-.42-.8-.6-1.41-.7-.33-.06-.33-.04-.6 0'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'drama-title'}>{title}</title> : null}<path opacity=".2" d="M14.06 16.73c4.24.63 7.16-5.6 7.65-8.93.33-2.22-.9-2.08-2.73-1.89-.93.1-2.02.21-3.14.05-1.11-.17-2.12-.6-2.98-.96-1.7-.72-2.84-1.2-3.17 1.01-.12.81-.16 1.83-.1 2.9 0 0 3.77-2.15 4.47-.67 1.1 1.85 0 8.49 0 8.49" fill="currentColor"/><path d="M2.29 11.2c.5 3.34 3.24 9.67 7.48 9.04 4.24-.62 5.03-7.48 4.54-10.81s-2.84-.55-6.15-.06-6.37-1.5-5.87 1.84" stroke="currentColor"/><path d="M9.68 8.76c-.08-1.02-.07-1.97.02-2.74.39-3.35 2.81-.64 6.15-.25 3.33.38 6.3-1.7 5.92 1.64-.38 3.35-2.92 9.77-7.18 9.28q-.38-.05-.74-.16m-2.51-4.5-1.25.2m8.16-3.07-1.3-.13M6.86 12.7l-1.13.17m4.91 2.93c-.46.41-.82.58-1.43.67s-1 .03-1.56-.22" stroke="currentColor"/><path d="M16.5 13.16c-.45-.42-.8-.6-1.41-.7-.33-.06-.33-.04-.6 0" stroke="currentColor"/></svg>
   )
 }

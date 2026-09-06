@@ -11,32 +11,20 @@ export const IconFingerprint: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-fingerprint'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'fingerprint-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M4.49 20.45c-.64-2.83-1.39-8.7 1.5-12.08a8 8 0 0 1 12.6.67c3.2 4.6 3.55 8.7 2.1 10.35-1.12 1.28-4 1.58-4.91-1.1-.9-2.68-1.35-6.77-4.45-6.15-3.68.74-1.18 7.84-.26 9.2'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M12.09 15.47c.23 1.34 1.34 4.73 2.34 5.9m-7.57-7.22c-.13 1.36-.19 4.54.59 6.42M19.6 5.65A8 8 0 0 0 15 3.01m-3.5-.41c-3.66 0-7.31 2.62-8.84 5.41m15.96 9.45c-.23-1.67-1.08-5.17-2.9-7.1-2.26-2.4-6.12-2.1-8.1.83'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'fingerprint-title'}>{title}</title> : null}<path d="M4.49 20.45c-.64-2.83-1.39-8.7 1.5-12.08a8 8 0 0 1 12.6.67c3.2 4.6 3.55 8.7 2.1 10.35-1.12 1.28-4 1.58-4.91-1.1-.9-2.68-1.35-6.77-4.45-6.15-3.68.74-1.18 7.84-.26 9.2" stroke="currentColor"/><path d="M12.09 15.47c.23 1.34 1.34 4.73 2.34 5.9m-7.57-7.22c-.13 1.36-.19 4.54.59 6.42M19.6 5.65A8 8 0 0 0 15 3.01m-3.5-.41c-3.66 0-7.31 2.62-8.84 5.41m15.96 9.45c-.23-1.67-1.08-5.17-2.9-7.1-2.26-2.4-6.12-2.1-8.1.83" stroke="currentColor"/></svg>
   )
 }

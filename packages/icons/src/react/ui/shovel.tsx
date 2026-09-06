@@ -11,32 +11,20 @@ export const IconShovel: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-shovel'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'shovel-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88'
-        fill='currentColor'
-      />
-      <path
-        d='m16.63 7.48-8.78 8.78m8.95-13.2c.29-.34.43-.52.65-.53.22 0 .4.16.74.5l1.43 1.44 1.44 1.44c.34.34.51.51.5.73 0 .22-.18.37-.53.65-1.44 1.2-2.94 1.65-4.4.18-1.48-1.46-1.02-2.97.17-4.4M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'shovel-title'}>{title}</title> : null}<path opacity=".2" d="M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88" fill="currentColor"/><path d="m16.63 7.48-8.78 8.78m8.95-13.2c.29-.34.43-.52.65-.53.22 0 .4.16.74.5l1.43 1.44 1.44 1.44c.34.34.51.51.5.73 0 .22-.18.37-.53.65-1.44 1.2-2.94 1.65-4.4.18-1.48-1.46-1.02-2.97.17-4.4M4.7 12.32c.52-.7.79-1.06 1.24-1.09.46-.03.8.31 1.48 1l2.23 2.22 2.22 2.22c.69.69 1.03 1.03 1 1.49s-.39.71-1.1 1.24c-3.64 2.74-6.74 1.92-7.87 1.46a1 1 0 0 1-.67-.66c-.47-1.12-1.31-4.2 1.46-7.88" stroke="currentColor"/></svg>
   )
 }

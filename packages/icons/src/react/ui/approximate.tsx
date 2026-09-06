@@ -11,27 +11,20 @@ export const IconApproximate: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-approximate'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'approximate-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M3.2 9.79A8 8 0 0 1 8.4 8c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9M3.2 15.5a8 8 0 0 1 5.2-1.79c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'approximate-title'}>{title}</title> : null}<path d="M3.2 9.79A8 8 0 0 1 8.4 8c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9M3.2 15.5a8 8 0 0 1 5.2-1.79c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9" stroke="currentColor"/></svg>
   )
 }

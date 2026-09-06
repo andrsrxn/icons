@@ -11,35 +11,20 @@ export const IconEyeScan: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-eye-scan'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'eye-scan-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M12 8c-2.91 0-4.72 2.02-5.52 3.2a1.4 1.4 0 0 0 0 1.61c.79 1.18 2.59 3.22 5.52 3.22s4.73-2.04 5.52-3.22c.34-.5.33-1.12 0-1.62C16.72 10.02 14.92 8 12 8m0 5.68a1.68 1.68 0 1 0 0-3.36 1.68 1.68 0 0 0 0 3.36'
-        fill='currentColor'
-      />
-      <path
-        d='M12 8a6.5 6.5 0 0 0-4.94 2.44c-.47.55-.7.83-.71 1.56 0 .74.23 1.01.7 1.56A6.5 6.5 0 0 0 12 16.03c2.37 0 4-1.33 4.96-2.47.46-.55.7-.82.69-1.56 0-.73-.24-1-.7-1.56A6.5 6.5 0 0 0 12 8m3.79 12.98c2.07 0 3.1 0 3.86-.49a3 3 0 0 0 .87-.87c.48-.75.48-1.78.48-3.86m-5.18-12.7c2.04 0 3.06 0 3.8.47a3 3 0 0 1 .9.9c.48.74.48 1.77.48 3.81M8.22 20.98c-2.08 0-3.12 0-3.87-.49a3 3 0 0 1-.86-.87c-.5-.75-.5-1.78-.5-3.86m5.23-12.7c-2.08 0-3.12 0-3.87.49a3 3 0 0 0-.86.86c-.5.75-.5 1.79-.5 3.87'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <circle cx='12.01' cy='12' r='1.68' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'eye-scan-title'}>{title}</title> : null}<path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M12 8c-2.91 0-4.72 2.02-5.52 3.2a1.4 1.4 0 0 0 0 1.61c.79 1.18 2.59 3.22 5.52 3.22s4.73-2.04 5.52-3.22c.34-.5.33-1.12 0-1.62C16.72 10.02 14.92 8 12 8m0 5.68a1.68 1.68 0 1 0 0-3.36 1.68 1.68 0 0 0 0 3.36" fill="currentColor"/><path d="M12 8a6.5 6.5 0 0 0-4.94 2.44c-.47.55-.7.83-.71 1.56 0 .74.23 1.01.7 1.56A6.5 6.5 0 0 0 12 16.03c2.37 0 4-1.33 4.96-2.47.46-.55.7-.82.69-1.56 0-.73-.24-1-.7-1.56A6.5 6.5 0 0 0 12 8m3.79 12.98c2.07 0 3.1 0 3.86-.49a3 3 0 0 0 .87-.87c.48-.75.48-1.78.48-3.86m-5.18-12.7c2.04 0 3.06 0 3.8.47a3 3 0 0 1 .9.9c.48.74.48 1.77.48 3.81M8.22 20.98c-2.08 0-3.12 0-3.87-.49a3 3 0 0 1-.86-.87c-.5-.75-.5-1.78-.5-3.86m5.23-12.7c-2.08 0-3.12 0-3.87.49a3 3 0 0 0-.86.86c-.5.75-.5 1.79-.5 3.87" stroke="currentColor"/><circle cx="12.01" cy="12" r="1.68" stroke="currentColor"/></svg>
   )
 }

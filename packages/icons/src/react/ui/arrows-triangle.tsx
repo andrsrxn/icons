@@ -11,32 +11,20 @@ export const IconArrowsTriangle: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-arrows-triangle'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'arrows-triangle-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='m7.89 7.95.93-1.44c1.49-2.31 2.23-3.47 3.31-3.47 1.08-.01 1.84 1.13 3.37 3.42l1.2 1.79m1.8 3.51.64 1.23c1.35 2.59 2.03 3.88 1.45 4.84s-2.03.98-4.96 1l-1.71.03m-8.28-7.29-.7 1.36c-1.36 2.61-2.04 3.92-1.46 4.88s2.06.96 5 .96h1.3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m13.12 7.95 2.01.54c.91.25 1.37.37 1.73.16s.48-.66.72-1.57l.54-2.02m-2.4 10.86-1.48 1.47c-.66.67-1 1-1 1.42s.34.74 1 1.41l1.48 1.48m-8.38-7.2-.53-2c-.25-.92-.37-1.38-.73-1.58-.35-.21-.81-.09-1.72.16l-2.02.54'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'arrows-triangle-title'}>{title}</title> : null}<path d="m7.89 7.95.93-1.44c1.49-2.31 2.23-3.47 3.31-3.47 1.08-.01 1.84 1.13 3.37 3.42l1.2 1.79m1.8 3.51.64 1.23c1.35 2.59 2.03 3.88 1.45 4.84s-2.03.98-4.96 1l-1.71.03m-8.28-7.29-.7 1.36c-1.36 2.61-2.04 3.92-1.46 4.88s2.06.96 5 .96h1.3" stroke="currentColor"/><path d="m13.12 7.95 2.01.54c.91.25 1.37.37 1.73.16s.48-.66.72-1.57l.54-2.02m-2.4 10.86-1.48 1.47c-.66.67-1 1-1 1.42s.34.74 1 1.41l1.48 1.48m-8.38-7.2-.53-2c-.25-.92-.37-1.38-.73-1.58-.35-.21-.81-.09-1.72.16l-2.02.54" stroke="currentColor"/></svg>
   )
 }

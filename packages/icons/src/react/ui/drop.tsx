@@ -11,37 +11,20 @@ export const IconDrop: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-drop'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'drop-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M12 21.46c4.11 0 7.44-3.14 7.44-7C19.44 7.48 12 2.31 12 2.31s-7.44 5.1-7.44 12.14c0 3.87 3.33 7 7.44 7'
-        fill='currentColor'
-      />
-      <path
-        d='M12 21.46c4.11 0 7.44-3.14 7.44-7C19.44 6.43 12 2.31 12 2.31S4.56 6.27 4.56 14.45c0 3.87 3.33 7 7.44 7'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M16 14.18a4.6 4.6 0 0 1-1.14 2.5 5 5 0 0 1-2.53 1.6'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'drop-title'}>{title}</title> : null}<path opacity=".2" d="M12 21.46c4.11 0 7.44-3.14 7.44-7C19.44 7.48 12 2.31 12 2.31s-7.44 5.1-7.44 12.14c0 3.87 3.33 7 7.44 7" fill="currentColor"/><path d="M12 21.46c4.11 0 7.44-3.14 7.44-7C19.44 6.43 12 2.31 12 2.31S4.56 6.27 4.56 14.45c0 3.87 3.33 7 7.44 7" stroke="currentColor"/><path d="M16 14.18a4.6 4.6 0 0 1-1.14 2.5 5 5 0 0 1-2.53 1.6" stroke="currentColor"/></svg>
   )
 }

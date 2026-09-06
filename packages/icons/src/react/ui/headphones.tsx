@@ -11,48 +11,20 @@ export const IconHeadphones: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-headphones'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'headphones-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        width='7.85'
-        height='6.24'
-        rx='2'
-        transform='matrix(0 -1 -1 0 8.99 20.68)'
-        fill='currentColor'
-      />
-      <rect
-        opacity='.2'
-        width='7.85'
-        height='6.24'
-        rx='2'
-        transform='matrix(0 -1 -1 0 21.25 20.68)'
-        fill='currentColor'
-      />
-      <path
-        d='m19.44 12.64-.15-2.68c-.15-2.86-.23-4.3-1-5.29a4 4 0 0 0-.87-.82c-1.03-.72-2.46-.72-5.33-.72-2.82 0-4.23 0-5.25.7a4 4 0 0 0-.86.8c-.77.97-.88 2.38-1.08 5.19l-.2 2.82'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M6.5 20.87c.46 0 .69 0 .88-.04a2 2 0 0 0 1.57-1.58c.04-.19.04-.42.04-.88v-3.24c0-.46 0-.7-.04-.88a2 2 0 0 0-1.57-1.58c-.2-.04-.42-.04-.89-.04-.69 0-1.03 0-1.32.06a3 3 0 0 0-2.36 2.36c-.06.3-.06.64-.06 1.33v.74c0 .7 0 1.04.06 1.33a3 3 0 0 0 2.36 2.36c.29.06.63.06 1.32.06m11.01 0c.7 0 1.04 0 1.33-.06a3 3 0 0 0 2.36-2.36c.06-.29.06-.64.06-1.33v-.74c0-.7 0-1.04-.06-1.33a3 3 0 0 0-2.36-2.36c-.29-.06-.63-.06-1.32-.06-.47 0-.7 0-.89.04a2 2 0 0 0-1.57 1.58c-.04.19-.04.42-.04.88v3.24c0 .46 0 .7.04.88a2 2 0 0 0 1.57 1.58c.2.04.42.04.88.04'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'headphones-title'}>{title}</title> : null}<rect opacity=".2" width="7.85" height="6.24" rx="2" transform="matrix(0 -1 -1 0 8.99 20.68)" fill="currentColor"/><rect opacity=".2" width="7.85" height="6.24" rx="2" transform="matrix(0 -1 -1 0 21.25 20.68)" fill="currentColor"/><path d="m19.44 12.64-.15-2.68c-.15-2.86-.23-4.3-1-5.29a4 4 0 0 0-.87-.82c-1.03-.72-2.46-.72-5.33-.72-2.82 0-4.23 0-5.25.7a4 4 0 0 0-.86.8c-.77.97-.88 2.38-1.08 5.19l-.2 2.82" stroke="currentColor"/><path d="M6.5 20.87c.46 0 .69 0 .88-.04a2 2 0 0 0 1.57-1.58c.04-.19.04-.42.04-.88v-3.24c0-.46 0-.7-.04-.88a2 2 0 0 0-1.57-1.58c-.2-.04-.42-.04-.89-.04-.69 0-1.03 0-1.32.06a3 3 0 0 0-2.36 2.36c-.06.3-.06.64-.06 1.33v.74c0 .7 0 1.04.06 1.33a3 3 0 0 0 2.36 2.36c.29.06.63.06 1.32.06m11.01 0c.7 0 1.04 0 1.33-.06a3 3 0 0 0 2.36-2.36c.06-.29.06-.64.06-1.33v-.74c0-.7 0-1.04-.06-1.33a3 3 0 0 0-2.36-2.36c-.29-.06-.63-.06-1.32-.06-.47 0-.7 0-.89.04a2 2 0 0 0-1.57 1.58c-.04.19-.04.42-.04.88v3.24c0 .46 0 .7.04.88a2 2 0 0 0 1.57 1.58c.2.04.42.04.88.04" stroke="currentColor"/></svg>
   )
 }

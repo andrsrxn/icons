@@ -11,32 +11,20 @@ export const IconFootprints: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-footprints'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'footprints-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.37 9.5 5 17.25l3.88-.91.44-8.28-1.86-2.4-3.27.38zm19.26-3.01L19 14.26l-3.88-.9-.35-7.97 1.77-2.76 3.27.38z'
-        fill='currentColor'
-      />
-      <path
-        d='m9 16.27-4.17 1.1M15 13.25l4.18 1.1M4.67 17.3c-.62-3.35-2.04-4.25-2-7.81.03-1.89.42-3.82 3.57-4.05 2.9-.2 3.3 2.11 3.4 4.3.14 3.18-1 3.83-.5 6.47q.14.66.43 1.36h0l.5 1.22c.28 1.14-.17 1.98-1.28 2.38a15 15 0 0 1-1.62.31 2 2 0 0 1-2.04-1.43l-.12-.64c-.1-.72-.23-1.49-.34-2.12m14.66-2.81c.62-3.35 2.04-4.25 2-7.8-.03-1.9-.5-3.84-3.57-4.05-2.9-.21-3.3 2.1-3.4 4.3-.14 3.18 1 3.82.5 6.46q-.14.66-.43 1.36l-.5 1.22c-.28 1.14.17 1.99 1.28 2.38.14.05.42.1.99.22h0c.33.06.5.1.63.1.94.06 1.77-.52 2.04-1.43.04-.13.06-.3.12-.65z'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'footprints-title'}>{title}</title> : null}<path opacity=".2" d="M2.37 9.5 5 17.25l3.88-.91.44-8.28-1.86-2.4-3.27.38zm19.26-3.01L19 14.26l-3.88-.9-.35-7.97 1.77-2.76 3.27.38z" fill="currentColor"/><path d="m9 16.27-4.17 1.1M15 13.25l4.18 1.1M4.67 17.3c-.62-3.35-2.04-4.25-2-7.81.03-1.89.42-3.82 3.57-4.05 2.9-.2 3.3 2.11 3.4 4.3.14 3.18-1 3.83-.5 6.47q.14.66.43 1.36h0l.5 1.22c.28 1.14-.17 1.98-1.28 2.38a15 15 0 0 1-1.62.31 2 2 0 0 1-2.04-1.43l-.12-.64c-.1-.72-.23-1.49-.34-2.12m14.66-2.81c.62-3.35 2.04-4.25 2-7.8-.03-1.9-.5-3.84-3.57-4.05-2.9-.21-3.3 2.1-3.4 4.3-.14 3.18 1 3.82.5 6.46q-.14.66-.43 1.36l-.5 1.22c-.28 1.14.17 1.99 1.28 2.38.14.05.42.1.99.22h0c.33.06.5.1.63.1.94.06 1.77-.52 2.04-1.43.04-.13.06-.3.12-.65z" stroke="currentColor"/></svg>
   )
 }

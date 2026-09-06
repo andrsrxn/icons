@@ -11,28 +11,20 @@ export const IconHourglass: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-hourglass'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'hourglass-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path opacity='.2' d='m6.83 15.65-1.3 5.53h12.8l-1.09-5.53-5.43-4.18z' fill='currentColor' />
-      <path
-        d='M5.58 21c0-4.87 2.87-8.82 6.42-8.82s6.42 3.95 6.42 8.83M5.58 3c0 4.88 2.87 8.83 6.42 8.83S18.42 7.88 18.42 3m1.61 18H3.97M20.03 3H3.97'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hourglass-title'}>{title}</title> : null}<path opacity=".2" d="m6.83 15.65-1.3 5.53h12.8l-1.09-5.53-5.43-4.18z" fill="currentColor"/><path d="M5.58 21c0-4.87 2.87-8.82 6.42-8.82s6.42 3.95 6.42 8.83M5.58 3c0 4.88 2.87 8.83 6.42 8.83S18.42 7.88 18.42 3m1.61 18H3.97M20.03 3H3.97" stroke="currentColor"/></svg>
   )
 }

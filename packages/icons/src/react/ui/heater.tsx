@@ -11,37 +11,20 @@ export const IconHeater: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-heater'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'heater-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='9.59' width='18.6' height='10.14' rx='2' fill='currentColor' />
-      <rect
-        x='2.7'
-        y='9.59'
-        width='18.6'
-        height='10.14'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M6.37 19.73v1.74m11.26-1.74v1.74M7.5 12.63v4.06m9-4.06v4.06M12 12.63v4.06m1.27-14.28.66.56c.56.48.5 1.36-.1 1.77a1.1 1.1 0 0 0 0 1.84l.58.4M8.88 2.41l.63.57c.54.48.5 1.34-.1 1.76a1.13 1.13 0 0 0 0 1.84l.56.4'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'heater-title'}>{title}</title> : null}<rect opacity=".2" x="2.7" y="9.59" width="18.6" height="10.14" rx="2" fill="currentColor"/><rect x="2.7" y="9.59" width="18.6" height="10.14" rx="3" stroke="currentColor"/><path d="M6.37 19.73v1.74m11.26-1.74v1.74M7.5 12.63v4.06m9-4.06v4.06M12 12.63v4.06m1.27-14.28.66.56c.56.48.5 1.36-.1 1.77a1.1 1.1 0 0 0 0 1.84l.58.4M8.88 2.41l.63.57c.54.48.5 1.34-.1 1.76a1.13 1.13 0 0 0 0 1.84l.56.4" stroke="currentColor"/></svg>
   )
 }

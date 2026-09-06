@@ -11,32 +11,20 @@ export const IconPlatter: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-platter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'platter-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M19.8 16.91H4.2c0-4.86 3.5-8.8 7.8-8.8s7.8 3.94 7.8 8.8'
-        fill='currentColor'
-      />
-      <path
-        d='M19.8 16.91c0-4.86-3.5-8.8-7.8-8.8s-7.8 3.94-7.8 8.8M12 7.86v-2.1m9.76 11.15H2.24'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'platter-title'}>{title}</title> : null}<path opacity=".2" d="M19.8 16.91H4.2c0-4.86 3.5-8.8 7.8-8.8s7.8 3.94 7.8 8.8" fill="currentColor"/><path d="M19.8 16.91c0-4.86-3.5-8.8-7.8-8.8s-7.8 3.94-7.8 8.8M12 7.86v-2.1m9.76 11.15H2.24" stroke="currentColor"/></svg>
   )
 }

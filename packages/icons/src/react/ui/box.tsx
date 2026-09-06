@@ -11,32 +11,20 @@ export const IconBox: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-box'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'box-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='m20.23 16.77-7.12 4.22a.5.5 0 0 1-.75-.43V12.5q.01-.29.26-.44l7.12-3.8a.5.5 0 0 1 .74.45v7.63a.5.5 0 0 1-.25.43'
-        fill='currentColor'
-      />
-      <path
-        d='M3.37 13.39V10.6c0-1.69 0-2.53.4-3.23s1.14-1.12 2.6-1.96L9 3.9c1.46-.85 2.2-1.27 3-1.27s1.54.42 3 1.27l2.63 1.52c1.46.84 2.2 1.26 2.6 1.96s.4 1.54.4 3.23v2.78c0 1.69 0 2.53-.4 3.23s-1.14 1.12-2.6 1.96L15 20.1h0c-1.46.85-2.2 1.27-3 1.27s-1.54-.42-3-1.27l-2.63-1.52c-1.46-.84-2.2-1.26-2.6-1.96s-.4-1.54-.4-3.23m.5-5.49L12 12.39m0-.01v8.72M7.7 9.78V14m12.43-6.1L12 12.39M7.7 9.78l8.37-4.97'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'box-title'}>{title}</title> : null}<path opacity=".2" d="m20.23 16.77-7.12 4.22a.5.5 0 0 1-.75-.43V12.5q.01-.29.26-.44l7.12-3.8a.5.5 0 0 1 .74.45v7.63a.5.5 0 0 1-.25.43" fill="currentColor"/><path d="M3.37 13.39V10.6c0-1.69 0-2.53.4-3.23s1.14-1.12 2.6-1.96L9 3.9c1.46-.85 2.2-1.27 3-1.27s1.54.42 3 1.27l2.63 1.52c1.46.84 2.2 1.26 2.6 1.96s.4 1.54.4 3.23v2.78c0 1.69 0 2.53-.4 3.23s-1.14 1.12-2.6 1.96L15 20.1h0c-1.46.85-2.2 1.27-3 1.27s-1.54-.42-3-1.27l-2.63-1.52c-1.46-.84-2.2-1.26-2.6-1.96s-.4-1.54-.4-3.23m.5-5.49L12 12.39m0-.01v8.72M7.7 9.78V14m12.43-6.1L12 12.39M7.7 9.78l8.37-4.97" stroke="currentColor"/></svg>
   )
 }

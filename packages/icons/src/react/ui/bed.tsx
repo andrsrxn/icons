@@ -11,42 +11,20 @@ export const IconBed: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-bed'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'bed-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fill='currentColor'
-        d='M3.14 13.08h17.68v5.34H3.14zm.99-7.92 7.85-1.55 7.85 1.55v7.5H17l-.43-2.34-2.91.06v2.29h-3.13v-2.29h-3l-.46 2.29H4.13z'
-      />
-      <path
-        d='M21.32 20.4v-1.32c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H8.68c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v1.31m18.6-2.24H2.68'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M19.83 13.08v-2.9c0-2.31 0-3.46-.66-4.29-.65-.82-1.78-1.07-4.03-1.57L13.3 3.9a6 6 0 0 0-1.31-.22c-.33 0-.66.08-1.31.22l-1.85.42c-2.25.5-3.38.75-4.03 1.57s-.66 1.98-.66 4.28v2.91'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M10.77 12.67v-.93c0-.9 0-1.34-.26-1.63l-.06-.05c-.28-.27-.73-.27-1.63-.27s-1.35 0-1.63.27l-.06.05c-.26.29-.26.73-.26 1.63v.93m10.15 0v-1c0-.83 0-1.25-.24-1.52l-.12-.13c-.28-.23-.7-.23-1.53-.23s-1.26 0-1.54.23l-.12.13c-.23.27-.23.7-.23 1.53v.99'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'bed-title'}>{title}</title> : null}<path opacity=".2" fill="currentColor" d="M3.14 13.08h17.68v5.34H3.14zm.99-7.92 7.85-1.55 7.85 1.55v7.5H17l-.43-2.34-2.91.06v2.29h-3.13v-2.29h-3l-.46 2.29H4.13z"/><path d="M21.32 20.4v-1.32c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H8.68c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v1.31m18.6-2.24H2.68" stroke="currentColor"/><path d="M19.83 13.08v-2.9c0-2.31 0-3.46-.66-4.29-.65-.82-1.78-1.07-4.03-1.57L13.3 3.9a6 6 0 0 0-1.31-.22c-.33 0-.66.08-1.31.22l-1.85.42c-2.25.5-3.38.75-4.03 1.57s-.66 1.98-.66 4.28v2.91" stroke="currentColor"/><path d="M10.77 12.67v-.93c0-.9 0-1.34-.26-1.63l-.06-.05c-.28-.27-.73-.27-1.63-.27s-1.35 0-1.63.27l-.06.05c-.26.29-.26.73-.26 1.63v.93m10.15 0v-1c0-.83 0-1.25-.24-1.52l-.12-.13c-.28-.23-.7-.23-1.53-.23s-1.26 0-1.54.23l-.12.13c-.23.27-.23.7-.23 1.53v.99" stroke="currentColor"/></svg>
   )
 }

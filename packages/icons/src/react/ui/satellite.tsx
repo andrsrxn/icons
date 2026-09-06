@@ -11,47 +11,20 @@ export const IconSatellite: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-satellite'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'satellite-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='15.17'
-        y='3.29'
-        width='7.83'
-        height='12.72'
-        rx='2'
-        transform='rotate(45 15.17 3.3)'
-        fill='currentColor'
-      />
-      <rect
-        x='15.17'
-        y='3.29'
-        width='7.83'
-        height='12.72'
-        rx='2'
-        transform='rotate(45 15.17 3.3)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m18.82 10.71 1.06 1.06c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.12l-1 1c-1 1-1.5 1.5-2.11 1.5-.62 0-1.12-.5-2.12-1.5l-1.06-1.06zM7.99 4.12c1-1 1.5-1.5 2.12-1.5s1.12.5 2.12 1.5l1.06 1.06-5.24 5.23L7 9.35c-1-1-1.5-1.5-1.5-2.12S6 6.11 7 5.11zm9.95 1.94L20 4M5.44 15.61c.1.75.42 1.36 1 1.93q.82.84 1.92 1M2.67 17.1a4.5 4.5 0 0 0 1.38 2.85 4.5 4.5 0 0 0 2.86 1.38'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'satellite-title'}>{title}</title> : null}<rect opacity=".2" x="15.17" y="3.29" width="7.83" height="12.72" rx="2" transform="rotate(45 15.17 3.3)" fill="currentColor"/><rect x="15.17" y="3.29" width="7.83" height="12.72" rx="2" transform="rotate(45 15.17 3.3)" stroke="currentColor"/><path d="m18.82 10.71 1.06 1.06c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.12l-1 1c-1 1-1.5 1.5-2.11 1.5-.62 0-1.12-.5-2.12-1.5l-1.06-1.06zM7.99 4.12c1-1 1.5-1.5 2.12-1.5s1.12.5 2.12 1.5l1.06 1.06-5.24 5.23L7 9.35c-1-1-1.5-1.5-1.5-2.12S6 6.11 7 5.11zm9.95 1.94L20 4M5.44 15.61c.1.75.42 1.36 1 1.93q.82.84 1.92 1M2.67 17.1a4.5 4.5 0 0 0 1.38 2.85 4.5 4.5 0 0 0 2.86 1.38" stroke="currentColor"/></svg>
   )
 }

@@ -11,37 +11,20 @@ export const IconCreditCard: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-credit-card'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'credit-card-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M2.85 8.33c0-1.24 0-1.87.27-2.33a2 2 0 0 1 .73-.73C4.3 5 4.93 5 6.18 5h11.33c1.25 0 1.87 0 2.34.27a2 2 0 0 1 .73.73c.27.46.27 1.09.27 2.33 0 .63 0 .94-.14 1.17a1 1 0 0 1-.36.37c-.23.13-.55.13-1.17.13H4.51c-.62 0-.93 0-1.16-.13a1 1 0 0 1-.37-.37c-.13-.23-.13-.54-.13-1.17'
-        fill='currentColor'
-      />
-      <rect
-        x='2.7'
-        y='5'
-        width='18.61'
-        height='14'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path d='M2.7 9.64H21m-8 5.92h5.16' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'credit-card-title'}>{title}</title> : null}<path opacity=".2" d="M2.85 8.33c0-1.24 0-1.87.27-2.33a2 2 0 0 1 .73-.73C4.3 5 4.93 5 6.18 5h11.33c1.25 0 1.87 0 2.34.27a2 2 0 0 1 .73.73c.27.46.27 1.09.27 2.33 0 .63 0 .94-.14 1.17a1 1 0 0 1-.36.37c-.23.13-.55.13-1.17.13H4.51c-.62 0-.93 0-1.16-.13a1 1 0 0 1-.37-.37c-.13-.23-.13-.54-.13-1.17" fill="currentColor"/><rect x="2.7" y="5" width="18.61" height="14" rx="3" stroke="currentColor"/><path d="M2.7 9.64H21m-8 5.92h5.16" stroke="currentColor"/></svg>
   )
 }

@@ -11,41 +11,20 @@ export const IconSplitHorizontal: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-split-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'split-horizontal-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='2.75'
-        y='5.28'
-        width='18.49'
-        height='13.44'
-        rx='3'
-        fill='currentColor'
-      />
-      <rect
-        x='2.75'
-        y='5.28'
-        width='18.49'
-        height='13.44'
-        rx='3'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path d='M12 3.04v17.92' stroke='currentColor' strokeWidth={strokeWidth} />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'split-horizontal-title'}>{title}</title> : null}<rect opacity=".2" x="2.75" y="5.28" width="18.49" height="13.44" rx="3" fill="currentColor"/><rect x="2.75" y="5.28" width="18.49" height="13.44" rx="3" stroke="currentColor"/><path d="M12 3.04v17.92" stroke="currentColor"/></svg>
   )
 }

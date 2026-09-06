@@ -11,33 +11,20 @@ export const IconAirportTower: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-airport-tower'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'airport-tower-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        fill='currentColor'
-        d='M9.29 13.69h4.84v8.1H9.29zm6.39-7.73 5.07.8-1.38 6.46h-3.69zM2.85 7l5.28-.75v7.26H4.4z'
-      />
-      <path d='M14.03 21.66V13.7H9.39v7.97' stroke='currentColor' strokeWidth={strokeWidth} />
-      <path
-        d='M3.58 11.02c-.67-2.15-1-3.22-.54-4l.2-.28c.6-.68 1.73-.68 3.98-.68h9.25c2.38 0 3.57 0 4.17.72l.2.3c.46.82.04 1.93-.8 4.15-.44 1.13-.65 1.7-1.1 2.04q-.09.08-.18.13c-.48.3-1.09.3-2.3.3H7.23c-1.28 0-1.92 0-2.42-.33l-.19-.14c-.45-.37-.64-.99-1.03-2.21m8.47-5.33V2.63M8.13 13.7V6.24m7.26 7.46V6.24m-1.25-3.61H9.9'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'airport-tower-title'}>{title}</title> : null}<path opacity=".2" fill="currentColor" d="M9.29 13.69h4.84v8.1H9.29zm6.39-7.73 5.07.8-1.38 6.46h-3.69zM2.85 7l5.28-.75v7.26H4.4z"/><path d="M14.03 21.66V13.7H9.39v7.97" stroke="currentColor"/><path d="M3.58 11.02c-.67-2.15-1-3.22-.54-4l.2-.28c.6-.68 1.73-.68 3.98-.68h9.25c2.38 0 3.57 0 4.17.72l.2.3c.46.82.04 1.93-.8 4.15-.44 1.13-.65 1.7-1.1 2.04q-.09.08-.18.13c-.48.3-1.09.3-2.3.3H7.23c-1.28 0-1.92 0-2.42-.33l-.19-.14c-.45-.37-.64-.99-1.03-2.21m8.47-5.33V2.63M8.13 13.7V6.24m7.26 7.46V6.24m-1.25-3.61H9.9" stroke="currentColor"/></svg>
   )
 }

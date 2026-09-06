@@ -11,27 +11,20 @@ export const IconStandardDefinition: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-standard-definition'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'standard-definition-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        d='M21.19 20H2.8M21.19 4H2.8m10.95 4.97v6.06c0 .82 0 1.23.31 1.53.32.3.67.27 1.38.23 1.92-.12 4.8-.94 4.8-4.79s-2.88-4.67-4.8-4.79c-.71-.04-1.06-.06-1.38.23s-.31.71-.31 1.53m-2.97-.52A5 5 0 0 0 7.46 7.2c-1.6 0-3.33.8-3.33 2.5 0 3.65 6.65.74 6.65 4.44 0 1.73-1.7 2.66-3.32 2.66-1.63 0-2.72-.46-3.47-1.47'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'standard-definition-title'}>{title}</title> : null}<path d="M21.19 20H2.8M21.19 4H2.8m10.95 4.97v6.06c0 .82 0 1.23.31 1.53.32.3.67.27 1.38.23 1.92-.12 4.8-.94 4.8-4.79s-2.88-4.67-4.8-4.79c-.71-.04-1.06-.06-1.38.23s-.31.71-.31 1.53m-2.97-.52A5 5 0 0 0 7.46 7.2c-1.6 0-3.33.8-3.33 2.5 0 3.65 6.65.74 6.65 4.44 0 1.73-1.7 2.66-3.32 2.66-1.63 0-2.72-.46-3.47-1.47" stroke="currentColor"/></svg>
   )
 }

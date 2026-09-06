@@ -11,37 +11,20 @@ export const IconChalkboard: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-chalkboard'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'chalkboard-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M16.32 15.13c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42v-2c0-1.88 0-2.82-.59-3.4-.58-.6-1.53-.6-3.41-.6H7.68c-1.88 0-2.83 0-3.41.6-.59.58-.59 1.52-.59 3.4v5.74c0 1.88 0 2.82.59 3.4.58.6 1.53.6 3.41.6h2.64c1.03 0 1.86-.84 1.86-1.87s.84-1.87 1.87-1.87z'
-        fill='currentColor'
-      />
-      <path
-        d='M20.32 18.87v-7.74c0-2.82 0-4.24-.88-5.12s-2.3-.87-5.12-.87H9.68c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v7.73'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='M19.58 18.87V17.1c0-.94 0-1.41-.29-1.7-.3-.3-.76-.3-1.7-.3H14c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v1.77m10.41 0H1.58'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'chalkboard-title'}>{title}</title> : null}<path opacity=".2" d="M16.32 15.13c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42v-2c0-1.88 0-2.82-.59-3.4-.58-.6-1.53-.6-3.41-.6H7.68c-1.88 0-2.83 0-3.41.6-.59.58-.59 1.52-.59 3.4v5.74c0 1.88 0 2.82.59 3.4.58.6 1.53.6 3.41.6h2.64c1.03 0 1.86-.84 1.86-1.87s.84-1.87 1.87-1.87z" fill="currentColor"/><path d="M20.32 18.87v-7.74c0-2.82 0-4.24-.88-5.12s-2.3-.87-5.12-.87H9.68c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v7.73" stroke="currentColor"/><path d="M19.58 18.87V17.1c0-.94 0-1.41-.29-1.7-.3-.3-.76-.3-1.7-.3H14c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v1.77m10.41 0H1.58" stroke="currentColor"/></svg>
   )
 }

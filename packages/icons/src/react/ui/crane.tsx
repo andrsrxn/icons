@@ -11,42 +11,20 @@ export const IconCrane: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-crane'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'crane-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect opacity='.2' x='6.96' y='3.44' width='5.14' height='14.78' rx='2' fill='currentColor' />
-      <path
-        d='M12.1 17.83V6.01c0-.53 0-.8-.05-1.01a2 2 0 0 0-1.5-1.51c-.23-.05-.5-.05-1.02-.05-.53 0-.8 0-1.01.05A2 2 0 0 0 7 4.99c-.05.22-.05.49-.05 1.02v11.82'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        x='5.48'
-        y='17.83'
-        width='8.11'
-        height='2.85'
-        rx='1'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m10.96 3.64 7.8 2.76c2.1.74 3.14 1.1 3.07 1.52s-1.18.42-3.4.42h-6.37M7.58 3.98 3.93 6.52c-1.07.75-1.61 1.12-1.5 1.47.1.35.76.35 2.07.35h3.18m9.97.31v.86c0 .65 0-.99.02-.9.02.1.52 1.38 1.54 3.96a1.67 1.67 0 1 1-3.23.6M12.1 8.34H7.49m4.61 4.88H7.49'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'crane-title'}>{title}</title> : null}<rect opacity=".2" x="6.96" y="3.44" width="5.14" height="14.78" rx="2" fill="currentColor"/><path d="M12.1 17.83V6.01c0-.53 0-.8-.05-1.01a2 2 0 0 0-1.5-1.51c-.23-.05-.5-.05-1.02-.05-.53 0-.8 0-1.01.05A2 2 0 0 0 7 4.99c-.05.22-.05.49-.05 1.02v11.82" stroke="currentColor"/><rect x="5.48" y="17.83" width="8.11" height="2.85" rx="1" stroke="currentColor"/><path d="m10.96 3.64 7.8 2.76c2.1.74 3.14 1.1 3.07 1.52s-1.18.42-3.4.42h-6.37M7.58 3.98 3.93 6.52c-1.07.75-1.61 1.12-1.5 1.47.1.35.76.35 2.07.35h3.18m9.97.31v.86c0 .65 0-.99.02-.9.02.1.52 1.38 1.54 3.96a1.67 1.67 0 1 1-3.23.6M12.1 8.34H7.49m4.61 4.88H7.49" stroke="currentColor"/></svg>
   )
 }

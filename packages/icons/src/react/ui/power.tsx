@@ -11,32 +11,20 @@ export const IconPower: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-power'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'power-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M20.59 12.76a8.59 8.59 0 1 1-17.17 0 8.59 8.59 0 0 1 17.17 0'
-        fill='currentColor'
-      />
-      <path
-        d='M6.83 5.9A8.57 8.57 0 0 0 12 21.35a8.56 8.56 0 0 0 8.58-8.6c0-2.8-1.34-5.28-3.41-6.85M12 13.38V2.93'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'power-title'}>{title}</title> : null}<path opacity=".2" d="M20.59 12.76a8.59 8.59 0 1 1-17.17 0 8.59 8.59 0 0 1 17.17 0" fill="currentColor"/><path d="M6.83 5.9A8.57 8.57 0 0 0 12 21.35a8.56 8.56 0 0 0 8.58-8.6c0-2.8-1.34-5.28-3.41-6.85M12 13.38V2.93" stroke="currentColor"/></svg>
   )
 }

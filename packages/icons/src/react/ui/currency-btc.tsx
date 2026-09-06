@@ -11,32 +11,20 @@ export const IconCurrencyBtc: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-currency-btc'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-btc-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M8.08 19.7V4.3h6l2.62 2.4-.93 4.98 2.64 3.84-2.64 3.97-6.16.2z'
-        fill='currentColor'
-      />
-      <path
-        d='M5.59 4.29h7.85a3.56 3.56 0 0 1 0 7.11h-1.92m0 0h2.57a4.15 4.15 0 1 1 0 8.3h-8.5M7.87 4.29v15.4m.21-17.22v1.64M7.87 19.9v1.63m4.02-19.06v1.64m0 15.79v1.63'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'currency-btc-title'}>{title}</title> : null}<path opacity=".2" d="M8.08 19.7V4.3h6l2.62 2.4-.93 4.98 2.64 3.84-2.64 3.97-6.16.2z" fill="currentColor"/><path d="M5.59 4.29h7.85a3.56 3.56 0 0 1 0 7.11h-1.92m0 0h2.57a4.15 4.15 0 1 1 0 8.3h-8.5M7.87 4.29v15.4m.21-17.22v1.64M7.87 19.9v1.63m4.02-19.06v1.64m0 15.79v1.63" stroke="currentColor"/></svg>
   )
 }

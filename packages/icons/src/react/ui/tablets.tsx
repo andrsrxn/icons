@@ -11,59 +11,20 @@ export const IconTablets: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg
-      viewBox='0 0 24 24'
-      fill='none'
-      xmlns='http://www.w3.org/2000/svg'
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
       width={size}
       height={size}
+      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
       data-slot='ui-icon-tablets'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={`ui-icon ${className ?? ''}`}
+      aria-labelledby={isLabelled && title && !ariaLabel ? 'tablets-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}
-      <rect
-        opacity='.2'
-        width='6.59'
-        height='3.07'
-        rx='1'
-        transform='matrix(.96098 -.27661 .27239 .96219 3.47 15.82)'
-        fill='currentColor'
-      />
-      <rect
-        opacity='.2'
-        width='6.66'
-        height='3.66'
-        rx='1'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 20.8 9.7)'
-        fill='currentColor'
-      />
-      <rect
-        width='7.68'
-        height='8.03'
-        rx='3.84'
-        transform='matrix(.96098 -.27661 .27239 .96219 1.8 11.87)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <rect
-        width='7.66'
-        height='7.77'
-        rx='3.83'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 22.21 6.51)'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-      <path
-        d='m20.33 10.1-5.71-1.8m-10.9 7.26 5.7-1.8'
-        stroke='currentColor'
-        strokeWidth={strokeWidth}
-      />
-    </svg>
+      {isLabelled && title && !ariaLabel ? <title id={'tablets-title'}>{title}</title> : null}<rect opacity=".2" width="6.59" height="3.07" rx="1" transform="matrix(.96098 -.27661 .27239 .96219 3.47 15.82)" fill="currentColor"/><rect opacity=".2" width="6.66" height="3.66" rx="1" transform="matrix(-.96098 -.27661 -.27239 .96219 20.8 9.7)" fill="currentColor"/><rect width="7.68" height="8.03" rx="3.84" transform="matrix(.96098 -.27661 .27239 .96219 1.8 11.87)" stroke="currentColor"/><rect width="7.66" height="7.77" rx="3.83" transform="matrix(-.96098 -.27661 -.27239 .96219 22.21 6.51)" stroke="currentColor"/><path d="m20.33 10.1-5.71-1.8m-10.9 7.26 5.7-1.8" stroke="currentColor"/></svg>
   )
 }
