@@ -17,15 +17,20 @@
 /** biome-ignore-all lint/suspicious/noConsole: utility script */
 
 import fs from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
 // Config
 
-const CATEGORIES = ['ui', 'flags']
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const require = createRequire(import.meta.url)
+const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
 
-const RAW_ROOT = path.resolve('./src/raw')
-const DTS_ROOT = path.resolve('./dist')
+const CATEGORIES = ['ui', 'flags']
+const RAW_ROOT = path.join(rawIconsRoot, 'src')
+const DTS_ROOT = path.resolve(__dirname, '../dist')
 
 // Helpers
 

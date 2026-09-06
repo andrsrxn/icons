@@ -11,11 +11,13 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
 // Config
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const ICONS_DIR = path.resolve('./src/react/ui')
-const FLAGS_DIR = path.resolve('./src/react/flags')
+const ICONS_DIR = path.resolve(__dirname, '../src/react/ui')
+const FLAGS_DIR = path.resolve(__dirname, '../src/react/flags')
 
 const DIRS = {
   flags: FLAGS_DIR,

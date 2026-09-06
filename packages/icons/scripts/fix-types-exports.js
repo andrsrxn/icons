@@ -19,8 +19,14 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
-const FILES = [path.resolve('./dist/ui/types.d.ts'), path.resolve('./dist/flags/types.d.ts')]
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
+
+const FILES = [
+  path.resolve(__dirname, '../dist/ui/types.d.ts'),
+  path.resolve(__dirname, '../dist/flags/types.d.ts'),
+]
 
 function transformTypes(content) {
   const exportMatch = content.match(/export\s*\{\s*([^}]+)\s*\};?/u)
