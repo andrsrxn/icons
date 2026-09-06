@@ -17,14 +17,20 @@
 /** biome-ignore-all lint/suspicious/noConsole: no */
 
 import fs from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 import { optimize } from 'svgo'
 
 // Config
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const FLAGS_DIR = path.resolve('./src/raw/flags')
-const FLAGS_OUT = path.resolve('./src/react/flags')
+const require = createRequire(import.meta.url)
+const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
+
+const FLAGS_DIR = path.join(rawIconsRoot, 'src/flags')
+const FLAGS_OUT = path.resolve(__dirname, '../src/react/flags')
 
 const CLASSNAME = 'ui-flag'
 
@@ -72,43 +78,34 @@ function generateComponent(fileName, svgContent) {
 
   const countryCodeLower = fileName.replace('.svg', '').toLowerCase()
   const countryCodeUpper = countryCodeLower.toUpperCase()
-  // Strip hyphens/non-alphanumeric chars to guarantee a valid JS identifier (e.g., us-ca -> USCA)
   const cleanCodeUpper = countryCodeLower.replace(/[^a-z0-9]/gu, '').toUpperCase()
   const componentName = `IconFlag${cleanCodeUpper}`
 
-  // 1. Optimize SVG and prefix all IDs
   const optimizedSvg = optimizeSvg(rawSvg, countryCodeLower)
 
-  // 2. Extract viewBox dimensions (defaults to '0 0 21 15' if missing)
   const viewBoxMatch = optimizedSvg.match(/viewBox=["']([^"']+)["']/u)
   const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 21 15'
   const [, , vbWidth = '21', vbHeight = '15'] = viewBox.split(' ')
 
-  // 3. Extract <defs> content and inner body
   let defsContent = ''
   let body = optimizedSvg
 
   const defsMatch = body.match(/<defs>([\s\S]*?)<\/defs>/u)
   if (defsMatch) {
-    // biome-ignore lint/style/useDestructuring: easier to understand
-    defsContent = defsMatch[1]
+    ;[defsContent] = defsMatch
     body = body.replace(/<defs>[\s\S]*?<\/defs>/u, '')
   }
 
-  // Extract inner SVG content
   const innerMatch = body.match(/<svg[^>]*>([\s\S]*?)<\/svg>/u)
   let innerBody = innerMatch ? innerMatch[1] : ''
 
-  // Clean title and desc tags inside inner body
   innerBody = innerBody
     .replace(/<title[\s\S]*?<\/title>/giu, '')
     .replace(/<desc[\s\S]*?<\/desc>/giu, '')
 
-  // 4. Construct clipPath definition to prevent path overflow
   const clipId = `${countryCodeLower}-clip`
   const clipPathDef = `\n        <clipPath id='${clipId}'>\n          <rect x='0' y='0' width='${vbWidth}' height='${vbHeight}' />\n        </clipPath>`
 
-  // 5. Convert SVG attributes to JSX props
   const jsxDefs = svgAttrsToJsx(`${defsContent}${clipPathDef}`)
   const jsxBody = svgAttrsToJsx(innerBody)
 
@@ -124,8 +121,11 @@ export const ${componentName}: FlagIcon = ({
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  
   const isHidden = ariaHidden === true
   const titleText = title ?? '${countryCodeUpper}'
+  
+  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -139,9 +139,11 @@ export const ${componentName}: FlagIcon = ({
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
+      aria-labelledby={showTitle ? '${countryCodeLower}-title' : undefined}
+      focusable={isHidden ? false : undefined}
       className={\`${CLASSNAME} \${className ?? ''}\`}
       {...props}>
-      {isHidden || ariaLabel ? null : <title>{titleText}</title>}
+      {showTitle ? <title id={'${countryCodeLower}-title'}>{titleText}</title> : null}
 
       <defs>${jsxDefs}
       </defs>

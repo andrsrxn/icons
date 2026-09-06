@@ -16,13 +16,19 @@
 /** biome-ignore-all lint/suspicious/noConsole: no */
 
 import fs from 'node:fs'
+import { createRequire } from 'node:module'
 import path from 'node:path'
 import process from 'node:process'
+import { fileURLToPath } from 'node:url'
 
 // Config
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const ICONS_DIR = path.resolve('./src/raw/ui')
-const ICONS_OUT = path.resolve('./src/react/ui')
+const require = createRequire(import.meta.url)
+const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
+
+const ICONS_DIR = path.join(rawIconsRoot, 'src/ui')
+const ICONS_OUT = path.resolve(__dirname, '../src/react/ui')
 
 const CLASSNAME = 'ui-icon'
 const ICON_SIZE = 24
@@ -70,22 +76,25 @@ function hasAttr(svg, attrName) {
   return new RegExp(`\\s${attrName}=["'][^"']*["']`, 'iu').test(svg)
 }
 
-// Any hardcoded stroke-width on a path/shape becomes a binding to the new
-// `strokeWidth` prop instead of a fixed value. `stroke` (the color) is
-// left untouched wherever it appears - only its width is made dynamic.
-function convertStrokeWidthToProp(svg) {
-  return svg.replace(/strokeWidth=["'][\d.]+["']/giu, 'strokeWidth={strokeWidth}')
-}
-
 // Custom props injection
 
-function injectReactProps(svg, iconName, injectStrokeLinecapLinejoin) {
+function injectReactProps(svg, iconName, injectStrokeLinecapLinejoin, injectStrokeWidth) {
   return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
-    const strokeProps = injectStrokeLinecapLinejoin
-      ? `
+    const strokeProps = `${
+      injectStrokeWidth
+        ? `
+      strokeWidth={strokeWidth}`
+        : ''
+    }${
+      injectStrokeLinecapLinejoin
+        ? `
       strokeLinecap='round'
       strokeLinejoin='round'`
-      : ''
+        : ''
+    }`
+
+    // Determine when to show the title: Only when labelled, an explicit title exists, AND no aria-label is provided
+    const showTitle = 'isLabelled && title && !ariaLabel'
 
     return `<svg${attrs}
       width={size}
@@ -94,10 +103,11 @@ function injectReactProps(svg, iconName, injectStrokeLinecapLinejoin) {
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      focusable='false'
-      className={\`${CLASSNAME} \${className ?? ''}\`}
+      aria-labelledby={${showTitle} ? '${iconName}-title' : undefined}
+      focusable={isLabelled ? undefined : false}
+      className={\`${CLASSNAME} \${className ?? ''}\`.trim()}
       {...props}>
-      {title ? <title>{title}</title> : null}`
+      {${showTitle} ? <title id={'${iconName}-title'}>{title}</title> : null}`
   })
 }
 
@@ -110,24 +120,31 @@ function normalizeSvg(svg, iconName) {
   // individual paths/shapes, so nothing else needs stripping from it.
   svg = stripRootAttrs(svg, ['width', 'height'])
 
-  // strokeLinecap / strokeLinejoin live on individual paths in the raw
-  // source. If the icon uses them anywhere, consolidate them: strip
-  // every per-path occurrence and add exactly one global pair on the
-  // root <svg> tag. Icons that never use a stroke at all (pure fill /
-  // duotone icons) are left completely alone here - nothing gets added
-  // to their root unnecessarily.
+  // strokeWidth / strokeLinecap / strokeLinejoin live on individual
+  // paths in the raw source. If the icon uses any of them anywhere,
+  // consolidate: strip every per-path occurrence and add exactly one
+  // global set on the root <svg> tag instead. Icons that never use a
+  // stroke at all (pure fill / duotone icons) are left completely alone
+  // - nothing gets added to their root unnecessarily.
+  //
+  // This is safe for mixed icons too (some fill paths, some stroke
+  // paths in the same icon): stroke-width only has a visual effect on
+  // an element that also has a stroke color, and `stroke` itself is
+  // never globalized to the root - so a fill-only path inheriting an
+  // unused strokeWidth from the root renders no differently than before.
+  const usesStrokeWidth = hasAttr(svg, 'strokeWidth')
   const usesStrokeLinecapLinejoin = hasAttr(svg, 'strokeLinecap') || hasAttr(svg, 'strokeLinejoin')
+
+  if (usesStrokeWidth) {
+    svg = stripAllAttr(svg, 'strokeWidth')
+  }
 
   if (usesStrokeLinecapLinejoin) {
     svg = stripAllAttr(svg, 'strokeLinecap')
     svg = stripAllAttr(svg, 'strokeLinejoin')
   }
 
-  // Any hardcoded stroke-width - wherever it appears on a path/shape -
-  // becomes a binding to the strokeWidth prop instead of a fixed value.
-  svg = convertStrokeWidthToProp(svg)
-
-  svg = injectReactProps(svg, iconName, usesStrokeLinecapLinejoin)
+  svg = injectReactProps(svg, iconName, usesStrokeLinecapLinejoin, usesStrokeWidth)
 
   return svg
 }
@@ -177,6 +194,7 @@ function main() {
 
   svgFiles.forEach(file => {
     const filePath = path.join(ICONS_DIR, file)
+    console.log({ filePath })
     const svgContent = fs.readFileSync(filePath, 'utf-8')
 
     const componentContent = generateComponent(file, svgContent)
@@ -201,7 +219,6 @@ function main() {
 
 // testing porpuses
 export {
-  convertStrokeWidthToProp,
   generateComponent,
   hasAttr,
   normalizeSvg,
