@@ -77,7 +77,7 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
     <div className={cn('relative hidden lg:block w-44', className)}>
       <ul
         aria-label='Table of contents'
-        className='text-sm pr-2 max-h-[calc(100dvh-120px)] text-muted-foreground overflow-y-auto [&_a]:hover:text-foreground [&_a[data-active=true]]:text-foreground [&_a[data-active=true]]:font-medium [&_a]:transition-colors list-disc marker:text-primary/50 [&_ul]:list-disc [&_ul]:marker:text-primary/50 [&_ul]:mt-1 [&_ul]:pl-4 [&_ul]:grid [&_ul]:gap-1 sticky top-22'>
+        className='text-sm pr-2 max-h-[calc(100dvh-120px)] text-muted-foreground overflow-y-auto scroll-fade-y [&_a]:hover:text-foreground [&_a[data-active=true]]:text-foreground [&_a[data-active=true]]:font-medium [&_a]:transition-colors list-disc marker:text-primary/50 [&_ul]:list-disc [&_ul]:marker:text-primary/50 [&_ul]:mt-1 [&_ul]:pl-4 [&_ul]:grid [&_ul]:gap-1 sticky top-22'>
         <li>
           <ul>
             <li>
@@ -186,6 +186,11 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
             <li>
               <a href='#credits' data-active={isActive('credits')}>
                 Credits
+              </a>
+            </li>
+            <li>
+              <a href='#license' data-active={isActive('license')}>
+                License
               </a>
             </li>
           </ul>

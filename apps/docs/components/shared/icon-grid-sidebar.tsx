@@ -129,7 +129,7 @@ export const IconGridSidebar = ({
   )
   return (
     <aside className='hidden lg:block lg:col-span-2 relative'>
-      <nav className='sticky top-6 h-[calc(100dvh-3rem)] p-2 bg-card border rounded-lg max-h-max overflow-y-scroll overscroll-contain'>
+      <nav className='sticky top-6 h-[calc(100dvh-3rem)] p-2 bg-card border rounded-lg max-h-max overflow-y-scroll scroll-fade-y overscroll-contain'>
         <div className='px-2 my-2 '>
           <h2 className='text-lg font-semibold'>Categories</h2>
         </div>

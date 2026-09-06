@@ -136,7 +136,7 @@ export default function ExamplesPage() {
         </p>
       </div>
 
-      <div className='overflow-x-auto overflow-y-clip px-[5%]'>
+      <div className='overflow-x-auto scroll-fade-x overflow-y-clip px-[5%]'>
         <div className='grid grid-cols-4 w-275 xl:max-w-6xl xl:zoom-110 xl:wrapper lg:w-7xl lg:px-0 xl:w-full lg:zoom-105 gap-6 animate-in zoom-in-85 duration-600 ease-in-out fade-in py-8'>
           <div className='grid gap-6 h-max '>
             <div
@@ -189,12 +189,12 @@ export default function ExamplesPage() {
             <div className='flex items-center justify-center gap-2'>
               <Badge
                 variant='secondary'
-                className='bg-green-50 break-inside-avoid border-green-300 text-green-900'>
+                className='bg-green-50 break-inside-avoid border-green-300 text-green-900 dark:bg-green-950 dark:border-green-700 dark:text-green-100'>
                 <IconTrendUp /> 20.5%{' '}
               </Badge>
               <Badge
                 variant='secondary'
-                className='bg-red-50 break-inside-avoid border-red-300 text-red-900'>
+                className='bg-red-50 break-inside-avoid border-red-300 text-red-900 dark:bg-red-950 dark:border-red-700 dark:text-red-100'>
                 <IconTrendDown /> 45%{' '}
               </Badge>
               <Tooltip>
@@ -228,10 +228,10 @@ export default function ExamplesPage() {
             </div>
           </div>
           <div className='grid h-max gap-6'>
-            <Alert className='h-max bg-green-50 border-green-300 text-green-950'>
+            <Alert className='h-max bg-green-50 border-green-300 text-green-950 dark:bg-green-950 dark:border-green-700 dark:text-green-50'>
               <IconCheckCircle />
               <AlertTitle>Payment successful</AlertTitle>
-              <AlertDescription className='text-green-900!'>
+              <AlertDescription className='text-green-900! dark:text-green-200!'>
                 Your payment has been processed. Receipt has been sent to your email.
               </AlertDescription>
             </Alert>
@@ -378,12 +378,14 @@ export default function ExamplesPage() {
             <Item
               variant='outline'
               size='sm'
-              className='bg-blue-50 hover:bg-blue-100! border-blue-300'>
+              className='bg-blue-50 hover:bg-blue-100! border-blue-300 dark:bg-blue-950 dark:border-blue-700 dark:text-blue-50 dark:hover:bg-blue-950!'>
               <ItemMedia>
                 <IconStarSeal className='text-blue-700 size-5' />
               </ItemMedia>
               <ItemContent>
-                <ItemTitle className='text-blue-900'>Your profile has been verified.</ItemTitle>
+                <ItemTitle className='text-blue-900 leading-none dark:text-blue-50'>
+                  Your profile has been verified.
+                </ItemTitle>
               </ItemContent>
             </Item>
 
@@ -411,13 +413,14 @@ export default function ExamplesPage() {
           </div>
           <div className='grid gap-6 h-max'>
             <Item variant='outline'>
-              <ItemMedia>
+              <ItemMedia variant='icon'>
                 <IconVolumeHigh />
               </ItemMedia>
               <ItemContent>
                 <ItemTitle>Volume</ItemTitle>
               </ItemContent>
               <ItemActions className='flex-1'>
+                {/** biome-ignore lint/style/noMagicNumbers: unnecessary */}
                 <Slider defaultValue={[50]} min={0} max={100} />
               </ItemActions>
             </Item>

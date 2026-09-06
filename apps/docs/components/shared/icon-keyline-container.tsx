@@ -35,7 +35,7 @@ export const IconKeylineContainer = ({
   const [hasRTL, setHasRTL] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [strokeWidth, setStrokeWidth] = useState(ICON_STROKE_WIDTH)
-  const [color, setColor] = useState<string>(theme === 'dark' ? 'white' : 'black')
+  const [color, setColor] = useState<string>('currentColor')
 
   const keylineURL = 'url(/assets/keyline.svg)'
   const componentName = getIconComponentName(icon.name, icon.group)
@@ -48,7 +48,8 @@ export const IconKeylineContainer = ({
 
   useEffect(() => {
     setMounted(true)
-  }, [])
+    setColor(theme === 'dark' ? 'white' : 'black')
+  }, [theme])
 
   const isUI = isUIIcon(icon)
 
@@ -59,68 +60,71 @@ export const IconKeylineContainer = ({
         dir={hasRTL ? 'rtl' : 'ltr'}
         suppressHydrationWarning
         className={cn(
-          'flex size-60 md:size-72 items-center justify-center bg-card bg-contain border border-transparent! bg-center bg-no-repeat',
+          'flex size-64 md:size-72 items-center justify-center bg-card bg-contain border border-transparent! bg-center bg-no-repeat',
           shouldShowKeyline && isUI ? null : 'rounded-lg border-border! shadow-sm'
         )}
         style={{
           backgroundImage: isUI && shouldShowKeyline ? keylineURL : 'none',
         }}>
-        <IconComponent color={color} strokeWidth={strokeWidth} className='size-60 md:size-72' />
+        <IconComponent color={color} strokeWidth={strokeWidth} className='size-64 md:size-72' />
       </div>
 
-      <div className='flex w-60 md:w-72 h-6 flex-wrap items-center justify-between gap-6'>
-        <Popover>
-          <PopoverTrigger
-            render={
-              <Button size='icon-sm' variant='outline'>
-                <IconSettings />
+      {isUI ? (
+        <div className='flex w-64 md:w-72 h-6 items-center justify-between gap-4 md:gap-6'>
+          <Popover>
+            <PopoverTrigger
+              render={
+                <Button size='icon-sm' variant='outline'>
+                  <IconSettings />
+                </Button>
+              }
+            />
+            <PopoverContent className='flex flex-col gap-5' side='bottom' align='start'>
+              <PopoverHeader className='sr-only'>
+                <PopoverTitle>Customize</PopoverTitle>
+                <PopoverDescription>
+                  Change the color and stroke width of the icon.
+                </PopoverDescription>
+              </PopoverHeader>
+              <Label className='flex items-center gap-12'>
+                Color
+                <Input
+                  type='color'
+                  className='h-8 bg-background  cursor-pointer p-1'
+                  value={color}
+                  onChange={e => setColor(e.target.value)}
+                />
+              </Label>
+              <Label className='flex items-center gap-12'>
+                Stroke
+                <Slider
+                  min={1}
+                  max={2}
+                  step={0.5}
+                  value={[strokeWidth]}
+                  onValueChange={value => setStrokeWidth(typeof value === 'number' ? value : 0)}
+                />
+              </Label>
+              <Button variant={'secondary'} type='button' size='sm' onClick={reset}>
+                Reset styles
               </Button>
-            }
-          />
-          <PopoverContent className='flex flex-col gap-5' side='bottom' align='start'>
-            <PopoverHeader className='sr-only'>
-              <PopoverTitle>Customize</PopoverTitle>
-              <PopoverDescription>
-                Change the color and stroke width of the icon.
-              </PopoverDescription>
-            </PopoverHeader>
-            <Label className='flex items-center gap-12'>
-              Color
-              <Input
-                type='color'
-                className='h-8 bg-background  cursor-pointer p-1'
-                value={color}
-                onChange={e => setColor(e.target.value)}
-              />
-            </Label>
-            <Label className='flex items-center gap-12'>
-              Stroke
-              <Slider
-                min={1}
-                max={2}
-                step={0.5}
-                value={[strokeWidth]}
-                onValueChange={value => setStrokeWidth(typeof value === 'number' ? value : 0)}
-              />
-            </Label>
-            <Button variant={'secondary'} type='button' size='sm' onClick={reset}>
-              Reset styles
-            </Button>
-          </PopoverContent>
-        </Popover>
-        {mounted && isUI && (
-          <Label className='animate-in fade-in duration-400 ease-in-out'>
-            Show keyline{' '}
-            <Switch checked={shouldShowKeyline} onCheckedChange={setShouldShowKeyline} />
-          </Label>
-        )}
+            </PopoverContent>
+          </Popover>
 
-        {mounted && isUI && icon.rtl ? (
-          <Label className='animate-in fade-in duration-400 ease-in-out'>
-            RTL <Switch checked={hasRTL} onCheckedChange={setHasRTL} />
-          </Label>
-        ) : null}
-      </div>
+          {mounted && (
+            <Label className='animate-in fade-in duration-400 ease-in-out'>
+              Show keyline{' '}
+              <Switch checked={shouldShowKeyline} onCheckedChange={setShouldShowKeyline} />
+            </Label>
+          )}
+
+          {mounted && icon.rtl ? (
+            <Label className='animate-in fade-in duration-400 ease-in-out'>
+              RTL <Switch checked={hasRTL} onCheckedChange={setHasRTL} />
+            </Label>
+          ) : null}
+        </div>
+      ) : null}
     </div>
   )
 }

@@ -29,7 +29,7 @@ import { ICON_PROPS } from '@/lib/constants/icons'
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export default function DocsPage() {
   return (
-    <section className='flex flex-col lg:justify-between wrapper max-w-245 lg:flex-row-reverse gap-12 py-10'>
+    <section className='flex flex-col lg:justify-between wrapper max-w-245 lg:flex-row-reverse gap-12 py-10 animate-in fade-in duration-800 ease-in-out'>
       <div className='fixed top-0 left-0 z-100 flex w-full -translate-y-full items-center justify-center gap-2 border-b bg-card py-2 shadow-sm transition-transform duration-200 focus-within:translate-y-0'>
         <a
           href='#documentation'
@@ -44,7 +44,7 @@ export default function DocsPage() {
       </div>
 
       <TableOfContents />
-      <div className=' grid gap-5 [&_p]:text-muted-foreground [&_p]:text-base [&_p]:leading-normal [&_p]:text-pretty [&_p]:max-w-prose [&_ul]:text-base [&_ul]:leading-normal [&_ul]:text-muted-foreground [&_ul]:max-w-prose [&_ul]:grid [&_ul]:gap-3 [&_strong]:text-foreground [&_strong]:font-semibold [&_h2]:font-heading [&_h4]:font-semibold [&_h2]:mt-6 [&_h2]:text-2xl [&_h3]:text-xl [&_h2]:font-semibold [&_h3]:font-semibold [&_p>code]:bg-muted [&_p>code]:py-0.5 [&_p>code]:px-1 [&_p>code]:rounded-md [&_p>code]:border [&_p>code]:text-sm [&_p>code]:text-foreground [&_li>code]:bg-muted [&_li>code]:py-0.5 [&_li>code]:px-1 [&_li>code]:rounded-md [&_li>code]:border [&_li>code]:text-sm [&_li>code]:text-foreground [&_a]:text-foreground [&_a]:font-medium [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-2 [&_ul]:marker:text-primary/40 [&_ul]:list-disc '>
+      <div className='grid gap-5 [&_p]:text-muted-foreground [&_p]:text-base [&_p]:leading-normal [&_p]:text-pretty [&_p]:max-w-prose [&_ul]:text-base [&_ul]:leading-normal [&_ul]:text-muted-foreground [&_ul]:max-w-prose [&_ul]:grid [&_ul]:gap-3 [&_strong]:text-foreground [&_strong]:font-semibold [&_h2]:font-heading [&_h4]:font-semibold [&_h2]:mt-6 [&_h2]:text-2xl [&_h3]:text-xl [&_h2]:font-semibold [&_h3]:font-semibold [&_p>code]:bg-muted [&_p>code]:py-0.5 [&_p>code]:px-1 [&_p>code]:rounded-md [&_p>code]:border [&_p>code]:text-sm [&_p>code]:text-foreground [&_li>code]:bg-muted [&_li>code]:py-0.5 [&_li>code]:px-1 [&_li>code]:rounded-md [&_li>code]:border [&_li>code]:text-sm [&_li>code]:text-foreground [&_a]:text-foreground [&_a]:font-medium [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-2 [&_ul]:pl-5 [&_ul]:marker:text-primary/40 [&_ul]:list-disc '>
         <Link
           href='/'
           prefetch={false}
@@ -501,7 +501,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
 
         <h2 id='support'>Support</h2>
 
-        <p>If this project helps you, you can support its development through:</p>
+        <p>If this project is useful to you, consider supporting its development through:</p>
 
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
           <Button
@@ -549,18 +549,31 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           libraries:
         </p>
 
-        <ul>
-          <li>
-            <a href='https://phosphoricons.com/' target='_blank' rel='noopener noreferrer'>
-              Phosphor Icons
-            </a>
-          </li>
-          <li>
-            <a href='https://hugeicons.com/icons' target='_blank' rel='noopener noreferrer'>
-              HugeIcons
-            </a>
-          </li>
-        </ul>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+          <Button
+            nativeButton={false}
+            variant='outline'
+            className='no-underline! bg-[#C4E456] dark:text-black dark:hover:bg-[#C4E456] dark:hover:opacity-80'
+            render={
+              <a href='https://phosphoricons.com/' target='_blank' rel='noopener noreferrer'>
+                <img src='/assets/phosphor-icons.webp' className='size-5' alt='Phosphor Icons' />
+                Phosphor Icons
+              </a>
+            }
+          />
+
+          <Button
+            nativeButton={false}
+            variant='outline'
+            className='no-underline! bg-[#9EE163] dark:text-black dark:hover:bg-[#9EE163] dark:hover:opacity-80'
+            render={
+              <a href='https://hugeicons.com/icons' target='_blank' rel='noopener noreferrer'>
+                <img src='/assets/huge-icons.webp' className='size-5' alt='HugeIcons' />
+                HugeIcons
+              </a>
+            }
+          />
+        </div>
 
         <h2 id='credits'>Credits</h2>
 
@@ -574,6 +587,12 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             THIRD-PARTY-LICENSES.md
           </a>{' '}
           for the full license text.
+        </p>
+
+        <h2 id='license'>License</h2>
+        <p>
+          All icons are free; personal or commercial use is allowed under MIT License - Copyright
+          2026 Andrés Raxón (andrsrxn).
         </p>
       </div>
     </section>
