@@ -1,0 +1,21 @@
+{
+  "name": "@andrsrxn/raw-icons",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./ui/*": "./src/ui/*",
+    "./flags/*": "./src/flags/*",
+    "./types": "./src/types.d.ts",
+    "./package.json": "./package.json",
+    "./catalog.json": "./dist/catalog.json"
+  },
+  "scripts": {
+    "generate-raw-metadata": "node scripts/generate-raw-metadata.js",
+    "build": "node scripts/generate-catalog.js",
+    "migrate-meta": "node scripts/migrate-meta.js"
+  },
+  "files": [
+    "src"
+  ]
+}

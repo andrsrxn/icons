@@ -1,0 +1,13 @@
+{
+  "categories": [
+    "security"
+  ],
+  "tags": [
+    "warning",
+    "alert",
+    "danger",
+    "error",
+    "important",
+    "attention"
+  ]
+}
