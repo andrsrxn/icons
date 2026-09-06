@@ -1,11 +1,6 @@
 .ui-icon,
 .ui-flag {
-  display: inline-block;
   flex-shrink: 0;
-}
-
-.ui-flag {
-  height: auto;
 }
 
 /* Only to UI icons */
@@ -14,75 +9,127 @@
   pointer-events: none;
 }
 
-/* RTL aware icons */
+/* RTL aware icons
+ *
+ * Strategy: [dir=rtl] descendant selectors work universally. A matching [dir=ltr] reset after each group restores the correct transform when a closer LTR ancestor overrides an outer RTL one.
+ */
 
 /* Arrows and chevrons */
-[data-slot='ui-icon-arrow-left']:dir(rtl),
-[data-slot='ui-icon-arrow-right']:dir(rtl),
-[data-slot='ui-icon-arrow-up-left']:dir(rtl),
-[data-slot='ui-icon-arrow-up-right']:dir(rtl),
-[data-slot='ui-icon-chevron-left']:dir(rtl),
-[data-slot='ui-icon-chevron-right']:dir(rtl),
-[data-slot='ui-icon-chevron-left-double']:dir(rtl),
-[data-slot='ui-icon-chevron-right-double']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-arrow-left'],
+[dir=rtl] [data-slot='ui-icon-arrow-right'],
+[dir=rtl] [data-slot='ui-icon-arrow-up-left'],
+[dir=rtl] [data-slot='ui-icon-arrow-up-right'],
+[dir=rtl] [data-slot='ui-icon-chevron-left'],
+[dir=rtl] [data-slot='ui-icon-chevron-right'],
+[dir=rtl] [data-slot='ui-icon-chevron-left-double'],
+[dir=rtl] [data-slot='ui-icon-chevron-right-double'],
 
 /* U-turn arrows */
-[data-slot='ui-icon-arrow-u-left']:dir(rtl),
-[data-slot='ui-icon-arrow-u-right']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-arrow-u-left'],
+[dir=rtl] [data-slot='ui-icon-arrow-u-right'],
 
 /* Corner arrows */
-[data-slot='ui-icon-arrow-corner-down-left']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-down-right']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-left-down']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-left-up']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-right-down']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-right-up']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-up-left']:dir(rtl),
-[data-slot='ui-icon-arrow-corner-up-right']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-arrow-corner-down-left'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-down-right'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-left-down'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-left-up'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-right-down'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-right-up'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-up-left'],
+[dir=rtl] [data-slot='ui-icon-arrow-corner-up-right'],
 
 /* Swipe gestures */
-[data-slot='ui-icon-hand-swipe-left']:dir(rtl),
-[data-slot='ui-icon-hand-swipe-right']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-hand-swipe-left'],
+[dir=rtl] [data-slot='ui-icon-hand-swipe-right'],
 
 /* Bounce navigation */
-[data-slot='ui-icon-bounce-left']:dir(rtl),
-[data-slot='ui-icon-bounce-right']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-bounce-left'],
+[dir=rtl] [data-slot='ui-icon-bounce-right'],
 
 /* Auth/flow entry-exit */
-[data-slot='ui-icon-sign-in']:dir(rtl),
-[data-slot='ui-icon-sign-out']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-sign-in'],
+[dir=rtl] [data-slot='ui-icon-sign-out'],
 
 /* Text editing direction */
-[data-slot='ui-icon-text-indent']:dir(rtl),
-[data-slot='ui-icon-text-outdent']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-text-indent'],
+[dir=rtl] [data-slot='ui-icon-text-outdent'],
 
 /* Key arrows */
-[data-slot='ui-icon-key-backspace']:dir(rtl),
-[data-slot='ui-icon-key-enter']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-key-backspace'],
+[dir=rtl] [data-slot='ui-icon-key-enter'],
 
 /* External navigation and sharing */
-[data-slot='ui-icon-external-link']:dir(rtl),
-[data-slot='ui-icon-repeat']:dir(rtl),
-[data-slot='ui-icon-reload']:dir(rtl),
-[data-slot='ui-icon-resend']:dir(rtl),
-[data-slot='ui-icon-repost']:dir(rtl),
-[data-slot='ui-icon-navigation']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-external-link'],
+[dir=rtl] [data-slot='ui-icon-repeat'],
+[dir=rtl] [data-slot='ui-icon-reload'],
+[dir=rtl] [data-slot='ui-icon-resend'],
+[dir=rtl] [data-slot='ui-icon-repost'],
+[dir=rtl] [data-slot='ui-icon-navigation'],
 
 /* Trend/chart direction */
-[data-slot='ui-icon-trend-up']:dir(rtl),
-[data-slot='ui-icon-trend-down']:dir(rtl),
-[data-slot='ui-icon-trend-up-down']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-trend-up'],
+[dir=rtl] [data-slot='ui-icon-trend-down'],
+[dir=rtl] [data-slot='ui-icon-trend-up-down'],
 
 /* Context-dependent: panels */
-[data-slot='ui-icon-panel-left']:dir(rtl),
-[data-slot='ui-icon-panel-right']:dir(rtl),
-[data-slot='ui-icon-panel-left-open']:dir(rtl),
-[data-slot='ui-icon-panel-right-open']:dir(rtl),
-[data-slot='ui-icon-panels-left']:dir(rtl),
-[data-slot='ui-icon-panels-right']:dir(rtl),
+[dir=rtl] [data-slot='ui-icon-panel-left'],
+[dir=rtl] [data-slot='ui-icon-panel-right'],
+[dir=rtl] [data-slot='ui-icon-panel-left-open'],
+[dir=rtl] [data-slot='ui-icon-panel-right-open'],
+[dir=rtl] [data-slot='ui-icon-panels-left'],
+[dir=rtl] [data-slot='ui-icon-panels-right'],
 
 /* Context-dependent: slides/carousel direction */
-[data-slot='ui-icon-slides-left']:dir(rtl),
-[data-slot='ui-icon-slides-right']:dir(rtl) {
+[dir=rtl] [data-slot='ui-icon-slides-left'],
+[dir=rtl] [data-slot='ui-icon-slides-right'] {
   transform: scaleX(-1);
+}
+
+/* LTR reset — restores icons inside an explicit [dir=ltr] subtree that sits inside an outer [dir=rtl] ancestor. Same specificity as the rules above; placing it after means it wins in the cascade for nested overrides. */
+[dir='ltr'] [data-slot='ui-icon-arrow-left'],
+[dir='ltr'] [data-slot='ui-icon-arrow-right'],
+[dir='ltr'] [data-slot='ui-icon-arrow-up-left'],
+[dir='ltr'] [data-slot='ui-icon-arrow-up-right'],
+[dir='ltr'] [data-slot='ui-icon-chevron-left'],
+[dir='ltr'] [data-slot='ui-icon-chevron-right'],
+[dir='ltr'] [data-slot='ui-icon-chevron-left-double'],
+[dir='ltr'] [data-slot='ui-icon-chevron-right-double'],
+[dir='ltr'] [data-slot='ui-icon-arrow-u-left'],
+[dir='ltr'] [data-slot='ui-icon-arrow-u-right'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-down-left'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-down-right'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-left-down'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-left-up'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-right-down'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-right-up'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-up-left'],
+[dir='ltr'] [data-slot='ui-icon-arrow-corner-up-right'],
+[dir='ltr'] [data-slot='ui-icon-hand-swipe-left'],
+[dir='ltr'] [data-slot='ui-icon-hand-swipe-right'],
+[dir='ltr'] [data-slot='ui-icon-bounce-left'],
+[dir='ltr'] [data-slot='ui-icon-bounce-right'],
+[dir='ltr'] [data-slot='ui-icon-sign-in'],
+[dir='ltr'] [data-slot='ui-icon-sign-out'],
+[dir='ltr'] [data-slot='ui-icon-text-indent'],
+[dir='ltr'] [data-slot='ui-icon-text-outdent'],
+[dir='ltr'] [data-slot='ui-icon-key-backspace'],
+[dir='ltr'] [data-slot='ui-icon-key-enter'],
+[dir='ltr'] [data-slot='ui-icon-external-link'],
+[dir='ltr'] [data-slot='ui-icon-repeat'],
+[dir='ltr'] [data-slot='ui-icon-reload'],
+[dir='ltr'] [data-slot='ui-icon-resend'],
+[dir='ltr'] [data-slot='ui-icon-repost'],
+[dir='ltr'] [data-slot='ui-icon-navigation'],
+[dir='ltr'] [data-slot='ui-icon-trend-up'],
+[dir='ltr'] [data-slot='ui-icon-trend-down'],
+[dir='ltr'] [data-slot='ui-icon-trend-up-down'],
+[dir='ltr'] [data-slot='ui-icon-panel-left'],
+[dir='ltr'] [data-slot='ui-icon-panel-right'],
+[dir='ltr'] [data-slot='ui-icon-panel-left-open'],
+[dir='ltr'] [data-slot='ui-icon-panel-right-open'],
+[dir='ltr'] [data-slot='ui-icon-panels-left'],
+[dir='ltr'] [data-slot='ui-icon-panels-right'],
+[dir='ltr'] [data-slot='ui-icon-slides-left'],
+[dir='ltr'] [data-slot='ui-icon-slides-right'] {
+  transform: none;
 }
