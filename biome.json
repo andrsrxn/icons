@@ -245,6 +245,22 @@
       }
     },
     {
+      "includes": ["**/config/env-client.ts", "**/config/env.ts"],
+      "linter": {
+        "rules": {
+          "style": {
+            "noProcessEnv": "off"
+          },
+          "performance": {
+            "noNamespaceImport": "off"
+          },
+          "correctness": {
+            "noProcessGlobal": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": ["packages/icons/src/**"],
       "linter": {
         "rules": {
@@ -257,6 +273,16 @@
           "performance": {
             "noReExportAll": "off",
             "noBarrelFile": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": ["apps/docs/components/**"],
+      "linter": {
+        "rules": {
+          "security": {
+            "noSecrets": "off"
           }
         }
       }
