@@ -2,6 +2,7 @@
   "name": "andrsrxn-icons-monorepo",
   "private": true,
   "scripts": {
+    "start": "turbo run start",
     "dev": "turbo run dev",
     "dev:icons": "turbo run dev --filter=@andrsrxn/icons",
     "dev:docs": "turbo run dev --filter=docs",

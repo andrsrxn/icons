@@ -30,6 +30,10 @@
       "cache": false,
       "persistent": true
     },
+    "start": {
+      "cache": false,
+      "persistent": true
+    },
     "dep:check": {
       "cache": false
     },
