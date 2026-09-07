@@ -48,8 +48,7 @@ export const IconKeylineContainer = ({
 
   useEffect(() => {
     setMounted(true)
-    setColor(theme === 'dark' ? 'white' : 'black')
-  }, [theme])
+  }, [])
 
   const isUI = isUIIcon(icon)
 
