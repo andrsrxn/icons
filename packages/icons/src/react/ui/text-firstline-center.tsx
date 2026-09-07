@@ -11,7 +11,10 @@ export const IconTextFirstlineCenter: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -21,10 +24,34 @@ export const IconTextFirstlineCenter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-firstline-center-title' : undefined}
+      aria-labelledby={
+        isLabelled && title && !ariaLabel ? 'text-firstline-center-title' : undefined
+      }
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-firstline-center-title'}>{title}</title> : null}<rect opacity=".2" width="6.84" height="6.84" rx="2" transform="matrix(-1 0 0 1 15.42 4.14)" fill="currentColor"/><rect width="6.84" height="6.84" rx="2" transform="matrix(-1 0 0 1 15.42 4.14)" stroke="currentColor"/><path d="M2.7 5.25h2.64m13.32 0h2.64M2.7 15h18.6M2.7 9.96h2.64m13.32 0h2.64m-18.6 9.9h18.6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'text-firstline-center-title'}>{title}</title>
+      ) : null}
+      <rect
+        opacity='.2'
+        width='6.84'
+        height='6.84'
+        rx='2'
+        transform='matrix(-1 0 0 1 15.42 4.14)'
+        fill='currentColor'
+      />
+      <rect
+        width='6.84'
+        height='6.84'
+        rx='2'
+        transform='matrix(-1 0 0 1 15.42 4.14)'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.7 5.25h2.64m13.32 0h2.64M2.7 15h18.6M2.7 9.96h2.64m13.32 0h2.64m-18.6 9.9h18.6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

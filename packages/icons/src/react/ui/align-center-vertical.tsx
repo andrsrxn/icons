@@ -11,7 +11,10 @@ export const IconAlignCenterVertical: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -21,10 +24,54 @@ export const IconAlignCenterVertical: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-center-vertical-title' : undefined}
+      aria-labelledby={
+        isLabelled && title && !ariaLabel ? 'align-center-vertical-title' : undefined
+      }
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'align-center-vertical-title'}>{title}</title> : null}<rect opacity=".2" x="20.2" y="4.58" width="5.8" height="16.4" rx="2" transform="rotate(90 20.2 4.58)" fill="currentColor"/><rect opacity=".2" x="18.21" y="13.62" width="5.8" height="12.42" rx="2" transform="rotate(90 18.21 13.62)" fill="currentColor"/><rect x="20.2" y="4.58" width="5.8" height="16.4" rx="2" transform="rotate(90 20.2 4.58)" stroke="currentColor"/><rect x="18.21" y="13.62" width="5.8" height="12.42" rx="2" transform="rotate(90 18.21 13.62)" stroke="currentColor"/><path d="M12 2v2.58m0 14.84V22m0-11.3v2.59" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'align-center-vertical-title'}>{title}</title>
+      ) : null}
+      <rect
+        opacity='.2'
+        x='20.2'
+        y='4.58'
+        width='5.8'
+        height='16.4'
+        rx='2'
+        transform='rotate(90 20.2 4.58)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        x='18.21'
+        y='13.62'
+        width='5.8'
+        height='12.42'
+        rx='2'
+        transform='rotate(90 18.21 13.62)'
+        fill='currentColor'
+      />
+      <rect
+        x='20.2'
+        y='4.58'
+        width='5.8'
+        height='16.4'
+        rx='2'
+        transform='rotate(90 20.2 4.58)'
+        stroke='currentColor'
+      />
+      <rect
+        x='18.21'
+        y='13.62'
+        width='5.8'
+        height='12.42'
+        rx='2'
+        transform='rotate(90 18.21 13.62)'
+        stroke='currentColor'
+      />
+      <path d='M12 2v2.58m0 14.84V22m0-11.3v2.59' stroke='currentColor' />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconTextToSpeech: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconTextToSpeech: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-to-speech-title'}>{title}</title> : null}<path d="M13.84 14.94V9.07m7.44 6.84V8.1m-3.72 10.74V5.17M10.27 8.1v-.14a1.15 1.15 0 0 0-1.09-1.08H3.39c-.59.03-1.06.5-1.09 1.08v.14m3.98-1.23v10.27m0 0H5m1.3 0h1.26" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'text-to-speech-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M13.84 14.94V9.07m7.44 6.84V8.1m-3.72 10.74V5.17M10.27 8.1v-.14a1.15 1.15 0 0 0-1.09-1.08H3.39c-.59.03-1.06.5-1.09 1.08v.14m3.98-1.23v10.27m0 0H5m1.3 0h1.26'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

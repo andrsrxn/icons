@@ -11,7 +11,10 @@ export const IconCircle: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconCircle: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'circle-title'}>{title}</title> : null}<circle opacity=".2" cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" fill="currentColor"/><circle cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'circle-title'}>{title}</title> : null}
+      <circle
+        opacity='.2'
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+    </svg>
   )
 }

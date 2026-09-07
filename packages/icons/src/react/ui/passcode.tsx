@@ -11,7 +11,10 @@ export const IconPasscode: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,27 @@ export const IconPasscode: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'passcode-title'}>{title}</title> : null}<rect opacity=".2" width="8.87" height="18.81" rx="2" transform="matrix(0 -1 -1 0 21.4 16.44)" fill="currentColor"/><rect width="8.87" height="18.81" rx="2" transform="matrix(0 -1 -1 0 21.4 16.44)" stroke="currentColor"/><path d="M7.4 12a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'passcode-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        width='8.87'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 16.44)'
+        fill='currentColor'
+      />
+      <rect
+        width='8.87'
+        height='18.81'
+        rx='2'
+        transform='matrix(0 -1 -1 0 21.4 16.44)'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.4 12a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0m5.16 0a.6.6 0 1 1-1.2 0 .6.6 0 0 1 1.2 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

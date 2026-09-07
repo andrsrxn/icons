@@ -11,7 +11,10 @@ export const IconTrainTrack: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconTrainTrack: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'train-track-title'}>{title}</title> : null}<rect opacity=".2" x="6.12" y="4.72" width="11.76" height="14.28" rx="2" fill="currentColor"/><path d="M6.4 21.52V2.48m11.2 19.04V2.48m2.24 2.24H4.16m15.68 4.85H4.16m15.68 4.86H4.16m15.68 4.85H4.16" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'train-track-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='6.12'
+        y='4.72'
+        width='11.76'
+        height='14.28'
+        rx='2'
+        fill='currentColor'
+      />
+      <path
+        d='M6.4 21.52V2.48m11.2 19.04V2.48m2.24 2.24H4.16m15.68 4.85H4.16m15.68 4.86H4.16m15.68 4.85H4.16'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconResend: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconResend: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'resend-title'}>{title}</title> : null}<path opacity=".2" d="M14.6 5.47v3.1c-6.71 0-10.53 3.06-12.08 8.51-.13.46.4.79.78.5 5.31-4.09 8.43-3.41 11.3-3.2v3.17a1 1 0 0 0 1.76.67l4.78-5.38a2 2 0 0 0 0-2.66l-4.78-5.37a1 1 0 0 0-1.75.66" fill="currentColor"/><path d="M14.6 8.1v.47c-6.13 0-9.84 2.55-11.63 7.15-.41 1.06-.62 1.6-.33 1.83s.8-.12 1.83-.82c4.61-3.14 7.48-2.55 10.14-2.36v.55c0 2.21 0 3.32.64 3.57.65.24 1.38-.59 2.85-2.24l1.86-2.08h0c1.12-1.27 1.69-1.9 1.69-2.66s-.57-1.4-1.7-2.66L18.1 6.77c-1.47-1.65-2.2-2.48-2.85-2.23-.64.24-.64 1.35-.64 3.56" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'resend-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M14.6 5.47v3.1c-6.71 0-10.53 3.06-12.08 8.51-.13.46.4.79.78.5 5.31-4.09 8.43-3.41 11.3-3.2v3.17a1 1 0 0 0 1.76.67l4.78-5.38a2 2 0 0 0 0-2.66l-4.78-5.37a1 1 0 0 0-1.75.66'
+        fill='currentColor'
+      />
+      <path
+        d='M14.6 8.1v.47c-6.13 0-9.84 2.55-11.63 7.15-.41 1.06-.62 1.6-.33 1.83s.8-.12 1.83-.82c4.61-3.14 7.48-2.55 10.14-2.36v.55c0 2.21 0 3.32.64 3.57.65.24 1.38-.59 2.85-2.24l1.86-2.08h0c1.12-1.27 1.69-1.9 1.69-2.66s-.57-1.4-1.7-2.66L18.1 6.77c-1.47-1.65-2.2-2.48-2.85-2.23-.64.24-.64 1.35-.64 3.56'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

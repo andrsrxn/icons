@@ -11,7 +11,10 @@ export const IconDropper: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconDropper: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dropper-title'}>{title}</title> : null}<path opacity=".2" d="M19.95 4.05a2.74 2.74 0 0 0-3.87 0L13.9 6.23c-.63.63-.94.94-.96 1.33v.1c.02.38.33.7.96 1.32l1.12 1.12c.63.63.94.94 1.33.96h.09c.39-.02.7-.33 1.33-.96l2.18-2.18a2.74 2.74 0 0 0 0-3.87" fill="currentColor"/><path d="M7.85 19.64c.53-.23.8-.34 1.03-.5s.44-.37.84-.77l10.6-10.6a2.9 2.9 0 0 0-4.1-4.09L5.64 14.28c-.4.4-.6.6-.77.84-.16.24-.27.5-.5 1.03l-.64 1.5c-.84 1.96-1.26 2.93-.78 3.41s1.45.06 3.4-.78zM10 5.24 18.75 14" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'dropper-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M19.95 4.05a2.74 2.74 0 0 0-3.87 0L13.9 6.23c-.63.63-.94.94-.96 1.33v.1c.02.38.33.7.96 1.32l1.12 1.12c.63.63.94.94 1.33.96h.09c.39-.02.7-.33 1.33-.96l2.18-2.18a2.74 2.74 0 0 0 0-3.87'
+        fill='currentColor'
+      />
+      <path
+        d='M7.85 19.64c.53-.23.8-.34 1.03-.5s.44-.37.84-.77l10.6-10.6a2.9 2.9 0 0 0-4.1-4.09L5.64 14.28c-.4.4-.6.6-.77.84-.16.24-.27.5-.5 1.03l-.64 1.5c-.84 1.96-1.26 2.93-.78 3.41s1.45.06 3.4-.78zM10 5.24 18.75 14'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

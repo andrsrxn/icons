@@ -11,7 +11,10 @@ export const IconKeyCommand: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconKeyCommand: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-command-title'}>{title}</title> : null}<path opacity=".2" d="M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7z" fill="currentColor"/><path d="M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7zM8.41 8.36v7.35m7.18-.03V8.32m-7.18 7.39h7.18m0-7.39H8.4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'key-command-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7z'
+        fill='currentColor'
+      />
+      <path
+        d='M5.58 8.36A2.83 2.83 0 1 1 8.4 5.52v2.84zm12.84 0a2.83 2.83 0 1 0-2.83-2.84v2.84zM5.58 15.71a2.83 2.83 0 1 0 2.83 2.84V15.7zm12.84 0a2.83 2.83 0 1 1-2.83 2.84V15.7zM8.41 8.36v7.35m7.18-.03V8.32m-7.18 7.39h7.18m0-7.39H8.4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

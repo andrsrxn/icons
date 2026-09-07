@@ -11,7 +11,10 @@ export const IconAt: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconAt: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'at-title'}>{title}</title> : null}<circle opacity=".2" cx="11.66" cy="12" r="4.79" fill="currentColor"/><circle cx="11.66" cy="12" r="4.79" stroke="currentColor"/><path d="M15.41 20.58a7.4 7.4 0 0 1-3.41.8A9.38 9.38 0 1 1 21.38 12c0 2.28-.88 5.27-2.17 6-1.3.73-2.74 0-2.74-1.97V7.56" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'at-title'}>{title}</title> : null}
+      <circle opacity='.2' cx='11.66' cy='12' r='4.79' fill='currentColor' />
+      <circle cx='11.66' cy='12' r='4.79' stroke='currentColor' />
+      <path
+        d='M15.41 20.58a7.4 7.4 0 0 1-3.41.8A9.38 9.38 0 1 1 21.38 12c0 2.28-.88 5.27-2.17 6-1.3.73-2.74 0-2.74-1.97V7.56'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

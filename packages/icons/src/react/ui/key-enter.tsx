@@ -11,7 +11,10 @@ export const IconKeyEnter: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconKeyEnter: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-enter-title'}>{title}</title> : null}<path d="M3.38 13.53H16.7c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41V7.49" stroke="currentColor"/><path d="M6.11 17.38 5.1 16.36c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l1-1.02" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'key-enter-title'}>{title}</title> : null}
+      <path
+        d='M3.38 13.53H16.7c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41V7.49'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.11 17.38 5.1 16.36c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l1-1.02'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

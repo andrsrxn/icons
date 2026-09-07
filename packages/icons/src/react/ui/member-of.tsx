@@ -11,7 +11,10 @@ export const IconMemberOf: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,8 @@ export const IconMemberOf: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'member-of-title'}>{title}</title> : null}<path d="M19.5 5h-8a7 7 0 1 0 0 14h8m-15-7h15" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'member-of-title'}>{title}</title> : null}
+      <path d='M19.5 5h-8a7 7 0 1 0 0 14h8m-15-7h15' stroke='currentColor' />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconBeta: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconBeta: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'beta-title'}>{title}</title> : null}<path opacity=".2" d="m8.99 18.76-.24-13.4 3.16-2.25L15.6 4l1.1 3.17-2.54 3.29 3.24 1.64.95 3.1-.95 3.4-3.97 2.05z" fill="currentColor"/><path d="M12.64 10.46c2.15 0 3.9-1.65 3.9-3.68s-1.74-3.67-3.9-3.67a3.8 3.8 0 0 0-3.89 3.67m4.33 3.68c2.9 0 5.25 2.22 5.25 4.95 0 2.74-2.35 4.96-5.25 4.96a5.3 5.3 0 0 1-4.3-2.1" stroke="currentColor"/><path d="M8.75 6.78v11.86c0 .98 0 2.1-1.02 2.53-.8.33-1.83 0-2.18-1.08" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'beta-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m8.99 18.76-.24-13.4 3.16-2.25L15.6 4l1.1 3.17-2.54 3.29 3.24 1.64.95 3.1-.95 3.4-3.97 2.05z'
+        fill='currentColor'
+      />
+      <path
+        d='M12.64 10.46c2.15 0 3.9-1.65 3.9-3.68s-1.74-3.67-3.9-3.67a3.8 3.8 0 0 0-3.89 3.67m4.33 3.68c2.9 0 5.25 2.22 5.25 4.95 0 2.74-2.35 4.96-5.25 4.96a5.3 5.3 0 0 1-4.3-2.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.75 6.78v11.86c0 .98 0 2.1-1.02 2.53-.8.33-1.83 0-2.18-1.08'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

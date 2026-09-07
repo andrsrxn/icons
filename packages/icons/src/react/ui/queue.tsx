@@ -11,7 +11,10 @@ export const IconQueue: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconQueue: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'queue-title'}>{title}</title> : null}<path opacity=".2" d="M2.74 12.87h18.52v2.26c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H6.74c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z" fill="currentColor"/><path d="M17.73 10.27H6.27m11.46 5H6.27m11.46-10H6.27m-3.53 7.84v2.02c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h10.52c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42v-2.02" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'queue-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M2.74 12.87h18.52v2.26c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H6.74c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z'
+        fill='currentColor'
+      />
+      <path
+        d='M17.73 10.27H6.27m11.46 5H6.27m11.46-10H6.27m-3.53 7.84v2.02c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h10.52c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42v-2.02'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

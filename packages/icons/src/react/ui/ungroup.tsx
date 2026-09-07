@@ -11,7 +11,10 @@ export const IconUngroup: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconUngroup: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'ungroup-title'}>{title}</title> : null}<rect opacity=".2" x="12.64" y="3.92" width="7.43" height="7.43" rx="2" fill="currentColor"/><rect x="3.92" y="12.64" width="7.43" height="7.43" rx="2" stroke="currentColor"/><rect x="12.64" y="3.92" width="7.43" height="7.43" rx="2" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'ungroup-title'}>{title}</title> : null}
+      <rect opacity='.2' x='12.64' y='3.92' width='7.43' height='7.43' rx='2' fill='currentColor' />
+      <rect x='3.92' y='12.64' width='7.43' height='7.43' rx='2' stroke='currentColor' />
+      <rect x='12.64' y='3.92' width='7.43' height='7.43' rx='2' stroke='currentColor' />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconShapes: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,52 @@ export const IconShapes: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'shapes-title'}>{title}</title> : null}<rect opacity=".2" x="2.92" y="14" width="7.43" height="7.43" rx="2" fill="currentColor"/><rect opacity=".2" x="2.29" y="7.21" width="6.15" height="6.15" rx="1" transform="rotate(-45 2.3 7.21)" fill="currentColor"/><path opacity=".2" d="M14.95 21.05c-.62-.35-.93-.53-1.07-.8a1 1 0 0 1-.1-.37c-.02-.31.16-.62.52-1.24l1.33-2.28c.77-1.34 1.16-2 1.74-2s.96.67 1.72 2.01l1.42 2.48c.24.42.35.62.38.84a1 1 0 0 1-.09.5c-.08.2-.26.35-.62.67-.17.16-.26.24-.36.3l-.26.1q-.13.02-.46.02h-3.28c-.2 0-.3 0-.4-.02l-.12-.03q-.12-.04-.35-.18" fill="currentColor"/><rect x="2.92" y="14" width="7.43" height="7.43" rx="2" stroke="currentColor"/><rect x="2.29" y="7.21" width="6.15" height="6.15" rx="1" transform="rotate(-45 2.3 7.21)" stroke="currentColor"/><path d="M16.01 21.29c-1.53 0-2.3 0-2.59-.5-.28-.5.1-1.16.86-2.5l1.29-2.25c.77-1.35 1.15-2.02 1.73-2.02s.97.67 1.74 2.02l1.29 2.26c.76 1.33 1.14 2 .85 2.5-.29.49-1.06.49-2.59.49z" stroke="currentColor"/><circle opacity=".2" cx="17.28" cy="7.18" r="3.99" transform="rotate(90 17.28 7.18)" fill="currentColor"/><circle cx="17.28" cy="7.18" r="3.99" transform="rotate(90 17.28 7.18)" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'shapes-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.92' y='14' width='7.43' height='7.43' rx='2' fill='currentColor' />
+      <rect
+        opacity='.2'
+        x='2.29'
+        y='7.21'
+        width='6.15'
+        height='6.15'
+        rx='1'
+        transform='rotate(-45 2.3 7.21)'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M14.95 21.05c-.62-.35-.93-.53-1.07-.8a1 1 0 0 1-.1-.37c-.02-.31.16-.62.52-1.24l1.33-2.28c.77-1.34 1.16-2 1.74-2s.96.67 1.72 2.01l1.42 2.48c.24.42.35.62.38.84a1 1 0 0 1-.09.5c-.08.2-.26.35-.62.67-.17.16-.26.24-.36.3l-.26.1q-.13.02-.46.02h-3.28c-.2 0-.3 0-.4-.02l-.12-.03q-.12-.04-.35-.18'
+        fill='currentColor'
+      />
+      <rect x='2.92' y='14' width='7.43' height='7.43' rx='2' stroke='currentColor' />
+      <rect
+        x='2.29'
+        y='7.21'
+        width='6.15'
+        height='6.15'
+        rx='1'
+        transform='rotate(-45 2.3 7.21)'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.01 21.29c-1.53 0-2.3 0-2.59-.5-.28-.5.1-1.16.86-2.5l1.29-2.25c.77-1.35 1.15-2.02 1.73-2.02s.97.67 1.74 2.02l1.29 2.26c.76 1.33 1.14 2 .85 2.5-.29.49-1.06.49-2.59.49z'
+        stroke='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='17.28'
+        cy='7.18'
+        r='3.99'
+        transform='rotate(90 17.28 7.18)'
+        fill='currentColor'
+      />
+      <circle
+        cx='17.28'
+        cy='7.18'
+        r='3.99'
+        transform='rotate(90 17.28 7.18)'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconHandSwipeLeft: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconHandSwipeLeft: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'hand-swipe-left-title'}>{title}</title> : null}<path d="M16.42 5.43h5.03M17.6 8.3l-.04-.04c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l.04-.05" stroke="currentColor"/><path opacity=".2" d="m8 5.92 1.71-.58 1.32.58.7 5.08 2.64-.54 1.3 1.8h2.73l.4 7.97-1.2 1.66H8.18L5.15 18 3.2 13.46l2.08-1.62 2.41 1.36z" fill="currentColor"/><path d="M15.19 15.03v-2.85a1.86 1.86 0 0 0-3.71 0v2.85m3.71-.32v-.95a1.86 1.86 0 0 1 3.7 0v3.72c0 2.24-1.3 4.19-1.3 4.19m-6.11-7.9V7.1a1.86 1.86 0 0 0-3.71 0v7.22m-.01.11-.9-1.56a2 2 0 0 0-2.74-.73 1.93 1.93 0 0 0-.82 2.43 28 28 0 0 0 1.93 3.81c.87 1.35 2.53 3.25 2.53 3.25" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'hand-swipe-left-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M16.42 5.43h5.03M17.6 8.3l-.04-.04c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l.04-.05'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m8 5.92 1.71-.58 1.32.58.7 5.08 2.64-.54 1.3 1.8h2.73l.4 7.97-1.2 1.66H8.18L5.15 18 3.2 13.46l2.08-1.62 2.41 1.36z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.19 15.03v-2.85a1.86 1.86 0 0 0-3.71 0v2.85m3.71-.32v-.95a1.86 1.86 0 0 1 3.7 0v3.72c0 2.24-1.3 4.19-1.3 4.19m-6.11-7.9V7.1a1.86 1.86 0 0 0-3.71 0v7.22m-.01.11-.9-1.56a2 2 0 0 0-2.74-.73 1.93 1.93 0 0 0-.82 2.43 28 28 0 0 0 1.93 3.81c.87 1.35 2.53 3.25 2.53 3.25'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

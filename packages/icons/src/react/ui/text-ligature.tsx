@@ -11,7 +11,10 @@ export const IconTextLigature: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconTextLigature: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-ligature-title'}>{title}</title> : null}<path d="M13.85 20.92h3.64m-11.62 0H9.7m6 0v-5.8c0-.95 0-1.42-.3-1.71s-.77-.3-1.7-.3h-8" stroke="currentColor"/><path d="M7.79 20.92V7.29a4.3 4.3 0 0 1 4.23-4.23c2.34 0 4.24 1.9 4.24 4.23" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-ligature-title'}>{title}</title> : null}
+      <path
+        d='M13.85 20.92h3.64m-11.62 0H9.7m6 0v-5.8c0-.95 0-1.42-.3-1.71s-.77-.3-1.7-.3h-8'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.79 20.92V7.29a4.3 4.3 0 0 1 4.23-4.23c2.34 0 4.24 1.9 4.24 4.23'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconIsland: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconIsland: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'island-title'}>{title}</title> : null}<path opacity=".2" d="M10.81 15.84A8.5 8.5 0 0 0 2.82 22h15.95c-.54-3.03-4.34-6.16-7.96-6.16" fill="currentColor"/><path d="M10.82 15.53s-.22-2.8 1.01-4.97c1.23-2.18 3.38-3.42 3.38-3.42m0-.42a4.7 4.7 0 0 0-2.35-.87 5 5 0 0 0-2.93.51m11.48 1.11a5.3 5.3 0 0 0-2.67-1.07 5.7 5.7 0 0 0-3.36.54" stroke="currentColor"/><path d="M17.88 11.3c.08-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12m0-.08c.07-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12M2.82 21.6c.86-3.25 4.36-5.77 7.99-5.76s7.42 2.93 7.96 5.76" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'island-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M10.81 15.84A8.5 8.5 0 0 0 2.82 22h15.95c-.54-3.03-4.34-6.16-7.96-6.16'
+        fill='currentColor'
+      />
+      <path
+        d='M10.82 15.53s-.22-2.8 1.01-4.97c1.23-2.18 3.38-3.42 3.38-3.42m0-.42a4.7 4.7 0 0 0-2.35-.87 5 5 0 0 0-2.93.51m11.48 1.11a5.3 5.3 0 0 0-2.67-1.07 5.7 5.7 0 0 0-3.36.54'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.88 11.3c.08-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12m0-.08c.07-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12M2.82 21.6c.86-3.25 4.36-5.77 7.99-5.76s7.42 2.93 7.96 5.76'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

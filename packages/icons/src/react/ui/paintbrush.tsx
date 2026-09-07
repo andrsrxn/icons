@@ -11,7 +11,10 @@ export const IconPaintbrush: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconPaintbrush: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'paintbrush-title'}>{title}</title> : null}<rect opacity=".2" x="5.44" y="8.42" width="13.11" height="4.48" rx="2" fill="currentColor"/><path d="M18.56 12.9v-.48c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H9.44c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v.48" stroke="currentColor"/><path d="M5.44 11.68v7.8a2.1 2.1 0 0 0 3.66 1.38l.17-.19a1.7 1.7 0 0 1 2.57.02c.48.56 1.19.88 1.93.88h.7c1.01 0 1.52 0 1.93-.12a3 3 0 0 0 2.04-2.04c.12-.41.12-.91.12-1.93v-5.8M10 8.42v-4q0 0 0 0a2 2 0 0 1 2-2q0 0 0 0t0 0a2 2 0 0 1 2 2q0 0 0 0v4M6 12.9h12" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'paintbrush-title'}>{title}</title> : null}
+      <rect opacity='.2' x='5.44' y='8.42' width='13.11' height='4.48' rx='2' fill='currentColor' />
+      <path
+        d='M18.56 12.9v-.48c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H9.44c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v.48'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.44 11.68v7.8a2.1 2.1 0 0 0 3.66 1.38l.17-.19a1.7 1.7 0 0 1 2.57.02c.48.56 1.19.88 1.93.88h.7c1.01 0 1.52 0 1.93-.12a3 3 0 0 0 2.04-2.04c.12-.41.12-.91.12-1.93v-5.8M10 8.42v-4q0 0 0 0a2 2 0 0 1 2-2q0 0 0 0t0 0a2 2 0 0 1 2 2q0 0 0 0v4M6 12.9h12'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

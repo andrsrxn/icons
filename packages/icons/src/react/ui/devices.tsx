@@ -11,7 +11,10 @@ export const IconDevices: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,26 @@ export const IconDevices: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'devices-title'}>{title}</title> : null}<path opacity=".2" d="M2.69 8.4c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.69c1.15 0 1.73 0 2.17.23a2 2 0 0 1 .83.83c.23.44.23 1.02.23 2.17v.99a2 2 0 0 1-1.47 1.9l-.05.01-.05.02a2 2 0 0 0-1.43 1.52v.04l-.16.78c-.2.99-.3 1.49-.57 1.85a2 2 0 0 1-.74.6c-.4.2-.91.2-1.93.2H6.7c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z" fill="currentColor"/><path d="M18.61 9.86V8.4c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H6.7c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v3.14c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h8.21m-4.26 3.65v-3.65M8 19.19h5.3" stroke="currentColor"/><rect x="15.19" y="19.6" width="9.52" height="6.13" rx="2" transform="rotate(-90 15.19 19.6)" stroke="currentColor"/><path d="M18.84 12.54h-1.18" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'devices-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M2.69 8.4c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.69c1.15 0 1.73 0 2.17.23a2 2 0 0 1 .83.83c.23.44.23 1.02.23 2.17v.99a2 2 0 0 1-1.47 1.9l-.05.01-.05.02a2 2 0 0 0-1.43 1.52v.04l-.16.78c-.2.99-.3 1.49-.57 1.85a2 2 0 0 1-.74.6c-.4.2-.91.2-1.93.2H6.7c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z'
+        fill='currentColor'
+      />
+      <path
+        d='M18.61 9.86V8.4c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H6.7c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v3.14c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h8.21m-4.26 3.65v-3.65M8 19.19h5.3'
+        stroke='currentColor'
+      />
+      <rect
+        x='15.19'
+        y='19.6'
+        width='9.52'
+        height='6.13'
+        rx='2'
+        transform='rotate(-90 15.19 19.6)'
+        stroke='currentColor'
+      />
+      <path d='M18.84 12.54h-1.18' stroke='currentColor' />
+    </svg>
   )
 }

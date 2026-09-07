@@ -11,7 +11,10 @@ export const IconBlur: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,17 @@ export const IconBlur: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'blur-title'}>{title}</title> : null}<path opacity=".2" d="M12 21.57V2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07" fill="currentColor"/><path d="M12 21.57c4.15 0 7.51-3.17 7.51-7.07C19.51 7.47 12 2.25 12 2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07m0-18.96v18.67" stroke="currentColor"/><path d="m12.11 7.6 3.7 3.7 3.7 3.7m-7.4-1.28 2.58 2.58 2.57 2.57" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'blur-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M12 21.57V2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07'
+        fill='currentColor'
+      />
+      <path
+        d='M12 21.57c4.15 0 7.51-3.17 7.51-7.07C19.51 7.47 12 2.25 12 2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07m0-18.96v18.67'
+        stroke='currentColor'
+      />
+      <path d='m12.11 7.6 3.7 3.7 3.7 3.7m-7.4-1.28 2.58 2.58 2.57 2.57' stroke='currentColor' />
+    </svg>
   )
 }

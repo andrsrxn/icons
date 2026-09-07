@@ -11,7 +11,10 @@ export const IconRecord: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,14 @@ export const IconRecord: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'record-title'}>{title}</title> : null}<path opacity=".2" d="M17.67 12a5.66 5.66 0 1 0-11.33 0 5.66 5.66 0 0 0 11.33 0" fill="currentColor"/><path d="M17.66 12A5.65 5.65 0 0 0 12 6.34 5.66 5.66 0 1 0 17.66 12" stroke="currentColor"/><path d="M21.3 12A9.26 9.26 0 0 0 12 2.7a9.3 9.3 0 1 0 9.3 9.3" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'record-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M17.67 12a5.66 5.66 0 1 0-11.33 0 5.66 5.66 0 0 0 11.33 0'
+        fill='currentColor'
+      />
+      <path d='M17.66 12A5.65 5.65 0 0 0 12 6.34 5.66 5.66 0 1 0 17.66 12' stroke='currentColor' />
+      <path d='M21.3 12A9.26 9.26 0 0 0 12 2.7a9.3 9.3 0 1 0 9.3 9.3' stroke='currentColor' />
+    </svg>
   )
 }

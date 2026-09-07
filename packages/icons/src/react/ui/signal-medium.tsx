@@ -11,7 +11,10 @@ export const IconSignalMedium: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconSignalMedium: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'signal-medium-title'}>{title}</title> : null}<path opacity=".2" d="M3.29 17.96c-.45-.6-.67-.9-.68-1.22a1 1 0 0 1 .05-.31c.1-.31.4-.53 1-.98l5.1-3.8c1.39-1.05 2.08-1.57 2.64-1.3.55.28.55 1.15.55 2.9v3.44c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H4.73c-.4 0-.59 0-.76-.07l-.17-.09a2 2 0 0 1-.51-.57" fill="currentColor"/><path d="m15.07 7.22-6.25 4.22c-4.42 3-6.63 4.49-6.2 5.9.44 1.42 3.1 1.42 8.44 1.42h6.25c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41v-4.23c0-3.3 0-4.97-1.06-5.53s-2.43.36-5.18 2.22M7.3 12.53v6.23m4.7-9v9m4.7-12.58v12.58" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'signal-medium-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M3.29 17.96c-.45-.6-.67-.9-.68-1.22a1 1 0 0 1 .05-.31c.1-.31.4-.53 1-.98l5.1-3.8c1.39-1.05 2.08-1.57 2.64-1.3.55.28.55 1.15.55 2.9v3.44c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H4.73c-.4 0-.59 0-.76-.07l-.17-.09a2 2 0 0 1-.51-.57'
+        fill='currentColor'
+      />
+      <path
+        d='m15.07 7.22-6.25 4.22c-4.42 3-6.63 4.49-6.2 5.9.44 1.42 3.1 1.42 8.44 1.42h6.25c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41v-4.23c0-3.3 0-4.97-1.06-5.53s-2.43.36-5.18 2.22M7.3 12.53v6.23m4.7-9v9m4.7-12.58v12.58'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

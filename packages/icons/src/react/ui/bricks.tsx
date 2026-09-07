@@ -11,7 +11,10 @@ export const IconBricks: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,21 @@ export const IconBricks: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bricks-title'}>{title}</title> : null}<rect opacity=".2" x="2.79" y="2.79" width="18.42" height="18.42" rx="2" fill="currentColor"/><rect x="2.79" y="2.79" width="18.42" height="18.42" rx="3" stroke="currentColor"/><path d="M2.8 8.55h18.4m-9.2 6.9v-6.9m-4.56 0V2.79m0 18.41v-5.75m9.12-6.9V2.79m0 18.41v-5.75m-13.76 0h18.4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'bricks-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='2.79'
+        y='2.79'
+        width='18.42'
+        height='18.42'
+        rx='2'
+        fill='currentColor'
+      />
+      <rect x='2.79' y='2.79' width='18.42' height='18.42' rx='3' stroke='currentColor' />
+      <path
+        d='M2.8 8.55h18.4m-9.2 6.9v-6.9m-4.56 0V2.79m0 18.41v-5.75m9.12-6.9V2.79m0 18.41v-5.75m-13.76 0h18.4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

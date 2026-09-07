@@ -11,7 +11,10 @@ export const IconAccessibility: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconAccessibility: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'accessibility-title'}>{title}</title> : null}<path d="m6.2 8.86 3.27 1.3c1.23.48 1.84.72 2.18 1.23s.35 1.17.35 2.49v1.46c0 .69 0 1.03-.11 1.35s-.33.6-.75 1.13l-3 3.8M17.8 8.86l-3.27 1.3c-1.23.48-1.84.72-2.18 1.23S12 12.56 12 13.88v1.46c0 .69 0 1.03.11 1.35s.33.6.75 1.13l3 3.8" stroke="currentColor"/><circle opacity=".2" cx="12" cy="5.17" r="2.67" transform="rotate(90 12 5.17)" fill="currentColor"/><circle cx="12" cy="5.17" r="2.67" transform="rotate(90 12 5.17)" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'accessibility-title'}>{title}</title> : null}
+      <path
+        d='m6.2 8.86 3.27 1.3c1.23.48 1.84.72 2.18 1.23s.35 1.17.35 2.49v1.46c0 .69 0 1.03-.11 1.35s-.33.6-.75 1.13l-3 3.8M17.8 8.86l-3.27 1.3c-1.23.48-1.84.72-2.18 1.23S12 12.56 12 13.88v1.46c0 .69 0 1.03.11 1.35s.33.6.75 1.13l3 3.8'
+        stroke='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='12'
+        cy='5.17'
+        r='2.67'
+        transform='rotate(90 12 5.17)'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='5.17' r='2.67' transform='rotate(90 12 5.17)' stroke='currentColor' />
+    </svg>
   )
 }

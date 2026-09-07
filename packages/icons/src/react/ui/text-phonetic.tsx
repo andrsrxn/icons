@@ -11,7 +11,10 @@ export const IconTextPhonetic: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconTextPhonetic: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-phonetic-title'}>{title}</title> : null}<rect opacity=".2" x="12.67" y="5.44" width="7.58" height="6.37" rx="1" fill="currentColor"/><rect opacity=".2" x="3.77" y="12.25" width="7.58" height="6.39" rx="1" fill="currentColor"/><path d="M11.84 11.98H8.38c-2.3 0-5.14.31-5.14 3.8 0 1.85 1.5 3.35 3.35 3.35h.95a4.3 4.3 0 0 0 4.3-4.3v-5.4a4.56 4.56 0 0 0-4.56-4.56H7c-1.62 0-3.09.94-3.76 2.42M12.16 12s.3.02 3.46.02c4.04 0 5.14 0 5.14-3.8 0-1.85-1.5-3.35-3.35-3.35h-.95a4.3 4.3 0 0 0-4.3 4.3v5.4a4.56 4.56 0 0 0 4.56 4.56H17c1.62 0 3.09-.94 3.76-2.42" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-phonetic-title'}>{title}</title> : null}
+      <rect opacity='.2' x='12.67' y='5.44' width='7.58' height='6.37' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='3.77' y='12.25' width='7.58' height='6.39' rx='1' fill='currentColor' />
+      <path
+        d='M11.84 11.98H8.38c-2.3 0-5.14.31-5.14 3.8 0 1.85 1.5 3.35 3.35 3.35h.95a4.3 4.3 0 0 0 4.3-4.3v-5.4a4.56 4.56 0 0 0-4.56-4.56H7c-1.62 0-3.09.94-3.76 2.42M12.16 12s.3.02 3.46.02c4.04 0 5.14 0 5.14-3.8 0-1.85-1.5-3.35-3.35-3.35h-.95a4.3 4.3 0 0 0-4.3 4.3v5.4a4.56 4.56 0 0 0 4.56 4.56H17c1.62 0 3.09-.94 3.76-2.42'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

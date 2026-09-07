@@ -10,10 +10,9 @@ export const IconFlagBG: FlagIcon = ({
   'aria-hidden': ariaHidden,
   ...props
 }) => {
-  
   const isHidden = ariaHidden === true
   const titleText = title ?? 'BG'
-  
+
   const showTitle = !(isHidden || ariaLabel)
 
   return (
@@ -34,13 +33,32 @@ export const IconFlagBG: FlagIcon = ({
       {...props}>
       {showTitle ? <title id={'bg-title'}>{titleText}</title> : null}
 
-      <defs><defs><linearGradient id="bg-a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#fff"/><stop offset="100%" stopColor="#f0f0f0"/></linearGradient><linearGradient id="bg-b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#06a77c"/><stop offset="100%" stopColor="#00966e"/></linearGradient><linearGradient id="bg-c" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#e32e19"/><stop offset="100%" stopColor="#d62612"/></linearGradient></defs>
+      <defs>
+        <defs>
+          <linearGradient id='bg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='bg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#06a77c' />
+            <stop offset='100%' stopColor='#00966e' />
+          </linearGradient>
+          <linearGradient id='bg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#e32e19' />
+            <stop offset='100%' stopColor='#d62612' />
+          </linearGradient>
+        </defs>
         <clipPath id='bg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#bg-clip)'>
-        <g fill="none" fillRule="evenodd"><path fill="url(#bg-a)" d="M0 0h21v15H0z"/><path fill="url(#bg-b)" d="M0 5h21v5H0z"/><path fill="url(#bg-c)" d="M0 10h21v5H0z"/><path fill="url(#bg-a)" d="M0 0h21v5H0z"/></g>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#bg-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#bg-b)' d='M0 5h21v5H0z' />
+          <path fill='url(#bg-c)' d='M0 10h21v5H0z' />
+          <path fill='url(#bg-a)' d='M0 0h21v5H0z' />
+        </g>
       </g>
     </svg>
   )

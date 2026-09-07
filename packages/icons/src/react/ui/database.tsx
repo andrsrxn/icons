@@ -11,7 +11,10 @@ export const IconDatabase: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,34 @@ export const IconDatabase: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'database-title'}>{title}</title> : null}<ellipse opacity=".2" cx="12" cy="5.9" rx="8" ry="3.1" transform="rotate(-180 12 5.9)" fill="currentColor"/><path opacity=".2" d="M4.12 16.13c0-1.14 0-1.7.37-2.01s.93-.18 2.05.06l5.08 1.09c.2.04.31.06.42.06s.2-.02.41-.06l5.15-1.1c1.12-.23 1.68-.35 2.05-.05s.37.87.37 2.01v1.57c0 .76 0 1.13-.21 1.4-.22.28-.58.37-1.32.54l-5.98 1.47c-.23.05-.35.08-.47.08s-.24-.03-.48-.09l-5.92-1.45c-.73-.18-1.1-.27-1.3-.55-.22-.27-.22-.64-.22-1.4z" fill="currentColor"/><ellipse cx="12" cy="5.9" rx="8" ry="3.1" transform="rotate(-180 12 5.9)" stroke="currentColor"/><path d="M4 11.96C4 13.64 7.58 15 12 15s8-1.36 8-3.04" stroke="currentColor"/><path d="M6.65 11.38c.36.23 1.03.52 1.97.7 1.07.21 1.58.24 2.42.24M6.65 17.1c.36.23 1.03.53 1.97.71 1.07.2 1.58.23 2.42.23M4 18.16c0 1.68 3.58 3.04 8 3.04s8-1.36 8-3.04m0-11.8v11.6M4 6.36v11.6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'database-title'}>{title}</title> : null}
+      <ellipse
+        opacity='.2'
+        cx='12'
+        cy='5.9'
+        rx='8'
+        ry='3.1'
+        transform='rotate(-180 12 5.9)'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M4.12 16.13c0-1.14 0-1.7.37-2.01s.93-.18 2.05.06l5.08 1.09c.2.04.31.06.42.06s.2-.02.41-.06l5.15-1.1c1.12-.23 1.68-.35 2.05-.05s.37.87.37 2.01v1.57c0 .76 0 1.13-.21 1.4-.22.28-.58.37-1.32.54l-5.98 1.47c-.23.05-.35.08-.47.08s-.24-.03-.48-.09l-5.92-1.45c-.73-.18-1.1-.27-1.3-.55-.22-.27-.22-.64-.22-1.4z'
+        fill='currentColor'
+      />
+      <ellipse
+        cx='12'
+        cy='5.9'
+        rx='8'
+        ry='3.1'
+        transform='rotate(-180 12 5.9)'
+        stroke='currentColor'
+      />
+      <path d='M4 11.96C4 13.64 7.58 15 12 15s8-1.36 8-3.04' stroke='currentColor' />
+      <path
+        d='M6.65 11.38c.36.23 1.03.52 1.97.7 1.07.21 1.58.24 2.42.24M6.65 17.1c.36.23 1.03.53 1.97.71 1.07.2 1.58.23 2.42.23M4 18.16c0 1.68 3.58 3.04 8 3.04s8-1.36 8-3.04m0-11.8v11.6M4 6.36v11.6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

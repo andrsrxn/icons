@@ -11,7 +11,10 @@ export const IconRegex: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconRegex: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'regex-title'}>{title}</title> : null}<rect opacity=".2" x="2.65" y="12.66" width="8.5" height="8.5" rx="2" fill="currentColor"/><rect x="2.65" y="12.66" width="8.5" height="8.5" rx="2" stroke="currentColor"/><path d="M17.09 12.66V2.84m4.26 2.46-8.5 4.91m0-4.91 8.5 4.91" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'regex-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.65' y='12.66' width='8.5' height='8.5' rx='2' fill='currentColor' />
+      <rect x='2.65' y='12.66' width='8.5' height='8.5' rx='2' stroke='currentColor' />
+      <path d='M17.09 12.66V2.84m4.26 2.46-8.5 4.91m0-4.91 8.5 4.91' stroke='currentColor' />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconCigarette: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,21 @@ export const IconCigarette: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cigarette-title'}>{title}</title> : null}<rect opacity=".2" x="2.79" y="11.17" width="4.89" height="4.97" rx="1.5" fill="currentColor"/><rect x="2.69" y="11.17" width="18.61" height="4.97" rx="1.5" stroke="currentColor"/><path d="M7.68 16.15v-4.98m8.66-7.4.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4m2.87-4.57.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'cigarette-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='2.79'
+        y='11.17'
+        width='4.89'
+        height='4.97'
+        rx='1.5'
+        fill='currentColor'
+      />
+      <rect x='2.69' y='11.17' width='18.61' height='4.97' rx='1.5' stroke='currentColor' />
+      <path
+        d='M7.68 16.15v-4.98m8.66-7.4.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4m2.87-4.57.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

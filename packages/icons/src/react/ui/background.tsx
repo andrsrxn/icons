@@ -11,7 +11,10 @@ export const IconBackground: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,21 @@ export const IconBackground: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'background-title'}>{title}</title> : null}<rect opacity=".2" x="2.68" y="2.68" width="18.64" height="18.64" rx="3" fill="currentColor"/><rect x="2.68" y="2.68" width="18.64" height="18.64" rx="3" stroke="currentColor"/><path d="m3 15.04 6.05 6.05M2.88 8.94l12.27 12.28M3.55 3.64l16.9 16.9M8.73 2.85l12.51 12.52M14.75 2.9l6.44 6.44" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'background-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='2.68'
+        y='2.68'
+        width='18.64'
+        height='18.64'
+        rx='3'
+        fill='currentColor'
+      />
+      <rect x='2.68' y='2.68' width='18.64' height='18.64' rx='3' stroke='currentColor' />
+      <path
+        d='m3 15.04 6.05 6.05M2.88 8.94l12.27 12.28M3.55 3.64l16.9 16.9M8.73 2.85l12.51 12.52M14.75 2.9l6.44 6.44'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

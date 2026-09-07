@@ -11,7 +11,10 @@ export const IconSupersetOf: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconSupersetOf: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'superset-of-title'}>{title}</title> : null}<path d="M5.11 19.46h13.72M5.51 4.54l5.61 1.75c5.03 1.56 7.54 2.34 7.54 3.81s-2.51 2.26-7.53 3.83L5.5 15.68" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'superset-of-title'}>{title}</title> : null}
+      <path
+        d='M5.11 19.46h13.72M5.51 4.54l5.61 1.75c5.03 1.56 7.54 2.34 7.54 3.81s-2.51 2.26-7.53 3.83L5.5 15.68'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

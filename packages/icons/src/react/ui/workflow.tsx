@@ -11,7 +11,10 @@ export const IconWorkflow: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconWorkflow: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'workflow-title'}>{title}</title> : null}<path d="M15.57 18.35H7.7c-1.21 0-1.82 0-2.27-.25a2 2 0 0 1-.78-.78c-.25-.45-.25-1.05-.25-2.26s0-1.82.25-2.27a2 2 0 0 1 .78-.77c.45-.26 1.06-.26 2.27-.26h8.4c1.12 0 1.68 0 2.1-.21a2 2 0 0 0 .88-.88c.22-.43.22-.99.22-2.1 0-1.12 0-1.68-.22-2.1a2 2 0 0 0-.88-.88c-.42-.22-.98-.22-2.1-.22H7.84" stroke="currentColor"/><rect opacity=".2" x="2.61" y="2.88" width="4.98" height="4.98" rx="1" fill="currentColor"/><rect x="2.61" y="2.88" width="4.98" height="4.98" rx="1" stroke="currentColor"/><circle opacity=".2" cx="18.63" cy="18.35" r="2.77" fill="currentColor"/><circle cx="18.63" cy="18.35" r="2.77" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'workflow-title'}>{title}</title> : null}
+      <path
+        d='M15.57 18.35H7.7c-1.21 0-1.82 0-2.27-.25a2 2 0 0 1-.78-.78c-.25-.45-.25-1.05-.25-2.26s0-1.82.25-2.27a2 2 0 0 1 .78-.77c.45-.26 1.06-.26 2.27-.26h8.4c1.12 0 1.68 0 2.1-.21a2 2 0 0 0 .88-.88c.22-.43.22-.99.22-2.1 0-1.12 0-1.68-.22-2.1a2 2 0 0 0-.88-.88c-.42-.22-.98-.22-2.1-.22H7.84'
+        stroke='currentColor'
+      />
+      <rect opacity='.2' x='2.61' y='2.88' width='4.98' height='4.98' rx='1' fill='currentColor' />
+      <rect x='2.61' y='2.88' width='4.98' height='4.98' rx='1' stroke='currentColor' />
+      <circle opacity='.2' cx='18.63' cy='18.35' r='2.77' fill='currentColor' />
+      <circle cx='18.63' cy='18.35' r='2.77' stroke='currentColor' />
+    </svg>
   )
 }

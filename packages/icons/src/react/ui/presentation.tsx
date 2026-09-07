@@ -11,7 +11,10 @@ export const IconPresentation: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,27 @@ export const IconPresentation: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'presentation-title'}>{title}</title> : null}<rect opacity=".2" x="5.3" y="14.43" width="11.78" height="13.99" rx="1" transform="rotate(-90 5.3 14.43)" fill="currentColor"/><path d="M12.12 17.3v-2.57m8.57-.3H3.3M20.69 2.64H3.3m8.7 8.8v-5.8m-6.99 8.79V2.64M19.3 14.43V2.64m-11.01 8.8V7.07m7.42 4.37V8.78" stroke="currentColor"/><path opacity=".2" d="M14 19.47a1.89 1.89 0 1 1-3.76 0 1.89 1.89 0 0 1 3.77 0" fill="currentColor"/><path d="M14 19.47a1.9 1.9 0 0 1-1.88 1.89 1.89 1.89 0 1 1 1.89-1.89" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'presentation-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='5.3'
+        y='14.43'
+        width='11.78'
+        height='13.99'
+        rx='1'
+        transform='rotate(-90 5.3 14.43)'
+        fill='currentColor'
+      />
+      <path
+        d='M12.12 17.3v-2.57m8.57-.3H3.3M20.69 2.64H3.3m8.7 8.8v-5.8m-6.99 8.79V2.64M19.3 14.43V2.64m-11.01 8.8V7.07m7.42 4.37V8.78'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M14 19.47a1.89 1.89 0 1 1-3.76 0 1.89 1.89 0 0 1 3.77 0'
+        fill='currentColor'
+      />
+      <path d='M14 19.47a1.9 1.9 0 0 1-1.88 1.89 1.89 1.89 0 1 1 1.89-1.89' stroke='currentColor' />
+    </svg>
   )
 }

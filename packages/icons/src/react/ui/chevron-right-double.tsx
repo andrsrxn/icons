@@ -11,7 +11,10 @@ export const IconChevronRightDouble: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconChevronRightDouble: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'chevron-right-double-title'}>{title}</title> : null}<path d="m4.47 4.16 5.01 5c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-5.01 5.02m7.85-15.68 5.01 5c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-5.01 5.02" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'chevron-right-double-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m4.47 4.16 5.01 5c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-5.01 5.02m7.85-15.68 5.01 5c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-5.01 5.02'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

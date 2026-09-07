@@ -11,7 +11,10 @@ export const IconHandbag: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconHandbag: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'handbag-title'}>{title}</title> : null}<path opacity=".2" d="M2.97 8.81h18.06v3.29c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.06c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83z" fill="currentColor"/><path d="M16.52 8.81c0-2.74-.67-4.91-4.52-4.91S7.48 6.26 7.48 8.81m-4.8 3.76c0-1.65 0-2.48.46-3.04l.27-.26c.55-.46 1.38-.46 3.04-.46h11.1c1.66 0 2.49 0 3.04.46l.27.26c.46.56.46 1.39.46 3.04 0 3.32 0 4.97-.92 6.08a4 4 0 0 1-.53.53c-1.11.92-2.77.92-6.08.92h-3.58c-3.31 0-4.97 0-6.08-.92a4 4 0 0 1-.53-.53c-.92-1.1-.92-2.76-.92-6.08" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'handbag-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M2.97 8.81h18.06v3.29c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.06c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83z'
+        fill='currentColor'
+      />
+      <path
+        d='M16.52 8.81c0-2.74-.67-4.91-4.52-4.91S7.48 6.26 7.48 8.81m-4.8 3.76c0-1.65 0-2.48.46-3.04l.27-.26c.55-.46 1.38-.46 3.04-.46h11.1c1.66 0 2.49 0 3.04.46l.27.26c.46.56.46 1.39.46 3.04 0 3.32 0 4.97-.92 6.08a4 4 0 0 1-.53.53c-1.11.92-2.77.92-6.08.92h-3.58c-3.31 0-4.97 0-6.08-.92a4 4 0 0 1-.53-.53c-.92-1.1-.92-2.76-.92-6.08'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconDeviceTablet: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,31 @@ export const IconDeviceTablet: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'device-tablet-title'}>{title}</title> : null}<rect opacity=".2" x="5" y="21.3" width="18.61" height="14" rx="3" transform="rotate(-90 5 21.3)" fill="currentColor"/><rect x="5" y="21.3" width="18.61" height="14" rx="3" transform="rotate(-90 5 21.3)" stroke="currentColor"/><path d="M12.76 17.08a.76.76 0 1 1-1.52 0 .76.76 0 0 1 1.52 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'device-tablet-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='5'
+        y='21.3'
+        width='18.61'
+        height='14'
+        rx='3'
+        transform='rotate(-90 5 21.3)'
+        fill='currentColor'
+      />
+      <rect
+        x='5'
+        y='21.3'
+        width='18.61'
+        height='14'
+        rx='3'
+        transform='rotate(-90 5 21.3)'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.76 17.08a.76.76 0 1 1-1.52 0 .76.76 0 0 1 1.52 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

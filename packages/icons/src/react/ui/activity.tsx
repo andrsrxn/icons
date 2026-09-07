@@ -11,7 +11,10 @@ export const IconActivity: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconActivity: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'activity-title'}>{title}</title> : null}<path d="M2.33 12.04h1.44c.67 0 1 0 1.26-.18s.38-.5.61-1.13l1.42-3.82c.98-2.63 1.47-3.95 2.22-3.9s1.04 1.44 1.61 4.19l2.04 9.7c.55 2.62.82 3.94 1.56 4s1.24-1.18 2.25-3.67l1.59-3.94c.24-.6.37-.91.62-1.08s.58-.17 1.23-.17h1.6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'activity-title'}>{title}</title> : null}
+      <path
+        d='M2.33 12.04h1.44c.67 0 1 0 1.26-.18s.38-.5.61-1.13l1.42-3.82c.98-2.63 1.47-3.95 2.22-3.9s1.04 1.44 1.61 4.19l2.04 9.7c.55 2.62.82 3.94 1.56 4s1.24-1.18 2.25-3.67l1.59-3.94c.24-.6.37-.91.62-1.08s.58-.17 1.23-.17h1.6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

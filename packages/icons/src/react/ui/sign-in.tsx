@@ -11,7 +11,10 @@ export const IconSignIn: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconSignIn: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sign-in-title'}>{title}</title> : null}<path opacity=".2" d="M8.55 7.65c0-1.55 0-2.33.44-2.88.45-.55 1.2-.7 2.72-1.03l3.3-.71c2.23-.49 3.35-.73 4.1-.13s.74 1.75.74 4.04V17.3c0 2.19 0 3.28-.7 3.88-.71.6-1.8.42-3.95.07l-3.3-.54c-1.6-.26-2.4-.4-2.88-.95-.47-.56-.47-1.38-.47-3z" fill="currentColor"/><path d="m12.63 8.54.63.63c1.33 1.33 2 2 2 2.83s-.67 1.5-2 2.83l-.63.63M3.65 12h11.2" stroke="currentColor"/><path d="M8.55 7.22c0-.73 0-1.1.07-1.41a3 3 0 0 1 1.8-2.15c.3-.12.67-.18 1.38-.3l1.45-.25c2.86-.49 4.29-.73 5.29-.05a3 3 0 0 1 .46.4c.85.87.85 2.32.85 5.22v6.94c0 2.78 0 4.18-.8 5.04a3 3 0 0 1-.45.4c-.96.68-2.34.5-5.1.16l-1.59-.2a7 7 0 0 1-1.33-.23 3 3 0 0 1-1.97-2.23c-.06-.3-.06-.65-.06-1.35" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'sign-in-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M8.55 7.65c0-1.55 0-2.33.44-2.88.45-.55 1.2-.7 2.72-1.03l3.3-.71c2.23-.49 3.35-.73 4.1-.13s.74 1.75.74 4.04V17.3c0 2.19 0 3.28-.7 3.88-.71.6-1.8.42-3.95.07l-3.3-.54c-1.6-.26-2.4-.4-2.88-.95-.47-.56-.47-1.38-.47-3z'
+        fill='currentColor'
+      />
+      <path
+        d='m12.63 8.54.63.63c1.33 1.33 2 2 2 2.83s-.67 1.5-2 2.83l-.63.63M3.65 12h11.2'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.55 7.22c0-.73 0-1.1.07-1.41a3 3 0 0 1 1.8-2.15c.3-.12.67-.18 1.38-.3l1.45-.25c2.86-.49 4.29-.73 5.29-.05a3 3 0 0 1 .46.4c.85.87.85 2.32.85 5.22v6.94c0 2.78 0 4.18-.8 5.04a3 3 0 0 1-.45.4c-.96.68-2.34.5-5.1.16l-1.59-.2a7 7 0 0 1-1.33-.23 3 3 0 0 1-1.97-2.23c-.06-.3-.06-.65-.06-1.35'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

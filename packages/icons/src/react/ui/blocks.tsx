@@ -11,7 +11,10 @@ export const IconBlocks: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconBlocks: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'blocks-title'}>{title}</title> : null}<rect opacity=".2" x="2.84" y="13.71" width="7.65" height="7.65" rx="2" fill="currentColor"/><rect opacity=".2" x="2.84" y="6.05" width="7.65" height="7.65" rx="2" fill="currentColor"/><rect opacity=".2" x="10.5" y="13.71" width="7.65" height="7.65" rx="2" fill="currentColor"/><rect opacity=".2" x="13.76" y="2.75" width="7.48" height="7.48" rx="2" fill="currentColor"/><rect x="2.84" y="13.71" width="7.65" height="7.65" rx="2" stroke="currentColor"/><rect x="2.84" y="6.05" width="7.65" height="7.65" rx="2" stroke="currentColor"/><rect x="10.5" y="13.71" width="7.65" height="7.65" rx="2" stroke="currentColor"/><rect x="13.76" y="2.75" width="7.48" height="7.48" rx="2" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'blocks-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.84' y='13.71' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.84' y='6.05' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='10.5' y='13.71' width='7.65' height='7.65' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='13.76' y='2.75' width='7.48' height='7.48' rx='2' fill='currentColor' />
+      <rect x='2.84' y='13.71' width='7.65' height='7.65' rx='2' stroke='currentColor' />
+      <rect x='2.84' y='6.05' width='7.65' height='7.65' rx='2' stroke='currentColor' />
+      <rect x='10.5' y='13.71' width='7.65' height='7.65' rx='2' stroke='currentColor' />
+      <rect x='13.76' y='2.75' width='7.48' height='7.48' rx='2' stroke='currentColor' />
+    </svg>
   )
 }

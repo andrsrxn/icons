@@ -11,7 +11,10 @@ export const IconCookie: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconCookie: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cookie-title'}>{title}</title> : null}<path opacity=".2" d="M11.96 21.43a9.43 9.43 0 1 1 1.8-18.69c0 3.04 1.73 4.3 3.84 4.81.68 1.27.85 1.93 1.2 3.26.21.77 2.59.35 2.59 1.19 0 5.2-4.22 9.43-9.43 9.43m-4.8-9.99c.8.68 2.28.24 3.3-.98 1.03-1.21 1.22-2.74.43-3.42-.8-.67-2.27-.23-3.3.99-.5.6-.8 1.27-.89 1.88-.08.63.07 1.2.47 1.53m5.25 6.25a1.7 1.7 0 1 0 2.4-2.4 1.7 1.7 0 0 0-2.4 2.4" fill="currentColor"/><path d="M21.4 12q0 .5-.06 1a9.43 9.43 0 1 1-7.71-10.28" stroke="currentColor"/><path d="M18.27 7.38a3.96 3.96 0 0 1-4.64-4.63m7.77 9.22c-2.44.3-3.8-2.48-3.13-4.59M7.6 8.03c-.52.6-.82 1.27-.9 1.88-.08.63.07 1.2.47 1.53.8.68 2.27.24 3.3-.98 1.02-1.21 1.21-2.74.42-3.42-.8-.67-2.27-.23-3.3.99m4.82 7.27a1.7 1.7 0 0 0 0 2.39 1.7 1.7 0 1 0 0-2.4" stroke="currentColor"/><path d="M15.3 11.28a.56.56 0 1 1-1.13 0 .56.56 0 0 1 1.13 0m-6.7 4.3a.56.56 0 1 1-1.13 0 .56.56 0 0 1 1.13 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'cookie-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M11.96 21.43a9.43 9.43 0 1 1 1.8-18.69c0 3.04 1.73 4.3 3.84 4.81.68 1.27.85 1.93 1.2 3.26.21.77 2.59.35 2.59 1.19 0 5.2-4.22 9.43-9.43 9.43m-4.8-9.99c.8.68 2.28.24 3.3-.98 1.03-1.21 1.22-2.74.43-3.42-.8-.67-2.27-.23-3.3.99-.5.6-.8 1.27-.89 1.88-.08.63.07 1.2.47 1.53m5.25 6.25a1.7 1.7 0 1 0 2.4-2.4 1.7 1.7 0 0 0-2.4 2.4'
+        fill='currentColor'
+      />
+      <path d='M21.4 12q0 .5-.06 1a9.43 9.43 0 1 1-7.71-10.28' stroke='currentColor' />
+      <path
+        d='M18.27 7.38a3.96 3.96 0 0 1-4.64-4.63m7.77 9.22c-2.44.3-3.8-2.48-3.13-4.59M7.6 8.03c-.52.6-.82 1.27-.9 1.88-.08.63.07 1.2.47 1.53.8.68 2.27.24 3.3-.98 1.02-1.21 1.21-2.74.42-3.42-.8-.67-2.27-.23-3.3.99m4.82 7.27a1.7 1.7 0 0 0 0 2.39 1.7 1.7 0 1 0 0-2.4'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.3 11.28a.56.56 0 1 1-1.13 0 .56.56 0 0 1 1.13 0m-6.7 4.3a.56.56 0 1 1-1.13 0 .56.56 0 0 1 1.13 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

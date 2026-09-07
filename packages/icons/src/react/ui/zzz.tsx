@@ -11,7 +11,10 @@ export const IconZzz: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconZzz: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'zzz-title'}>{title}</title> : null}<path d="M9.52 11.17H5.08c-1.07 0-1.6 0-1.73-.32-.13-.31.27-.68 1.05-1.41l4.08-3.8c.78-.74 1.18-1.1 1.05-1.42S8.87 3.9 7.8 3.9H3.23m17.73 11.67h-5.82c-1.07 0-1.6 0-1.73-.32-.12-.31.27-.68 1.04-1.4L20.1 8.5c.78-.74 1.16-1.1 1.04-1.42-.13-.31-.66-.31-1.72-.31h-5.98M10.08 20.1H7.7c-1.06 0-1.59 0-1.72-.31-.12-.32.26-.68 1.02-1.41l1.85-1.76c.76-.73 1.14-1.1 1.02-1.41-.13-.31-.66-.31-1.72-.31h-2.2" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'zzz-title'}>{title}</title> : null}
+      <path
+        d='M9.52 11.17H5.08c-1.07 0-1.6 0-1.73-.32-.13-.31.27-.68 1.05-1.41l4.08-3.8c.78-.74 1.18-1.1 1.05-1.42S8.87 3.9 7.8 3.9H3.23m17.73 11.67h-5.82c-1.07 0-1.6 0-1.73-.32-.12-.31.27-.68 1.04-1.4L20.1 8.5c.78-.74 1.16-1.1 1.04-1.42-.13-.31-.66-.31-1.72-.31h-5.98M10.08 20.1H7.7c-1.06 0-1.59 0-1.72-.31-.12-.32.26-.68 1.02-1.41l1.85-1.76c.76-.73 1.14-1.1 1.02-1.41-.13-.31-.66-.31-1.72-.31h-2.2'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

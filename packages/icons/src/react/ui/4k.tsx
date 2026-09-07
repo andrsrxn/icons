@@ -11,7 +11,10 @@ export const Icon4k: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const Icon4k: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'4k-title'}>{title}</title> : null}<path d="M13.77 7.1v9.8m-4.37.14V9c0-1.3 0-1.94-.36-2.05-.34-.11-.72.42-1.46 1.47l-2.56 3.61c-.49.7-.73 1.04-.6 1.3.15.28.57.28 1.42.28h5.25m2.68-1.51 5-5m-5 5 5 4.8m2.42 3.1H2.8M21.19 4H2.8" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'4k-title'}>{title}</title> : null}
+      <path
+        d='M13.77 7.1v9.8m-4.37.14V9c0-1.3 0-1.94-.36-2.05-.34-.11-.72.42-1.46 1.47l-2.56 3.61c-.49.7-.73 1.04-.6 1.3.15.28.57.28 1.42.28h5.25m2.68-1.51 5-5m-5 5 5 4.8m2.42 3.1H2.8M21.19 4H2.8'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

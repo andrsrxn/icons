@@ -11,7 +11,10 @@ export const IconHashtag: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,12 @@ export const IconHashtag: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'hashtag-title'}>{title}</title> : null}<path d="M4.18 8.21h17.53M2.22 15.22h17.53m-6.01 5.25 4.54-16.94M5.75 20.47l4.53-16.94" stroke="currentColor"/><path opacity=".2" d="m14.94 15.15 1.75-6.94H8.84l-1.48 6.94z" fill="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'hashtag-title'}>{title}</title> : null}
+      <path
+        d='M4.18 8.21h17.53M2.22 15.22h17.53m-6.01 5.25 4.54-16.94M5.75 20.47l4.53-16.94'
+        stroke='currentColor'
+      />
+      <path opacity='.2' d='m14.94 15.15 1.75-6.94H8.84l-1.48 6.94z' fill='currentColor' />
+    </svg>
   )
 }

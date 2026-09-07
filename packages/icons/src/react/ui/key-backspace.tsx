@@ -11,7 +11,10 @@ export const IconKeyBackspace: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,12 @@ export const IconKeyBackspace: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-backspace-title'}>{title}</title> : null}<path opacity=".2" d="M7.33 5.8h14.03v12.6l-14.03-.18L2.4 12.1z" fill="currentColor"/><path d="M5.38 7.7c.88-.98 1.32-1.48 1.9-1.74.59-.26 1.25-.26 2.58-.26h5.5c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13v.6c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-5.5c-1.33 0-1.99 0-2.58-.27-.58-.26-1.02-.75-1.9-1.74l-.27-.3c-1.7-1.9-2.54-2.85-2.54-4 0-1.14.85-2.09 2.54-3.98zm12.14 1.72-5.16 5.16m0-5.16 5.16 5.16" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'key-backspace-title'}>{title}</title> : null}
+      <path opacity='.2' d='M7.33 5.8h14.03v12.6l-14.03-.18L2.4 12.1z' fill='currentColor' />
+      <path
+        d='M5.38 7.7c.88-.98 1.32-1.48 1.9-1.74.59-.26 1.25-.26 2.58-.26h5.5c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13v.6c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-5.5c-1.33 0-1.99 0-2.58-.27-.58-.26-1.02-.75-1.9-1.74l-.27-.3c-1.7-1.9-2.54-2.85-2.54-4 0-1.14.85-2.09 2.54-3.98zm12.14 1.72-5.16 5.16m0-5.16 5.16 5.16'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

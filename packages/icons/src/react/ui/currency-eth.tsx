@@ -11,7 +11,10 @@ export const IconCurrencyEth: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,17 @@ export const IconCurrencyEth: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-eth-title'}>{title}</title> : null}<path opacity=".2" d="m11.02 21.28-6.05-8.2a.5.5 0 0 1 .5-.8l6.48 1.15h.18l6.03-1.14a.5.5 0 0 1 .5.78L13 21.27a.5.5 0 0 1-.4.21h-1.18a.5.5 0 0 1-.4-.2" fill="currentColor"/><path d="M12 2.78v18.57m-7-9.28s4.18 1.46 7 1.46 7-1.46 7-1.46" stroke="currentColor"/><path d="m5.86 9.7 2.87-4.07c1.49-2.11 2.23-3.16 3.27-3.16s1.78 1.05 3.27 3.16l2.87 4.06c.79 1.12 1.18 1.67 1.18 2.31s-.4 1.2-1.18 2.3l-2.87 4.07c-1.49 2.11-2.23 3.16-3.27 3.16s-1.78-1.05-3.27-3.16l-2.87-4.06c-.79-1.12-1.18-1.67-1.18-2.31s.4-1.2 1.18-2.3" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'currency-eth-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m11.02 21.28-6.05-8.2a.5.5 0 0 1 .5-.8l6.48 1.15h.18l6.03-1.14a.5.5 0 0 1 .5.78L13 21.27a.5.5 0 0 1-.4.21h-1.18a.5.5 0 0 1-.4-.2'
+        fill='currentColor'
+      />
+      <path d='M12 2.78v18.57m-7-9.28s4.18 1.46 7 1.46 7-1.46 7-1.46' stroke='currentColor' />
+      <path
+        d='m5.86 9.7 2.87-4.07c1.49-2.11 2.23-3.16 3.27-3.16s1.78 1.05 3.27 3.16l2.87 4.06c.79 1.12 1.18 1.67 1.18 2.31s-.4 1.2-1.18 2.3l-2.87 4.07c-1.49 2.11-2.23 3.16-3.27 3.16s-1.78-1.05-3.27-3.16l-2.87-4.06c-.79-1.12-1.18-1.67-1.18-2.31s.4-1.2 1.18-2.3'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

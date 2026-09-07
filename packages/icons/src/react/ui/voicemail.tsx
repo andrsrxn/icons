@@ -11,7 +11,10 @@ export const IconVoicemail: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,12 @@ export const IconVoicemail: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'voicemail-title'}>{title}</title> : null}<circle opacity=".2" cx="6.04" cy="12" r="3.57" fill="currentColor"/><circle opacity=".2" cx="17.96" cy="12" r="3.57" fill="currentColor"/><circle cx="6.04" cy="12" r="3.57" stroke="currentColor"/><circle cx="17.96" cy="12" r="3.57" stroke="currentColor"/><path d="M6.5 15.57h11.46" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'voicemail-title'}>{title}</title> : null}
+      <circle opacity='.2' cx='6.04' cy='12' r='3.57' fill='currentColor' />
+      <circle opacity='.2' cx='17.96' cy='12' r='3.57' fill='currentColor' />
+      <circle cx='6.04' cy='12' r='3.57' stroke='currentColor' />
+      <circle cx='17.96' cy='12' r='3.57' stroke='currentColor' />
+      <path d='M6.5 15.57h11.46' stroke='currentColor' />
+    </svg>
   )
 }

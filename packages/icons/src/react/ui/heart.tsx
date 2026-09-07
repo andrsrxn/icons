@@ -11,7 +11,10 @@ export const IconHeart: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconHeart: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'heart-title'}>{title}</title> : null}<path opacity=".2" d="M16.87 4c-1.62 0-2.94.79-3.83 1.6-.57.5-.85.76-1.04.76s-.47-.25-1.04-.76A5.8 5.8 0 0 0 7.13 4c-3.11 0-5.45 3.55-4.44 7.3.9 3.37 5.82 6.19 8.51 8.67.4.37.6.55.8.55s.4-.18.8-.55c2.69-2.48 7.6-5.3 8.51-8.68 1-3.74-1.33-7.29-4.44-7.29" fill="currentColor"/><path d="M16.87 4c-1.62 0-2.94.79-3.83 1.6-.57.5-.85.76-1.04.76s-.47-.25-1.04-.76A5.8 5.8 0 0 0 7.13 4c-3.11 0-5.45 3.55-4.44 7.3.9 3.37 5.82 6.19 8.51 8.67.4.37.6.55.8.55s.4-.18.8-.55c2.69-2.48 7.6-5.3 8.51-8.68 1-3.74-1.33-7.29-4.44-7.29" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'heart-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M16.87 4c-1.62 0-2.94.79-3.83 1.6-.57.5-.85.76-1.04.76s-.47-.25-1.04-.76A5.8 5.8 0 0 0 7.13 4c-3.11 0-5.45 3.55-4.44 7.3.9 3.37 5.82 6.19 8.51 8.67.4.37.6.55.8.55s.4-.18.8-.55c2.69-2.48 7.6-5.3 8.51-8.68 1-3.74-1.33-7.29-4.44-7.29'
+        fill='currentColor'
+      />
+      <path
+        d='M16.87 4c-1.62 0-2.94.79-3.83 1.6-.57.5-.85.76-1.04.76s-.47-.25-1.04-.76A5.8 5.8 0 0 0 7.13 4c-3.11 0-5.45 3.55-4.44 7.3.9 3.37 5.82 6.19 8.51 8.67.4.37.6.55.8.55s.4-.18.8-.55c2.69-2.48 7.6-5.3 8.51-8.68 1-3.74-1.33-7.29-4.44-7.29'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

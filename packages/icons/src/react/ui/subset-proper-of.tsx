@@ -11,7 +11,10 @@ export const IconSubsetProperOf: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconSubsetProperOf: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'subset-proper-of-title'}>{title}</title> : null}<path d="M19.5 5.38h-8.38a6.62 6.62 0 0 0 0 13.24h8.38" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'subset-proper-of-title'}>{title}</title>
+      ) : null}
+      <path d='M19.5 5.38h-8.38a6.62 6.62 0 0 0 0 13.24h8.38' stroke='currentColor' />
+    </svg>
   )
 }

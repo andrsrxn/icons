@@ -11,7 +11,10 @@ export const IconFilm: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,23 @@ export const IconFilm: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'film-title'}>{title}</title> : null}<path opacity=".2" d="m7.25 21.23.33-.01a1 1 0 0 0 .85-.85V3.63a1 1 0 0 0-.85-.85h-.33c-.52 0-.78 0-1 .02a3 3 0 0 0-2.53 2.54c-.03.21-.03.47-.03.99v11.34c0 .52 0 .78.03 1a3 3 0 0 0 2.54 2.53c.21.03.47.03.99.03m9.43 0-.33-.01a1 1 0 0 1-.84-.85l-.01-.33V3.63a1 1 0 0 1 .85-.85h.33c.52 0 .78 0 1 .02a3 3 0 0 1 2.53 2.54c.03.21.03.47.03.99v11.34c0 .52 0 .78-.03 1a3 3 0 0 1-2.53 2.53c-.22.03-.48.03-1 .03" fill="currentColor"/><rect width="18.45" height="16.62" rx="3" transform="matrix(0 -1 -1 0 20.3 21.23)" stroke="currentColor"/><path d="M19.97 12H4.03m4.41-9.23v17.7m7.06-17.7v17.7M7.97 7.39H3.69m4.44 9.22h-4.1M20.3 7.39h-4.27m3.94 9.22h-4.1" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'film-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m7.25 21.23.33-.01a1 1 0 0 0 .85-.85V3.63a1 1 0 0 0-.85-.85h-.33c-.52 0-.78 0-1 .02a3 3 0 0 0-2.53 2.54c-.03.21-.03.47-.03.99v11.34c0 .52 0 .78.03 1a3 3 0 0 0 2.54 2.53c.21.03.47.03.99.03m9.43 0-.33-.01a1 1 0 0 1-.84-.85l-.01-.33V3.63a1 1 0 0 1 .85-.85h.33c.52 0 .78 0 1 .02a3 3 0 0 1 2.53 2.54c.03.21.03.47.03.99v11.34c0 .52 0 .78-.03 1a3 3 0 0 1-2.53 2.53c-.22.03-.48.03-1 .03'
+        fill='currentColor'
+      />
+      <rect
+        width='18.45'
+        height='16.62'
+        rx='3'
+        transform='matrix(0 -1 -1 0 20.3 21.23)'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.97 12H4.03m4.41-9.23v17.7m7.06-17.7v17.7M7.97 7.39H3.69m4.44 9.22h-4.1M20.3 7.39h-4.27m3.94 9.22h-4.1'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

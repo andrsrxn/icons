@@ -11,7 +11,10 @@ export const IconDiff: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,8 @@ export const IconDiff: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'diff-title'}>{title}</title> : null}<path d="M5.6 20.5h12.8M5.6 9.79h12.8m-6.4 6.4V3.39" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'diff-title'}>{title}</title> : null}
+      <path d='M5.6 20.5h12.8M5.6 9.79h12.8m-6.4 6.4V3.39' stroke='currentColor' />
+    </svg>
   )
 }

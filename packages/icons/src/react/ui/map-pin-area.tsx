@@ -11,7 +11,10 @@ export const IconMapPinArea: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,28 @@ export const IconMapPinArea: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'map-pin-area-title'}>{title}</title> : null}<path opacity=".2" d="M12.15 20.41c-4.5 0-8.13-1.38-8.13-3.08 0-1.38 2.35-2.54 5.61-2.94.8-.1 1.49 2.27 2.37 2.27.75 0 1.62-2.38 2.3-2.31 3.46.36 5.99 1.55 5.99 2.98 0 1.7-3.64 3.08-8.14 3.08" fill="currentColor"/><path d="M18 15.36c1.42.56 2.29 1.3 2.29 2.13 0 1.7-3.71 3.09-8.29 3.09s-8.29-1.38-8.29-3.09c0-.82.87-1.57 2.29-2.13" stroke="currentColor"/><path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M6.95 7.7c0 2.78 3.31 9.1 5.05 9.1s5.05-6.32 5.05-9.1a5.05 5.05 0 0 0-10.1 0M12 9.72a2.37 2.37 0 1 1 0-4.74 2.37 2.37 0 0 1 0 4.74" fill="currentColor"/><path d="M14.47 14.6c-.97 1.33-1.46 2-2.47 1.99-1 0-1.5-.66-2.47-1.99-1.35-1.84-2.76-4.33-2.76-6.72a5.23 5.23 0 1 1 10.46 0c0 2.4-1.4 4.9-2.76 6.73" stroke="currentColor"/><circle cx="12" cy="7.67" r="2.48" transform="rotate(90 12 7.67)" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'map-pin-area-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M12.15 20.41c-4.5 0-8.13-1.38-8.13-3.08 0-1.38 2.35-2.54 5.61-2.94.8-.1 1.49 2.27 2.37 2.27.75 0 1.62-2.38 2.3-2.31 3.46.36 5.99 1.55 5.99 2.98 0 1.7-3.64 3.08-8.14 3.08'
+        fill='currentColor'
+      />
+      <path
+        d='M18 15.36c1.42.56 2.29 1.3 2.29 2.13 0 1.7-3.71 3.09-8.29 3.09s-8.29-1.38-8.29-3.09c0-.82.87-1.57 2.29-2.13'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M6.95 7.7c0 2.78 3.31 9.1 5.05 9.1s5.05-6.32 5.05-9.1a5.05 5.05 0 0 0-10.1 0M12 9.72a2.37 2.37 0 1 1 0-4.74 2.37 2.37 0 0 1 0 4.74'
+        fill='currentColor'
+      />
+      <path
+        d='M14.47 14.6c-.97 1.33-1.46 2-2.47 1.99-1 0-1.5-.66-2.47-1.99-1.35-1.84-2.76-4.33-2.76-6.72a5.23 5.23 0 1 1 10.46 0c0 2.4-1.4 4.9-2.76 6.73'
+        stroke='currentColor'
+      />
+      <circle cx='12' cy='7.67' r='2.48' transform='rotate(90 12 7.67)' stroke='currentColor' />
+    </svg>
   )
 }

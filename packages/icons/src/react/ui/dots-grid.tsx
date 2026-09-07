@@ -11,7 +11,10 @@ export const IconDotsGrid: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,12 @@ export const IconDotsGrid: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dots-grid-title'}>{title}</title> : null}<path d="M5.9 4.21a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 12a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 19.79a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M12.83 4.21a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'dots-grid-title'}>{title}</title> : null}
+      <path
+        d='M5.9 4.21a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 12a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 19.79a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M12.83 4.21a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconArchive: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,14 @@ export const IconArchive: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'archive-title'}>{title}</title> : null}<rect opacity=".2" x="4.57" y="8.28" width="14.87" height="12" rx="2" fill="currentColor"/><path d="M4.57 8.28v6c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88h2.86c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-6" stroke="currentColor"/><rect x="2.65" y="4.28" width="18.69" height="4" rx="1" stroke="currentColor"/><path d="M16 11.78H8" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'archive-title'}>{title}</title> : null}
+      <rect opacity='.2' x='4.57' y='8.28' width='14.87' height='12' rx='2' fill='currentColor' />
+      <path
+        d='M4.57 8.28v6c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88h2.86c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-6'
+        stroke='currentColor'
+      />
+      <rect x='2.65' y='4.28' width='18.69' height='4' rx='1' stroke='currentColor' />
+      <path d='M16 11.78H8' stroke='currentColor' />
+    </svg>
   )
 }

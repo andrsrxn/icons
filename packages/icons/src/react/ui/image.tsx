@@ -11,7 +11,10 @@ export const IconImage: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconImage: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'image-title'}>{title}</title> : null}<path opacity=".2" d="M2.7 10.53c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h6.83c2.61 0 3.92 0 4.77.76l.25.25c.75.85.75 2.16.75 4.77 0 2.5 0 3.74-.62 4l-.18.05c-.66.14-1.35-.9-2.73-2.98l-.17-.27c-.7-1.06-1.06-1.6-1.57-1.61-.52-.02-.9.48-1.68 1.5l-2.33 3c-.59.76-.88 1.14-1.3 1.2-.42.04-.79-.26-1.54-.86l-.54-.43c-.6-.5-.9-.73-1.26-.73-.35 0-.65.24-1.25.73l-.17.14c-1.42 1.15-2.12 1.72-2.7 1.45-.56-.27-.56-1.18-.56-3z" fill="currentColor"/><rect x="2.7" y="4.53" width="18.61" height="14.93" rx="3" stroke="currentColor"/><path d="m21.17 16.76-3.49-5.87c-.75-1.27-1.13-1.9-1.69-1.9-.56-.01-.95.61-1.73 1.86l-1.93 3.1c-.61 1-.92 1.49-1.4 1.54s-.89-.35-1.71-1.18l-.42-.41c-.66-.66-.98-1-1.4-1-.4 0-.74.32-1.4.97l-3 2.9" stroke="currentColor"/><path d="M8.37 8.41a.78.78 0 1 1-1.57 0 .78.78 0 0 1 1.57 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'image-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M2.7 10.53c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h6.83c2.61 0 3.92 0 4.77.76l.25.25c.75.85.75 2.16.75 4.77 0 2.5 0 3.74-.62 4l-.18.05c-.66.14-1.35-.9-2.73-2.98l-.17-.27c-.7-1.06-1.06-1.6-1.57-1.61-.52-.02-.9.48-1.68 1.5l-2.33 3c-.59.76-.88 1.14-1.3 1.2-.42.04-.79-.26-1.54-.86l-.54-.43c-.6-.5-.9-.73-1.26-.73-.35 0-.65.24-1.25.73l-.17.14c-1.42 1.15-2.12 1.72-2.7 1.45-.56-.27-.56-1.18-.56-3z'
+        fill='currentColor'
+      />
+      <rect x='2.7' y='4.53' width='18.61' height='14.93' rx='3' stroke='currentColor' />
+      <path
+        d='m21.17 16.76-3.49-5.87c-.75-1.27-1.13-1.9-1.69-1.9-.56-.01-.95.61-1.73 1.86l-1.93 3.1c-.61 1-.92 1.49-1.4 1.54s-.89-.35-1.71-1.18l-.42-.41c-.66-.66-.98-1-1.4-1-.4 0-.74.32-1.4.97l-3 2.9'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.37 8.41a.78.78 0 1 1-1.57 0 .78.78 0 0 1 1.57 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

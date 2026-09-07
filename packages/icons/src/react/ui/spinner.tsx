@@ -11,7 +11,10 @@ export const IconSpinner: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconSpinner: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'spinner-title'}>{title}</title> : null}<path d="M2.38 12H6.1m11.68 0h3.84m-9.66 9.44v-3.6m0-11.67v-3.6m4.74 4.68 2.56-2.56M4.65 19.3l2.57-2.57M7.2 7.24 4.66 4.7m14.6 14.6-2.56-2.57" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'spinner-title'}>{title}</title> : null}
+      <path
+        d='M2.38 12H6.1m11.68 0h3.84m-9.66 9.44v-3.6m0-11.67v-3.6m4.74 4.68 2.56-2.56M4.65 19.3l2.57-2.57M7.2 7.24 4.66 4.7m14.6 14.6-2.56-2.57'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

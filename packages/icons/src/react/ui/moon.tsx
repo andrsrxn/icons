@@ -11,7 +11,10 @@ export const IconMoon: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,17 @@ export const IconMoon: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'moon-title'}>{title}</title> : null}<path opacity=".2" d="M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4Z" fill="currentColor" stroke="currentColor"/><path d="M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'moon-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4Z'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M10.81 21.41a10.41 10.41 0 0 0 7.06-18.1c-.69-.62-1.03-.94-1.4-.95a1 1 0 0 0-.79.35c-.24.28-.24.92-.24 2.21 0 5.95-4.82 10.77-10.76 10.77-1.17 0-1.76 0-2.03.2a1 1 0 0 0-.39.88c.03.34.3.64.85 1.24 1.9 2.09 4.65 3.4 7.7 3.4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

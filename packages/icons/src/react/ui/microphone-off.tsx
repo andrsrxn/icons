@@ -11,7 +11,10 @@ export const IconMicrophoneOff: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,25 @@ export const IconMicrophoneOff: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'microphone-off-title'}>{title}</title> : null}<path d="M12 14.65a3.77 3.77 0 0 0 3.78-3.77V6.3a3.78 3.78 0 1 0-7.56 0v4.57c0 2.08 1.7 3.77 3.78 3.77" stroke="currentColor"/><rect opacity=".2" width="11.56" height="7.56" rx="3.78" transform="matrix(0 -1 -1 0 15.78 14.37)" fill="currentColor"/><path d="M12.12 17.52v3.95m2.4 0h-4.8M3.3 3.3l17.4 17.4M18.46 9v1.94a6.46 6.46 0 0 1-12.92 0V9" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'microphone-off-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M12 14.65a3.77 3.77 0 0 0 3.78-3.77V6.3a3.78 3.78 0 1 0-7.56 0v4.57c0 2.08 1.7 3.77 3.78 3.77'
+        stroke='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='11.56'
+        height='7.56'
+        rx='3.78'
+        transform='matrix(0 -1 -1 0 15.78 14.37)'
+        fill='currentColor'
+      />
+      <path
+        d='M12.12 17.52v3.95m2.4 0h-4.8M3.3 3.3l17.4 17.4M18.46 9v1.94a6.46 6.46 0 0 1-12.92 0V9'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

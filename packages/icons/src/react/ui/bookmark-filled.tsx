@@ -11,7 +11,10 @@ export const IconBookmarkFilled: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,14 @@ export const IconBookmarkFilled: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bookmark-filled-title'}>{title}</title> : null}<path d="M4.78 8.77c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h2.44c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.21c0 2.56 0 3.84-.75 4.27l-.25.12c-.81.29-1.79-.54-3.74-2.2-1.13-.95-1.7-1.43-2.37-1.47h-.22c-.67.04-1.24.52-2.37 1.48-1.95 1.65-2.93 2.48-3.74 2.19l-.25-.12c-.75-.43-.75-1.71-.75-4.27z" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'bookmark-filled-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M4.78 8.77c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h2.44c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.21c0 2.56 0 3.84-.75 4.27l-.25.12c-.81.29-1.79-.54-3.74-2.2-1.13-.95-1.7-1.43-2.37-1.47h-.22c-.67.04-1.24.52-2.37 1.48-1.95 1.65-2.93 2.48-3.74 2.19l-.25-.12c-.75-.43-.75-1.71-.75-4.27z'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconDeviceTv: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconDeviceTv: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'device-tv-title'}>{title}</title> : null}<rect opacity=".2" x="2.7" y="6.91" width="18.61" height="12.47" rx="3" fill="currentColor"/><rect x="2.7" y="6.91" width="18.61" height="12.47" rx="3" stroke="currentColor"/><path d="m11 6.91-2.19-4.5M13 6.91 14.52 3" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'device-tv-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.7' y='6.91' width='18.61' height='12.47' rx='3' fill='currentColor' />
+      <rect x='2.7' y='6.91' width='18.61' height='12.47' rx='3' stroke='currentColor' />
+      <path d='m11 6.91-2.19-4.5M13 6.91 14.52 3' stroke='currentColor' />
+    </svg>
   )
 }

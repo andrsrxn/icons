@@ -11,7 +11,10 @@ export const IconSortDesc: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconSortDesc: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sort-desc-title'}>{title}</title> : null}<path d="M17.92 5.15H3.19m10 6h-10m7 6h-7m11.46-.5.44.44c1.33 1.33 2 2 2.82 2 .83 0 1.5-.66 2.83-2l.45-.44m-3.27-7.5v9.6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'sort-desc-title'}>{title}</title> : null}
+      <path
+        d='M17.92 5.15H3.19m10 6h-10m7 6h-7m11.46-.5.44.44c1.33 1.33 2 2 2.82 2 .83 0 1.5-.66 2.83-2l.45-.44m-3.27-7.5v9.6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

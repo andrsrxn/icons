@@ -11,7 +11,10 @@ export const IconPawPrint: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,84 @@ export const IconPawPrint: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'paw-print-title'}>{title}</title> : null}<path opacity=".2" d="m6.7 14.33 1.35-1c1.5-1.13 2.25-1.7 3.07-1.88a4 4 0 0 1 1.8 0c.82.19 1.57.75 3.07 1.88l1.33 1a3.24 3.24 0 0 1-3.03 5.65l-.95-.34c-.86-.3-1.8-.3-2.65 0l-.95.34a3.24 3.24 0 0 1-3.03-5.65" fill="currentColor"/><ellipse opacity=".2" cx="4.05" cy="10.34" rx="1.52" ry="1.96" transform="rotate(-23.83 4.05 10.34)" fill="currentColor"/><ellipse opacity=".2" cx="1.52" cy="1.96" rx="1.52" ry="1.96" transform="scale(-1 1)rotate(-23.83 10.65 57.04)" fill="currentColor"/><ellipse opacity=".2" cx="8.74" cy="6.22" rx="1.68" ry="2.55" transform="rotate(-10.98 8.74 6.22)" fill="currentColor"/><ellipse opacity=".2" cx="1.66" cy="2.52" rx="1.66" ry="2.52" transform="scale(-1 1)rotate(-10.98 12.45 92.48)" fill="currentColor"/><path d="m6.68 14.36 1.73-1.3c1.74-1.31 2.6-1.96 3.61-1.96s1.87.65 3.6 1.96l1.74 1.3h0q.09.06.12.1a3 3 0 0 1 1.14 2.42v.43a3 3 0 0 1-4.6 2.38l-.43-.21h0l-.4-.2a3 3 0 0 0-2.75.2h0l-.42.21-.38.2a3 3 0 0 1-4.22-2.58v-.58a3 3 0 0 1 1.13-2.28z" stroke="currentColor"/><ellipse cx="4.12" cy="10.31" rx="1.6" ry="1.96" transform="rotate(-23.83 4.12 10.31)" stroke="currentColor"/><ellipse cx="1.62" cy="1.96" rx="1.62" ry="1.96" transform="scale(-1 1)rotate(-23.83 10.65 57.04)" stroke="currentColor"/><ellipse cx="8.88" cy="6.2" rx="1.82" ry="2.55" transform="rotate(-10.98 8.88 6.2)" stroke="currentColor"/><ellipse cx="1.74" cy="2.52" rx="1.74" ry="2.52" transform="scale(-1 1)rotate(-10.98 12.45 92.48)" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'paw-print-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='m6.7 14.33 1.35-1c1.5-1.13 2.25-1.7 3.07-1.88a4 4 0 0 1 1.8 0c.82.19 1.57.75 3.07 1.88l1.33 1a3.24 3.24 0 0 1-3.03 5.65l-.95-.34c-.86-.3-1.8-.3-2.65 0l-.95.34a3.24 3.24 0 0 1-3.03-5.65'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='4.05'
+        cy='10.34'
+        rx='1.52'
+        ry='1.96'
+        transform='rotate(-23.83 4.05 10.34)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='1.52'
+        cy='1.96'
+        rx='1.52'
+        ry='1.96'
+        transform='scale(-1 1)rotate(-23.83 10.65 57.04)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='8.74'
+        cy='6.22'
+        rx='1.68'
+        ry='2.55'
+        transform='rotate(-10.98 8.74 6.22)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='1.66'
+        cy='2.52'
+        rx='1.66'
+        ry='2.52'
+        transform='scale(-1 1)rotate(-10.98 12.45 92.48)'
+        fill='currentColor'
+      />
+      <path
+        d='m6.68 14.36 1.73-1.3c1.74-1.31 2.6-1.96 3.61-1.96s1.87.65 3.6 1.96l1.74 1.3h0q.09.06.12.1a3 3 0 0 1 1.14 2.42v.43a3 3 0 0 1-4.6 2.38l-.43-.21h0l-.4-.2a3 3 0 0 0-2.75.2h0l-.42.21-.38.2a3 3 0 0 1-4.22-2.58v-.58a3 3 0 0 1 1.13-2.28z'
+        stroke='currentColor'
+      />
+      <ellipse
+        cx='4.12'
+        cy='10.31'
+        rx='1.6'
+        ry='1.96'
+        transform='rotate(-23.83 4.12 10.31)'
+        stroke='currentColor'
+      />
+      <ellipse
+        cx='1.62'
+        cy='1.96'
+        rx='1.62'
+        ry='1.96'
+        transform='scale(-1 1)rotate(-23.83 10.65 57.04)'
+        stroke='currentColor'
+      />
+      <ellipse
+        cx='8.88'
+        cy='6.2'
+        rx='1.82'
+        ry='2.55'
+        transform='rotate(-10.98 8.88 6.2)'
+        stroke='currentColor'
+      />
+      <ellipse
+        cx='1.74'
+        cy='2.52'
+        rx='1.74'
+        ry='2.52'
+        transform='scale(-1 1)rotate(-10.98 12.45 92.48)'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

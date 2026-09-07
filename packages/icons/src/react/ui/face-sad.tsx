@@ -11,7 +11,10 @@ export const IconFaceSad: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconFaceSad: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'face-sad-title'}>{title}</title> : null}<circle opacity=".2" cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" fill="currentColor"/><circle cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" stroke="currentColor"/><path d="M9.78 9.73a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0m5.9 0a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0" fill="currentColor" stroke="currentColor"/><path d="M15.41 16.19A4.7 4.7 0 0 0 12 15c-1.52 0-2.63.53-3.41 1.19" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'face-sad-title'}>{title}</title> : null}
+      <circle
+        opacity='.2'
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path
+        d='M9.78 9.73a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0m5.9 0a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M15.41 16.19A4.7 4.7 0 0 0 12 15c-1.52 0-2.63.53-3.41 1.19' stroke='currentColor' />
+    </svg>
   )
 }

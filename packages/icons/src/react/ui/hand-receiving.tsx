@@ -11,7 +11,10 @@ export const IconHandReceiving: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconHandReceiving: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'hand-receiving-title'}>{title}</title> : null}<rect opacity=".2" x="2.68" y="7.92" width="3.82" height="8.07" rx="1" fill="currentColor"/><path d="M6.5 14.64s1.1.92 2.68 1.3c3.15.78 4.75.56 7.54-.46 2.08-.76 3.7-2.83 4.5-4.01.35-.52.35-1.18.04-1.73a1.94 1.94 0 0 0-2.98-.44c-.96.87-2.2 1.9-3.43 2.66-.74.45-2.28.36-3.74.36m3.74-.36c.6-1.6.43-2.88-.24-3.13a10 10 0 0 0-3.83-.64c-3.56 0-4.28.9-4.28.9" stroke="currentColor"/><rect x="2.68" y="7.92" width="3.82" height="8.07" rx="1" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'hand-receiving-title'}>{title}</title>
+      ) : null}
+      <rect opacity='.2' x='2.68' y='7.92' width='3.82' height='8.07' rx='1' fill='currentColor' />
+      <path
+        d='M6.5 14.64s1.1.92 2.68 1.3c3.15.78 4.75.56 7.54-.46 2.08-.76 3.7-2.83 4.5-4.01.35-.52.35-1.18.04-1.73a1.94 1.94 0 0 0-2.98-.44c-.96.87-2.2 1.9-3.43 2.66-.74.45-2.28.36-3.74.36m3.74-.36c.6-1.6.43-2.88-.24-3.13a10 10 0 0 0-3.83-.64c-3.56 0-4.28.9-4.28.9'
+        stroke='currentColor'
+      />
+      <rect x='2.68' y='7.92' width='3.82' height='8.07' rx='1' stroke='currentColor' />
+    </svg>
   )
 }

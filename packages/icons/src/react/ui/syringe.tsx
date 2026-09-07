@@ -11,7 +11,10 @@ export const IconSyringe: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,21 @@ export const IconSyringe: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'syringe-title'}>{title}</title> : null}<rect opacity=".2" x="9.2" y="11.08" width="5.16" height="9.16" rx="1" transform="rotate(45 9.2 11.08)" fill="currentColor"/><path d="m15.64 4.13 4.23 4.23L8.59 19.64c-.42.42-.63.62-.87.76a2 2 0 0 1-1.07.25c-.28-.01-.56-.1-1.12-.29a4 4 0 0 1-.88-.35 2 2 0 0 1-.66-.66c-.12-.2-.2-.42-.35-.88a5 5 0 0 1-.3-1.12 2 2 0 0 1 .26-1.07c.14-.24.34-.45.76-.87zm-1.1-1.1 6.43 6.43m-2.71-7.01 3.29 3.3M9.4 10.9l3.7 3.7m6.8-10.5-2.15 2.15M4.11 19.89 2.6 21.4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'syringe-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='9.2'
+        y='11.08'
+        width='5.16'
+        height='9.16'
+        rx='1'
+        transform='rotate(45 9.2 11.08)'
+        fill='currentColor'
+      />
+      <path
+        d='m15.64 4.13 4.23 4.23L8.59 19.64c-.42.42-.63.62-.87.76a2 2 0 0 1-1.07.25c-.28-.01-.56-.1-1.12-.29a4 4 0 0 1-.88-.35 2 2 0 0 1-.66-.66c-.12-.2-.2-.42-.35-.88a5 5 0 0 1-.3-1.12 2 2 0 0 1 .26-1.07c.14-.24.34-.45.76-.87zm-1.1-1.1 6.43 6.43m-2.71-7.01 3.29 3.3M9.4 10.9l3.7 3.7m6.8-10.5-2.15 2.15M4.11 19.89 2.6 21.4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

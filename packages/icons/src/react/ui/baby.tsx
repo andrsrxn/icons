@@ -11,7 +11,10 @@ export const IconBaby: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,23 @@ export const IconBaby: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'baby-title'}>{title}</title> : null}<path opacity=".2" d="M11.98 20.5c3.85 0 7.1-2.58 8.13-6.1 0 0 1.54-.26 1.54-2.39 0-2.04-1.56-2.42-1.56-2.42a8.47 8.47 0 0 0-16.23 0s-1.5.44-1.5 2.41c0 2.07 1.48 2.4 1.48 2.4a8.5 8.5 0 0 0 8.14 6.1" fill="currentColor"/><path d="M10.77 3.64S9.13 4.75 9.71 6.13c.94 2.24 4.7.77 4.7.77" stroke="currentColor"/><path d="M11.98 20.5c3.85 0 7.1-2.58 8.13-6.1 0 0 1.54-.27 1.54-2.4 0-2.04-1.56-2.41-1.56-2.41a8.47 8.47 0 0 0-16.23 0s-1.5.41-1.5 2.39c0 2.07 1.48 2.42 1.48 2.42a8.5 8.5 0 0 0 8.14 6.1" stroke="currentColor"/><path d="M9.9 11.53a.5.5 0 1 1-.99 0 .5.5 0 0 1 1 0m5.18 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" fill="currentColor" stroke="currentColor"/><path d="M9.12 15.5S10 16.64 12 16.64s2.88-1.14 2.88-1.14" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'baby-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M11.98 20.5c3.85 0 7.1-2.58 8.13-6.1 0 0 1.54-.26 1.54-2.39 0-2.04-1.56-2.42-1.56-2.42a8.47 8.47 0 0 0-16.23 0s-1.5.44-1.5 2.41c0 2.07 1.48 2.4 1.48 2.4a8.5 8.5 0 0 0 8.14 6.1'
+        fill='currentColor'
+      />
+      <path d='M10.77 3.64S9.13 4.75 9.71 6.13c.94 2.24 4.7.77 4.7.77' stroke='currentColor' />
+      <path
+        d='M11.98 20.5c3.85 0 7.1-2.58 8.13-6.1 0 0 1.54-.27 1.54-2.4 0-2.04-1.56-2.41-1.56-2.41a8.47 8.47 0 0 0-16.23 0s-1.5.41-1.5 2.39c0 2.07 1.48 2.42 1.48 2.42a8.5 8.5 0 0 0 8.14 6.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.9 11.53a.5.5 0 1 1-.99 0 .5.5 0 0 1 1 0m5.18 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M9.12 15.5S10 16.64 12 16.64s2.88-1.14 2.88-1.14' stroke='currentColor' />
+    </svg>
   )
 }

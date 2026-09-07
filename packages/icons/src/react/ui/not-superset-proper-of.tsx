@@ -11,7 +11,10 @@ export const IconNotSupersetProperOf: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -21,10 +24,19 @@ export const IconNotSupersetProperOf: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'not-superset-proper-of-title' : undefined}
+      aria-labelledby={
+        isLabelled && title && !ariaLabel ? 'not-superset-proper-of-title' : undefined
+      }
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'not-superset-proper-of-title'}>{title}</title> : null}<path d="m3.3 3.3 17.4 17.4M4.5 18.62h8.38a6.62 6.62 0 0 0 0-13.24H5.57" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'not-superset-proper-of-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m3.3 3.3 17.4 17.4M4.5 18.62h8.38a6.62 6.62 0 0 0 0-13.24H5.57'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

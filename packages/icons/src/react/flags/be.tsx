@@ -10,10 +10,9 @@ export const IconFlagBE: FlagIcon = ({
   'aria-hidden': ariaHidden,
   ...props
 }) => {
-  
   const isHidden = ariaHidden === true
   const titleText = title ?? 'BE'
-  
+
   const showTitle = !(isHidden || ariaLabel)
 
   return (
@@ -34,13 +33,36 @@ export const IconFlagBE: FlagIcon = ({
       {...props}>
       {showTitle ? <title id={'be-title'}>{titleText}</title> : null}
 
-      <defs><defs><linearGradient id="be-a" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#fff"/><stop offset="100%" stopColor="#f0f0f0"/></linearGradient><linearGradient id="be-b" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#ff4453"/><stop offset="100%" stopColor="#ee2a39"/></linearGradient><linearGradient id="be-c" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#262626"/><stop offset="100%" stopColor="#0d0d0d"/></linearGradient><linearGradient id="be-d" x1="50%" x2="50%" y1="0%" y2="100%"><stop offset="0%" stopColor="#ffcf3c"/><stop offset="100%" stopColor="#fecb2f"/></linearGradient></defs>
+      <defs>
+        <defs>
+          <linearGradient id='be-a' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#fff' />
+            <stop offset='100%' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='be-b' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ff4453' />
+            <stop offset='100%' stopColor='#ee2a39' />
+          </linearGradient>
+          <linearGradient id='be-c' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#262626' />
+            <stop offset='100%' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient id='be-d' x1='50%' x2='50%' y1='0%' y2='100%'>
+            <stop offset='0%' stopColor='#ffcf3c' />
+            <stop offset='100%' stopColor='#fecb2f' />
+          </linearGradient>
+        </defs>
         <clipPath id='be-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#be-clip)'>
-        <g fill="none" fillRule="evenodd"><path fill="url(#be-a)" d="M0 0h21v15H0z"/><path fill="url(#be-b)" d="M10 0h11v15H10z"/><path fill="url(#be-c)" d="M0 0h7v15H0z"/><path fill="url(#be-d)" d="M7 0h7v15H7z"/></g>
+        <g fill='none' fillRule='evenodd'>
+          <path fill='url(#be-a)' d='M0 0h21v15H0z' />
+          <path fill='url(#be-b)' d='M10 0h11v15H10z' />
+          <path fill='url(#be-c)' d='M0 0h7v15H0z' />
+          <path fill='url(#be-d)' d='M7 0h7v15H7z' />
+        </g>
       </g>
     </svg>
   )

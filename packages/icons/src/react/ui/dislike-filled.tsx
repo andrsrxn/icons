@@ -11,7 +11,10 @@ export const IconDislikeFilled: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,14 @@ export const IconDislikeFilled: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dislike-filled-title'}>{title}</title> : null}<path d="M18.81 3.8c.37 0 .55 0 .7.02a2 2 0 0 1 1.67 1.66c.03.16.03.34.03.7v5.08c0 .37 0 .55-.03.7a2 2 0 0 1-1.66 1.67c-.16.03-.34.03-.7.03h-.18a.5.5 0 0 1-.42-.42V4.2a.5.5 0 0 1 .42-.41zm-8.92 0h3.8c.94 0 1.41 0 1.7.29s.3.76.3 1.7v7.07c0 .53 0 .8-.06 1.03-.06.24-.2.5-.48 1.04-.3.6-.66 1.36-.84 1.98a7 7 0 0 0-.21 1.3c-.08 1.04-.12 1.55-.46 1.83-.34.27-.7.21-1.44.1-.74-.12-1.5-.4-1.9-1.06a5 5 0 0 1-.39-2.82c.14-1.35.2-2.03-.07-2.36l-.04-.03c-.3-.32-.89-.32-2.07-.32h0c-2.7 0-4.05 0-4.64-.86l-.07-.1c-.54-.9 0-2.13 1.11-4.59l.3-.65c.76-1.72 1.15-2.58 1.9-3.06C7.05 3.8 8 3.8 9.88 3.8" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'dislike-filled-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M18.81 3.8c.37 0 .55 0 .7.02a2 2 0 0 1 1.67 1.66c.03.16.03.34.03.7v5.08c0 .37 0 .55-.03.7a2 2 0 0 1-1.66 1.67c-.16.03-.34.03-.7.03h-.18a.5.5 0 0 1-.42-.42V4.2a.5.5 0 0 1 .42-.41zm-8.92 0h3.8c.94 0 1.41 0 1.7.29s.3.76.3 1.7v7.07c0 .53 0 .8-.06 1.03-.06.24-.2.5-.48 1.04-.3.6-.66 1.36-.84 1.98a7 7 0 0 0-.21 1.3c-.08 1.04-.12 1.55-.46 1.83-.34.27-.7.21-1.44.1-.74-.12-1.5-.4-1.9-1.06a5 5 0 0 1-.39-2.82c.14-1.35.2-2.03-.07-2.36l-.04-.03c-.3-.32-.89-.32-2.07-.32h0c-2.7 0-4.05 0-4.64-.86l-.07-.1c-.54-.9 0-2.13 1.11-4.59l.3-.65c.76-1.72 1.15-2.58 1.9-3.06C7.05 3.8 8 3.8 9.88 3.8'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

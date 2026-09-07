@@ -11,7 +11,10 @@ export const IconAlignCenterHorizontal: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -21,10 +24,20 @@ export const IconAlignCenterHorizontal: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-center-horizontal-title' : undefined}
+      aria-labelledby={
+        isLabelled && title && !ariaLabel ? 'align-center-horizontal-title' : undefined
+      }
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'align-center-horizontal-title'}>{title}</title> : null}<rect opacity=".2" x="4.58" y="3.8" width="5.8" height="16.4" rx="2" fill="currentColor"/><rect opacity=".2" x="13.62" y="5.79" width="5.8" height="12.42" rx="2" fill="currentColor"/><rect x="4.58" y="3.8" width="5.8" height="16.4" rx="2" stroke="currentColor"/><rect x="13.62" y="5.79" width="5.8" height="12.42" rx="2" stroke="currentColor"/><path d="M2 12h2.58m14.85 0H22m-11.29 0h2.58" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'align-center-horizontal-title'}>{title}</title>
+      ) : null}
+      <rect opacity='.2' x='4.58' y='3.8' width='5.8' height='16.4' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='13.62' y='5.79' width='5.8' height='12.42' rx='2' fill='currentColor' />
+      <rect x='4.58' y='3.8' width='5.8' height='16.4' rx='2' stroke='currentColor' />
+      <rect x='13.62' y='5.79' width='5.8' height='12.42' rx='2' stroke='currentColor' />
+      <path d='M2 12h2.58m14.85 0H22m-11.29 0h2.58' stroke='currentColor' />
+    </svg>
   )
 }

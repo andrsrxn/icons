@@ -11,7 +11,10 @@ export const IconPanelRightOpen: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,29 @@ export const IconPanelRightOpen: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'panel-right-open-title'}>{title}</title> : null}<path d="m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.21 8.1" stroke="currentColor"/><rect opacity=".2" width="6.62" height="16.71" rx="2" transform="matrix(1 0 0 -1 14.65 20.36)" fill="currentColor"/><rect width="18.53" height="16.71" rx="3" transform="matrix(1 0 0 -1 2.74 20.36)" stroke="currentColor"/><path d="M14.65 4v16" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'panel-right-open-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.21 8.1'
+        stroke='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='6.62'
+        height='16.71'
+        rx='2'
+        transform='matrix(1 0 0 -1 14.65 20.36)'
+        fill='currentColor'
+      />
+      <rect
+        width='18.53'
+        height='16.71'
+        rx='3'
+        transform='matrix(1 0 0 -1 2.74 20.36)'
+        stroke='currentColor'
+      />
+      <path d='M14.65 4v16' stroke='currentColor' />
+    </svg>
   )
 }

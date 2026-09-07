@@ -11,7 +11,10 @@ export const IconNotEqual: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,8 @@ export const IconNotEqual: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'not-equal-title'}>{title}</title> : null}<path d="M4.21 4.21 19.8 19.8M4.07 9h15.86M4.07 15h15.86" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'not-equal-title'}>{title}</title> : null}
+      <path d='M4.21 4.21 19.8 19.8M4.07 9h15.86M4.07 15h15.86' stroke='currentColor' />
+    </svg>
   )
 }

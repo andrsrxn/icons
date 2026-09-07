@@ -11,7 +11,10 @@ export const IconCurrencyNgn: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconCurrencyNgn: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-ngn-title'}>{title}</title> : null}<path d="M17.88 3.43v17.14L6.09 3.43v17.14M2.6 10.1h18.8M2.6 13.9h18.8" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'currency-ngn-title'}>{title}</title> : null}
+      <path
+        d='M17.88 3.43v17.14L6.09 3.43v17.14M2.6 10.1h18.8M2.6 13.9h18.8'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconPi: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,15 @@ export const IconPi: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pi-title'}>{title}</title> : null}<path d="M20.25 3.99v.16a2 2 0 0 1-1.93 1.93H5.6a2 2 0 0 0-1.84 1.85v.34" stroke="currentColor"/><path d="M6.4 20.21s3.6.63 3.6-3.86V6.37m3.4 0v9.74c0 2.89.86 4.1 2.26 4.1s2.17-1.05 2.34-2.1" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'pi-title'}>{title}</title> : null}
+      <path
+        d='M20.25 3.99v.16a2 2 0 0 1-1.93 1.93H5.6a2 2 0 0 0-1.84 1.85v.34'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.4 20.21s3.6.63 3.6-3.86V6.37m3.4 0v9.74c0 2.89.86 4.1 2.26 4.1s2.17-1.05 2.34-2.1'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

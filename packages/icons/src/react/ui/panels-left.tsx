@@ -11,7 +11,10 @@ export const IconPanelsLeft: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconPanelsLeft: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'panels-left-title'}>{title}</title> : null}<rect opacity=".2" x="2.96" y="3.64" width="9.35" height="16.71" rx="2" fill="currentColor"/><rect x="2.74" y="3.64" width="18.53" height="16.71" rx="3" stroke="currentColor"/><path d="M12 20V4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'panels-left-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.96' y='3.64' width='9.35' height='16.71' rx='2' fill='currentColor' />
+      <rect x='2.74' y='3.64' width='18.53' height='16.71' rx='3' stroke='currentColor' />
+      <path d='M12 20V4' stroke='currentColor' />
+    </svg>
   )
 }

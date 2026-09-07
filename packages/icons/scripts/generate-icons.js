@@ -194,7 +194,7 @@ function main() {
 
   svgFiles.forEach(file => {
     const filePath = path.join(ICONS_DIR, file)
-    console.log({ filePath })
+
     const svgContent = fs.readFileSync(filePath, 'utf-8')
 
     const componentContent = generateComponent(file, svgContent)

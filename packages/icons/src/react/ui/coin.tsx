@@ -11,7 +11,10 @@ export const IconCoin: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,28 @@ export const IconCoin: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'coin-title'}>{title}</title> : null}<ellipse opacity=".2" cx="10.25" cy="12" rx="9.43" ry="4.57" transform="rotate(90 10.25 12)" fill="currentColor"/><ellipse cx="10.25" cy="12" rx="9.43" ry="4.57" transform="rotate(90 10.25 12)" stroke="currentColor"/><path d="M14.57 21.43c2.52 0 4.57-4.22 4.57-9.43s-2.05-9.43-4.57-9.43m-4.32 0h4.32M14 6.22h4M15.14 12h4M14 17.76h4m-7.75 3.67h4.32" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'coin-title'}>{title}</title> : null}
+      <ellipse
+        opacity='.2'
+        cx='10.25'
+        cy='12'
+        rx='9.43'
+        ry='4.57'
+        transform='rotate(90 10.25 12)'
+        fill='currentColor'
+      />
+      <ellipse
+        cx='10.25'
+        cy='12'
+        rx='9.43'
+        ry='4.57'
+        transform='rotate(90 10.25 12)'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.57 21.43c2.52 0 4.57-4.22 4.57-9.43s-2.05-9.43-4.57-9.43m-4.32 0h4.32M14 6.22h4M15.14 12h4M14 17.76h4m-7.75 3.67h4.32'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

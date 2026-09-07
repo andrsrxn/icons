@@ -11,7 +11,10 @@ export const IconGoldenRatio: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconGoldenRatio: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'golden-ratio-title'}>{title}</title> : null}<path d="M2.74 17.51c0-4.66 3.47-10.7 10-11 6.08-.27 9.06 3.62 8.4 7.24a4.6 4.6 0 0 1-4.57 3.98c-3.52.2-4.56-2.26-4.45-3.75.14-2.01 1.6-2.98 2.93-2.98 1.34 0 2.6 1.29 1.72 2.98" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'golden-ratio-title'}>{title}</title> : null}
+      <path
+        d='M2.74 17.51c0-4.66 3.47-10.7 10-11 6.08-.27 9.06 3.62 8.4 7.24a4.6 4.6 0 0 1-4.57 3.98c-3.52.2-4.56-2.26-4.45-3.75.14-2.01 1.6-2.98 2.93-2.98 1.34 0 2.6 1.29 1.72 2.98'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

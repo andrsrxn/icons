@@ -11,7 +11,10 @@ export const IconSlash: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,8 @@ export const IconSlash: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'slash-title'}>{title}</title> : null}<path d="M20 4 4 20" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'slash-title'}>{title}</title> : null}
+      <path d='M20 4 4 20' stroke='currentColor' />
+    </svg>
   )
 }

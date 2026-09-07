@@ -11,7 +11,10 @@ export const IconSoundWave: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,11 @@ export const IconSoundWave: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sound-wave-title'}>{title}</title> : null}<path d="M2.81 15.58V8.42m18.38 7.16V8.42m-7.35 6.87V8.7m-3.68 8.89V6.4M6.49 20V4m11.02 16V4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'sound-wave-title'}>{title}</title> : null}
+      <path
+        d='M2.81 15.58V8.42m18.38 7.16V8.42m-7.35 6.87V8.7m-3.68 8.89V6.4M6.49 20V4m11.02 16V4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

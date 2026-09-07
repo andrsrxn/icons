@@ -11,7 +11,10 @@ export const IconSearch: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconSearch: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'search-title'}>{title}</title> : null}<path opacity=".2" d="M17.8 10.26a7.61 7.61 0 1 1-15.23 0 7.61 7.61 0 0 1 15.22 0" fill="currentColor"/><path d="m15.6 15.56 5.78 5.77M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'search-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M17.8 10.26a7.61 7.61 0 1 1-15.23 0 7.61 7.61 0 0 1 15.22 0'
+        fill='currentColor'
+      />
+      <path
+        d='m15.6 15.56 5.78 5.77M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

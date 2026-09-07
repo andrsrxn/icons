@@ -11,7 +11,10 @@ export const IconSubtract: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,17 @@ export const IconSubtract: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'subtract-title'}>{title}</title> : null}<path opacity=".2" d="M21.26 15.12c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87h-3.99a2.96 2.96 0 0 1-.23-5.9l.83-.06c.53-.04.79-.06 1.01-.12a3 3 0 0 0 2.27-2.36c.04-.23.05-.5.06-1.02l.02-.6v-.03a3 3 0 0 1 2.99-2.89h.06a3 3 0 0 1 2.98 2.99z" fill="currentColor"/><rect x="2.74" y="2.7" width="12.98" height="12.98" rx="3" stroke="currentColor"/><path d="M15.93 8.31c2.19 0 3.28 0 4.06.55a3 3 0 0 1 .73.73c.54.78.54 1.87.54 4.06v1.65c0 2.82 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H13.6c-2.16 0-3.24 0-4-.53a3 3 0 0 1-.8-.77c-.53-.77-.53-1.85-.53-4" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'subtract-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M21.26 15.12c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87h-3.99a2.96 2.96 0 0 1-.23-5.9l.83-.06c.53-.04.79-.06 1.01-.12a3 3 0 0 0 2.27-2.36c.04-.23.05-.5.06-1.02l.02-.6v-.03a3 3 0 0 1 2.99-2.89h.06a3 3 0 0 1 2.98 2.99z'
+        fill='currentColor'
+      />
+      <rect x='2.74' y='2.7' width='12.98' height='12.98' rx='3' stroke='currentColor' />
+      <path
+        d='M15.93 8.31c2.19 0 3.28 0 4.06.55a3 3 0 0 1 .73.73c.54.78.54 1.87.54 4.06v1.65c0 2.82 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H13.6c-2.16 0-3.24 0-4-.53a3 3 0 0 1-.8-.77c-.53-.77-.53-1.85-.53-4'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

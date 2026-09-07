@@ -11,7 +11,10 @@ export const IconChevronUpDown: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconChevronUpDown: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'chevron-up-down-title'}>{title}</title> : null}<path d="m6.87 15.97 2.3 2.3c1.33 1.33 2 2 2.83 2 .82 0 1.5-.67 2.83-2l2.3-2.3M6.87 8.03l2.3-2.3c1.33-1.33 2-2 2.83-2 .82 0 1.5.67 2.83 2l2.3 2.3" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'chevron-up-down-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m6.87 15.97 2.3 2.3c1.33 1.33 2 2 2.83 2 .82 0 1.5-.67 2.83-2l2.3-2.3M6.87 8.03l2.3-2.3c1.33-1.33 2-2 2.83-2 .82 0 1.5.67 2.83 2l2.3 2.3'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

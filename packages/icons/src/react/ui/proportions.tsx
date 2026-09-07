@@ -11,7 +11,10 @@ export const IconProportions: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,19 @@ export const IconProportions: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'proportions-title'}>{title}</title> : null}<path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M21.3 9.03c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H5.17c-.44 0-.66 0-.84.03a2 2 0 0 0-1.6 1.6c-.03.18-.03.4-.03.84s0 .66.04.84a2 2 0 0 0 1.6 1.6c.17.03.4.03.83.03h1.25c1.61 0 2.42 0 2.97.44q.17.15.31.31c.44.55.44 1.36.44 2.97v1.28c0 1.89 0 2.83.59 3.42.58.58 1.52.58 3.41.58h3.16c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42z" fill="currentColor"/><rect x="2.7" y="5.03" width="18.6" height="13.95" rx="3" stroke="currentColor"/><path d="M2.7 9.7h8.37c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v5.27m-4.9 0V9.7" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'proportions-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M21.3 9.03c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H5.17c-.44 0-.66 0-.84.03a2 2 0 0 0-1.6 1.6c-.03.18-.03.4-.03.84s0 .66.04.84a2 2 0 0 0 1.6 1.6c.17.03.4.03.83.03h1.25c1.61 0 2.42 0 2.97.44q.17.15.31.31c.44.55.44 1.36.44 2.97v1.28c0 1.89 0 2.83.59 3.42.58.58 1.52.58 3.41.58h3.16c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42z'
+        fill='currentColor'
+      />
+      <rect x='2.7' y='5.03' width='18.6' height='13.95' rx='3' stroke='currentColor' />
+      <path
+        d='M2.7 9.7h8.37c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v5.27m-4.9 0V9.7'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

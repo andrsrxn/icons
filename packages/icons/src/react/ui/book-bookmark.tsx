@@ -11,7 +11,10 @@ export const IconBookBookmark: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconBookBookmark: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'book-bookmark-title'}>{title}</title> : null}<path opacity=".2" fillRule="evenodd" clipRule="evenodd" d="M7.84 4.67a2 2 0 0 0-4 0v9.24c0 1.88 0 2.82.58 3.4.59.6 1.53.6 3.41.6h8.34c1.88 0 2.82 0 3.41-.6.59-.58.59-1.52.59-3.4V6.24c0-1.47 0-2.21-.37-2.73a2 2 0 0 0-.47-.47c-.53-.37-1.26-.37-2.74-.37h-1.76a2 2 0 0 0-1.8 1.81l-.01.42v2.32c0 .97-1.12 1.5-1.87.88a1.14 1.14 0 0 0-1.44 0c-.75.61-1.87.09-1.87-.88z" fill="currentColor"/><path d="M3.83 8.67c0-2.83 0-4.25.88-5.12s2.3-.88 5.12-.88h4.34c2.82 0 4.24 0 5.12.88.88.87.88 2.29.88 5.12v3.24c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88H3.83z" stroke="currentColor"/><path d="M3.83 17.9c0 1.34 0 2 .31 2.5a2 2 0 0 0 .63.63c.49.3 1.16.3 2.5.3h8.04c1.34 0 2 0 2.5-.3a2 2 0 0 0 .62-.63c.3-.5.3-1.16.3-2.5M7.84 3.07v4.5c0 .95 0 1.42.29 1.55s.65-.17 1.36-.78l.37-.32c.33-.28.49-.42.68-.42s.35.16.66.45l.11.1c.72.7 1.09 1.03 1.39.9s.3-.62.3-1.62V3.07" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'book-bookmark-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M7.84 4.67a2 2 0 0 0-4 0v9.24c0 1.88 0 2.82.58 3.4.59.6 1.53.6 3.41.6h8.34c1.88 0 2.82 0 3.41-.6.59-.58.59-1.52.59-3.4V6.24c0-1.47 0-2.21-.37-2.73a2 2 0 0 0-.47-.47c-.53-.37-1.26-.37-2.74-.37h-1.76a2 2 0 0 0-1.8 1.81l-.01.42v2.32c0 .97-1.12 1.5-1.87.88a1.14 1.14 0 0 0-1.44 0c-.75.61-1.87.09-1.87-.88z'
+        fill='currentColor'
+      />
+      <path
+        d='M3.83 8.67c0-2.83 0-4.25.88-5.12s2.3-.88 5.12-.88h4.34c2.82 0 4.24 0 5.12.88.88.87.88 2.29.88 5.12v3.24c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88H3.83z'
+        stroke='currentColor'
+      />
+      <path
+        d='M3.83 17.9c0 1.34 0 2 .31 2.5a2 2 0 0 0 .63.63c.49.3 1.16.3 2.5.3h8.04c1.34 0 2 0 2.5-.3a2 2 0 0 0 .62-.63c.3-.5.3-1.16.3-2.5M7.84 3.07v4.5c0 .95 0 1.42.29 1.55s.65-.17 1.36-.78l.37-.32c.33-.28.49-.42.68-.42s.35.16.66.45l.11.1c.72.7 1.09 1.03 1.39.9s.3-.62.3-1.62V3.07'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

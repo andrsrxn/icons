@@ -11,7 +11,10 @@ export const IconInfo: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,22 @@ export const IconInfo: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'info-title'}>{title}</title> : null}<circle opacity=".2" cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" fill="currentColor"/><circle cx="12" cy="12" r="9.43" transform="rotate(90 12 12)" stroke="currentColor"/><path d="M13.57 17.66c-1 0-1.8-.45-1.8-1.96v-4.45" stroke="currentColor"/><path d="M12.3 7.24a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0" fill="currentColor" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'info-title'}>{title}</title> : null}
+      <circle
+        opacity='.2'
+        cx='12'
+        cy='12'
+        r='9.43'
+        transform='rotate(90 12 12)'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path d='M13.57 17.66c-1 0-1.8-.45-1.8-1.96v-4.45' stroke='currentColor' />
+      <path
+        d='M12.3 7.24a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

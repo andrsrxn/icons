@@ -11,7 +11,10 @@ export const IconMusicNote: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconMusicNote: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'music-note-title'}>{title}</title> : null}<path opacity=".2" d="M16.86 6.78c.63-.24.94-.36 1.11-.6l.1-.17c.12-.28.07-.6-.04-1.27-.17-.99-.25-1.49-.58-1.73l-.22-.11c-.38-.16-.84.04-1.77.43l-3.19 1.35c-.6.25-.9.38-1.06.62l-.12.23c-.1.27-.02.59.12 1.22.2.86.3 1.28.58 1.5a1 1 0 0 0 .28.15c.35.12.76-.04 1.57-.36zm-5.88 11.83a2.82 2.82 0 1 1-5.63 0 2.82 2.82 0 0 1 5.63 0" fill="currentColor"/><path d="M10.98 18.61a2.8 2.8 0 0 1-2.81 2.82 2.82 2.82 0 1 1 2.81-2.82m0-.18L11 9.3m0 0v-.45c-.01-2.06-.01-3.1.54-3.88s1.53-1.12 3.48-1.8l1.58-.56c.38-.13.56-.2.71-.2a1 1 0 0 1 1 .7c.04.15.04.35.04.74 0 .63 0 .94-.05 1.22a3 3 0 0 1-1.4 2c-.24.15-.54.26-1.13.47z" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'music-note-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M16.86 6.78c.63-.24.94-.36 1.11-.6l.1-.17c.12-.28.07-.6-.04-1.27-.17-.99-.25-1.49-.58-1.73l-.22-.11c-.38-.16-.84.04-1.77.43l-3.19 1.35c-.6.25-.9.38-1.06.62l-.12.23c-.1.27-.02.59.12 1.22.2.86.3 1.28.58 1.5a1 1 0 0 0 .28.15c.35.12.76-.04 1.57-.36zm-5.88 11.83a2.82 2.82 0 1 1-5.63 0 2.82 2.82 0 0 1 5.63 0'
+        fill='currentColor'
+      />
+      <path
+        d='M10.98 18.61a2.8 2.8 0 0 1-2.81 2.82 2.82 2.82 0 1 1 2.81-2.82m0-.18L11 9.3m0 0v-.45c-.01-2.06-.01-3.1.54-3.88s1.53-1.12 3.48-1.8l1.58-.56c.38-.13.56-.2.71-.2a1 1 0 0 1 1 .7c.04.15.04.35.04.74 0 .63 0 .94-.05 1.22a3 3 0 0 1-1.4 2c-.24.15-.54.26-1.13.47z'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

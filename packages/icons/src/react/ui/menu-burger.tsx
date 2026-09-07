@@ -11,7 +11,10 @@ export const IconMenuBurger: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,8 @@ export const IconMenuBurger: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'menu-burger-title'}>{title}</title> : null}<path d="M3 5.19h18M3 11.94h18M3 18.81h18" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'menu-burger-title'}>{title}</title> : null}
+      <path d='M3 5.19h18M3 11.94h18M3 18.81h18' stroke='currentColor' />
+    </svg>
   )
 }

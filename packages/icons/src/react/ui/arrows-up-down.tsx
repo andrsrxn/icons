@@ -11,7 +11,10 @@ export const IconArrowsUpDown: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconArrowsUpDown: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'arrows-up-down-title'}>{title}</title> : null}<path d="m3.55 6.81 1.2-1.2c1.34-1.34 2-2.01 2.83-2.01s1.5.67 2.83 2l1.21 1.21m.76 10.38 1.2 1.2c1.33 1.34 2 2.01 2.83 2.01s1.5-.67 2.83-2l1.21-1.21M7.59 20V3.89m8.82.31v16.12" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'arrows-up-down-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m3.55 6.81 1.2-1.2c1.34-1.34 2-2.01 2.83-2.01s1.5.67 2.83 2l1.21 1.21m.76 10.38 1.2 1.2c1.33 1.34 2 2.01 2.83 2.01s1.5-.67 2.83-2l1.21-1.21M7.59 20V3.89m8.82.31v16.12'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

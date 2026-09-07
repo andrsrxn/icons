@@ -11,7 +11,10 @@ export const IconTextUnderline: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconTextUnderline: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-underline-title'}>{title}</title> : null}<path d="M17.08 3.76v7.49a5.09 5.09 0 1 1-10.17 0V3.76M19.64 20H4.36" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'text-underline-title'}>{title}</title>
+      ) : null}
+      <path d='M17.08 3.76v7.49a5.09 5.09 0 1 1-10.17 0V3.76M19.64 20H4.36' stroke='currentColor' />
+    </svg>
   )
 }

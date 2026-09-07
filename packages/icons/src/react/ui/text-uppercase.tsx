@@ -11,7 +11,10 @@ export const IconTextUppercase: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,13 @@ export const IconTextUppercase: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-uppercase-title'}>{title}</title> : null}<path d="m2.56 19.25 2.81-9.87c.79-2.74 1.18-4.11 1.93-4.11.76 0 1.15 1.37 1.92 4.12L12 19.25m0 0 2.82-9.87c.78-2.74 1.17-4.11 1.93-4.11.75 0 1.14 1.37 1.92 4.12l2.77 9.86m-11.16-5.7h-6m15.44 0h-6" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'text-uppercase-title'}>{title}</title>
+      ) : null}
+      <path
+        d='m2.56 19.25 2.81-9.87c.79-2.74 1.18-4.11 1.93-4.11.76 0 1.15 1.37 1.92 4.12L12 19.25m0 0 2.82-9.87c.78-2.74 1.17-4.11 1.93-4.11.75 0 1.14 1.37 1.92 4.12l2.77 9.86m-11.16-5.7h-6m15.44 0h-6'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

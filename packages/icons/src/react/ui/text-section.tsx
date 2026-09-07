@@ -11,7 +11,10 @@ export const IconTextSection: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconTextSection: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-section-title'}>{title}</title> : null}<path d="M15.56 5.38c-.34-1.03-1.47-2.2-3.49-2.2S8.44 4.28 8.44 6.1c0 3.92 7.12 1.54 7.12 5.64 0 2.18-1.77 3-3.49 3-2.02 0-3.63-.82-3.63-2.35" stroke="currentColor"/><path d="M15.56 11.51c0-.99-1.47-2.24-3.49-2.24s-3.63 1.08-3.63 2.91c0 3.92 7.12 1.54 7.12 5.64 0 1.84-1.47 3-3.49 3s-3.2-1.11-3.63-2.1" stroke="currentColor"/><ellipse opacity=".2" cx="12" cy="12" rx="3.56" ry="2.45" fill="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'text-section-title'}>{title}</title> : null}
+      <path
+        d='M15.56 5.38c-.34-1.03-1.47-2.2-3.49-2.2S8.44 4.28 8.44 6.1c0 3.92 7.12 1.54 7.12 5.64 0 2.18-1.77 3-3.49 3-2.02 0-3.63-.82-3.63-2.35'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.56 11.51c0-.99-1.47-2.24-3.49-2.24s-3.63 1.08-3.63 2.91c0 3.92 7.12 1.54 7.12 5.64 0 1.84-1.47 3-3.49 3s-3.2-1.11-3.63-2.1'
+        stroke='currentColor'
+      />
+      <ellipse opacity='.2' cx='12' cy='12' rx='3.56' ry='2.45' fill='currentColor' />
+    </svg>
   )
 }

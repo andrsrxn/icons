@@ -11,7 +11,10 @@ export const IconArrowCornerDownLeft: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -21,10 +24,23 @@ export const IconArrowCornerDownLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'arrow-corner-down-left-title' : undefined}
+      aria-labelledby={
+        isLabelled && title && !ariaLabel ? 'arrow-corner-down-left-title' : undefined
+      }
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'arrow-corner-down-left-title'}>{title}</title> : null}<path d="M5.8 15.5h5.53c3.77 0 5.65 0 6.82-1.17 1.18-1.17 1.18-3.05 1.18-6.82V4.23" stroke="currentColor"/><path d="M7.94 19.77 6.5 18.34c-1.33-1.34-2-2-2-2.83s.67-1.5 2-2.83l1.44-1.44" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? (
+        <title id={'arrow-corner-down-left-title'}>{title}</title>
+      ) : null}
+      <path
+        d='M5.8 15.5h5.53c3.77 0 5.65 0 6.82-1.17 1.18-1.17 1.18-3.05 1.18-6.82V4.23'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.94 19.77 6.5 18.34c-1.33-1.34-2-2-2-2.83s.67-1.5 2-2.83l1.44-1.44'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

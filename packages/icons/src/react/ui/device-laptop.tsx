@@ -11,7 +11,10 @@ export const IconDeviceLaptop: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,16 @@ export const IconDeviceLaptop: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'device-laptop-title'}>{title}</title> : null}<path opacity=".2" d="M3.64 15.82c.3-.42.44-.63.66-.74.22-.12.47-.12.98-.12h13.67c.54 0 .8 0 1.03.13.23.12.37.35.66.8l.15.24c.85 1.36 1.28 2.03 1 2.55-.3.52-1.1.52-2.7.52H5.12c-1.69 0-2.53 0-2.8-.54-.29-.54.2-1.23 1.16-2.6z" fill="currentColor"/><path d="M19.26 14.49V10.8c0-2.83 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88h-2.23c-2.83 0-4.25 0-5.13.88s-.87 2.3-.87 5.12v3.69m-.63.97c.28-.47.42-.71.65-.84s.5-.13 1.06-.13H18.2c.54 0 .82 0 1.05.13.22.13.37.36.65.83l.43.7c.83 1.35 1.24 2.03.95 2.54-.29.5-1.08.5-2.65.5H5.69c-1.57 0-2.35 0-2.64-.5-.28-.5.12-1.18.92-2.52z" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'device-laptop-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M3.64 15.82c.3-.42.44-.63.66-.74.22-.12.47-.12.98-.12h13.67c.54 0 .8 0 1.03.13.23.12.37.35.66.8l.15.24c.85 1.36 1.28 2.03 1 2.55-.3.52-1.1.52-2.7.52H5.12c-1.69 0-2.53 0-2.8-.54-.29-.54.2-1.23 1.16-2.6z'
+        fill='currentColor'
+      />
+      <path
+        d='M19.26 14.49V10.8c0-2.83 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88h-2.23c-2.83 0-4.25 0-5.13.88s-.87 2.3-.87 5.12v3.69m-.63.97c.28-.47.42-.71.65-.84s.5-.13 1.06-.13H18.2c.54 0 .82 0 1.05.13.22.13.37.36.65.83l.43.7c.83 1.35 1.24 2.03.95 2.54-.29.5-1.08.5-2.65.5H5.69c-1.57 0-2.35 0-2.64-.5-.28-.5.12-1.18.92-2.52z'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconEdit: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,19 @@ export const IconEdit: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'edit-title'}>{title}</title> : null}<path d="M5.57 21.26H21m-16.02 0c.82 0 1.23 0 1.6-.15.36-.15.65-.44 1.23-1.02L20.23 7.67a5 5 0 0 0 .92-1.05 2 2 0 0 0 0-1.84 5 5 0 0 0-.92-1.05 5 5 0 0 0-1.05-.92 2 2 0 0 0-1.84 0c-.28.15-.53.4-1.05.92L3.87 16.15c-.58.58-.87.87-1.02 1.24-.15.36-.15.77-.15 1.6v.27c0 .95 0 1.42.29 1.71.3.3.76.3 1.7.3zM18.4 9.08l-3.12-3.12" stroke="currentColor"/><rect opacity=".2" width="5.23" height="5.86" rx="1" transform="scale(1 -1)rotate(45 21.1 17.2)" fill="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'edit-title'}>{title}</title> : null}
+      <path
+        d='M5.57 21.26H21m-16.02 0c.82 0 1.23 0 1.6-.15.36-.15.65-.44 1.23-1.02L20.23 7.67a5 5 0 0 0 .92-1.05 2 2 0 0 0 0-1.84 5 5 0 0 0-.92-1.05 5 5 0 0 0-1.05-.92 2 2 0 0 0-1.84 0c-.28.15-.53.4-1.05.92L3.87 16.15c-.58.58-.87.87-1.02 1.24-.15.36-.15.77-.15 1.6v.27c0 .95 0 1.42.29 1.71.3.3.76.3 1.7.3zM18.4 9.08l-3.12-3.12'
+        stroke='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='5.23'
+        height='5.86'
+        rx='1'
+        transform='scale(1 -1)rotate(45 21.1 17.2)'
+        fill='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconTouchpad: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,10 @@ export const IconTouchpad: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'touchpad-title'}>{title}</title> : null}<rect opacity=".2" x="2.71" y="12" width="18.58" height="6.97" rx="2" fill="currentColor"/><rect x="2.71" y="5.03" width="18.58" height="13.94" rx="3" stroke="currentColor"/><path d="M2.7 12h18.6M12 18.97V12" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'touchpad-title'}>{title}</title> : null}
+      <rect opacity='.2' x='2.71' y='12' width='18.58' height='6.97' rx='2' fill='currentColor' />
+      <rect x='2.71' y='5.03' width='18.58' height='13.94' rx='3' stroke='currentColor' />
+      <path d='M2.7 12h18.6M12 18.97V12' stroke='currentColor' />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconLeaf: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,17 @@ export const IconLeaf: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'leaf-title'}>{title}</title> : null}<path opacity=".2" d="M6.88 6.07c3.97-3.53 9.24-3.65 11.62-3.5.78.05 1.4.62 1.5 1.4.3 2.34.43 7.53-3.4 11.76-3.51 3.88-8.21 3.14-10.54 1.05-2.13-1.92-3.27-7.06.82-10.7" fill="currentColor"/><path d="M6.88 6.07c3.36-2.99 7.66-3.54 10.35-3.54 1.1 0 1.64 0 2.22.55s.61 1.09.66 2.16c.14 2.65-.27 6.91-3.5 10.49-3.52 3.88-8.22 3.14-10.55 1.05-2.13-1.92-3.27-7.06.82-10.7" stroke="currentColor"/><path d="M11.92 10.6c-2.08 1.3-6.51 5.38-7.6 11.31" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'leaf-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M6.88 6.07c3.97-3.53 9.24-3.65 11.62-3.5.78.05 1.4.62 1.5 1.4.3 2.34.43 7.53-3.4 11.76-3.51 3.88-8.21 3.14-10.54 1.05-2.13-1.92-3.27-7.06.82-10.7'
+        fill='currentColor'
+      />
+      <path
+        d='M6.88 6.07c3.36-2.99 7.66-3.54 10.35-3.54 1.1 0 1.64 0 2.22.55s.61 1.09.66 2.16c.14 2.65-.27 6.91-3.5 10.49-3.52 3.88-8.22 3.14-10.55 1.05-2.13-1.92-3.27-7.06.82-10.7'
+        stroke='currentColor'
+      />
+      <path d='M11.92 10.6c-2.08 1.3-6.51 5.38-7.6 11.31' stroke='currentColor' />
+    </svg>
   )
 }

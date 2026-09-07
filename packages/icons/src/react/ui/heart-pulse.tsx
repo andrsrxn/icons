@@ -11,7 +11,10 @@ export const IconHeartPulse: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,20 @@ export const IconHeartPulse: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'heart-pulse-title'}>{title}</title> : null}<path opacity=".2" d="M12.87 20.08c2.52-2.22 6.16-4.11 7.76-7.55h-5.98l-1.78 2.21-3.22-4.7-2 2.49H3.36c1.6 3.44 5.24 5.33 7.76 7.55.43.39.65.58.87.58s.44-.2.87-.58" fill="currentColor"/><path d="M7.28 3.84c1.53 0 2.8.8 3.67 1.63.57.54.85.8 1.05.8s.48-.26 1.05-.8a5.4 5.4 0 0 1 3.67-1.63c2.96 0 4.71 2.8 4.71 4.93 0 6.1-5.37 8.45-8.67 11.4-.38.35-.57.52-.76.52s-.38-.17-.76-.51c-3.3-2.96-8.67-5.3-8.67-11.41 0-2.13 1.75-4.93 4.71-4.93" stroke="currentColor"/><path d="M3.8 12.38h3.6c.3 0 .43 0 .55-.07s.19-.2.33-.44l.54-.98c.4-.7.6-1.06.9-1.06.29 0 .48.36.86 1.08l1.64 3.07c.4.75.6 1.13.91 1.13.3-.01.5-.4.87-1.16l.5-1.01c.13-.27.2-.4.32-.48s.27-.08.58-.08h4.8" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'heart-pulse-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M12.87 20.08c2.52-2.22 6.16-4.11 7.76-7.55h-5.98l-1.78 2.21-3.22-4.7-2 2.49H3.36c1.6 3.44 5.24 5.33 7.76 7.55.43.39.65.58.87.58s.44-.2.87-.58'
+        fill='currentColor'
+      />
+      <path
+        d='M7.28 3.84c1.53 0 2.8.8 3.67 1.63.57.54.85.8 1.05.8s.48-.26 1.05-.8a5.4 5.4 0 0 1 3.67-1.63c2.96 0 4.71 2.8 4.71 4.93 0 6.1-5.37 8.45-8.67 11.4-.38.35-.57.52-.76.52s-.38-.17-.76-.51c-3.3-2.96-8.67-5.3-8.67-11.41 0-2.13 1.75-4.93 4.71-4.93'
+        stroke='currentColor'
+      />
+      <path
+        d='M3.8 12.38h3.6c.3 0 .43 0 .55-.07s.19-.2.33-.44l.54-.98c.4-.7.6-1.06.9-1.06.29 0 .48.36.86 1.08l1.64 3.07c.4.75.6 1.13.91 1.13.3-.01.5-.4.87-1.16l.5-1.01c.13-.27.2-.4.32-.48s.27-.08.58-.08h4.8'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

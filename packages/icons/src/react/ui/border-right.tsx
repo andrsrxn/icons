@@ -11,7 +11,10 @@ export const IconBorderRight: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,26 @@ export const IconBorderRight: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'border-right-title'}>{title}</title> : null}<rect opacity=".2" x="21.24" y="21.24" width="18.48" height="18.48" rx="3" transform="rotate(-180 21.24 21.24)" fill="currentColor"/><path d="M14.78 21.24H8.76c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.02" stroke="currentColor" strokeDasharray="4 4"/><path d="M12 15.37V8.63M15.37 12H8.63M18 2.76h.43A3 3 0 0 1 21.24 6v12.43a3 3 0 0 1-2.8 2.8l-.44.01" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'border-right-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='21.24'
+        y='21.24'
+        width='18.48'
+        height='18.48'
+        rx='3'
+        transform='rotate(-180 21.24 21.24)'
+        fill='currentColor'
+      />
+      <path
+        d='M14.78 21.24H8.76c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.02'
+        stroke='currentColor'
+        strokeDasharray='4 4'
+      />
+      <path
+        d='M12 15.37V8.63M15.37 12H8.63M18 2.76h.43A3 3 0 0 1 21.24 6v12.43a3 3 0 0 1-2.8 2.8l-.44.01'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

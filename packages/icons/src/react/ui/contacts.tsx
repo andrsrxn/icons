@@ -11,7 +11,10 @@ export const IconContacts: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,33 @@ export const IconContacts: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'contacts-title'}>{title}</title> : null}<rect opacity=".2" x="16.08" y="2.74" width="4.82" height="18.52" rx="2" fill="currentColor"/><circle opacity=".2" cx="3.1" cy="3.1" r="3.1" transform="matrix(0 1 1 0 6.82 7.72)" fill="currentColor"/><rect x="3.11" y="2.74" width="17.79" height="18.52" rx="3" stroke="currentColor"/><path d="M9.92 13.85a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0 0c-1.34 0-2.63.62-3.51 1.62m3.51-1.62c1.35 0 2.64.62 3.52 1.62" stroke="currentColor"/><path d="M12.9 10.83a2.97 2.97 0 0 1-2.98 2.98 2.98 2.98 0 1 1 2.99-2.98M16.6 7.7h4.3M16.6 12h4.3m-4.3 4.3h4.3M16.45 21V3" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'contacts-title'}>{title}</title> : null}
+      <rect
+        opacity='.2'
+        x='16.08'
+        y='2.74'
+        width='4.82'
+        height='18.52'
+        rx='2'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='3.1'
+        cy='3.1'
+        r='3.1'
+        transform='matrix(0 1 1 0 6.82 7.72)'
+        fill='currentColor'
+      />
+      <rect x='3.11' y='2.74' width='17.79' height='18.52' rx='3' stroke='currentColor' />
+      <path
+        d='M9.92 13.85a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0 0c-1.34 0-2.63.62-3.51 1.62m3.51-1.62c1.35 0 2.64.62 3.52 1.62'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.9 10.83a2.97 2.97 0 0 1-2.98 2.98 2.98 2.98 0 1 1 2.99-2.98M16.6 7.7h4.3M16.6 12h4.3m-4.3 4.3h4.3M16.45 21V3'
+        stroke='currentColor'
+      />
+    </svg>
   )
 }

@@ -11,7 +11,10 @@ export const IconCopyright: Icon = ({
   const isLabelled = Boolean(ariaLabel || title)
 
   return (
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
       strokeWidth={strokeWidth}
@@ -25,6 +28,14 @@ export const IconCopyright: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`ui-icon ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'copyright-title'}>{title}</title> : null}<path opacity=".2" d="M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0" fill="currentColor"/><path d="M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12" stroke="currentColor"/><path d="M14.62 7.58a4.98 4.98 0 1 0 0 8.88" stroke="currentColor"/></svg>
+      {isLabelled && title && !ariaLabel ? <title id={'copyright-title'}>{title}</title> : null}
+      <path
+        opacity='.2'
+        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
+        fill='currentColor'
+      />
+      <path d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12' stroke='currentColor' />
+      <path d='M14.62 7.58a4.98 4.98 0 1 0 0 8.88' stroke='currentColor' />
+    </svg>
   )
 }
