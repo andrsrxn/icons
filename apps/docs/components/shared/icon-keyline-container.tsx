@@ -3,7 +3,6 @@
 
 import { IconSettings } from '@andrsrxn/icons'
 import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
-import { useTheme } from '@teispace/next-themes'
 import { type RefObject, useEffect, useState } from 'react'
 import { useLocalStorage } from 'react-use'
 import { Button } from '@/components/ui/button'
@@ -30,7 +29,6 @@ export const IconKeylineContainer = ({
   icon: IconCatalogEntry
   containerRef: RefObject<HTMLDivElement | null>
 }) => {
-  const { theme } = useTheme()
   const [shouldShowKeyline, setShouldShowKeyline] = useLocalStorage('should-show-keyline', true)
   const [hasRTL, setHasRTL] = useState(false)
   const [mounted, setMounted] = useState(false)
