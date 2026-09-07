@@ -47,11 +47,11 @@ import {
   IconUpload,
   IconUser,
   IconUsers,
-  IconVolumeHigh,
   IconX,
 } from '@andrsrxn/icons'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
+import { SliderDemo } from '@/components/shared/slider-demo'
 import { TreeItemDemo } from '@/components/shared/tree-item-demo'
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import {
@@ -100,8 +100,7 @@ import {
   FieldTitle,
 } from '@/components/ui/field'
 import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/input-group'
-import { Item, ItemActions, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
-import { Slider } from '@/components/ui/slider'
+import { Item, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { cn } from '@/lib/utils'
@@ -423,18 +422,7 @@ export default function ExamplesPage() {
             </FieldLabel>
           </div>
           <div className='grid gap-6 h-max'>
-            <Item variant='outline' aria-hidden>
-              <ItemMedia variant='icon'>
-                <IconVolumeHigh />
-              </ItemMedia>
-              <ItemContent>
-                <ItemTitle>Volume</ItemTitle>
-              </ItemContent>
-              <ItemActions className='flex-1'>
-                {/** biome-ignore lint/style/noMagicNumbers: unnecessary */}
-                <Slider defaultValue={[50]} min={0} max={100} />
-              </ItemActions>
-            </Item>
+            <SliderDemo />
             <Command
               className='max-w-sm rounded-lg border'
               aria-hidden
