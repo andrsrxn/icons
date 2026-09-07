@@ -31,6 +31,7 @@ import {
   IconPlus,
   IconReceipt,
   IconRefresh,
+  IconRobot,
   IconSettings,
   IconShield,
   IconSignOut,
@@ -76,10 +77,8 @@ import { ButtonGroup } from '@/components/ui/button-group'
 import { Checkbox } from '@/components/ui/checkbox'
 import {
   Command,
-  CommandEmpty,
   CommandGroup,
   CommandInput,
-  CommandItem,
   CommandList,
   CommandSeparator,
   CommandShortcut,
@@ -119,9 +118,22 @@ const DropdownMenuItem = ({ children, className }: { children: ReactNode; classN
   )
 }
 
+const CommandItem = ({ children, className }: { children: ReactNode; className?: string }) => {
+  return (
+    <div
+      className={cn(
+        // biome-ignore lint/security/noSecrets: false positive
+        'group/command-item relative flex cursor-pointer items-center gap-2 rounded-sm px-2 py-1.5 text-sm outline-hidden select-none hover:bg-muted hover:text-foreground [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*="size-"])]:size-4 hover:*:[svg]:text-foreground',
+        className
+      )}>
+      {children}
+    </div>
+  )
+}
+
 export default function ExamplesPage() {
   return (
-    <section className='py-10'>
+    <section className='py-10 block w-full'>
       <div className='wrapper lg:max-w-7xl'>
         <Link
           href='/'
@@ -135,13 +147,12 @@ export default function ExamplesPage() {
           See our icons in action with real life use cases
         </p>
       </div>
-
       <div className='overflow-x-auto scroll-fade-x overflow-y-clip px-[5%]'>
         <div className='grid grid-cols-4 w-275 xl:max-w-6xl xl:zoom-110 xl:wrapper lg:w-7xl lg:px-0 xl:w-full lg:zoom-105 gap-6 animate-in zoom-in-85 duration-600 ease-in-out fade-in py-8'>
-          <div className='grid gap-6 h-max '>
+          <div className='grid gap-6 h-max'>
             <div
               className={
-                'w-full overflow-x-hidden overflow-y-auto rounded-lg bg-popover p-1 text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100 outline-none'
+                'w-full rounded-lg bg-popover p-1 text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100 outline-none'
               }>
               <DropdownMenuItem>
                 <IconUser /> Account
@@ -178,7 +189,7 @@ export default function ExamplesPage() {
                 <IconDatabase /> API
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconHelp /> Support
+                <IconRobot /> Agents
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className='text-destructive bg-destructive/5 hover:bg-destructive/10 hover:text-destructive'>
@@ -227,7 +238,7 @@ export default function ExamplesPage() {
               </DropdownMenuItem>
             </div>
           </div>
-          <div className='grid h-max gap-6'>
+          <div className='grid gap-6 h-max'>
             <Alert className='h-max bg-green-50 border-green-300 text-green-950 dark:bg-green-950 dark:border-green-700 dark:text-green-50'>
               <IconCheckCircle />
               <AlertTitle>Payment successful</AlertTitle>
@@ -380,7 +391,7 @@ export default function ExamplesPage() {
               size='sm'
               className='bg-blue-50 hover:bg-blue-100! border-blue-300 dark:bg-blue-950 dark:border-blue-700 dark:text-blue-50 dark:hover:bg-blue-950!'>
               <ItemMedia>
-                <IconStarSeal className='text-blue-700 size-5' />
+                <IconStarSeal className='text-blue-900 dark:text-blue-50 size-5' />
               </ItemMedia>
               <ItemContent>
                 <ItemTitle className='text-blue-900 leading-none dark:text-blue-50'>
@@ -412,7 +423,7 @@ export default function ExamplesPage() {
             </FieldLabel>
           </div>
           <div className='grid gap-6 h-max'>
-            <Item variant='outline'>
+            <Item variant='outline' aria-hidden>
               <ItemMedia variant='icon'>
                 <IconVolumeHigh />
               </ItemMedia>
@@ -424,10 +435,12 @@ export default function ExamplesPage() {
                 <Slider defaultValue={[50]} min={0} max={100} />
               </ItemActions>
             </Item>
-            <Command className='max-w-sm rounded-lg border'>
-              <CommandInput placeholder='Type a command or search...' />
+            <Command
+              className='max-w-sm rounded-lg border'
+              aria-hidden
+              disablePointerSelection={true}>
+              <CommandInput autoFocus={false} readOnly placeholder='Type a command or search...' />
               <CommandList>
-                <CommandEmpty>No results found.</CommandEmpty>
                 <CommandGroup heading='Suggestions'>
                   <CommandItem>
                     <IconCalendar />
