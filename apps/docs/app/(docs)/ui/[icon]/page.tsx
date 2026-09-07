@@ -2,6 +2,8 @@ import { IconChevronLeft } from '@andrsrxn/icons'
 import Link from 'next/link'
 import { IconSection } from '@/components/sections/icon'
 
+export const dynamic = 'force-dynamic'
+
 export default async function IconPage({ params }: { params: Promise<{ icon: string }> }) {
   const { icon: iconName } = await params
 
@@ -14,6 +16,7 @@ export default async function IconPage({ params }: { params: Promise<{ icon: str
         <IconChevronLeft className='size-4' />
         Back to icons
       </Link>
+
       <IconSection iconName={iconName} />
     </div>
   )

@@ -56,6 +56,7 @@ export const IconGrid = () => {
             <SelectIconCategory className='lg:hidden' value={category} onChange={setCategory} />
 
             <IconGridSidebar containerRef={containerRef} UIIconsCount={UIIconsCount} />
+
             <IconGridList
               className='lg:col-span-4 xl:col-span-6'
               icons={pageItems}

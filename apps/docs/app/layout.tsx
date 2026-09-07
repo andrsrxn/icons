@@ -2,6 +2,7 @@ import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import '@andrsrxn/icons/styles.css'
 import './globals.css'
 import { Geist } from 'next/font/google'
+import { Suspense } from 'react'
 import { preconnect } from 'react-dom'
 import { AppProviders } from '@/components/providers/providers'
 import { Footer } from '@/components/sections/footer'
@@ -31,7 +32,7 @@ export default function RootLayout({ children, modal }: LayoutProps<'/'>) {
       className={cn('h-full antialiased font-sans', fontSans.variable)}>
       <body className='min-h-full relative'>
         <AppProviders>
-          {children}
+          <Suspense fallback={<div className='min-h-dvh' />}>{children}</Suspense>
           {modal}
           <Footer className='mt-8' />
         </AppProviders>
