@@ -2,11 +2,11 @@
 
 import { type ComponentProps, type CSSProperties, useEffect, useMemo, useState } from 'react'
 import type { BundledLanguage } from 'shiki'
-import { codeToHtml } from 'shiki'
 import { ButtonCopy } from '@/components/shared/button-copy'
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area'
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
+import { highlightCode } from '@/lib/utils/shiki'
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -55,14 +55,10 @@ function splitShikiLines(html: string): string[] {
 
 async function highlight(code: string, lang: BundledLanguage = 'tsx'): Promise<string> {
   try {
-    return await codeToHtml(code, {
-      lang,
-      theme: 'github-dark',
-    })
-  } catch {
-    // Fallback: wrap in plain-text pre/code so the UI never breaks
+    return await highlightCode(code, lang)
+  } catch (error) {
+    console.error('Shiki highlighting failed:', error)
     const escaped = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
-
     return `<pre><code>${escaped}</code></pre>`
   }
 }

@@ -10,7 +10,7 @@ const imgServices = 'https://res.cloudinary.com'
 
 const cspHeader = ` 
     default-src 'self';
-    script-src 'self' 'unsafe-inline' ${isDev ? "'unsafe-eval' blob:" : ''} ${scriptServices} ;
+    script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline' ${isDev ? "'unsafe-eval' blob:" : ''} ${scriptServices} ;
     connect-src 'self' ${connectServices};
     style-src 'self' 'unsafe-inline';
     frame-src 'self';
