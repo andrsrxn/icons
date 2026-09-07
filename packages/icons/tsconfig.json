@@ -1,47 +1,8 @@
 {
+  "extends": "@andrsrxn/ts-config/react",
   "compilerOptions": {
-    "target": "ES2024",
-    "lib": ["ES2024", "DOM"],
-    "module": "ESNext",
-    "moduleResolution": "bundler",
-    "skipLibCheck": true,
-    "types": ["node"],
-    "useDefineForClassFields": true,
-
-    /* Bundler mode */
-    "allowImportingTsExtensions": true,
-    "verbatimModuleSyntax": true,
-    "moduleDetection": "force",
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "allowJs": true,
-
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "erasableSyntaxOnly": true,
-    "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-
-    "declarationMap": false,
-    "declaration": false,
-    "sourceMap": false,
-
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "incremental": true,
-    "tsBuildInfoFile": "./.tsbuildinfo",
-    "forceConsistentCasingInFileNames": true,
-    "noUncheckedIndexedAccess": true,
-    "removeComments": false,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "noImplicitThis": true,
-
-    "skipDefaultLibCheck": true
+    "types": ["node"]
   },
   "include": ["src", "tsdown.config.ts", "demo", "__tests__"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": ["node_modules", "dist", ".turbo"]
 }
