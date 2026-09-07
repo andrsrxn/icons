@@ -3,6 +3,7 @@
 
 import { IconSettings } from '@andrsrxn/icons'
 import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import { useTheme } from '@teispace/next-themes'
 import { type RefObject, useEffect, useState } from 'react'
 import { useLocalStorage } from 'react-use'
 import { Button } from '@/components/ui/button'
@@ -35,18 +36,20 @@ export const IconKeylineContainer = ({
   const [strokeWidth, setStrokeWidth] = useState(ICON_STROKE_WIDTH)
   const [color, setColor] = useState<string>('currentColor')
 
+  const { resolvedTheme } = useTheme()
   const keylineURL = 'url(/assets/keyline.svg)'
   const componentName = getIconComponentName(icon.name, icon.group)
   const IconComponent = ICON_LOOKUP[componentName as keyof typeof ICON_LOOKUP]
 
   function reset() {
     setStrokeWidth(ICON_STROKE_WIDTH)
-    setColor('currentColor')
+    setColor(resolvedTheme === 'dark' ? '#ffffff' : '#000000')
   }
-
+  // fix reset on darkmode with resolve theme, start with figma
   useEffect(() => {
+    setColor(resolvedTheme === 'dark' ? '#ffffff' : '#000000')
     setMounted(true)
-  }, [])
+  }, [resolvedTheme])
 
   const isUI = isUIIcon(icon)
 
