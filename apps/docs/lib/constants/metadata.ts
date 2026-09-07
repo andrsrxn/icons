@@ -5,6 +5,9 @@ import { SITE } from '@/lib/constants/site'
 
 export const baseViewport: Viewport = {
   themeColor: COMPANY.brand.backgroundColor,
+  initialScale: 1,
+  minimumScale: 1,
+  width: 'device-width',
 }
 
 export const baseMetadata: Metadata = {
