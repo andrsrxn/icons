@@ -2,7 +2,7 @@ import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import '@andrsrxn/icons/styles.css'
 import './globals.css'
 import { Geist } from 'next/font/google'
-import { Suspense } from 'react'
+import { Suspense, type ReactNode } from 'react'
 import { preconnect } from 'react-dom'
 import { AppProviders } from '@/components/providers/providers'
 import { Footer } from '@/components/sections/footer'
@@ -20,7 +20,7 @@ const fontSans = Geist({
 export const metadata = baseMetadata
 export const viewport = baseViewport
 
-export default function RootLayout({ children, modal }: LayoutProps<'/'>) {
+export default function RootLayout({ children, modal }: { children: ReactNode; modal: ReactNode }) {
   preconnect('https://res.cloudinary.com', {
     crossOrigin: 'anonymous',
   })
