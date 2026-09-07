@@ -6,3 +6,5 @@ node_modules
 .github
 CHANGELOG.md
 src/raw
+.next
+.turbo
