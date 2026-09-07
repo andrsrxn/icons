@@ -21,8 +21,12 @@
       "persistent": true,
       "cache": false
     },
-    "format": {},
-    "format:check": {},
+    "format": {
+      "cache": false
+    },
+    "format:check": {
+      "cache": false
+    },
     "test:check": {
       "cache": false
     },

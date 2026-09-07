@@ -82,8 +82,6 @@
     "build:icons": "tsdown && node ./scripts/fix-types-exports.js && node ./scripts/inject-dts-previews.js",
     "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
     "build": "pnpm build:icons && pnpm build:css && pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only --exclude-entrypoints styles.css && pnpm dlx publint . && echo Build finished.",
-    "format": "prettier --write . && echo Format finished.",
-    "format:check": "prettier --check . && echo Format finished.",
     "lint": "biome check && echo Lint finished.",
     "lint:check": "biome ci && echo Lint finished.",
     "type:check": "tsc --noEmit && echo Type check finished.",

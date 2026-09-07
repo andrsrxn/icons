@@ -4,8 +4,6 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "format": "prettier --write . && echo Format finished.",
-    "format:check": "prettier --check . && echo Format finished.",
     "build": "next build",
     "start": "next start",
     "lint": "biome check && echo Lint finished.",
