@@ -20,13 +20,13 @@ export const IconCameraOff: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-camera-off'
+      data-slot='icon-ui-camera-off'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'camera-off-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'camera-off-title'}>{title}</title> : null}
       <path

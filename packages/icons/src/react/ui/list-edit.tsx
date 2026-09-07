@@ -20,13 +20,13 @@ export const IconListEdit: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-list-edit'
+      data-slot='icon-ui-list-edit'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'list-edit-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'list-edit-title'}>{title}</title> : null}
       <path d='M21.42 6H2.67m9.13 6H2.68m5.05 6H2.67' stroke='currentColor' />

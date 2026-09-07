@@ -20,13 +20,13 @@ export const IconEraser: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-eraser'
+      data-slot='icon-ui-eraser'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'eraser-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'eraser-title'}>{title}</title> : null}
       <path

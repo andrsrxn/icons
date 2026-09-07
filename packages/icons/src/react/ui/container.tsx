@@ -20,13 +20,13 @@ export const IconContainer: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-container'
+      data-slot='icon-ui-container'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'container-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'container-title'}>{title}</title> : null}
       <rect

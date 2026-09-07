@@ -20,13 +20,13 @@ export const IconHammer: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-hammer'
+      data-slot='icon-ui-hammer'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'hammer-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'hammer-title'}>{title}</title> : null}
       <path

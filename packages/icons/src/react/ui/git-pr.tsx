@@ -20,13 +20,13 @@ export const IconGitPr: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-git-pr'
+      data-slot='icon-ui-git-pr'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'git-pr-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'git-pr-title'}>{title}</title> : null}
       <circle opacity='.2' cx='6.27' cy='18.37' r='3.07' fill='currentColor' />

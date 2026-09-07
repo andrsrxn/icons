@@ -1,14 +1,3 @@
-/** biome-ignore-all lint/performance/noNamespaceImport: only workaround to catalog generation */
-import * as Icons from '@andrsrxn/icons'
-import * as Flags from '@andrsrxn/icons/flags'
-import type { FlagIcon } from '@andrsrxn/icons/flags/types'
-import type { Icon } from '@andrsrxn/icons/types'
-
-export const ICON_LOOKUP = {
-  ...(Icons satisfies Record<string, Icon>),
-  ...(Flags satisfies Record<string, FlagIcon>),
-}
-
 export const ICON_CATEGORIES = [
   'accessibility',
   'ai',
@@ -76,12 +65,12 @@ export const ICON_PROPS = {
     },
     className: {
       type: 'string',
-      default: 'ui-icon',
+      default: 'icon-ui',
       description: 'Class to style globally the icon',
     },
     'data-slot': {
       type: 'string',
-      default: (iconName: string) => `ui-icon-${iconName}`,
+      default: (iconName: string) => `icon-ui-${iconName}`,
       description: 'Specific attribute to identify the icon',
     },
   },
@@ -105,12 +94,12 @@ export const ICON_PROPS = {
     },
     className: {
       type: 'string',
-      default: 'ui-flag',
+      default: 'icon-flag',
       description: 'Class to style globally the icon',
     },
     'data-slot': {
       type: 'string',
-      default: (iconName: string) => `ui-flag-${iconName}`,
+      default: (iconName: string) => `icon-flag-${iconName}`,
       description: 'Specific attribute to identify the icon',
     },
     'aria-hidden': {

@@ -30,7 +30,7 @@ const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.j
 const ICONS_DIR = path.join(rawIconsRoot, 'src/ui')
 const ICONS_OUT = path.resolve(__dirname, '../src/react/ui')
 
-const CLASSNAME = 'ui-icon'
+const CLASSNAME = 'icon-ui'
 const ICON_SIZE = 24
 const STROKE_WIDTH = 1.5
 

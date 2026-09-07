@@ -20,13 +20,13 @@ export const IconUsb: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-usb'
+      data-slot='icon-ui-usb'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'usb-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'usb-title'}>{title}</title> : null}
       <rect opacity='.2' x='7.07' y='7.96' width='9.86' height='13.51' rx='2' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconHourglass: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-hourglass'
+      data-slot='icon-ui-hourglass'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'hourglass-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'hourglass-title'}>{title}</title> : null}
       <path opacity='.2' d='m6.83 15.65-1.3 5.53h12.8l-1.09-5.53-5.43-4.18z' fill='currentColor' />

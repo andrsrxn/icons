@@ -20,7 +20,7 @@ export const IconTextCenterlineCenter: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-text-centerline-center'
+      data-slot='icon-ui-text-centerline-center'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconTextCenterlineCenter: Icon = ({
         isLabelled && title && !ariaLabel ? 'text-centerline-center-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'text-centerline-center-title'}>{title}</title>

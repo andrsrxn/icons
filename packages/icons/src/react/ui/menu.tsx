@@ -20,13 +20,13 @@ export const IconMenu: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-menu'
+      data-slot='icon-ui-menu'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'menu-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'menu-title'}>{title}</title> : null}
       <path d='M2.99 8.01h18.17m-18.17 0h18.17M2.99 15.99h18.17' stroke='currentColor' />

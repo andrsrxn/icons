@@ -20,13 +20,13 @@ export const IconQuestionMark: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-question-mark'
+      data-slot='icon-ui-question-mark'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'question-mark-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'question-mark-title'}>{title}</title> : null}
       <path d='M12 16c0-4.73 4.41-4.77 4.41-8.21a4.41 4.41 0 0 0-8.82 0' stroke='currentColor' />

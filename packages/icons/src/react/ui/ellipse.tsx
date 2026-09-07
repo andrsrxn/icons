@@ -20,13 +20,13 @@ export const IconEllipse: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-ellipse'
+      data-slot='icon-ui-ellipse'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'ellipse-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'ellipse-title'}>{title}</title> : null}
       <ellipse opacity='.2' cx='12' cy='12' rx='9.51' ry='6.21' fill='currentColor' />

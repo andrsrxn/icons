@@ -20,13 +20,13 @@ export const IconTouchpad: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-touchpad'
+      data-slot='icon-ui-touchpad'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'touchpad-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'touchpad-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.71' y='12' width='18.58' height='6.97' rx='2' fill='currentColor' />

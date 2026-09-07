@@ -20,13 +20,13 @@ export const IconToyBrick: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-toy-brick'
+      data-slot='icon-ui-toy-brick'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'toy-brick-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'toy-brick-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.43' y='9.3' width='19.14' height='9.71' rx='2' fill='currentColor' />

@@ -93,6 +93,11 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
               </a>
             </li>
             <li>
+              <a href='#categories' data-active={isActive('categories')}>
+                Categories
+              </a>
+            </li>
+            <li>
               <a href='#requirements' data-active={isActive('requirements')}>
                 Requirements
               </a>
@@ -102,11 +107,7 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
                 Installation
               </a>
             </li>
-            <li>
-              <a href='#categories' data-active={isActive('categories')}>
-                Categories
-              </a>
-            </li>
+
             <li>
               <a href='#usage' data-active={isActive('usage')}>
                 Usage

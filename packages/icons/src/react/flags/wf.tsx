@@ -23,13 +23,13 @@ export const IconFlagWF: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      data-slot='ui-flag-wf'
+      data-slot='icon-flag-wf'
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
       aria-labelledby={showTitle ? 'wf-title' : undefined}
       focusable={isHidden ? false : undefined}
-      className={`ui-flag ${className ?? ''}`}
+      className={`icon-flag ${className ?? ''}`}
       {...props}>
       {showTitle ? <title id={'wf-title'}>{titleText}</title> : null}
 

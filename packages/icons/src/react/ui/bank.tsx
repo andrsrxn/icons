@@ -20,13 +20,13 @@ export const IconBank: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-bank'
+      data-slot='icon-ui-bank'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'bank-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'bank-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.74' y='17.37' width='18.53' height='3.9' rx='1' fill='currentColor' />

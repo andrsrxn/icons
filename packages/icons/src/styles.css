@@ -1,11 +1,11 @@
-.ui-icon,
-.ui-flag {
+.icon-ui,
+.icon-flag {
   flex-shrink: 0;
+  vertical-align: middle;
 }
 
 /* Only to UI icons */
-.ui-icon {
-  vertical-align: middle;
+.icon-ui {
   pointer-events: none;
 }
 
@@ -15,121 +15,121 @@
  */
 
 /* Arrows and chevrons */
-[dir=rtl] [data-slot='ui-icon-arrow-left'],
-[dir=rtl] [data-slot='ui-icon-arrow-right'],
-[dir=rtl] [data-slot='ui-icon-arrow-up-left'],
-[dir=rtl] [data-slot='ui-icon-arrow-up-right'],
-[dir=rtl] [data-slot='ui-icon-chevron-left'],
-[dir=rtl] [data-slot='ui-icon-chevron-right'],
-[dir=rtl] [data-slot='ui-icon-chevron-left-double'],
-[dir=rtl] [data-slot='ui-icon-chevron-right-double'],
+[dir=rtl] [data-slot='icon-ui-arrow-left'],
+[dir=rtl] [data-slot='icon-ui-arrow-right'],
+[dir=rtl] [data-slot='icon-ui-arrow-up-left'],
+[dir=rtl] [data-slot='icon-ui-arrow-up-right'],
+[dir=rtl] [data-slot='icon-ui-chevron-left'],
+[dir=rtl] [data-slot='icon-ui-chevron-right'],
+[dir=rtl] [data-slot='icon-ui-chevron-left-double'],
+[dir=rtl] [data-slot='icon-ui-chevron-right-double'],
 
 /* U-turn arrows */
-[dir=rtl] [data-slot='ui-icon-arrow-u-left'],
-[dir=rtl] [data-slot='ui-icon-arrow-u-right'],
+[dir=rtl] [data-slot='icon-ui-arrow-u-left'],
+[dir=rtl] [data-slot='icon-ui-arrow-u-right'],
 
 /* Corner arrows */
-[dir=rtl] [data-slot='ui-icon-arrow-corner-down-left'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-down-right'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-left-down'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-left-up'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-right-down'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-right-up'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-up-left'],
-[dir=rtl] [data-slot='ui-icon-arrow-corner-up-right'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-down-left'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-down-right'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-left-down'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-left-up'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-right-down'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-right-up'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-up-left'],
+[dir=rtl] [data-slot='icon-ui-arrow-corner-up-right'],
 
 /* Swipe gestures */
-[dir=rtl] [data-slot='ui-icon-hand-swipe-left'],
-[dir=rtl] [data-slot='ui-icon-hand-swipe-right'],
+[dir=rtl] [data-slot='icon-ui-hand-swipe-left'],
+[dir=rtl] [data-slot='icon-ui-hand-swipe-right'],
 
 /* Bounce navigation */
-[dir=rtl] [data-slot='ui-icon-bounce-left'],
-[dir=rtl] [data-slot='ui-icon-bounce-right'],
+[dir=rtl] [data-slot='icon-ui-bounce-left'],
+[dir=rtl] [data-slot='icon-ui-bounce-right'],
 
 /* Auth/flow entry-exit */
-[dir=rtl] [data-slot='ui-icon-sign-in'],
-[dir=rtl] [data-slot='ui-icon-sign-out'],
+[dir=rtl] [data-slot='icon-ui-sign-in'],
+[dir=rtl] [data-slot='icon-ui-sign-out'],
 
 /* Text editing direction */
-[dir=rtl] [data-slot='ui-icon-text-indent'],
-[dir=rtl] [data-slot='ui-icon-text-outdent'],
+[dir=rtl] [data-slot='icon-ui-text-indent'],
+[dir=rtl] [data-slot='icon-ui-text-outdent'],
 
 /* Key arrows */
-[dir=rtl] [data-slot='ui-icon-key-backspace'],
-[dir=rtl] [data-slot='ui-icon-key-enter'],
+[dir=rtl] [data-slot='icon-ui-key-backspace'],
+[dir=rtl] [data-slot='icon-ui-key-enter'],
 
 /* External navigation and sharing */
-[dir=rtl] [data-slot='ui-icon-external-link'],
-[dir=rtl] [data-slot='ui-icon-repeat'],
-[dir=rtl] [data-slot='ui-icon-reload'],
-[dir=rtl] [data-slot='ui-icon-resend'],
-[dir=rtl] [data-slot='ui-icon-repost'],
-[dir=rtl] [data-slot='ui-icon-navigation'],
+[dir=rtl] [data-slot='icon-ui-external-link'],
+[dir=rtl] [data-slot='icon-ui-repeat'],
+[dir=rtl] [data-slot='icon-ui-reload'],
+[dir=rtl] [data-slot='icon-ui-resend'],
+[dir=rtl] [data-slot='icon-ui-repost'],
+[dir=rtl] [data-slot='icon-ui-navigation'],
 
 /* Trend/chart direction */
-[dir=rtl] [data-slot='ui-icon-trend-up'],
-[dir=rtl] [data-slot='ui-icon-trend-down'],
-[dir=rtl] [data-slot='ui-icon-trend-up-down'],
+[dir=rtl] [data-slot='icon-ui-trend-up'],
+[dir=rtl] [data-slot='icon-ui-trend-down'],
+[dir=rtl] [data-slot='icon-ui-trend-up-down'],
 
 /* Context-dependent: panels */
-[dir=rtl] [data-slot='ui-icon-panel-left'],
-[dir=rtl] [data-slot='ui-icon-panel-right'],
-[dir=rtl] [data-slot='ui-icon-panel-left-open'],
-[dir=rtl] [data-slot='ui-icon-panel-right-open'],
-[dir=rtl] [data-slot='ui-icon-panels-left'],
-[dir=rtl] [data-slot='ui-icon-panels-right'],
+[dir=rtl] [data-slot='icon-ui-panel-left'],
+[dir=rtl] [data-slot='icon-ui-panel-right'],
+[dir=rtl] [data-slot='icon-ui-panel-left-open'],
+[dir=rtl] [data-slot='icon-ui-panel-right-open'],
+[dir=rtl] [data-slot='icon-ui-panels-left'],
+[dir=rtl] [data-slot='icon-ui-panels-right'],
 
 /* Context-dependent: slides/carousel direction */
-[dir=rtl] [data-slot='ui-icon-slides-left'],
-[dir=rtl] [data-slot='ui-icon-slides-right'] {
+[dir=rtl] [data-slot='icon-ui-slides-left'],
+[dir=rtl] [data-slot='icon-ui-slides-right'] {
   transform: scaleX(-1);
 }
 
 /* LTR reset — restores icons inside an explicit [dir=ltr] subtree that sits inside an outer [dir=rtl] ancestor. Same specificity as the rules above; placing it after means it wins in the cascade for nested overrides. */
-[dir='ltr'] [data-slot='ui-icon-arrow-left'],
-[dir='ltr'] [data-slot='ui-icon-arrow-right'],
-[dir='ltr'] [data-slot='ui-icon-arrow-up-left'],
-[dir='ltr'] [data-slot='ui-icon-arrow-up-right'],
-[dir='ltr'] [data-slot='ui-icon-chevron-left'],
-[dir='ltr'] [data-slot='ui-icon-chevron-right'],
-[dir='ltr'] [data-slot='ui-icon-chevron-left-double'],
-[dir='ltr'] [data-slot='ui-icon-chevron-right-double'],
-[dir='ltr'] [data-slot='ui-icon-arrow-u-left'],
-[dir='ltr'] [data-slot='ui-icon-arrow-u-right'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-down-left'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-down-right'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-left-down'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-left-up'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-right-down'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-right-up'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-up-left'],
-[dir='ltr'] [data-slot='ui-icon-arrow-corner-up-right'],
-[dir='ltr'] [data-slot='ui-icon-hand-swipe-left'],
-[dir='ltr'] [data-slot='ui-icon-hand-swipe-right'],
-[dir='ltr'] [data-slot='ui-icon-bounce-left'],
-[dir='ltr'] [data-slot='ui-icon-bounce-right'],
-[dir='ltr'] [data-slot='ui-icon-sign-in'],
-[dir='ltr'] [data-slot='ui-icon-sign-out'],
-[dir='ltr'] [data-slot='ui-icon-text-indent'],
-[dir='ltr'] [data-slot='ui-icon-text-outdent'],
-[dir='ltr'] [data-slot='ui-icon-key-backspace'],
-[dir='ltr'] [data-slot='ui-icon-key-enter'],
-[dir='ltr'] [data-slot='ui-icon-external-link'],
-[dir='ltr'] [data-slot='ui-icon-repeat'],
-[dir='ltr'] [data-slot='ui-icon-reload'],
-[dir='ltr'] [data-slot='ui-icon-resend'],
-[dir='ltr'] [data-slot='ui-icon-repost'],
-[dir='ltr'] [data-slot='ui-icon-navigation'],
-[dir='ltr'] [data-slot='ui-icon-trend-up'],
-[dir='ltr'] [data-slot='ui-icon-trend-down'],
-[dir='ltr'] [data-slot='ui-icon-trend-up-down'],
-[dir='ltr'] [data-slot='ui-icon-panel-left'],
-[dir='ltr'] [data-slot='ui-icon-panel-right'],
-[dir='ltr'] [data-slot='ui-icon-panel-left-open'],
-[dir='ltr'] [data-slot='ui-icon-panel-right-open'],
-[dir='ltr'] [data-slot='ui-icon-panels-left'],
-[dir='ltr'] [data-slot='ui-icon-panels-right'],
-[dir='ltr'] [data-slot='ui-icon-slides-left'],
-[dir='ltr'] [data-slot='ui-icon-slides-right'] {
+[dir='ltr'] [data-slot='icon-ui-arrow-left'],
+[dir='ltr'] [data-slot='icon-ui-arrow-right'],
+[dir='ltr'] [data-slot='icon-ui-arrow-up-left'],
+[dir='ltr'] [data-slot='icon-ui-arrow-up-right'],
+[dir='ltr'] [data-slot='icon-ui-chevron-left'],
+[dir='ltr'] [data-slot='icon-ui-chevron-right'],
+[dir='ltr'] [data-slot='icon-ui-chevron-left-double'],
+[dir='ltr'] [data-slot='icon-ui-chevron-right-double'],
+[dir='ltr'] [data-slot='icon-ui-arrow-u-left'],
+[dir='ltr'] [data-slot='icon-ui-arrow-u-right'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-down-left'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-down-right'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-left-down'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-left-up'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-right-down'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-right-up'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-up-left'],
+[dir='ltr'] [data-slot='icon-ui-arrow-corner-up-right'],
+[dir='ltr'] [data-slot='icon-ui-hand-swipe-left'],
+[dir='ltr'] [data-slot='icon-ui-hand-swipe-right'],
+[dir='ltr'] [data-slot='icon-ui-bounce-left'],
+[dir='ltr'] [data-slot='icon-ui-bounce-right'],
+[dir='ltr'] [data-slot='icon-ui-sign-in'],
+[dir='ltr'] [data-slot='icon-ui-sign-out'],
+[dir='ltr'] [data-slot='icon-ui-text-indent'],
+[dir='ltr'] [data-slot='icon-ui-text-outdent'],
+[dir='ltr'] [data-slot='icon-ui-key-backspace'],
+[dir='ltr'] [data-slot='icon-ui-key-enter'],
+[dir='ltr'] [data-slot='icon-ui-external-link'],
+[dir='ltr'] [data-slot='icon-ui-repeat'],
+[dir='ltr'] [data-slot='icon-ui-reload'],
+[dir='ltr'] [data-slot='icon-ui-resend'],
+[dir='ltr'] [data-slot='icon-ui-repost'],
+[dir='ltr'] [data-slot='icon-ui-navigation'],
+[dir='ltr'] [data-slot='icon-ui-trend-up'],
+[dir='ltr'] [data-slot='icon-ui-trend-down'],
+[dir='ltr'] [data-slot='icon-ui-trend-up-down'],
+[dir='ltr'] [data-slot='icon-ui-panel-left'],
+[dir='ltr'] [data-slot='icon-ui-panel-right'],
+[dir='ltr'] [data-slot='icon-ui-panel-left-open'],
+[dir='ltr'] [data-slot='icon-ui-panel-right-open'],
+[dir='ltr'] [data-slot='icon-ui-panels-left'],
+[dir='ltr'] [data-slot='icon-ui-panels-right'],
+[dir='ltr'] [data-slot='icon-ui-slides-left'],
+[dir='ltr'] [data-slot='icon-ui-slides-right'] {
   transform: none;
 }

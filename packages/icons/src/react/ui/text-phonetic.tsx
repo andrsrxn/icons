@@ -20,13 +20,13 @@ export const IconTextPhonetic: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-text-phonetic'
+      data-slot='icon-ui-text-phonetic'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'text-phonetic-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'text-phonetic-title'}>{title}</title> : null}
       <rect opacity='.2' x='12.67' y='5.44' width='7.58' height='6.37' rx='1' fill='currentColor' />

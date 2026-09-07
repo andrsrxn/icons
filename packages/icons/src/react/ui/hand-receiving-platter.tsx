@@ -20,7 +20,7 @@ export const IconHandReceivingPlatter: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-hand-receiving-platter'
+      data-slot='icon-ui-hand-receiving-platter'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconHandReceivingPlatter: Icon = ({
         isLabelled && title && !ariaLabel ? 'hand-receiving-platter-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'hand-receiving-platter-title'}>{title}</title>

@@ -20,13 +20,13 @@ export const IconIntersection: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-intersection'
+      data-slot='icon-ui-intersection'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'intersection-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'intersection-title'}>{title}</title> : null}
       <path d='M18.62 19.5v-8.38a6.62 6.62 0 1 0-13.24 0v8.38' stroke='currentColor' />

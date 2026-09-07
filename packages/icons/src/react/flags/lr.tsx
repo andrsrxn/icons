@@ -23,13 +23,13 @@ export const IconFlagLR: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      data-slot='ui-flag-lr'
+      data-slot='icon-flag-lr'
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
       aria-labelledby={showTitle ? 'lr-title' : undefined}
       focusable={isHidden ? false : undefined}
-      className={`ui-flag ${className ?? ''}`}
+      className={`icon-flag ${className ?? ''}`}
       {...props}>
       {showTitle ? <title id={'lr-title'}>{titleText}</title> : null}
 

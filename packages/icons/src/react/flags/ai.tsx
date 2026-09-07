@@ -23,13 +23,13 @@ export const IconFlagAI: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
-      data-slot='ui-flag-ai'
+      data-slot='icon-flag-ai'
       role={isHidden ? undefined : 'img'}
       aria-hidden={isHidden ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
       aria-labelledby={showTitle ? 'ai-title' : undefined}
       focusable={isHidden ? false : undefined}
-      className={`ui-flag ${className ?? ''}`}
+      className={`icon-flag ${className ?? ''}`}
       {...props}>
       {showTitle ? <title id={'ai-title'}>{titleText}</title> : null}
 

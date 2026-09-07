@@ -20,13 +20,13 @@ export const IconPaintbrush: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-paintbrush'
+      data-slot='icon-ui-paintbrush'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'paintbrush-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'paintbrush-title'}>{title}</title> : null}
       <rect opacity='.2' x='5.44' y='8.42' width='13.11' height='4.48' rx='2' fill='currentColor' />

@@ -20,7 +20,7 @@ export const IconLandscapeToPortrait: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-landscape-to-portrait'
+      data-slot='icon-ui-landscape-to-portrait'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconLandscapeToPortrait: Icon = ({
         isLabelled && title && !ariaLabel ? 'landscape-to-portrait-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'landscape-to-portrait-title'}>{title}</title>

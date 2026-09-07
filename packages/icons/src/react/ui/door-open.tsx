@@ -20,13 +20,13 @@ export const IconDoorOpen: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-door-open'
+      data-slot='icon-ui-door-open'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'door-open-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'door-open-title'}>{title}</title> : null}
       <path opacity='.2' fill='currentColor' d='M13.77 4.21h5.12v17.08h-5.12z' />

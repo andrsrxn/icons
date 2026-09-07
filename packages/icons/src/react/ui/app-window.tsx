@@ -20,13 +20,13 @@ export const IconAppWindow: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-app-window'
+      data-slot='icon-ui-app-window'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'app-window-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'app-window-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.7' y='4.53' width='18.61' height='14.93' rx='3' fill='currentColor' />

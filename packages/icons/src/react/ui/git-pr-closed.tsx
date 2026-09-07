@@ -20,13 +20,13 @@ export const IconGitPrClosed: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-git-pr-closed'
+      data-slot='icon-ui-git-pr-closed'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'git-pr-closed-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'git-pr-closed-title'}>{title}</title> : null}
       <circle opacity='.2' cx='6.27' cy='5.63' r='3.07' fill='currentColor' />

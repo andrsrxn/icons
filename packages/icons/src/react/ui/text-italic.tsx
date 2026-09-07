@@ -20,13 +20,13 @@ export const IconTextItalic: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-text-italic'
+      data-slot='icon-ui-text-italic'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'text-italic-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'text-italic-title'}>{title}</title> : null}
       <path d='M14.2 3.77 9.78 20.23m2.93 0H7.25m9.46-16.46h-5.46' stroke='currentColor' />

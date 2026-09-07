@@ -20,13 +20,13 @@ export const IconOmega: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-omega'
+      data-slot='icon-ui-omega'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'omega-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'omega-title'}>{title}</title> : null}
       <ellipse opacity='.2' cx='12' cy='12.16' rx='6.96' ry='8.29' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconSnowflake: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-snowflake'
+      data-slot='icon-ui-snowflake'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'snowflake-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'snowflake-title'}>{title}</title> : null}
       <circle opacity='.2' cx='12' cy='11.95' r='3.47' fill='currentColor' />

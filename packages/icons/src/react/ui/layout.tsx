@@ -20,13 +20,13 @@ export const IconLayout: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-layout'
+      data-slot='icon-ui-layout'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'layout-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'layout-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.8' y='2.88' width='7.79' height='10.48' rx='2' fill='currentColor' />

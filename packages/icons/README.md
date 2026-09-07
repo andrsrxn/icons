@@ -24,6 +24,11 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 - **Outline when appropriate**: Simple geometric icons such as `+`, `/`, or `×` do not receive a decorative background layer that would only reduce clarity.
 - **Filled on demand**: A `filled` variant is included only for icons that have a meaningful active or selected state, such as `like`, `bookmark`, or `star`, not as a blanket alternative style.
 
+## Categories
+
+- **UI**: 900+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagUS`, `IconFlagMX`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+
 ## Requirements
 
 You only need to be using `react` and `react-dom` version 19.
@@ -44,12 +49,7 @@ Then add the minimal CSS to the root of your project:
 import '@andrsrxn/icons/styles.css'
 ```
 
-This includes global base styles through css classes and handles RTL direction automatically on the mentioned icons below.
-
-## Categories
-
-- **UI**: 900+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagUS`, `IconFlagMX`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+This includes global base styles through CSS classes and handles RTL direction automatically on the mentioned icons below.
 
 ## Usage
 
@@ -107,13 +107,13 @@ There are some exceptions on widely accepted names, such as `IconSave` instead o
 
 All of the icons have a specific className to style them globally:
 
-- **UI icons**: `ui-icon`
-- **Flag icons**: `ui-flag`
+- **UI icons**: `icon-ui`
+- **Flag icons**: `icon-flag`
 
 Also, the icons include a `data-slot` with its specific name, for example:
 
-- **rocket**: `data-slot="ui-icon-rocket"`
-- **us**: `data-slot="ui-flag-us"`
+- **rocket**: `data-slot="icon-ui-rocket"`
+- **us**: `data-slot="icon-flag-us"`
 
 Or you can use the custom props as the following examples.
 
@@ -196,21 +196,21 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 | `color`       | `string`           | `currentColor`          | Stroke and fill colors                      |
 | `title`       | `string`           | `undefined`             | Removes aria-hidden and add img role        |
 | `aria-label`  | `string`           | `undefined`             | Overrides title prop, keeps same behavior   |
-| `className`   | `string`           | `ui-icon`               | Class to style globally the icon            |
-| `data-slot`   | `string`           | `ui-icon-{{icon-name}}` | Specific attribute to identify the icon     |
+| `className`   | `string`           | `icon-ui`               | Class to style globally the icon            |
+| `data-slot`   | `string`           | `icon-ui-{{icon-name}}` | Specific attribute to identify the icon     |
 
 #### Flag icon props
 
-| Props         | Type               | Default                 | Description                                 |
-| ------------- | ------------------ | ----------------------- | ------------------------------------------- |
-| `size`        | `number \| string` | `24`                    | Size in pixels or any valid css length unit |
-| `color`       | `string`           | `currentColor`          | Stroke and fill colors                      |
-| `title`       | `string`           | `{{flag-name}}`         | Country code in uppercase                   |
-| `role`        | `string`           | `img`                   | Treated as image                            |
-| `aria-label`  | `string`           | `undefined`             | Overrides title prop, keeps same behavior   |
-| `className`   | `string`           | `ui-flag`               | Class to style globally the icon            |
-| `data-slot`   | `string`           | `ui-flag-{{flag-name}}` | Specific attribute to identify the icon     |
-| `aria-hidden` | `boolean`          | `true`                  | Set true to hide it from screen readers     |
+| Props         | Type               | Default                   | Description                                 |
+| ------------- | ------------------ | ------------------------- | ------------------------------------------- |
+| `size`        | `number \| string` | `24`                      | Size in pixels or any valid css length unit |
+| `color`       | `string`           | `currentColor`            | Stroke and fill colors                      |
+| `title`       | `string`           | `{{flag-name}}`           | Country code in uppercase                   |
+| `role`        | `string`           | `img`                     | Treated as image                            |
+| `aria-label`  | `string`           | `undefined`               | Overrides title prop, keeps same behavior   |
+| `className`   | `string`           | `icon-flag`               | Class to style globally the icon            |
+| `data-slot`   | `string`           | `icon-flag-{{flag-name}}` | Specific attribute to identify the icon     |
+| `aria-hidden` | `boolean`          | `true`                    | Set true to hide it from screen readers     |
 
 > **Note**: Types are named this way to avoid conficts with some Icon components names, such as `IconFlag` from UI icons.
 

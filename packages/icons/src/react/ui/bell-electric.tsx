@@ -20,13 +20,13 @@ export const IconBellElectric: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-bell-electric'
+      data-slot='icon-ui-bell-electric'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'bell-electric-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'bell-electric-title'}>{title}</title> : null}
       <circle opacity='.2' cx='19.11' cy='15.53' r='1.67' fill='currentColor' />

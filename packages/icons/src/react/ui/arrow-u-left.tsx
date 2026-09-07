@@ -20,13 +20,13 @@ export const IconArrowULeft: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-arrow-u-left'
+      data-slot='icon-ui-arrow-u-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'arrow-u-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'arrow-u-left-title'}>{title}</title> : null}
       <path d='M4.52 8.05h9.81a5.66 5.66 0 0 1 0 11.32H7.07' stroke='currentColor' />

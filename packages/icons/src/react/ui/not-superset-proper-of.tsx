@@ -20,7 +20,7 @@ export const IconNotSupersetProperOf: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-not-superset-proper-of'
+      data-slot='icon-ui-not-superset-proper-of'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconNotSupersetProperOf: Icon = ({
         isLabelled && title && !ariaLabel ? 'not-superset-proper-of-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'not-superset-proper-of-title'}>{title}</title>

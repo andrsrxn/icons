@@ -20,13 +20,13 @@ export const IconPause: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-pause'
+      data-slot='icon-ui-pause'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'pause-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'pause-title'}>{title}</title> : null}
       <rect opacity='.2' x='4.08' y='2.83' width='6.11' height='18.34' rx='2' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconCrane: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-crane'
+      data-slot='icon-ui-crane'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'crane-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'crane-title'}>{title}</title> : null}
       <rect opacity='.2' x='6.96' y='3.44' width='5.14' height='14.78' rx='2' fill='currentColor' />

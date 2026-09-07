@@ -20,13 +20,13 @@ export const IconTextItems: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-text-items'
+      data-slot='icon-ui-text-items'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'text-items-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'text-items-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.79' y='3.15' width='7.01' height='7.01' rx='2' fill='currentColor' />

@@ -2,7 +2,7 @@ import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
 import Link from 'next/link'
 import { memo } from 'react'
 import { Card } from '@/components/ui/card'
-import { ICON_LOOKUP } from '@/lib/constants/icons'
+import { ICON_LOOKUP } from '@/lib/constants/icon-lookup'
 import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 
 interface IconCardProps {

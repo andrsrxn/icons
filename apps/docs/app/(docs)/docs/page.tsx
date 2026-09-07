@@ -101,6 +101,23 @@ export default function DocsPage() {
           </li>
         </ul>
 
+        <h2 id='categories'>Categories</h2>
+
+        <ul>
+          <li>
+            <strong>UI</strong>: 900+ functional icons for apps, each with its own preview image.
+            (aspect ratio 1:1)
+          </li>
+          <li>
+            <strong>Flags</strong>: 250+ simple and minimal country flags, named with ISO 3166-1
+            alpha-2 code (<code>IconFlagUS</code>, <code>IconFlagMX</code>), the exceptions are{' '}
+            <code>IconFlagLGTB</code> and continent flags, which have a <code>C</code> prefix (
+            <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, and so
+            on); treated as image assets with country code as <code>title</code> included. (aspect
+            ratio 3:2)
+          </li>
+        </ul>
+
         <h2 id='requirements'>Requirements</h2>
 
         <p>
@@ -136,26 +153,9 @@ export default function DocsPage() {
           filename='index.tsx'
         />
         <p>
-          This includes global base styles through css classes and handles RTL direction
+          This includes global base styles through CSS classes and handles RTL direction
           automatically on the mentioned icons below.
         </p>
-
-        <h2 id='categories'>Categories</h2>
-
-        <ul>
-          <li>
-            <strong>UI</strong>: 900+ functional icons for apps, each with its own preview image.
-            (aspect ratio 1:1)
-          </li>
-          <li>
-            <strong>Flags</strong>: 250+ simple and minimal country flags, named with ISO 3166-1
-            alpha-2 code (<code>IconFlagUS</code>, <code>IconFlagMX</code>), the exceptions are{' '}
-            <code>IconFlagLGTB</code> and continent flags, which have a <code>C</code> prefix (
-            <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, and so
-            on); treated as image assets with country code as <code>title</code> included. (aspect
-            ratio 3:2)
-          </li>
-        </ul>
 
         <h2 id='usage'>Usage</h2>
 
@@ -248,9 +248,9 @@ export function App() {
           and PascalCase for the component names.
         </p>
         <p>
-          There are some exceptions on widely accepted names, such as <code>IconSave</code> instead
-          of <code>IconFloppyDisk</code> or <code>IconExternalLink</code> instead of{' '}
-          <code>IconSquareArrowUpRight</code>.
+          There are some exceptions on widely known names, such as <code>IconSave</code> instead of{' '}
+          <code>IconFloppyDisk</code> or <code>IconSearch</code> instead of{' '}
+          <code>IconMagnifyingGlass</code>.
         </p>
 
         <h2 id='styling'>Styling</h2>
@@ -259,23 +259,47 @@ export function App() {
 
         <ul>
           <li>
-            <strong>UI icons</strong>: <code>ui-icon</code>
+            <strong>UI</strong>: <code>{ICON_PROPS.ui.className.default}</code>
           </li>
           <li>
-            <strong>Flag icons</strong>: <code>ui-flag</code>
+            <strong>Flags</strong>: <code>{ICON_PROPS.flags.className.default}</code>
           </li>
         </ul>
+        <CodeBlock
+          code={`/* Apply styles to all icons */
+.icon-ui {
+  stroke-width: 2px;
+  color: #0047cc;
+  width: 40px;
+  height: 40px;
+}
+`}
+          language='css'
+          className='max-w-prose'
+        />
         <p>
           Also, the icons include a <code>data-slot</code> with its specific name, for example:
         </p>
         <ul>
           <li>
-            <strong>rocket</strong>: <code>data-slot="ui-icon-rocket"</code>
+            <strong>rocket</strong>:{' '}
+            <code>data-slot="{ICON_PROPS.ui.className.default}-rocket"</code>
           </li>
           <li>
-            <strong>us</strong>: <code>data-slot="ui-flag-us"</code>
+            <strong>us</strong>: <code>data-slot="{ICON_PROPS.flags.className.default}-us"</code>
           </li>
         </ul>
+        <CodeBlock
+          code={`/* Target a specific icon */
+[data-slot="icon-ui-rocket"] {
+  color: #f00;
+  stroke-width: 1px;
+}
+`}
+          language='css'
+          className='max-w-prose'
+        />
+
         <p>Or you can use the custom props as the following examples.</p>
 
         <h3 id='size' className='mt-6'>
@@ -410,7 +434,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
         <h3 id='props' className='mt-6'>
           Props
         </h3>
-        <h4 id='ui-icon-props'>UI icon props</h4>
+        <h4 id='icon-ui-props'>Icon UI props</h4>
         <Table className='shadow-sm mb-2 w-max ml-1 border-collapse overflow-hidden border rounded-lg'>
           <TableHeader>
             <TableRow>
@@ -443,8 +467,8 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             ))}
           </TableBody>
         </Table>
-        <h4 id='flag-icon-props' className='mt-6'>
-          Flag icon props
+        <h4 id='icon-flag-props' className='mt-6'>
+          Icon flag props
         </h4>
         <Table className='shadow-sm mb-2 w-max ml-1 border-collapse overflow-hidden border rounded-lg'>
           <TableHeader>

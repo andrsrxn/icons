@@ -20,7 +20,7 @@ export const IconClosedCaptioningFilled: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-closed-captioning-filled'
+      data-slot='icon-ui-closed-captioning-filled'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconClosedCaptioningFilled: Icon = ({
         isLabelled && title && !ariaLabel ? 'closed-captioning-filled-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'closed-captioning-filled-title'}>{title}</title>

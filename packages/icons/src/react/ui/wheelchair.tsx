@@ -20,13 +20,13 @@ export const IconWheelchair: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-wheelchair'
+      data-slot='icon-ui-wheelchair'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'wheelchair-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'wheelchair-title'}>{title}</title> : null}
       <circle opacity='.2' cx='7.34' cy='16.46' r='4.93' fill='currentColor' />

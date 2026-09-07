@@ -20,13 +20,13 @@ export const IconCombine: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-combine'
+      data-slot='icon-ui-combine'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'combine-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'combine-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.7' y='2.7' width='8.17' height='8.17' rx='2' fill='currentColor' />

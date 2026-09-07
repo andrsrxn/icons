@@ -19,7 +19,8 @@ import {
 } from '@/components/ui/popover'
 import { Slider } from '@/components/ui/slider'
 import { Switch } from '@/components/ui/switch'
-import { ICON_LOOKUP, ICON_STROKE_WIDTH } from '@/lib/constants/icons'
+import { ICON_LOOKUP } from '@/lib/constants/icon-lookup'
+import { ICON_STROKE_WIDTH } from '@/lib/constants/icons'
 import { cn } from '@/lib/utils'
 import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 

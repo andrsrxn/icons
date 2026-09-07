@@ -32,7 +32,7 @@ const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.j
 const FLAGS_DIR = path.join(rawIconsRoot, 'src/flags')
 const FLAGS_OUT = path.resolve(__dirname, '../src/react/flags')
 
-const CLASSNAME = 'ui-flag'
+const CLASSNAME = 'icon-flag'
 
 // Helpers
 

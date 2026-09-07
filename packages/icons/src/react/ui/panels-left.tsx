@@ -20,13 +20,13 @@ export const IconPanelsLeft: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-panels-left'
+      data-slot='icon-ui-panels-left'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'panels-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'panels-left-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.96' y='3.64' width='9.35' height='16.71' rx='2' fill='currentColor' />

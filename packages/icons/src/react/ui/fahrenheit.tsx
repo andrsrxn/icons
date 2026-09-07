@@ -20,13 +20,13 @@ export const IconFahrenheit: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-fahrenheit'
+      data-slot='icon-ui-fahrenheit'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'fahrenheit-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'fahrenheit-title'}>{title}</title> : null}
       <circle opacity='.2' cx='5.77' cy='6.38' r='2.34' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconMask: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-mask'
+      data-slot='icon-ui-mask'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'mask-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'mask-title'}>{title}</title> : null}
       <path opacity='.2' d='m6.08 7.73 12.05-.17 1.09 7.73-7.53 3-6.94-3.22z' fill='currentColor' />

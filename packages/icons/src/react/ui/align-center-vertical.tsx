@@ -20,7 +20,7 @@ export const IconAlignCenterVertical: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-align-center-vertical'
+      data-slot='icon-ui-align-center-vertical'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconAlignCenterVertical: Icon = ({
         isLabelled && title && !ariaLabel ? 'align-center-vertical-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'align-center-vertical-title'}>{title}</title>

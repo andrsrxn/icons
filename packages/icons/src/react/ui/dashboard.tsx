@@ -20,13 +20,13 @@ export const IconDashboard: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-dashboard'
+      data-slot='icon-ui-dashboard'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'dashboard-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'dashboard-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.96' y='8.68' width='7.04' height='11.32' rx='1' fill='currentColor' />

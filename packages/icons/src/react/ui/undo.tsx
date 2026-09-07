@@ -20,13 +20,13 @@ export const IconUndo: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-undo'
+      data-slot='icon-ui-undo'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'undo-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'undo-title'}>{title}</title> : null}
       <path d='M4.52 8.05h9.81a5.66 5.66 0 0 1 0 11.32h-1.87' stroke='currentColor' />

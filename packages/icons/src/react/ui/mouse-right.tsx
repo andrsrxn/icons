@@ -20,13 +20,13 @@ export const IconMouseRight: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-mouse-right'
+      data-slot='icon-ui-mouse-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'mouse-right-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'mouse-right-title'}>{title}</title> : null}
       <path opacity='.2' d='M6 12.33h11.9v3.36a5.94 5.94 0 1 1-11.89 0z' fill='currentColor' />

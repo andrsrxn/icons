@@ -43,23 +43,23 @@ describe('UI Icons', () => {
       expect(svg.getAttribute('height')).toBe('2rem')
     })
 
-    it('includes the "ui-icon" className', () => {
+    it('includes the "icon-ui" className', () => {
       const { container } = render(<Component />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.classList.contains('ui-icon')).toBe(true)
+      expect(svg.classList.contains('icon-ui')).toBe(true)
     })
 
     it('merges custom classNames', () => {
       const { container } = render(<Component className='custom-class' />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.classList.contains('ui-icon')).toBe(true)
+      expect(svg.classList.contains('icon-ui')).toBe(true)
       expect(svg.classList.contains('custom-class')).toBe(true)
     })
 
-    it(`has data-slot="ui-icon-${slot}"`, () => {
+    it(`has data-slot="icon-ui-${slot}"`, () => {
       const { container } = render(<Component />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.getAttribute('data-slot')).toBe(`ui-icon-${slot}`)
+      expect(svg.getAttribute('data-slot')).toBe(`icon-ui-${slot}`)
     })
 
     it('is aria-hidden by default', () => {

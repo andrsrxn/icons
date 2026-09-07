@@ -20,7 +20,7 @@ export const IconAlignCenterHorizontal: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-align-center-horizontal'
+      data-slot='icon-ui-align-center-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconAlignCenterHorizontal: Icon = ({
         isLabelled && title && !ariaLabel ? 'align-center-horizontal-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'align-center-horizontal-title'}>{title}</title>

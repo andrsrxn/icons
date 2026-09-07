@@ -20,13 +20,13 @@ export const IconUngroup: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-ungroup'
+      data-slot='icon-ui-ungroup'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'ungroup-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'ungroup-title'}>{title}</title> : null}
       <rect opacity='.2' x='12.64' y='3.92' width='7.43' height='7.43' rx='2' fill='currentColor' />

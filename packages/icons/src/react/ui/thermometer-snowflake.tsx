@@ -20,7 +20,7 @@ export const IconThermometerSnowflake: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-thermometer-snowflake'
+      data-slot='icon-ui-thermometer-snowflake'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconThermometerSnowflake: Icon = ({
         isLabelled && title && !ariaLabel ? 'thermometer-snowflake-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'thermometer-snowflake-title'}>{title}</title>

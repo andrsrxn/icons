@@ -20,7 +20,7 @@ export const IconArrowsDiagonalRight: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-arrows-diagonal-right'
+      data-slot='icon-ui-arrows-diagonal-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconArrowsDiagonalRight: Icon = ({
         isLabelled && title && !ariaLabel ? 'arrows-diagonal-right-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'arrows-diagonal-right-title'}>{title}</title>

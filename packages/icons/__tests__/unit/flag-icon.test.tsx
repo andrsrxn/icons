@@ -42,16 +42,16 @@ describe('Flag Icons', () => {
       expect(svg.getAttribute('height')).toBe('2rem')
     })
 
-    it('includes the "ui-flag" className', () => {
+    it('includes the "icon-flag" className', () => {
       const { container } = render(<Component />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.classList.contains('ui-flag')).toBe(true)
+      expect(svg.classList.contains('icon-flag')).toBe(true)
     })
 
     it('merges custom classNames', () => {
       const { container } = render(<Component className='my-flag' />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      expect(svg.classList.contains('ui-flag')).toBe(true)
+      expect(svg.classList.contains('icon-flag')).toBe(true)
       expect(svg.classList.contains('my-flag')).toBe(true)
     })
 

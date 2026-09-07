@@ -20,13 +20,13 @@ export const IconBlocks: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-blocks'
+      data-slot='icon-ui-blocks'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'blocks-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'blocks-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.84' y='13.71' width='7.65' height='7.65' rx='2' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconChefHat: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-chef-hat'
+      data-slot='icon-ui-chef-hat'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'chef-hat-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'chef-hat-title'}>{title}</title> : null}
       <path opacity='.2' fill='currentColor' d='M6.02 17.25H17.7v3.31H6.02z' />

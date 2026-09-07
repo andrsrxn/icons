@@ -20,13 +20,13 @@ export const IconSubtitles: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-subtitles'
+      data-slot='icon-ui-subtitles'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'subtitles-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'subtitles-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.7' y='5.55' width='18.61' height='13.04' rx='3' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconDiff: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-diff'
+      data-slot='icon-ui-diff'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'diff-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'diff-title'}>{title}</title> : null}
       <path d='M5.6 20.5h12.8M5.6 9.79h12.8m-6.4 6.4V3.39' stroke='currentColor' />

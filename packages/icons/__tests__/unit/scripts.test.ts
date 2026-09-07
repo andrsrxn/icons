@@ -58,7 +58,7 @@ describe('Generator: normalizeSvg', () => {
     // 2. Must have injected the dynamic props
     expect(result).toContain('width={size}')
     expect(result).toContain('height={size}')
-    expect(result).toContain("data-slot='ui-icon-test'")
+    expect(result).toContain("data-slot='icon-ui-test'")
     expect(result).toContain('{...props}')
 
     // 3. Must have camelCased the internal attributes

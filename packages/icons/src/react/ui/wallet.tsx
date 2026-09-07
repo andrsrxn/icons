@@ -20,13 +20,13 @@ export const IconWallet: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-wallet'
+      data-slot='icon-ui-wallet'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'wallet-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'wallet-title'}>{title}</title> : null}
       <path opacity='.2' d='m4.97 4-2.7 3.96h16.77l-2.8-3.8z' fill='currentColor' />

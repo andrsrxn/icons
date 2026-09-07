@@ -20,13 +20,13 @@ export const IconVoicemail: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-voicemail'
+      data-slot='icon-ui-voicemail'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'voicemail-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'voicemail-title'}>{title}</title> : null}
       <circle opacity='.2' cx='6.04' cy='12' r='3.57' fill='currentColor' />

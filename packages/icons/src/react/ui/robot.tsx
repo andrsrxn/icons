@@ -20,13 +20,13 @@ export const IconRobot: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-robot'
+      data-slot='icon-ui-robot'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'robot-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'robot-title'}>{title}</title> : null}
       <rect opacity='.2' x='5.5' y='8.33' width='12.99' height='12.99' rx='3' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconSuitcase: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-suitcase'
+      data-slot='icon-ui-suitcase'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'suitcase-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'suitcase-title'}>{title}</title> : null}
       <path opacity='.2' fill='currentColor' d='M7.04 8.04h9.91v11.32H7.04z' />

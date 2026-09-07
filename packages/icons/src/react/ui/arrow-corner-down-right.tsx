@@ -20,7 +20,7 @@ export const IconArrowCornerDownRight: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-arrow-corner-down-right'
+      data-slot='icon-ui-arrow-corner-down-right'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconArrowCornerDownRight: Icon = ({
         isLabelled && title && !ariaLabel ? 'arrow-corner-down-right-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'arrow-corner-down-right-title'}>{title}</title>

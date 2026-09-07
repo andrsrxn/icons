@@ -20,13 +20,13 @@ export const IconKeyBackspace: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-key-backspace'
+      data-slot='icon-ui-key-backspace'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'key-backspace-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'key-backspace-title'}>{title}</title> : null}
       <path opacity='.2' d='M7.33 5.8h14.03v12.6l-14.03-.18L2.4 12.1z' fill='currentColor' />

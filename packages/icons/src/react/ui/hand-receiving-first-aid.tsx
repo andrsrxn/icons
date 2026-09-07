@@ -20,7 +20,7 @@ export const IconHandReceivingFirstAid: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-hand-receiving-first-aid'
+      data-slot='icon-ui-hand-receiving-first-aid'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconHandReceivingFirstAid: Icon = ({
         isLabelled && title && !ariaLabel ? 'hand-receiving-first-aid-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'hand-receiving-first-aid-title'}>{title}</title>

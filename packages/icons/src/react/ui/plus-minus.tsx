@@ -20,13 +20,13 @@ export const IconPlusMinus: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-plus-minus'
+      data-slot='icon-ui-plus-minus'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'plus-minus-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'plus-minus-title'}>{title}</title> : null}
       <path d='M10.53 6.77H3M21 17h-7M6.77 3v7.53M20.7 3.3 3.3 20.7' stroke='currentColor' />

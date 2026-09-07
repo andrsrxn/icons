@@ -20,13 +20,13 @@ export const IconRedo: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-redo'
+      data-slot='icon-ui-redo'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'redo-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'redo-title'}>{title}</title> : null}
       <path d='M19.54 8H9.73a5.66 5.66 0 0 0 0 11.33h1.78' stroke='currentColor' />

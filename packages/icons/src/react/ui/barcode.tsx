@@ -20,13 +20,13 @@ export const IconBarcode: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-barcode'
+      data-slot='icon-ui-barcode'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'barcode-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'barcode-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.7' y='2.7' width='18.59' height='18.59' rx='2' fill='currentColor' />

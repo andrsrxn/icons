@@ -20,13 +20,13 @@ export const IconBatteryEmpty: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-battery-empty'
+      data-slot='icon-ui-battery-empty'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'battery-empty-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'battery-empty-title'}>{title}</title> : null}
       <rect x='2.74' y='6.48' width='15.55' height='10.69' rx='3' stroke='currentColor' />

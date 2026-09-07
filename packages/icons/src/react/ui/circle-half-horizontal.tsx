@@ -20,7 +20,7 @@ export const IconCircleHalfHorizontal: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-circle-half-horizontal'
+      data-slot='icon-ui-circle-half-horizontal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconCircleHalfHorizontal: Icon = ({
         isLabelled && title && !ariaLabel ? 'circle-half-horizontal-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'circle-half-horizontal-title'}>{title}</title>

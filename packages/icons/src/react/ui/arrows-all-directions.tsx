@@ -20,7 +20,7 @@ export const IconArrowsAllDirections: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-arrows-all-directions'
+      data-slot='icon-ui-arrows-all-directions'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconArrowsAllDirections: Icon = ({
         isLabelled && title && !ariaLabel ? 'arrows-all-directions-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'arrows-all-directions-title'}>{title}</title>

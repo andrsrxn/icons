@@ -20,7 +20,7 @@ export const IconGreaterOrEqualThan: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-greater-or-equal-than'
+      data-slot='icon-ui-greater-or-equal-than'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,7 +28,7 @@ export const IconGreaterOrEqualThan: Icon = ({
         isLabelled && title && !ariaLabel ? 'greater-or-equal-than-title' : undefined
       }
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? (
         <title id={'greater-or-equal-than-title'}>{title}</title>

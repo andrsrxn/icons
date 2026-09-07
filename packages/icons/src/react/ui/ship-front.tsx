@@ -20,13 +20,13 @@ export const IconShipFront: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-ship-front'
+      data-slot='icon-ui-ship-front'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'ship-front-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'ship-front-title'}>{title}</title> : null}
       <path opacity='.2' fill='currentColor' d='M6.54 5.15h10.85v5.29H6.54z' />

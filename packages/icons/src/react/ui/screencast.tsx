@@ -20,13 +20,13 @@ export const IconScreencast: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-screencast'
+      data-slot='icon-ui-screencast'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'screencast-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'screencast-title'}>{title}</title> : null}
       <rect opacity='.2' x='3.13' y='5' width='18' height='13.77' rx='3' fill='currentColor' />

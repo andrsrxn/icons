@@ -20,13 +20,13 @@ export const IconNotEqual: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-not-equal'
+      data-slot='icon-ui-not-equal'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'not-equal-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'not-equal-title'}>{title}</title> : null}
       <path d='M4.21 4.21 19.8 19.8M4.07 9h15.86M4.07 15h15.86' stroke='currentColor' />

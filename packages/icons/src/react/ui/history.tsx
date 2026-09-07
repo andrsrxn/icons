@@ -20,13 +20,13 @@ export const IconHistory: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-history'
+      data-slot='icon-ui-history'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'history-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'history-title'}>{title}</title> : null}
       <path d='M5 5.36a10.4 10.4 0 0 1 9.4-2.06A9.01 9.01 0 1 1 3.74 16.13' stroke='currentColor' />

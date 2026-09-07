@@ -20,13 +20,13 @@ export const IconStethoscope: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-stethoscope'
+      data-slot='icon-ui-stethoscope'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'stethoscope-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'stethoscope-title'}>{title}</title> : null}
       <circle opacity='.2' cx='18.68' cy='11.8' r='2.7' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconDeviceTv: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-device-tv'
+      data-slot='icon-ui-device-tv'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'device-tv-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'device-tv-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.7' y='6.91' width='18.61' height='12.47' rx='3' fill='currentColor' />

@@ -20,13 +20,13 @@ export const IconAlignTop: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-align-top'
+      data-slot='icon-ui-align-top'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'align-top-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'align-top-title'}>{title}</title> : null}
       <rect opacity='.2' x='4.58' y='5.82' width='5.8' height='15.49' rx='2' fill='currentColor' />

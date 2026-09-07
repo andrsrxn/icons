@@ -20,13 +20,13 @@ export const IconBrowser: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-browser'
+      data-slot='icon-ui-browser'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'browser-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'browser-title'}>{title}</title> : null}
       <rect opacity='.2' x='2.53' y='4.4' width='18.93' height='4.6' rx='1' fill='currentColor' />

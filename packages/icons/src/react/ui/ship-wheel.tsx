@@ -20,13 +20,13 @@ export const IconShipWheel: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-ship-wheel'
+      data-slot='icon-ui-ship-wheel'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'ship-wheel-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'ship-wheel-title'}>{title}</title> : null}
       <circle opacity='.2' cx='12' cy='12' r='3.35' fill='currentColor' />

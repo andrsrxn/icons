@@ -1,5 +1,6 @@
 import { createHighlighter } from 'shiki'
 import bash from 'shiki/langs/bash.mjs'
+import css from 'shiki/langs/css.mjs'
 import tsx from 'shiki/langs/tsx.mjs'
 import typescript from 'shiki/langs/typescript.mjs'
 import githubDark from 'shiki/themes/github-dark.mjs'
@@ -12,7 +13,7 @@ export async function getHighlighterInstance() {
     highlighterPromise = createHighlighter({
       // Explicitly declaration forces Next.js to bundle these files
       themes: [githubDark],
-      langs: [tsx, typescript, bash],
+      langs: [tsx, typescript, bash, css],
     })
   }
   return highlighterPromise

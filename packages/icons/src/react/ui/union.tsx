@@ -20,13 +20,13 @@ export const IconUnion: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='ui-icon-union'
+      data-slot='icon-ui-union'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       aria-labelledby={isLabelled && title && !ariaLabel ? 'union-title' : undefined}
       focusable={isLabelled ? undefined : false}
-      className={`ui-icon ${className ?? ''}`.trim()}
+      className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       {isLabelled && title && !ariaLabel ? <title id={'union-title'}>{title}</title> : null}
       <path d='M18.62 4.5v8.38a6.62 6.62 0 1 1-13.24 0V4.5' stroke='currentColor' />
