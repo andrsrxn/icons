@@ -14,8 +14,7 @@
       "inputs": ["$TURBO_DEFAULT$", "$TURBO_ROOT$/biome.json"]
     },
     "type:check": {
-      "dependsOn": ["^build"],
-      "outputs": [".tsbuildinfo"]
+      "dependsOn": ["^build"]
     },
     "test": {
       "persistent": true,
