@@ -31,6 +31,7 @@ export const InputIconSearch = ({ value, onChange }: InputIconSearchProps) => (
           aria-label='Clear search'
           title='Clear'
           size='icon-xs'
+          // biome-ignore lint/performance/noJsxPropsBind: unnecessary
           onClick={() => onChange('')}>
           <IconX className='animate-in fade-in ' />
         </InputGroupButton>
