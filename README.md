@@ -1,4 +1,4 @@
-<img src="./assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
+<img src="./packages/icons/assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
 
 # andrsrxn/icons
 
