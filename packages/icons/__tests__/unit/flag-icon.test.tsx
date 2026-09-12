@@ -61,11 +61,11 @@ describe('Flag Icons', () => {
       expect(svg.getAttribute('role')).toBe('img')
     })
 
-    it(`has a <title> element with "${title}"`, () => {
+    it(`has a aria-label with "${title}"`, () => {
       const { container } = render(<Component />)
-      const titleEl = container.querySelector('svg title')
-      expect(titleEl).toBeDefined()
-      expect(titleEl?.textContent).toBe(title)
+      const svg = container.querySelector('svg')
+      expect(svg).toBeDefined()
+      expect(svg?.getAttribute('aria-label')).toBe(title)
     })
 
     it('forwards additional SVG props', () => {
