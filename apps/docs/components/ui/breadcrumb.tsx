@@ -1,4 +1,4 @@
-import { IconChevronRight, IconDotsHorizontal } from '@andrsrxn/icons'
+import { IconChevronRight, IconMoreHorizontal, } from '@andrsrxn/icons'
 import { mergeProps } from '@base-ui/react/merge-props'
 import { useRender } from '@base-ui/react/use-render'
 import type * as React from 'react'
@@ -81,7 +81,7 @@ function BreadcrumbEllipsis({ className, ...props }: React.ComponentProps<'span'
       aria-hidden='true'
       className={cn('flex size-5 items-center justify-center [&>svg]:size-4', className)}
       {...props}>
-      <IconDotsHorizontal />
+      <IconMoreHorizontal />
       <span className='sr-only'>More</span>
     </span>
   )

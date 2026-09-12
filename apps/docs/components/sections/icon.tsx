@@ -184,7 +184,7 @@ return <${componentName} />
                 <TableCell>
                   <code className='text-sm text-muted-foreground bg-secondary/50 border rounded-sm px-1 py-0.5'>
                     {typeof value.default === 'function'
-                      ? key === 'title'
+                      ? key === 'aria-label'
                         ? iconName.toUpperCase()
                         : value.default(iconName)
                       : value.default}

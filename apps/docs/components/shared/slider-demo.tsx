@@ -11,8 +11,6 @@ export const SliderDemo = () => {
   const [value, setValue] = useState<number[]>([50])
   const [currentValue] = value
 
-  console.log(currentValue)
-
   const getIcon = () => {
     if (currentValue && currentValue >= 50) {
       return <IconVolumeHigh />

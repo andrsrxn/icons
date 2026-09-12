@@ -1,12 +1,11 @@
 import {
+  IconBluetooth,
   IconBrain,
   IconBug,
   IconCalendarSearch,
   IconCamping,
   IconChartBubble,
-  IconChatDots,
   IconChevronRight,
-  IconCombine,
   IconCookie,
   IconDevices,
   IconDiff,
@@ -15,7 +14,9 @@ import {
   IconFlame,
   IconHandPointer,
   IconHeart,
+  IconHeartHandshake,
   IconLike,
+  IconMessageDots,
   IconMoon,
   IconResend,
   IconRobot,
@@ -133,8 +134,8 @@ export const HeroSection = () => {
           <IconContainer className='top-[90%] left-2' side='left' title='robot'>
             <IconRobot />
           </IconContainer>
-          <IconContainer className='top-[25%] left-15' side='left' title='heart'>
-            <IconHeart />
+          <IconContainer className='top-[25%] left-15' side='left' title='heart-handshake'>
+            <IconHeartHandshake />
           </IconContainer>
           <IconContainer className='top-[10%] -left-35' side='left' title='calendar-search'>
             <IconCalendarSearch />
@@ -170,8 +171,8 @@ export const HeroSection = () => {
           <IconContainer className='top-[90%] right-2' side='right' title='like'>
             <IconLike />
           </IconContainer>
-          <IconContainer className='top-[25%] right-15' side='right' title='combine'>
-            <IconCombine />
+          <IconContainer className='top-[25%] right-15' side='right' title='bluetooth'>
+            <IconBluetooth />
           </IconContainer>
           <IconContainer className='top-[10%] -right-35' side='right' title='traffic-cone'>
             <IconTrafficCone />
@@ -185,8 +186,8 @@ export const HeroSection = () => {
           <IconContainer className='top-[88%] -right-40' side='right' title='download'>
             <IconDownload />
           </IconContainer>
-          <IconContainer className='top-[55%] right-10' side='right' title='chat-dots'>
-            <IconChatDots />
+          <IconContainer className='top-[55%] right-10' side='right' title='message-dots'>
+            <IconMessageDots />
           </IconContainer>
         </div>
         <div className='flex items-center gap-4 mt-2'>

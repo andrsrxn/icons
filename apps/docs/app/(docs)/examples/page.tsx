@@ -1,19 +1,22 @@
 import {
+  IconAgent,
+  IconArchiveIn,
   IconBell,
   IconBookmark,
   IconBookmarkFilled,
   IconCalendar,
-  IconCash,
+  IconChartLineUp,
   IconCheck,
+  IconCheckBadge,
   IconCheckCircle,
   IconChevronLeft,
   IconCircle,
   IconCircleFilled,
   IconClock,
+  IconControls,
   IconCreditCard,
   IconDatabase,
   IconDevicePc,
-  IconDevices,
   IconFaceSmile,
   IconFilePdf,
   IconFileX,
@@ -22,31 +25,35 @@ import {
   IconHelp,
   IconHouse,
   IconInbox,
+  IconInvoice,
   IconKanban,
   IconKeyCommand,
   IconLike,
   IconLikeFilled,
+  IconMagicWand,
   IconMail,
+  IconMoney,
   IconMoon,
+  IconPaste,
   IconPlus,
-  IconReceipt,
   IconRefresh,
-  IconRobot,
+  IconRepost,
+  IconResend,
   IconSettings,
+  IconShapesPlus,
   IconShield,
   IconSignOut,
   IconSoundWave,
   IconSpinner,
   IconStar,
   IconStarFilled,
-  IconStarSeal,
   IconSun,
   IconTeam,
   IconTrendDown,
   IconTrendUp,
   IconUpload,
   IconUser,
-  IconUsers,
+  IconUsersPlus,
   IconX,
 } from '@andrsrxn/icons'
 import Link from 'next/link'
@@ -157,7 +164,7 @@ export default function ExamplesPage() {
                 <IconUser /> Account
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconCash /> Billing
+                <IconMoney /> Billing
               </DropdownMenuItem>
               <DropdownMenuItem>
                 <IconSettings /> Settings
@@ -172,11 +179,11 @@ export default function ExamplesPage() {
               <DropdownMenuSeparator />
 
               <DropdownMenuItem>
-                <IconUsers /> Team
+                <IconTeam /> Team
               </DropdownMenuItem>
 
               <DropdownMenuItem>
-                <IconTeam /> New team
+                <IconUsersPlus /> New team
               </DropdownMenuItem>
 
               <DropdownMenuSeparator />
@@ -188,7 +195,7 @@ export default function ExamplesPage() {
                 <IconDatabase /> API
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <IconRobot /> Agents
+                <IconAgent /> Agents
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem className='text-destructive bg-destructive/5 hover:bg-destructive/10 hover:text-destructive'>
@@ -390,7 +397,7 @@ export default function ExamplesPage() {
               size='sm'
               className='bg-blue-50 hover:bg-blue-100! border-blue-300 dark:bg-blue-950 dark:border-blue-700 dark:text-blue-50 dark:hover:bg-blue-950!'>
               <ItemMedia>
-                <IconStarSeal className='text-blue-900 dark:text-blue-50 size-5' />
+                <IconCheckBadge className='text-blue-900 dark:text-blue-50 size-5' />
               </ItemMedia>
               <ItemContent>
                 <ItemTitle className='text-blue-900 leading-none dark:text-blue-50'>
@@ -420,6 +427,29 @@ export default function ExamplesPage() {
                 </FieldContent>
               </Field>
             </FieldLabel>
+            <ButtonGroup>
+              <Button variant='outline'>
+                <IconResend />
+              </Button>
+              <Button variant='outline'>
+                <IconRepost />
+              </Button>
+              <Button variant='outline'>
+                <IconControls />
+              </Button>
+              <Button variant='outline'>
+                <IconPaste />
+              </Button>
+              <Button variant='outline'>
+                <IconArchiveIn />
+              </Button>
+              <Button variant='outline'>
+                <IconMagicWand />
+              </Button>
+              <Button variant='outline'>
+                <IconShapesPlus />
+              </Button>
+            </ButtonGroup>
           </div>
           <div className='grid gap-6 h-max'>
             <SliderDemo />
@@ -439,12 +469,12 @@ export default function ExamplesPage() {
                     <span>Emoji</span>
                   </CommandItem>
                   <CommandItem>
-                    <IconDevices />
-                    <span>Devices</span>
+                    <IconChartLineUp />
+                    <span>Analytics</span>
                   </CommandItem>
                 </CommandGroup>
                 <CommandSeparator />
-                <CommandGroup heading='Actions'>
+                <CommandGroup heading='Recent'>
                   <CommandItem>
                     <IconInbox />
                     <span>Inbox</span>
@@ -460,7 +490,7 @@ export default function ExamplesPage() {
                     </CommandShortcut>
                   </CommandItem>
                   <CommandItem>
-                    <IconReceipt />
+                    <IconInvoice />
                     <span>Invoices</span>
                     <CommandShortcut className='flex items-center gap-1'>
                       <IconKeyCommand className='size-3' />S

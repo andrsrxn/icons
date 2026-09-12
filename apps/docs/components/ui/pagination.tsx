@@ -1,4 +1,4 @@
-import { IconChevronLeft, IconChevronRight, IconDotsHorizontal } from '@andrsrxn/icons'
+import { IconChevronLeft, IconChevronRight, IconMoreHorizontal } from '@andrsrxn/icons'
 import type * as React from 'react'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -96,7 +96,7 @@ function PaginationEllipsis({ className, ...props }: React.ComponentProps<'span'
         className
       )}
       {...props}>
-      <IconDotsHorizontal />
+      <IconMoreHorizontal />
       <span className='sr-only'>More pages</span>
     </span>
   )

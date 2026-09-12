@@ -1,5 +1,5 @@
 import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
-import '@andrsrxn/icons/styles.css'
+import '@andrsrxn/icons/rtl.css'
 import './globals.css'
 import { Geist } from 'next/font/google'
 import { type ReactNode, Suspense } from 'react'

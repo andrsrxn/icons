@@ -48,7 +48,7 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
           <DialogTitle className='sr-only'>Icon overview</DialogTitle>
           <DialogDescription className='sr-only'>Details about {iconName}</DialogDescription>
         </DialogHeader>
-        <div className='px-4 pb-2 pt-4 max-h-[calc(100dvh-120px)] overflow-y-auto'>
+        <div className='px-4 pb-2 pt-4 max-h-[calc(100dvh-120px)] overflow-y-auto scroll-fade-y'>
           <IconSection iconName={iconName} showFullData={false} />
         </div>
       </DialogContent>
@@ -60,7 +60,7 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
           <DrawerTitle className='sr-only'>Icon overview</DrawerTitle>
           <DrawerDescription className='sr-only'>Details about {iconName}</DrawerDescription>
         </DrawerHeader>
-        <div className='overflow-y-auto px-4 pt-2 pb-12 md:pb-20 md:px-8 md:pt-6'>
+        <div className='overflow-y-auto scroll-fade-y px-4 pt-2 pb-12 md:pb-20 md:px-8 md:pt-6'>
           <IconSection iconName={iconName} showFullData={false} />
         </div>
       </DrawerContent>

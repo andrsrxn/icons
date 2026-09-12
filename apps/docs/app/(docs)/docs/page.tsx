@@ -1,14 +1,20 @@
 import {
-  IconArrowRight,
+  IconArrowStart,
   IconChevronLeft,
   IconCreditCard,
   IconCurrencyUsd,
   IconHeart,
-  IconPanelLeft,
+  IconInfo,
+  IconListCheckRtl,
+  IconListOrderedRtl,
+  IconNotes,
   IconRocket,
+  IconSeekBackwardRtl,
+  IconSeekForwardRtl,
   IconTextIndent,
+  IconWarningTriangle,
 } from '@andrsrxn/icons'
-import { IconFlagUS } from '@andrsrxn/icons/flags'
+import { IconFlagGT } from '@andrsrxn/icons/flags'
 import Link from 'next/link'
 import { RTLIcon } from '@/components/shared/rtl-icon'
 import { TableOfContents } from '@/components/shared/table-of-contents'
@@ -23,6 +29,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { COMPANY } from '@/lib/constants/company'
 import { ICON_PROPS } from '@/lib/constants/icons'
 
@@ -44,7 +51,7 @@ export default function DocsPage() {
       </div>
 
       <TableOfContents />
-      <div className='grid gap-5 [&_p]:text-muted-foreground [&_p]:text-base [&_p]:leading-normal [&_p]:text-pretty [&_p]:max-w-prose [&_ul]:text-base [&_ul]:leading-normal [&_ul]:text-muted-foreground [&_ul]:max-w-prose [&_ul]:grid [&_ul]:gap-3 [&_strong]:text-foreground [&_strong]:font-semibold [&_h2]:font-heading [&_h4]:font-semibold [&_h2]:mt-6 [&_h2]:text-2xl [&_h3]:text-xl [&_h2]:font-semibold [&_h3]:font-semibold [&_p>code]:bg-muted [&_p>code]:py-0.5 [&_p>code]:px-1 [&_p>code]:rounded-md [&_p>code]:border [&_p>code]:text-sm [&_p>code]:text-foreground [&_li>code]:bg-muted [&_li>code]:py-0.5 [&_li>code]:px-1 [&_li>code]:rounded-md [&_li>code]:border [&_li>code]:text-sm [&_li>code]:text-foreground [&_a]:text-foreground [&_a]:font-medium [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-2 [&_ul]:pl-5 [&_ul]:marker:text-primary/40 [&_ul]:list-disc '>
+      <div className='grid gap-5 [&_p]:text-muted-foreground [&_p]:text-base [&_p]:leading-normal [&_p]:text-pretty [&_p]:max-w-prose [&_ul]:text-base [&_ul]:leading-normal [&_ul]:text-muted-foreground [&_ul]:max-w-prose [&_ul]:grid [&_ul]:gap-3 [&_strong]:text-foreground [&_strong]:font-semibold [&_h2]:font-heading [&_h4]:font-semibold [&_h2]:mt-6 [&_h2]:lg:mt-8 [&_h2]:text-2xl [&_h3]:text-xl [&_h3]:mt-6 [&_h2]:font-semibold [&_h3]:font-semibold [&_p>code]:bg-muted [&_p>code]:py-0.5 [&_p>code]:px-1 [&_p>code]:rounded-md [&_p>code]:border [&_p>code]:text-sm [&_p>code]:text-foreground [&_li>code]:bg-muted [&_li>code]:py-0.5 [&_li>code]:px-1 [&_li>code]:rounded-md [&_li>code]:border [&_li>code]:text-sm [&_li>code]:text-foreground [&_a]:text-foreground [&_a]:font-medium [&_a]:underline [&_a]:decoration-1 [&_a]:underline-offset-2 [&_ul]:pl-5 [&_ul]:marker:text-primary/40 [&_ul]:list-disc '>
         <Link
           href='/'
           prefetch={false}
@@ -105,25 +112,44 @@ export default function DocsPage() {
 
         <ul>
           <li>
-            <strong>UI</strong>: 900+ functional icons for apps, each with its own preview image.
-            (aspect ratio 1:1)
+            <strong>UI</strong>: Functional icons for apps, each with its own preview image. (aspect
+            ratio 1:1)
           </li>
           <li>
-            <strong>Flags</strong>: 250+ simple and minimal country flags, named with ISO 3166-1
-            alpha-2 code (<code>IconFlagUS</code>, <code>IconFlagMX</code>), the exceptions are{' '}
+            <strong>Flags</strong>: Simple and minimal country flags, named with ISO 3166-1 alpha-2
+            code (<code>IconFlagGT</code>, <code>IconFlagUS</code>), the exceptions are{' '}
             <code>IconFlagLGTB</code> and continent flags, which have a <code>C</code> prefix (
             <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, and so
             on); treated as image assets with country code as <code>title</code> included. (aspect
             ratio 3:2)
           </li>
         </ul>
+        <Alert className='max-w-prose'>
+          <IconInfo />
+          <AlertTitle>Notice</AlertTitle>
+          <AlertDescription>
+            <p className=' text-sm!'>
+              We do not provide any <code>brand</code> or <code>logo</code> icons, as we are purely
+              an icon library. If you need such icons, we recommend checking out{' '}
+              <a href='https://svgl.app' rel='noopener noreferrer' target='_blank'>
+                SVGL
+              </a>{' '}
+              or{' '}
+              <a href='https://simpleicons.org/' rel='noopener noreferrer' target='_blank'>
+                Simple Icons
+              </a>
+              .
+            </p>
+          </AlertDescription>
+        </Alert>
 
         <h2 id='requirements'>Requirements</h2>
 
         <p>
           You only need to be using <code>react</code> and <code>react-dom</code> version 19.
         </p>
-        <Alert className='max-w-prose bg-amber-50 border-amber-200 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-50 text-amber-950'>
+        <Alert className='max-w-prose bg-amber-50 border-amber-300 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-50 text-amber-950'>
+          <IconWarningTriangle />
           <AlertTitle>Warning</AlertTitle>
           <AlertDescription>
             <p className='text-amber-900! dark:text-amber-100! text-sm!'>
@@ -136,26 +162,47 @@ export default function DocsPage() {
 
         <h2 id='installation'>Installation</h2>
         <p>Execute the following command:</p>
+        <Tabs defaultValue='pnpm'>
+          <TabsList variant='line'>
+            <TabsTrigger value='pnpm'>pnpm</TabsTrigger>
+            <TabsTrigger value='npm'>npm</TabsTrigger>
+            <TabsTrigger value='yarn'>yarn</TabsTrigger>
+            <TabsTrigger value='bun'>bun</TabsTrigger>
+          </TabsList>
 
-        <CodeBlock
-          code='pnpm add @andrsrxn/icons'
-          language='bash'
-          className='max-w-prose'
-          filename='bash'
-        />
-
-        <p>Then add the minimal CSS to the root of your project:</p>
-
-        <CodeBlock
-          code='import "@andrsrxn/icons/styles.css"'
-          language='typescript'
-          className='max-w-prose'
-          filename='index.tsx'
-        />
-        <p>
-          This includes global base styles through CSS classes and handles RTL direction
-          automatically on the mentioned icons below.
-        </p>
+          <TabsContent value='pnpm'>
+            <CodeBlock
+              code='pnpm add @andrsrxn/icons'
+              language='bash'
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='npm'>
+            <CodeBlock
+              code='npm install @andrsrxn/icons'
+              language='bash'
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='yarn'>
+            <CodeBlock
+              code='yarn add @andrsrxn/icons'
+              language='bash'
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='bun'>
+            <CodeBlock
+              code='bun add @andrsrxn/icons'
+              language='bash'
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+        </Tabs>
 
         <h2 id='usage'>Usage</h2>
 
@@ -165,13 +212,13 @@ export default function DocsPage() {
 
         <CodeBlock
           code={`import { IconRocket } from '@andrsrxn/icons'
-import { IconFlagUS } from '@andrsrxn/icons/flags'
+import { IconFlagGT } from '@andrsrxn/icons/flags'
 
 export function App() {
   return (
     <div className='flex items-center justify-center gap-2 h-dvh w-full'>
       <IconRocket />
-      <IconFlagUS />
+      <IconFlagGT />
     </div>
   )
 }`}
@@ -190,29 +237,47 @@ export function App() {
 
         <CodeBlock
           code={`import { IconRocket } from '@andrsrxn/icons/rocket'
-import { IconFlagUS } from '@andrsrxn/icons/flags/us'
+import { IconFlagGT } from '@andrsrxn/icons/flags/us'
 
 export function App() {
   return (
     <div className='flex items-center justify-center gap-2 h-dvh w-full'>
       <IconRocket />
-      <IconFlagUS />
+      <IconFlagGT />
     </div>
   )
 }`}
           language='tsx'
           className='max-w-prose'
         />
+        <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
+          <IconInfo />
+          <AlertTitle>Best practices</AlertTitle>
+          <AlertDescription>
+            <p className='text-blue-900! dark:text-blue-100! text-sm!'>
+              Avoid importing all the icons at once from the root of the library, that is not
+              tree-shakable and will increase the bundle size of your application.
+            </p>
+          </AlertDescription>
+        </Alert>
 
         <h2 id='rtl-support'>RTL support</h2>
-
+        <p>
+          To automatically handle icon rotation on RTL import the following CSS in the root of your
+          project:
+        </p>
+        <CodeBlock
+          code="import '@andrsrxn/icons/rtl.css'"
+          language='typescript'
+          className='max-w-prose'
+          filename='index.tsx'
+        />
         <p>
           The following UI icons automatically detect the <code>dir</code> attribute on the closest
-          parent element and add the <code>transform: scaleX(-1)</code> CSS property to the SVG
-          element:
+          parent element and get flippled using the <code>transform: scaleX(-1)</code> CSS property:
         </p>
-
-        <ul>
+        <h3 id='opt-in-icons'>Opt-in icons</h3>
+        <ul className='grid grid-cols-2 lg:grid-cols-3'>
           <li>
             <p>
               <code>arrow-start</code>
@@ -223,20 +288,378 @@ export function App() {
               <code>arrow-end</code>
             </p>
           </li>
+          <li>
+            <p>
+              <code>arrow-down-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-down-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrows-start-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>border-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>border-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>bounce-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>bounce-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-start-double</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-end-double</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-align-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-align-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-centerline-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-centerline-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-firstline-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-firstline-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-end-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-end-open-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-end-open</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-start-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-start-open-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-start-open</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panel-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>slides-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>slides-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-asterisk</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-unordered</code>
+            </p>
+          </li>
         </ul>
+        <h3 className='mt-3' id='opt-out-icons'>
+          Opt-out icons
+        </h3>
+        <ul className='grid mb-3 grid-cols-2 lg:grid-cols-3'>
+          <li>
+            <p>
+              <code>logs</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>app-window</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>notes</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>article</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>receipt</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-indent</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-outdent</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-initial</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-items</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-line-height</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>key-backspace</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>key-enter</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>key-tab</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>external-link</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>redo</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>undo</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-first</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>skip-backward</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-last</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>skip-forward</code>
+            </p>
+          </li>
+        </ul>
+        <p>
+          To opt-out of RTL on these icons and keep them as they are, add the Tailwind directive{' '}
+          <code>rtl:scale-x-100</code> or the quivalent in CSS:
+        </p>
+
+        <CodeBlock
+          code={`[dir=rtl] [data-slot='icon-ui-arrow-start'] {
+  transform: scaleX(1);
+}`}
+          language='css'
+          className='max-w-prose'
+        />
+
         <p>Try it out in the following demo:</p>
 
         <div className='flex items-center gap-4 md:gap-6'>
           <RTLIcon>
-            <IconArrowRight />
+            <IconArrowStart />
           </RTLIcon>
           <RTLIcon>
             <IconTextIndent />
           </RTLIcon>
           <RTLIcon>
-            <IconPanelLeft />
+            <IconNotes />
           </RTLIcon>
         </div>
+        <h3>Exceptions</h3>
+        <p>These icons are exclusive for RTL, as they cannot be just flipped, but adapted:</p>
+        <ul className='grid mb-3 grid-cols-2 lg:grid-cols-3'>
+          <li>
+            <p>
+              <code>list-check-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-ordered-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-backwards-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-forward-rtl</code>
+            </p>
+          </li>
+        </ul>
+        <div className='flex items-center gap-4 md:gap-6'>
+          <div
+            className={
+              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+            }>
+            <IconListOrderedRtl />
+          </div>
+          <div
+            className={
+              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+            }>
+            <IconListCheckRtl />
+          </div>
+          <div
+            className={
+              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+            }>
+            <IconSeekBackwardRtl />
+          </div>
+          <div
+            className={
+              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+            }>
+            <IconSeekForwardRtl />
+          </div>
+        </div>
+        <h2>Accessibility</h2>
+        <p>
+          The UI icons are treated as <strong>decorative</strong> by default, using the{' '}
+          <code>aria-hidden='true'</code> attribute.
+        </p>
+        <p>
+          If you want to use an icon as <strong>informative</strong>, you can add an{' '}
+          <code>aria-label</code>, it automatically adds the <code>role='img'</code> and set the{' '}
+          <code>aria-hidden='false'</code>:
+        </p>
+        <CodeBlock
+          code={`<IconArrowStart aria-label='Back' onClick={() => back()} />`}
+          language='tsx'
+          className='max-w-prose'
+        />
+        <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
+          <IconInfo />
+          <AlertTitle>Best practices</AlertTitle>
+          <AlertDescription>
+            <p className='text-blue-900! dark:text-blue-100! text-sm!'>
+              This is not a reccomended pattern, use it only when strictly required.
+            </p>
+          </AlertDescription>
+        </Alert>
+        <p>
+          On the other hand, Flag icons are treated as <strong>informative</strong> by default. They
+          use the <code>role='img'</code> and <code>aria-label</code> with its flag name in
+          uppercase.
+        </p>
+        <p>
+          If you want to treat them as <strong>decorative</strong>, use the <code>aria-hidden</code>{' '}
+          attribute:
+        </p>
+        <CodeBlock code={'<IconFlagUs aria-hidden />'} language='tsx' className='max-w-prose' />
+
         <h2 id='naming'>Naming</h2>
 
         <p>
@@ -269,9 +692,16 @@ export function App() {
           code={`/* Apply styles to all icons */
 .icon-ui {
   stroke-width: 2px;
-  color: #0047cc;
-  width: 40px;
-  height: 40px;
+}
+`}
+          language='css'
+          className='max-w-prose'
+        />
+        <CodeBlock
+          code={`/* Recommended global styles */
+.icon-ui {
+  flex-shrink: 0;
+  pointer-events: none;
 }
 `}
           language='css'
@@ -283,15 +713,15 @@ export function App() {
         <ul>
           <li>
             <strong>rocket</strong>:{' '}
-            <code>data-slot="{ICON_PROPS.ui.className.default}-rocket"</code>
+            <code>data-slot='{ICON_PROPS.ui.className.default}-rocket'</code>
           </li>
           <li>
-            <strong>us</strong>: <code>data-slot="{ICON_PROPS.flags.className.default}-us"</code>
+            <strong>us</strong>: <code>data-slot='{ICON_PROPS.flags.className.default}-us'</code>
           </li>
         </ul>
         <CodeBlock
           code={`/* Target a specific icon */
-[data-slot="icon-ui-rocket"] {
+[data-slot='icon-ui-rocket'] {
   color: #f00;
   stroke-width: 1px;
 }
@@ -316,7 +746,7 @@ export function App() {
 <IconRocket size={80} />
 
 // Or with className
-<IconRocket className="size-6" />`}
+<IconRocket className='size-6' />`}
           language='tsx'
           className='max-w-prose'
         />
@@ -327,43 +757,41 @@ export function App() {
 
         <CodeBlock
           code={`// Keep 3:2 proportions
-<IconFlagUS width={80} />
-<IconFlagUS className="w-16" />`}
+<IconFlagGT width={80} />
+<IconFlagGT className='w-16' />`}
           language='tsx'
           className='max-w-prose mt-6'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
-          <IconFlagUS width={80} />
+          <IconFlagGT width={80} />
         </div>
 
         <CodeBlock
           code={`// Square proportions
-<IconFlagUS size={80} />
-<IconFlagUS className="size-20" />`}
+<IconFlagGT size={80} />
+<IconFlagGT className='size-20' />`}
           language='tsx'
           className='max-w-prose mt-6'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
-          <IconFlagUS size={80} />
+          <IconFlagGT size={80} />
         </div>
 
         <CodeBlock
           code={`// To fill the entire square
-<IconFlagUS size={80} preserveAspectRatio="xMidYMid slice" />
-<IconFlagUS className="size-20" preserveAspectRatio="xMidYMid slice" />`}
+<IconFlagGT size={80} preserveAspectRatio='xMidYMid slice' />
+<IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />`}
           language='tsx'
           className='max-w-prose mt-6'
         />
 
-        <div className='bg-card rounded-md size-12 shadow-sm border '>
-          <IconFlagUS className='size-20' preserveAspectRatio='xMidYMid slice' />
+        <div className='bg-card rounded-md size-20 shadow-sm border '>
+          <IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />
         </div>
 
-        <h3 id='color' className='mt-8'>
-          Color
-        </h3>
+        <h3 id='color'>Color</h3>
 
         <p>
           By default, the UI icons have <code>currentColor</code> set as fill and stroke value.
@@ -374,7 +802,7 @@ export function App() {
 <IconRocket color='#0047CC' />
 
 // Or use className
-<IconRocket className="text-blue-500" />`}
+<IconRocket className='text-blue-500' />`}
           language='tsx'
           className='max-w-prose'
         />
@@ -392,9 +820,7 @@ export function App() {
           quality.
         </p>
 
-        <p>
-          if you still need to change it, add <code>strokeWidth</code> prop to each icon.
-        </p>
+        <p>if you still need to change it, you can do it this way:</p>
 
         <CodeBlock
           code={`// Use strokeWidth prop
@@ -407,7 +833,7 @@ export function App() {
         />
 
         <div className='bg-card rounded-md size-20 shadow-sm border '>
-          <IconRocket size={80} strokeWidth={2} />
+          <IconRocket size={80} className='stroke-2' />
         </div>
 
         <h2 id='typescript'>TypeScript</h2>
@@ -430,11 +856,21 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             SVG and custom props
           </li>
         </ul>
+        <Alert className='max-w-prose'>
+          <IconInfo />
+          <AlertTitle>Note</AlertTitle>
+          <AlertDescription>
+            <p className=' text-sm!'>
+              Types are named this way to avoid conficts with some Icon components names, such as{' '}
+              <code>IconFlag</code> from UI icons.
+            </p>
+          </AlertDescription>
+        </Alert>
 
         <h3 id='props' className='mt-6'>
           Props
         </h3>
-        <h4 id='icon-ui-props'>Icon UI props</h4>
+        <h4 id='icon-ui-props'>UI icon props</h4>
         <Table className='shadow-sm mb-2 w-max ml-1 border-collapse overflow-hidden border rounded-lg'>
           <TableHeader>
             <TableRow>
@@ -468,7 +904,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           </TableBody>
         </Table>
         <h4 id='icon-flag-props' className='mt-6'>
-          Icon flag props
+          Flag icon props
         </h4>
         <Table className='shadow-sm mb-2 w-max ml-1 border-collapse overflow-hidden border rounded-lg'>
           <TableHeader>
@@ -502,16 +938,6 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             ))}
           </TableBody>
         </Table>
-
-        <Alert>
-          <AlertTitle>Note</AlertTitle>
-          <AlertDescription>
-            <p className=' text-sm!'>
-              Types are named this way to avoid conficts with some Icon components names, such as{' '}
-              <code>IconFlag</code> from UI icons.
-            </p>
-          </AlertDescription>
-        </Alert>
 
         <h2 id='contributing'>Contributing</h2>
 
@@ -577,10 +1003,14 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           <Button
             nativeButton={false}
             variant='outline'
-            className='no-underline! bg-[#C4E456] dark:text-black dark:hover:bg-[#C4E456] dark:hover:opacity-80'
+            className='no-underline!'
             render={
               <a href='https://phosphoricons.com/' target='_blank' rel='noopener noreferrer'>
-                <img src='/assets/phosphor-icons.webp' className='size-5' alt='Phosphor Icons' />
+                <img
+                  src='/assets/phosphor-icons.webp'
+                  className='size-5 rounded-full'
+                  alt='Phosphor Icons'
+                />
                 Phosphor Icons
               </a>
             }
@@ -589,10 +1019,14 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           <Button
             nativeButton={false}
             variant='outline'
-            className='no-underline! bg-[#9EE163] dark:text-black dark:hover:bg-[#9EE163] dark:hover:opacity-80'
+            className='no-underline!'
             render={
               <a href='https://hugeicons.com/icons' target='_blank' rel='noopener noreferrer'>
-                <img src='/assets/huge-icons.webp' className='size-5' alt='HugeIcons' />
+                <img
+                  src='/assets/huge-icons.webp'
+                  className='size-5 rounded-full'
+                  alt='HugeIcons'
+                />
                 HugeIcons
               </a>
             }

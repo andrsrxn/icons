@@ -129,6 +129,18 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
               <a href='#rtl-support' data-active={isActive('rtl-support')}>
                 RTL support
               </a>
+              <ul>
+                <li>
+                  <a href='#opt-in-icons' data-active={isActive('opt-in-icons')}>
+                    Opt-in icons
+                  </a>
+                </li>
+                <li>
+                  <a href='#opt-out-icons' data-active={isActive('opt-out-icons')}>
+                    Opt-out icons
+                  </a>
+                </li>
+              </ul>
             </li>
             <li>
               <a href='#naming' data-active={isActive('naming')}>
