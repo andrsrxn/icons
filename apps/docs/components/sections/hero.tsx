@@ -13,7 +13,6 @@ import {
   IconFaceFilter,
   IconFlame,
   IconHandPointer,
-  IconHeart,
   IconHeartHandshake,
   IconLike,
   IconMessageDots,
