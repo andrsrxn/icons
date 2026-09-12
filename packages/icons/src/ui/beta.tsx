@@ -27,11 +27,6 @@ export const IconBeta: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        opacity='.2'
-        d='M9 18.7 8.79 5.42l3.13-2.23 3.66.88 1.1 3.14-2.53 3.27 3.22 1.63.94 3.08-.94 3.38-3.94 2.02z'
-        fill='currentColor'
-      />
-      <path
         d='M12.64 10.47c2.13 0 3.86-1.63 3.86-3.64s-1.73-3.65-3.86-3.65S8.78 4.8 8.78 6.83'
         stroke='currentColor'
       />

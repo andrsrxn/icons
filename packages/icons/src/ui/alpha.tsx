@@ -26,7 +26,6 @@ export const IconAlpha: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <ellipse opacity='.2' cx='9.51' cy='12' rx='5.98' ry='8.48' fill='currentColor' />
       <path
         d='M16.1 3.52c0 6.66-.4 16.96-6.63 16.96-3.96 0-6.08-4.34-6.08-8.48S5.5 3.52 9.47 3.52c9.4 0 4.03 16.96 9.12 16.96 1.77 0 2.02-1.6 2.02-2.93'
         stroke='currentColor'

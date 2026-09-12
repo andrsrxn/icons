@@ -26,8 +26,6 @@ export const IconTextPhonetic: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <rect opacity='.2' x='12.64' y='5.08' width='7.33' height='6.72' rx='1' fill='currentColor' />
-      <rect opacity='.2' x='4.04' y='12.27' width='7.33' height='6.73' rx='1' fill='currentColor' />
       <path
         d='M11.85 11.98H8.5c-2.23 0-4.97.33-4.97 4a3.53 3.53 0 0 0 3.53 3.54h.63c2.3 0 4.16-1.86 4.16-4.16V8.83c0-2.4-1.95-4.35-4.35-4.35h-.14a4.1 4.1 0 0 0-3.83 2.56'
         stroke='currentColor'
