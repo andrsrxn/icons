@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import { IconFlagDE } from '../../src/react/flags/de'
-import { IconFlagGB } from '../../src/react/flags/gb'
-import { IconFlagJP } from '../../src/react/flags/jp'
-import { IconFlagMX } from '../../src/react/flags/mx'
-import { IconFlagUS } from '../../src/react/flags/us'
+import { IconFlagDE } from '../../src/flags/de'
+import { IconFlagGB } from '../../src/flags/gb'
+import { IconFlagJP } from '../../src/flags/jp'
+import { IconFlagMX } from '../../src/flags/mx'
+import { IconFlagUS } from '../../src/flags/us'
 
 const flagIcons = [
   { name: 'IconFlagUS', Component: IconFlagUS, title: 'US' },

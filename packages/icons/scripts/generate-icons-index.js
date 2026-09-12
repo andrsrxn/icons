@@ -16,8 +16,8 @@ import { fileURLToPath } from 'node:url'
 // Config
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const ICONS_DIR = path.resolve(__dirname, '../src/react/ui')
-const FLAGS_DIR = path.resolve(__dirname, '../src/react/flags')
+const ICONS_DIR = path.resolve(__dirname, '../src/ui')
+const FLAGS_DIR = path.resolve(__dirname, '../src/flags')
 
 const DIRS = {
   flags: FLAGS_DIR,

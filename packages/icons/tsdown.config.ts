@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsdown'
 
 export default defineConfig({
-  entry: ['./src/react/ui/index.ts', './src/react/flags/index.ts'],
+  entry: ['./src/ui/index.ts', './src/flags/index.ts'],
   format: ['esm'],
   outDir: 'dist',
 

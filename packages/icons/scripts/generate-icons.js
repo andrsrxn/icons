@@ -29,7 +29,7 @@ const require = createRequire(import.meta.url)
 const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
 
 const ICONS_DIR = path.join(rawIconsRoot, 'src/ui')
-const ICONS_OUT = path.resolve(__dirname, '../src/react/ui')
+const ICONS_OUT = path.resolve(__dirname, '../src/ui')
 
 const CLASSNAME = 'icon-ui'
 const ICON_SIZE = 24

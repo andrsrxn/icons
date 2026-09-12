@@ -30,7 +30,7 @@ const require = createRequire(import.meta.url)
 const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
 
 const FLAGS_DIR = path.join(rawIconsRoot, 'src/flags')
-const FLAGS_OUT = path.resolve(__dirname, '../src/react/flags')
+const FLAGS_OUT = path.resolve(__dirname, '../src/flags')
 
 const CLASSNAME = 'icon-flag'
 
