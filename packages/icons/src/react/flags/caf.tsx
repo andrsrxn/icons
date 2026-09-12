@@ -5,15 +5,12 @@ export const IconFlagCAF: FlagIcon = ({
   size,
   width = size ?? 24,
   height = size,
-  title,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel = 'CAF',
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  const isLabelled = Boolean(ariaLabel)
   const isHidden = ariaHidden === true
-  const titleText = title ?? 'CAF'
-
-  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -24,15 +21,12 @@ export const IconFlagCAF: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='icon-flag-caf'
-      role={isHidden ? undefined : 'img'}
-      aria-hidden={isHidden ? true : undefined}
+      role={isHidden || !isLabelled ? undefined : 'img'}
+      aria-hidden={isHidden || !isLabelled ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
-      aria-labelledby={showTitle ? 'caf-title' : undefined}
-      focusable={isHidden ? false : undefined}
-      className={`icon-flag ${className ?? ''}`}
+      focusable={isHidden || !isLabelled ? false : undefined}
+      className={`icon-flag ${className ?? ''}`.trim()}
       {...props}>
-      {showTitle ? <title id={'caf-title'}>{titleText}</title> : null}
-
       <defs>
         <defs>
           <clipPath id='caf-a'>

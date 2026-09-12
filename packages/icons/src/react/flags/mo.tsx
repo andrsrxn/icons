@@ -5,15 +5,12 @@ export const IconFlagMO: FlagIcon = ({
   size,
   width = size ?? 24,
   height = size,
-  title,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel = 'MO',
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  const isLabelled = Boolean(ariaLabel)
   const isHidden = ariaHidden === true
-  const titleText = title ?? 'MO'
-
-  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -24,15 +21,12 @@ export const IconFlagMO: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='icon-flag-mo'
-      role={isHidden ? undefined : 'img'}
-      aria-hidden={isHidden ? true : undefined}
+      role={isHidden || !isLabelled ? undefined : 'img'}
+      aria-hidden={isHidden || !isLabelled ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
-      aria-labelledby={showTitle ? 'mo-title' : undefined}
-      focusable={isHidden ? false : undefined}
-      className={`icon-flag ${className ?? ''}`}
+      focusable={isHidden || !isLabelled ? false : undefined}
+      className={`icon-flag ${className ?? ''}`.trim()}
       {...props}>
-      {showTitle ? <title id={'mo-title'}>{titleText}</title> : null}
-
       <defs>
         <defs>
           <linearGradient id='mo-a' x1='50%' x2='50%' y1='0%' y2='100%'>

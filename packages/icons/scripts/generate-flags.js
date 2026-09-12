@@ -15,7 +15,6 @@
 /** biome-ignore-all lint/style/noParameterAssign: no */
 /** biome-ignore-all lint/complexity/noForEach: no */
 /** biome-ignore-all lint/suspicious/noConsole: no */
-
 import fs from 'node:fs'
 import { createRequire } from 'node:module'
 import path from 'node:path'
@@ -24,6 +23,7 @@ import { fileURLToPath } from 'node:url'
 import { optimize } from 'svgo'
 
 // Config
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 const require = createRequire(import.meta.url)
@@ -72,25 +72,28 @@ function optimizeSvg(rawSvg, countryCode) {
 
 function generateComponent(fileName, svgContent) {
   const rawSvg = extractSvg(svgContent)
+
   if (!rawSvg) {
     return null
   }
 
   const countryCodeLower = fileName.replace('.svg', '').toLowerCase()
-  const countryCodeUpper = countryCodeLower.toUpperCase()
   const cleanCodeUpper = countryCodeLower.replace(/[^a-z0-9]/gu, '').toUpperCase()
+
   const componentName = `IconFlag${cleanCodeUpper}`
 
   const optimizedSvg = optimizeSvg(rawSvg, countryCodeLower)
 
   const viewBoxMatch = optimizedSvg.match(/viewBox=["']([^"']+)["']/u)
   const viewBox = viewBoxMatch ? viewBoxMatch[1] : '0 0 21 15'
+
   const [, , vbWidth = '21', vbHeight = '15'] = viewBox.split(' ')
 
   let defsContent = ''
   let body = optimizedSvg
 
   const defsMatch = body.match(/<defs>([\s\S]*?)<\/defs>/u)
+
   if (defsMatch) {
     ;[defsContent] = defsMatch
     body = body.replace(/<defs>[\s\S]*?<\/defs>/u, '')
@@ -104,7 +107,11 @@ function generateComponent(fileName, svgContent) {
     .replace(/<desc[\s\S]*?<\/desc>/giu, '')
 
   const clipId = `${countryCodeLower}-clip`
-  const clipPathDef = `\n        <clipPath id='${clipId}'>\n          <rect x='0' y='0' width='${vbWidth}' height='${vbHeight}' />\n        </clipPath>`
+
+  const clipPathDef = `
+        <clipPath id='${clipId}'>
+          <rect x='0' y='0' width='${vbWidth}' height='${vbHeight}' />
+        </clipPath>`
 
   const jsxDefs = svgAttrsToJsx(`${defsContent}${clipPathDef}`)
   const jsxBody = svgAttrsToJsx(innerBody)
@@ -116,16 +123,12 @@ export const ${componentName}: FlagIcon = ({
   size,
   width = size ?? 24,
   height = size,
-  title,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel = '${cleanCodeUpper}',
   'aria-hidden': ariaHidden,
   ...props
 }) => {
-  
+  const isLabelled = Boolean(ariaLabel)
   const isHidden = ariaHidden === true
-  const titleText = title ?? '${countryCodeUpper}'
-  
-  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -136,15 +139,12 @@ export const ${componentName}: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='${CLASSNAME}-${countryCodeLower}'
-      role={isHidden ? undefined : 'img'}
-      aria-hidden={isHidden ? true : undefined}
+      role={isHidden || !isLabelled ? undefined : 'img'}
+      aria-hidden={isHidden || !isLabelled ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
-      aria-labelledby={showTitle ? '${countryCodeLower}-title' : undefined}
-      focusable={isHidden ? false : undefined}
-      className={\`${CLASSNAME} \${className ?? ''}\`}
+      focusable={isHidden || !isLabelled ? false : undefined}
+      className={\`${CLASSNAME} \${className ?? ''}\`.trim()}
       {...props}>
-      {showTitle ? <title id={'${countryCodeLower}-title'}>{titleText}</title> : null}
-
       <defs>${jsxDefs}
       </defs>
       <g clipPath='url(#${clipId})'>
@@ -155,6 +155,8 @@ export const ${componentName}: FlagIcon = ({
 }
 `
 }
+
+// Main
 
 function main() {
   if (!fs.existsSync(FLAGS_DIR)) {
@@ -183,13 +185,12 @@ function main() {
 
       fs.writeFileSync(outputFilePath, componentContent)
       processedCount++
+
       console.log(` Generated: ${outputFileName}`)
     } else {
       console.warn(` No SVG found in ${file}`)
     }
   })
-
-  // Summary
 
   console.log('\n Summary:')
   console.log(`   Files scanned:    ${svgFiles.length}`)
@@ -197,6 +198,7 @@ function main() {
 }
 
 // Testing purposes
+
 export { extractSvg, generateComponent, optimizeSvg, svgAttrsToJsx }
 
 if (process?.argv?.[1]?.includes('generate-flags')) {

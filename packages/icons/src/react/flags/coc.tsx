@@ -5,15 +5,12 @@ export const IconFlagCOC: FlagIcon = ({
   size,
   width = size ?? 24,
   height = size,
-  title,
-  'aria-label': ariaLabel,
+  'aria-label': ariaLabel = 'COC',
   'aria-hidden': ariaHidden,
   ...props
 }) => {
+  const isLabelled = Boolean(ariaLabel)
   const isHidden = ariaHidden === true
-  const titleText = title ?? 'COC'
-
-  const showTitle = !(isHidden || ariaLabel)
 
   return (
     <svg
@@ -24,15 +21,12 @@ export const IconFlagCOC: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='icon-flag-coc'
-      role={isHidden ? undefined : 'img'}
-      aria-hidden={isHidden ? true : undefined}
+      role={isHidden || !isLabelled ? undefined : 'img'}
+      aria-hidden={isHidden || !isLabelled ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
-      aria-labelledby={showTitle ? 'coc-title' : undefined}
-      focusable={isHidden ? false : undefined}
-      className={`icon-flag ${className ?? ''}`}
+      focusable={isHidden || !isLabelled ? false : undefined}
+      className={`icon-flag ${className ?? ''}`.trim()}
       {...props}>
-      {showTitle ? <title id={'coc-title'}>{titleText}</title> : null}
-
       <defs>
         <defs>
           <clipPath id='coc-a'>
