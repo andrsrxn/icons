@@ -10,13 +10,13 @@
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 [![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
-React icon library with 900+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
+React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
 
 ![Icons banner with logo in the center](./assets/banner-github.webp)
 
 ## Overview
 
-**andrsrxn/icons** is a React icon library with 900+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
+**andrsrxn/icons** is a React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
 
 This library was built to serve as the icon foundation for `andrsrxn/ui`, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
 
@@ -36,12 +36,33 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Categories
 
-- **UI**: 900+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagUS`, `IconFlagMX`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+- **UI**: 1,000+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+
+> **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app) or [Simple Icons](https://simpleicons.org/).
 
 ## Documentation
 
 [See full documentation](https://icons.andrsrxn.com)
+
+## Contributing
+
+We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues).
+
+## Support
+
+If this project is useful to you, consider supporting its development through:
+
+- [GitHub Sponsors](https://github.com/sponsors/andrsrxn)
+- [Credit/Debit card](https://app.recurrente.com/s/andrsrxn/pagar)
+- [PayPal](https://paypal.me/andrsrxn)
+
+## Inspiration
+
+All of the icons were made by scratch on Figma but inspired on the following icon libraries:
+
+- [Phosphor Icons](https://phosphoricons.com/)
+- [HugeIcons](https://hugeicons.com/icons)
 
 ## Credits
 

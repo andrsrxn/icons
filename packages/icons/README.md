@@ -2,11 +2,11 @@
 
 # andrsrxn/icons
 
-React icon library with 900+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
+React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
 
 ## Overview
 
-**andrsrxn/icons** is a React icon library with 900+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
+**andrsrxn/icons** is a React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
 
 This library was built to serve as the icon foundation for `andrsrxn/ui`, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
 
@@ -26,8 +26,10 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Categories
 
-- **UI**: 900+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagUS`, `IconFlagMX`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+- **UI**: 1,000+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+
+> **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app) or [Simple Icons](https://simpleicons.org/).
 
 ## Requirements
 
@@ -43,14 +45,6 @@ Execute the following command:
 pnpm add @andrsrxn/icons
 ```
 
-Then add the minimal CSS to the root of your project:
-
-```typescript
-import '@andrsrxn/icons/styles.css'
-```
-
-This includes global base styles through CSS classes and handles RTL direction automatically on the mentioned icons below.
-
 ## Usage
 
 ### Global import
@@ -59,13 +53,13 @@ Still tree-shakable, it will only import the icons you use.
 
 ```tsx
 import { IconRocket } from '@andrsrxn/icons'
-import { IconFlagUS } from '@andrsrxn/icons/flags'
+import { IconFlagGT } from '@andrsrxn/icons/flags'
 
 export function App() {
   return (
     <div className='flex items-center justify-center gap-2 h-dvh w-full'>
       <IconRocket />
-      <IconFlagUS />
+      <IconFlagGT />
     </div>
   )
 }
@@ -77,23 +71,68 @@ Explicitly importing icons is also supported, giving you more granular control o
 
 ```tsx
 import { IconRocket } from '@andrsrxn/icons/rocket'
-import { IconFlagUS } from '@andrsrxn/icons/flags/us'
+import { IconFlagGT } from '@andrsrxn/icons/flags/us'
 
 export function App() {
   return (
     <div className='flex items-center justify-center gap-2 h-dvh w-full'>
       <IconRocket />
-      <IconFlagUS />
+      <IconFlagGT />
     </div>
   )
 }
 ```
 
+> **Best practices**: Avoid importing all the icons at once from the root of the library, that is not tree-shakable and will increase the bundle size of your application.
+
 ## RTL support
 
-The following UI icons automatically detect the `dir` attribute on the closest parent element and add the `transform: scaleX(-1)` CSS property to the SVG element:
+To automatically handle icon rotation on RTL import the following CSS in the root of your project:
 
-[See all rtl-aware icons in the CSS](./src/styles.css)
+```tsx
+import '@andrsrxn/icons/rtl.css'
+```
+
+The following UI icons automatically detect the `dir` attribute on the closest parent element and get flippled using the `transform: scaleX(-1)` CSS property:
+
+[See all rtl-aware icons](./src/styles.css)
+
+To opt-out of RTL on these icons and keep them as they are, add the Tailwind directive `rtl:scale-x-100` or the quivalent in CSS:
+
+```css
+[dir='rtl'] [data-slot='icon-ui-arrow-start'] {
+  transform: scaleX(1);
+}
+```
+
+### Exceptions
+
+These icons are exclusive for RTL, as they cannot be just flipped, but adapted:
+
+- `IconListCheckRtl`
+- `IconListOrderedRtl`
+- `IconSeekBackwardsRtl`
+- `IconSeekForwardRtl`
+
+## Accessibility
+
+The UI icons are treated as decorative by default, using the `aria-hidden='true'` attribute.
+
+If you want to use an icon as informative, you can add an `aria-label`, it automatically adds the `role='img'` and set the `aria-hidden='false'`:
+
+```tsx
+<IconArrowStart aria-label='Back' onClick={() => back()} />
+```
+
+> **Best practices**: This is not a reccomended pattern, use it only when strictly required.
+
+On the other hand, Flag icons are treated as informative by default. They use the `role='img'` and `aria-label` with its flag name in uppercase.
+
+If you want to treat them as decorative, use the `aria-hidden` attribute:
+
+```tsx
+<IconFlagGT aria-hidden />
+```
 
 ## Naming
 
@@ -110,10 +149,33 @@ All of the icons have a specific className to style them globally:
 - **UI icons**: `icon-ui`
 - **Flag icons**: `icon-flag`
 
+```css
+/* Apply styles to all icons */
+.icon-ui {
+  stroke-width: 2px;
+}
+```
+
+```css
+/* Recommended global styles */
+.icon-ui {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+```
+
 Also, the icons include a `data-slot` with its specific name, for example:
 
-- **rocket**: `data-slot="icon-ui-rocket"`
-- **us**: `data-slot="icon-flag-us"`
+- **rocket**: `data-slot='icon-ui-rocket'`
+- **us**: `data-slot='icon-flag-us'`
+
+```css
+/* Target a specific icon */
+[data-slot='icon-ui-rocket'] {
+  color: #f00;
+  stroke-width: 1px;
+}
+```
 
 Or you can use the custom props as the following examples.
 
@@ -126,25 +188,25 @@ Or you can use the custom props as the following examples.
 <IconRocket size={80} />
 
 // Or with className
-<IconRocket className="size-6" />
+<IconRocket className='size-6' />
 ```
 
 ```tsx
 // Keep 3:2 proportions
-<IconFlagUS width={80} />
-<IconFlagUS className="w-16" />
+<IconFlagGT width={80} />
+<IconFlagGT className='w-16' />
 ```
 
 ```tsx
 // Square proportions
-<IconFlagUS size={80} />
-<IconFlagUS className="size-20" />
+<IconFlagGT size={80} />
+<IconFlagGT className='size-20' />
 ```
 
 ```tsx
 // To fill the entire square
-<IconFlagUS size={80} preserveAspectRatio="xMidYMid slice" />
-<IconFlagUS className="size-20" preserveAspectRatio="xMidYMid slice" />
+<IconFlagGT size={80} preserveAspectRatio='xMidYMid slice' />
+<IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />
 ```
 
 ### Color
@@ -156,7 +218,7 @@ By default, the UI icons have `currentColor` set as fill and stroke value.
 <IconRocket color='#0047CC' />
 
 // Or use className
-<IconRocket className="text-blue-500" />
+<IconRocket className='text-blue-500' />
 ```
 
 ### Stroke width
@@ -185,6 +247,8 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 - **Icon**, **FlagIcon**: SVG element
 - **IconProps**, **FlagIconProps**: Icon component props from SVG and custom props
 
+> **Note**: Types are named this way to avoid conficts with some Icon components names, such as IconFlag from UI icons.
+
 ### Props
 
 #### UI icon props
@@ -194,8 +258,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 | `size`        | `number \| string` | `24`                    | Size in pixels or any valid css length unit |
 | `strokeWidth` | `number`           | `1.5`                   | Stroke width in pixels                      |
 | `color`       | `string`           | `currentColor`          | Stroke and fill colors                      |
-| `title`       | `string`           | `undefined`             | Removes aria-hidden and add img role        |
-| `aria-label`  | `string`           | `undefined`             | Overrides title prop, keeps same behavior   |
+| `aria-label`  | `string`           | `undefined`             | Removes aria-hidden and add role of img     |
 | `className`   | `string`           | `icon-ui`               | Class to style globally the icon            |
 | `data-slot`   | `string`           | `icon-ui-{{icon-name}}` | Specific attribute to identify the icon     |
 
@@ -205,12 +268,11 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 | ------------- | ------------------ | ------------------------- | ------------------------------------------- |
 | `size`        | `number \| string` | `24`                      | Size in pixels or any valid css length unit |
 | `color`       | `string`           | `currentColor`            | Stroke and fill colors                      |
-| `title`       | `string`           | `{{flag-name}}`           | Country code in uppercase                   |
 | `role`        | `string`           | `img`                     | Treated as image                            |
-| `aria-label`  | `string`           | `undefined`               | Overrides title prop, keeps same behavior   |
+| `aria-label`  | `string`           | `{{flag-name}}`           | Uppercase flag name (Country code)          |
 | `className`   | `string`           | `icon-flag`               | Class to style globally the icon            |
 | `data-slot`   | `string`           | `icon-flag-{{flag-name}}` | Specific attribute to identify the icon     |
-| `aria-hidden` | `boolean`          | `true`                    | Set true to hide it from screen readers     |
+| `aria-hidden` | `boolean`          | `false`                   | Set true to hide it from screen readers     |
 
 > **Note**: Types are named this way to avoid conficts with some Icon components names, such as `IconFlag` from UI icons.
 
