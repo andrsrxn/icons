@@ -23,8 +23,8 @@ describe('package.json', () => {
       expect(pkg.exports['./flags'].import).toBeDefined()
     })
 
-    it('has a "./styles.css" export', () => {
-      expect(pkg.exports['./styles.css']).toBeDefined()
+    it('has a "./rtl.css" export', () => {
+      expect(pkg.exports['./rtl.css']).toBeDefined()
     })
 
     it('has a "./types" export for type-only consumers', () => {

@@ -26,6 +26,13 @@ body {
   background-color: black;
 }
 
+.icon-ui {
+  flex-shrink: 0;
+  pointer-events: none;
+  /* To test all strokes are consistent */
+  stroke-width: 1px;
+}
+
 .icon-grid-container {
   display: grid;
   gap: 4rem;
