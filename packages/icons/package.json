@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "React icon library with 900+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.",
+  "description": "React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.",
   "type": "module",
   "license": "MIT",
   "author": {
@@ -75,13 +75,13 @@
       "types": "./dist/ui/*.d.ts",
       "import": "./dist/ui/*.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./rtl.css": "./dist/rtl.css"
   },
   "scripts": {
     "dev": "vite",
     "build:icons": "tsdown && node ./scripts/fix-types-exports.js && node ./scripts/inject-dts-previews.js",
-    "build:css": "lightningcss src/styles.css --minify -o dist/styles.css",
-    "build": "pnpm build:icons && pnpm build:css && pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only --exclude-entrypoints styles.css && pnpm dlx publint . && echo Build finished.",
+    "build:css": "lightningcss src/rtl.css --minify -o dist/rtl.css",
+    "build": "pnpm build:icons && pnpm build:css && pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only --exclude-entrypoints rtl.css && pnpm dlx publint . && echo Build finished.",
     "lint": "biome check && echo Lint finished.",
     "lint:check": "biome ci && echo Lint finished.",
     "type:check": "tsc --noEmit && echo Type check finished.",
