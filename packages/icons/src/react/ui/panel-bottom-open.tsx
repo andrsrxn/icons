@@ -4,11 +4,10 @@ export const IconPanelBottomOpen: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,37 +23,33 @@ export const IconPanelBottomOpen: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'panel-bottom-open-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'panel-bottom-open-title'}>{title}</title>
-      ) : null}
       <path
         d='m15.9 7.2-1.07 1.08c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2L8.1 7.2'
         stroke='currentColor'
       />
       <rect
         opacity='.2'
-        x='20.36'
+        x='21.23'
         y='14.65'
         width='6.62'
-        height='16.71'
+        height='18.46'
         rx='2'
-        transform='rotate(90 20.36 14.65)'
+        transform='rotate(90 21.23 14.65)'
         fill='currentColor'
       />
       <rect
-        x='20.36'
+        x='21.23'
         y='2.74'
         width='18.53'
-        height='16.71'
+        height='18.46'
         rx='3'
-        transform='rotate(90 20.36 2.74)'
+        transform='rotate(90 21.23 2.74)'
         stroke='currentColor'
       />
-      <path d='M4 14.65h16' stroke='currentColor' />
+      <path d='M3.05 14.65h17.9' stroke='currentColor' />
     </svg>
   )
 }

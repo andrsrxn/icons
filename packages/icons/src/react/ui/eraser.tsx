@@ -4,11 +4,10 @@ export const IconEraser: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,22 @@ export const IconEraser: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'eraser-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'eraser-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M16.22 4.59c-.45-.45-.67-.67-.9-.83a3 3 0 0 0-3.42 0c-.22.16-.44.38-.89.83-.15.15-.22.22-.27.3a1 1 0 0 0 0 1.14l.27.3 6.67 6.66c.15.15.22.22.3.27a1 1 0 0 0 1.14 0l.3-.27c.44-.45.66-.67.82-.9a3 3 0 0 0 0-3.42c-.16-.22-.38-.44-.83-.89z'
+        d='M16.58 3.95c-.66-.66-.98-.98-1.33-1.18a3 3 0 0 0-3 0c-.34.2-.67.52-1.32 1.18-.22.22-.33.33-.4.44a1 1 0 0 0 0 1c.07.12.18.23.4.44l7.24 7.24c.21.22.32.33.44.4a1 1 0 0 0 1 0c.11-.07.22-.18.44-.4a7 7 0 0 0 1.18-1.32 3 3 0 0 0 0-3c-.2-.35-.52-.67-1.18-1.33z'
         fill='currentColor'
       />
       <rect
-        width='17.39'
-        height='12.56'
+        width='18.88'
+        height='13.64'
         rx='3'
-        transform='scale(1 -1)rotate(45 32.41 1.13)'
+        transform='scale(1 -1)rotate(45 33.44 .5)'
         stroke='currentColor'
       />
-      <path d='m9.9 5.21 8.89 8.88' stroke='currentColor' />
+      <path d='m9.73 4.63 9.64 9.64' stroke='currentColor' />
     </svg>
   )
 }

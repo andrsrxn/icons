@@ -4,11 +4,10 @@ export const IconFingerprint: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,19 @@ export const IconFingerprint: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'fingerprint-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'fingerprint-title'}>{title}</title> : null}
       <path
-        d='M4.49 20.45c-.64-2.83-1.39-8.7 1.5-12.08a8 8 0 0 1 12.6.67c3.2 4.6 3.55 8.7 2.1 10.35-1.12 1.28-4 1.58-4.91-1.1-.9-2.68-1.35-6.77-4.45-6.15-3.68.74-1.18 7.84-.26 9.2'
+        d='M3.7 21.11C3 18.02 2.2 11.63 5.35 7.94a8.73 8.73 0 0 1 13.73.74c3.48 5 3.86 9.47 2.29 11.27-1.23 1.4-4.37 1.73-5.36-1.2s-1.47-7.37-4.85-6.7c-4 .8-1.28 8.55-.29 10.04'
         stroke='currentColor'
       />
+      <path d='M11.98 15.68c.26 1.47 1.47 5.16 2.56 6.43' stroke='currentColor' />
+      <path d='M6.3 14.24c-.15 1.48-.22 4.95.63 7' stroke='currentColor' />
+      <path d='M20.18 4.98a8.7 8.7 0 0 0-5.02-2.88' stroke='currentColor' />
+      <path d='M11.35 1.66c-3.99 0-7.98 2.85-9.64 5.9' stroke='currentColor' />
       <path
-        d='M12.09 15.47c.23 1.34 1.34 4.73 2.34 5.9m-7.57-7.22c-.13 1.36-.19 4.54.59 6.42M19.6 5.65A8 8 0 0 0 15 3.01m-3.5-.41c-3.66 0-7.31 2.62-8.84 5.41m15.96 9.45c-.23-1.67-1.08-5.17-2.9-7.1-2.26-2.4-6.12-2.1-8.1.83'
+        d='M19.1 17.85c-.24-1.82-1.17-5.63-3.15-7.73-2.47-2.63-6.68-2.3-8.84.9'
         stroke='currentColor'
       />
     </svg>

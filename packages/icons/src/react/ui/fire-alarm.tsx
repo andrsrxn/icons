@@ -4,11 +4,10 @@ export const IconFireAlarm: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,29 @@ export const IconFireAlarm: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'fire-alarm-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'fire-alarm-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='4.02'
-        height='18.01'
+        width='4.14'
+        height='18.53'
         rx='1'
-        transform='matrix(0 -1 -1 0 20.8 20.96)'
+        transform='matrix(0 -1 -1 0 21.06 21.23)'
         fill='currentColor'
       />
-      <path d='M4.3 16.56c0-5.47 2.2-9.9 7.7-9.9s7.7 4.16 7.7 9.9' stroke='currentColor' />
-      <path d='M14.56 10.53a3.8 3.8 0 0 1 1.52 3.45' stroke='currentColor' />
+      <path d='M4.07 16.7c0-5.63 2.26-10.2 7.93-10.2s7.93 4.3 7.93 10.2' stroke='currentColor' />
+      <path d='M14.64 10.5a3.9 3.9 0 0 1 1.56 3.55' stroke='currentColor' />
       <rect
-        width='4.02'
-        height='18.66'
+        width='4.14'
+        height='19.21'
         rx='1'
-        transform='matrix(0 -1 -1 0 21.33 20.96)'
+        transform='matrix(0 -1 -1 0 21.6 21.23)'
         stroke='currentColor'
       />
-      <path d='M12 4V2.25M5.82 5.82 4.9 4.45m13.24 1.37.96-1.37' stroke='currentColor' />
+      <path d='M12 3.78v-1.8' stroke='currentColor' />
+      <path d='m5.64 5.65-.94-1.4' stroke='currentColor' />
+      <path d='m18.32 5.65.98-1.4' stroke='currentColor' />
     </svg>
   )
 }

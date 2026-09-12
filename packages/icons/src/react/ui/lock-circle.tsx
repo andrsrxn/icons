@@ -4,11 +4,10 @@ export const IconLockCircle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconLockCircle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'lock-circle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'lock-circle-title'}>{title}</title> : null}
       <path
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0m8.27-4.78h2.9s-.09 3.38 0 3.38c1.51.1 2.72 1.74 2.82 3.24-.1 1.65-1.3 3.14-2.81 3.24h-3.09c-1.5-.1-2.7-1.73-2.8-3.24.1-1.5 1.3-3.14 2.8-3.24.1 0 .18-3.38.18-3.38'
+        d='M1.74 12a10.26 10.26 0 1 0 20.52 0 10.26 10.26 0 0 0-20.52 0m9-5.2h3.16s-.1 3.67 0 3.68c1.64.1 2.95 1.89 3.06 3.52-.1 1.8-1.42 3.42-3.06 3.53h-3.36C8.91 17.43 7.6 15.64 7.5 14c.1-1.63 1.42-3.41 3.05-3.52.1 0 .2-3.68.2-3.68'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
-      <rect x='7.85' y='10.6' width='8.7' height='6.49' rx='2' stroke='currentColor' />
-      <path d='m14.41 10.6-.21-2.01a1.99 1.99 0 0 0-3.95-.02l-.23 2.03' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.26' transform='rotate(90 12 12)' stroke='currentColor' />
+      <rect x='7.49' y='10.47' width='9.47' height='7.06' rx='2' stroke='currentColor' />
+      <path d='m14.63 10.47-.24-2.18a2.16 2.16 0 0 0-4.3-.02l-.25 2.2' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconWarningDiamond: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,21 @@ export const IconWarningDiamond: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'warning-diamond-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'warning-diamond-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M9.14 4.56C10.5 3.18 11.16 2.5 12 2.5s1.51.68 2.86 2.06l2.27 2.31 2.31 2.27c1.38 1.35 2.06 2.02 2.06 2.86s-.68 1.51-2.06 2.86l-2.31 2.27-2.27 2.31C13.5 20.82 12.84 21.5 12 21.5s-1.51-.68-2.86-2.06l-2.27-2.31-2.31-2.27C3.18 13.5 2.5 12.84 2.5 12s.68-1.51 2.06-2.86l2.31-2.27z'
+        d='M9.14 3.59C10.5 2.22 11.16 1.53 12 1.53s1.51.69 2.86 2.06l2.75 2.8 2.8 2.75c1.37 1.35 2.06 2.02 2.06 2.86s-.69 1.51-2.06 2.86l-2.8 2.75-2.75 2.8c-1.35 1.37-2.02 2.06-2.86 2.06s-1.51-.69-2.86-2.06l-2.75-2.8-2.8-2.75C2.22 13.5 1.53 12.84 1.53 12s.69-1.51 2.06-2.86l2.8-2.75z'
         fill='currentColor'
       />
       <path
-        d='M9.14 4.56C10.5 3.18 11.16 2.5 12 2.5s1.51.68 2.86 2.06l2.27 2.31 2.31 2.27c1.38 1.35 2.06 2.02 2.06 2.86s-.68 1.51-2.06 2.86l-2.31 2.27-2.27 2.31C13.5 20.82 12.84 21.5 12 21.5s-1.51-.68-2.86-2.06l-2.27-2.31-2.31-2.27C3.18 13.5 2.5 12.84 2.5 12s.68-1.51 2.06-2.86l2.31-2.27zM12 7.38v5.12'
+        d='M9.14 3.59C10.5 2.22 11.16 1.53 12 1.53s1.51.69 2.86 2.06l2.75 2.8 2.8 2.75c1.37 1.35 2.06 2.02 2.06 2.86s-.69 1.51-2.06 2.86l-2.8 2.75-2.75 2.8c-1.35 1.37-2.02 2.06-2.86 2.06s-1.51-.69-2.86-2.06l-2.75-2.8-2.8-2.75C2.22 13.5 1.53 12.84 1.53 12s.69-1.51 2.06-2.86l2.8-2.75z'
         stroke='currentColor'
       />
+      <path d='M12 6.94v5.6' stroke='currentColor' />
       <path
-        d='M12.53 16.09a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        d='M12.58 16.47a.58.58 0 1 1-1.16 0 .58.58 0 0 1 1.16 0'
         fill='currentColor'
         stroke='currentColor'
       />

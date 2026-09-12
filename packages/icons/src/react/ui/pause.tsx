@@ -4,11 +4,10 @@ export const IconPause: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconPause: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pause-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pause-title'}>{title}</title> : null}
       <rect opacity='.2' x='4.08' y='2.83' width='6.11' height='18.34' rx='2' fill='currentColor' />
       <rect opacity='.2' x='13.8' y='2.83' width='6.11' height='18.34' rx='2' fill='currentColor' />
       <rect x='4.08' y='2.83' width='6.11' height='18.34' rx='2' stroke='currentColor' />

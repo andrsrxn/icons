@@ -4,11 +4,10 @@ export const IconBatteryMinus: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,25 +23,16 @@ export const IconBatteryMinus: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'battery-minus-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'battery-minus-title'}>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='2.74'
-        y='6.66'
-        width='15.55'
-        height='10.69'
-        rx='3'
-        fill='currentColor'
-      />
-      <rect x='2.74' y='6.66' width='15.55' height='10.69' rx='3' stroke='currentColor' />
+      <rect opacity='.2' x='1.72' y='6' width='17.26' height='12' rx='3' fill='currentColor' />
+      <rect x='1.72' y='6' width='17.26' height='12' rx='3' stroke='currentColor' />
       <path
-        d='m18.56 8.83.63.26c.8.33 1.2.5 1.49.78a2 2 0 0 1 .43.64c.15.37.15.8.15 1.67 0 .88 0 1.32-.16 1.7a2 2 0 0 1-.44.64c-.29.28-.7.45-1.51.77l-.6.23M8 12h5.07'
+        d='m18.98 8.44.95.36c1.02.39 1.53.58 1.86.96a2 2 0 0 1 .25.36c.24.45.24 1 .24 2.08 0 1.11 0 1.67-.25 2.11a2 2 0 0 1-.25.36c-.34.39-.86.58-1.9.96l-.9.32'
         stroke='currentColor'
       />
+      <path d='M7.56 12h5.63' stroke='currentColor' />
     </svg>
   )
 }

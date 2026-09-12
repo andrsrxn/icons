@@ -4,11 +4,10 @@ export const IconListUnordered: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,24 @@ export const IconListUnordered: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-unordered-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'list-unordered-title'}>{title}</title>
-      ) : null}
-      <path d='M21.61 6H8m13.61 6H8m13.61 6H8' stroke='currentColor' />
+      <path d='M21.27 6H7.6' stroke='currentColor' />
+      <path d='M21.27 12H7.6' stroke='currentColor' />
+      <path d='M21.27 18H7.6' stroke='currentColor' />
       <path
-        d='M4 12a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 12m0-6a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 6m0 12a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 18'
+        d='M4 12a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 12'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M4 6a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 6'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M4 18a.66.66 0 1 1-1.32 0A.66.66 0 0 1 4 18'
         fill='currentColor'
         stroke='currentColor'
       />

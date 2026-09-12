@@ -4,11 +4,10 @@ export const IconFunction: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconFunction: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'function-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'function-title'}>{title}</title> : null}
       <path
-        d='M6.14 18c-.2 1.28.15 2.6 1.52 3 1.8.54 3.16-1.22 3.78-3 2.03-5.86 2.54-7 4.01-12.49C15.82 4.15 16.61 3.14 18 3c1.4-.14 2.87.99 2.5 2.51M8.04 11.24H18'
+        d='M4.6 18.24c-.21 1.32.15 2.67 1.56 3.1 1.86.55 3.26-1.26 3.9-3.1 2.1-6.04 2.61-7.22 4.13-12.87.38-1.4 1.2-2.45 2.63-2.6 1.44-.13 2.96 1.03 2.58 2.6'
         stroke='currentColor'
       />
+      <path d='M7.51 11.27H17.8' stroke='currentColor' />
     </svg>
   )
 }

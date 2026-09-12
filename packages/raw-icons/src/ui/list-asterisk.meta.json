@@ -9,5 +9,6 @@
     "format",
     "bullets",
     "menu"
-  ]
+  ],
+  "rtl": true
 }

@@ -4,11 +4,10 @@ export const IconGlobe: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,27 @@ export const IconGlobe: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'globe-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'globe-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
         cy='12'
-        r='9.43'
+        r='10.28'
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.28' transform='rotate(90 12 12)' stroke='currentColor' />
       <ellipse
         cx='12'
         cy='12'
-        rx='9.43'
-        ry='4'
+        rx='10.28'
+        ry='4.36'
         transform='rotate(90 12 12)'
         stroke='currentColor'
       />
-      <path d='M2.57 12h18.86' stroke='currentColor' />
+      <path d='M1.72 12h20.56' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconRepost: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,23 @@ export const IconRepost: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'repost-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'repost-title'}>{title}</title> : null}
       <path
-        d='M4.42 5.8H14.7c1.87 0 2.8 0 3.5.4a3 3 0 0 1 1.1 1.1c.4.7.4 1.63.4 3.5m0 7.4H9.4c-1.85 0-2.78 0-3.47-.4a3 3 0 0 1-1.12-1.1c-.39-.7-.39-1.63-.39-3.48'
+        d='M3.95 5.44h10.6c2.4 0 3.6 0 4.42.65a3 3 0 0 1 .49.49c.65.81.65 2.02.65 4.42'
         stroke='currentColor'
       />
       <path
-        d='m6.37 2.2-.76.76c-1.33 1.34-2 2-2 2.83s.67 1.5 2 2.83l.76.76M17.7 21.8l.75-.76c1.33-1.34 2-2 2-2.83s-.66-1.5-2-2.83l-.76-.76'
+        d='M20.1 18.56H9.52c-2.4 0-3.6 0-4.42-.65a3 3 0 0 1-.49-.49c-.65-.82-.65-2.02-.65-4.42'
+        stroke='currentColor'
+      />
+      <path
+        d='m6.01 1.65-.96.96c-1.34 1.33-2 2-2 2.83s.66 1.5 2 2.83l.96.96'
+        stroke='currentColor'
+      />
+      <path
+        d='m17.99 22.35.96-.96c1.34-1.33 2-2 2-2.83s-.66-1.5-2-2.83l-.96-.96'
         stroke='currentColor'
       />
     </svg>

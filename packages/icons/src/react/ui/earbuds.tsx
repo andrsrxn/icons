@@ -4,11 +4,10 @@ export const IconEarbuds: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,27 @@ export const IconEarbuds: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'earbuds-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'earbuds-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6.38 12.03a3.96 3.96 0 1 1 3.96-3.96v11.19H6.38zm11.24.05a3.96 3.96 0 1 0-3.96-3.95V19.3h3.96z'
+        d='M5.96 12.03a4.25 4.25 0 1 1 4.26-4.25v12.01H5.96z'
         fill='currentColor'
       />
       <path
-        d='M6.38 12.03a3.95 3.95 0 0 1-3.96-3.96 3.96 3.96 0 0 1 7.92 0m7.28 4.01a3.95 3.95 0 0 0 3.96-3.95 3.96 3.96 0 1 0-7.92 0'
+        opacity='.2'
+        d='M18.04 12.1a4.25 4.25 0 1 0-4.26-4.26v12.01h4.26z'
+        fill='currentColor'
+      />
+      <path d='M5.97 12.03A4.24 4.24 0 0 1 1.7 7.78a4.25 4.25 0 0 1 8.5 0' stroke='currentColor' />
+      <path d='M18.03 12.1a4.24 4.24 0 0 0 4.26-4.26 4.25 4.25 0 1 0-8.5 0' stroke='currentColor' />
+      <path
+        d='M10.22 7.6v10.69c0 .58 0 .87-.08 1.1-.15.45-.5.8-.94.94-.23.08-.52.08-1.1.08s-.88 0-1.12-.08a1.5 1.5 0 0 1-.93-.93c-.08-.24-.08-.53-.08-1.11v-6.26'
         stroke='currentColor'
       />
       <path
-        d='M10.34 7.9v9.95c0 .45 0 .67-.04.86a1.5 1.5 0 0 1-1.09 1.08c-.18.04-.4.04-.85.04s-.67 0-.85-.04a1.5 1.5 0 0 1-1.08-1.08c-.05-.19-.05-.41-.05-.86v-5.82m7.28-4.07v9.95c0 .45 0 .67.04.85.14.53.56.95 1.09 1.08.18.05.4.05.85.05s.67 0 .85-.05a1.5 1.5 0 0 0 1.08-1.08c.05-.18.05-.4.05-.85v-5.82'
+        d='M13.78 7.66v10.69c0 .58 0 .87.08 1.1.15.45.5.8.94.94.23.08.52.08 1.1.08s.88 0 1.12-.08c.44-.15.78-.5.93-.93.08-.24.08-.53.08-1.11v-6.26'
         stroke='currentColor'
       />
     </svg>

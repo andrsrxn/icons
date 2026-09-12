@@ -4,11 +4,10 @@ export const IconShuffle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,23 @@ export const IconShuffle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'shuffle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'shuffle-title'}>{title}</title> : null}
       <path
-        d='M2.77 7.67h3.2c.97 0 1.46 0 1.88.2.42.22.71.6 1.3 1.37l4.8 6.3c.6.77.9 1.16 1.31 1.37.42.2.9.2 1.88.2h3.04'
+        d='M2.34 7.05h1.1c1.71 0 2.56 0 3.32.33.76.32 1.35.94 2.51 2.19L14.4 15c1.16 1.24 1.75 1.86 2.5 2.2.77.32 1.62.32 3.32.32h1'
         stroke='currentColor'
       />
       <path
-        d='M2.77 17.11h3.18c.98 0 1.47 0 1.9-.2.42-.22.71-.61 1.3-1.4l4.67-6.24c.59-.78.88-1.18 1.3-1.39s.92-.2 1.9-.2h3.16'
+        d='M2.34 17.52h1.07c1.72 0 2.58 0 3.35-.33.77-.34 1.35-.97 2.52-2.23l4.95-5.35c1.17-1.26 1.76-1.9 2.52-2.23.77-.33 1.63-.33 3.35-.33h1.12'
         stroke='currentColor'
       />
       <path
-        d='M19.5 4.94c1.24 1.24 1.86 1.86 1.9 2.62v.22c-.04.76-.66 1.38-1.9 2.62m0 3.98c1.24 1.24 1.86 1.86 1.9 2.62v.22c-.04.76-.66 1.38-1.9 2.63'
+        d='m19.3 3.86.36.36c1.34 1.33 2 2 2 2.82 0 .83-.66 1.5-2 2.83l-.35.36'
+        stroke='currentColor'
+      />
+      <path
+        d='m19.3 14.34.36.35c1.34 1.33 2 2 2 2.83s-.66 1.5-2 2.83l-.35.35'
         stroke='currentColor'
       />
     </svg>

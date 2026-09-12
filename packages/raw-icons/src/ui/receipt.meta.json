@@ -1,6 +1,6 @@
 {
   "categories": [
-    "shopping"
+    "shopping", "documents"
   ],
   "tags": [
     "purchase record",
@@ -9,5 +9,6 @@
     "payment",
     "paper",
     "transaction"
-  ]
+  ],
+  "rtl": true
 }

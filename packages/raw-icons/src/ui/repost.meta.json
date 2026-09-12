@@ -1,6 +1,6 @@
 {
   "categories": [
-    "social"
+    "social", "tools"
   ],
   "tags": [
     "share",
@@ -9,6 +9,5 @@
     "forward",
     "post",
     "social media"
-  ],
-  "rtl": true
+  ]
 }

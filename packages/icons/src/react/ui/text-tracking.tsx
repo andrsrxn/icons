@@ -4,11 +4,10 @@ export const IconTextTracking: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,23 @@ export const IconTextTracking: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-tracking-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-tracking-title'}>{title}</title> : null}
       <path
-        d='m8.06 14.86 2.06-7.22c.78-2.74 1.17-4.11 1.93-4.11s1.14 1.37 1.92 4.12L16 14.86m-1.45-4.7H9.51M4.38 20.5c-1.1-1.1-1.64-1.64-1.74-2.3a2 2 0 0 1 0-.56c.1-.66.64-1.2 1.74-2.3m15.24 5.16c1.1-1.1 1.64-1.64 1.74-2.3a2 2 0 0 0 0-.56c-.1-.66-.64-1.2-1.74-2.3m1.29 2.58H3.1'
+        d='m7.75 15.44 2.37-8.31c.79-2.74 1.18-4.12 1.93-4.12.76 0 1.15 1.38 1.92 4.13l2.34 8.3'
         stroke='currentColor'
       />
+      <path d='M14.75 10.37H9.31' stroke='currentColor' />
+      <path
+        d='M3.79 21.51c-1.3-1.28-1.94-1.93-1.96-2.72v-.11c.02-.8.67-1.44 1.96-2.73'
+        stroke='currentColor'
+      />
+      <path
+        d='M20.21 21.51c1.3-1.28 1.94-1.93 1.96-2.72v-.11c-.02-.8-.67-1.44-1.96-2.73'
+        stroke='currentColor'
+      />
+      <path d='M22.04 18.73H1.96' stroke='currentColor' />
     </svg>
   )
 }

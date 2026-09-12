@@ -4,11 +4,10 @@ export const IconNotSubsetProperOf: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,11 @@ export const IconNotSubsetProperOf: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'not-subset-proper-of-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'not-subset-proper-of-title'}>{title}</title>
-      ) : null}
-      <path
-        d='m3.3 3.3 17.4 17.4M19.5 5.38h-8.38a6.62 6.62 0 0 0 0 13.24h7.31'
-        stroke='currentColor'
-      />
+      <path d='m2.77 2.77 18.46 18.46' stroke='currentColor' />
+      <path d='M19.5 5.38h-8.38a6.62 6.62 0 0 0 0 13.24h7.31' stroke='currentColor' />
     </svg>
   )
 }

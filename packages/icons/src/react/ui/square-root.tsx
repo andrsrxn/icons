@@ -4,11 +4,10 @@ export const IconSquareRoot: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconSquareRoot: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'square-root-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'square-root-title'}>{title}</title> : null}
       <path
-        d='M3 12.16h1.77c.65 0 .98 0 1.23.17.26.17.38.48.62 1.08l1.64 4.05c.84 2.09 1.27 3.13 1.96 3.11.7-.02 1.06-1.08 1.79-3.22l4.04-11.82c.22-.66.33-.98.6-1.17.25-.19.6-.19 1.29-.19H21'
+        d='M2.62 12.11h1.9c.65 0 .98 0 1.23.17.26.18.38.48.63 1.08l1.8 4.48c.85 2.09 1.27 3.13 1.97 3.11s1.06-1.08 1.78-3.21l4.3-12.6c.23-.65.34-.98.6-1.16.26-.19.6-.19 1.3-.19h3.25'
         stroke='currentColor'
       />
     </svg>

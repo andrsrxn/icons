@@ -4,11 +4,10 @@ export const IconSquareBrackets: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,15 @@ export const IconSquareBrackets: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'square-brackets-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'square-brackets-title'}>{title}</title>
-      ) : null}
       <path
-        d='M8.23 21c-1.08 0-1.62 0-2.06-.14A3 3 0 0 1 4.2 18.9c-.13-.44-.13-.98-.13-2.06V7.16c0-1.08 0-1.62.13-2.06a3 3 0 0 1 1.97-1.96C6.6 3 7.15 3 8.23 3m7.54 18c1.08 0 1.62 0 2.06-.14a3 3 0 0 0 1.97-1.96c.13-.44.13-.98.13-2.06V7.16c0-1.08 0-1.62-.13-2.06a3 3 0 0 0-1.97-1.96C17.4 3 16.85 3 15.77 3'
+        d='M8.11 21.29c-1.2 0-1.8 0-2.3-.18A3 3 0 0 1 4 19.28c-.18-.48-.18-1.08-.18-2.3V7.02c0-1.2 0-1.8.18-2.3A3 3 0 0 1 5.82 2.9c.48-.18 1.08-.18 2.3-.18'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.89 21.29c1.2 0 1.8 0 2.3-.18A3 3 0 0 0 20 19.28c.18-.48.18-1.08.18-2.3V7.02c0-1.2 0-1.8-.18-2.3a3 3 0 0 0-1.83-1.82c-.48-.18-1.08-.18-2.3-.18'
         stroke='currentColor'
       />
     </svg>

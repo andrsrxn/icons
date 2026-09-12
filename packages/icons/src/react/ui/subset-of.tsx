@@ -4,11 +4,10 @@ export const IconSubsetOf: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,12 @@ export const IconSubsetOf: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'subset-of-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'subset-of-title'}>{title}</title> : null}
+      <path d='M19 19.46H5.28' stroke='currentColor' />
       <path
-        d='M19 19.46H5.28M18.6 4.54 13 6.3c-5.03 1.55-7.55 2.33-7.55 3.8s2.52 2.26 7.54 3.83l5.61 1.75'
+        d='M18.6 4.54 13 6.3c-5.03 1.55-7.55 2.33-7.55 3.8s2.52 2.26 7.54 3.83l5.61 1.75'
         stroke='currentColor'
       />
     </svg>

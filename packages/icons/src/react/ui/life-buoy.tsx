@@ -4,11 +4,10 @@ export const IconLifeBuoy: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,25 @@ export const IconLifeBuoy: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'life-buoy-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'life-buoy-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='m8.3 15.54-2.37 2.42a1 1 0 0 1-1.56-.16l-1.49-2.33a1 1 0 0 1-.15-.46l-.34-4.17a1 1 0 0 1 .13-.57l2.12-3.74a1 1 0 0 1 1.5-.28l2.2 1.82a1 1 0 0 1 .3 1.1l-.87 2.5a1 1 0 0 0 0 .66l.76 2.18a1 1 0 0 1-.23 1.03m7.63 0 2.37 2.42a1 1 0 0 0 1.56-.16l1.5-2.33a1 1 0 0 0 .14-.46l.34-4.17a1 1 0 0 0-.13-.57L19.6 6.53a1 1 0 0 0-1.5-.28l-2.2 1.82a1 1 0 0 0-.3 1.1l.88 2.5a1 1 0 0 1 0 .66l-.77 2.18a1 1 0 0 0 .23 1.03'
+        d='M7.98 15.83 5.27 18.6a1 1 0 0 1-1.56-.16l-1.7-2.68a1 1 0 0 1-.16-.46l-.37-4.6a1 1 0 0 1 .13-.58l2.38-4.21a1 1 0 0 1 1.51-.28l2.53 2.1a1 1 0 0 1 .3 1.1l-.98 2.83a1 1 0 0 0 0 .66l.86 2.47a1 1 0 0 1-.23 1.03'
         fill='currentColor'
       />
-      <circle cx='11.99' cy='12' r='4.34' transform='rotate(90 11.99 12)' stroke='currentColor' />
-      <circle cx='11.99' cy='12' r='9.41' transform='rotate(90 11.99 12)' stroke='currentColor' />
       <path
-        d='M8.58 8.59 5.43 5.44M18.5 18.51l-3.32-3.32m3.43-9.8-3.37 3.37m-6.5 6.5L5.48 18.5'
-        stroke='currentColor'
+        opacity='.2'
+        d='m16.25 15.83 2.71 2.78a1 1 0 0 0 1.56-.16l1.71-2.68a1 1 0 0 0 .15-.46l.37-4.6a1 1 0 0 0-.12-.58l-2.39-4.21a1 1 0 0 0-1.5-.28l-2.54 2.1a1 1 0 0 0-.3 1.1l.99 2.83a1 1 0 0 1 0 .66l-.87 2.47a1 1 0 0 0 .23 1.03'
+        fill='currentColor'
       />
+      <circle cx='11.98' cy='12' r='4.75' transform='rotate(90 11.98 12)' stroke='currentColor' />
+      <circle cx='11.98' cy='12' r='10.29' transform='rotate(90 11.98 12)' stroke='currentColor' />
+      <path d='M8.24 8.26 4.8 4.82' stroke='currentColor' />
+      <path d='m19.1 19.12-3.64-3.63' stroke='currentColor' />
+      <path d='m19.22 4.77-3.7 3.69' stroke='currentColor' />
+      <path d='m8.42 15.57-3.56 3.56' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconKeyBackspace: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,20 @@ export const IconKeyBackspace: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'key-backspace-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-backspace-title'}>{title}</title> : null}
-      <path opacity='.2' d='M7.33 5.8h14.03v12.6l-14.03-.18L2.4 12.1z' fill='currentColor' />
       <path
-        d='M5.38 7.7c.88-.98 1.32-1.48 1.9-1.74.59-.26 1.25-.26 2.58-.26h5.5c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13v.6c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-5.5c-1.33 0-1.99 0-2.58-.27-.58-.26-1.02-.75-1.9-1.74l-.27-.3c-1.7-1.9-2.54-2.85-2.54-4 0-1.14.85-2.09 2.54-3.98zm12.14 1.72-5.16 5.16m0-5.16 5.16 5.16'
+        opacity='.2'
+        d='M6.96 5.25h11.28c1.89 0 2.83 0 3.41.58.59.6.59 1.53.59 3.42v5.67c0 1.9 0 2.86-.6 3.45s-1.55.57-3.45.55l-11.23-.15L1.6 12.1z'
+        fill='currentColor'
+      />
+      <path
+        d='M5 7.14c.88-1 1.32-1.49 1.9-1.75.59-.26 1.25-.26 2.57-.26h6.77c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v1.72c0 2.83 0 4.25-.88 5.13s-2.3.87-5.12.87H9.47c-1.32 0-1.98 0-2.57-.26s-1.02-.76-1.9-1.74l-.77-.87c-1.7-1.9-2.54-2.85-2.54-3.99S2.53 9.9 4.23 8z'
         stroke='currentColor'
       />
+      <path d='m18.07 9.19-5.62 5.62' stroke='currentColor' />
+      <path d='m12.45 9.19 5.62 5.62' stroke='currentColor' />
     </svg>
   )
 }

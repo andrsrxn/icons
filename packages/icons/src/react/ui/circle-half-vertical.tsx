@@ -4,11 +4,10 @@ export const IconCircleHalfVertical: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,12 @@ export const IconCircleHalfVertical: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'circle-half-vertical-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'circle-half-vertical-title'}>{title}</title>
-      ) : null}
-      <path opacity='.2' d='M12 21.43a9.43 9.43 0 0 1 0-18.86z' fill='currentColor' />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M12 2.79V21.2' stroke='currentColor' />
+      <path opacity='.2' d='M12 22.3a10.3 10.3 0 1 1 0-20.6z' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.3' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path d='M12 1.94v20.13' stroke='currentColor' />
     </svg>
   )
 }

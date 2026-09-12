@@ -4,11 +4,10 @@ export const IconSubtract: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,17 @@ export const IconSubtract: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'subtract-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'subtract-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M21.26 15.12c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87h-3.99a2.96 2.96 0 0 1-.23-5.9l.83-.06c.53-.04.79-.06 1.01-.12a3 3 0 0 0 2.27-2.36c.04-.23.05-.5.06-1.02l.02-.6v-.03a3 3 0 0 1 2.99-2.89h.06a3 3 0 0 1 2.98 2.99z'
+        d='M22.24 16.09c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88h-5.53a3 3 0 0 1-2.78-2.82v-.93a3 3 0 0 1 3.01-2.78l.91-.07c.85-.06 1.28-.1 1.63-.22a3 3 0 0 0 1.93-2.01c.1-.36.12-.79.14-1.64l.03-.66c0-.3.01-.45.03-.58a3 3 0 0 1 2.72-2.63c.13-.02.28-.02.58-.02.31 0 .47 0 .6.02a3 3 0 0 1 2.72 2.72l.01.6z'
         fill='currentColor'
       />
-      <rect x='2.74' y='2.7' width='12.98' height='12.98' rx='3' stroke='currentColor' />
+      <rect x='1.76' y='1.72' width='14.35' height='14.35' rx='3' stroke='currentColor' />
       <path
-        d='M15.93 8.31c2.19 0 3.28 0 4.06.55a3 3 0 0 1 .73.73c.54.78.54 1.87.54 4.06v1.65c0 2.82 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H13.6c-2.16 0-3.24 0-4-.53a3 3 0 0 1-.8-.77c-.53-.77-.53-1.85-.53-4'
+        d='M16.35 7.92c2.72 0 4.09 0 4.96.83l.11.11c.82.87.82 2.23.82 4.96v2.46c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88h-2.49c-2.7 0-4.04 0-4.9-.8l-.16-.16c-.8-.86-.8-2.21-.8-4.9'
         stroke='currentColor'
       />
     </svg>

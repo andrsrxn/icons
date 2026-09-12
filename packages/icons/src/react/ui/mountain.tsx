@@ -4,11 +4,10 @@ export const IconMountain: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,20 @@ export const IconMountain: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'mountain-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'mountain-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6.59 8.73h5.44l2.35.84 3.08-.84 3.04 11.82H3.57z'
+        d='M6.18 8.85h5.85l2.54.83 3.31-.83 3.27 11.87H2.93z'
         fill='currentColor'
       />
       <path
-        d='M12 2.43c4.4 0 6.98 8.69 8.18 14.23.43 2.01.65 3.02.05 3.76s-1.67.74-3.81.74H7.76c-2.21 0-3.32 0-3.92-.76-.6-.77-.34-1.8.17-3.88C5.4 10.97 8.14 2.43 12 2.43'
+        d='M12 2.51c4.72 0 7.5 8.72 8.8 14.3.47 2 .7 3.02.1 3.77-.6.76-1.68.76-3.84.76H7.13c-2.24 0-3.36 0-3.96-.78-.6-.79-.32-1.83.24-3.91C4.9 11.07 7.85 2.5 12 2.5'
         stroke='currentColor'
       />
       <path
-        d='M17.19 8.73S15.59 10 14.17 10c-1.58 0-2.5-1.5-4.06-1.5-1.73 0-3.73 1.15-3.73 1.15'
+        d='M17.59 8.85s-1.73 1.27-3.26 1.27c-1.7 0-2.7-1.5-4.36-1.5-1.87 0-4.02 1.15-4.02 1.15'
         stroke='currentColor'
       />
     </svg>

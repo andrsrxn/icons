@@ -4,11 +4,10 @@ export const IconSimCard: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,30 +23,29 @@ export const IconSimCard: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sim-card-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sim-card-title'}>{title}</title> : null}
       <path
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M17.86 6.88c.54.58.82.86.96 1.22s.14.75.14 1.54v7.38c0 1.88 0 2.83-.58 3.41-.59.59-1.53.59-3.42.59h-5.8c-1.88 0-2.83 0-3.41-.59-.59-.58-.59-1.53-.59-3.41V7c0-1.89 0-2.83.59-3.41C6.33 3 7.28 3 9.16 3h3.07c.78 0 1.17 0 1.52.14s.64.4 1.2.93l2 1.86zM8.1 14.12c0 1.84 0 2.76.56 3.34l.05.05c.58.56 1.5.56 3.34.56 1.85 0 2.77 0 3.35-.56l.05-.05c.56-.58.56-1.5.56-3.34s0-2.77-.56-3.35l-.05-.05c-.58-.56-1.5-.56-3.35-.56-1.84 0-2.76 0-3.34.56l-.05.05c-.56.58-.56 1.5-.56 3.35'
+        d='M18.68 6.41c.54.57.82.86.96 1.22s.14.75.14 1.54v8.9c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58H8.36c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42V5.94c0-1.89 0-2.83.58-3.42.6-.58 1.53-.58 3.42-.58h4.08c.78 0 1.17 0 1.52.14.36.13.64.4 1.21.93l2.37 2.2zM7.65 14.36c0 2.06 0 3.1.63 3.74l.05.06c.65.62 1.68.62 3.74.62s3.09 0 3.74-.62l.05-.06c.63-.65.63-1.68.63-3.74s0-3.09-.63-3.74l-.05-.05c-.65-.63-1.68-.63-3.74-.63s-3.09 0-3.74.63l-.05.05c-.63.65-.63 1.68-.63 3.74'
         fill='currentColor'
       />
       <path
-        d='M10.97 21.24c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V8.85c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h.36c1.26 0 1.9 0 2.46.24.56.25 1 .7 1.87 1.62l.8.84.86.87c.85.86 1.27 1.3 1.5 1.84.21.55.21 1.15.21 2.36v4.62c0 2.82 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88z'
+        d='M10.14 22.32c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V7.77c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.4c1.27 0 1.9 0 2.47.24s1 .7 1.88 1.62l1.1 1.15 1.16 1.18c.84.87 1.27 1.3 1.49 1.84.22.55.22 1.15.22 2.36v6.16c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88z'
         stroke='currentColor'
       />
       <rect
-        width='7.91'
-        height='7.91'
+        width='8.84'
+        height='8.84'
         rx='2'
-        transform='matrix(0 -1 -1 0 16.02 18.07)'
+        transform='matrix(0 -1 -1 0 16.5 18.78)'
         stroke='currentColor'
       />
-      <path d='M10.67 17.52v-3.13m2.67 3.13v-3.13' stroke='currentColor' />
+      <path d='M10.5 18.16v-3.5' stroke='currentColor' />
+      <path d='M13.5 18.16v-3.5' stroke='currentColor' />
     </svg>
   )
 }

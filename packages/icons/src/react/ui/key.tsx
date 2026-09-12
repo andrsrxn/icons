@@ -4,11 +4,10 @@ export const IconKey: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,18 @@ export const IconKey: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'key-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M14.62 14.45a5.88 5.88 0 1 0-5.2-3.14L3.37 17v4.38h4.2V18.8h2.77v-2.55l2.18-2.18q.98.4 2.1.4'
+        d='M14.9 14.7a6.48 6.48 0 1 0-5.75-3.46L2.5 17.5v4.83h4.62V19.5h3.06v-2.81l2.4-2.4q1.09.42 2.32.43'
         fill='currentColor'
       />
-      <path d='M9.31 11.25a6 6 0 0 1-.57-2.55 5.88 5.88 0 1 1 3.8 5.38' stroke='currentColor' />
+      <path d='M9.04 11.17a7 7 0 0 1-.63-2.8 6.48 6.48 0 1 1 4.19 5.92' stroke='currentColor' />
+      <path d='M15.89 8.02a1 1 0 1 1-2 0 1 1 0 0 1 2 0' fill='currentColor' stroke='currentColor' />
       <path
-        d='M15.52 8.4a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0'
-        fill='currentColor'
-        stroke='currentColor'
-      />
-      <path
-        d='M9.3 11.28 3.97 16.6c-.3.3-.44.44-.52.62-.07.18-.07.39-.07.8v1.4c0 .95 0 1.42.3 1.71.28.3.76.3 1.7.3h.88c.28 0 .42 0 .54-.03a1 1 0 0 0 .73-.74c.03-.11.03-.26.03-.54s0-.43.03-.55a1 1 0 0 1 .74-.73c.11-.03.26-.03.54-.03h.1c.37 0 .56 0 .71-.05a1 1 0 0 0 .64-.64c.05-.15.05-.34.05-.71v-.43c0-.34 0-.5.05-.66l.05-.12c.08-.15.2-.27.44-.51l1.59-1.6'
+        d='m9.02 11.2-5.94 5.93c-.29.3-.43.44-.5.62s-.08.39-.08.8v1.84c0 .94 0 1.42.29 1.7.3.3.76.3 1.7.3h1.18c.4 0 .61 0 .78-.06a1 1 0 0 0 .6-.6c.06-.16.06-.37.06-.78 0-.4 0-.61.06-.78a1 1 0 0 1 .6-.6c.16-.06.37-.06.78-.06h.1c.52 0 .77 0 .97-.09a1 1 0 0 0 .5-.5c.08-.2.08-.45.08-.96v-.47c0-.41 0-.62.08-.8s.22-.33.5-.62l1.77-1.76'
         stroke='currentColor'
       />
     </svg>

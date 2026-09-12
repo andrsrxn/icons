@@ -4,11 +4,10 @@ export const IconTextItalic: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,12 +23,12 @@ export const IconTextItalic: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-italic-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-italic-title'}>{title}</title> : null}
-      <path d='M14.2 3.77 9.78 20.23m2.93 0H7.25m9.46-16.46h-5.46' stroke='currentColor' />
+      <path d='M14.2 3.77 9.78 20.23' stroke='currentColor' />
+      <path d='M12.71 20.23H7.25' stroke='currentColor' />
+      <path d='M16.71 3.77h-5.46' stroke='currentColor' />
     </svg>
   )
 }

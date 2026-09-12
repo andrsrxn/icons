@@ -4,11 +4,10 @@ export const IconVideoOff: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,24 @@ export const IconVideoOff: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'video-off-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'video-off-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='6' width='13.3' height='12' rx='3' fill='currentColor' />
-      <rect x='2.7' y='6' width='13.3' height='12' rx='3' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        x='1.81'
+        y='5.43'
+        width='14.56'
+        height='13.13'
+        rx='3'
+        fill='currentColor'
+      />
+      <rect x='1.81' y='5.43' width='14.56' height='13.13' rx='3' stroke='currentColor' />
       <path
-        d='m16 9.38.58-.3c1.69-.85 2.53-1.28 3.21-1.14a2 2 0 0 1 1.17.72c.43.54.43 1.49.43 3.38 0 1.87 0 2.8-.43 3.35a2 2 0 0 1-1.15.71c-.67.15-1.51-.26-3.19-1.08l-.62-.3M3.3 3.3l17.4 17.4'
+        d='m16.37 9.13.64-.32c2.1-1.06 3.15-1.6 3.97-1.28a2 2 0 0 1 .64.4c.65.59.65 1.76.65 4.12 0 2.32 0 3.48-.64 4.07a2 2 0 0 1-.63.4c-.82.31-1.86-.2-3.95-1.21l-.68-.33'
         stroke='currentColor'
       />
+      <path d='m2.71 2.71 18.58 18.58' stroke='currentColor' />
     </svg>
   )
 }

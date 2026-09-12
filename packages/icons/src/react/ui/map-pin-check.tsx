@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconMapPinCheck: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-map-pin-check'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M4.72 9.07C4.72 13.1 9.49 22.2 12 22.2c2.5 0 7.28-9.1 7.28-13.13a7.28 7.28 0 1 0-14.56 0'
+        fill='currentColor'
+      />
+      <path
+        d='M14.54 20.37c-1.06 1.3-1.59 1.95-2.54 1.95s-1.48-.65-2.54-1.96c-2.19-2.7-5-6.95-5-11.02a7.55 7.55 0 0 1 15.09 0c0 4.1-2.82 8.34-5 11.03'
+        stroke='currentColor'
+      />
+      <path
+        d='m8.87 9.85.42.55c.73.95 1.1 1.43 1.6 1.43.49 0 .85-.48 1.58-1.44l2.66-3.49'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

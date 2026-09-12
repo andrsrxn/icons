@@ -4,11 +4,10 @@ export const IconGoldenRatio: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconGoldenRatio: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'golden-ratio-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'golden-ratio-title'}>{title}</title> : null}
       <path
-        d='M2.74 17.51c0-4.66 3.47-10.7 10-11 6.08-.27 9.06 3.62 8.4 7.24a4.6 4.6 0 0 1-4.57 3.98c-3.52.2-4.56-2.26-4.45-3.75.14-2.01 1.6-2.98 2.93-2.98 1.34 0 2.6 1.29 1.72 2.98'
+        d='M1.7 18.12c0-5.19 3.86-11.9 11.12-12.24 6.76-.3 10.08 4.03 9.34 8.05a5.1 5.1 0 0 1-5.07 4.43c-3.92.22-5.08-2.5-4.96-4.17.16-2.24 1.78-3.31 3.26-3.31 1.5 0 2.9 1.43 1.92 3.31'
         stroke='currentColor'
       />
     </svg>

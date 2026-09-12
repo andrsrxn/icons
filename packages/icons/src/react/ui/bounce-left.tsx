@@ -4,11 +4,10 @@ export const IconBounceLeft: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,28 +23,26 @@ export const IconBounceLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'bounce-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bounce-left-title'}>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='2.93'
-        cy='2.93'
-        r='2.93'
-        transform='matrix(-1 0 0 1 8.4 4.38)'
+        cx='3.18'
+        cy='3.18'
+        r='3.18'
+        transform='matrix(-1 0 0 1 8.08 3.73)'
         fill='currentColor'
       />
       <path
-        d='M21.46 14.4c-1.14.32-1.97.7-3.15 2.1s-1.6 3.12-1.6 3.12-.4-3.94-1.54-5.85a9 9 0 0 0-4.3-3.96'
+        d='M22.28 14.6a6 6 0 0 0-3.42 2.28c-1.29 1.53-1.75 3.4-1.75 3.4s-.43-4.28-1.67-6.36a10 10 0 0 0-4.68-4.3'
         stroke='currentColor'
       />
       <circle
-        cx='2.93'
-        cy='2.93'
-        r='2.93'
-        transform='matrix(-1 0 0 1 8.4 4.38)'
+        cx='3.18'
+        cy='3.18'
+        r='3.18'
+        transform='matrix(-1 0 0 1 8.08 3.73)'
         stroke='currentColor'
       />
     </svg>

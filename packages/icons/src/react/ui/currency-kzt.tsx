@@ -4,11 +4,10 @@ export const IconCurrencyKzt: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,12 +23,12 @@ export const IconCurrencyKzt: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-kzt-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-kzt-title'}>{title}</title> : null}
-      <path d='m11.95 7.75.01 13.44M4 7.75h15.9M5.73 3.7h12.44' stroke='currentColor' />
+      <path d='m11.95 7.75.01 13.44' stroke='currentColor' />
+      <path d='M4 7.75h15.9' stroke='currentColor' />
+      <path d='M5.73 3.7h12.44' stroke='currentColor' />
     </svg>
   )
 }

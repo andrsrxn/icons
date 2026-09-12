@@ -4,11 +4,10 @@ export const IconShipFront: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,22 @@ export const IconShipFront: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'ship-front-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'ship-front-title'}>{title}</title> : null}
-      <path opacity='.2' fill='currentColor' d='M6.54 5.15h10.85v5.29H6.54z' />
+      <path opacity='.2' fill='currentColor' d='M6.14 4.59h11.65v5.67H6.14z' />
       <path
-        d='M17.93 11.49V8.8c0-1.88 0-2.83-.59-3.41s-1.53-.59-3.41-.59h-3.86c-1.88 0-2.82 0-3.41.59-.59.58-.59 1.53-.59 3.41v2.69'
+        d='M18.36 10.87V8.22c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H9.64c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v2.65'
         stroke='currentColor'
       />
       <path
-        d='m10.81 9.85-4.1 1.28c-1.6.5-2.4.74-2.8 1.46-.38.71-.18 1.44.23 2.9a12 12 0 0 0 1.05 2.53c.81 1.44 1.22 2.16 2.15 2.71.94.55 1.94.55 3.96.55h1.68c2.17 0 3.25 0 4.26-.66l.13-.1c.98-.7 1.29-1.53 1.91-3.19.2-.52.38-1.14.55-1.77.4-1.53.6-2.3.2-3-.38-.7-1.2-.95-2.81-1.45l-4.03-1.26c-.6-.18-.89-.27-1.19-.27s-.6.09-1.19.27M12 4.8V2.34m0 11.86V9.82'
+        d='M17.76 21.9s1.18-1.92 2.05-4.24c.24-.63.46-1.39.65-2.14.4-1.55.59-2.32.2-3.02-.4-.7-1.2-.94-2.82-1.44L13.2 9.6a4 4 0 0 0-1.2-.27c-.3 0-.6.1-1.19.28l-4.73 1.47c-1.6.5-2.4.74-2.78 1.45-.39.7-.2 1.44.2 2.91a12 12 0 0 0 2.47 4.87'
+        stroke='currentColor'
+      />
+      <path d='M12 4.22V1.75' stroke='currentColor' />
+      <path d='M12 14.3V9.6' stroke='currentColor' />
+      <path
+        d='M2.47 21.93a11.3 11.3 0 0 1 5.6-1.3c2.8 0 6.15 1.67 8.87 1.67 2.73 0 3.99-.9 4.52-1.4'
         stroke='currentColor'
       />
     </svg>

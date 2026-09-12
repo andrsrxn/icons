@@ -4,11 +4,10 @@ export const IconDotsGrid: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,51 @@ export const IconDotsGrid: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'dots-grid-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dots-grid-title'}>{title}</title> : null}
       <path
-        d='M5.9 4.21a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 12a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M5.9 19.79a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0m13.85 0a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0M12.83 4.21a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0m0 7.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0'
+        d='M5.9 4.21a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.75 4.21a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.9 12a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.75 12a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.9 19.79a.84.84 0 1 1-1.68 0 .84.84 0 0 1 1.68 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.75 19.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.7 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.83 4.21a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.83 12a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.83 19.79a.84.84 0 1 1-1.69 0 .84.84 0 0 1 1.69 0'
         fill='currentColor'
         stroke='currentColor'
       />

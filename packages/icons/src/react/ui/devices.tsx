@@ -4,11 +4,10 @@ export const IconDevices: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,30 +23,30 @@ export const IconDevices: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'devices-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'devices-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.69 8.4c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h8.69c1.15 0 1.73 0 2.17.23a2 2 0 0 1 .83.83c.23.44.23 1.02.23 2.17v.99a2 2 0 0 1-1.47 1.9l-.05.01-.05.02a2 2 0 0 0-1.43 1.52v.04l-.16.78c-.2.99-.3 1.49-.57 1.85a2 2 0 0 1-.74.6c-.4.2-.91.2-1.93.2H6.7c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z'
+        d='M1.78 7.65c0-1.88 0-2.82.58-3.41.59-.59 1.53-.59 3.42-.59h9.93c1.45 0 2.18 0 2.7.36q.28.2.49.5c.36.51.36 1.24.36 2.7v1.35a2 2 0 0 1-1.67 1.83l-.28.08a2 2 0 0 0-1.3 1.38l-.06.27-.16.85c-.25 1.25-.37 1.87-.76 2.29a2 2 0 0 1-.4.33c-.5.3-1.13.3-2.4.3H5.79c-1.9 0-2.83 0-3.42-.59-.58-.58-.58-1.52-.58-3.41z'
         fill='currentColor'
       />
       <path
-        d='M18.61 9.86V8.4c0-1.89 0-2.83-.58-3.42-.59-.58-1.53-.58-3.42-.58H6.7c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v3.14c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h8.21m-4.26 3.65v-3.65M8 19.19h5.3'
+        d='M19.26 9.65v-2c0-1.88 0-2.82-.59-3.41-.58-.59-1.52-.59-3.41-.59H5.78c-1.9 0-2.83 0-3.42.59s-.58 1.53-.58 3.41v4.24c0 1.89 0 2.83.58 3.41.59.59 1.53.59 3.42.59h9.4'
         stroke='currentColor'
       />
+      <path d='M10.52 19.9v-4.01' stroke='currentColor' />
+      <path d='M7.53 19.9h5.97' stroke='currentColor' />
       <rect
-        x='15.19'
-        y='19.6'
-        width='9.52'
-        height='6.13'
+        x='15.5'
+        y='20.35'
+        width='10.46'
+        height='6.73'
         rx='2'
-        transform='rotate(-90 15.19 19.6)'
+        transform='rotate(-90 15.5 20.35)'
         stroke='currentColor'
       />
-      <path d='M18.84 12.54h-1.18' stroke='currentColor' />
+      <path d='M19.5 12.6h-1.28' stroke='currentColor' />
     </svg>
   )
 }

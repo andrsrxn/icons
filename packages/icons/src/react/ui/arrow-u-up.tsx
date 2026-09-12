@@ -4,11 +4,10 @@ export const IconArrowUUp: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,12 @@ export const IconArrowUUp: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'arrow-u-up-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'arrow-u-up-title'}>{title}</title> : null}
-      <path d='M7.88 4.69v9.8a5.66 5.66 0 0 0 11.32 0V7.24' stroke='currentColor' />
+      <path d='M7.58 4.6v9.9a5.71 5.71 0 0 0 11.42 0V7.17' stroke='currentColor' />
       <path
-        d='m3.35 8.03 1.7-1.7c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l1.7 1.7'
+        d='m3 7.98 1.74-1.75c1.34-1.33 2-2 2.83-2s1.5.67 2.83 2l1.75 1.75'
         stroke='currentColor'
       />
     </svg>

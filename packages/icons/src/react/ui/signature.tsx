@@ -4,11 +4,10 @@ export const IconSignature: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconSignature: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'signature-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'signature-title'}>{title}</title> : null}
       <path
-        d='M3.72 20.94c2.03-1.89 4.87-7.63 4.85-11.52-.03-4.87-1.72-6.31-3.29-6.36-1.56-.04-4.03 2.75-1.56 8.68 2.43 5.82 5.59 5.6 6.3 5.32.72-.28 2.83-1.5 2.04-5.32.27 1.75 1 5.04 3.3 4.5 1.84-.44 1.33-3.76.87-5.26.42 1.9 1.35 5.03 3.66 4.69 2.02-.3 1.47-3 1-3.93m-.34 7.21L9.94 20.13'
+        d='M2.98 21.43c2.23-2 5.35-8.05 5.32-12.15-.03-5.14-1.88-6.66-3.6-6.7s-4.43 2.9-1.72 9.14c2.66 6.15 6.14 5.92 6.92 5.62s3.1-1.58 2.24-5.62c.28 1.85 1.1 5.32 3.6 4.75 2.03-.46 1.47-3.96.97-5.54.46 2 1.48 5.3 4.01 4.94 2.22-.32 1.61-3.16 1.1-4.15'
         stroke='currentColor'
       />
+      <path d='M21.45 19.33 9.8 20.58' stroke='currentColor' />
     </svg>
   )
 }

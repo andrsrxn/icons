@@ -4,11 +4,10 @@ export const IconTextIndent: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,14 @@ export const IconTextIndent: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-indent-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-indent-title'}>{title}</title> : null}
+      <path d='M2.74 17.85h18.52' stroke='currentColor' />
+      <path d='M2.74 11.98h18.52' stroke='currentColor' />
+      <path d='M10.42 6.1h10.84' stroke='currentColor' />
       <path
-        d='M3 17.85h18M3 11.98h18M10.86 6.1H21M3 3.83l1.1.39C6.3 5 7.4 5.39 7.4 6.1c0 .7-1.1 1.1-3.3 1.88l-1.1.4'
+        d='m3 4 .3.1c2.5.77 3.74 1.16 3.74 1.9 0 .73-1.25 1.13-3.75 1.9L3 8'
         stroke='currentColor'
       />
     </svg>

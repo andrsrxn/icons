@@ -4,11 +4,10 @@ export const IconBatteryMedium: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,21 @@ export const IconBatteryMedium: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'battery-medium-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'battery-medium-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M2.74 10.66c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h4.78v10.68H6.74c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42z'
+        d='M1.72 12c0-2.83 0-4.24.88-5.12S4.9 6 7.72 6H11v12H7.72c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12'
         fill='currentColor'
       />
-      <rect x='2.74' y='6.66' width='15.55' height='10.69' rx='2' stroke='currentColor' />
+      <rect x='1.72' y='6' width='17.26' height='12' rx='3' stroke='currentColor' />
       <path
-        d='m18.56 8.83.63.26c.8.33 1.2.5 1.49.78a2 2 0 0 1 .43.64c.15.37.15.8.15 1.67 0 .88 0 1.32-.16 1.7a2 2 0 0 1-.44.64c-.29.28-.7.45-1.51.77l-.6.23M6.01 9.47v5.06m3-5.06v5.06'
+        d='m18.98 8.44.95.36c1.02.39 1.53.58 1.86.96a2 2 0 0 1 .25.36c.24.45.24 1 .24 2.08 0 1.11 0 1.67-.25 2.11a2 2 0 0 1-.25.36c-.34.39-.86.58-1.9.96l-.9.32'
         stroke='currentColor'
       />
+      <path d='M5.36 9.16v5.68' stroke='currentColor' />
+      <path d='M8.69 9.16v5.68' stroke='currentColor' />
     </svg>
   )
 }

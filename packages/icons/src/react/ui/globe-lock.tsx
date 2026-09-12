@@ -4,11 +4,10 @@ export const IconGlobeLock: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,22 @@ export const IconGlobeLock: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'globe-lock-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'globe-lock-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12 21.43a9.43 9.43 0 1 1 8.32-4.98s-.32-1.59-2-1.59l-2.09 2.8-.34 2.8c-1.38.8-2.18.97-3.89.97'
+        d='M12 22.3a10.3 10.3 0 1 1 9.1-5.44l-1.81-2.1-1.52.78-1.24 2.32-.27 3.39A7 7 0 0 1 12 22.31'
         fill='currentColor'
       />
-      <path d='M12 21.43A9.43 9.43 0 1 1 21.43 12' stroke='currentColor' />
+      <path d='M12 22.3A10.3 10.3 0 1 1 22.3 12' stroke='currentColor' />
       <path
-        d='M12 21.43c-2.2 0-4-4.22-4-9.43s1.8-9.43 4-9.43S16 6.8 16 12M2.57 12h18.86'
+        d='M12 22.3c-2.41 0-4.37-4.6-4.37-10.3S9.59 1.7 12 1.7s4.37 4.6 4.37 10.3'
         stroke='currentColor'
       />
-      <rect x='15.61' y='17.33' width='5.82' height='4.34' rx='1' stroke='currentColor' />
-      <path d='M20.16 17.33 20 16.1a1.48 1.48 0 0 0-2.94-.02l-.16 1.24' stroke='currentColor' />
+      <path d='M1.7 12h20.6' stroke='currentColor' />
+      <rect x='15.92' y='17.54' width='6.39' height='4.77' rx='1' stroke='currentColor' />
+      <path d='m20.91 17.54-.16-1.34a1.63 1.63 0 0 0-3.23-.01l-.17 1.35' stroke='currentColor' />
     </svg>
   )
 }

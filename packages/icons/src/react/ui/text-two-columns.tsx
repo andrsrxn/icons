@@ -4,11 +4,10 @@ export const IconTextTwoColumns: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,17 @@ export const IconTextTwoColumns: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-two-columns-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-two-columns-title'}>{title}</title>
-      ) : null}
-      <path
-        d='M3 5.18h7m4 0h7M3 14.27h7m4 0h7M3 9.73h7m4 0h7M3 18.82h7m4 0h7'
-        stroke='currentColor'
-      />
+      <path d='M2.7 5.18h7.23' stroke='currentColor' />
+      <path d='M14.07 5.18h7.22' stroke='currentColor' />
+      <path d='M2.7 14.27h7.23' stroke='currentColor' />
+      <path d='M14.07 14.27h7.22' stroke='currentColor' />
+      <path d='M2.7 9.73h7.23' stroke='currentColor' />
+      <path d='M14.07 9.73h7.22' stroke='currentColor' />
+      <path d='M2.7 18.82h7.23' stroke='currentColor' />
+      <path d='M14.07 18.82h7.22' stroke='currentColor' />
     </svg>
   )
 }

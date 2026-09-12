@@ -4,11 +4,10 @@ export const IconTransparency: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconTransparency: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'transparency-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'transparency-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M5.36 18.64c-2.62-1.93-2.91-6.35-2.74-8.32l10.49 10.54c-1.5.06-5.13-.29-7.75-2.22m0-13.28 5.05-2.22 10.45 11.07-2.22 4.43z'
+        d='M4.79 19.21c-2.85-2.1-3.17-6.9-2.97-9.03L13.2 21.62c-1.62.07-5.57-.3-8.41-2.4'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.41' stroke='currentColor' />
-      <path
-        d='m2.9 10.18 11.01 11M5.56 5.68l12.85 12.85M10 2.96 21.14 14.1'
-        stroke='currentColor'
-      />
+      <path opacity='.2' d='m4.79 4.79 5.48-2.41L21.62 14.4l-2.4 4.81z' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
+      <path d='m2.12 10.02 11.96 11.96' stroke='currentColor' />
+      <path d='M5 5.13 18.98 19.1' stroke='currentColor' />
+      <path d='m9.82 2.18 12.1 12.1' stroke='currentColor' />
     </svg>
   )
 }

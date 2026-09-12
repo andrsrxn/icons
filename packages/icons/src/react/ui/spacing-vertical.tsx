@@ -4,11 +4,10 @@ export const IconSpacingVertical: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,21 @@ export const IconSpacingVertical: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'spacing-vertical-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'spacing-vertical-title'}>{title}</title>
-      ) : null}
+      <path d='M5.8 4.6v14.54' stroke='currentColor' />
       <path
-        d='M5.8 4.6v14.54m3.5-2.26-.66.66c-1.33 1.34-2 2-2.83 2s-1.5-.66-2.83-2l-.67-.66m6.91-9.84-.58-.58c-1.33-1.34-2-2-2.83-2s-1.5.66-2.83 2l-.59.58M21.61 6h-9.25m9.25 6h-9.25m9.25 6h-9.25'
+        d='m9.3 16.88-.66.66c-1.33 1.34-2 2-2.83 2s-1.5-.66-2.83-2l-.67-.66'
         stroke='currentColor'
       />
+      <path
+        d='m9.22 7.04-.58-.58c-1.33-1.34-2-2-2.83-2s-1.5.66-2.83 2l-.59.58'
+        stroke='currentColor'
+      />
+      <path d='M21.36 6h-8.8' stroke='currentColor' />
+      <path d='M21.36 12h-8.8' stroke='currentColor' />
+      <path d='M21.36 18h-8.8' stroke='currentColor' />
     </svg>
   )
 }

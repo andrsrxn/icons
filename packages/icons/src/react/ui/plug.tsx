@@ -4,11 +4,10 @@ export const IconPlug: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,21 @@ export const IconPlug: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'plug-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'plug-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M4.77 10.26c-.47-1.23-.7-1.85-.41-2.28.3-.43.96-.43 2.28-.43h10.8c1.29 0 1.93 0 2.23.42s.08 1.03-.35 2.25l-.79 2.2c-.45 1.28-.68 1.93-1.2 2.3s-1.2.36-2.56.36h-5.4c-1.33 0-2 0-2.5-.35-.52-.36-.75-.98-1.23-2.22z'
+        d='M4.05 9.87c-.48-1.23-.71-1.85-.42-2.28.3-.43.96-.43 2.28-.43h12.25c1.3 0 1.94 0 2.24.42s.08 1.03-.36 2.25l-1.02 2.86c-.45 1.29-.68 1.93-1.2 2.3s-1.2.36-2.56.36H8.9c-1.33 0-2 0-2.5-.35-.52-.35-.76-.98-1.23-2.22z'
         fill='currentColor'
       />
       <path
-        d='M5.3 12.46c-.67-2.1-1-3.14-.57-3.9A2 2 0 0 1 5 8.2c.6-.65 1.7-.65 3.9-.65h6.27c2.18 0 3.27 0 3.87.64q.15.16.26.35c.43.76.11 1.8-.54 3.9-.37 1.18-.56 1.78-1 2.15l-.23.18c-.49.3-1.11.3-2.36.3H8.88c-1.24 0-1.86 0-2.34-.3l-.24-.17c-.44-.37-.63-.96-1-2.14m3.16-4.91V2.54m7.09 5.01V2.54M12 21.44v-6.36'
+        d='M4.67 12.37C3.9 10 3.53 8.8 4.13 7.97c.6-.81 1.85-.81 4.35-.81h7.08c2.49 0 3.73 0 4.33.81s.23 2-.5 4.38l-.07.19c-.42 1.35-.63 2.03-1.16 2.42s-1.24.39-2.66.39H8.54c-1.41 0-2.11 0-2.64-.39-.53-.38-.74-1.05-1.17-2.4z'
         stroke='currentColor'
       />
+      <path d='M8.14 7.16V1.7' stroke='currentColor' />
+      <path d='M15.86 7.16V1.7' stroke='currentColor' />
+      <path d='M12 22.27v-6.92' stroke='currentColor' />
     </svg>
   )
 }

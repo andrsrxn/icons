@@ -4,11 +4,10 @@ export const IconMapPinLine: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconMapPinLine: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'map-pin-line-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'map-pin-line-title'}>{title}</title> : null}
-      <path d='M12 21.55V12' stroke='currentColor' />
+      <path d='M12 22.39v-10.4' stroke='currentColor' />
       <circle
         opacity='.2'
         cx='12'
-        cy='7.29'
-        r='4.71'
-        transform='rotate(90 12 7.29)'
+        cy='6.87'
+        r='5.13'
+        transform='rotate(90 12 6.87)'
         fill='currentColor'
       />
-      <circle cx='12' cy='7.29' r='4.71' transform='rotate(90 12 7.29)' stroke='currentColor' />
+      <circle cx='12' cy='6.87' r='5.13' transform='rotate(90 12 6.87)' stroke='currentColor' />
     </svg>
   )
 }

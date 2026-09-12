@@ -4,11 +4,10 @@ export const IconRobot: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,35 @@ export const IconRobot: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'robot-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'robot-title'}>{title}</title> : null}
-      <rect opacity='.2' x='5.5' y='8.33' width='12.99' height='12.99' rx='3' fill='currentColor' />
+      <rect
+        opacity='.2'
+        x='4.68'
+        y='7.61'
+        width='14.63'
+        height='14.63'
+        rx='3'
+        fill='currentColor'
+      />
       <path
-        d='M14.8 16.96c-.6.6-1.55.98-2.8.98a4.3 4.3 0 0 1-2.81-.98m.67-4.87v1.49m4.48-1.49v1.49M3 12.43v4.8m18-4.8v4.8M12 6.4v1.93'
+        d='M15.16 17.34a4.4 4.4 0 0 1-3.16 1.1c-1.4 0-2.44-.49-3.17-1.1'
         stroke='currentColor'
       />
-      <rect x='5.5' y='8.33' width='12.99' height='12.99' rx='3' stroke='currentColor' />
-      <path d='M10.46 4.46A1.53 1.53 0 0 0 12 6a1.54 1.54 0 1 0-1.54-1.54' stroke='currentColor' />
+      <path d='M9.59 11.85v1.68' stroke='currentColor' />
+      <path d='M14.64 11.85v1.68' stroke='currentColor' />
+      <path d='M1.86 12.23v5.4' stroke='currentColor' />
+      <path d='M22.14 12.23v5.4' stroke='currentColor' />
+      <path d='M12 5.44V7.6' stroke='currentColor' />
+      <rect x='4.68' y='7.61' width='14.63' height='14.63' rx='3' stroke='currentColor' />
+      <path
+        d='M10.27 3.48A1.73 1.73 0 0 0 12 5.22a1.73 1.73 0 1 0-1.73-1.74'
+        stroke='currentColor'
+      />
       <path
         opacity='.2'
-        d='M10.43 4.66a1.54 1.54 0 1 0 3.08 0 1.54 1.54 0 0 0-3.08 0'
+        d='M10.23 3.7a1.73 1.73 0 1 0 3.47 0 1.73 1.73 0 0 0-3.47 0'
         fill='currentColor'
       />
     </svg>

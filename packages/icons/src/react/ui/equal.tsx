@@ -4,11 +4,10 @@ export const IconEqual: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,12 +23,11 @@ export const IconEqual: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'equal-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'equal-title'}>{title}</title> : null}
-      <path d='M4.07 9h15.86M4.07 15h15.86' stroke='currentColor' />
+      <path d='M4.07 9h15.86' stroke='currentColor' />
+      <path d='M4.08 15h15.85' stroke='currentColor' />
     </svg>
   )
 }

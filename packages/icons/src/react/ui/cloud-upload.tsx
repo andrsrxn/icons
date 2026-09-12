@@ -4,11 +4,10 @@ export const IconCloudUpload: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,28 @@ export const IconCloudUpload: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cloud-upload-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cloud-upload-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='m2.33 12.83 3.49 3.44h12.07l3-1.94v-3.89l-3-2.14-1.57 1.1-.85-3.17-3.58-2.07-3 1.3L7.38 8.3l-3.5 1.1z'
+        d='m1.53 12.92 3.8 3.74h13.14l3.26-2.11v-4.23l-3.26-2.33-1.71 1.2-.92-3.46-3.9-2.25-3.27 1.4L7.03 8l-3.8 1.2z'
         fill='currentColor'
       />
+      <path d='M6.82 7.58a5.03 5.03 0 0 1 9.23-1.16 5.5 5.5 0 0 1 .6 3.84' stroke='currentColor' />
       <path
-        d='M7.19 7.93a4.62 4.62 0 0 1 8.48-1.07c.75 1.31.73 2.64.55 3.53M5.55 15.95a3.3 3.3 0 0 1-1.96-1.05 3.87 3.87 0 0 1 2.78-6.6c1.27 0 2.4.6 3.1 1.55'
+        d='M5.03 16.32a3.6 3.6 0 0 1-2.13-1.15 4.22 4.22 0 0 1 3.03-7.19c1.38 0 2.61.66 3.38 1.7'
         stroke='currentColor'
       />
       <path
-        d='M16.35 8.72c.97-.5 2.15-.43 3.06.1a3.9 3.9 0 0 1 1.43 5.3c-.64 1.11-1.5 1.78-2.4 1.9m-9.3 2c1.32 1.32 1.98 1.99 2.8 2h.03c.82-.01 1.48-.67 2.8-2m-2.81 1.41v-6.36'
+        d='M16.8 8.44a3.5 3.5 0 0 1 3.33.11 4.23 4.23 0 0 1 1.55 5.78c-.7 1.2-1.63 1.93-2.6 2.05'
         stroke='currentColor'
       />
+      <path
+        d='m8.95 18.57.23.24c1.34 1.33 2 2 2.83 2s1.5-.67 2.83-2l.24-.24'
+        stroke='currentColor'
+      />
+      <path d='M12.01 20.1v-6.92' stroke='currentColor' />
     </svg>
   )
 }

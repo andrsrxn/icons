@@ -4,11 +4,10 @@ export const IconSignalLow: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,21 @@ export const IconSignalLow: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'signal-low-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'signal-low-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.27 17.94c-.45-.61-.68-.92-.68-1.25l.03-.23c.08-.33.37-.57.97-1.05l.4-.34c1.42-1.16 2.13-1.73 2.7-1.46s.57 1.18.57 3v.08c0 .94 0 1.41-.29 1.7-.3.3-.76.3-1.7.3h-.52c-.41 0-.62 0-.8-.08l-.13-.06c-.17-.1-.3-.27-.55-.6'
+        d='M2.76 18.51c-.54-.72-.81-1.08-.76-1.48s.4-.69 1.1-1.26l.7-.58c1.42-1.15 2.13-1.73 2.7-1.46s.57 1.19.57 3.01v.57c0 .95 0 1.42-.3 1.71-.29.3-.76.3-1.7.3h-.71c-.49 0-.74 0-.95-.11s-.36-.3-.65-.7'
         fill='currentColor'
       />
       <path
-        d='m15.07 7.22-6.25 4.22c-4.42 3-6.63 4.49-6.2 5.9.44 1.42 3.1 1.42 8.44 1.42h6.25c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41v-4.23c0-3.3 0-4.97-1.06-5.53s-2.43.36-5.18 2.22M7.3 12.53v6.23m4.7-9v9m4.7-12.58v12.58'
+        d='m16 6.59-8.1 5.49c-4.43 2.99-6.64 4.48-6.2 5.9.43 1.41 3.1 1.41 8.44 1.41h8.12c1.88 0 2.83 0 3.41-.58.59-.59.59-1.53.59-3.42V9.9c0-3.31 0-4.97-1.06-5.53-1.07-.57-2.44.36-5.18 2.22'
         stroke='currentColor'
       />
+      <path d='M7.1 12.66v6.73' stroke='currentColor' />
+      <path d='M12.19 9.68v9.71' stroke='currentColor' />
+      <path d='M17.28 5.8v13.6' stroke='currentColor' />
     </svg>
   )
 }

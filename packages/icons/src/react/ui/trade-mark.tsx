@@ -4,11 +4,10 @@ export const IconTradeMark: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,21 @@ export const IconTradeMark: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'trade-mark-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'trade-mark-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
+        d='M1.74 12a10.25 10.25 0 1 0 20.5 0 10.25 10.25 0 0 0-20.5 0'
         fill='currentColor'
       />
-      <path
-        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12M8.5 9.4v5.23m4.6-5.23v5.23m4.33-5.23v5.23m-4.26-5.26 2.16 2.6m2.1-2.6-2.1 2.6M6.58 9.4h3.85'
-        stroke='currentColor'
-      />
+      <path d='M1.75 12A10.2 10.2 0 0 0 12 22.25 10.25 10.25 0 1 0 1.75 12' stroke='currentColor' />
+      <path d='M8.2 9.18v5.68' stroke='currentColor' />
+      <path d='M13.2 9.18v5.68' stroke='currentColor' />
+      <path d='M17.9 9.18v5.68' stroke='currentColor' />
+      <path d='m13.27 9.14 2.35 2.82' stroke='currentColor' />
+      <path d='m17.9 9.14-2.28 2.82' stroke='currentColor' />
+      <path d='M6.1 9.18h4.19' stroke='currentColor' />
     </svg>
   )
 }

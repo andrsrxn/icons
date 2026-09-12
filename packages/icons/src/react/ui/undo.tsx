@@ -4,11 +4,10 @@ export const IconUndo: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,12 @@ export const IconUndo: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'undo-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'undo-title'}>{title}</title> : null}
-      <path d='M4.52 8.05h9.81a5.66 5.66 0 0 1 0 11.32h-1.87' stroke='currentColor' />
+      <path d='M4.6 8.6h9.86a5.69 5.69 0 0 1 0 11.36h-.3' stroke='currentColor' />
       <path
-        d='m7.87 3.51-1.7 1.7c-1.34 1.34-2.01 2-2.01 2.83s.67 1.5 2 2.83l1.7 1.71'
+        d='M8.03 4.04 6.3 5.76c-1.33 1.33-2 2-2 2.83s.67 1.5 2 2.83l1.73 1.73'
         stroke='currentColor'
       />
     </svg>

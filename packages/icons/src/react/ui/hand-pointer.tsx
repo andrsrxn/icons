@@ -4,11 +4,10 @@ export const IconHandPointer: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,22 @@ export const IconHandPointer: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-pointer-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'hand-pointer-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='m8.36 3.18 2-.67 1.53.67.81 5.93 3.09-.63 1.51 2.1h3.19l.45 9.28-1.4 1.93H8.58l-3.53-4.51-2.28-5.3 2.42-1.9L8 11.67z'
+        d='m8.13 2.58 2.15-.73 1.65.73.87 6.37 3.33-.68 1.63 2.27h3.42l.5 9.98-1.51 2.09H8.36l-3.8-4.86-2.46-5.7L4.71 10l3.03 1.7z'
         fill='currentColor'
       />
-      <path d='M16.74 13.8v-3.32a2.16 2.16 0 1 0-4.33 0v3.33' stroke='currentColor' />
+      <path d='M17.15 14.01v-3.58a2.33 2.33 0 1 0-4.66 0v3.58' stroke='currentColor' />
       <path
-        d='M16.74 13.43v-1.11a2.16 2.16 0 0 1 4.32 0v4.34c0 2.6-1.52 4.88-1.52 4.88m-7.13-9.21V4.57a2.16 2.16 0 0 0-4.32 0V13m-.01.1-1.05-1.8a2.33 2.33 0 0 0-3.19-.86 2.25 2.25 0 0 0-.96 2.84 33 33 0 0 0 2.25 4.44c1.02 1.57 2.95 3.78 2.95 3.78'
+        d='M17.15 13.6v-1.2a2.33 2.33 0 0 1 4.65 0v4.69c0 2.8-1.64 5.24-1.64 5.24'
+        stroke='currentColor'
+      />
+      <path d='M12.5 12.42V4.07a2.33 2.33 0 0 0-4.66 0v9.06' stroke='currentColor' />
+      <path
+        d='M7.83 13.26 6.7 11.3a2.5 2.5 0 0 0-3.43-.92 2.4 2.4 0 0 0-1.04 3.06 36 36 0 0 0 2.43 4.77 46 46 0 0 0 3.17 4.07'
         stroke='currentColor'
       />
     </svg>

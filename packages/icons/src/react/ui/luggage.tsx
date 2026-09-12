@@ -4,11 +4,10 @@ export const IconLuggage: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,25 +23,26 @@ export const IconLuggage: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'luggage-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'luggage-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='5.84'
-        y='7.86'
-        width='12.31'
-        height='12.31'
+        x='5.22'
+        y='7.41'
+        width='13.56'
+        height='13.56'
         rx='2'
         fill='currentColor'
       />
-      <rect x='5.84' y='7.86' width='12.31' height='12.31' rx='2' stroke='currentColor' />
-      <path
-        d='M9.54 7.62V2.7m.63 13.54v-4.92M8.3 21.78v-1.6m6.16-12.56V2.7m-.63 13.54v-4.92m1.87 10.46v-1.6M16.92 2.7H7.08'
-        stroke='currentColor'
-      />
+      <rect x='5.22' y='7.41' width='13.56' height='13.56' rx='2' stroke='currentColor' />
+      <path d='M9.29 7.16V1.73' stroke='currentColor' />
+      <path d='M9.98 16.65v-5.43' stroke='currentColor' />
+      <path d='M7.93 22.75v-1.78' stroke='currentColor' />
+      <path d='M14.71 7.16V1.73' stroke='currentColor' />
+      <path d='M14.02 16.65v-5.43' stroke='currentColor' />
+      <path d='M16.07 22.75v-1.78' stroke='currentColor' />
+      <path d='M17.42 1.73H6.58' stroke='currentColor' />
     </svg>
   )
 }

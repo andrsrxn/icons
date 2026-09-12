@@ -4,11 +4,10 @@ export const IconCheckCircle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,20 @@ export const IconCheckCircle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'check-circle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'check-circle-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
         cy='12'
-        r='9.43'
+        r='10.22'
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
       <path
-        d='m7.55 12.71 1.3 1.6c.73.88 1.09 1.32 1.56 1.32.48 0 .84-.44 1.55-1.32l4.49-5.54'
+        d='m7.18 12.77 1.55 1.9c.71.88 1.07 1.32 1.55 1.32s.83-.45 1.55-1.33l5-6.16'
         stroke='currentColor'
       />
     </svg>

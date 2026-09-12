@@ -4,11 +4,10 @@ export const IconChartBubble: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,52 +23,50 @@ export const IconChartBubble: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chart-bubble-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'chart-bubble-title'}>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='9.09'
-        cy='7.56'
-        r='2.53'
-        transform='rotate(30 9.1 7.56)'
+        cx='9.34'
+        cy='6.83'
+        r='2.71'
+        transform='rotate(30 9.34 6.83)'
         fill='currentColor'
       />
       <circle
         opacity='.2'
-        cx='16.53'
-        cy='13.15'
-        r='3.45'
-        transform='rotate(30 16.53 13.15)'
+        cx='17.29'
+        cy='12.81'
+        r='3.69'
+        transform='rotate(30 17.3 12.81)'
         fill='currentColor'
       />
       <circle
         opacity='.2'
-        cx='8.25'
-        cy='15.41'
-        r='1.74'
-        transform='rotate(30 8.25 15.41)'
+        cx='8.43'
+        cy='15.23'
+        r='1.86'
+        transform='rotate(30 8.43 15.23)'
         fill='currentColor'
       />
-      <circle cx='9.09' cy='7.56' r='2.53' transform='rotate(30 9.1 7.56)' stroke='currentColor' />
+      <circle cx='9.34' cy='6.83' r='2.71' transform='rotate(30 9.34 6.83)' stroke='currentColor' />
       <circle
-        cx='16.72'
-        cy='13.26'
-        r='3.45'
-        transform='rotate(30 16.72 13.26)'
+        cx='17.5'
+        cy='12.93'
+        r='3.69'
+        transform='rotate(30 17.5 12.93)'
         stroke='currentColor'
       />
       <circle
-        cx='8.25'
-        cy='15.41'
-        r='1.74'
-        transform='rotate(30 8.25 15.41)'
+        cx='8.43'
+        cy='15.23'
+        r='1.86'
+        transform='rotate(30 8.43 15.23)'
         stroke='currentColor'
       />
       <path
-        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10'
+        d='M21.43 21.32H10.75c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.67'
         stroke='currentColor'
       />
     </svg>

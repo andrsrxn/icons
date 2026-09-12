@@ -4,11 +4,10 @@ export const IconGitBranch: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconGitBranch: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'git-branch-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'git-branch-title'}>{title}</title> : null}
       <circle opacity='.2' cx='6.27' cy='18.37' r='3.07' fill='currentColor' />
       <path d='M6.27 9v6.3' stroke='currentColor' />
       <circle cx='6.27' cy='18.37' r='3.07' stroke='currentColor' />

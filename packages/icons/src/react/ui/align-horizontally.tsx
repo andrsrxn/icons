@@ -4,11 +4,10 @@ export const IconAlignHorizontally: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,26 @@ export const IconAlignHorizontally: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-horizontally-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'align-horizontally-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
-        width='5.8'
-        height='15.49'
+        width='6.21'
+        height='16.59'
         rx='2'
-        transform='matrix(1 0 0 -1 9.1 19.75)'
+        transform='matrix(1 0 0 -1 8.9 20.3)'
         fill='currentColor'
       />
       <rect
-        width='5.8'
-        height='15.49'
+        width='6.21'
+        height='16.59'
         rx='2'
-        transform='matrix(1 0 0 -1 9.1 19.75)'
+        transform='matrix(1 0 0 -1 8.9 20.3)'
         stroke='currentColor'
       />
-      <path d='M5 2.43v19.14M19 2.43v19.14' stroke='currentColor' />
+      <path d='M4.5 1.75v20.5' stroke='currentColor' />
+      <path d='M19.5 1.75v20.5' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconMetronome: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,22 @@ export const IconMetronome: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'metronome-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'metronome-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M7.86 8.04c1.57-3.57 2.35-5.35 3.66-5.35 1.3 0 2.09 1.78 3.66 5.35l3.44 7.8c1.12 2.53 1.68 3.8 1.08 4.7-.59.92-1.97.92-4.74.92H8.08c-2.77 0-4.16 0-4.75-.91-.59-.9-.03-2.18 1.09-4.7z'
+        d='M7.85 7.4c1.57-3.56 2.36-5.34 3.66-5.34s2.09 1.78 3.66 5.34l4.07 9.22c1.11 2.53 1.67 3.8 1.08 4.7-.6.92-1.97.92-4.74.92H7.44c-2.76 0-4.15 0-4.74-.91-.6-.91-.03-2.18 1.08-4.7z'
         fill='currentColor'
       />
       <path
-        d='M7.75 7.9c1.55-3.6 2.33-5.42 3.65-5.43 1.3 0 2.1 1.8 3.7 5.4l3.52 7.97c1.12 2.53 1.68 3.8 1.1 4.7-.6.92-1.98.92-4.76.92H8.01c-2.74 0-4.11 0-4.7-.9-.6-.9-.06-2.16 1.02-4.68zm3.77 3.98V7.5m0 10.18 6.96-10.44'
+        d='M7.73 7.25c1.55-3.62 2.33-5.43 3.64-5.44 1.31 0 2.1 1.8 3.7 5.4l4.16 9.4c1.12 2.54 1.68 3.8 1.09 4.72-.6.9-1.98.9-4.75.9h-8.2c-2.74 0-4.1 0-4.7-.9s-.05-2.15 1.03-4.67z'
         stroke='currentColor'
       />
-      <circle opacity='.2' cx='19.51' cy='5.7' r='1.83' fill='currentColor' />
-      <circle cx='19.51' cy='5.7' r='1.83' stroke='currentColor' />
+      <path d='M11.51 12.03V7.37' stroke='currentColor' />
+      <path d='M11.51 18.21 18.93 7.1' stroke='currentColor' />
+      <circle opacity='.2' cx='20.02' cy='5.45' r='1.95' fill='currentColor' />
+      <circle cx='20.02' cy='5.45' r='1.95' stroke='currentColor' />
     </svg>
   )
 }

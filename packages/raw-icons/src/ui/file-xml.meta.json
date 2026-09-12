@@ -1,13 +1,13 @@
 {
   "categories": [
     "documents",
-    "code"
+    "development"
   ],
   "tags": [
-    "document",
+    "page",
+    "paper",
     "markup",
     "data",
-    "code",
     "config",
     "tags"
   ]

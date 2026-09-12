@@ -4,11 +4,10 @@ export const IconArchive: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconArchive: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'archive-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'archive-title'}>{title}</title> : null}
       <rect opacity='.2' x='4.57' y='8.28' width='14.87' height='12' rx='2' fill='currentColor' />
       <path
         d='M4.57 8.28v6c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88h2.86c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-6'

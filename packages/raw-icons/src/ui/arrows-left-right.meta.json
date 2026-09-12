@@ -3,10 +3,12 @@
     "arrows"
   ],
   "tags": [
-    "direction",
+    "bidirectional",
     "pointer",
     "width",
     "resize",
-    "stretch"
+    "stretch",
+    "range",
+    "from to" 
   ]
 }

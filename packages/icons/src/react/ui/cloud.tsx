@@ -4,11 +4,10 @@ export const IconCloud: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,22 @@ export const IconCloud: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cloud-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cloud-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.44 14 5 17l13 .44 3-1.94v-3.9l-3-2.14-1.57 1.1-.84-3.17L12 5.33l-3 1.3-1.5 2.84-3.5 1.1z'
+        d='m1.34 14.51 2.83 3.52 14.4.51 3.33-2.27v-4.55l-3.32-2.5-1.74 1.28-.94-3.72-4.08-1.84-3.22.93-1.67 3.34-3.87 1.3z'
         fill='currentColor'
       />
       <path
-        d='M7.3 9.1a4.62 4.62 0 0 1 8.48-1.07c.76 1.31.73 2.64.55 3.53m-9.85 5.68a3.87 3.87 0 1 1 0-7.77c1.27 0 2.4.6 3.11 1.55'
+        d='M5.82 18.3c-1.17 0-2.3-.52-3.08-1.36a4.7 4.7 0 0 1-1.23-3.19A4.44 4.44 0 0 1 5.8 9.2c1.41 0 2.66.72 3.45 1.82'
         stroke='currentColor'
       />
+      <path d='M18.83 18.3H5.64' stroke='currentColor' />
+      <path d='M6.33 9.2A5.2 5.2 0 0 1 15.87 8c.85 1.47.82 2.97.62 3.97' stroke='currentColor' />
       <path
-        d='M16.46 9.88c.97-.5 2.15-.42 3.07.1a3.9 3.9 0 0 1 1.42 5.32c-.63 1.1-1.61 1.93-2.89 1.93m.17.01H6.33'
+        d='M16.63 10.09a3.6 3.6 0 0 1 3.45.11 4.37 4.37 0 0 1 1.6 5.97c-.71 1.24-1.68 2-2.69 2.12'
         stroke='currentColor'
       />
     </svg>

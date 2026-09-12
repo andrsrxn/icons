@@ -4,11 +4,10 @@ export const IconShoppingCart: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,32 +23,31 @@ export const IconShoppingCart: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'shopping-cart-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'shopping-cart-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M20.02 14.1c1.01-2.55 1.51-3.83 1.2-4.83a3 3 0 0 0-1-1.46c-.81-.66-2.18-.66-4.92-.66H9.52c-2.42 0-3.64 0-4.43.57a3 3 0 0 0-1.01 1.3c-.37.91-.07 2.09.52 4.44.37 1.5.56 2.25 1.02 2.79a3 3 0 0 0 .95.74c.63.31 1.4.31 2.95.31h5.78c1.36 0 2.04 0 2.62-.25a3 3 0 0 0 .9-.62c.45-.44.7-1.07 1.2-2.34'
+        d='M20.95 13.9c1.14-2.9 1.72-4.34 1.26-5.46a3 3 0 0 0-.7-1.03c-.87-.84-2.43-.84-5.54-.84H9.88c-2.75 0-4.13 0-4.98.73a3 3 0 0 0-.71.92c-.5 1-.17 2.34.5 5 .43 1.71.64 2.56 1.2 3.14q.29.3.67.52c.69.4 1.57.4 3.32.4h6.1c1.54 0 2.3 0 2.95-.32a3 3 0 0 0 .64-.44c.53-.47.81-1.2 1.38-2.63'
         fill='currentColor'
       />
       <path
-        d='M20.02 14.1c1.01-2.55 1.51-3.83 1.2-4.83a3 3 0 0 0-1-1.46c-.81-.66-2.18-.66-4.92-.66H4.16l.68 4.98c.35 2.46.52 3.7 1.36 4.44.85.73 2.1.73 4.59.73h4.51c1.36 0 2.04 0 2.62-.25a3 3 0 0 0 .9-.62c.45-.44.7-1.07 1.2-2.34M4.5 9.69l-.6-4.13a2.3 2.3 0 0 0-2.3-1.99'
+        d='M20.95 13.9c1.14-2.9 1.72-4.34 1.26-5.46a3 3 0 0 0-.7-1.03c-.87-.84-2.43-.84-5.54-.84H4.22L5 12.1c.34 2.47.51 3.7 1.36 4.44.84.74 2.1.74 4.58.74h5.04c1.55 0 2.32 0 2.96-.32a3 3 0 0 0 .64-.44c.53-.47.81-1.2 1.38-2.63'
+        stroke='currentColor'
+      />
+      <path d='M4.6 9.25 3.94 4.9a2.45 2.45 0 0 0-2.42-2.1' stroke='currentColor' />
+      <circle
+        cx='8.25'
+        cy='19.11'
+        r='1.83'
+        transform='rotate(90 8.25 19.11)'
         stroke='currentColor'
       />
       <circle
-        cx='7.98'
-        cy='19.04'
-        r='1.74'
-        transform='rotate(90 7.98 19.04)'
-        stroke='currentColor'
-      />
-      <circle
-        cx='16.53'
-        cy='19.04'
-        r='1.74'
-        transform='rotate(90 16.53 19.04)'
+        cx='17.27'
+        cy='19.11'
+        r='1.83'
+        transform='rotate(90 17.27 19.11)'
         stroke='currentColor'
       />
     </svg>

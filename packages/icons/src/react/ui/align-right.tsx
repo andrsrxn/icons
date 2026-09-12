@@ -4,11 +4,10 @@ export const IconAlignRight: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,50 +23,48 @@ export const IconAlignRight: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-right-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'align-right-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='18.23'
-        y='4.63'
-        width='5.8'
-        height='15.49'
+        x='18.88'
+        y='3.85'
+        width='6.41'
+        height='17.12'
         rx='2'
-        transform='rotate(90 18.23 4.63)'
+        transform='rotate(90 18.88 3.85)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        x='18.23'
-        y='13.68'
-        width='5.8'
-        height='11.62'
+        x='18.88'
+        y='13.85'
+        width='6.41'
+        height='12.84'
         rx='2'
-        transform='rotate(90 18.23 13.68)'
+        transform='rotate(90 18.88 13.85)'
         fill='currentColor'
       />
       <rect
-        x='18.23'
-        y='13.68'
-        width='5.8'
-        height='11.62'
+        x='18.88'
+        y='13.85'
+        width='6.41'
+        height='12.84'
         rx='2'
-        transform='rotate(90 18.23 13.68)'
+        transform='rotate(90 18.88 13.85)'
         stroke='currentColor'
       />
       <rect
-        x='18.23'
-        y='4.63'
-        width='5.8'
-        height='15.49'
+        x='18.88'
+        y='3.85'
+        width='6.41'
+        height='17.12'
         rx='2'
-        transform='rotate(90 18.23 4.63)'
+        transform='rotate(90 18.88 3.85)'
         stroke='currentColor'
       />
-      <path d='M21.26 3.76v16.58' stroke='currentColor' />
+      <path d='M22.24 2.9v18.3' stroke='currentColor' />
     </svg>
   )
 }

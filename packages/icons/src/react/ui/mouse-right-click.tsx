@@ -4,11 +4,10 @@ export const IconMouseRightClick: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,26 +23,22 @@ export const IconMouseRightClick: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'mouse-right-click-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'mouse-right-click-title'}>{title}</title>
-      ) : null}
-      <path opacity='.2' d='M6 12.3h11.9v3.36a5.94 5.94 0 1 1-11.89 0z' fill='currentColor' />
+      <path d='M20.54 5.99h1.65' stroke='currentColor' />
+      <path d='m18.99 2.96.98-1.37' stroke='currentColor' />
+      <path opacity='.2' d='M18.42 17.1H1.82v5.31h16.6z' fill='currentColor' />
       <path
         opacity='.2'
-        d='M11.94 12.97v-1.6c0-.64.2-1.28.58-1.81l.15-.2a2.8 2.8 0 0 0-.1-3.4c-.4-.5-.63-1.12-.63-1.76V2.6A6.06 6.06 0 0 1 18 8.64v4.32z'
+        d='M10.12 18.13V15.7c0-.98.28-1.93.81-2.75l.21-.32A4.5 4.5 0 0 0 11 7.5a4.5 4.5 0 0 1-.87-2.66V2.37a8.46 8.46 0 0 1 8.46 8.47v7.3z'
         fill='currentColor'
       />
-      <rect x='6' y='2.4' width='11.88' height='19.21' rx='5.94' stroke='currentColor' />
-      <path d='M6 12.45h11.89' stroke='currentColor' />
-      <rect x='10.35' y='5.46' width='3.31' height='4.65' rx='1.65' stroke='currentColor' />
-      <path
-        d='M11.98 12.45V10.1m0-4.68V3.03m8.62 2.84 1.85.13m-3.22-2.93 1.04-1.54'
-        stroke='currentColor'
-      />
+      <path d='M18.42 22.41V10.38a8.3 8.3 0 0 0-16.6 0v12.03' stroke='currentColor' />
+      <path d='M1.81 17.34h16.61' stroke='currentColor' />
+      <rect x='7.89' y='6.68' width='4.62' height='7.06' rx='2.31' stroke='currentColor' />
+      <path d='M10.16 17.3v-3.56' stroke='currentColor' />
+      <path d='M10.16 6.62V3' stroke='currentColor' />
     </svg>
   )
 }

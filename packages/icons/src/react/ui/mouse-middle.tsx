@@ -4,11 +4,10 @@ export const IconMouseMiddle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,26 @@ export const IconMouseMiddle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'mouse-middle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'mouse-middle-title'}>{title}</title> : null}
+      <path opacity='.2' d='M3.77 16.86h16.61v5.3H3.78z' fill='currentColor' />
       <path
         opacity='.2'
-        d='M6 12.33h11.9v3.36a5.94 5.94 0 1 1-11.89 0zm5.94-2.37c-.7 0-1.28-.57-1.28-1.28V6.86a1.28 1.28 0 0 1 2.56 0v1.82c0 .71-.57 1.28-1.28 1.28'
+        d='M12 13.08a2.1 2.1 0 0 1-2.1-2.1V8.95a2.1 2.1 0 1 1 4.2 0v2.01a2.1 2.1 0 0 1-2.1 2.1'
         fill='currentColor'
       />
-      <rect x='6' y='2.42' width='11.88' height='19.21' rx='5.94' stroke='currentColor' />
-      <path d='M6 12.48h11.89' stroke='currentColor' />
-      <rect x='10.35' y='5.46' width='3.31' height='4.65' rx='1.65' stroke='currentColor' />
-      <path d='M11.98 12.45V10.1m0-4.68V3.03' stroke='currentColor' />
+      <path d='M3.77 22.17V10.14a8.3 8.3 0 0 1 16.61 0v12.03' stroke='currentColor' />
+      <path d='M20.38 17.1H3.78' stroke='currentColor' />
+      <rect
+        width='4.62'
+        height='7.06'
+        rx='2.31'
+        transform='matrix(-1 0 0 1 14.31 6.44)'
+        stroke='currentColor'
+      />
+      <path d='M12.03 17.05V13.5' stroke='currentColor' />
+      <path d='M12.03 6.38V2.76' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconSplitVertical: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,33 +23,29 @@ export const IconSplitVertical: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'split-vertical-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'split-vertical-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
-        x='5.25'
-        y='21.29'
-        width='18.57'
-        height='13.5'
+        x='4.59'
+        y='22.2'
+        width='20.39'
+        height='14.83'
         rx='3'
-        transform='rotate(-90 5.25 21.29)'
+        transform='rotate(-90 4.59 22.2)'
         fill='currentColor'
       />
       <rect
-        x='5.25'
-        y='21.29'
-        width='18.57'
-        height='13.5'
+        x='4.59'
+        y='22.2'
+        width='20.39'
+        height='14.83'
         rx='3'
-        transform='rotate(-90 5.25 21.29)'
+        transform='rotate(-90 4.59 22.2)'
         stroke='currentColor'
       />
-      <path d='M3 12h18' stroke='currentColor' />
+      <path d='M2.12 12h19.76' stroke='currentColor' />
     </svg>
   )
 }

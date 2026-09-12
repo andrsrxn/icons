@@ -4,11 +4,10 @@ export const IconCircleFilled: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,13 @@ export const IconCircleFilled: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'circle-filled-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'circle-filled-title'}>{title}</title> : null}
       <circle
         cx='12'
         cy='12'
-        r='9.43'
+        r='10.21'
         transform='rotate(90 12 12)'
         fill='currentColor'
         stroke='currentColor'

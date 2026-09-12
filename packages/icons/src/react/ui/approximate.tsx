@@ -4,11 +4,10 @@ export const IconApproximate: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,15 @@ export const IconApproximate: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'approximate-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'approximate-title'}>{title}</title> : null}
       <path
-        d='M3.2 9.79A8 8 0 0 1 8.4 8c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9M3.2 15.5a8 8 0 0 1 5.2-1.79c2.59 0 5.68 2.28 8.21 2.28s3.7-1.23 4.19-1.9'
+        d='M3.38 9.71a8 8 0 0 1 5.09-1.74c2.54 0 5.57 2.23 8.05 2.23 2.47 0 3.62-1.2 4.1-1.86'
+        stroke='currentColor'
+      />
+      <path
+        d='M3.38 15.54a8 8 0 0 1 5.09-1.74c2.54 0 5.57 2.23 8.05 2.23 2.47 0 3.62-1.2 4.1-1.86'
         stroke='currentColor'
       />
     </svg>

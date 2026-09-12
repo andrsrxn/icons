@@ -4,11 +4,10 @@ export const IconTablets: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,42 +23,41 @@ export const IconTablets: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'tablets-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'tablets-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='6.59'
-        height='3.07'
+        width='7.26'
+        height='3.37'
         rx='1'
-        transform='matrix(.96098 -.27661 .27239 .96219 3.47 15.82)'
+        transform='matrix(.96098 -.27661 .27239 .96219 2.62 16.2)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='6.66'
-        height='3.66'
+        width='7.33'
+        height='4.03'
         rx='1'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 20.8 9.7)'
+        transform='matrix(-.96098 -.27661 -.27239 .96219 21.68 9.47)'
         fill='currentColor'
       />
       <rect
-        width='7.68'
-        height='8.03'
-        rx='3.84'
-        transform='matrix(.96098 -.27661 .27239 .96219 1.8 11.87)'
+        width='8.45'
+        height='8.83'
+        rx='4.23'
+        transform='matrix(.96098 -.27661 .27239 .96219 .77 11.85)'
         stroke='currentColor'
       />
       <rect
-        width='7.66'
-        height='7.77'
-        rx='3.83'
-        transform='matrix(-.96098 -.27661 -.27239 .96219 22.21 6.51)'
+        width='8.43'
+        height='8.55'
+        rx='4.21'
+        transform='matrix(-.96098 -.27661 -.27239 .96219 23.24 5.96)'
         stroke='currentColor'
       />
-      <path d='m20.33 10.1-5.71-1.8m-10.9 7.26 5.7-1.8' stroke='currentColor' />
+      <path d='m21.17 9.9-6.29-1.98' stroke='currentColor' />
+      <path d='m2.89 15.92 6.28-1.97' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconVideoFilled: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,20 @@ export const IconVideoFilled: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'video-filled-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'video-filled-title'}>{title}</title> : null}
       <rect
-        x='2.7'
-        y='6'
-        width='11.67'
-        height='12'
+        x='1.87'
+        y='5.47'
+        width='12.41'
+        height='13.06'
         rx='3'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M21.42 13.41v-2.77c0-1.14 0-1.7-.22-2.07a1.5 1.5 0 0 0-1.13-.7c-.42-.05-.93.2-1.96.68h0c-.45.22-.67.32-.84.48q-.3.27-.41.65c-.07.22-.07.47-.07.96v2.77c0 .5 0 .76.07.98q.12.38.42.65c.17.16.4.26.86.47h0c1.02.47 1.53.7 1.95.66a1.5 1.5 0 0 0 1.11-.71c.22-.36.22-.92.22-2.05'
+        d='M22.25 13.54v-3.02c0-1.43 0-2.14-.34-2.56a1.5 1.5 0 0 0-.8-.5c-.52-.13-1.17.17-2.46.79h0c-.57.26-.85.4-1.05.61a2 2 0 0 0-.28.46c-.11.27-.11.58-.11 1.2v3.02c0 .63 0 .94.11 1.22q.1.25.3.46c.2.21.48.34 1.06.6 1.28.6 1.92.89 2.44.76q.48-.13.8-.51c.33-.41.33-1.12.33-2.53'
         fill='currentColor'
         stroke='currentColor'
       />

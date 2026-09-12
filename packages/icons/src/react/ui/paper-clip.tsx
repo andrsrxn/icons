@@ -4,11 +4,10 @@ export const IconPaperClip: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconPaperClip: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'paper-clip-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'paper-clip-title'}>{title}</title> : null}
       <path
-        d='m15.85 7.08-7.78 7.77a1.64 1.64 0 1 0 2.32 2.32l9.06-9.06a3.28 3.28 0 0 0-4.64-4.64l-9.63 9.64a4.92 4.92 0 0 0 6.95 6.95l5.2-5.2'
+        d='m16.08 6.65-8.4 8.4a1.77 1.77 0 1 0 2.5 2.5l9.8-9.78a3.54 3.54 0 0 0-5.02-5.01l-10.4 10.4a5.32 5.32 0 1 0 7.51 7.52l5.62-5.62'
         stroke='currentColor'
       />
     </svg>

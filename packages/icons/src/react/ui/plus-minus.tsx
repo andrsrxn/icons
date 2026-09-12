@@ -4,11 +4,10 @@ export const IconPlusMinus: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,12 +23,13 @@ export const IconPlusMinus: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'plus-minus-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'plus-minus-title'}>{title}</title> : null}
-      <path d='M10.53 6.77H3M21 17h-7M6.77 3v7.53M20.7 3.3 3.3 20.7' stroke='currentColor' />
+      <path d='M10.5 6.62H2.72' stroke='currentColor' />
+      <path d='M21.27 17.15h-7.21' stroke='currentColor' />
+      <path d='M6.62 2.74v7.76' stroke='currentColor' />
+      <path d='M20.96 3.05 3.04 20.96' stroke='currentColor' />
     </svg>
   )
 }

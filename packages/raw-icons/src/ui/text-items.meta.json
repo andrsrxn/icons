@@ -1,6 +1,6 @@
 {
   "categories": [
-    "typography"
+    "typography", "editor"
   ],
   "tags": [
     "font",
@@ -8,5 +8,6 @@
     "list",
     "bullets",
     "format"
-  ]
+  ],
+  "rtl": true
 }

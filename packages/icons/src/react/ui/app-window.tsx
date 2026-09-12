@@ -4,11 +4,10 @@ export const IconAppWindow: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,31 @@ export const IconAppWindow: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'app-window-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'app-window-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='4.53' width='18.61' height='14.93' rx='3' fill='currentColor' />
-      <rect x='2.7' y='4.53' width='18.61' height='14.93' rx='3' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        x='1.78'
+        y='4.53'
+        width='20.43'
+        height='14.93'
+        rx='3'
+        fill='currentColor'
+      />
+      <rect x='1.78' y='4.53' width='20.43' height='14.93' rx='3' stroke='currentColor' />
       <path
-        d='M7.07 8.2A.54.54 0 1 1 6 8.2a.54.54 0 0 1 1.07 0m4.08 0a.54.54 0 1 1-1.08 0 .54.54 0 0 1 1.08 0m4.07 0a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
+        d='M6.61 8.54a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M10.69 8.54a.54.54 0 1 1-1.08 0 .54.54 0 0 1 1.08 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.76 8.54a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
         fill='currentColor'
         stroke='currentColor'
       />

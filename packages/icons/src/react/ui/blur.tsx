@@ -4,11 +4,10 @@ export const IconBlur: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,21 @@ export const IconBlur: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'blur-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'blur-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12 21.57V2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07'
+        d='M12 22.2V1.62S4 7.09 4 14.67c0 4.15 3.58 7.52 8 7.52'
         fill='currentColor'
       />
       <path
-        d='M12 21.57c4.15 0 7.51-3.17 7.51-7.07C19.51 7.47 12 2.25 12 2.25S4.49 7.4 4.49 14.5c0 3.9 3.36 7.07 7.51 7.07m0-18.96v18.67'
+        d='M12 22.2c4.42 0 8-3.38 8-7.53 0-7.49-8-13.04-8-13.04S4 7.09 4 14.67c0 4.15 3.58 7.52 8 7.52'
         stroke='currentColor'
       />
-      <path d='m12.11 7.6 3.7 3.7 3.7 3.7m-7.4-1.28 2.58 2.58 2.57 2.57' stroke='currentColor' />
+      <path d='M12 2.01v19.88' stroke='currentColor' />
+      <path d='m12.12 7.32 3.94 3.94L20 15.2' stroke='currentColor' />
+      <path d='m12.12 13.84 2.74 2.74 2.74 2.75' stroke='currentColor' />
     </svg>
   )
 }

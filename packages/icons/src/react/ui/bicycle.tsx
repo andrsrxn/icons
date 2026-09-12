@@ -4,11 +4,10 @@ export const IconBicycle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,21 @@ export const IconBicycle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'bicycle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bicycle-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='5.92' cy='15.67' r='3.38' fill='currentColor' />
-      <circle opacity='.2' cx='18.08' cy='15.67' r='3.38' fill='currentColor' />
-      <circle cx='5.92' cy='15.67' r='3.38' stroke='currentColor' />
-      <circle cx='18.08' cy='15.67' r='3.38' stroke='currentColor' />
+      <circle opacity='.2' cx='5.33' cy='15.82' r='3.71' fill='currentColor' />
+      <circle opacity='.2' cx='18.67' cy='15.82' r='3.71' fill='currentColor' />
+      <circle cx='5.33' cy='15.82' r='3.71' stroke='currentColor' />
+      <circle cx='18.67' cy='15.82' r='3.71' stroke='currentColor' />
       <path
-        d='M6.3 15.67h2.77c1.19 0 1.78 0 2.25-.3.48-.28.76-.8 1.3-1.85l3.14-6.04m-3.54 4.81-4-4.01m9.86 7.39L15.33 5.33m-4.39 2.95H6.31m12.88-2.19-3.84-.76'
+        d='M5.75 15.82h3.27c1.19 0 1.78 0 2.26-.3.47-.28.75-.8 1.3-1.86l3.54-6.82'
         stroke='currentColor'
       />
+      <path d='m12.25 12.1-4.4-4.39' stroke='currentColor' />
+      <path d='M18.67 15.82 15.65 4.47' stroke='currentColor' />
+      <path d='M10.84 7.71H5.75' stroke='currentColor' />
+      <path d='m19.89 5.3-4.21-.83' stroke='currentColor' />
     </svg>
   )
 }

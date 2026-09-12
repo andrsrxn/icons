@@ -4,11 +4,10 @@ export const IconGitPrClosed: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,19 @@ export const IconGitPrClosed: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'git-pr-closed-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'git-pr-closed-title'}>{title}</title> : null}
       <circle opacity='.2' cx='6.27' cy='5.63' r='3.07' fill='currentColor' />
       <circle opacity='.2' cx='6.27' cy='18.37' r='3.07' fill='currentColor' />
       <circle opacity='.2' cx='17.73' cy='18.37' r='3.07' fill='currentColor' />
-      <path d='M6.27 9v6.3m11.46-4.93v4.92' stroke='currentColor' />
+      <path d='M6.27 9v6.3' stroke='currentColor' />
+      <path d='M17.73 10.37v4.92' stroke='currentColor' />
       <circle cx='6.27' cy='5.63' r='3.07' stroke='currentColor' />
       <circle cx='6.27' cy='18.37' r='3.07' stroke='currentColor' />
       <circle cx='17.73' cy='18.37' r='3.07' stroke='currentColor' />
-      <path d='m15.38 7.98 4.7-4.7m0 4.71-4.7-4.7' stroke='currentColor' />
+      <path d='m15.38 7.98 4.7-4.7' stroke='currentColor' />
+      <path d='m20.08 7.99-4.7-4.7' stroke='currentColor' />
     </svg>
   )
 }

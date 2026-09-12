@@ -4,11 +4,10 @@ export const IconMinimize: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,20 @@ export const IconMinimize: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'minimize-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'minimize-title'}>{title}</title> : null}
       <path
-        d='M21 15.87h-1.09c-1.88 0-2.83 0-3.41.58-.59.59-.59 1.53-.59 3.42v1.1m-12.88-5.1h1.09c1.88 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v1.1M20.97 8.15H19.9c-1.89 0-2.83 0-3.42-.58-.58-.6-.58-1.53-.58-3.42V3.09M3.06 8.15h1.06c1.89 0 2.83 0 3.42-.58.58-.6.58-1.53.58-3.42V3.09'
+        d='M21.32 16h-1.27c-1.89 0-2.83 0-3.42.59s-.58 1.53-.58 3.42v1.27'
+        stroke='currentColor'
+      />
+      <path d='M2.71 16h1.27c1.89 0 2.83 0 3.42.59s.58 1.53.58 3.42v1.27' stroke='currentColor' />
+      <path
+        d='M21.28 8.01h-1.23c-1.89 0-2.83 0-3.42-.58-.59-.59-.59-1.53-.59-3.42V2.77'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.75 8.01h1.23c1.89 0 2.83 0 3.42-.58.58-.59.58-1.53.58-3.42V2.77'
         stroke='currentColor'
       />
     </svg>

@@ -1,9 +1,10 @@
 {
   "categories": [
-    "documents"
+    "documents", "media"
   ],
   "tags": [
-    "document",
+    "page",
+    "paper",
     "image format",
     "animation",
     "picture",

@@ -4,11 +4,10 @@ export const IconTargetSight: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,23 @@ export const IconTargetSight: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'target-sight-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'target-sight-title'}>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='12'
+        cx='12.01'
         cy='12'
-        r='3.23'
+        r='3.53'
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='3.23' transform='rotate(90 12 12)' stroke='currentColor' />
-      <circle cx='12' cy='12' r='7.86' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M21.7 12h-3.8M6.05 12H2.24M12 2.23v3.82m0 11.9v3.82' stroke='currentColor' />
+      <circle cx='12.01' cy='12' r='3.53' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12.01' cy='12' r='8.57' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path d='M22.58 12h-4.15' stroke='currentColor' />
+      <path d='M5.52 12H1.36' stroke='currentColor' />
+      <path d='M12 1.36V5.5' stroke='currentColor' />
+      <path d='M12 18.49v4.15' stroke='currentColor' />
     </svg>
   )
 }

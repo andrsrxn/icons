@@ -4,11 +4,10 @@ export const IconBankNote: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,28 @@ export const IconBankNote: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'bank-note-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bank-note-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='12.27'
-        height='18.97'
+        width='14'
+        height='20.62'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.49 18.13)'
+        transform='matrix(0 -1 -1 0 22.31 19)'
         fill='currentColor'
       />
       <rect
-        width='12.27'
-        height='18.97'
+        width='14'
+        height='20.62'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.49 18.13)'
+        transform='matrix(0 -1 -1 0 22.31 19)'
         stroke='currentColor'
       />
-      <path d='M7.63 12H5.59m12.85 0H16.4' stroke='currentColor' />
+      <path d='M7.25 12H5.04' stroke='currentColor' />
+      <path d='M19 12h-2.21' stroke='currentColor' />
       <path
-        d='M13.02 12a1.02 1.02 0 1 1-2.04 0 1.02 1.02 0 0 1 2.04 0'
+        d='M13.11 12a1.11 1.11 0 1 1-2.22 0 1.11 1.11 0 0 1 2.22 0'
         fill='currentColor'
         stroke='currentColor'
       />

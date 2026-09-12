@@ -4,11 +4,10 @@ export const IconWallet: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,25 +23,23 @@ export const IconWallet: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'wallet-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'wallet-title'}>{title}</title> : null}
-      <path opacity='.2' d='m4.97 4-2.7 3.96h16.77l-2.8-3.8z' fill='currentColor' />
+      <path opacity='.2' d='m4.23 3.16-3 4.39h18.6l-3.1-4.22z' fill='currentColor' />
       <rect
-        width='11.41'
-        height='18.38'
+        width='12.66'
+        height='20.39'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.25 19.37)'
+        transform='matrix(0 -1 -1 0 22.29 20.21)'
         stroke='currentColor'
       />
       <path
-        d='M2.87 12.03v-1.66c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h4.62c1.73 0 2.6 0 3.3.42l.02.01c.7.42 1.12 1.18 1.94 2.7'
+        d='M1.9 12.07v-2.5c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.16c1.74 0 2.61 0 3.32.43.71.42 1.13 1.19 1.96 2.72l.17.33'
         stroke='currentColor'
       />
       <path
-        d='M17.78 13.66a.63.63 0 1 1-1.26 0 .63.63 0 0 1 1.26 0'
+        d='M18.44 13.88a.7.7 0 1 1-1.4 0 .7.7 0 0 1 1.4 0'
         fill='currentColor'
         stroke='currentColor'
       />

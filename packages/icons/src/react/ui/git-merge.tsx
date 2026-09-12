@@ -4,11 +4,10 @@ export const IconGitMerge: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,20 @@ export const IconGitMerge: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'git-merge-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'git-merge-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='7.01' cy='5.73' r='3.07' fill='currentColor' />
-      <circle opacity='.2' cx='7.01' cy='18.46' r='3.07' fill='currentColor' />
-      <circle opacity='.2' cx='17.52' cy='12.24' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='6.99' cy='5.64' r='3.08' fill='currentColor' />
+      <circle opacity='.2' cx='6.99' cy='18.42' r='3.08' fill='currentColor' />
+      <circle opacity='.2' cx='17.54' cy='12.18' r='3.08' fill='currentColor' />
+      <path d='M7 9.02v6.31' stroke='currentColor' />
       <path
-        d='M7.01 9.1v6.28m-.08-6.41L8.8 10.7a6 6 0 0 0 1.8 1.37c.53.2 1.1.2 2.26.2h1.58'
+        d='m6.9 8.9 1.9 1.73a6 6 0 0 0 1.8 1.38c.53.2 1.11.2 2.26.2h1.6'
         stroke='currentColor'
       />
-      <circle cx='7.01' cy='5.73' r='3.07' stroke='currentColor' />
-      <circle cx='7.01' cy='18.46' r='3.07' stroke='currentColor' />
-      <circle cx='17.52' cy='12.24' r='3.07' stroke='currentColor' />
+      <circle cx='6.99' cy='5.64' r='3.08' stroke='currentColor' />
+      <circle cx='6.99' cy='18.42' r='3.08' stroke='currentColor' />
+      <circle cx='17.54' cy='12.18' r='3.08' stroke='currentColor' />
     </svg>
   )
 }

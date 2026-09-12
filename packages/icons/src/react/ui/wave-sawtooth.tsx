@@ -4,11 +4,10 @@ export const IconWaveSawtooth: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconWaveSawtooth: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'wave-sawtooth-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'wave-sawtooth-title'}>{title}</title> : null}
       <path
-        d='m3 7.88 2.8-1.83c2.73-1.79 4.1-2.68 5.14-2.11C12 4.5 12 6.14 12 9.4V14c0 3.49 0 5.23 1.1 5.78 1.11.56 2.5-.49 5.3-2.57l2.6-1.95'
+        d='M2.67 7.73 5.8 5.68C8.53 3.89 9.9 3 10.94 3.57 12 4.13 12 5.77 12 9.02v5.36c0 3.49 0 5.23 1.1 5.79 1.11.55 2.5-.5 5.3-2.58l2.94-2.2'
         stroke='currentColor'
       />
     </svg>

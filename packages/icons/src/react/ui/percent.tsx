@@ -4,11 +4,10 @@ export const IconPercent: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,14 @@ export const IconPercent: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'percent-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'percent-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='7.54' cy='7.44' r='2.68' fill='currentColor' />
-      <circle opacity='.2' cx='16.56' cy='16.46' r='2.68' fill='currentColor' />
-      <path d='M19.03 4.97 4.97 19.03' stroke='currentColor' />
-      <circle cx='7.54' cy='7.44' r='2.68' stroke='currentColor' />
-      <circle cx='16.56' cy='16.46' r='2.68' stroke='currentColor' />
+      <circle opacity='.2' cx='7.45' cy='7.35' r='2.73' fill='currentColor' />
+      <circle opacity='.2' cx='16.65' cy='16.55' r='2.73' fill='currentColor' />
+      <path d='M19.16 4.84 4.84 19.16' stroke='currentColor' />
+      <circle cx='7.45' cy='7.35' r='2.73' stroke='currentColor' />
+      <circle cx='16.65' cy='16.55' r='2.73' stroke='currentColor' />
     </svg>
   )
 }

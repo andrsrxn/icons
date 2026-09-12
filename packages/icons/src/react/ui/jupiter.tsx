@@ -4,11 +4,10 @@ export const IconJupiter: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,13 @@ export const IconJupiter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'jupiter-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'jupiter-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='11.97' cy='11.61' r='8.2' fill='currentColor' />
-      <circle cx='11.97' cy='11.61' r='8.2' stroke='currentColor' />
+      <circle opacity='.2' cx='11.95' cy='11.6' r='8.91' fill='currentColor' />
+      <circle cx='11.95' cy='11.6' r='8.91' stroke='currentColor' />
       <path
-        d='M16.47 4.13c2.36-1.39 4.19-1.9 4.83-1.2 1.17 1.28-2.03 6.13-7.15 10.84s-10.23 7.49-11.41 6.2c-.62-.66-.03-2.32 1.41-4.42'
+        d='M16.84 3.47c2.56-1.5 4.54-2.07 5.24-1.3 1.28 1.39-2.2 6.66-7.77 11.78S3.2 22.08 1.91 20.69c-.67-.73-.03-2.53 1.54-4.81'
         stroke='currentColor'
       />
     </svg>

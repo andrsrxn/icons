@@ -4,11 +4,10 @@ export const IconSlashInverted: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,10 @@ export const IconSlashInverted: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'slash-inverted-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'slash-inverted-title'}>{title}</title>
-      ) : null}
-      <path d='m4 4 16 16' stroke='currentColor' />
+      <path d='m3.46 3.46 17.08 17.08' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconWorkflow: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,17 @@ export const IconWorkflow: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'workflow-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'workflow-title'}>{title}</title> : null}
       <path
-        d='M15.57 18.35H7.7c-1.21 0-1.82 0-2.27-.25a2 2 0 0 1-.78-.78c-.25-.45-.25-1.05-.25-2.26s0-1.82.25-2.27a2 2 0 0 1 .78-.77c.45-.26 1.06-.26 2.27-.26h8.4c1.12 0 1.68 0 2.1-.21a2 2 0 0 0 .88-.88c.22-.43.22-.99.22-2.1 0-1.12 0-1.68-.22-2.1a2 2 0 0 0-.88-.88c-.42-.22-.98-.22-2.1-.22H7.84'
+        d='M15.66 18.52H7.59c-1.29 0-1.93 0-2.4-.29a2 2 0 0 1-.7-.68c-.28-.48-.28-1.12-.28-2.41 0-1.3 0-1.94.29-2.41a2 2 0 0 1 .68-.69c.48-.28 1.12-.28 2.41-.28h8.63c1.2 0 1.8 0 2.24-.25a2 2 0 0 0 .8-.79c.24-.45.24-1.05.24-2.24s0-1.8-.25-2.25a2 2 0 0 0-.79-.78c-.45-.25-1.04-.25-2.24-.25H7.73'
         stroke='currentColor'
       />
-      <rect opacity='.2' x='2.61' y='2.88' width='4.98' height='4.98' rx='1' fill='currentColor' />
-      <rect x='2.61' y='2.88' width='4.98' height='4.98' rx='1' stroke='currentColor' />
-      <circle opacity='.2' cx='18.63' cy='18.35' r='2.77' fill='currentColor' />
-      <circle cx='18.63' cy='18.35' r='2.77' stroke='currentColor' />
+      <rect opacity='.2' x='2.36' y='2.64' width='5.11' height='5.11' rx='1' fill='currentColor' />
+      <rect x='2.36' y='2.64' width='5.11' height='5.11' rx='1' stroke='currentColor' />
+      <circle opacity='.2' cx='18.8' cy='18.52' r='2.84' fill='currentColor' />
+      <circle cx='18.8' cy='18.52' r='2.84' stroke='currentColor' />
     </svg>
   )
 }

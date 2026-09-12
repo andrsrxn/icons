@@ -4,11 +4,10 @@ export const IconPill: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,22 @@ export const IconPill: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pill-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pill-title'}>{title}</title> : null}
-      <rect
+      <path
         opacity='.2'
-        width='9.74'
-        height='11.35'
-        rx='2'
-        transform='matrix(.72005 .69393 -.69708 .71699 8.88 8.22)'
+        d='M6.2 11.02C7.53 9.67 8.19 9 9 8.98c.84-.01 1.52.64 2.87 1.95l1.33 1.28c1.36 1.31 2.04 1.96 2.05 2.8.02.82-.64 1.5-1.96 2.85l-2.33 2.4c-.6.6-.9.92-1.2 1.13a4 4 0 0 1-4.55.07c-.3-.2-.6-.5-1.22-1.1-.62-.59-.93-.88-1.14-1.18a4 4 0 0 1-.08-4.53c.2-.3.5-.61 1.1-1.23z'
         fill='currentColor'
       />
       <rect
-        width='9.74'
-        height='22.54'
-        rx='4.87'
-        transform='matrix(.72005 .69393 -.69708 .71699 16.35 .54)'
+        width='10.53'
+        height='24.37'
+        rx='5.26'
+        transform='matrix(.72005 .69393 -.69708 .71699 16.82 -.39)'
         stroke='currentColor'
       />
-      <path d='M15.32 15.32 8.68 8.68' stroke='currentColor' />
+      <path d='M15.71 15.59 8.53 8.4' stroke='currentColor' />
     </svg>
   )
 }

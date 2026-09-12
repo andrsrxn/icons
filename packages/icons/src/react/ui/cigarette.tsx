@@ -4,11 +4,10 @@ export const IconCigarette: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,26 @@ export const IconCigarette: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cigarette-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cigarette-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='2.79'
-        y='11.17'
-        width='4.89'
-        height='4.97'
+        x='1.85'
+        y='11.3'
+        width='5.39'
+        height='5.48'
         rx='1.5'
         fill='currentColor'
       />
-      <rect x='2.69' y='11.17' width='18.61' height='4.97' rx='1.5' stroke='currentColor' />
+      <rect x='1.74' y='11.3' width='20.51' height='5.48' rx='1.5' stroke='currentColor' />
+      <path d='M7.24 16.78V11.3' stroke='currentColor' />
       <path
-        d='M7.68 16.15v-4.98m8.66-7.4.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4m2.87-4.57.5.6c.44.51.39 1.27-.1 1.73-.53.5-.54 1.34 0 1.84l.42.4'
+        d='m16.78 3.14.56.66c.48.56.42 1.4-.12 1.9a1.4 1.4 0 0 0 0 2.03l.47.44'
+        stroke='currentColor'
+      />
+      <path
+        d='m20.85 3.14.55.66c.48.56.43 1.4-.11 1.9a1.4 1.4 0 0 0 0 2.03l.46.44'
         stroke='currentColor'
       />
     </svg>

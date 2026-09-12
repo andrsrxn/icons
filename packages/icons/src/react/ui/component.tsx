@@ -4,11 +4,10 @@ export const IconComponent: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,85 +23,83 @@ export const IconComponent: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'component-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'component-title'}>{title}</title> : null}
       <rect
         opacity='.2'
         x='12'
-        y='2'
-        width='5.66'
-        height='5.66'
+        y='1.37'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(45 12 2)'
+        transform='rotate(45 12 1.37)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
         x='12'
-        y='14'
-        width='5.66'
-        height='5.66'
+        y='14.12'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(45 12 14)'
+        transform='rotate(45 12 14.12)'
         fill='currentColor'
       />
       <rect
         x='12'
-        y='2'
-        width='5.66'
-        height='5.66'
+        y='1.37'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(45 12 2)'
+        transform='rotate(45 12 1.37)'
         stroke='currentColor'
       />
       <rect
         x='12'
-        y='14'
-        width='5.66'
-        height='5.66'
+        y='14.12'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(45 12 14)'
+        transform='rotate(45 12 14.12)'
         stroke='currentColor'
       />
       <rect
         opacity='.2'
-        x='2'
+        x='1.37'
         y='12'
-        width='5.66'
-        height='5.66'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(-45 2 12)'
+        transform='rotate(-45 1.37 12)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        x='14'
+        x='14.12'
         y='12'
-        width='5.66'
-        height='5.66'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(-45 14 12)'
+        transform='rotate(-45 14.12 12)'
         fill='currentColor'
       />
       <rect
-        x='2'
+        x='1.37'
         y='12'
-        width='5.66'
-        height='5.66'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(-45 2 12)'
+        transform='rotate(-45 1.37 12)'
         stroke='currentColor'
       />
       <rect
-        x='14'
+        x='14.12'
         y='12'
-        width='5.66'
-        height='5.66'
+        width='6.01'
+        height='6.01'
         rx='1'
-        transform='rotate(-45 14 12)'
+        transform='rotate(-45 14.12 12)'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconTrendDown: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,15 @@ export const IconTrendDown: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'trend-down-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'trend-down-title'}>{title}</title> : null}
       <path
-        d='m2.57 7.03 4.73 4.84c.65.67.98 1 1.39 1.01s.75-.31 1.42-.96l1.59-1.51c.7-.67 1.05-1 1.47-.99.43.02.75.38 1.4 1.1l5.54 6.19'
+        d='M22.33 12.58v1.77c0 1.89 0 2.83-.58 3.42-.6.59-1.53.59-3.42.59h-1.78'
         stroke='currentColor'
       />
       <path
-        d='M21.22 12.53v1.2c0 1.88 0 2.83-.58 3.41s-1.53.59-3.41.59h-1.21'
+        d='m1.55 6.67 4.85 5.74c.55.65.82.97 1.2 1.02s.73-.18 1.44-.65l3.66-2.46c.7-.47 1.06-.7 1.44-.65s.65.37 1.2 1.02l5.67 6.72'
         stroke='currentColor'
       />
     </svg>

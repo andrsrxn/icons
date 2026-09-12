@@ -4,11 +4,10 @@ export const IconBorderAll: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconBorderAll: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'border-all-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'border-all-title'}>{title}</title> : null}
       <rect
         opacity='.2'
         x='21.24'
@@ -40,9 +37,15 @@ export const IconBorderAll: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M15.24 21.24H8.76c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V9c0-2.83 0-4.24.88-5.12S5.94 3 8.76 3h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.25c0 2.83 0 4.25-.88 5.12s-2.3.88-5.12.88M12 15.37V8.63M12 5V3m0 18.24v-2m-7.12-7.11h-2m18.24 0h-2M15.37 12H8.63'
+        d='M15.24 21.24H8.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.48c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88'
         stroke='currentColor'
       />
+      <path d='M12 15.36V8.63' stroke='currentColor' />
+      <path d='M12 4.76v-2' stroke='currentColor' />
+      <path d='M12 21.24v-2' stroke='currentColor' />
+      <path d='M4.76 12.12h-2' stroke='currentColor' />
+      <path d='M21.24 12.12h-2' stroke='currentColor' />
+      <path d='M15.37 12H8.63' stroke='currentColor' />
     </svg>
   )
 }

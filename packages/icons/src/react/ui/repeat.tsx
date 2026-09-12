@@ -4,11 +4,10 @@ export const IconRepeat: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,23 @@ export const IconRepeat: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'repeat-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'repeat-title'}>{title}</title> : null}
       <path
-        d='M3.65 6h12.82c1.47 0 2.21 0 2.79.25A3 3 0 0 1 20.8 7.8c.25.58.25 1.32.25 2.8m-.7 7.4H7.51c-1.46 0-2.19 0-2.76-.25A3 3 0 0 1 3.2 16.2c-.25-.58-.25-1.3-.25-2.77'
+        d='M20.6 5.82H7.4c-1.6 0-2.4 0-3.02.3a3 3 0 0 0-1.4 1.4c-.3.62-.3 1.42-.3 3.02'
         stroke='currentColor'
       />
       <path
-        d='m5.3 2.71-.47.46c-1.33 1.33-2 2-2 2.83s.67 1.5 2 2.83l.46.46m13.41 12 .47-.46c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83l-.46-.46'
+        d='M3.4 18.18h13.22c1.58 0 2.38 0 2.99-.3a3 3 0 0 0 1.41-1.41c.3-.62.3-1.4.3-3'
+        stroke='currentColor'
+      />
+      <path
+        d='m18.6 2.13.86.86c1.33 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-.87.87'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.42 21.89 4.54 21c-1.33-1.34-2-2-2-2.83s.66-1.5 2-2.83l.88-.89'
         stroke='currentColor'
       />
     </svg>

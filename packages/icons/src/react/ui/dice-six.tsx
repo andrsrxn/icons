@@ -4,11 +4,10 @@ export const IconDiceSix: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconDiceSix: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'dice-six-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dice-six-title'}>{title}</title> : null}
       <rect
         opacity='.2'
         width='18.78'
@@ -38,7 +35,32 @@ export const IconDiceSix: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M17.7 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m-9.68 0a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m9.68-4.9a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m.1 9.8a.9.9 0 1 1-1.82 0 .9.9 0 0 1 1.81 0m-9.77 0a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0m0-9.8a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M17.7 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.02 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.7 7.1a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.8 16.9a.9.9 0 1 1-1.82 0 .9.9 0 0 1 1.81 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.02 16.9a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.02 7.1a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
         fill='currentColor'
         stroke='currentColor'
       />

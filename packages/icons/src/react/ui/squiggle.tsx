@@ -4,11 +4,10 @@ export const IconSquiggle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconSquiggle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'squiggle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'squiggle-title'}>{title}</title> : null}
       <path
-        d='M4.92 4.9s.84-1.12 1.95-1.58a5.2 5.2 0 0 1 4.4 0c1.32.68 1.59 2.57.63 3.36-1.96 1.64-5.02.28-6.66 2.07-1.58 1.72-.8 3.89 1.32 4.16 4.7.6 6.25-3.21 9.63-3.83 1.76-.33 3.4.61 3.4 2.68 0 2.26-3.88 6.2-8.58 8.73-2.96 1.6-5.72.23-5.04-2.3.46-1.74 2.56-3.1 5.3-2.95 1.48.08 2.92.96 3.97 1.86a19 19 0 0 1 2.15 2.19'
+        d='M4.55 4.93s.88-1.14 2.05-1.6a5.6 5.6 0 0 1 4.63 0c1.4.69 1.67 2.6.67 3.4-2.07 1.66-5.29.28-7.02 2.1-1.66 1.74-.84 3.93 1.4 4.2 4.95.62 6.57-3.24 10.13-3.88 1.85-.33 3.59.63 3.59 2.72 0 2.29-4.1 6.28-9.04 8.84-3.12 1.62-6.03.23-5.31-2.32.49-1.77 2.7-3.14 5.58-3a7.6 7.6 0 0 1 4.18 1.89 20 20 0 0 1 2.26 2.21'
         stroke='currentColor'
       />
     </svg>

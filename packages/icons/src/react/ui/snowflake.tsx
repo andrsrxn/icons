@@ -4,11 +4,10 @@ export const IconSnowflake: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,41 @@ export const IconSnowflake: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'snowflake-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'snowflake-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='11.95' r='3.47' fill='currentColor' />
+      <circle opacity='.2' cx='12' cy='11.95' r='3.67' fill='currentColor' />
       <path
-        d='M9.8 2.76 9.46 4.1c-.25.9-.37 1.36-.73 1.57s-.81.09-1.72-.16l-1.35-.36M9.8 21.2l-.35-1.35c-.25-.91-.37-1.37-.73-1.58s-.81-.08-1.72.16l-1.35.36m8.43-16.03.36 1.35c.24.9.36 1.36.72 1.57s.81.09 1.73-.16l1.35-.36M14.08 21.2l.36-1.35c.24-.91.36-1.37.72-1.58s.81-.08 1.73.16l1.35.36m-9.8-6.72H2.28m13.28 0h6.16M7.24 2.98l3.2 5.56m-3.2 12.43 3.2-5.55m6.32-12.44-3.2 5.56m3.2 12.43-3.2-5.55M3.33 9.76l.9.9c.67.66 1 1 1 1.4 0 .42-.33.75-1 1.42l-.9.9m17.34-4.62-.9.9c-.67.66-1 1-1 1.4 0 .42.33.75 1 1.42l.9.9'
+        d='m9.68 2.2-.42 1.55c-.24.91-.36 1.37-.72 1.58s-.81.08-1.73-.16l-1.54-.42'
         stroke='currentColor'
       />
-      <circle cx='12' cy='11.95' r='3.47' stroke='currentColor' />
+      <path
+        d='m9.68 21.75-.42-1.55c-.24-.91-.36-1.37-.72-1.57-.36-.21-.81-.09-1.73.16l-1.54.41'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.2 2.2.41 1.55c.25.91.37 1.37.73 1.58.35.2.81.08 1.72-.16l1.55-.42'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.2 21.75.41-1.55c.25-.91.37-1.37.73-1.57.35-.21.81-.09 1.72.16l1.55.41'
+        stroke='currentColor'
+      />
+      <path d='M8.23 12.07H1.7' stroke='currentColor' />
+      <path d='M15.77 12.07h6.53' stroke='currentColor' />
+      <path d='m6.96 2.45 3.4 5.88' stroke='currentColor' />
+      <path d='m6.96 21.5 3.4-5.88' stroke='currentColor' />
+      <path d='m17.04 2.45-3.4 5.88' stroke='currentColor' />
+      <path d='m17.04 21.5-3.4-5.88' stroke='currentColor' />
+      <path
+        d='m2.82 9.63 1.03 1.03c.67.66 1 1 1 1.41 0 .42-.33.75-1 1.42l-1.03 1.03'
+        stroke='currentColor'
+      />
+      <path
+        d='m21.18 9.63-1.03 1.03c-.67.66-1 1-1 1.41 0 .42.33.75 1 1.42l1.03 1.03'
+        stroke='currentColor'
+      />
+      <circle cx='12' cy='11.95' r='3.67' stroke='currentColor' />
     </svg>
   )
 }

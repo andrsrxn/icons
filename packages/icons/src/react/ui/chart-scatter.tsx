@@ -4,11 +4,10 @@ export const IconChartScatter: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,30 @@ export const IconChartScatter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chart-scatter-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'chart-scatter-title'}>{title}</title> : null}
       <path
-        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10'
+        d='M21.46 21.32H10.75c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.62'
         stroke='currentColor'
       />
       <path
-        d='M8.84 16a1 1 0 1 1-2 0 1 1 0 0 1 2 0M11 9a1 1 0 1 1-2 0 1 1 0 0 1 2 0m5.54 5a1 1 0 1 1-2 0 1 1 0 0 1 2 0m1-8.16a1 1 0 1 1-2 0 1 1 0 0 1 2 0'
+        d='M9.1 16.7a1.14 1.14 0 1 1-2.26 0 1.14 1.14 0 0 1 2.27 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M11.57 8.74a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.86 14.42a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19 5.14a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
         fill='currentColor'
         stroke='currentColor'
       />

@@ -4,11 +4,10 @@ export const IconTree: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,28 @@ export const IconTree: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'tree-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'tree-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='14.62'
-        height='13.52'
-        rx='4'
-        transform='matrix(0 1 1 0 5.24 2.71)'
+        width='16.35'
+        height='14.14'
+        rx='5'
+        transform='matrix(0 1 1 0 4.93 1.7)'
         fill='currentColor'
       />
       <rect
-        width='14.62'
-        height='13.52'
-        rx='4'
-        transform='matrix(0 1 1 0 5.24 2.71)'
+        width='16.35'
+        height='14.14'
+        rx='5'
+        transform='matrix(0 1 1 0 4.93 1.7)'
         stroke='currentColor'
       />
-      <path d='M12 21.08V6.33M8.44 21.34h7.12M12 14l-2.9-2.9m2.9 0 2.9-2.9' stroke='currentColor' />
+      <path d='M12 21.98V6' stroke='currentColor' />
+      <path d='M8.27 22.24h7.46' stroke='currentColor' />
+      <path d='m12 14.3-3.14-3.13' stroke='currentColor' />
+      <path d='m12 11.17 3.14-3.15' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconPencil: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,22 @@ export const IconPencil: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pencil-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pencil-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='5.23'
-        height='5.86'
+        width='5.68'
+        height='6.36'
         rx='1'
-        transform='scale(1 -1)rotate(45 21.1 17.2)'
+        transform='scale(1 -1)rotate(45 21.26 17.8)'
         fill='currentColor'
       />
       <path
-        d='M4.98 21.26c.82 0 1.23 0 1.6-.15.36-.15.65-.44 1.23-1.02L20.23 7.67a5 5 0 0 0 .92-1.05 2 2 0 0 0 0-1.84 5 5 0 0 0-.92-1.05 5 5 0 0 0-1.05-.92 2 2 0 0 0-1.84 0 5 5 0 0 0-1.05.92L3.87 16.15c-.58.58-.87.87-1.02 1.24-.15.36-.15.77-.15 1.59v.28c0 .95 0 1.42.29 1.71.3.3.76.3 1.7.3zM18.4 9.08l-3.12-3.12'
+        d='M4.46 22.18c.81 0 1.22 0 1.59-.16.37-.15.66-.44 1.23-1.02L20.86 7.42c.68-.67 1.01-1 1.17-1.38a2 2 0 0 0 0-1.5c-.16-.38-.5-.72-1.17-1.39s-1-1.01-1.39-1.16a2 2 0 0 0-1.5 0c-.37.15-.7.49-1.38 1.16L3 16.73c-.58.58-.87.87-1.02 1.23-.15.37-.15.78-.15 1.6v.62c0 .94 0 1.41.29 1.7.3.3.76.3 1.7.3z'
         stroke='currentColor'
       />
+      <path d='M18.97 9.05 14.92 5' stroke='currentColor' />
     </svg>
   )
 }

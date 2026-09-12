@@ -4,11 +4,10 @@ export const IconTextCreation: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,31 +23,24 @@ export const IconTextCreation: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-creation-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-creation-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.72' y='2.63' width='4.47' height='4.47' rx='1' fill='currentColor' />
-      <rect opacity='.2' x='16.94' y='2.63' width='4.47' height='4.47' rx='1' fill='currentColor' />
-      <rect opacity='.2' x='2.72' y='16.83' width='4.47' height='4.47' rx='1' fill='currentColor' />
-      <rect
-        opacity='.2'
-        x='16.94'
-        y='16.83'
-        width='4.47'
-        height='4.47'
-        rx='1'
-        fill='currentColor'
-      />
-      <rect x='2.72' y='2.63' width='4.47' height='4.47' rx='1' stroke='currentColor' />
-      <rect x='16.94' y='2.63' width='4.47' height='4.47' rx='1' stroke='currentColor' />
-      <rect x='2.72' y='16.83' width='4.47' height='4.47' rx='1' stroke='currentColor' />
-      <rect x='16.94' y='16.83' width='4.47' height='4.47' rx='1' stroke='currentColor' />
-      <path
-        d='M4.95 7.1v9.4m2.41 2.41h9.4M19.17 7.1v9.4M7.36 4.7h9.4M12 9v6.67m1.1 0h-2.2m3.8-5.89a.8.8 0 0 0-.78-.78h-3.84a.8.8 0 0 0-.78.78'
-        stroke='currentColor'
-      />
+      <rect opacity='.2' x='2.57' y='2.48' width='4.54' height='4.54' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='17.01' y='2.48' width='4.54' height='4.54' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='2.57' y='16.9' width='4.54' height='4.54' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='17.01' y='16.9' width='4.54' height='4.54' rx='1' fill='currentColor' />
+      <rect x='2.57' y='2.48' width='4.54' height='4.54' rx='1' stroke='currentColor' />
+      <rect x='17.01' y='2.48' width='4.54' height='4.54' rx='1' stroke='currentColor' />
+      <rect x='2.57' y='16.9' width='4.54' height='4.54' rx='1' stroke='currentColor' />
+      <rect x='17.01' y='16.9' width='4.54' height='4.54' rx='1' stroke='currentColor' />
+      <path d='M4.84 7.03v9.55' stroke='currentColor' />
+      <path d='M7.29 19.02h9.55' stroke='currentColor' />
+      <path d='M19.28 7.03v9.55' stroke='currentColor' />
+      <path d='M7.29 4.58h9.55' stroke='currentColor' />
+      <path d='M12 8.95v6.78' stroke='currentColor' />
+      <path d='M13.12 15.73h-2.24' stroke='currentColor' />
+      <path d='M14.74 9.74a.8.8 0 0 0-.79-.79h-3.9a.8.8 0 0 0-.8.8' stroke='currentColor' />
     </svg>
   )
 }

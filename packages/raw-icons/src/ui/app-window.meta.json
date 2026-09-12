@@ -10,5 +10,6 @@
     "desktop",
     "ui",
     "interface"
-  ]
+  ],
+  "rtl":true
 }

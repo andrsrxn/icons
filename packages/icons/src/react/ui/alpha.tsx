@@ -4,11 +4,10 @@ export const IconAlpha: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,12 @@ export const IconAlpha: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'alpha-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'alpha-title'}>{title}</title> : null}
-      <ellipse opacity='.2' cx='9.49' cy='12' rx='6.02' ry='8.53' fill='currentColor' />
+      <ellipse opacity='.2' cx='9.51' cy='12' rx='5.98' ry='8.48' fill='currentColor' />
       <path
-        d='M16.12 3.47c0 6.7-.4 17.06-6.67 17.06-3.98 0-6.12-4.37-6.12-8.53s2.14-8.53 6.12-8.53c9.45 0 4.06 17.06 9.18 17.06 1.78 0 2.04-1.62 2.04-2.94'
+        d='M16.1 3.52c0 6.66-.4 16.96-6.63 16.96-3.96 0-6.08-4.34-6.08-8.48S5.5 3.52 9.47 3.52c9.4 0 4.03 16.96 9.12 16.96 1.77 0 2.02-1.6 2.02-2.93'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconExternalLink: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,27 @@ export const IconExternalLink: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'external-link-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'external-link-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.69' y='5.6' width='15.69' height='15.69' rx='3' fill='currentColor' />
+      <rect
+        opacity='.2'
+        x='2.64'
+        y='5.58'
+        width='15.76'
+        height='15.76'
+        rx='3'
+        fill='currentColor'
+      />
       <path
-        d='M18.38 12.06v3.23c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H8.7c-2.83 0-4.24 0-5.12-.88s-.88-2.29-.88-5.12V11.6c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h3.34m2.21-2.9h3.02c1.89 0 2.83 0 3.42.59.58.58.58 1.53.58 3.42v3.02m-9.75 2.74 8.88-8.89'
+        d='M18.4 12.4v2.94c0 2.83 0 4.25-.88 5.13-.87.87-2.29.87-5.12.87H8.64c-2.83 0-4.24 0-5.12-.87-.88-.88-.88-2.3-.88-5.13v-3.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h3.13'
         stroke='currentColor'
       />
+      <path
+        d='M14.71 2.67h2.6c1.88 0 2.83 0 3.41.58.6.59.6 1.53.6 3.42v2.6'
+        stroke='currentColor'
+      />
+      <path d='m11.5 12.48 8.93-8.93' stroke='currentColor' />
     </svg>
   )
 }

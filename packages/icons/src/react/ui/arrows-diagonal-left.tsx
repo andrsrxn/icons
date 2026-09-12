@@ -4,11 +4,10 @@ export const IconArrowsDiagonalLeft: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,12 @@ export const IconArrowsDiagonalLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'arrows-diagonal-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'arrows-diagonal-left-title'}>{title}</title>
-      ) : null}
-      <path
-        d='m4.38 4.47 14.93 14.92m-5.53 1.2h2.8c1.9 0 2.84 0 3.42-.58.59-.59.59-1.53.59-3.42v-2.81M10.22 3.41h-2.8c-1.9 0-2.84 0-3.42.58-.59.59-.59 1.53-.59 3.42v2.81'
-        stroke='currentColor'
-      />
+      <path d='m3.5 3.59 16.67 16.67' stroke='currentColor' />
+      <path d='M13.9 21.2h3.3c1.89 0 2.83 0 3.42-.58s.58-1.53.58-3.41v-3.3' stroke='currentColor' />
+      <path d='M10.1 2.8H6.8c-1.89 0-2.83 0-3.42.58S2.8 4.9 2.8 6.79v3.3' stroke='currentColor' />
     </svg>
   )
 }

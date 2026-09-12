@@ -4,11 +4,10 @@ export const IconTextPhonetic: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,17 @@ export const IconTextPhonetic: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-phonetic-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-phonetic-title'}>{title}</title> : null}
-      <rect opacity='.2' x='12.67' y='5.44' width='7.58' height='6.37' rx='1' fill='currentColor' />
-      <rect opacity='.2' x='3.77' y='12.25' width='7.58' height='6.39' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='12.64' y='5.08' width='7.33' height='6.72' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='4.04' y='12.27' width='7.33' height='6.73' rx='1' fill='currentColor' />
       <path
-        d='M11.84 11.98H8.38c-2.3 0-5.14.31-5.14 3.8 0 1.85 1.5 3.35 3.35 3.35h.95a4.3 4.3 0 0 0 4.3-4.3v-5.4a4.56 4.56 0 0 0-4.56-4.56H7c-1.62 0-3.09.94-3.76 2.42M12.16 12s.3.02 3.46.02c4.04 0 5.14 0 5.14-3.8 0-1.85-1.5-3.35-3.35-3.35h-.95a4.3 4.3 0 0 0-4.3 4.3v5.4a4.56 4.56 0 0 0 4.56 4.56H17c1.62 0 3.09-.94 3.76-2.42'
+        d='M11.85 11.98H8.5c-2.23 0-4.97.33-4.97 4a3.53 3.53 0 0 0 3.53 3.54h.63c2.3 0 4.16-1.86 4.16-4.16V8.83c0-2.4-1.95-4.35-4.35-4.35h-.14a4.1 4.1 0 0 0-3.83 2.56'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.15 12s.3.03 3.35.03c3.9 0 4.97 0 4.97-4.02a3.53 3.53 0 0 0-3.53-3.53h-.63a4.16 4.16 0 0 0-4.16 4.16v6.53c0 2.4 1.95 4.35 4.35 4.35h.14c1.68 0 3.19-1 3.83-2.56'
         stroke='currentColor'
       />
     </svg>

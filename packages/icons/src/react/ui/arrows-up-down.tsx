@@ -4,11 +4,10 @@ export const IconArrowsUpDown: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,19 @@ export const IconArrowsUpDown: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'arrows-up-down-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'arrows-up-down-title'}>{title}</title>
-      ) : null}
       <path
-        d='m3.55 6.81 1.2-1.2c1.34-1.34 2-2.01 2.83-2.01s1.5.67 2.83 2l1.21 1.21m.76 10.38 1.2 1.2c1.33 1.34 2 2.01 2.83 2.01s1.5-.67 2.83-2l1.21-1.21M7.59 20V3.89m8.82.31v16.12'
+        d='M2.84 6.38 4.4 4.83c1.33-1.33 2-2 2.82-2 .83 0 1.5.67 2.83 2l1.55 1.55'
         stroke='currentColor'
       />
+      <path
+        d='m12.4 17.62 1.55 1.55c1.33 1.33 2 2 2.83 2s1.5-.67 2.83-2l1.55-1.55'
+        stroke='currentColor'
+      />
+      <path d='M7.22 20.67V2.98' stroke='currentColor' />
+      <path d='M16.78 3.55v17.4' stroke='currentColor' />
     </svg>
   )
 }

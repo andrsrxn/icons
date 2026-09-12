@@ -4,11 +4,10 @@ export const IconChevronDownDouble: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,15 @@ export const IconChevronDownDouble: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chevron-down-double-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'chevron-down-double-title'}>{title}</title>
-      ) : null}
       <path
-        d='m19.84 4.47-5 5.02c-1.34 1.33-2 2-2.83 2s-1.5-.67-2.83-2L4.16 4.47m15.68 7.85-5 5.01c-1.34 1.34-2 2-2.83 2s-1.5-.66-2.83-2l-5.02-5.01'
+        d='m4.68 12.67 4.48 4.5c1.34 1.33 2 2 2.83 2s1.5-.67 2.83-2l4.5-4.5'
+        stroke='currentColor'
+      />
+      <path
+        d='m4.68 5.2 4.48 4.5c1.34 1.33 2 2 2.83 2s1.5-.67 2.83-2l4.5-4.5'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconBubbles: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,16 @@ export const IconBubbles: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'bubbles-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bubbles-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='8.25' cy='8.2' r='5.69' fill='currentColor' />
-      <circle opacity='.2' cx='15.23' cy='18.23' r='3.26' fill='currentColor' />
-      <circle opacity='.2' cx='19.55' cy='10.92' r='1.9' fill='currentColor' />
-      <circle cx='8.25' cy='8.2' r='5.69' stroke='currentColor' />
-      <circle cx='15.23' cy='18.23' r='3.26' stroke='currentColor' />
-      <circle cx='19.55' cy='10.92' r='1.9' stroke='currentColor' />
-      <path d='M7.98 5.6a2 2 0 0 0-1.44.66 2 2 0 0 0-.66 1.44' stroke='currentColor' />
+      <circle opacity='.2' cx='7.94' cy='7.9' r='6.16' fill='currentColor' />
+      <circle opacity='.2' cx='15.49' cy='18.74' r='3.52' fill='currentColor' />
+      <circle opacity='.2' cx='20.16' cy='10.83' r='2.05' fill='currentColor' />
+      <circle cx='7.94' cy='7.9' r='6.16' stroke='currentColor' />
+      <circle cx='15.49' cy='18.74' r='3.52' stroke='currentColor' />
+      <circle cx='20.16' cy='10.83' r='2.05' stroke='currentColor' />
+      <path d='M7.66 5.08c-.67.04-1.09.23-1.56.7-.48.48-.67.9-.71 1.57' stroke='currentColor' />
     </svg>
   )
 }

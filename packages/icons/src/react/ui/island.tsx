@@ -4,11 +4,10 @@ export const IconIsland: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,21 @@ export const IconIsland: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'island-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'island-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M10.81 15.84A8.5 8.5 0 0 0 2.82 22h15.95c-.54-3.03-4.34-6.16-7.96-6.16'
+        d='M10.7 16.15a9.2 9.2 0 0 0-8.65 6.67h17.27c-.59-3.27-4.7-6.66-8.62-6.67'
         fill='currentColor'
       />
+      <path d='M10.71 15.82s-.23-3.03 1.1-5.39a11 11 0 0 1 3.66-3.7' stroke='currentColor' />
+      <path d='M15.47 6.28a5 5 0 0 0-2.54-.95 5.6 5.6 0 0 0-3.18.56' stroke='currentColor' />
+      <path d='M22.18 7.1a6 6 0 0 0-2.9-1.17 6 6 0 0 0-3.63.58' stroke='currentColor' />
+      <path d='M18.36 11.23c.08-.56-.1-1.62-.6-2.57a5.4 5.4 0 0 0-2.15-2.3' stroke='currentColor' />
+      <path d='M15.6 6.27c.09-.56-.1-1.62-.59-2.57a5.4 5.4 0 0 0-2.15-2.3' stroke='currentColor' />
       <path
-        d='M10.82 15.53s-.22-2.8 1.01-4.97c1.23-2.18 3.38-3.42 3.38-3.42m0-.42a4.7 4.7 0 0 0-2.35-.87 5 5 0 0 0-2.93.51m11.48 1.11a5.3 5.3 0 0 0-2.67-1.07 5.7 5.7 0 0 0-3.36.54'
-        stroke='currentColor'
-      />
-      <path
-        d='M17.88 11.3c.08-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12m0-.08c.07-.52-.1-1.5-.55-2.38a5 5 0 0 0-1.99-2.12M2.82 21.6c.86-3.25 4.36-5.77 7.99-5.76s7.42 2.93 7.96 5.76'
+        d='M2.05 22.4c.93-3.53 4.72-6.26 8.65-6.25 3.92 0 8.03 3.18 8.62 6.24'
         stroke='currentColor'
       />
     </svg>

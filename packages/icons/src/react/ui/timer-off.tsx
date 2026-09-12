@@ -4,11 +4,10 @@ export const IconTimerOff: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,14 @@ export const IconTimerOff: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'timer-off-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'timer-off-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='13.32' r='8.32' fill='currentColor' />
-      <circle cx='12' cy='13.32' r='8.32' stroke='currentColor' />
-      <path d='M16.47 2.37H7.53M3.3 3.3l17.4 17.4M15.34 9.78l-3.9 3.9' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='13.4' r='8.8' fill='currentColor' />
+      <circle cx='12' cy='13.4' r='8.8' stroke='currentColor' />
+      <path d='M16.73 1.82H7.27' stroke='currentColor' />
+      <path d='m2.67 2.67 18.66 18.66' stroke='currentColor' />
+      <path d='m15.53 9.66-4.12 4.11' stroke='currentColor' />
     </svg>
   )
 }

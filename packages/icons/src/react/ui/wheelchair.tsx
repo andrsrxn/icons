@@ -4,11 +4,10 @@ export const IconWheelchair: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,23 @@ export const IconWheelchair: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'wheelchair-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'wheelchair-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='7.34' cy='16.46' r='4.93' fill='currentColor' />
-      <circle opacity='.2' cx='18.9' cy='18.87' r='2.52' fill='currentColor' />
-      <circle cx='7.34' cy='16.46' r='4.93' stroke='currentColor' />
-      <circle cx='18.9' cy='18.87' r='2.52' stroke='currentColor' />
+      <circle opacity='.2' cx='7.28' cy='16.52' r='5' fill='currentColor' />
+      <circle opacity='.2' cx='18.99' cy='18.96' r='2.56' fill='currentColor' />
+      <circle cx='7.28' cy='16.52' r='5' stroke='currentColor' />
+      <circle cx='18.99' cy='18.96' r='2.56' stroke='currentColor' />
       <path
-        d='M7.92 11.53V5.04c0-.4 0-.6-.03-.77a2 2 0 0 0-1.64-1.63C6.1 2.6 5.9 2.6 5.5 2.6m12.79 4.47H7.92m10.98 8.85v-.23c0-.55 0-.83-.06-1.06a2 2 0 0 0-1.48-1.48c-.23-.05-.5-.05-1.05-.05h-5.19m4.61-6.03v6.03'
+        d='M7.86 11.53V4.94c0-.43 0-.64-.03-.82a2 2 0 0 0-1.6-1.6c-.18-.04-.4-.04-.83-.04'
         stroke='currentColor'
       />
+      <path d='M18.37 7H7.87' stroke='currentColor' />
+      <path
+        d='M19 15.97v-.23c0-.59 0-.88-.07-1.12a2 2 0 0 0-1.45-1.45c-.24-.06-.53-.06-1.11-.06H11.1'
+        stroke='currentColor'
+      />
+      <path d='M15.78 7v6.11' stroke='currentColor' />
     </svg>
   )
 }

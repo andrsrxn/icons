@@ -4,11 +4,10 @@ export const IconChartBarVertical: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,30 @@ export const IconChartBarVertical: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chart-bar-vertical-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'chart-bar-vertical-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M4.04 9.15c0-.94 0-1.42.3-1.7.29-.3.76-.3 1.7-.3h1.3c.95 0 1.42 0 1.71.3.3.28.3.76.3 1.7v11.2h-5.3zm10.61 4c0-.94 0-1.42.3-1.7.29-.3.76-.3 1.7-.3h1.3c.95 0 1.42 0 1.71.3.3.28.3.76.3 1.7v7.2h-5.3z'
+        d='M3.24 8.66c0-.95 0-1.42.29-1.71.3-.3.76-.3 1.7-.3h1.85c.94 0 1.41 0 1.7.3s.3.76.3 1.7V21.2H3.24z'
         fill='currentColor'
       />
       <path
-        d='M9.35 5.65c0-.94 0-1.42.3-1.7.28-.3.75-.3 1.7-.3h1.3c.95 0 1.42 0 1.7.3.3.28.3.76.3 1.7v14.7h-5.3zm12.38 14.7H2.27'
+        opacity='.2'
+        d='M14.92 13.06c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h1.84c.95 0 1.42 0 1.71.3.3.29.3.76.3 1.7v8.14h-5.85z'
+        fill='currentColor'
+      />
+      <path
+        d='M9.08 4.8c0-.94 0-1.41.3-1.7.28-.3.76-.3 1.7-.3h1.84c.94 0 1.42 0 1.7.3.3.29.3.76.3 1.7v16.4H9.08z'
+        stroke='currentColor'
+      />
+      <path d='M22.3 21.2H1.7' stroke='currentColor' />
+      <path
+        d='M3.24 8.66c0-.95 0-1.42.29-1.71.3-.3.76-.3 1.7-.3h1.85c.94 0 1.41 0 1.7.3s.3.76.3 1.7V21.2H3.24z'
         stroke='currentColor'
       />
       <path
-        d='M4.04 9.15c0-.94 0-1.42.3-1.7.29-.3.76-.3 1.7-.3h1.3c.95 0 1.42 0 1.71.3.3.28.3.76.3 1.7v11.2h-5.3zm10.61 4c0-.94 0-1.42.3-1.7.29-.3.76-.3 1.7-.3h1.3c.95 0 1.42 0 1.71.3.3.28.3.76.3 1.7v7.2h-5.3z'
+        d='M14.92 13.06c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h1.84c.95 0 1.42 0 1.71.3.3.29.3.76.3 1.7v8.14h-5.85z'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconHandReceivingCoin: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,40 +23,37 @@ export const IconHandReceivingCoin: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-receiving-coin-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'hand-receiving-coin-title'}>{title}</title>
-      ) : null}
-      <rect opacity='.2' x='2.76' y='12.94' width='3.81' height='7.52' rx='1' fill='currentColor' />
-      <path
-        d='M6.57 19.2s1.1.86 2.67 1.22c3.14.72 4.74.52 7.52-.44 2.03-.7 3.63-2.55 4.44-3.66.38-.52.37-1.21.04-1.76a1.88 1.88 0 0 0-2.82-.42 25 25 0 0 1-3.53 2.56c-.74.43-2.27.34-3.73.34m3.73-.34c.6-1.49.43-2.68-.23-2.91a11 11 0 0 0-3.83-.6c-3.55 0-4.26.83-4.26.83'
-        stroke='currentColor'
-      />
-      <rect x='2.76' y='12.94' width='3.81' height='7.52' rx='1' stroke='currentColor' />
       <ellipse
         opacity='.2'
-        cx='14.43'
-        cy='6.5'
-        rx='3.93'
-        ry='2.04'
-        transform='rotate(90 14.43 6.5)'
+        cx='14.55'
+        cy='6.01'
+        rx='4.31'
+        ry='2.23'
+        transform='rotate(90 14.55 6)'
         fill='currentColor'
       />
       <ellipse
-        cx='14.19'
-        cy='6.5'
-        rx='3.93'
-        ry='1.8'
-        transform='rotate(90 14.2 6.5)'
+        cx='14.29'
+        cy='6.01'
+        rx='4.31'
+        ry='1.97'
+        transform='rotate(90 14.29 6)'
         stroke='currentColor'
       />
+      <path d='M16.94 10.32c1.23 0 2.23-1.93 2.23-4.31s-1-4.31-2.23-4.31' stroke='currentColor' />
+      <path d='M14.63 1.7h1.97' stroke='currentColor' />
+      <path d='M16.94 4.53h1.95' stroke='currentColor' />
+      <path d='M16.94 7.49h1.95' stroke='currentColor' />
+      <path d='M14.4 10.32H17' stroke='currentColor' />
+      <rect opacity='.2' x='2.19' y='13.68' width='4.01' height='7.91' rx='1' fill='currentColor' />
       <path
-        d='M16.61 10.44c1.13 0 2.04-1.76 2.04-3.94s-.91-3.93-2.04-3.93m-2.11 0h1.8m.31 2.58h1.79m-1.79 2.7h1.79m-4.1 2.59h2.24'
+        d='M6.2 20.26s1.16.91 2.8 1.29c3.3.75 5 .54 7.92-.46 2.13-.73 3.81-2.69 4.66-3.86.4-.54.4-1.27.05-1.85a1.98 1.98 0 0 0-2.96-.44 27 27 0 0 1-3.72 2.7c-.77.44-2.39.35-3.92.35m3.92-.35c.64-1.57.45-2.82-.24-3.07a11 11 0 0 0-4.03-.62c-3.73 0-4.48.87-4.48.87'
         stroke='currentColor'
       />
+      <rect x='2.19' y='13.68' width='4.01' height='7.91' rx='1' stroke='currentColor' />
     </svg>
   )
 }

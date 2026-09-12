@@ -4,11 +4,10 @@ export const IconTextUnderline: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,11 @@ export const IconTextUnderline: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-underline-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-underline-title'}>{title}</title>
-      ) : null}
-      <path d='M17.08 3.76v7.49a5.09 5.09 0 1 1-10.17 0V3.76M19.64 20H4.36' stroke='currentColor' />
+      <path d='M17.17 3.76v7.61a5.18 5.18 0 0 1-10.35 0v-7.6' stroke='currentColor' />
+      <path d='M19.77 20.28H4.23' stroke='currentColor' />
     </svg>
   )
 }

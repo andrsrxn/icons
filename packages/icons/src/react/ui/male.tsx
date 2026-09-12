@@ -4,11 +4,10 @@ export const IconMale: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconMale: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'male-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'male-title'}>{title}</title> : null}
       <circle opacity='.2' cx='9.27' cy='14.73' r='6.67' fill='currentColor' />
       <circle cx='9.27' cy='14.73' r='6.67' stroke='currentColor' />
+      <path d='m14.02 9.98 6.36-6.35' stroke='currentColor' />
       <path
-        d='m14.02 9.98 6.36-6.35m.95 6.15v-3.1c0-1.9 0-2.84-.58-3.42s-1.53-.59-3.41-.59h-3.12'
+        d='M21.33 9.78v-3.1c0-1.9 0-2.84-.58-3.42s-1.53-.59-3.41-.59h-3.12'
         stroke='currentColor'
       />
     </svg>

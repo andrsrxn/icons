@@ -4,11 +4,10 @@ export const IconTextWholeWord: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,28 +23,24 @@ export const IconTextWholeWord: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-whole-word-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-whole-word-title'}>{title}</title>
-      ) : null}
       <path
-        d='M21.58 14.53c0 1.65 0 2.48-.45 3.03l-.27.27c-.55.46-1.38.46-3.04.46H6.18c-1.66 0-2.49 0-3.04-.46l-.27-.27c-.45-.55-.45-1.38-.45-3.03'
+        d='M22.33 14.86v.05c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H5.67c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42v-.05'
         stroke='currentColor'
       />
       <path
-        opacity='.2'
-        d='M16.06 14.8c-1.13 0-2.04-.98-2.04-2.2 0-1.2.91-1.56 2.04-1.56s2.04.36 2.04 1.57c0 1.2-.91 2.18-2.04 2.18m-8.99-5.6.77-2.7c.28-.97 1.65-.97 1.92 0l.78 2.7a1 1 0 0 1-.96 1.27H8.04a1 1 0 0 1-.97-1.27'
-        fill='currentColor'
-      />
-      <path
-        d='m5.43 14.9 1.41-5.36C7.63 6.58 8.02 5.1 8.8 5.1s1.15 1.48 1.92 4.45l1.4 5.35m3.94-.1c-1.13 0-2.04-.83-2.04-1.85 0-1.35.91-1.84 2.04-1.84h2.04v1.84c0 1.02-.91 1.84-2.04 1.84m-5.17-4H6.65'
+        d='M4.92 15.26 6.6 8.92c.78-2.97 1.17-4.45 1.94-4.44s1.16 1.48 1.93 4.44l1.64 6.34'
         stroke='currentColor'
       />
       <path
-        d='M18.58 14.9s-.28-.22-.28-.9v-3.7c0-1.47-.33-2.35-1.69-2.6-.88-.17-1.56.22-2.08.89'
+        d='M16.37 15.15c-1.21 0-2.2-.9-2.2-1.99 0-1.45.99-1.98 2.2-1.98h2.2v1.98c0 1.1-.98 1.99-2.2 1.99'
+        stroke='currentColor'
+      />
+      <path d='M10.8 10.83H6.24' stroke='currentColor' />
+      <path
+        d='M19.1 15.26s-.3-.24-.3-.97V10.3c0-1.58-.36-2.53-1.83-2.8-.95-.18-1.69.24-2.25.96'
         stroke='currentColor'
       />
     </svg>

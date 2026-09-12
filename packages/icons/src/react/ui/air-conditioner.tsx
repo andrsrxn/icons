@@ -4,11 +4,10 @@ export const IconAirConditioner: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,28 @@ export const IconAirConditioner: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'air-conditioner-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'air-conditioner-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M17.78 3.25c1.14 0 1.7 0 2.14.23a2 2 0 0 1 .86.85c.22.43.22 1 .22 2.14s0 1.7-.22 2.14a2 2 0 0 1-.86.86c-.43.22-1 .22-2.14.22H6.22c-1.14 0-1.7 0-2.14-.22a2 2 0 0 1-.86-.86C3 8.18 3 7.61 3 6.47s0-1.7.22-2.14a2 2 0 0 1 .86-.85c.43-.23 1-.23 2.14-.23z'
+        d='M17.95 2.7c1.23 0 1.85 0 2.3.27a2 2 0 0 1 .76.75c.26.46.26 1.07.26 2.3s0 1.85-.26 2.3a2 2 0 0 1-.75.76c-.46.26-1.08.26-2.3.26H6.04c-1.23 0-1.85 0-2.3-.26a2 2 0 0 1-.76-.76c-.26-.45-.26-1.07-.26-2.3s0-1.84.26-2.3a2 2 0 0 1 .75-.75c.46-.26 1.08-.26 2.3-.26z'
         fill='currentColor'
       />
       <path
-        d='M17.6 3.25c1.3 0 1.97 0 2.45.3a2 2 0 0 1 .65.65c.3.49.3 1.14.3 2.46 0 1.31 0 1.97-.3 2.45a2 2 0 0 1-.65.66c-.48.3-1.14.3-2.46.3H6.41c-1.32 0-1.98 0-2.46-.3a2 2 0 0 1-.65-.66C3 8.63 3 7.97 3 6.66s0-1.97.3-2.46a2 2 0 0 1 .65-.65c.48-.3 1.14-.3 2.46-.3zm-.96 10.1.98 1.05.18.2a2 2 0 0 1-.16 2.73l-.2.18-.23.19a2 2 0 0 0 .21 3.09l.85.71m-6.97-8.15 1 1.05.17.2a2 2 0 0 1-.16 2.73l-.2.18-.23.19a2 2 0 0 0 .22 3.09l.84.71m-6.96-8.15.99 1.05.18.2a2 2 0 0 1-.17 2.73l-.2.18-.22.19a2 2 0 0 0 .2 3.09l.85.71'
+        d='M17.76 2.7c1.41 0 2.12 0 2.63.35a2 2 0 0 1 .54.54c.34.5.34 1.21.34 2.62s0 2.12-.34 2.63a2 2 0 0 1-.54.54c-.51.34-1.22.34-2.63.34H6.24c-1.41 0-2.12 0-2.63-.34a2 2 0 0 1-.54-.54c-.34-.5-.34-1.21-.34-2.63 0-1.4 0-2.11.34-2.62a2 2 0 0 1 .54-.54c.51-.34 1.22-.34 2.63-.34z'
+        stroke='currentColor'
+      />
+      <path
+        d='m16.78 13.1 1.01 1.08.26.3a2 2 0 0 1-.16 2.65l-.3.26q-.24.2-.31.28a2 2 0 0 0-.01 2.81q.07.09.32.28l.87.74'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.29 13.1 1.01 1.08c.14.15.21.22.26.3a2 2 0 0 1-.16 2.65l-.3.26-.31.28a2 2 0 0 0-.01 2.81q.08.09.32.28l.87.74'
+        stroke='currentColor'
+      />
+      <path
+        d='m5.8 13.1 1.02 1.08.26.3a2 2 0 0 1-.17 2.65q-.07.08-.29.26l-.32.28a2 2 0 0 0 0 2.81q.06.09.31.28l.87.74'
         stroke='currentColor'
       />
     </svg>

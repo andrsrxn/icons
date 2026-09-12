@@ -4,11 +4,10 @@ export const IconLandscapeToPortrait: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,29 @@ export const IconLandscapeToPortrait: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={
-        isLabelled && title && !ariaLabel ? 'landscape-to-portrait-title' : undefined
-      }
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'landscape-to-portrait-title'}>{title}</title>
-      ) : null}
-      <rect opacity='.2' x='2.8' y='12.31' width='18.39' height='8.9' rx='2' fill='currentColor' />
-      <rect x='2.8' y='12.32' width='18.39' height='8.89' rx='3' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        x='2.78'
+        y='12.34'
+        width='18.44'
+        height='8.92'
+        rx='2'
+        fill='currentColor'
+      />
+      <rect x='2.78' y='12.34' width='18.44' height='8.92' rx='3' stroke='currentColor' />
       <path
-        d='M11.67 11.55V7.13c0-1.33 0-2-.2-2.53a3 3 0 0 0-1.7-1.69c-.53-.2-1.2-.2-2.53-.2-1.34 0-2 0-2.53.2A3 3 0 0 0 3 4.61c-.2.52-.2 1.19-.2 2.52v7.46m12.39-8.83h.7c1.8 0 2.7 0 3.28.54l.1.1c.53.58.53 1.48.53 3.27'
+        d='M11.67 11.57V7.15c0-1.35 0-2.02-.21-2.56a3 3 0 0 0-1.68-1.68c-.54-.2-1.21-.2-2.56-.2-1.34 0-2.02 0-2.55.2A3 3 0 0 0 3 4.6c-.21.54-.21 1.21-.21 2.56v9.1'
         stroke='currentColor'
       />
       <path
-        d='M16.37 3.34c-.9.9-1.34 1.34-1.47 1.86a2 2 0 0 0 0 1.02c.13.52.58.97 1.47 1.86'
+        d='M14.8 5.77h1.1c1.81 0 2.72 0 3.3.55l.08.08c.55.58.55 1.49.55 3.3'
+        stroke='currentColor'
+      />
+      <path
+        d='m16.37 3.4-.26.25c-1 1-1.5 1.5-1.5 2.12s.5 1.12 1.5 2.12l.26.26'
         stroke='currentColor'
       />
     </svg>

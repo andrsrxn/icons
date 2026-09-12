@@ -4,11 +4,10 @@ export const IconExpand: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,19 @@ export const IconExpand: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'expand-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'expand-title'}>{title}</title> : null}
       <path
-        d='M15.12 3.86h1.1c1.9 0 2.84 0 3.42.58s.59 1.53.59 3.42v1.1M9.32 20.18h-1.5c-1.88 0-2.82 0-3.4-.58-.6-.59-.6-1.53-.6-3.42v-1.5m10.51-4.93 5.02-5.01m-9.63 9.54L4.71 19.3'
+        d='M15.55 2.73h1.8c1.9 0 2.84 0 3.42.58.59.59.59 1.53.59 3.42v1.8'
         stroke='currentColor'
       />
+      <path
+        d='M8.97 21.28H6.73c-1.9 0-2.84 0-3.42-.58-.59-.59-.59-1.53-.59-3.42v-2.25'
+        stroke='currentColor'
+      />
+      <path d='m14.42 9.67 5.94-5.94' stroke='currentColor' />
+      <path d='m9.7 14.3-5.98 5.97' stroke='currentColor' />
     </svg>
   )
 }

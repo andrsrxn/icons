@@ -4,11 +4,10 @@ export const IconCheckDouble: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,15 @@ export const IconCheckDouble: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'check-double-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'check-double-title'}>{title}</title> : null}
       <path
-        d='m2.56 12.83 1.17 1.6c1.48 2.04 2.22 3.06 3.24 3.06s1.76-1.02 3.24-3.07L16.28 6'
+        d='m2.56 12.64 1.98 2.73c1.11 1.52 1.67 2.29 2.43 2.29s1.32-.77 2.43-2.3l6.88-9.55'
         stroke='currentColor'
       />
       <path
-        d='m7.72 12.83 1.16 1.6c1.49 2.04 2.23 3.06 3.25 3.06s1.76-1.02 3.23-3.07L21.44 6'
+        d='m7.72 12.64 1.98 2.73c1.1 1.52 1.66 2.29 2.43 2.29s1.32-.77 2.43-2.3l6.88-9.55'
         stroke='currentColor'
       />
     </svg>

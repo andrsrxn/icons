@@ -4,11 +4,10 @@ export const IconTextLigature: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,16 @@ export const IconTextLigature: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-ligature-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'text-ligature-title'}>{title}</title> : null}
+      <path d='M13.73 20.46h3.46' stroke='currentColor' />
+      <path d='M6.17 20.46H9.8' stroke='currentColor' />
       <path
-        d='M13.85 20.92h3.64m-11.62 0H9.7m6 0v-5.8c0-.95 0-1.42-.3-1.71s-.77-.3-1.7-.3h-8'
+        d='M15.48 20.46v-5.4c0-.94 0-1.42-.3-1.7-.29-.3-.76-.3-1.7-.3H5.54'
         stroke='currentColor'
       />
-      <path
-        d='M7.79 20.92V7.29a4.3 4.3 0 0 1 4.23-4.23c2.34 0 4.24 1.9 4.24 4.23'
-        stroke='currentColor'
-      />
+      <path d='M7.98 20.46V7.53a4.01 4.01 0 0 1 8.03 0' stroke='currentColor' />
     </svg>
   )
 }

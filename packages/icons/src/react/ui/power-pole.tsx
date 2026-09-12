@@ -4,11 +4,10 @@ export const IconPowerPole: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,25 @@ export const IconPowerPole: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'power-pole-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'power-pole-title'}>{title}</title> : null}
-      <path
-        d='M9.6 14.88V6.75M6.24 21.6l3.36-6.72m-5.06-3.84L9.6 6.75m9.86 4.29L14.4 6.75m3.36 14.85-3.36-6.72m0 0V6.75M7.87 18.72h8.26M4.54 11.04H9.6m9.86 0H14.4M9.6 6.75 12 2.4m2.4 4.35L12 2.4M9.6 14.88h4.8M6.47 13.1v-2.06m11.06 2.06v-2.06m-7.93 0h4.8M9.6 6.75h4.8'
-        stroke='currentColor'
-      />
+      <path d='M9.43 15.09V6.37' stroke='currentColor' />
+      <path d='m5.83 22.29 3.6-7.2' stroke='currentColor' />
+      <path d='m4 10.97 5.43-4.6' stroke='currentColor' />
+      <path d='m20 10.97-5.43-4.6' stroke='currentColor' />
+      <path d='m18.17 22.29-3.6-7.2' stroke='currentColor' />
+      <path d='M14.57 15.09V6.37' stroke='currentColor' />
+      <path d='M7.57 19.2h8.86' stroke='currentColor' />
+      <path d='M4 10.97h5.43' stroke='currentColor' />
+      <path d='M20 10.97h-5.43' stroke='currentColor' />
+      <path d='M9.43 6.37 12 1.71' stroke='currentColor' />
+      <path d='M14.57 6.37 12 1.71' stroke='currentColor' />
+      <path d='M9.43 15.09h5.14' stroke='currentColor' />
+      <path d='M6.07 13.19v-2.22' stroke='currentColor' />
+      <path d='M17.93 13.19v-2.22' stroke='currentColor' />
+      <path d='M9.43 10.97h5.14' stroke='currentColor' />
+      <path d='M9.43 6.37h5.14' stroke='currentColor' />
     </svg>
   )
 }

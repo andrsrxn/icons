@@ -4,11 +4,10 @@ export const IconFilePpt: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,29 @@ export const IconFilePpt: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'file-ppt-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'file-ppt-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M4.53 13.02V6.65c0-1.86 0-2.8.58-3.38s1.51-.6 3.38-.62l1.69-.01c1.02-.01 1.53-.02 1.93.16a2 2 0 0 1 1 1c.18.39.18.9.18 1.92 0 1.01 0 1.52.18 1.91a2 2 0 0 0 1 1c.4.18.9.18 1.91.18s1.52 0 1.91.18a2 2 0 0 1 1 .99c.18.4.18.9.18 1.91v1.13z'
+        d='M3.8 13.1V5.79c0-1.87 0-2.8.57-3.39.58-.58 1.52-.6 3.38-.61l2.22-.03c1.3 0 1.94-.02 2.42.27a2 2 0 0 1 .7.69c.28.47.28 1.12.28 2.42 0 1.28 0 1.92.29 2.4a2 2 0 0 0 .69.69c.47.28 1.11.28 2.4.28s1.93 0 2.4.29a2 2 0 0 1 .7.68c.28.48.28 1.12.28 2.4v1.24z'
         fill='currentColor'
       />
       <path
-        d='M4.53 12.96V8.7c0-2.83 0-4.25.88-5.13s2.3-.87 5.12-.87h1c1.22 0 1.83 0 2.38.22.55.23.99.66 1.86 1.53l.97.97.91.9c.9.86 1.34 1.3 1.58 1.86s.24 1.18.24 2.43v2.35'
+        d='M3.8 13.04V7.82c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h1.87c1.23 0 1.84 0 2.4.23.54.22.98.66 1.84 1.52l1.23 1.23 1.17 1.14c.9.87 1.34 1.3 1.58 1.86s.24 1.19.24 2.44v2.8'
+        stroke='currentColor'
+      />
+      <path d='M13.18 2.33v2.44c0 1.88 0 2.83.58 3.41s1.53.59 3.41.59h2.44' stroke='currentColor' />
+      <path d='M18.95 16.02v6.42' stroke='currentColor' />
+      <path d='M16.58 16.02h4.74' stroke='currentColor' />
+      <path d='M3.53 15.89v6.43' stroke='currentColor' />
+      <path d='M10.34 15.89v6.43' stroke='currentColor' />
+      <path
+        d='M3.55 15.89h2.3c.96 0 1.74.82 1.74 1.84a1.8 1.8 0 0 1-1.74 1.84h-2.3'
         stroke='currentColor'
       />
       <path
-        d='M13.11 3.16v1.89c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58H19m-.6 6.63v5.88m-2.17-5.88h4.33m-16.27-.12v5.88m6.23-5.88v5.88m-6.21-5.88h2.1c.88 0 1.59.76 1.59 1.69s-.71 1.68-1.6 1.68H4.32m6.22-3.37h2.1c.88 0 1.59.76 1.59 1.69s-.71 1.68-1.6 1.68h-2.09'
+        d='M10.36 15.89h2.3c.96 0 1.74.82 1.74 1.84a1.8 1.8 0 0 1-1.74 1.84h-2.3'
         stroke='currentColor'
       />
     </svg>

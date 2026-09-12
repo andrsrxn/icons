@@ -4,11 +4,10 @@ export const IconCurrencyJpy: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconCurrencyJpy: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-jpy-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-jpy-title'}>{title}</title> : null}
-      <path
-        d='M4.83 3 12 11.92M19.17 3l-7.16 8.92m0 .18v9.2m-4.25-5.6h8.48m-9.66-3.78h10.84'
-        stroke='currentColor'
-      />
+      <path d='M4.83 3 12 11.92' stroke='currentColor' />
+      <path d='m19.17 3-7.16 8.92' stroke='currentColor' />
+      <path d='M12.01 12.1v9.2' stroke='currentColor' />
+      <path d='M7.76 15.7h8.48' stroke='currentColor' />
+      <path d='M6.58 11.92h10.84' stroke='currentColor' />
     </svg>
   )
 }

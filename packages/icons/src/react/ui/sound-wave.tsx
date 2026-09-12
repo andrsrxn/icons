@@ -4,11 +4,10 @@ export const IconSoundWave: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,15 @@ export const IconSoundWave: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sound-wave-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sound-wave-title'}>{title}</title> : null}
-      <path
-        d='M2.81 15.58V8.42m18.38 7.16V8.42m-7.35 6.87V8.7m-3.68 8.89V6.4M6.49 20V4m11.02 16V4'
-        stroke='currentColor'
-      />
+      <path d='M1.75 15.4V8.6' stroke='currentColor' />
+      <path d='M22.25 15.4V8.6' stroke='currentColor' />
+      <path d='M14.05 15.13V8.87' stroke='currentColor' />
+      <path d='M9.95 17.32V6.68' stroke='currentColor' />
+      <path d='M5.85 19.61V4.4' stroke='currentColor' />
+      <path d='M18.15 19.61V4.4' stroke='currentColor' />
     </svg>
   )
 }

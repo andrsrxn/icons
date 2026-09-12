@@ -4,11 +4,10 @@ export const IconTrainTrack: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,16 @@ export const IconTrainTrack: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'train-track-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'train-track-title'}>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='6.12'
-        y='4.72'
-        width='11.76'
-        height='14.28'
-        rx='2'
-        fill='currentColor'
-      />
-      <path
-        d='M6.4 21.52V2.48m11.2 19.04V2.48m2.24 2.24H4.16m15.68 4.85H4.16m15.68 4.86H4.16m15.68 4.85H4.16'
-        stroke='currentColor'
-      />
+      <rect opacity='.2' x='5.6' y='4.09' width='12.79' height='15.53' rx='2' fill='currentColor' />
+      <path d='M5.91 22.35V1.65' stroke='currentColor' />
+      <path d='M18.09 22.35V1.65' stroke='currentColor' />
+      <path d='M20.52 4.09H3.48' stroke='currentColor' />
+      <path d='M20.52 9.36H3.48' stroke='currentColor' />
+      <path d='M20.52 14.64H3.48' stroke='currentColor' />
+      <path d='M20.52 19.91H3.48' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconSortOneZero: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconSortOneZero: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sort-one-zero-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sort-one-zero-title'}>{title}</title> : null}
       <path
-        d='m11.74 17.45-.99 1c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.99-1M7.92 3.39V20.3'
+        d='m11.74 17.45-.99 1c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.99-1'
         stroke='currentColor'
       />
+      <path d='M7.92 3.39V20.3' stroke='currentColor' />
       <rect x='15.6' y='13.25' width='4.2' height='7.26' rx='2' stroke='currentColor' />
       <path
         d='m15.5 5.55 1.47-1.33c.71-.64 1.07-.96 1.37-.83s.3.61.3 1.58v5.46'

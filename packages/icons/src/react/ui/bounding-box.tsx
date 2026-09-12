@@ -4,11 +4,10 @@ export const IconBoundingBox: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconBoundingBox: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'bounding-box-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'bounding-box-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='4.84'
@@ -83,10 +80,10 @@ export const IconBoundingBox: Icon = ({
         transform='rotate(90 19.16 4.97)'
         stroke='currentColor'
       />
-      <path
-        d='M16.77 4.97H7.23M5.05 7.36v9.33m11.72 2.4H7.23M19.16 7.36v9.33'
-        stroke='currentColor'
-      />
+      <path d='M16.77 4.97H7.23' stroke='currentColor' />
+      <path d='M5.05 7.36v9.33' stroke='currentColor' />
+      <path d='M16.77 19.09H7.23' stroke='currentColor' />
+      <path d='M19.16 7.36v9.33' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconPipFilled: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,16 @@ export const IconPipFilled: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pip-filled-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pip-filled-title'}>{title}</title> : null}
       <path
-        d='M2.53 6.4c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h14.94c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v4.5c0 .93 0 1.4-.3 1.7s-.76.3-1.7.3h-4.6c-.94 0-1.41 0-1.7.28-.3.3-.3.77-.3 1.71v2.7c0 .95 0 1.42-.29 1.71-.3.3-.76.3-1.7.3H4.52c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7z'
+        d='M1.71 6c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3H20.3c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v4.94c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-5.34c-.94 0-1.42 0-1.7.3-.3.28-.3.76-.3 1.7V18c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3H3.7c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7z'
         fill='currentColor'
       />
-      <rect x='2.53' y='4.4' width='18.93' height='15.19' rx='3' stroke='currentColor' />
+      <rect x='1.71' y='4' width='20.57' height='16' rx='3' stroke='currentColor' />
       <path
-        d='M21.47 14.71c0-.25 0-.37-.02-.48a2 2 0 0 0-1.77-1.78h-3.55c-1.48 0-2.22 0-2.74.36a2 2 0 0 0-.47.47c-.37.52-.37 1.26-.37 2.74s0 2.22.37 2.74a2 2 0 0 0 .47.46c.52.38 1.26.38 2.74.38h.52'
+        d='M22.29 14.85c0-.36 0-.54-.03-.69a2 2 0 0 0-1.67-1.67c-.15-.02-.33-.02-.7-.02h-3.52c-1.66 0-2.5 0-3.05.46l-.26.26c-.46.55-.46 1.38-.46 3.04s0 2.5.46 3.05l.26.26c.56.46 1.39.46 3.05.46h.68'
         stroke='currentColor'
       />
     </svg>

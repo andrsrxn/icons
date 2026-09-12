@@ -4,11 +4,10 @@ export const IconFolder: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,16 @@ export const IconFolder: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'folder-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'folder-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M21.3 13.45c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H8.7c-2.83 0-4.25 0-5.13-.88s-.87-2.29-.87-5.12V7.27a3 3 0 0 1 2.71-2.7c.14-.02.31-.02.65-.02h.75c1.1 0 1.64 0 2.14.18.5.19.92.54 1.75 1.25l.05.04c.83.7 1.24 1.06 1.75 1.25.5.18 1.04.18 2.14.18h.66c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12'
+        d='M22.24 14.2c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V7.5c0-.65 0-.97.05-1.24a3 3 0 0 1 2.4-2.4c.28-.06.6-.06 1.25-.06h1.05c1.1 0 1.64 0 2.14.19.5.18.92.54 1.75 1.24l.39.33c.83.71 1.25 1.07 1.75 1.25.5.19 1.05.19 2.14.19h1.56c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13z'
         fill='currentColor'
       />
       <path
-        d='M21.3 13.44c0 2.83 0 4.25-.87 5.13-.88.88-2.3.88-5.13.88H8.7c-2.83 0-4.25 0-5.13-.88s-.87-2.29-.87-5.12V7a2.33 2.33 0 0 1 2.32-2.32h2c.83 0 1.24 0 1.63.1q.3.09.6.24c.35.18.66.47 1.27 1.03.6.57.91.85 1.27 1.04a3 3 0 0 0 .6.23c.38.11.8.11 1.63.11h1.28c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.14'
+        d='M22.24 14.2c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V6.49a2.56 2.56 0 0 1 2.56-2.56h2.2c1.03 0 1.54 0 2.02.17l.23.09c.46.2.84.55 1.6 1.26.76.7 1.14 1.05 1.6 1.26l.23.09c.47.16 1 .16 2.03.16h2c2.84 0 4.25 0 5.13.88s.88 2.3.88 5.12z'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconPyramid: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,13 @@ export const IconPyramid: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pyramid-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pyramid-title'}>{title}</title> : null}
-      <path opacity='.2' d='M12 21.7V1.82l8.77 13.3z' fill='currentColor' />
+      <path opacity='.2' d='M12 22.38V1.35l9.28 14.08z' fill='currentColor' />
+      <path d='M12 22.08V2.45' stroke='currentColor' />
       <path
-        d='M12 21.4V2.88m-3.42 3.3-3.53 5.81c-.87 1.43-1.3 2.14-1.17 2.88s.78 1.26 2.08 2.31l3.53 2.85h0c1.2.97 1.8 1.46 2.51 1.46s1.3-.49 2.51-1.46h0l3.53-2.85c1.3-1.05 1.95-1.57 2.08-2.31s-.3-1.45-1.17-2.88l-3.53-5.81c-1.53-2.52-2.3-3.77-3.42-3.77s-1.89 1.25-3.42 3.77'
+        d='m8.58 5.62-4.05 6.66c-.86 1.43-1.3 2.14-1.17 2.88s.78 1.27 2.08 2.31l4.05 3.27c1.2.97 1.8 1.46 2.51 1.46s1.3-.49 2.51-1.46l4.05-3.27c1.3-1.04 1.95-1.57 2.08-2.3.12-.75-.3-1.46-1.17-2.89l-4.05-6.66h0c-1.53-2.51-2.3-3.77-3.42-3.77s-1.89 1.26-3.42 3.77'
         stroke='currentColor'
       />
     </svg>

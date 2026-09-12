@@ -4,11 +4,10 @@ export const IconJustice: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,40 @@ export const IconJustice: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'justice-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'justice-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
-        cy='5.01'
-        r='2.46'
-        transform='rotate(90 12 5)'
+        cy='4.49'
+        r='2.69'
+        transform='rotate(90 12 4.49)'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M6.53 16.63a2.46 2.46 0 0 1-2.46-2.46c0-1.36 1.1-4.08 2.46-4.08s2.46 2.72 2.46 4.08-1.1 2.46-2.46 2.46m10.93 0A2.46 2.46 0 0 1 15 14.17c0-1.36 1.1-4.08 2.46-4.08s2.46 2.72 2.46 4.08-1.1 2.46-2.46 2.46'
+        d='M6.03 17.19a2.7 2.7 0 0 1-2.7-2.7c0-1.48 1.21-4.45 2.7-4.45 1.48 0 2.69 2.97 2.69 4.46s-1.2 2.69-2.7 2.69'
         fill='currentColor'
       />
-      <circle cx='12' cy='5.01' r='2.46' transform='rotate(90 12 5)' stroke='currentColor' />
       <path
-        d='M6.53 16.63a2.46 2.46 0 0 1-2.46-2.46c0-2.11 2.46-4.44 2.46-4.44s2.46 2.17 2.46 4.44c0 1.36-1.1 2.46-2.46 2.46m10.93 0A2.46 2.46 0 0 1 15 14.17c0-2.11 2.46-4.44 2.46-4.44s2.46 2.17 2.46 4.44c0 1.36-1.1 2.46-2.46 2.46m-8.81 4.7h6.67M11.99 7.47v13.86M12 8.27c-.51.16-1.82.63-3.1.76a8 8 0 0 1-3.6-.3m6.7-.46c.51.16 1.82.63 3.1.76a8 8 0 0 0 3.6-.3'
+        opacity='.2'
+        d='M17.96 17.19a2.7 2.7 0 0 1-2.68-2.7c0-1.48 1.2-4.45 2.68-4.45s2.7 2.97 2.7 4.46-1.21 2.69-2.7 2.69'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='4.49' r='2.69' transform='rotate(90 12 4.49)' stroke='currentColor' />
+      <path
+        d='M6.03 17.19a2.7 2.7 0 0 1-2.7-2.7c0-2.3 2.7-4.84 2.7-4.84s2.69 2.36 2.69 4.85a2.7 2.7 0 0 1-2.7 2.69'
         stroke='currentColor'
       />
+      <path
+        d='M17.96 17.19a2.7 2.7 0 0 1-2.68-2.7c0-2.3 2.68-4.84 2.68-4.84s2.7 2.36 2.7 4.85a2.7 2.7 0 0 1-2.7 2.69'
+        stroke='currentColor'
+      />
+      <path d='M8.35 22.31h7.28' stroke='currentColor' />
+      <path d='M11.99 7.18V22.3' stroke='currentColor' />
+      <path d='M12 8.05c-.56.18-1.99.69-3.39.83-1.77.19-2.96 0-3.94-.33' stroke='currentColor' />
+      <path d='M12 8.05c.56.18 1.99.69 3.39.83 1.77.19 2.97 0 3.94-.33' stroke='currentColor' />
     </svg>
   )
 }

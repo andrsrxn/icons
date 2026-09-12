@@ -4,11 +4,10 @@ export const IconGitDiff: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,29 @@ export const IconGitDiff: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'git-diff-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'git-diff-title'}>{title}</title> : null}
       <path
-        d='M13.48 5.71h.45c1.89 0 2.83 0 3.41.59.6.58.6 1.53.6 3.41v5.58m-7.53 3h-.34c-1.89 0-2.83 0-3.41-.59-.6-.58-.6-1.53-.6-3.41V8.7'
+        d='M13.8 5.71h.44c1.88 0 2.83 0 3.41.59.59.58.59 1.53.59 3.41v5.58'
         stroke='currentColor'
       />
       <path
-        d='M14.75 3.2c-1.03 1.02-1.55 1.54-1.66 2.16a2 2 0 0 0 0 .7c.11.62.63 1.13 1.66 2.17M9.26 20.8c1.03-1.02 1.54-1.54 1.65-2.16a2 2 0 0 0 0-.7c-.1-.62-.62-1.13-1.65-2.17'
+        d='M10.1 18.29h-.34c-1.88 0-2.83 0-3.41-.59-.59-.58-.59-1.53-.59-3.41V8.7'
         stroke='currentColor'
       />
-      <circle opacity='.2' cx='6.27' cy='5.63' r='3.07' fill='currentColor' />
-      <circle opacity='.2' cx='17.73' cy='18.37' r='3.07' fill='currentColor' />
-      <circle cx='6.27' cy='5.63' r='3.07' stroke='currentColor' />
-      <circle cx='17.73' cy='18.37' r='3.07' stroke='currentColor' />
+      <path
+        d='M15.06 3.2c-1.03 1.02-1.55 1.54-1.66 2.16a2 2 0 0 0 0 .7c.11.62.63 1.13 1.66 2.17'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.95 20.8c1.03-1.02 1.54-1.54 1.65-2.16a2 2 0 0 0 0-.7c-.1-.62-.62-1.13-1.65-2.17'
+        stroke='currentColor'
+      />
+      <circle opacity='.2' cx='5.96' cy='5.63' r='3.07' fill='currentColor' />
+      <circle opacity='.2' cx='18.04' cy='18.37' r='3.07' fill='currentColor' />
+      <circle cx='5.96' cy='5.63' r='3.07' stroke='currentColor' />
+      <circle cx='18.04' cy='18.37' r='3.07' stroke='currentColor' />
     </svg>
   )
 }

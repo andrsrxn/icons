@@ -4,11 +4,10 @@ export const IconRatio: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,28 +23,26 @@ export const IconRatio: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'ratio-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'ratio-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='6.39'
-        y='6.39'
-        width='11.22'
-        height='11.22'
+        x='6.32'
+        y='6.32'
+        width='11.36'
+        height='11.36'
         rx='3'
         fill='currentColor'
       />
-      <rect x='2.74' y='6.39' width='18.53' height='11.22' rx='3' stroke='currentColor' />
+      <rect x='2.62' y='6.32' width='18.76' height='11.36' rx='3' stroke='currentColor' />
       <rect
-        x='6.39'
-        y='21.26'
-        width='18.53'
-        height='11.22'
+        x='6.32'
+        y='21.38'
+        width='18.76'
+        height='11.36'
         rx='3'
-        transform='rotate(-90 6.39 21.26)'
+        transform='rotate(-90 6.32 21.38)'
         stroke='currentColor'
       />
     </svg>

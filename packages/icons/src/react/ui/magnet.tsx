@@ -4,11 +4,10 @@ export const IconMagnet: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,17 @@ export const IconMagnet: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'magnet-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'magnet-title'}>{title}</title> : null}
+      <path opacity='.2' fill='currentColor' d='M2.99 3.02h4.3v4.3h-4.3z' />
+      <path opacity='.2' fill='currentColor' d='M16.95 3.02h4.3v4.3h-4.3z' />
       <path
-        opacity='.2'
-        fill='currentColor'
-        d='M3.44 3.46h4.08v4.08H3.44zm13.26 0h4.08v4.08H16.7z'
-      />
-      <path
-        d='M7.82 11.9V5.17c0-.95 0-1.42-.3-1.71-.28-.3-.76-.3-1.7-.3H4.77c-.94 0-1.41 0-1.7.3s-.3.76-.3 1.7V13c0 2.19.96 7.81 9.23 7.81s9.23-5.85 9.23-7.8V5.17c0-.95 0-1.42-.3-1.71-.29-.3-.76-.3-1.7-.3h-1.06c-.94 0-1.41 0-1.7.3s-.3.76-.3 1.7v6.72s0 4.06-4.17 4.06-4.18-4.06-4.18-4.06m-5.05-4h4.75m8.74 0h4.97'
+        d='M7.6 11.89V4.7c0-.94 0-1.41-.3-1.7-.28-.3-.76-.3-1.7-.3H4.3c-.94 0-1.42 0-1.7.3-.3.29-.3.76-.3 1.7v8.36c0 2.3 1 8.22 9.71 8.22 8.7 0 9.71-6.16 9.71-8.22V4.7c0-.94 0-1.41-.3-1.7-.28-.3-.76-.3-1.7-.3H18.4c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v7.18s0 4.27-4.39 4.27c-4.4 0-4.4-4.27-4.4-4.27'
         stroke='currentColor'
       />
+      <path d='M2.29 7.66h5' stroke='currentColor' />
+      <path d='M16.48 7.66h5.23' stroke='currentColor' />
     </svg>
   )
 }

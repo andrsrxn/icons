@@ -4,11 +4,10 @@ export const IconTextStrikethrough: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,14 @@ export const IconTextStrikethrough: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-strikethrough-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-strikethrough-title'}>{title}</title>
-      ) : null}
       <path
-        d='M17 6.48c-.45-1.65-2.54-2.9-5-2.9S6.57 5 6.87 7.95c.66 6.42 9.84 1.44 10.29 7.8.21 3.03-2.63 4.67-5.14 4.67-2.52 0-4.34-1.28-5.15-2.96M3.75 12h16.5'
+        d='M16.93 6.55C16.5 4.93 14.43 3.7 12 3.7S6.63 5.1 6.93 8.03c.65 6.33 9.7 1.41 10.15 7.68.21 3-2.6 4.61-5.08 4.61s-4.27-1.26-5.07-2.91'
         stroke='currentColor'
       />
+      <path d='M3.87 12h16.26' stroke='currentColor' />
     </svg>
   )
 }

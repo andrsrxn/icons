@@ -4,11 +4,10 @@ export const IconWarningCircle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,18 @@ export const IconWarningCircle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'warning-circle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'warning-circle-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M2.57 12a9.43 9.43 0 1 0 18.86 0 9.43 9.43 0 0 0-18.86 0'
+        d='M1.78 12a10.22 10.22 0 1 0 20.43 0 10.22 10.22 0 0 0-20.43 0'
         fill='currentColor'
       />
+      <path d='M1.79 12A10.2 10.2 0 0 0 12 22.22 10.22 10.22 0 1 0 1.8 12' stroke='currentColor' />
+      <path d='M12 6.43v6.01' stroke='currentColor' />
       <path
-        d='M2.57 12A9.4 9.4 0 0 0 12 21.43 9.43 9.43 0 1 0 2.57 12M12 6.86v5.55'
-        stroke='currentColor'
-      />
-      <path
-        d='M12.63 16.25a.64.64 0 1 1-1.27 0 .64.64 0 0 1 1.27 0'
+        d='M12.68 16.6a.69.69 0 1 1-1.37 0 .69.69 0 0 1 1.37 0'
         fill='currentColor'
         stroke='currentColor'
       />

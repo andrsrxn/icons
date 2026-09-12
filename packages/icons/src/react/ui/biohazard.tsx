@@ -4,11 +4,10 @@ export const IconBiohazard: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,24 @@ export const IconBiohazard: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'biohazard-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'biohazard-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='11.99' cy='11.11' r='2.5' fill='currentColor' />
-      <circle cx='11.99' cy='11.11' r='2.5' stroke='currentColor' />
+      <circle opacity='.2' cx='11.91' cy='11.28' r='2.69' fill='currentColor' />
+      <circle cx='11.91' cy='11.28' r='2.69' stroke='currentColor' />
+      <path d='M10.45 5.68h2.91' stroke='currentColor' />
+      <path d='m5.64 14.65 1.6 2.41' stroke='currentColor' />
+      <path d='m18.13 14.65-1.34 2.42' stroke='currentColor' />
       <path
-        d='M10.64 5.9h2.7m-7.17 8.33 1.5 2.25m10.1-2.25-1.25 2.26M8.4 3.14a5 5 0 0 0 .84 7.69m6.34-7.69a5 5 0 0 1-.83 7.69'
+        d='M8.05 2.78a5.38 5.38 0 0 0 .9 8.28m6.82-8.28a5.38 5.38 0 0 1-.9 8.28'
         stroke='currentColor'
       />
       <path
-        d='M6.04 19.87a4.83 4.83 0 0 0 5.8-6.2m-9.26.2a4.8 4.8 0 0 1 2.24-2.88 4.6 4.6 0 0 1 4.68-.02'
+        d='M5.5 20.72a5.2 5.2 0 0 0 6.25-6.68m-9.98.21a5.2 5.2 0 0 1 2.41-3.1 4.9 4.9 0 0 1 5.05-.02'
         stroke='currentColor'
       />
       <path
-        d='M18.11 19.87c-1.18.3-2.48.16-3.62-.5a4.7 4.7 0 0 1-2.12-5.68m9.2.18a4.8 4.8 0 0 0-2.24-2.88 4.5 4.5 0 0 0-4.72 0'
+        d='M18.5 20.72a5.2 5.2 0 0 1-3.9-.54 5.04 5.04 0 0 1-2.28-6.12m9.9.2a5.2 5.2 0 0 0-2.4-3.11 4.9 4.9 0 0 0-5.1 0'
         stroke='currentColor'
       />
     </svg>

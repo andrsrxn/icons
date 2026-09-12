@@ -4,11 +4,10 @@ export const IconBrackets: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,15 @@ export const IconBrackets: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'brackets-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'brackets-title'}>{title}</title> : null}
       <path
-        d='M8 21c-.61 0-.92 0-1.17-.07a2 2 0 0 1-1.42-1.42c-.07-.25-.07-.56-.07-1.17v-3.86c0-.79-.53-1.48-1.3-1.68-.84-.22-.83-1.43.02-1.68.75-.21 1.28-.9 1.28-1.68V5.66c0-.61 0-.92.07-1.17a2 2 0 0 1 1.42-1.42C7.08 3 7.39 3 8 3m8 18c.61 0 .92 0 1.17-.07a2 2 0 0 0 1.42-1.42c.07-.25.07-.56.07-1.17v-3.86c0-.79.53-1.48 1.3-1.68.84-.22.83-1.43-.02-1.68a1.8 1.8 0 0 1-1.28-1.68V5.66c0-.61 0-.92-.07-1.17a2 2 0 0 0-1.42-1.42C16.92 3 16.61 3 16 3'
+        d='M7.86 21.3c-.7 0-1.04 0-1.33-.08A2 2 0 0 1 5.2 19.9c-.09-.29-.09-.64-.09-1.33v-4a1.8 1.8 0 0 0-1.33-1.73c-.88-.23-.87-1.48 0-1.74a1.8 1.8 0 0 0 1.33-1.74V5.44c0-.7 0-1.04.09-1.33a2 2 0 0 1 1.33-1.33c.29-.09.63-.09 1.33-.09'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.14 21.3c.7 0 1.04 0 1.33-.08a2 2 0 0 0 1.33-1.33c.09-.29.09-.64.09-1.33v-4c0-.81.55-1.52 1.33-1.73.88-.23.87-1.48 0-1.74a1.8 1.8 0 0 1-1.33-1.74V5.44c0-.7 0-1.04-.09-1.33a2 2 0 0 0-1.33-1.33c-.29-.09-.63-.09-1.33-.09'
         stroke='currentColor'
       />
     </svg>

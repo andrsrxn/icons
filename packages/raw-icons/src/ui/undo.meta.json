@@ -10,5 +10,6 @@
     "reverse",
     "history",
     "arrow"
-  ]
+  ],
+  "rtl": true
 }

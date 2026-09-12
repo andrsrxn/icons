@@ -4,11 +4,10 @@ export const IconPanelRightOpen: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,33 +23,29 @@ export const IconPanelRightOpen: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'panel-right-open-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'panel-right-open-title'}>{title}</title>
-      ) : null}
       <path
-        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.21 8.1'
+        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.2 8.1'
         stroke='currentColor'
       />
       <rect
         opacity='.2'
         width='6.62'
-        height='16.71'
+        height='18.36'
         rx='2'
-        transform='matrix(1 0 0 -1 14.65 20.36)'
+        transform='matrix(1 0 0 -1 14.65 21.18)'
         fill='currentColor'
       />
       <rect
         width='18.53'
-        height='16.71'
+        height='18.36'
         rx='3'
-        transform='matrix(1 0 0 -1 2.74 20.36)'
+        transform='matrix(1 0 0 -1 2.74 21.18)'
         stroke='currentColor'
       />
-      <path d='M14.65 4v16' stroke='currentColor' />
+      <path d='M14.65 3.21V20.8' stroke='currentColor' />
     </svg>
   )
 }

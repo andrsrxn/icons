@@ -4,11 +4,10 @@ export const IconGantt: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,14 @@ export const IconGantt: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'gantt-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'gantt-title'}>{title}</title> : null}
+      <path d='M6 7.27h6.34' stroke='currentColor' />
+      <path d='M14.33 16.68h6.39' stroke='currentColor' />
+      <path d='M7 12h11.45' stroke='currentColor' />
       <path
-        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10M6 7.58h6.34m.99 8.84h6.39M7 12h11.45'
+        d='M21.24 21.33H10.76c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.63'
         stroke='currentColor'
       />
     </svg>

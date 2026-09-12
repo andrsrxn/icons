@@ -4,11 +4,10 @@ export const IconWaveTriangle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconWaveTriangle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'wave-triangle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'wave-triangle-title'}>{title}</title> : null}
       <path
-        d='M2.92 8.09C4.4 5.66 5.14 4.45 6.21 4.4h.2c1.06.07 1.78 1.3 3.22 3.74l4.28 7.3c1.58 2.7 2.36 4.04 3.52 4.02 1.17-.01 1.92-1.37 3.43-4.1l.14-.25'
+        d='M2.73 7.99C4.29 5.43 5.06 4.15 6.2 4.16c1.13 0 1.89 1.3 3.4 3.88l4.49 7.65c1.57 2.69 2.36 4.03 3.52 4.01 1.17 0 1.92-1.37 3.43-4.1l.23-.41'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconListAsterisk: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,18 @@ export const IconListAsterisk: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-asterisk-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'list-asterisk-title'}>{title}</title> : null}
-      <path
-        d='M5.38 10.32V4.05m0 15.9v-6.27M2.66 5.62 8.1 8.75m-5.44 6.49 5.44 3.13m0-12.75L2.66 8.75m5.44 6.49-5.44 3.13M11 6h10.36M11 12h10.36M11 18h10.36'
-        stroke='currentColor'
-      />
+      <path d='M5.38 10.32V4.05' stroke='currentColor' />
+      <path d='M5.38 19.95v-6.27' stroke='currentColor' />
+      <path d='M2.66 5.62 8.1 8.75' stroke='currentColor' />
+      <path d='m2.66 15.24 5.44 3.13' stroke='currentColor' />
+      <path d='M8.1 5.62 2.66 8.75' stroke='currentColor' />
+      <path d='m8.1 15.24-5.44 3.13' stroke='currentColor' />
+      <path d='M11 6h10.36' stroke='currentColor' />
+      <path d='M11 12h10.36' stroke='currentColor' />
+      <path d='M11 18h10.36' stroke='currentColor' />
     </svg>
   )
 }

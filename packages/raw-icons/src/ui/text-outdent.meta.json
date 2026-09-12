@@ -1,11 +1,11 @@
 {
   "categories": [
-    "typography"
+    "typography", "editor"
   ],
   "tags": [
     "font",
     "letters",
-    "decrease indent",
+    "decrease",
     "tab",
     "space",
     "format",

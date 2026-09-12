@@ -4,11 +4,10 @@ export const IconThermometer: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,21 @@ export const IconThermometer: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'thermometer-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'thermometer-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M10.1 14.1V4.36a1.9 1.9 0 1 1 3.8 0v9.74s1.64 1.8 1.64 3.34a3.54 3.54 0 0 1-7.08 0c0-1.54 1.64-3.34 1.64-3.34'
+        d='M9.98 14.38V4a2.02 2.02 0 0 1 4.04 0v10.38s1.75 1.91 1.75 3.56a3.77 3.77 0 1 1-7.54 0c0-1.65 1.75-3.56 1.75-3.56'
         fill='currentColor'
       />
+      <path d='M9.81 14.76a4.07 4.07 0 1 0 4.38 0' stroke='currentColor' />
       <path
-        d='M9.94 14.46a3.82 3.82 0 1 0 4.12 0m-.06-.1V4.31a2 2 0 0 0-4 0v10.05'
+        d='M14.12 14.66V3.73a2 2 0 0 0-1.9-1.9h-.44a2 2 0 0 0-1.9 1.9v10.93'
         stroke='currentColor'
       />
       <path
-        d='M12.47 17.59a.47.47 0 1 1-.94 0 .47.47 0 0 1 .94 0'
+        d='M12.5 18.1a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
         fill='currentColor'
         stroke='currentColor'
       />

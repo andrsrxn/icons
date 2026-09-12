@@ -4,11 +4,10 @@ export const IconFork: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,20 @@ export const IconFork: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'fork-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'fork-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='m10.82 7.33.63-.73a1 1 0 0 1 1.46-.06l4.56 4.56a1 1 0 0 1 0 1.41l-.69.7a1 1 0 0 1-.98.25l-1.2-.34a1 1 0 0 0-.96.23l-7.86 7.38a1 1 0 0 1-1.01.22l-.7-.24a1 1 0 0 1-.62-.65l-.2-.63a1 1 0 0 1 .21-.97l7.27-8.04a1 1 0 0 0 .22-.93l-.34-1.25a1 1 0 0 1 .21-.91'
+        d='m10.35 7.23.93-1.07a1 1 0 0 1 1.46-.06l5.16 5.16a1 1 0 0 1 0 1.41l-1 1a1 1 0 0 1-.7.29h-2.15a1 1 0 0 0-.67.25l-8.45 7.62a1 1 0 0 1-1 .2l-.87-.3a1 1 0 0 1-.64-.64l-.25-.81a1 1 0 0 1 .2-.95l7.3-8.37a1 1 0 0 0 .24-.58l.2-2.57a1 1 0 0 1 .24-.58'
         fill='currentColor'
       />
+      <path d='M18.72 12.2 11.9 5.38' stroke='currentColor' />
       <path
-        d='m15.12 8.85 3.5-3.49m-.34 6.66-6.2-6.2m3.49-3.5-4.81 4.81-.24.25a2 2 0 0 0-.4 1.88l.13.32.12.33a2 2 0 0 1-.39 1.87q-.06.09-.24.25l-6.23 6.23a1.69 1.69 0 0 0 2.39 2.39l6.25-6.26.22-.21a2 2 0 0 1 2.17-.3l.3.1a2 2 0 0 0 1.88-.4l.22-.21 4.84-4.84'
+        d='m15.74 1.53-5.3 5.3c-.22.22-.33.34-.42.46a2 2 0 0 0-.34 1.64c.03.14.1.3.2.59.13.3.19.45.22.6a2 2 0 0 1-.34 1.64c-.09.11-.2.23-.43.45l-6.85 6.85A1.85 1.85 0 1 0 5.1 21.7l6.88-6.88c.21-.21.32-.32.42-.4a2 2 0 0 1 1.66-.36c.14.04.28.09.55.2.28.1.42.15.55.18a2 2 0 0 0 1.66-.35l.42-.4 5.32-5.32'
         stroke='currentColor'
       />
+      <path d='m15.3 8.79 3.82-3.8' stroke='currentColor' />
     </svg>
   )
 }

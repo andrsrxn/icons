@@ -4,11 +4,10 @@ export const IconThermometerSnowflake: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,33 +23,36 @@ export const IconThermometerSnowflake: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={
-        isLabelled && title && !ariaLabel ? 'thermometer-snowflake-title' : undefined
-      }
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'thermometer-snowflake-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M14.48 14.17V4.54a1.87 1.87 0 0 1 3.74 0v9.63s1.63 1.77 1.63 3.3a3.5 3.5 0 1 1-7 0c0-1.53 1.63-3.3 1.63-3.3'
+        d='M14.65 14.32V4.03a2 2 0 0 1 4 0v10.29s1.74 1.9 1.74 3.53a3.74 3.74 0 0 1-7.48 0c0-1.63 1.74-3.53 1.74-3.53'
         fill='currentColor'
       />
+      <path d='M14.48 14.7a4.03 4.03 0 1 0 4.34 0' stroke='currentColor' />
       <path
-        d='M14.32 14.52a3.77 3.77 0 1 0 4.06 0m-.06-.1V4.5a1.97 1.97 0 0 0-3.94 0v9.93'
+        d='M18.75 14.6V3.77a2 2 0 0 0-1.91-1.91h-.38a2 2 0 0 0-1.91 1.91V14.6'
+        stroke='currentColor'
+      />
+      <path d='M17.15 18a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0' fill='currentColor' stroke='currentColor' />
+      <path
+        d='m11.43 4.17-.28.66c-.38.86-.57 1.3-.95 1.44-.39.16-.82-.03-1.69-.41l-.65-.29'
         stroke='currentColor'
       />
       <path
-        d='M16.81 17.61a.46.46 0 1 1-.93 0 .46.46 0 0 1 .93 0'
-        fill='currentColor'
+        d='m9.26 20-.1-.93c-.1-.93-.16-1.4-.48-1.66-.33-.26-.8-.2-1.73-.1l-.93.1'
         stroke='currentColor'
       />
+      <path d='m10 12-6.7-1.1' stroke='currentColor' />
+      <path d='m9.38 4.04 2 5.17' stroke='currentColor' />
+      <path d='m7.1 19.48 3.9-4.89' stroke='currentColor' />
       <path
-        d='m11.47 4.68-.21.5c-.38.86-.57 1.29-.96 1.44-.38.15-.81-.04-1.68-.41l-.5-.22m1.32 13.49-.08-.73c-.1-.94-.16-1.41-.48-1.67-.33-.26-.8-.2-1.74-.1l-.74.08M10.13 12l-6.25-1.03m5.67-6.41 1.87 4.84m-4 9.6 3.65-4.58M5.1 9.08l.54.72c.56.76.84 1.14.78 1.55s-.44.7-1.2 1.25l-.73.54m9.9-2.72a2.46 2.46 0 1 0-.34 3.82'
+        d='m4.63 8.88.65.88c.56.76.84 1.14.78 1.55s-.44.7-1.2 1.25l-.89.66'
         stroke='currentColor'
       />
+      <path d='M14.55 10.31a2.63 2.63 0 1 0-.36 4.09' stroke='currentColor' />
     </svg>
   )
 }

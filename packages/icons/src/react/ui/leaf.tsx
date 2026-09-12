@@ -4,11 +4,10 @@ export const IconLeaf: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconLeaf: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'leaf-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'leaf-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M6.88 6.07c3.97-3.53 9.24-3.65 11.62-3.5.78.05 1.4.62 1.5 1.4.3 2.34.43 7.53-3.4 11.76-3.51 3.88-8.21 3.14-10.54 1.05-2.13-1.92-3.27-7.06.82-10.7'
+        d='M6.52 5.59c4.29-3.82 10-3.91 12.51-3.74.78.06 1.4.62 1.5 1.4.34 2.46.52 8.08-3.62 12.66-3.76 4.15-8.78 3.36-11.27 1.12-2.27-2.05-3.5-7.54.88-11.44'
         fill='currentColor'
       />
       <path
-        d='M6.88 6.07c3.36-2.99 7.66-3.54 10.35-3.54 1.1 0 1.64 0 2.22.55s.61 1.09.66 2.16c.14 2.65-.27 6.91-3.5 10.49-3.52 3.88-8.22 3.14-10.55 1.05-2.13-1.92-3.27-7.06.82-10.7'
+        d='M6.52 5.59c3.67-3.27 8.38-3.8 11.23-3.79 1.1.01 1.66.02 2.23.56s.6 1.08.68 2.16c.17 2.81-.22 7.48-3.75 11.39-3.76 4.15-8.78 3.36-11.27 1.12-2.27-2.05-3.5-7.55.88-11.44'
         stroke='currentColor'
       />
-      <path d='M11.92 10.6c-2.08 1.3-6.51 5.38-7.6 11.31' stroke='currentColor' />
+      <path d='M11.9 10.43c-2.22 1.39-6.96 5.74-8.12 12.09' stroke='currentColor' />
     </svg>
   )
 }

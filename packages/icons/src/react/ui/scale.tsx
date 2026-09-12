@@ -4,11 +4,10 @@ export const IconScale: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconScale: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'scale-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'scale-title'}>{title}</title> : null}
       <rect
         opacity='.2'
         width='9.69'
@@ -38,7 +35,7 @@ export const IconScale: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M2.67 9.04v-.46c0-2.82 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88h6.66c2.83 0 4.25 0 5.12.88s.88 2.3.88 5.12v6.76c0 2.83 0 4.24-.88 5.12-.87.88-2.29.88-5.12.88h-.41'
+        d='M2.67 9.16v-.58c0-2.82 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88h6.66c2.83 0 4.25 0 5.12.88s.88 2.3.88 5.12v6.76c0 2.83 0 4.24-.88 5.12-.87.88-2.29.88-5.12.88h-.56'
         stroke='currentColor'
         strokeDasharray='3 3'
       />
@@ -49,8 +46,9 @@ export const IconScale: Icon = ({
         transform='matrix(0 -1 -1 0 12.3 21.34)'
         stroke='currentColor'
       />
+      <path d='m15.43 8.58-3.56 3.55' stroke='currentColor' />
       <path
-        d='m15.43 8.58-3.56 3.55m.37-4.7h.33c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v.33'
+        d='M12.24 7.43h.33c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v.33'
         stroke='currentColor'
       />
     </svg>

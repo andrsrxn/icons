@@ -4,11 +4,10 @@ export const IconClosedCaptioning: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,13 @@ export const IconClosedCaptioning: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'closed-captioning-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'closed-captioning-title'}>{title}</title>
-      ) : null}
-      <rect
-        opacity='.2'
-        x='2.41'
-        y='5.46'
-        width='19.19'
-        height='13.09'
-        rx='3'
-        fill='currentColor'
-      />
-      <rect x='2.41' y='5.46' width='19.19' height='13.09' rx='3' stroke='currentColor' />
-      <path
-        d='M10.7 9.33a3.02 3.02 0 1 0 0 5.39m7-5.39a3.02 3.02 0 1 0 0 5.39'
-        stroke='currentColor'
-      />
+      <rect opacity='.2' x='1.75' y='4.56' width='20.5' height='14.89' rx='3' fill='currentColor' />
+      <rect x='1.75' y='4.56' width='20.5' height='14.89' rx='3' stroke='currentColor' />
+      <path d='M10.6 9.15a3.23 3.23 0 1 0 0 5.76' stroke='currentColor' />
+      <path d='M18.09 9.15a3.23 3.23 0 1 0 0 5.76' stroke='currentColor' />
     </svg>
   )
 }

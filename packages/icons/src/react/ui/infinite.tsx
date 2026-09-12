@@ -4,11 +4,10 @@ export const IconInfinite: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconInfinite: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'infinite-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'infinite-title'}>{title}</title> : null}
       <path
-        d='M12 12S9.12 7.83 6.34 7.83c-2.25 0-3.83 1.83-3.96 3.93C2.24 14 4 16.2 6.41 16.2c4.1 0 6.99-8.35 11.21-8.35 2.37 0 4 1.94 4 4.14s-1.7 4.17-4.07 4.17C14.65 16.17 12 12 12 12'
+        d='M12 12S8.84 7.42 5.79 7.42c-2.48 0-4.2 2-4.35 4.31-.15 2.46 1.78 4.89 4.43 4.89 4.5 0 7.66-9.16 12.3-9.16 2.6 0 4.4 2.12 4.4 4.54a4.5 4.5 0 0 1-4.47 4.58C14.9 16.58 12 12 12 12'
         stroke='currentColor'
       />
     </svg>

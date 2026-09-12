@@ -4,11 +4,10 @@ export const IconSunDim: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,28 +23,30 @@ export const IconSunDim: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sun-dim-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sun-dim-title'}>{title}</title> : null}
+      <path d='M3.37 11.99h.84' stroke='currentColor' />
+      <path d='M19.66 12h.95' stroke='currentColor' />
+      <path d='M11.96 20.72v-1.07' stroke='currentColor' />
+      <path d='M11.96 4.23V3.4' stroke='currentColor' />
+      <path d='m18.23 5.65.66-.66' stroke='currentColor' />
+      <path d='m5 18.87.7-.7' stroke='currentColor' />
+      <path d='m5.68 5.64-.46-.46' stroke='currentColor' />
+      <path d='m18.9 18.86-.68-.69' stroke='currentColor' />
       <circle
         opacity='.2'
         cx='11.97'
         cy='11.99'
-        r='4.62'
+        r='4.73'
         transform='rotate(90 11.97 11.99)'
         fill='currentColor'
       />
       <circle
         cx='11.97'
         cy='11.99'
-        r='4.62'
+        r='4.73'
         transform='rotate(90 11.97 11.99)'
-        stroke='currentColor'
-      />
-      <path
-        d='M3.47 11.99h.83m15.28.01h.93m-8.55 8.62v-1.06m0-15.25V3.5m6.2 2.22.65-.66M5.09 18.8l.68-.7M5.75 5.71l-.45-.46m13.52 13.53-.67-.67'
         stroke='currentColor'
       />
     </svg>

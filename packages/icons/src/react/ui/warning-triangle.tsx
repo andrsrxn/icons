@@ -4,11 +4,10 @@ export const IconWarningTriangle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,21 @@ export const IconWarningTriangle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'warning-triangle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'warning-triangle-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M8.47 7.32 4.4 14.74c-1.46 2.64-2.18 3.96-1.6 4.94s2.09.98 5.1.98h8.18c3.02 0 4.53 0 5.11-.98.58-.99-.15-2.3-1.61-4.95l-4.1-7.42c-1.55-2.8-2.33-4.2-3.5-4.2-1.2 0-1.96 1.4-3.5 4.2'
+        d='m8.47 6.29-5.21 9.48c-1.45 2.64-2.18 3.96-1.6 4.94s2.09.99 5.1.99h10.46c3.02 0 4.53 0 5.11-.99.58-.98-.15-2.3-1.61-4.95l-5.24-9.48c-1.56-2.8-2.33-4.21-3.51-4.21S10 3.47 8.47 6.29'
         fill='currentColor'
       />
       <path
-        d='M8.47 7.32 4.4 14.74c-1.46 2.64-2.18 3.96-1.6 4.94s2.09.98 5.1.98h8.18c3.02 0 4.53 0 5.11-.98.58-.99-.15-2.3-1.61-4.95l-4.1-7.42c-1.55-2.8-2.33-4.2-3.5-4.2-1.2 0-1.96 1.4-3.5 4.2M12 8.77v4.37'
+        d='m8.47 6.29-5.21 9.48c-1.45 2.64-2.18 3.96-1.6 4.94s2.09.99 5.1.99h10.46c3.02 0 4.53 0 5.11-.99.58-.98-.15-2.3-1.61-4.95l-5.24-9.48c-1.56-2.8-2.33-4.21-3.51-4.21S10 3.47 8.47 6.29'
         stroke='currentColor'
       />
+      <path d='M12 8.56v4.82' stroke='currentColor' />
       <path
-        d='M12.53 16.87a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        d='M12.59 17.5a.59.59 0 1 1-1.18 0 .59.59 0 0 1 1.18 0'
         fill='currentColor'
         stroke='currentColor'
       />

@@ -4,11 +4,10 @@ export const IconDislike: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,25 +23,24 @@ export const IconDislike: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'dislike-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dislike-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='21.09'
-        y='3.75'
-        width='10.1'
-        height='4.97'
+        x='22.04'
+        y='2.92'
+        width='11.11'
+        height='5.47'
         rx='1'
-        transform='rotate(90 21.09 3.75)'
+        transform='rotate(90 22.04 2.92)'
         fill='currentColor'
       />
       <path
-        d='M10.01 3.6h7.3c1.89 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v2.54c0 1.88 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59h-1.22s-1.15 1.76-1.5 3c-.13.48-.21 1-.27 1.47-.1.91-.15 1.37-.48 1.63s-.67.22-1.35.13c-.8-.1-1.66-.38-2.08-1.1a5 5 0 0 1-.4-2.95c.15-1.38.22-2.06-.07-2.4h0c-.3-.33-.91-.33-2.13-.33-2.76 0-4.14 0-4.74-.9v-.01c-.59-.91-.03-2.17 1.1-4.7l.36-.82c.77-1.73 1.15-2.6 1.9-3.08.74-.48 1.69-.48 3.58-.48M16.12 14V3.6'
+        d='M9.45 2.75h8.83c1.88 0 2.83 0 3.41.59.59.58.59 1.53.59 3.41v3.6c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58h-1.75s-1.27 1.94-1.64 3.3c-.16.6-.26 1.23-.32 1.8v0c-.09.9-.14 1.36-.45 1.62-.32.26-.67.23-1.37.16-.93-.08-1.98-.38-2.47-1.24-.54-.94-.55-2.3-.4-3.51.18-1.37.26-2.05-.03-2.39s-.92-.34-2.15-.34h-.88c-2.77 0-4.16 0-4.75-.9-.6-.92-.03-2.19 1.1-4.72l.8-1.81c.77-1.73 1.15-2.6 1.9-3.08.74-.49 1.69-.49 3.58-.49'
         stroke='currentColor'
       />
+      <path d='M16.56 14.19V2.75' stroke='currentColor' />
     </svg>
   )
 }

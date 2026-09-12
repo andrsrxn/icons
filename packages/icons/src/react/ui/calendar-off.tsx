@@ -4,11 +4,10 @@ export const IconCalendarOff: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,15 @@ export const IconCalendarOff: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'calendar-off-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'calendar-off-title'}>{title}</title> : null}
-      <rect opacity='.2' x='3.23' y='3.66' width='17.54' height='5.12' rx='1' fill='currentColor' />
-      <rect x='3.23' y='3.66' width='17.54' height='17.54' rx='3' stroke='currentColor' />
-      <path d='M7.8 2v3.31M16.26 2v3.31m4.1 3.47H4.03M3.3 3.3l17.4 17.4' stroke='currentColor' />
+      <rect opacity='.2' x='3' y='3.45' width='17.99' height='5.25' rx='1' fill='currentColor' />
+      <rect x='3' y='3.45' width='17.99' height='17.99' rx='3' stroke='currentColor' />
+      <path d='M7.69 1.75v3.4' stroke='currentColor' />
+      <path d='M16.37 1.75v3.4' stroke='currentColor' />
+      <path d='M20.57 8.7H3.83' stroke='currentColor' />
+      <path d='m2.65 2.65 18.7 18.7' stroke='currentColor' />
     </svg>
   )
 }

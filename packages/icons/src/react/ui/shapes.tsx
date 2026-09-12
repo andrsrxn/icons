@@ -4,11 +4,10 @@ export const IconShapes: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,56 +23,48 @@ export const IconShapes: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'shapes-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'shapes-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.92' y='14' width='7.43' height='7.43' rx='2' fill='currentColor' />
+      <rect opacity='.2' x='2.48' y='13.81' width='7.65' height='7.65' rx='2' fill='currentColor' />
       <rect
         opacity='.2'
-        x='2.29'
-        y='7.21'
-        width='6.15'
-        height='6.15'
+        x='1.84'
+        y='6.83'
+        width='6.32'
+        height='6.32'
         rx='1'
-        transform='rotate(-45 2.3 7.21)'
+        transform='rotate(-45 1.84 6.83)'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M14.95 21.05c-.62-.35-.93-.53-1.07-.8a1 1 0 0 1-.1-.37c-.02-.31.16-.62.52-1.24l1.33-2.28c.77-1.34 1.16-2 1.74-2s.96.67 1.72 2.01l1.42 2.48c.24.42.35.62.38.84a1 1 0 0 1-.09.5c-.08.2-.26.35-.62.67-.17.16-.26.24-.36.3l-.26.1q-.13.02-.46.02h-3.28c-.2 0-.3 0-.4-.02l-.12-.03q-.12-.04-.35-.18'
+        d='M14.86 21.07c-.66-.38-1-.57-1.13-.87a1 1 0 0 1-.08-.3c-.04-.32.15-.65.54-1.31l1.42-2.44c.77-1.34 1.16-2 1.74-2 .57 0 .96.67 1.72 2.01l1.5 2.64c.26.45.39.67.4.9a1 1 0 0 1-.07.44c-.08.22-.27.39-.66.73-.19.17-.28.26-.4.31l-.21.1c-.12.02-.25.02-.5.02h-3.38c-.21 0-.32 0-.42-.02l-.1-.03c-.1-.03-.19-.08-.37-.18'
         fill='currentColor'
       />
-      <rect x='2.92' y='14' width='7.43' height='7.43' rx='2' stroke='currentColor' />
+      <rect x='2.48' y='13.81' width='7.65' height='7.65' rx='2' stroke='currentColor' />
       <rect
-        x='2.29'
-        y='7.21'
-        width='6.15'
-        height='6.15'
+        x='1.84'
+        y='6.83'
+        width='6.32'
+        height='6.32'
         rx='1'
-        transform='rotate(-45 2.3 7.21)'
+        transform='rotate(-45 1.84 6.83)'
         stroke='currentColor'
       />
       <path
-        d='M16.01 21.29c-1.53 0-2.3 0-2.59-.5-.28-.5.1-1.16.86-2.5l1.29-2.25c.77-1.35 1.15-2.02 1.73-2.02s.97.67 1.74 2.02l1.29 2.26c.76 1.33 1.14 2 .85 2.5-.29.49-1.06.49-2.59.49z'
+        d='M15.85 21.31c-1.53 0-2.3 0-2.59-.5s.1-1.16.85-2.5l1.43-2.49c.77-1.35 1.16-2.02 1.74-2.02s.96.67 1.73 2.02l1.43 2.5c.76 1.33 1.14 2 .85 2.5-.29.49-1.05.49-2.59.49z'
         stroke='currentColor'
       />
       <circle
         opacity='.2'
-        cx='17.28'
-        cy='7.18'
-        r='3.99'
-        transform='rotate(90 17.28 7.18)'
+        cx='17.26'
+        cy='6.8'
+        r='4.11'
+        transform='rotate(90 17.26 6.8)'
         fill='currentColor'
       />
-      <circle
-        cx='17.28'
-        cy='7.18'
-        r='3.99'
-        transform='rotate(90 17.28 7.18)'
-        stroke='currentColor'
-      />
+      <circle cx='17.26' cy='6.8' r='4.11' transform='rotate(90 17.26 6.8)' stroke='currentColor' />
     </svg>
   )
 }

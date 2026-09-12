@@ -4,11 +4,10 @@ export const IconCent: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,14 @@ export const IconCent: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cent-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cent-title'}>{title}</title> : null}
       <path
-        d='M17.53 5.47a8 8 0 0 0-3.45-.8c-4.2 0-7.6 3.28-7.6 7.33s3.4 7.33 7.6 7.33a8 8 0 0 0 3.45-.8m-4.76 2.88V2.59'
+        d='M17.73 5.23a8 8 0 0 0-3.58-.82A7.73 7.73 0 0 0 6.27 12c0 4.2 3.53 7.6 7.88 7.6q1.95-.02 3.58-.83'
         stroke='currentColor'
       />
+      <path d='M12.77 21.41V2.59' stroke='currentColor' />
     </svg>
   )
 }

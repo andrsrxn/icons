@@ -4,11 +4,10 @@ export const IconPerspective: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,16 @@ export const IconPerspective: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'perspective-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'perspective-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.7 12.01c0-2.62 0-3.93.79-4.79.8-.87 2.1-.97 4.72-1.18l6.62-.52c3.03-.25 4.55-.37 5.51.52.96.9.96 2.42.96 5.46v1.01c0 3.04 0 4.55-.96 5.44s-2.47.78-5.5.55l-6.61-.51c-2.62-.2-3.93-.3-4.73-1.16l-.01-.01c-.8-.86-.8-2.18-.8-4.8'
+        d='M1.65 11.4c0-2.63 0-3.94.8-4.8.79-.87 2.1-.97 4.72-1.18l8.7-.7c3.04-.23 4.55-.35 5.52.54s.96 2.4.96 5.45v2.6c0 3.03 0 4.54-.96 5.43-.96.9-2.47.78-5.5.54l-8.7-.67c-2.63-.2-3.94-.3-4.74-1.16s-.8-2.18-.8-4.82z'
         fill='currentColor'
       />
       <path
-        d='M2.7 11.96c0-2.26 0-3.39.61-4.2l.25-.28c.72-.72 1.83-.88 4.07-1.2l6.84-.95c3.18-.45 4.77-.67 5.8.23s1.03 2.5 1.03 5.71v1.42c0 3.22 0 4.84-1.03 5.73-1.04.9-2.63.67-5.83.2l-6.83-.98c-2.23-.33-3.34-.49-4.05-1.2l-.25-.3c-.61-.8-.61-1.93-.61-4.18'
+        d='M1.65 11.63c0-2.49 0-3.73.73-4.58.74-.84 1.97-1.02 4.44-1.36l8.7-1.22c3.18-.45 4.77-.67 5.8.23s1.03 2.5 1.03 5.71v3.14c0 3.22 0 4.84-1.03 5.73-1.04.9-2.64.67-5.83.2l-8.7-1.26c-2.45-.35-3.68-.53-4.41-1.37s-.73-2.09-.73-4.56z'
         stroke='currentColor'
       />
     </svg>

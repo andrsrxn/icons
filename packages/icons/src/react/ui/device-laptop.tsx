@@ -4,11 +4,10 @@ export const IconDeviceLaptop: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,23 @@ export const IconDeviceLaptop: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'device-laptop-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'device-laptop-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.64 15.82c.3-.42.44-.63.66-.74.22-.12.47-.12.98-.12h13.67c.54 0 .8 0 1.03.13.23.12.37.35.66.8l.15.24c.85 1.36 1.28 2.03 1 2.55-.3.52-1.1.52-2.7.52H5.12c-1.69 0-2.53 0-2.8-.54-.29-.54.2-1.23 1.16-2.6z'
+        d='M2.81 16.13c.3-.41.44-.62.66-.74s.47-.11.98-.11H19.8c.54 0 .81 0 1.04.12.22.13.37.36.66.81l.43.69c.85 1.35 1.28 2.03 1 2.55-.3.52-1.1.52-2.7.52H3.99c-1.69 0-2.53 0-2.81-.54s.2-1.23 1.17-2.61z'
         fill='currentColor'
       />
       <path
-        d='M19.26 14.49V10.8c0-2.83 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88h-2.23c-2.83 0-4.25 0-5.13.88s-.87 2.3-.87 5.12v3.69m-.63.97c.28-.47.42-.71.65-.84s.5-.13 1.06-.13H18.2c.54 0 .82 0 1.05.13.22.13.37.36.65.83l.43.7c.83 1.35 1.24 2.03.95 2.54-.29.5-1.08.5-2.65.5H5.69c-1.57 0-2.35 0-2.64-.5-.28-.5.12-1.18.92-2.52z'
+        d='M20 14.73v-4.7c0-2.82 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-4c-2.83 0-4.24 0-5.12.88S4 7.21 4 10.03v4.7'
         stroke='currentColor'
       />
+      <path
+        d='m4.02 14.73-.32.44c-1.57 2.1-2.35 3.14-1.93 3.97.41.83 1.72.83 4.33.83h11.85c2.65 0 3.97 0 4.38-.84.42-.84-.39-1.89-2-3.99l-.31-.4'
+        stroke='currentColor'
+      />
+      <path d='M20 14.73H4' stroke='currentColor' />
     </svg>
   )
 }

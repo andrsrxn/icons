@@ -4,11 +4,10 @@ export const IconCurrencyUsd: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,14 @@ export const IconCurrencyUsd: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-usd-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-usd-title'}>{title}</title> : null}
       <path
-        opacity='.2'
-        d='m8.08 5.64 2.6-.84a1 1 0 0 1 1.31.95v5.07a1 1 0 0 1-1.37.93l-2.93-1.18a1 1 0 0 1-.62-1.04l.32-3.05a1 1 0 0 1 .7-.84m7.81 7.62-2.6-.84a1 1 0 0 0-1.3.95v5.08a1 1 0 0 0 1.37.92l2.93-1.18a1 1 0 0 0 .62-1.03l-.32-3.06a1 1 0 0 0-.7-.84'
-        fill='currentColor'
-      />
-      <path
-        d='M17.05 7.04c-.45-1.47-2.57-2.6-5.06-2.6s-5.2.98-5.2 3.94c0 5.8 9.96 1.28 10.42 6.99.21 2.72-2.67 4.2-5.22 4.2S7.6 18.41 6.8 16.9m5.2 4.51V2.59'
+        d='M17.11 6.99c-.46-1.5-2.6-2.64-5.12-2.64-2.51 0-5.27 1-5.27 3.99 0 5.86 10.09 1.3 10.55 7.07.22 2.75-2.7 4.24-5.28 4.24-2.57 0-4.44-1.16-5.27-2.68'
         stroke='currentColor'
       />
+      <path d='M12 21.52V2.48' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconTextToSpeech: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,16 @@ export const IconTextToSpeech: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-to-speech-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-to-speech-title'}>{title}</title>
-      ) : null}
+      <path d='M6.08 6.48v11.05' stroke='currentColor' />
+      <path d='M14.33 8.36v7.3' stroke='currentColor' />
+      <path d='M22.35 8.36v7.3' stroke='currentColor' />
+      <path d='M18.34 5.72V18.3' stroke='currentColor' />
+      <path d='M7.91 17.53H4.25' stroke='currentColor' />
       <path
-        d='M13.84 14.94V9.07m7.44 6.84V8.1m-3.72 10.74V5.17M10.27 8.1v-.14a1.15 1.15 0 0 0-1.09-1.08H3.39c-.59.03-1.06.5-1.09 1.08v.14m3.98-1.23v10.27m0 0H5m1.3 0h1.26'
+        d='M10.55 7.77a1.3 1.3 0 0 0-1.29-1.29H2.9a1.3 1.3 0 0 0-1.29 1.29'
         stroke='currentColor'
       />
     </svg>

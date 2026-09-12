@@ -4,11 +4,10 @@ export const IconContacts: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,14 @@ export const IconContacts: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'contacts-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'contacts-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='16.08'
+        x='16.27'
         y='2.74'
-        width='4.82'
+        width='5.04'
         height='18.52'
         rx='2'
         fill='currentColor'
@@ -46,15 +43,19 @@ export const IconContacts: Icon = ({
         transform='matrix(0 1 1 0 6.82 7.72)'
         fill='currentColor'
       />
-      <rect x='3.11' y='2.74' width='17.79' height='18.52' rx='3' stroke='currentColor' />
+      <rect x='2.7' y='2.74' width='18.61' height='18.52' rx='3' stroke='currentColor' />
       <path
         d='M9.92 13.85a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0 0c-1.34 0-2.63.62-3.51 1.62m3.51-1.62c1.35 0 2.64.62 3.52 1.62'
         stroke='currentColor'
       />
       <path
-        d='M12.9 10.83a2.97 2.97 0 0 1-2.98 2.98 2.98 2.98 0 1 1 2.99-2.98M16.6 7.7h4.3M16.6 12h4.3m-4.3 4.3h4.3M16.45 21V3'
+        d='M12.9 10.83a2.97 2.97 0 0 1-2.98 2.98 2.98 2.98 0 1 1 2.99-2.98'
         stroke='currentColor'
       />
+      <path d='M16.82 7.7h4.48' stroke='currentColor' />
+      <path d='M16.82 12h4.48' stroke='currentColor' />
+      <path d='M16.82 16.3h4.48' stroke='currentColor' />
+      <path d='M16.65 21V3' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconCoin: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,32 +23,35 @@ export const IconCoin: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'coin-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'coin-title'}>{title}</title> : null}
       <ellipse
         opacity='.2'
-        cx='10.25'
+        cx='10.07'
         cy='12'
-        rx='9.43'
-        ry='4.57'
-        transform='rotate(90 10.25 12)'
+        rx='10.18'
+        ry='4.93'
+        transform='rotate(90 10.07 12)'
         fill='currentColor'
       />
       <ellipse
-        cx='10.25'
+        cx='10.07'
         cy='12'
-        rx='9.43'
-        ry='4.57'
-        transform='rotate(90 10.25 12)'
+        rx='10.18'
+        ry='4.93'
+        transform='rotate(90 10.07 12)'
         stroke='currentColor'
       />
       <path
-        d='M14.57 21.43c2.52 0 4.57-4.22 4.57-9.43s-2.05-9.43-4.57-9.43m-4.32 0h4.32M14 6.22h4M15.14 12h4M14 17.76h4m-7.75 3.67h4.32'
+        d='M14.74 22.18c2.73 0 4.94-4.56 4.94-10.18S17.47 1.82 14.74 1.82'
         stroke='currentColor'
       />
+      <path d='M10.07 1.82h4.67' stroke='currentColor' />
+      <path d='M14.13 5.76h4.32' stroke='currentColor' />
+      <path d='M15.36 12h4.32' stroke='currentColor' />
+      <path d='M14.13 18.21h4.32' stroke='currentColor' />
+      <path d='M10.07 22.18h4.67' stroke='currentColor' />
     </svg>
   )
 }

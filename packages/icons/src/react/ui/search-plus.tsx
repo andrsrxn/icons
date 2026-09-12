@@ -4,11 +4,10 @@ export const IconSearchPlus: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,18 @@ export const IconSearchPlus: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'search-plus-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'search-plus-title'}>{title}</title> : null}
       <path
         opacity='.2'
         d='M17.8 10.26a7.61 7.61 0 1 1-15.23 0 7.61 7.61 0 0 1 15.22 0'
         fill='currentColor'
       />
-      <path
-        d='M6.54 10.26h7.29m-3.65 3.64V6.63m5.42 8.93 5.78 5.77M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6'
-        stroke='currentColor'
-      />
+      <path d='M6.54 10.26h7.29' stroke='currentColor' />
+      <path d='M10.18 13.9V6.63' stroke='currentColor' />
+      <path d='m15.6 15.56 5.78 5.77' stroke='currentColor' />
+      <path d='M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6' stroke='currentColor' />
     </svg>
   )
 }

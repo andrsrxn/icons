@@ -4,11 +4,10 @@ export const IconTextFirstlineRight: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,9 @@ export const IconTextFirstlineRight: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-firstline-right-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-firstline-right-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
         width='6.81'
@@ -46,7 +41,10 @@ export const IconTextFirstlineRight: Icon = ({
         transform='matrix(-1 0 0 1 20.7 4.18)'
         stroke='currentColor'
       />
-      <path d='M2.75 5.28h8.2m-8.2 9.7h18.5M2.75 9.97h8.2m-8.2 9.85h18.5' stroke='currentColor' />
+      <path d='M2.75 5.28h8.2' stroke='currentColor' />
+      <path d='M2.75 14.98h18.5' stroke='currentColor' />
+      <path d='M2.75 9.97h8.2' stroke='currentColor' />
+      <path d='M2.75 19.82h18.5' stroke='currentColor' />
     </svg>
   )
 }

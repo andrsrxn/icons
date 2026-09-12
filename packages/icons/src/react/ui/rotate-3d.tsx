@@ -4,11 +4,10 @@ export const IconRotate3d: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconRotate3d: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'rotate-3d-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'rotate-3d-title'}>{title}</title> : null}
       <path
-        d='M15.69 8.29c-.6-3.4-2.03-5.72-3.69-5.72-2.2 0-4 4.22-4 9.43s1.8 9.43 4 9.43c.76 0 1.6-.54 1.9-1.43'
+        d='M16 7.97c-.65-3.69-2.2-6.2-4-6.2-2.4 0-4.34 4.58-4.34 10.23S9.6 22.24 12 22.24c.83 0 1.73-.59 2.06-1.55'
         stroke='currentColor'
       />
       <path
-        d='M21.43 12c0-2.2-4.22-4-9.43-4s-9.43 1.8-9.43 4S6.8 16 12 16c1.24 0 3.79 0 6.13-1.07'
+        d='M22.24 12c0-2.4-4.59-4.34-10.24-4.34S1.76 9.6 1.76 12 6.35 16.34 12 16.34c1.35 0 4.11 0 6.65-1.16'
         stroke='currentColor'
       />
       <path
-        d='m16.91 18.36 1.02-1.8c.47-.81.7-1.22.6-1.62-.12-.4-.53-.63-1.35-1.1l-1.79-1.02'
+        d='m17.33 18.9 1.2-2.09c.46-.82.7-1.23.59-1.63s-.52-.63-1.34-1.1l-2.1-1.2'
         stroke='currentColor'
       />
     </svg>

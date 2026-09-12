@@ -9,5 +9,6 @@
     "text",
     "document",
     "list"
-  ]
+  ],
+  "rtl": true
 }

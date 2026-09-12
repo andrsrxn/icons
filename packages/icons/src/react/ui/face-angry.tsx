@@ -4,11 +4,10 @@ export const IconFaceAngry: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,31 @@ export const IconFaceAngry: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'face-angry-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'face-angry-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
         cy='12'
-        r='9.43'
+        r='10.25'
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.25' transform='rotate(90 12 12)' stroke='currentColor' />
       <path
-        d='M9.78 11.39a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0m5.9 0a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0'
+        d='M9.6 11.33a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M15.41 16.19A4.7 4.7 0 0 0 12 15c-1.52 0-2.63.53-3.41 1.19m5.26-7.93 2.2-.58m-5.91.58-2.18-.58'
+        d='M16 11.33a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0'
+        fill='currentColor'
         stroke='currentColor'
       />
+      <path d='M15.71 16.55A5.2 5.2 0 0 0 12 15.26a5.6 5.6 0 0 0-3.71 1.29' stroke='currentColor' />
+      <path d='m14.01 7.94 2.39-.64' stroke='currentColor' />
+      <path d='M9.98 7.94 7.6 7.3' stroke='currentColor' />
     </svg>
   )
 }

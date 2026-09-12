@@ -4,11 +4,10 @@ export const IconGift: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,24 @@ export const IconGift: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'gift-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'gift-title'}>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='4.87'
-        y='11.29'
-        width='14.26'
-        height='10.11'
-        rx='2'
-        fill='currentColor'
-      />
+      <rect opacity='.2' x='4.5' y='11.29' width='15' height='10.11' rx='2' fill='currentColor' />
       <path
-        d='M4.87 11.29v4.11c0 2.83 0 4.24.88 5.12s2.29.88 5.12.88h2.26c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12v-4.1'
+        d='M4.5 11.29v4.11c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h3c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12v-4.1'
         stroke='currentColor'
       />
-      <rect x='3.03' y='7.97' width='17.93' height='3.32' rx='1' stroke='currentColor' />
-      <path d='M12 11.29V21.4m2.75-13.43A2.75 2.75 0 1 0 12 5.23v2.74z' stroke='currentColor' />
-      <path d='M9.25 7.97A2.75 2.75 0 1 1 12 5.23v2.74z' stroke='currentColor' />
+      <rect x='2.57' y='7.97' width='18.85' height='3.32' rx='1' stroke='currentColor' />
+      <path d='M12 11.29V21.4' stroke='currentColor' />
+      <path
+        d='M14.89 7.97c1.6 0 2.89-1.23 2.89-2.74s-1.3-2.75-2.9-2.75A2.8 2.8 0 0 0 12 5.23v2.74z'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.11 7.97a2.8 2.8 0 0 1-2.89-2.74c0-1.52 1.3-2.75 2.9-2.75S12 3.7 12 5.23v2.74z'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

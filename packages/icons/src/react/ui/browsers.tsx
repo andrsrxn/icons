@@ -4,11 +4,10 @@ export const IconBrowsers: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,18 @@ export const IconBrowsers: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'browsers-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'browsers-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.71' y='7.6' width='14.51' height='3.52' rx='1' fill='currentColor' />
-      <rect opacity='.2' x='6.69' y='4.7' width='14.51' height='3.52' rx='1' fill='currentColor' />
-      <rect x='2.71' y='7.6' width='14.51' height='11.65' rx='2' stroke='currentColor' />
+      <rect opacity='.2' x='1.76' y='7.5' width='16.07' height='3.9' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='6.17' y='3.6' width='16.07' height='3.9' rx='1' fill='currentColor' />
+      <rect x='1.76' y='7.5' width='16.07' height='12.9' rx='2' stroke='currentColor' />
       <path
-        d='M17.43 16.35c1.67 0 2.5 0 3.06-.47l.25-.25c.47-.56.47-1.39.47-3.06V8.7c0-1.89 0-2.83-.6-3.41-.58-.6-1.52-.6-3.4-.6H9.35c-.61 0-.92 0-1.17.08a2 2 0 0 0-1.42 1.42c-.07.25-.07.56-.07 1.17m10.53 3.76H2.71m18.49-2.9H17'
+        d='M18.06 16.5h.18c1.88 0 2.83 0 3.41-.6.59-.58.59-1.52.59-3.4V7.6c0-1.89 0-2.83-.59-3.42-.58-.58-1.53-.58-3.41-.58H9.12a5 5 0 0 0-1.68.14A2 2 0 0 0 6.3 4.87c-.13.35-.13.8-.13 1.68'
         stroke='currentColor'
       />
+      <path d='M17.83 11.4H1.76' stroke='currentColor' />
+      <path d='M22.24 7.5h-8.45' stroke='currentColor' />
     </svg>
   )
 }

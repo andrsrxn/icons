@@ -4,11 +4,10 @@ export const IconAlignLeft: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,42 +23,40 @@ export const IconAlignLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'align-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'align-left-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='5.8'
-        height='15.49'
+        width='6.44'
+        height='17.2'
         rx='2'
-        transform='matrix(0 1 1 0 5.77 4.63)'
+        transform='matrix(0 1 1 0 5.09 3.81)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='5.8'
-        height='11.62'
+        width='6.44'
+        height='12.9'
         rx='2'
-        transform='matrix(0 1 1 0 5.77 13.68)'
+        transform='matrix(0 1 1 0 5.09 13.85)'
         fill='currentColor'
       />
       <rect
-        width='5.8'
-        height='15.49'
+        width='6.44'
+        height='17.2'
         rx='2'
-        transform='matrix(0 1 1 0 5.77 4.63)'
+        transform='matrix(0 1 1 0 5.09 3.81)'
         stroke='currentColor'
       />
       <rect
-        width='5.8'
-        height='11.62'
+        width='6.44'
+        height='12.9'
         rx='2'
-        transform='matrix(0 1 1 0 5.77 13.68)'
+        transform='matrix(0 1 1 0 5.09 13.85)'
         stroke='currentColor'
       />
-      <path d='M2.74 3.76v16.58' stroke='currentColor' />
+      <path d='M1.72 2.85v18.4' stroke='currentColor' />
     </svg>
   )
 }

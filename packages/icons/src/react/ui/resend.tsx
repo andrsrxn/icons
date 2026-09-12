@@ -4,11 +4,10 @@ export const IconResend: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,16 @@ export const IconResend: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'resend-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'resend-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M14.6 5.47v3.1c-6.71 0-10.53 3.06-12.08 8.51-.13.46.4.79.78.5 5.31-4.09 8.43-3.41 11.3-3.2v3.17a1 1 0 0 0 1.76.67l4.78-5.38a2 2 0 0 0 0-2.66l-4.78-5.37a1 1 0 0 0-1.75.66'
+        d='m14.07 4.63.03 3.45c-7.77 0-10.02 3.85-12.07 8.69-.18.44.3.86.72.63 6.64-3.64 7.86-2.55 11.35-2.55l-.03 3.22a1 1 0 0 0 1.7.71l5.93-5.88a2 2 0 0 0 .03-2.8l-5.94-6.17a1 1 0 0 0-1.72.7'
         fill='currentColor'
       />
       <path
-        d='M14.6 8.1v.47c-6.13 0-9.84 2.55-11.63 7.15-.41 1.06-.62 1.6-.33 1.83s.8-.12 1.83-.82c4.61-3.14 7.48-2.55 10.14-2.36v.55c0 2.21 0 3.32.64 3.57.65.24 1.38-.59 2.85-2.24l1.86-2.08h0c1.12-1.27 1.69-1.9 1.69-2.66s-.57-1.4-1.7-2.66L18.1 6.77c-1.47-1.65-2.2-2.48-2.85-2.23-.64.24-.64 1.35-.64 3.56'
+        d='M14.03 7.34v1.13c-5.6 0-9.85 2.74-11.9 7.65-.42 1.01-.63 1.52-.35 1.75.29.24.78-.08 1.77-.71 5.41-3.49 7.75-2.69 10.48-2.69v1.21c0 2.04 0 3.06.61 3.32s1.34-.46 2.79-1.9l2.78-2.74c1.36-1.34 2.04-2.01 2.04-2.85 0-.83-.68-1.5-2.04-2.84l-2.78-2.75c-1.45-1.43-2.18-2.15-2.79-1.9-.62.26-.62 1.28-.62 3.32'
         stroke='currentColor'
       />
     </svg>

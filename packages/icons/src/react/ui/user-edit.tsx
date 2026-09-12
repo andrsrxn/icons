@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconUserEdit: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-user-edit'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.4 7.92a5.33 5.33 0 1 1-10.65 0 5.33 5.33 0 0 1 10.66 0'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M14.09 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c2.89 0 5.43 1.5 6.92 3.8-1.59 1.38-3.2 2.89-2.91 4.66'
+        fill='currentColor'
+      />
+      <path
+        d='M15.4 7.92a5.3 5.3 0 0 1-5.33 5.33 5.33 5.33 0 1 1 5.34-5.33'
+        stroke='currentColor'
+      />
+      <path d='M1.78 21.68a8.3 8.3 0 0 1 12.32-7.26' stroke='currentColor' />
+      <path
+        d='M15.96 22.31c.2 0 .3 0 .39-.03.09-.04.16-.1.3-.25l4.8-4.64c.48-.46.72-.69.79-.96a1 1 0 0 0 0-.48c-.06-.28-.3-.51-.76-.98s-.7-.69-.97-.76a1 1 0 0 0-.48 0c-.27.08-.5.31-.96.78l-4.64 4.75c-.14.15-.21.22-.25.3-.04.1-.04.2-.04.4v.87c0 .48 0 .71.15.86.15.14.38.14.85.14z'
+        stroke='currentColor'
+      />
+      <path d='m20.67 17.85-2.07-2.07' stroke='currentColor' />
+    </svg>
+  )
+}

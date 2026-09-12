@@ -4,11 +4,10 @@ export const IconHandReceiving: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,15 @@ export const IconHandReceiving: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-receiving-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'hand-receiving-title'}>{title}</title>
-      ) : null}
-      <rect opacity='.2' x='2.68' y='7.92' width='3.82' height='8.07' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='1.71' y='7.51' width='4.21' height='8.89' rx='1' fill='currentColor' />
       <path
-        d='M6.5 14.64s1.1.92 2.68 1.3c3.15.78 4.75.56 7.54-.46 2.08-.76 3.7-2.83 4.5-4.01.35-.52.35-1.18.04-1.73a1.94 1.94 0 0 0-2.98-.44c-.96.87-2.2 1.9-3.43 2.66-.74.45-2.28.36-3.74.36m3.74-.36c.6-1.6.43-2.88-.24-3.13a10 10 0 0 0-3.83-.64c-3.56 0-4.28.9-4.28.9'
+        d='M5.92 14.9a8 8 0 0 0 2.95 1.45c3.47.85 5.24.61 8.3-.52 2.3-.84 4.1-3.12 4.97-4.42l-.08.13a2.2 2.2 0 0 0 .12-2.03l-.06-.1a1.94 1.94 0 0 0-3.08-.51l-.14.13c-1.07.96-2.44 2.1-3.78 2.92-.82.5-2.52.4-4.13.4m4.13-.4c.66-1.76.47-3.17-.26-3.44-1.4-.53-2.6-.7-4.23-.7-3.92 0-4.7.97-4.7.97'
         stroke='currentColor'
       />
-      <rect x='2.68' y='7.92' width='3.82' height='8.07' rx='1' stroke='currentColor' />
+      <rect x='1.71' y='7.51' width='4.21' height='8.89' rx='1' stroke='currentColor' />
     </svg>
   )
 }

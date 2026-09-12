@@ -4,11 +4,10 @@ export const IconGitCommit: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconGitCommit: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'git-commit-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'git-commit-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
@@ -37,7 +34,8 @@ export const IconGitCommit: Icon = ({
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <path d='M8.5 12h-6m19 0h-6' stroke='currentColor' />
+      <path d='M8.5 12h-6' stroke='currentColor' />
+      <path d='M21.5 12h-6' stroke='currentColor' />
       <circle cx='12' cy='12' r='3.51' transform='rotate(90 12 12)' stroke='currentColor' />
     </svg>
   )

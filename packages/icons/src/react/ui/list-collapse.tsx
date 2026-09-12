@@ -4,11 +4,10 @@ export const IconListCollapse: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,18 @@ export const IconListCollapse: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-collapse-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'list-collapse-title'}>{title}</title> : null}
+      <path d='M21.27 5.94H2.73' stroke='currentColor' />
+      <path d='M10.8 12H2.73' stroke='currentColor' />
+      <path d='M10.8 18.05H2.73' stroke='currentColor' />
       <path
-        d='M21.19 6H2.8m8.01 6h-8m8 6h-8m11.25-7.2.46.45c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.46-.45m-6.58 8.38.46-.45c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.46.45'
+        d='m14.37 10.78.48.49c1.33 1.33 2 2 2.83 2s1.5-.67 2.83-2l.49-.49'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.37 19.24.48-.48c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.49.48'
         stroke='currentColor'
       />
     </svg>

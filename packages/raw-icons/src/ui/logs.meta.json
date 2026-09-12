@@ -10,5 +10,6 @@
     "debug",
     "list",
     "data"
-  ]
+  ],
+  "rtl":true
 }

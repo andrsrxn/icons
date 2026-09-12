@@ -4,11 +4,10 @@ export const IconSigma: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconSigma: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sigma-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sigma-title'}>{title}</title> : null}
       <path
-        d='M16.99 6.5v-.3c0-1.41 0-2.12-.44-2.56s-1.15-.44-2.56-.44H10.4c-2.49 0-3.74 0-4.16.8s.28 1.83 1.69 3.9l1.65 2.41c.55.82.83 1.23.83 1.69s-.28.87-.83 1.69l-1.65 2.42c-1.4 2.06-2.11 3.1-1.69 3.89.42.8 1.67.8 4.16.8H14c1.41 0 2.12 0 2.56-.44s.44-1.15.44-2.56v-.3'
+        d='M16.64 6.81V6.7c0-1.42 0-2.12-.44-2.56s-1.14-.44-2.56-.44h-2.88c-2.5 0-3.74 0-4.16.8-.43.8.28 1.83 1.68 3.89L9.6 10.3c.56.82.84 1.23.84 1.69s-.28.87-.84 1.69L8.3 15.6c-1.41 2.06-2.12 3.1-1.7 3.9s1.68.8 4.17.8h2.88c1.42 0 2.12 0 2.56-.45.44-.44.44-1.14.44-2.56v-.11'
         stroke='currentColor'
       />
     </svg>

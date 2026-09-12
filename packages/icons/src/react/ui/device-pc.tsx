@@ -4,11 +4,10 @@ export const IconDevicePc: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,13 @@ export const IconDevicePc: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'device-pc-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'device-pc-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.7' y='3.9' width='18.61' height='12.47' rx='3' fill='currentColor' />
-      <rect x='2.7' y='3.9' width='18.61' height='12.47' rx='3' stroke='currentColor' />
-      <path d='M8.25 20.1h7.48m-3.73 0v-3.62' stroke='currentColor' />
+      <rect opacity='.2' x='1.74' y='3.9' width='20.52' height='13.75' rx='3' fill='currentColor' />
+      <rect x='1.74' y='3.9' width='20.52' height='13.75' rx='3' stroke='currentColor' />
+      <path d='M7.64 21.77h8.7' stroke='currentColor' />
+      <path d='M12 21.77v-3.99' stroke='currentColor' />
     </svg>
   )
 }

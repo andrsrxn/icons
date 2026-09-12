@@ -4,11 +4,10 @@ export const IconSortDesc: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,17 @@ export const IconSortDesc: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'sort-desc-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'sort-desc-title'}>{title}</title> : null}
       <path
-        d='M17.92 5.15H3.19m10 6h-10m7 6h-7m11.46-.5.44.44c1.33 1.33 2 2 2.82 2 .83 0 1.5-.66 2.83-2l.45-.44m-3.27-7.5v9.6'
+        d='m14.56 16.16.56.55c1.33 1.34 2 2 2.82 2 .83 0 1.5-.66 2.84-2l.56-.55'
         stroke='currentColor'
       />
+      <path d='M17.95 9.77V18' stroke='currentColor' />
+      <path d='M2.74 17.85h7.13' stroke='currentColor' />
+      <path d='M2.74 11.98h10.22' stroke='currentColor' />
+      <path d='M2.74 6.1h15.2' stroke='currentColor' />
     </svg>
   )
 }

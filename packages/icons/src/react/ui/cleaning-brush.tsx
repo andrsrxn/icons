@@ -4,11 +4,10 @@ export const IconCleaningBrush: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,38 @@ export const IconCleaningBrush: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cleaning-brush-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'cleaning-brush-title'}>{title}</title>
-      ) : null}
-      <rect opacity='.2' x='5.47' y='8.43' width='13.07' height='4.47' rx='2' fill='currentColor' />
-      <rect x='5.47' y='8.43' width='13.07' height='4.47' rx='1' stroke='currentColor' />
-      <path
-        d='M7.05 12.9a10 10 0 0 0-.06 3.36c-.43 2.57-.65 3.86-.05 4.57.6.7 1.77.7 4.13.7h1.95c2.33 0 3.5 0 4.1-.7s.39-1.96-.03-4.48l-.06-.47c-.23-1.88 0-2.98 0-2.98M10 8.43V4.45q0 0 0 0c0-1.1.9-2 2-2q0 0 0 0v0q0 0 0 0a2 2 0 0 1 2 2q0 0 0 0v3.98zm.2 12.92v-3.67m3.6 3.67v-2.2'
+      <rect
+        opacity='.2'
+        x='9.93'
+        y='4.31'
+        width='13.79'
+        height='4.71'
+        rx='2'
+        transform='rotate(45 9.93 4.31)'
+        fill='currentColor'
+      />
+      <rect
+        x='10.28'
+        y='4.67'
+        width='12.79'
+        height='4.71'
+        rx='1'
+        transform='rotate(45 10.28 4.67)'
         stroke='currentColor'
       />
+      <path
+        d='M7.78 8.83s-.68 1.02-2.23 2.22l-.57.41c-2.15 1.46-3.22 2.2-3.3 3.13-.1.94.75 1.78 2.44 3.47l1.87 1.88c1.67 1.66 2.5 2.5 3.43 2.41s1.66-1.12 3.1-3.21l.48-.64a11 11 0 0 1 2.22-2.23'
+        stroke='currentColor'
+      />
+      <path
+        d='m13.12 7.5 4.82-4.82c.25-.25.38-.38.5-.47a2 2 0 0 1 2.37 0c.12.09.25.22.5.47v0c.26.25.38.38.47.5a2 2 0 0 1 0 2.37c-.09.12-.21.25-.47.5l-4.82 4.83z'
+        stroke='currentColor'
+      />
+      <path d='m3.82 17.48 2.73-2.74' stroke='currentColor' />
+      <path d='m6.51 20.18 1.64-1.64' stroke='currentColor' />
     </svg>
   )
 }

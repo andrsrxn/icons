@@ -4,11 +4,10 @@ export const IconCreditCard: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,18 +23,17 @@ export const IconCreditCard: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'credit-card-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'credit-card-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.85 8.33c0-1.24 0-1.87.27-2.33a2 2 0 0 1 .73-.73C4.3 5 4.93 5 6.18 5h11.33c1.25 0 1.87 0 2.34.27a2 2 0 0 1 .73.73c.27.46.27 1.09.27 2.33 0 .63 0 .94-.14 1.17a1 1 0 0 1-.36.37c-.23.13-.55.13-1.17.13H4.51c-.62 0-.93 0-1.16-.13a1 1 0 0 1-.37-.37c-.13-.23-.13-.54-.13-1.17'
+        d='M1.83 7.93c0-1.6 0-2.4.43-2.95a2 2 0 0 1 .33-.32c.55-.44 1.35-.44 2.95-.44h12.59c1.6 0 2.4 0 2.94.44q.18.14.33.32c.43.55.43 1.35.43 2.95 0 .8 0 1.2-.22 1.47l-.16.16c-.27.22-.67.22-1.47.22H3.68c-.8 0-1.2 0-1.47-.22l-.16-.16c-.22-.27-.22-.67-.22-1.47'
         fill='currentColor'
       />
-      <rect x='2.7' y='5' width='18.61' height='14' rx='3' stroke='currentColor' />
-      <path d='M2.7 9.64H21m-8 5.92h5.16' stroke='currentColor' />
+      <rect x='1.66' y='4.22' width='20.67' height='15.55' rx='3' stroke='currentColor' />
+      <path d='M1.66 9.38H22' stroke='currentColor' />
+      <path d='M4.97 12.84H10' stroke='currentColor' />
     </svg>
   )
 }

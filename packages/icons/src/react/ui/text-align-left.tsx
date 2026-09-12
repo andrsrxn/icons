@@ -4,11 +4,10 @@ export const IconTextAlignLeft: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,13 @@ export const IconTextAlignLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-align-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-align-left-title'}>{title}</title>
-      ) : null}
-      <path d='M3 5.18h18M3 14.27h18M3 9.73h11.45M3 18.82h11.45' stroke='currentColor' />
+      <path d='M2.68 5.18h18.64' stroke='currentColor' />
+      <path d='M2.68 14.27h18.64' stroke='currentColor' />
+      <path d='M2.68 9.73h11.86' stroke='currentColor' />
+      <path d='M2.68 18.82h11.86' stroke='currentColor' />
     </svg>
   )
 }

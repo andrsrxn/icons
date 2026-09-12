@@ -4,11 +4,10 @@ export const IconMouseLeft: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,26 @@ export const IconMouseLeft: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'mouse-left-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'mouse-left-title'}>{title}</title> : null}
-      <path opacity='.2' d='M18 12.33H6.1v3.36a5.94 5.94 0 1 0 11.89 0z' fill='currentColor' />
+      <path opacity='.2' d='M3.77 16.86h16.61v5.3H3.78z' fill='currentColor' />
       <path
         opacity='.2'
-        d='M12.06 13v-1.6q0-1-.58-1.81l-.15-.2a2.8 2.8 0 0 1 .1-3.4c.4-.5.63-1.13.63-1.77v-1.6A6.06 6.06 0 0 0 6 8.68V13z'
+        d='M12.08 17.89v-2.45a5 5 0 0 0-.82-2.75l-.2-.32a4.5 4.5 0 0 1 .14-5.11c.57-.78.88-1.7.88-2.67V2.13a8.46 8.46 0 0 0-8.46 8.46v7.3z'
         fill='currentColor'
       />
+      <path d='M3.77 22.17V10.14a8.3 8.3 0 0 1 16.61 0v12.03' stroke='currentColor' />
+      <path d='M20.38 17.1H3.78' stroke='currentColor' />
       <rect
-        width='11.88'
-        height='19.21'
-        rx='5.94'
-        transform='matrix(-1 0 0 1 18 2.42)'
+        width='4.62'
+        height='7.06'
+        rx='2.31'
+        transform='matrix(-1 0 0 1 14.31 6.44)'
         stroke='currentColor'
       />
-      <path d='M18 12.48H6.11' stroke='currentColor' />
-      <rect x='10.35' y='5.46' width='3.31' height='4.65' rx='1.65' stroke='currentColor' />
-      <path d='M11.98 12.45V10.1m0-4.68V3.03' stroke='currentColor' />
+      <path d='M12.03 17.05V13.5' stroke='currentColor' />
+      <path d='M12.03 6.38V2.76' stroke='currentColor' />
     </svg>
   )
 }

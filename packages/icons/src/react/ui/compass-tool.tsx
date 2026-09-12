@@ -4,11 +4,10 @@ export const IconCompassTool: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,19 @@ export const IconCompassTool: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'compass-tool-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'compass-tool-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M9.88 6.69a2.12 2.12 0 1 0 4.24 0 2.12 2.12 0 0 0-4.24 0'
+        d='M9.65 7.11a2.35 2.35 0 1 0 4.7 0 2.35 2.35 0 0 0-4.7 0'
         fill='currentColor'
       />
-      <path
-        d='M9.88 6.69A2.1 2.1 0 0 0 12 8.8a2.12 2.12 0 1 0-2.12-2.1m.79 2.11L4.84 21.55M13.1 8.81l6.06 12.74M12 2v2.57M2.87 15.92A16 16 0 0 0 12 18.39c3.7 0 5.94-.61 9.13-2.47'
-        stroke='currentColor'
-      />
+      <path d='M9.65 7.11A2.34 2.34 0 0 0 12 9.47 2.35 2.35 0 1 0 9.65 7.1' stroke='currentColor' />
+      <path d='M10.72 9.15 5.12 21.4' stroke='currentColor' />
+      <path d='m13.23 9.15 5.65 12.24' stroke='currentColor' />
+      <path d='M12 2.6v2.16' stroke='currentColor' />
+      <path d='M3.23 15.98A15 15 0 0 0 12 18.35c3.55 0 5.7-.58 8.77-2.37' stroke='currentColor' />
     </svg>
   )
 }

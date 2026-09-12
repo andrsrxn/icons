@@ -4,11 +4,10 @@ export const IconClock: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,13 @@ export const IconClock: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'clock-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'clock-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='12' cy='12' r='9.32' fill='currentColor' />
-      <circle cx='12' cy='12' r='9.32' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='12' r='10.25' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
       <path
-        d='m15.67 15.44-2.5-1.67c-.87-.58-1.3-.87-1.54-1.31s-.24-.97-.24-2.02V6.83'
+        d='m16.04 15.78-2.93-1.95c-.87-.58-1.3-.87-1.54-1.32-.24-.44-.24-.96-.24-2.01V6.31'
         stroke='currentColor'
       />
     </svg>

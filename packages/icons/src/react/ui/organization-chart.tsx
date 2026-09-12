@@ -4,11 +4,10 @@ export const IconOrganizationChart: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,62 +23,59 @@ export const IconOrganizationChart: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'organization-chart-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'organization-chart-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 15.29 9.58)'
+        transform='matrix(0 -1 -1 0 15.28 9.18)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 9.38 21.28)'
+        transform='matrix(0 -1 -1 0 9.13 21.39)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 21.19 21.28)'
+        transform='matrix(0 -1 -1 0 21.44 21.39)'
         fill='currentColor'
       />
       <rect
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 15.29 9.58)'
+        transform='matrix(0 -1 -1 0 15.28 9.18)'
         stroke='currentColor'
       />
       <rect
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 9.38 21.28)'
+        transform='matrix(0 -1 -1 0 9.13 21.39)'
         stroke='currentColor'
       />
       <rect
-        width='6.88'
-        height='6.36'
+        width='6.57'
+        height='6.57'
         rx='2'
-        transform='matrix(0 -1 -1 0 21.19 21.28)'
+        transform='matrix(0 -1 -1 0 21.44 21.39)'
         stroke='currentColor'
       />
       <path
-        d='M18 14c0-.98-.79-1.77-1.76-1.77H7.97c-.98 0-1.77.8-1.77 1.77m5.9-2.34V9.58'
+        d='M18.16 14.82c0-.82 0-1.22-.12-1.55a2 2 0 0 0-1.2-1.2c-.33-.13-.74-.13-1.56-.13H8.72c-.82 0-1.23 0-1.55.12a2 2 0 0 0-1.21 1.2c-.12.34-.12.74-.12 1.56'
         stroke='currentColor'
       />
+      <path d='M12 11.35V9.18' stroke='currentColor' />
     </svg>
   )
 }

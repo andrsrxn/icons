@@ -4,11 +4,10 @@ export const IconRedo: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,12 @@ export const IconRedo: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'redo-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'redo-title'}>{title}</title> : null}
-      <path d='M19.54 8H9.73a5.66 5.66 0 0 0 0 11.33h1.78' stroke='currentColor' />
+      <path d='M19.9 8.63h-9.85a5.69 5.69 0 0 0 0 11.37h.3' stroke='currentColor' />
       <path
-        d='m16.2 3.47 1.7 1.7c1.33 1.34 2 2 2 2.83s-.67 1.5-2 2.83l-1.7 1.71'
+        d='M16.48 4.07 18.2 5.8c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-1.72 1.73'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconGripHorizontal: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,36 @@ export const IconGripHorizontal: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'grip-horizontal-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'grip-horizontal-title'}>{title}</title>
-      ) : null}
       <path
-        d='M4.21 14.62a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7m7.79.01a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7m7.79.01a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7M4.21 7.7a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69M12 7.7a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69m7.79.01a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69'
+        d='M4.21 14.62a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 14.62a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.79 14.62a.84.84 0 1 1 0 1.69.84.84 0 0 1 0-1.7'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M4.21 7.7a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 7.7a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.79 7.7a.84.84 0 1 1 0 1.68.84.84 0 0 1 0-1.69'
         fill='currentColor'
         stroke='currentColor'
       />

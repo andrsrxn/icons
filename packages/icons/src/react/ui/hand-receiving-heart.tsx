@@ -4,11 +4,10 @@ export const IconHandReceivingHeart: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,28 +23,24 @@ export const IconHandReceivingHeart: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'hand-receiving-heart-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'hand-receiving-heart-title'}>{title}</title>
-      ) : null}
-      <rect opacity='.2' x='2.78' y='13.56' width='3.8' height='7.51' rx='1' fill='currentColor' />
       <path
         opacity='.2'
-        d='M17.84 2.73c-1.27 0-2.19.95-2.49 1.43a3.2 3.2 0 0 0-2.49-1.43c-1.59 0-2.78 1.8-2.27 3.72s3.55 3.48 4.76 4.85c1.2-1.37 4.25-2.93 4.76-4.85s-.68-3.72-2.27-3.72'
+        d='M18.25 1.84c-1.4 0-2.4 1.05-2.72 1.57a3.5 3.5 0 0 0-2.73-1.57c-1.74 0-3.05 1.99-2.48 4.08.56 2.1 3.88 3.8 5.2 5.3 1.33-1.5 4.65-3.2 5.22-5.3s-.75-4.08-2.49-4.08'
         fill='currentColor'
       />
       <path
-        d='M6.58 19.8s1.1.87 2.67 1.23c3.13.71 4.73.51 7.5-.44 2.03-.7 3.62-2.55 4.43-3.66.38-.52.38-1.2.04-1.76a1.88 1.88 0 0 0-2.8-.41c-.98.82-2.27 1.83-3.53 2.55-.74.43-2.27.34-3.73.34m3.73-.34c.6-1.48.42-2.67-.24-2.9a11 11 0 0 0-3.81-.6c-3.55 0-4.26.83-4.26.83'
+        d='M18.25 1.84c-1.4 0-2.4 1.05-2.72 1.57a3.5 3.5 0 0 0-2.73-1.57c-1.74 0-3.05 1.99-2.48 4.08.56 2.1 3.88 3.8 5.2 5.3 1.33-1.5 4.65-3.2 5.22-5.3s-.75-4.08-2.49-4.08'
         stroke='currentColor'
       />
-      <rect x='2.78' y='13.56' width='3.8' height='7.51' rx='1' stroke='currentColor' />
+      <rect opacity='.2' x='2.19' y='13.68' width='4.01' height='7.91' rx='1' fill='currentColor' />
       <path
-        d='M17.84 2.73c-1.27 0-2.19.95-2.49 1.43a3.2 3.2 0 0 0-2.49-1.43c-1.59 0-2.78 1.8-2.27 3.72s3.55 3.48 4.76 4.85c1.2-1.37 4.25-2.93 4.76-4.85s-.68-3.72-2.27-3.72'
+        d='M6.2 20.26s1.16.91 2.8 1.29c3.3.75 5 .54 7.92-.46 2.13-.73 3.81-2.69 4.66-3.86.4-.54.4-1.27.05-1.85a1.98 1.98 0 0 0-2.96-.44 27 27 0 0 1-3.72 2.7c-.77.44-2.39.35-3.92.35m3.92-.35c.64-1.57.45-2.82-.24-3.07a11 11 0 0 0-4.03-.62c-3.73 0-4.48.87-4.48.87'
         stroke='currentColor'
       />
+      <rect x='2.19' y='13.68' width='4.01' height='7.91' rx='1' stroke='currentColor' />
     </svg>
   )
 }

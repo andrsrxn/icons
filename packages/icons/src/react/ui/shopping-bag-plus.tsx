@@ -4,11 +4,10 @@ export const IconShoppingBagPlus: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,21 @@ export const IconShoppingBagPlus: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'shopping-bag-plus-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'shopping-bag-plus-title'}>{title}</title>
-      ) : null}
       <path
         opacity='.2'
-        d='M18.92 18.7h2.59L18.89 7.77c-.53-2.2-.8-3.31-1.6-3.95-.83-.65-1.96-.65-4.23-.65h-2.21c-2.35 0-3.52 0-4.35.68-.83.67-1.06 1.82-1.53 4.12l-1.3 6.32c-.67 3.34-1.01 5-.11 6.1s2.6 1.1 6 1.1h9.36z'
+        d='M18.91 18.95h2.65l-1.48-6.6-1.19-5.4c-.5-2.26-.74-3.39-1.57-4.05-.82-.66-1.98-.66-4.29-.66h-2.17c-2.39 0-3.58 0-4.41.69S5.4 4.79 4.96 7.13l-1.54 8.24c-.62 3.3-.93 4.94-.03 6.02s2.58 1.08 5.92 1.08h9.6z'
         fill='currentColor'
       />
+      <path d='M15.58 19.11h6.72' stroke='currentColor' />
+      <path d='M18.94 22.47v-6.71' stroke='currentColor' />
       <path
-        d='m20.04 11.84-.8-4.2c-.43-2.33-.65-3.5-1.49-4.2-.83-.68-2.02-.68-4.4-.68h-2.84c-2.38 0-3.57 0-4.4.69S5.06 5.3 4.6 7.65l-1.26 6.74c-.62 3.3-.93 4.94-.03 6.02.9 1.09 2.58 1.09 5.93 1.09h4.12'
+        d='m20 11.39-.77-4.6c-.4-2.4-.6-3.59-1.43-4.3-.84-.71-2.06-.71-4.48-.71h-2.8c-2.42 0-3.63 0-4.47.7S5.01 4.38 4.6 6.76l-1.5 8.7c-.56 3.25-.84 4.88.06 5.95.9 1.06 2.55 1.06 5.86 1.06h3.94'
         stroke='currentColor'
       />
-      <path d='M8.78 7a3.22 3.22 0 0 0 6.44 0m.36 11.79H22M18.79 22v-6.42' stroke='currentColor' />
+      <path d='M8.86 6.46a3.13 3.13 0 1 0 6.26 0' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconIncognito: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,40 +23,38 @@ export const IconIncognito: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'incognito-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'incognito-title'}>{title}</title> : null}
       <circle
         opacity='.2'
-        cx='7.03'
-        cy='16.67'
-        r='2.73'
-        transform='rotate(90 7.03 16.67)'
+        cx='6.69'
+        cy='16.74'
+        r='2.92'
+        transform='rotate(90 6.69 16.74)'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='m8.55 4.86-4.12 5.97 7.57-.61 8.1.61-4.4-5.97-3.7 1.3z'
+        d='M8.32 4.12 3.9 10.5l8.1-.66 8.66.66-4.7-6.38L12 5.52z'
         fill='currentColor'
       />
       <circle
         opacity='.2'
-        cx='16.89'
-        cy='16.67'
-        r='2.73'
-        transform='rotate(90 16.9 16.67)'
+        cx='17.23'
+        cy='16.74'
+        r='2.92'
+        transform='rotate(90 17.23 16.74)'
         fill='currentColor'
       />
       <path
-        d='m3.93 11.08 2.51-4.14c.58-.95.87-1.42 1.3-1.68a2 2 0 0 1 .9-.28c.5-.03 1 .2 2.02.65.53.25.8.37 1.08.4a2 2 0 0 0 .56 0 4 4 0 0 0 1.09-.4c1.01-.45 1.52-.68 2-.65a2 2 0 0 1 .92.28c.42.26.71.73 1.29 1.68l2.52 4.14M10.1 16.67a3.5 3.5 0 0 1 1.95-.5c.79 0 1.28.13 1.94.5m-3.89 0a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 1 1 2.9-2.9'
+        d='m3.37 10.77 2.7-4.42c.67-1.12 1.01-1.68 1.53-1.93a2 2 0 0 1 .6-.2c.58-.07 1.17.2 2.36.73.63.28.95.42 1.28.45h.37c.33-.03.64-.17 1.27-.45 1.2-.54 1.79-.8 2.36-.72a2 2 0 0 1 .6.19c.52.25.86.81 1.54 1.93l2.7 4.42'
         stroke='currentColor'
       />
-      <path
-        d='M19.8 16.67a2.9 2.9 0 0 1-2.9 2.9 2.9 2.9 0 1 1 2.9-2.9m1.96-5.08A33 33 0 0 0 12 10.2c-3.63 0-7 .51-9.76 1.38'
-        stroke='currentColor'
-      />
+      <path d='M9.97 16.74c.7-.4 1.23-.53 2.08-.53s1.37.13 2.08.53' stroke='currentColor' />
+      <path d='M9.97 16.74a3.1 3.1 0 0 1-3.1 3.1 3.1 3.1 0 1 1 3.1-3.1' stroke='currentColor' />
+      <path d='M20.33 16.74a3.1 3.1 0 0 1-3.1 3.1 3.1 3.1 0 1 1 3.1-3.1' stroke='currentColor' />
+      <path d='M22.43 11.31A35 35 0 0 0 12 9.84c-3.88 0-7.47.54-10.43 1.47' stroke='currentColor' />
     </svg>
   )
 }

@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconMailCheck: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-mail-check'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.09 8.55c0-1.87 0-2.81.58-3.08s1.3.34 2.72 1.56l5.48 4.68c.62.53.93.8 1.3.8s.68-.27 1.3-.8l5.48-4.68c1.42-1.22 2.13-1.83 2.72-1.56.58.27.58 1.2.58 3.08v6.94c0 .32 0 .49-.05.64a2 2 0 0 1-.35.55L19.38 20H8.08c-2.82 0-4.23 0-5.11-.88s-.88-2.3-.88-5.12z'
+        fill='currentColor'
+      />
+      <path
+        d='M22.25 11.52V10c0-2.83 0-4.24-.88-5.12S19.07 4 16.25 4h-8.5c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v4c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h4.74'
+        stroke='currentColor'
+      />
+      <path
+        d='m3.34 5.1 4.47 4.5c2 2.02 3 3.03 4.26 3.03 1.24 0 2.25-1 4.25-3.02l4.49-4.5'
+        stroke='currentColor'
+      />
+      <path
+        d='m15.91 18.38.64.77c.72.88 1.08 1.32 1.55 1.32.48 0 .84-.44 1.55-1.32l3.07-3.8'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

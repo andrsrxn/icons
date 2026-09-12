@@ -4,11 +4,10 @@ export const IconApple: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,20 @@ export const IconApple: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'apple-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'apple-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M20.6 13.4c0 4.75-2.28 8.68-8.6 7.43-5.71 1.87-8.6-2.68-8.6-7.43S5.5 4.2 12 5.94c5.43-2.38 8.6 2.7 8.6 7.44'
+        d='M21.29 13.59c0 5.13-2.48 9.36-9.29 8.02-6.16 2.02-9.29-2.9-9.29-8.02C2.71 8.46 5 3.66 12 5.56c5.86-2.57 9.29 2.9 9.29 8.03'
         fill='currentColor'
       />
       <path
-        d='M3.4 13.4c0 3.68 1.74 8.25 5.56 8.05 1.26-.06 1.97-1.06 3.04-1.06s1.78 1 3.04 1.06c3.82.2 5.57-4.37 5.57-8.06 0-3.68-1.3-8.05-5.57-8.05-1.27 0-1.77.78-3.04.78s-1.77-.78-3.04-.78C4.8 5.34 3.4 9.7 3.4 13.39'
+        d='M2.71 13.59c0 3.97 1.9 8.9 6.01 8.7 1.36-.08 2.13-1.15 3.28-1.15s1.92 1.07 3.28 1.14c4.12.22 6-4.72 6-8.7s-1.4-8.68-6-8.68c-1.37 0-1.91.84-3.28.84s-1.9-.84-3.28-.84c-4.5 0-6 4.71-6 8.69'
         stroke='currentColor'
       />
-      <path
-        d='M6.9 13.3c-.1-.97.02-1.75.37-2.65a3.8 3.8 0 0 1 1.7-2.12M12 5.9a5 5 0 0 1 .02-2.05c.17-.88.96-1.77 2.72-1.38'
-        stroke='currentColor'
-      />
+      <path d='M6.5 13.49a6 6 0 0 1 .4-2.86 4 4 0 0 1 1.83-2.3' stroke='currentColor' />
+      <path d='M12 5.5a6 6 0 0 1 .03-2.2c.17-.95 1.03-1.91 2.93-1.5' stroke='currentColor' />
     </svg>
   )
 }

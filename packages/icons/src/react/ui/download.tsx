@@ -4,11 +4,10 @@ export const IconDownload: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,23 @@ export const IconDownload: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'download-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'download-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M3.08 12.84h17.84v2.32c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H9.08c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
+        d='M2.4 14.2h19.2v.77c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H8.4c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
         fill='currentColor'
       />
       <path
-        d='M3.35 12.84v2.32c0 2.83 0 4.24.87 5.12.88.88 2.3.88 5.13.88h5.3c2.83 0 4.25 0 5.13-.88s.88-2.3.88-5.12v-2.32'
+        d='M2.69 14.2v.77c0 2.83 0 4.24.88 5.12.87.88 2.29.88 5.12.88h6.62c2.83 0 4.25 0 5.12-.88s.88-2.3.88-5.12v-.78'
         stroke='currentColor'
       />
       <path
-        d='m16.9 10.47-2.07 2.07c-1.33 1.33-2 2-2.83 2-.82 0-1.5-.67-2.83-2l-2.06-2.07M12 1.9v12.01'
+        d='m17.37 10.6-2.55 2.57c-1.34 1.33-2 2-2.83 2s-1.5-.67-2.83-2L6.59 10.6'
         stroke='currentColor'
       />
+      <path d='M11.98 2v12.82' stroke='currentColor' />
     </svg>
   )
 }

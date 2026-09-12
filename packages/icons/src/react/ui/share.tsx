@@ -4,11 +4,10 @@ export const IconShare: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,16 +23,23 @@ export const IconShare: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'share-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'share-title'}>{title}</title> : null}
-      <rect opacity='.2' x='3.54' y='11.9' width='16.93' height='9.39' rx='3' fill='currentColor' />
       <path
-        d='M17.66 11.9a2.8 2.8 0 0 1 2.8 2.8v1.9c0 1.58 0 2.37-.29 2.98A3 3 0 0 1 18.75 21c-.6.3-1.4.3-2.98.3H8.23c-1.58 0-2.37 0-2.98-.3a3 3 0 0 1-1.42-1.42c-.3-.61-.3-1.4-.3-2.98v-1.9a2.8 2.8 0 0 1 2.81-2.8m.86-5.4 1.97-1.97c1.33-1.34 2-2 2.83-2 .82 0 1.5.66 2.83 2L16.8 6.5M12 15.45V2.77'
+        opacity='.2'
+        d='M3.73 12h16.5v4.23c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88h-4.5c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
+        fill='currentColor'
+      />
+      <path
+        d='M3.73 12v4.23c0 2.82 0 4.24.88 5.12s2.3.88 5.12.88h4.5c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V12'
         stroke='currentColor'
       />
+      <path
+        d='m17.1 6.13-2.28-2.3c-1.34-1.33-2-2-2.83-2s-1.5.67-2.83 2l-2.3 2.3'
+        stroke='currentColor'
+      />
+      <path d='M11.98 16V2.68' stroke='currentColor' />
     </svg>
   )
 }

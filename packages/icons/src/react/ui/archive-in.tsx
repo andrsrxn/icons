@@ -4,11 +4,10 @@ export const IconArchiveIn: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,30 +23,33 @@ export const IconArchiveIn: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'archive-in-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'archive-in-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='13.31'
-        height='18.56'
+        width='14.27'
+        height='20.46'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.28 20.66)'
+        transform='matrix(0 -1 -1 0 22.23 21.28)'
         fill='currentColor'
       />
       <rect
-        width='13.31'
-        height='18.56'
+        width='14.27'
+        height='20.46'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.28 20.66)'
+        transform='matrix(0 -1 -1 0 22.23 21.28)'
         stroke='currentColor'
       />
       <path
-        d='m20.54 8.34-.25-.5c-1.06-2.18-1.6-3.28-2.57-3.89-.97-.6-2.19-.6-4.62-.6h-2.16c-2.3 0-3.46 0-4.4.55-.94.56-1.5 1.57-2.6 3.6l-.48.84m11.8 6.39-.43.44c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.43-.44M12 11v5.93'
+        d='m21.56 8.08-.5-.99c-1.08-2.12-1.62-3.19-2.59-3.78s-2.15-.59-4.54-.59h-3.78c-2.26 0-3.4 0-4.32.54S4.33 4.78 3.2 6.74l-.77 1.34'
         stroke='currentColor'
       />
+      <path
+        d='m15.6 15.01-.77.77c-1.33 1.34-2 2-2.83 2s-1.5-.66-2.83-2l-.77-.77'
+        stroke='currentColor'
+      />
+      <path d='M12 10.9v6.53' stroke='currentColor' />
     </svg>
   )
 }

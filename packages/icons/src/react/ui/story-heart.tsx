@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconStoryHeart: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-story-heart'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M1.82 11.98c0 5.68 4.59 10.29 10.25 10.29s10.25-4.6 10.25-10.3c0-5.68-4.6-10.28-10.25-10.28S1.82 6.29 1.82 11.98m10.7-2.69 2.74-1.55 2.88 2.88-1.63 3.92-3.99 3.33-4.5-3.33-1.48-3.92 1.92-2.88z'
+        fill='currentColor'
+      />
+      <path d='M12 22.25a10.25 10.25 0 0 1 0-20.5' stroke='currentColor' />
+      <path d='M16.39 2.7a10.3 10.3 0 0 1 5.06 5.18' stroke='currentColor' />
+      <path d='M18.92 19.62q-.88.79-1.92 1.36' stroke='currentColor' />
+      <path d='M22.32 12c0 1.7-.42 3.3-1.15 4.72' stroke='currentColor' />
+      <path
+        d='M15.14 7.99a3.6 3.6 0 0 0-2.86 1.65A3.6 3.6 0 0 0 9.4 7.99c-1.83 0-3.2 2.09-2.62 4.3.6 2.2 4.1 4 5.49 5.57 1.39-1.57 4.89-3.37 5.48-5.58s-.79-4.3-2.62-4.3'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

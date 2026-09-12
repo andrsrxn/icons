@@ -4,11 +4,10 @@ export const IconExclude: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,12 @@ export const IconExclude: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'exclude-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'exclude-title'}>{title}</title> : null}
-      <path opacity='.2' d='M8.78 8.77h6.38v6.36H8.78z' fill='currentColor' />
-      <rect x='2.74' y='2.7' width='12.98' height='12.98' rx='3' stroke='currentColor' />
-      <rect x='8.28' y='8.31' width='12.98' height='12.98' rx='3' stroke='currentColor' />
+      <path opacity='.2' d='M8.46 8.45h7.01v6.99h-7z' fill='currentColor' />
+      <rect x='1.81' y='1.78' width='14.27' height='14.27' rx='3' stroke='currentColor' />
+      <rect x='7.91' y='7.95' width='14.27' height='14.27' rx='3' stroke='currentColor' />
     </svg>
   )
 }

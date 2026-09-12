@@ -4,11 +4,10 @@ export const IconToyBrick: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,14 +23,28 @@ export const IconToyBrick: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'toy-brick-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'toy-brick-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.43' y='9.3' width='19.14' height='9.71' rx='2' fill='currentColor' />
+      <rect
+        opacity='.2'
+        x='1.43'
+        y='9.01'
+        width='21.13'
+        height='10.72'
+        rx='2'
+        fill='currentColor'
+      />
       <path
-        d='M2.76 14.15c0-1.73 0-2.6.34-3.25a3 3 0 0 1 1.26-1.26C5 9.3 5.88 9.3 7.6 9.3h8.78c1.73 0 2.6 0 3.25.34a3 3 0 0 1 1.26 1.26c.34.65.34 1.52.34 3.25s0 2.6-.34 3.25a3 3 0 0 1-1.26 1.26C19 19 18.12 19 16.4 19H7.61c-1.73 0-2.6 0-3.25-.34A3 3 0 0 1 3.1 17.4c-.34-.66-.34-1.52-.34-3.25m7.39-4.85V7c0-.94 0-1.42-.29-1.7-.3-.3-.76-.3-1.7-.3H7.3c-.94 0-1.41 0-1.7.3-.3.28-.3.76-.3 1.7v2.3m13.42 0V7c0-.94 0-1.42-.3-1.7-.29-.3-.76-.3-1.7-.3h-.85c-.94 0-1.41 0-1.7.3-.3.28-.3.76-.3 1.7v2.3'
+        d='M1.8 14.37c0-2.2 0-3.31.55-4.1a3 3 0 0 1 .7-.7C3.83 9 4.94 9 7.15 9h9.7c2.21 0 3.32 0 4.1.56a3 3 0 0 1 .7.7c.56.79.56 1.9.56 4.1 0 2.21 0 3.32-.56 4.1a3 3 0 0 1-.7.7c-.78.56-1.89.56-4.1.56h-9.7c-2.21 0-3.32 0-4.1-.55a3 3 0 0 1-.7-.71c-.56-.78-.56-1.89-.56-4.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.96 9.01V6.27c0-.95 0-1.42-.3-1.7-.28-.3-.76-.3-1.7-.3H6.61c-.94 0-1.41 0-1.7.3-.3.28-.3.75-.3 1.7V9'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.42 9.01V6.27c0-.95 0-1.42-.3-1.7-.29-.3-.76-.3-1.7-.3h-1.35c-.95 0-1.42 0-1.71.3-.3.28-.3.75-.3 1.7V9'
         stroke='currentColor'
       />
     </svg>

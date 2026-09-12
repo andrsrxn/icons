@@ -4,11 +4,10 @@ export const IconCurrencyGtq: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,11 @@ export const IconCurrencyGtq: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'currency-gtq-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'currency-gtq-title'}>{title}</title> : null}
-      <path
-        opacity='.2'
-        d='M3 11.64a8.72 8.72 0 1 0 17.43 0 8.72 8.72 0 0 0-17.43 0'
-        fill='currentColor'
-      />
-      <path
-        d='M3 11.64a8.7 8.7 0 0 0 8.72 8.72 8.72 8.72 0 1 0-8.71-8.72m9.79 2.01L21 21'
-        stroke='currentColor'
-      />
+      <path d='M3 11.64a8.7 8.7 0 0 0 8.72 8.72 8.72 8.72 0 1 0-8.71-8.72' stroke='currentColor' />
+      <path d='M12.8 13.65 21 21' stroke='currentColor' />
     </svg>
   )
 }

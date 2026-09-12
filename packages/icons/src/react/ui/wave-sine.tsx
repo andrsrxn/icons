@@ -4,11 +4,10 @@ export const IconWaveSine: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,11 @@ export const IconWaveSine: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'wave-sine-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'wave-sine-title'}>{title}</title> : null}
       <path
-        d='M2.96 8.3C2.96 5.61 5.06 2.74 8 3c6.58.57.78 17.28 8.14 18 3.13.3 4.9-3.32 4.9-6.05'
+        d='M2.73 8.2c0-2.75 2.16-5.7 5.16-5.43 6.74.58.8 17.72 8.35 18.46 3.21.32 5.03-3.4 5.03-6.2'
         stroke='currentColor'
       />
     </svg>

@@ -1,6 +1,6 @@
 {
   "categories": [
-    "mail"
+    "mail", "social", "tools"
   ],
   "tags": [
     "retry",
@@ -9,6 +9,5 @@
     "email",
     "message",
     "repeat"
-  ],
-  "rtl": true
+  ]
 }

@@ -8,5 +8,6 @@
     "bullets",
     "format",
     "menu"
-  ]
+  ],
+  "rtl": true
 }

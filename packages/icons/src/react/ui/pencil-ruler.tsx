@@ -4,11 +4,10 @@ export const IconPencilRuler: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,43 +23,52 @@ export const IconPencilRuler: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'pencil-ruler-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'pencil-ruler-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='6.76'
-        y='13.34'
-        width='7'
-        height='9.3'
+        x='6.71'
+        y='13.35'
+        width='7.08'
+        height='9.4'
         rx='2'
-        transform='rotate(-135 6.76 13.34)'
+        transform='rotate(-135 6.71 13.35)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        x='15.61'
-        y='22.19'
-        width='7.21'
-        height='9.3'
+        x='15.66'
+        y='22.29'
+        width='7.29'
+        height='9.4'
         rx='2'
-        transform='rotate(-135 15.61 22.19)'
+        transform='rotate(-135 15.66 22.3)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='5.23'
-        height='5.86'
+        width='5.29'
+        height='5.92'
         rx='1'
-        transform='scale(1 -1)rotate(45 21.1 17.2)'
+        transform='scale(1 -1)rotate(45 21.1 17.3)'
         fill='currentColor'
       />
+      <path d='M18.58 9.15 14.73 5.3' stroke='currentColor' />
       <path
-        d='m18.4 9.08-3.12-3.12m-10.3 15.3c.82 0 1.23 0 1.6-.15.36-.15.65-.44 1.23-1.02L20.23 7.67a5 5 0 0 0 .92-1.05 2 2 0 0 0 0-1.84 5 5 0 0 0-.92-1.05 5 5 0 0 0-1.05-.92 2 2 0 0 0-1.84 0c-.28.15-.53.4-1.05.92L3.87 16.15c-.58.58-.87.87-1.02 1.24-.15.36-.15.77-.15 1.6v.27c0 .95 0 1.42.29 1.71.3.3.76.3 1.7.3zM17.37 10.8l2 1.99c1.32 1.33 2 2 2 2.82 0 .83-.68 1.5-2 2.83l-.93.92c-1.33 1.33-2 2-2.83 2-.82 0-1.5-.67-2.82-2l-2-1.99M13.08 6.5l-1.87-1.86c-1.33-1.33-2-2-2.82-2-.83 0-1.5.67-2.83 2l-.92.92c-1.33 1.33-2 2-2 2.83 0 .82.67 1.5 2 2.82l1.86 1.87M11 4.63 8.34 7.29m10.87 5.43-2.66 2.66'
+        d='M4.93 21.36c.82 0 1.22 0 1.6-.16.36-.15.65-.44 1.23-1.01L20.32 7.62c.54-.54.8-.8.95-1.1a2 2 0 0 0 0-1.79 5 5 0 0 0-.95-1.1 5 5 0 0 0-1.1-.94 2 2 0 0 0-1.79 0c-.28.14-.55.41-1.09.95L3.77 16.2c-.57.58-.86.87-1.01 1.24s-.16.77-.16 1.6v.32c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3z'
         stroke='currentColor'
       />
+      <path
+        d='m17.44 10.78 2.04 2.04c1.33 1.33 2 2 2 2.83s-.67 1.5-2 2.83l-1 .99c-1.33 1.33-2 2-2.82 2-.83 0-1.5-.67-2.83-2l-2.04-2.04'
+        stroke='currentColor'
+      />
+      <path
+        d='m13.1 6.44-1.92-1.92c-1.33-1.33-2-2-2.83-2s-1.5.67-2.83 2l-.98 1c-1.34 1.33-2 2-2 2.82 0 .83.66 1.5 2 2.83l1.91 1.92'
+        stroke='currentColor'
+      />
+      <path d='m11 4.54-2.7 2.7' stroke='currentColor' />
+      <path d='m19.3 12.72-2.7 2.7' stroke='currentColor' />
     </svg>
   )
 }

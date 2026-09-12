@@ -4,11 +4,10 @@ export const IconCrown: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,25 @@ export const IconCrown: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'crown-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'crown-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='3.46'
-        y='16.41'
-        width='16.62'
-        height='4.72'
+        x='3.37'
+        y='16.57'
+        width='16.8'
+        height='4.77'
         rx='1.5'
         fill='currentColor'
       />
-      <rect x='3.46' y='16.41' width='16.62' height='4.72' rx='1.5' stroke='currentColor' />
+      <rect x='3.37' y='16.57' width='16.8' height='4.77' rx='1.5' stroke='currentColor' />
       <path
-        d='m5.47 16-1.96-5c-.7-1.77-1.04-2.66-.72-3.1a1 1 0 0 1 .35-.3c.48-.25 1.31.22 2.97 1.17.73.42 1.1.63 1.44.57a1 1 0 0 0 .3-.1c.31-.16.48-.54.82-1.31L9.9 5.14c.8-1.82 1.2-2.74 1.87-2.73.65 0 1.04.92 1.81 2.77l1.08 2.6c.4.93.6 1.4 1 1.55.42.15.87-.08 1.77-.55l.2-.1c2-1.04 2.99-1.56 3.5-1.1.52.47.11 1.5-.71 3.6l-1.89 4.78'
+        d='m5.4 16.17-2.47-5.19c-.82-1.72-1.23-2.58-.8-3.07.4-.5 1.33-.23 3.16.3l1.07.3c.78.22 1.17.33 1.51.18s.5-.52.85-1.26l1.11-2.4c.83-1.78 1.24-2.67 1.9-2.66.65.02 1.03.93 1.77 2.76l.9 2.24c.32.77.47 1.15.8 1.32s.74.07 1.55-.13l2.12-.54c1.8-.45 2.7-.67 3.1-.18s0 1.33-.81 3l-2.57 5.28'
         stroke='currentColor'
       />
       <path
-        d='M12.73 12.51a.73.73 0 1 1-1.46 0 .73.73 0 0 1 1.46 0'
+        d='M12.74 12.63a.74.74 0 1 1-1.48 0 .74.74 0 0 1 1.48 0'
         fill='currentColor'
         stroke='currentColor'
       />

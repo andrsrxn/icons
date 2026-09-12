@@ -4,11 +4,10 @@ export const IconWomen: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,18 @@ export const IconWomen: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'women-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'women-title'}>{title}</title> : null}
-      <circle opacity='.2' cx='12.03' cy='4.73' r='2.26' fill='currentColor' />
+      <circle opacity='.2' cx='12.05' cy='4.18' r='2.43' fill='currentColor' />
       <path
         opacity='.2'
-        d='M8.95 10.68c.43-.7.64-1.05.99-1.24s.75-.19 1.57-.19h.97c.88 0 1.32 0 1.67.21.36.22.56.6.98 1.37l1.9 3.56c.52.97-.19 2.15-1.29 2.15-.8 0-1.46.65-1.46 1.46v1.3c0 .68 0 1.02-.1 1.3a1.5 1.5 0 0 1-.84.83c-.27.1-.61.1-1.29.1-.67 0-1.01 0-1.28-.1a1.5 1.5 0 0 1-.83-.84c-.11-.27-.11-.6-.11-1.28v-1.35a1.5 1.5 0 0 0-1.42-1.42h-.48a1.5 1.5 0 0 1-1.22-2.2l.15-.24z'
+        d='M8.8 10.48c.43-.7.65-1.05.99-1.24.34-.2.75-.2 1.57-.2h1.31c.88 0 1.31 0 1.67.22.36.21.56.6.98 1.37l2.1 3.94.1.17a1.5 1.5 0 0 1-1.29 2.14h-.32a1.5 1.5 0 0 0-1.44 1.44v1.53c0 .84 0 1.26-.16 1.58a1.5 1.5 0 0 1-.67.66c-.32.16-.73.16-1.57.16-.83 0-1.24 0-1.56-.16a1.5 1.5 0 0 1-.67-.66c-.16-.32-.16-.74-.16-1.57V18.2a1.5 1.5 0 0 0-1.32-1.31l-.4-.01c-.34 0-.52 0-.63-.02a1.5 1.5 0 0 1-1.15-2.05c.04-.11.13-.26.31-.55z'
         fill='currentColor'
       />
-      <circle cx='12.03' cy='4.73' r='2.26' stroke='currentColor' />
+      <circle cx='12.05' cy='4.18' r='2.43' stroke='currentColor' />
       <path
-        d='M8.95 10.68c.43-.7.64-1.05.99-1.24s.75-.19 1.57-.19h.97c.88 0 1.32 0 1.67.21.36.22.56.6.98 1.37l1.9 3.56c.52.97-.19 2.15-1.29 2.15-.8 0-1.46.65-1.46 1.46v1.3c0 .69 0 1.02-.1 1.3a1.5 1.5 0 0 1-.84.83c-.27.1-.61.1-1.29.1-.67 0-1.01 0-1.28-.1a1.5 1.5 0 0 1-.83-.84c-.11-.27-.11-.6-.11-1.28v-1.35a1.5 1.5 0 0 0-1.42-1.42h-.48a1.5 1.5 0 0 1-1.22-2.2l.15-.24z'
+        d='M8.8 10.48c.43-.7.65-1.05.99-1.24.34-.2.75-.2 1.57-.2h1.31c.88 0 1.31 0 1.67.22.36.21.56.6.98 1.37l2.1 3.94.1.17a1.5 1.5 0 0 1-1.29 2.14h-.32a1.5 1.5 0 0 0-1.44 1.44v1.53c0 .84 0 1.26-.16 1.58a1.5 1.5 0 0 1-.67.66c-.32.16-.73.16-1.57.16-.83 0-1.24 0-1.56-.16a1.5 1.5 0 0 1-.67-.66c-.16-.32-.16-.74-.16-1.57V18.2a1.5 1.5 0 0 0-1.32-1.31l-.4-.01c-.34 0-.52 0-.63-.02a1.5 1.5 0 0 1-1.15-2.05c.04-.11.13-.26.31-.55z'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconListEdit: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,25 @@ export const IconListEdit: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-edit-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'list-edit-title'}>{title}</title> : null}
-      <path d='M21.42 6H2.67m9.13 6H2.68m5.05 6H2.67' stroke='currentColor' />
+      <path d='M21.42 6H2.67' stroke='currentColor' />
+      <path d='M11.8 12H2.68' stroke='currentColor' />
+      <path d='M7.73 18H2.67' stroke='currentColor' />
       <rect
         opacity='.2'
         width='2.95'
         height='3.31'
         rx='1'
-        transform='scale(1 -1)rotate(45 27.14 17.43)'
+        transform='scale(1 -1)rotate(45 27.22 18.34)'
         fill='currentColor'
       />
       <path
-        d='M13.24 20.49c.21 0 .32.01.42-.03.1-.03.17-.11.33-.26l7.25-7.26c.47-.47.7-.7.77-.98a1 1 0 0 0 0-.46c-.06-.27-.3-.5-.77-.98-.46-.47-.7-.7-.98-.77a1 1 0 0 0-.45 0c-.28.07-.51.3-.98.77l-7.26 7.26c-.15.15-.23.23-.27.33s-.03.2-.02.42l.04.96c.02.44.03.65.16.8.14.13.36.14.8.16zm7.06-6.86-1.97-1.97'
+        d='M13.77 20.5c.2 0 .3 0 .4-.03a1 1 0 0 0 .3-.26l7.28-7.27c.47-.47.7-.7.77-.98a1 1 0 0 0 0-.46c-.07-.27-.3-.5-.77-.98-.47-.47-.7-.7-.98-.77a1 1 0 0 0-.45 0c-.28.07-.52.3-.99.77l-7.27 7.28c-.14.14-.22.21-.26.3-.03.1-.03.2-.03.4v1c0 .48 0 .71.14.86s.39.15.86.15z'
         stroke='currentColor'
       />
+      <path d='m20.56 13.89-2.23-2.23' stroke='currentColor' />
     </svg>
   )
 }

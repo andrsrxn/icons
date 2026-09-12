@@ -4,11 +4,10 @@ export const IconServer: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,60 +23,83 @@ export const IconServer: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'server-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'server-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        x='2.83'
+        x='1.78'
         y='9'
         width='6.11'
-        height='18.34'
+        height='20.43'
         rx='2'
-        transform='rotate(-90 2.83 9)'
+        transform='rotate(-90 1.78 9)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        x='2.83'
+        x='1.78'
         y='21.23'
         width='6.11'
-        height='18.34'
+        height='20.43'
         rx='2'
-        transform='rotate(-90 2.83 21.23)'
+        transform='rotate(-90 1.78 21.23)'
         fill='currentColor'
       />
       <rect
-        x='2.83'
+        x='1.78'
         y='9'
         width='6.11'
-        height='18.34'
+        height='20.43'
         rx='2'
-        transform='rotate(-90 2.83 9)'
+        transform='rotate(-90 1.78 9)'
         stroke='currentColor'
       />
       <rect
-        x='2.83'
+        x='1.78'
         y='15.11'
         width='6.11'
-        height='18.34'
+        height='20.43'
         rx='2'
-        transform='rotate(-90 2.83 15.11)'
+        transform='rotate(-90 1.78 15.11)'
         stroke='currentColor'
       />
       <rect
-        x='2.83'
+        x='1.78'
         y='21.23'
         width='6.11'
-        height='18.34'
+        height='20.43'
         rx='2'
-        transform='rotate(-90 2.83 21.23)'
+        transform='rotate(-90 1.78 21.23)'
         stroke='currentColor'
       />
       <path
-        d='M6.83 5.94a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.12a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.11a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m4-12.23a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.12a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0m0 6.11a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0'
+        d='M5.83 5.94a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.83 12.06a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.83 18.17a.41.41 0 1 1-.83 0 .41.41 0 0 1 .83 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.93 5.94a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.93 12.06a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.93 18.17a.41.41 0 1 1-.82 0 .41.41 0 0 1 .82 0'
         fill='currentColor'
         stroke='currentColor'
       />

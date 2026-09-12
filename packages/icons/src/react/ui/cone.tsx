@@ -4,11 +4,10 @@ export const IconCone: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,15 @@ export const IconCone: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'cone-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'cone-title'}>{title}</title> : null}
-      <ellipse opacity='.2' cx='12' cy='18.61' rx='5.99' ry='2.89' fill='currentColor' />
+      <ellipse opacity='.2' cx='12' cy='19.21' rx='6.44' ry='3.09' fill='currentColor' />
       <path
-        d='m18.15 18.1-2.32-7.65c-1.57-5.17-2.35-7.75-3.84-7.75s-2.26 2.6-3.82 7.75L5.85 18.1'
+        d='m18.62 18.68-2.8-9.07c-1.57-5.07-2.35-7.6-3.83-7.6-1.47 0-2.25 2.53-3.82 7.6l-2.79 9.07'
         stroke='currentColor'
       />
-      <ellipse cx='12' cy='18.53' rx='6.22' ry='2.89' stroke='currentColor' />
+      <ellipse cx='12' cy='19.13' rx='6.69' ry='3.09' stroke='currentColor' />
     </svg>
   )
 }

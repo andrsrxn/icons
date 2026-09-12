@@ -10,6 +10,7 @@
     "clear",
     "remove",
     "reset",
-    "cancel"
+    "cancel",
+    "pipeline"
   ]
 }

@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconBroccoli: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-broccoli'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m17.72 17.9-2.38.33a1.8 1.8 0 0 1-1.58-.55 1.82 1.82 0 0 0-2.94.4l-1.77 3.43a1 1 0 0 1-1.5.34l-4.42-3.43a1 1 0 0 1-.07-1.52l2.85-2.64a2 2 0 0 0-.3-3.16l-.26-.17a2 2 0 0 1-.9-2.01L4.74 7a2 2 0 0 1 1.4-1.6l3.23-1a2 2 0 0 0 .76-.44L11.6 2.6a2 2 0 0 1 2.34-.27l1.58.89a2 2 0 0 0 .9.26l1.23.05a2 2 0 0 1 1.72 1.12l.81 1.66 1.19 1.98a2 2 0 0 1-.03 2.1l-1.11 1.75a2 2 0 0 0-.3.77l-.51 3.32a2 2 0 0 1-1.7 1.67'
+        fill='currentColor'
+      />
+      <path
+        d='M7.68 12.54a4.07 4.07 0 0 1-3.24-4.77 4.07 4.07 0 0 1 4.7-3.32c.94.17 1.73.65 2.31 1.32'
+        stroke='currentColor'
+      />
+      <path d='M10.07 4.58c-.14-1.35.95-2.58 2.44-2.74s2.81.81 2.96 2.17' stroke='currentColor' />
+      <path
+        d='M19.65 12.32c1.36-.14 2.33-1.47 2.17-2.96a2.7 2.7 0 0 0-1.72-2.31'
+        stroke='currentColor'
+      />
+      <path
+        d='M18.88 8.1c1.1-.8 1.28-2.43.4-3.64-.89-1.22-2.5-1.55-3.6-.74'
+        stroke='currentColor'
+      />
+      <path d='M14.48 10.83c0-1.07-.95-1.94-2.12-1.94s-2.13.87-2.13 1.94' stroke='currentColor' />
+      <path
+        d='M12.3 16.44c.78 1.92 3.12 2.77 5.22 1.9 2.1-.86 3.16-3.12 2.38-5.03a3.5 3.5 0 0 0-1.72-1.81'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.96 12.15c-.44 1.58-1.72 2.8-3.22 3.7-1.45.88-2.18 1.32-2.22 1.84-.03.52.56 1 1.74 1.95l1.63 1.31c1.23 1 1.85 1.5 2.35 1.36s.8-.99 1.42-2.7c.72-2 1.95-3.8 3.84-4.74'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

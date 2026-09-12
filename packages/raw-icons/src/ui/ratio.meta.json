@@ -7,6 +7,7 @@
     "math",
     "scale",
     "divide",
-    "fraction"
+    "fraction",
+    "aspect"
   ]
 }

@@ -4,11 +4,10 @@ export const IconXCircle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,20 @@ export const IconXCircle: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'x-circle-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'x-circle-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12'
         cy='12'
-        r='9.43'
+        r='10.27'
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='m8.22 8.22 7.56 7.56m-7.56 0 7.56-7.56' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.27' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path d='m7.88 7.88 8.24 8.24' stroke='currentColor' />
+      <path d='m7.88 16.12 8.24-8.24' stroke='currentColor' />
     </svg>
   )
 }

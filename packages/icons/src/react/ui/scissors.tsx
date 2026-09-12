@@ -4,11 +4,10 @@ export const IconScissors: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconScissors: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'scissors-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'scissors-title'}>{title}</title> : null}
       <path
         opacity='.2'
         d='M3.02 5.74a3.3 3.3 0 1 0 6.58 0 3.3 3.3 0 0 0-6.58 0'
@@ -40,10 +37,9 @@ export const IconScissors: Icon = ({
         d='M3.02 18.26a3.3 3.3 0 1 0 6.58 0 3.3 3.3 0 0 0-6.58 0'
         fill='currentColor'
       />
-      <path
-        d='M3.02 18.26a3.3 3.3 0 0 0 3.3 3.3 3.3 3.3 0 1 0-3.3-3.3M21.1 5.75 9.04 15.99m0-8.17L21.1 18.07'
-        stroke='currentColor'
-      />
+      <path d='M3.02 18.26a3.3 3.3 0 0 0 3.3 3.3 3.3 3.3 0 1 0-3.3-3.3' stroke='currentColor' />
+      <path d='M21.1 5.75 9.04 15.99' stroke='currentColor' />
+      <path d='M9.04 7.82 21.1 18.07' stroke='currentColor' />
     </svg>
   )
 }

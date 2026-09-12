@@ -1,6 +1,6 @@
 {
   "categories": [
-    "typography"
+    "typography", "editor"
   ],
   "tags": [
     "font",
@@ -10,5 +10,6 @@
     "gap",
     "format",
     "measure"
-  ]
+  ],
+  "rtl": true
 }

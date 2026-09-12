@@ -4,11 +4,10 @@ export const IconFemale: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,26 @@ export const IconFemale: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'female-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'female-title'}>{title}</title> : null}
       <circle
         opacity='.2'
         cx='12.06'
-        cy='9.04'
-        r='6.39'
-        transform='rotate(135 12.06 9.04)'
+        cy='8.92'
+        r='6.31'
+        transform='rotate(135 12.06 8.92)'
         fill='currentColor'
       />
       <circle
         cx='12.06'
-        cy='9.04'
-        r='6.39'
-        transform='rotate(135 12.06 9.04)'
+        cy='8.92'
+        r='6.31'
+        transform='rotate(135 12.06 8.92)'
         stroke='currentColor'
       />
-      <path d='M12.06 15.48v6.22m-3.17-2.73h6.2' stroke='currentColor' />
+      <path d='M12.06 15.27v6.13' stroke='currentColor' />
+      <path d='M8.62 19.5h6.73' stroke='currentColor' />
     </svg>
   )
 }

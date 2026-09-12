@@ -4,11 +4,10 @@ export const IconChartPie: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,17 @@ export const IconChartPie: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chart-pie-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'chart-pie-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12 21.43c-2.19 0-4.2-.75-5.8-2L12 12V2.57a9.43 9.43 0 1 1 0 18.86'
+        d='M12 22.26c-2.38 0-4.58-.81-6.32-2.17L12 12V1.74a10.26 10.26 0 0 1 0 20.52'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='9.43' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.26' transform='rotate(90 12 12)' stroke='currentColor' />
       <path
-        d='m6.23 19.09 4.82-5.67c.47-.56.7-.83.83-1.17.12-.33.12-.7.12-1.42V2.57'
+        d='m5.72 19.71 5.33-6.26c.47-.56.7-.84.83-1.17.12-.33.12-.7.12-1.43V1.74'
         stroke='currentColor'
       />
     </svg>

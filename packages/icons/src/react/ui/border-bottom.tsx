@@ -4,11 +4,10 @@ export const IconBorderBottom: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconBorderBottom: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'border-bottom-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'border-bottom-title'}>{title}</title> : null}
       <rect
         opacity='.2'
         x='2.76'
@@ -45,9 +42,11 @@ export const IconBorderBottom: Icon = ({
         strokeDasharray='4 4'
       />
       <path
-        d='M2.76 18v.43A3 3 0 0 0 6 21.24h12.43a3 3 0 0 0 2.8-2.8l.01-.44M12 15.37V8.63M15.37 12H8.63'
+        d='M2.76 18v.43A3 3 0 0 0 6 21.24h12.43a3 3 0 0 0 2.8-2.8l.01-.44'
         stroke='currentColor'
       />
+      <path d='M12 15.37V8.63' stroke='currentColor' />
+      <path d='M15.37 12H8.63' stroke='currentColor' />
     </svg>
   )
 }

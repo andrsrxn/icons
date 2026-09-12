@@ -4,11 +4,10 @@ export const IconRollerBrush: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,43 +23,41 @@ export const IconRollerBrush: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'roller-brush-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'roller-brush-title'}>{title}</title> : null}
       <rect
         opacity='.2'
-        width='4.97'
-        height='15.15'
+        width='5.5'
+        height='16.77'
         rx='2'
-        transform='matrix(0 -1 -1 0 17.94 8.12)'
+        transform='matrix(0 -1 -1 0 18.46 7.5)'
         fill='currentColor'
       />
       <rect
         opacity='.2'
-        width='3.69'
-        height='5.47'
+        width='4.09'
+        height='6.05'
         rx='1'
-        transform='matrix(-1 0 0 1 14.75 15.73)'
+        transform='matrix(-1 0 0 1 14.93 15.94)'
         fill='currentColor'
       />
       <rect
-        width='4.97'
-        height='15.15'
+        width='5.5'
+        height='16.77'
         rx='2'
-        transform='matrix(0 -1 -1 0 17.94 8.12)'
+        transform='matrix(0 -1 -1 0 18.46 7.5)'
         stroke='currentColor'
       />
       <rect
-        width='3.69'
-        height='5.47'
+        width='4.09'
+        height='6.05'
         rx='1'
-        transform='matrix(-1 0 0 1 14.75 15.73)'
+        transform='matrix(-1 0 0 1 14.93 15.94)'
         stroke='currentColor'
       />
       <path
-        d='M17.96 5.5h.85a2.6 2.6 0 0 1 .75 5.1l-3.63 1.08c-.84.25-1.26.38-1.6.58a3 3 0 0 0-1.32 1.78c-.1.39-.1.82-.1 1.7'
+        d='M18.48 4.62h.94a2.88 2.88 0 0 1 .83 5.64l-4.02 1.2c-1.14.34-1.72.5-2.15.84a3 3 0 0 0-1 1.34c-.2.5-.2 1.1-.2 2.3'
         stroke='currentColor'
       />
     </svg>

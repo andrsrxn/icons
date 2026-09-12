@@ -4,11 +4,10 @@ export const IconKeyEnter: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,15 @@ export const IconKeyEnter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'key-enter-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'key-enter-title'}>{title}</title> : null}
       <path
-        d='M3.38 13.53H16.7c1.89 0 2.83 0 3.42-.59.58-.58.58-1.53.58-3.41V7.49'
+        d='M2.97 13.6h11.95c2.23 0 3.35 0 4.2-.44a4 4 0 0 0 1.76-1.76c.43-.85.43-1.97.43-4.2'
         stroke='currentColor'
       />
       <path
-        d='M6.11 17.38 5.1 16.36c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l1-1.02'
+        d='m5.87 17.66-1.25-1.24c-1.33-1.33-2-2-2-2.83 0-.82.67-1.5 2-2.83l1.25-1.24'
         stroke='currentColor'
       />
     </svg>

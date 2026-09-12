@@ -4,11 +4,10 @@ export const IconAccessibility: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,26 @@ export const IconAccessibility: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'accessibility-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'accessibility-title'}>{title}</title> : null}
       <path
-        d='m6.2 8.86 3.27 1.3c1.23.48 1.84.72 2.18 1.23s.35 1.17.35 2.49v1.46c0 .69 0 1.03-.11 1.35s-.33.6-.75 1.13l-3 3.8M17.8 8.86l-3.27 1.3c-1.23.48-1.84.72-2.18 1.23S12 12.56 12 13.88v1.46c0 .69 0 1.03.11 1.35s.33.6.75 1.13l3 3.8'
+        d='m5.75 8.55 3.72 1.48c1.23.48 1.84.72 2.18 1.23s.35 1.17.35 2.49v1.89c0 .69 0 1.03-.11 1.35s-.33.59-.75 1.13l-3.3 4.18'
+        stroke='currentColor'
+      />
+      <path
+        d='m18.25 8.55-3.72 1.48c-1.23.48-1.84.72-2.18 1.23S12 12.43 12 13.75v1.89c0 .69 0 1.03.11 1.35s.33.59.75 1.13l3.3 4.18'
         stroke='currentColor'
       />
       <circle
         opacity='.2'
         cx='12'
-        cy='5.17'
-        r='2.67'
-        transform='rotate(90 12 5.17)'
+        cy='4.58'
+        r='2.88'
+        transform='rotate(90 12 4.58)'
         fill='currentColor'
       />
-      <circle cx='12' cy='5.17' r='2.67' transform='rotate(90 12 5.17)' stroke='currentColor' />
+      <circle cx='12' cy='4.58' r='2.88' transform='rotate(90 12 4.58)' stroke='currentColor' />
     </svg>
   )
 }

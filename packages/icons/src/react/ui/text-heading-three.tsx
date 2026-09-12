@@ -4,11 +4,10 @@ export const IconTextHeadingThree: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,19 @@ export const IconTextHeadingThree: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-heading-three-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-heading-three-title'}>{title}</title>
-      ) : null}
+      <path d='M4.18 4.03v14.74' stroke='currentColor' />
+      <path d='M13.28 4.03v14.74' stroke='currentColor' />
+      <path d='M4.18 11.3h9.1' stroke='currentColor' />
+      <path d='M13.28 4.03v14.74' stroke='currentColor' />
+      <path d='M11.83 18.77h2.9' stroke='currentColor' />
+      <path d='M11.83 4.03h2.9' stroke='currentColor' />
+      <path d='M2.73 4.03h2.9' stroke='currentColor' />
+      <path d='M2.73 18.77h2.9' stroke='currentColor' />
       <path
-        d='M4.18 4.03v14.74m9.1-14.74v14.74m-9.1-7.47h9.1m0-7.27v14.74m-1.45 0h2.9m-2.9-14.74h2.9m-12 0h2.9m-2.9 14.74h2.9m12.01-3.73a2.2 2.2 0 0 1 1.75-.74c1.57 0 2.04 1.81 1.25 2.54-.8.73-1.95.57-1.95.57'
+        d='M17.64 15.04a2.2 2.2 0 0 1 1.75-.74c1.57 0 2.04 1.81 1.25 2.54-.8.73-1.95.57-1.95.57'
         stroke='currentColor'
       />
       <path

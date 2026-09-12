@@ -4,11 +4,10 @@ export const IconParenthesis: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,12 @@ export const IconParenthesis: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'parenthesis-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'parenthesis-title'}>{title}</title> : null}
+      <path d='M6.98 21.28C4.6 18.27 3.75 15.84 3.75 12s.85-6.27 3.23-9.28' stroke='currentColor' />
       <path
-        d='M7.13 21A12.8 12.8 0 0 1 4 12c0-3.72.82-6.08 3.13-9m9.74 18A12.8 12.8 0 0 0 20 12c0-3.72-.82-6.08-3.13-9'
+        d='M17.02 21.28c2.38-3.01 3.23-5.44 3.23-9.28s-.85-6.27-3.23-9.28'
         stroke='currentColor'
       />
     </svg>

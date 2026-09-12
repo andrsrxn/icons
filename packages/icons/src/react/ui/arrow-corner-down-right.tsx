@@ -4,11 +4,10 @@ export const IconArrowCornerDownRight: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,11 @@ export const IconArrowCornerDownRight: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={
-        isLabelled && title && !ariaLabel ? 'arrow-corner-down-right-title' : undefined
-      }
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'arrow-corner-down-right-title'}>{title}</title>
-      ) : null}
       <path
-        d='M18.18 15.5h-5.52c-3.78 0-5.66 0-6.83-1.17s-1.17-3.05-1.17-6.82V4.23'
+        d='M19 15.5h-6.34c-3.78 0-5.66 0-6.83-1.17s-1.17-3.05-1.17-6.82V5'
         stroke='currentColor'
       />
       <path

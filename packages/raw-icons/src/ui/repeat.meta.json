@@ -1,6 +1,6 @@
 {
   "categories": [
-    "media"
+    "media", "tools"
   ],
   "tags": [
     "loop",
@@ -9,6 +9,5 @@
     "music",
     "playlist",
     "cycle"
-  ],
-  "rtl": true
+  ]
 }

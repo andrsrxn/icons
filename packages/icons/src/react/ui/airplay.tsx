@@ -4,11 +4,10 @@ export const IconAirplay: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,22 +23,20 @@ export const IconAirplay: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'airplay-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'airplay-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M2.7 10.5c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h6.6c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12v2.09c0 1.28 0 1.92-.19 2.44a3 3 0 0 1-1.75 1.74c-.5.2-1.15.2-2.43.2h-1.2a2.2 2.2 0 0 1-1.87-1.03 2.2 2.2 0 0 0-3.73 0 2.2 2.2 0 0 1-1.87 1.03H7.07c-1.28 0-1.92 0-2.43-.2a3 3 0 0 1-1.75-1.75c-.2-.5-.2-1.15-.2-2.43z'
+        d='M1.67 9.65c0-2.83 0-4.25.88-5.13s2.29-.87 5.12-.87h8.66c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13v2.98c0 1.74 0 2.6-.35 3.26a3 3 0 0 1-1.24 1.25c-.66.35-1.53.35-3.27.35h-1.34c-.84 0-1.62-.43-2.07-1.15a2.45 2.45 0 0 0-4.14 0 2.5 2.5 0 0 1-2.07 1.15H6.53c-1.74 0-2.6 0-3.26-.35a3 3 0 0 1-1.25-1.25c-.35-.66-.35-1.52-.35-3.26z'
         fill='currentColor'
       />
       <path
-        d='M15.03 16.97h.27c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-.47c0-2.83 0-4.24-.87-5.12-.88-.88-2.3-.88-5.13-.88H8.7c-2.83 0-4.25 0-5.13.88s-.87 2.3-.87 5.12v.47c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88H9'
+        d='M14.62 17.49h1.71c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V9.65c0-2.83 0-4.25-.88-5.13s-2.29-.87-5.12-.87H7.67c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.84c0 2.83 0 4.24.88 5.12s2.29.88 5.12.88H9.1'
         stroke='currentColor'
       />
       <path
-        d='m9.64 16.77.75-1c.74-1 1.1-1.5 1.61-1.5.5 0 .87.5 1.6 1.5l.76 1h0c1.03 1.4 1.55 2.1 1.27 2.65-.27.55-1.14.55-2.88.55h-1.5c-1.74 0-2.6 0-2.88-.55-.28-.56.24-1.25 1.27-2.65'
+        d='m9.71 17.23.68-.92c.74-.99 1.1-1.48 1.61-1.48.5 0 .87.5 1.6 1.48l.69.92c1.03 1.4 1.55 2.09 1.27 2.64s-1.14.55-2.88.55h-1.36c-1.74 0-2.6 0-2.88-.55s.24-1.25 1.27-2.64'
         stroke='currentColor'
       />
     </svg>

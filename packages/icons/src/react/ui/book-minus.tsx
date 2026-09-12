@@ -4,11 +4,10 @@ export const IconBookMinus: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,26 +23,25 @@ export const IconBookMinus: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'book-minus-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'book-minus-title'}>{title}</title> : null}
       <path
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M3.83 6.67c0-1.89 0-2.83.59-3.42s1.53-.58 3.41-.58h8.34c1.88 0 2.82 0 3.41.58.59.59.59 1.53.59 3.42v7.24c0 1.88 0 2.82-.59 3.4-.59.6-1.53.6-3.41.6H7.83c-1.88 0-2.82 0-3.41-.6-.59-.58-.59-1.52-.59-3.4z'
+        d='M3.05 5.77c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h9.9c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v8.7c0 1.9 0 2.83-.58 3.42-.59.59-1.53.59-3.42.59h-9.9c-1.89 0-2.83 0-3.42-.6-.58-.58-.58-1.52-.58-3.4z'
         fill='currentColor'
       />
       <path
-        d='M3.83 8.67c0-2.83 0-4.25.88-5.12s2.3-.88 5.12-.88h4.34c2.82 0 4.24 0 5.12.88.88.87.88 2.29.88 5.12v3.24c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88H3.83z'
+        d='M3.05 7.77c0-2.83 0-4.25.87-5.12.88-.88 2.3-.88 5.13-.88h5.9c2.83 0 4.25 0 5.13.88.87.87.87 2.29.87 5.12v4.7c0 2.83 0 4.25-.87 5.13-.88.88-2.3.88-5.13.88H3.05z'
         stroke='currentColor'
       />
       <path
-        d='M3.83 17.9c0 1.34 0 2 .31 2.5a2 2 0 0 0 .63.63c.49.3 1.16.3 2.5.3h8.04c1.34 0 2 0 2.5-.3a2 2 0 0 0 .62-.63c.3-.5.3-1.16.3-2.5M8.44 10.29h7.18'
+        d='M3.05 18.48c0 1.65 0 2.47.45 3.03l.27.27c.56.45 1.38.45 3.03.45h8.83c1.65 0 2.48 0 3.03-.45l.27-.27c.46-.56.46-1.38.46-3.03'
         stroke='currentColor'
       />
+      <path d='M8.1 10.12h7.86' stroke='currentColor' />
     </svg>
   )
 }

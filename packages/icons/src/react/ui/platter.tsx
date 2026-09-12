@@ -4,11 +4,10 @@ export const IconPlatter: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,17 @@ export const IconPlatter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'platter-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'platter-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M19.8 16.91H4.2c0-4.86 3.5-8.8 7.8-8.8s7.8 3.94 7.8 8.8'
+        d='M21 17.6H3c0-5.63 4.03-10.18 9-10.18s9 4.55 9 10.17'
         fill='currentColor'
       />
-      <path
-        d='M19.8 16.91c0-4.86-3.5-8.8-7.8-8.8s-7.8 3.94-7.8 8.8M12 7.86v-2.1m9.76 11.15H2.24'
-        stroke='currentColor'
-      />
+      <path d='M21 17.6c0-5.63-4.03-10.18-9-10.18s-9 4.55-9 10.17' stroke='currentColor' />
+      <path d='M12 7.13V4.69' stroke='currentColor' />
+      <path d='M22.65 17.6H1.35' stroke='currentColor' />
     </svg>
   )
 }

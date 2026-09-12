@@ -4,11 +4,10 @@ export const IconGridSix: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,11 +23,9 @@ export const IconGridSix: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'grid-six-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'grid-six-title'}>{title}</title> : null}
       <path
         opacity='.2'
         d='M15.24 2.76c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.48c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H8.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88z'
@@ -41,7 +38,9 @@ export const IconGridSix: Icon = ({
         transform='scale(1 -1)rotate(90 21.24 0)'
         stroke='currentColor'
       />
-      <path d='M21 9.14H3m18 5.96H3M12 3v18.24' stroke='currentColor' />
+      <path d='M21 9.14H3' stroke='currentColor' />
+      <path d='M21 15.1H3' stroke='currentColor' />
+      <path d='M12 3v18.24' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconHeartHalf: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,19 @@ export const IconHeartHalf: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'heart-half-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'heart-half-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12 18.14V7.1q0-.2-.02-.3l-.14-.22C11.12 5.6 9.42 4 7.13 4c-3.11 0-5.45 3.55-4.44 7.3.78 2.94 4.61 5.45 7.37 7.69.91.74 1.37 1.12 1.65.98.29-.14.29-.7.29-1.84'
+        d='M12 18.74V6.7q0-.2-.02-.3l-.14-.22c-.76-1.05-2.6-2.77-5.06-2.77-3.33 0-5.84 3.8-4.76 7.82.86 3.2 5.08 5.93 8.05 8.36.9.75 1.36 1.12 1.64.98.29-.13.29-.7.29-1.83'
         fill='currentColor'
       />
       <path
-        d='M16.87 4.01a5.8 5.8 0 0 0-3.83 1.6c-.57.51-.85.77-1.04.77s-.47-.26-1.04-.77a5.8 5.8 0 0 0-3.83-1.6c-3.11 0-5.45 3.55-4.44 7.3.9 3.38 5.82 6.2 8.51 8.67.4.37.6.56.8.56s.4-.19.8-.56c2.69-2.48 7.6-5.3 8.51-8.67 1-3.75-1.33-7.3-4.44-7.3M12 6.53V20.4'
+        d='M17.22 3.41c-1.79 0-3.24.9-4.2 1.8-.55.51-.82.77-1.02.77s-.47-.26-1.03-.77c-.95-.9-2.4-1.8-4.19-1.8-3.33 0-5.84 3.8-4.76 7.82.98 3.64 6.31 6.68 9.19 9.35h0c.4.37.6.56.79.56s.4-.19.8-.56h0c2.87-2.67 8.2-5.7 9.18-9.35 1.08-4.02-1.43-7.82-4.76-7.82'
         stroke='currentColor'
       />
+      <path d='M12 6.11v14.86' stroke='currentColor' />
     </svg>
   )
 }

@@ -4,11 +4,10 @@ export const IconListExtend: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,13 +23,15 @@ export const IconListExtend: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'list-extend-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'list-extend-title'}>{title}</title> : null}
+      <path d='M21.27 5.93H2.73' stroke='currentColor' />
+      <path d='M10.8 11.99H2.73' stroke='currentColor' />
+      <path d='M10.8 18.04H2.73' stroke='currentColor' />
+      <path d='m14.37 13 .48-.49c1.34-1.34 2-2 2.83-2s1.5.66 2.83 2L21 13' stroke='currentColor' />
       <path
-        d='M21.19 6H2.8m8.01 6h-8m8 6h-8M14 13l.46-.45c1.33-1.34 2-2 2.83-2 .83-.01 1.5.66 2.83 2l.45.45M14 17l.46.45c1.33 1.34 2 2 2.83 2 .83.01 1.5-.66 2.83-2l.45-.45'
+        d='m14.37 17.03.48.49c1.34 1.33 2 2 2.83 2s1.5-.67 2.83-2l.49-.49'
         stroke='currentColor'
       />
     </svg>

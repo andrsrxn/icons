@@ -4,11 +4,10 @@ export const IconShoppingBag: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,21 +23,19 @@ export const IconShoppingBag: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'shopping-bag-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'shopping-bag-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M14.57 21.5c3.5 0 5.26 0 6.16-1.15.9-1.14.5-2.84-.32-6.25l-1.52-6.33c-.53-2.2-.8-3.31-1.6-3.95-.83-.65-1.96-.65-4.23-.65h-2.21c-2.35 0-3.52 0-4.35.68-.83.67-1.06 1.82-1.53 4.12l-1.3 6.32c-.67 3.34-1.01 5-.11 6.1s2.6 1.1 6 1.1z'
+        d='M14.84 22.47c3.44 0 5.17 0 6.07-1.12.9-1.11.53-2.8-.21-6.16l-1.8-8.24c-.5-2.26-.75-3.39-1.58-4.05-.82-.66-1.98-.66-4.29-.66h-2.17c-2.39 0-3.58 0-4.41.69S5.4 4.79 4.96 7.13l-1.54 8.24c-.62 3.3-.93 4.94-.03 6.02s2.58 1.08 5.92 1.08z'
         fill='currentColor'
       />
       <path
-        d='M14.68 21.5c3.37 0 5.05 0 5.95-1.1.9-1.09.58-2.74-.06-6.04l-1.3-6.74c-.45-2.33-.68-3.5-1.51-4.18s-2.02-.68-4.38-.68H10.5c-2.38 0-3.57 0-4.4.69S5.06 5.3 4.6 7.65l-1.26 6.74c-.62 3.3-.93 4.94-.03 6.02.9 1.09 2.58 1.09 5.93 1.09z'
+        d='M14.91 22.47c3.32 0 4.98 0 5.88-1.07s.6-2.7.03-5.97l-1.54-8.7c-.42-2.37-.63-3.55-1.47-4.25-.83-.7-2.04-.7-4.44-.7h-2.86c-2.41 0-3.62 0-4.46.7S5.01 4.38 4.6 6.76l-1.5 8.7c-.56 3.25-.84 4.88.06 5.95.9 1.06 2.55 1.06 5.86 1.06z'
         stroke='currentColor'
       />
-      <path d='M8.78 7a3.22 3.22 0 0 0 6.44 0' stroke='currentColor' />
+      <path d='M8.86 6.46a3.13 3.13 0 0 0 6.26 0' stroke='currentColor' />
     </svg>
   )
 }

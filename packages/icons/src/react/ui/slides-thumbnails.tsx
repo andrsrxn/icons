@@ -4,11 +4,10 @@ export const IconSlidesThumbnails: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,30 +23,41 @@ export const IconSlidesThumbnails: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'slides-thumbnails-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'slides-thumbnails-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
-        width='11.88'
-        height='18.56'
+        width='13.14'
+        height='20.54'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.28 15.88)'
+        transform='matrix(0 -1 -1 0 22.27 16.29)'
         fill='currentColor'
       />
       <rect
-        width='11.88'
-        height='18.56'
+        width='13.14'
+        height='20.54'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.28 15.88)'
+        transform='matrix(0 -1 -1 0 22.27 16.29)'
         stroke='currentColor'
       />
       <path
-        d='M4.3 18.74a.68.68 0 1 1 0 1.35.68.68 0 0 1 0-1.35m5.13 0a.68.68 0 1 1 0 1.35.68.68 0 0 1 0-1.35m5.14 0a.68.68 0 1 1 0 1.35.68.68 0 0 1 0-1.35m5.13 0a.68.68 0 1 1 0 1.35.68.68 0 0 1 0-1.35'
+        d='M3.47 19.45a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.16 19.45a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.84 19.45a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M20.53 19.45a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5'
         fill='currentColor'
         stroke='currentColor'
       />

@@ -4,11 +4,10 @@ export const IconMicrophoneOff: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,29 +23,25 @@ export const IconMicrophoneOff: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'microphone-off-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'microphone-off-title'}>{title}</title>
-      ) : null}
-      <path
-        d='M12 14.65a3.77 3.77 0 0 0 3.78-3.77V6.3a3.78 3.78 0 1 0-7.56 0v4.57c0 2.08 1.7 3.77 3.78 3.77'
-        stroke='currentColor'
-      />
       <rect
         opacity='.2'
-        width='11.56'
-        height='7.56'
-        rx='3.78'
-        transform='matrix(0 -1 -1 0 15.78 14.37)'
+        width='12.56'
+        height='8.21'
+        rx='4.11'
+        transform='matrix(0 -1 -1 0 16.1 14.52)'
         fill='currentColor'
       />
+      <path d='M2.69 2.69 21.3 21.3' stroke='currentColor' />
       <path
-        d='M12.12 17.52v3.95m2.4 0h-4.8M3.3 3.3l17.4 17.4M18.46 9v1.94a6.46 6.46 0 0 1-12.92 0V9'
+        d='M12 14.82a4.1 4.1 0 0 0 4.1-4.1V5.76a4.1 4.1 0 1 0-8.2 0v4.96a4.1 4.1 0 0 0 4.1 4.1'
         stroke='currentColor'
       />
+      <path d='M19.02 8.74v2.1a7.02 7.02 0 0 1-14.04 0v-2.1' stroke='currentColor' />
+      <path d='M12 18v4.29' stroke='currentColor' />
+      <path d='M15 22.29H9' stroke='currentColor' />
     </svg>
   )
 }

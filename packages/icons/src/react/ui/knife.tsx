@@ -4,11 +4,10 @@ export const IconKnife: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,19 @@ export const IconKnife: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'knife-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'knife-title'}>{title}</title> : null}
       <path
         opacity='.2'
-        d='M12.98 4.82c3.43-.87 8.56.34 8.56.34L9.86 16.85l-5.4-5.4s4.3-5.56 8.52-6.63'
+        d='M13.06 3.59C16.53 2.32 22 3.03 22 3.03l-10.9 13.4-6.57-5.7s4.26-5.58 8.54-7.14'
         fill='currentColor'
       />
       <path
-        d='m4.99 21.71 4.8-4.8m0 0L20.68 6.04c.47-.48.71-.72.63-1s-.4-.35-1.01-.5a14.4 14.4 0 0 0-7.05.17 16.6 16.6 0 0 0-8.17 5.31c-.43.52-.64.78-.63 1.17s.29.65.81 1.17z'
+        d='M22.03 2.88a16 16 0 0 0-10.06 1.34C8.8 5.7 6.01 8.48 4.57 10.18a.96.96 0 0 0 .14 1.37l5.93 4.84'
         stroke='currentColor'
       />
+      <path d='M6.29 22.2 21.94 2.98' stroke='currentColor' />
     </svg>
   )
 }

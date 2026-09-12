@@ -4,11 +4,10 @@ export const IconSeekBackward: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,27 +23,20 @@ export const IconSeekBackward: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'seek-backward-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'seek-backward-title'}>{title}</title> : null}
-      <rect
-        opacity='.2'
-        x='12.34'
-        y='9.19'
-        width='3.97'
-        height='6.86'
-        rx='1.98'
-        fill='currentColor'
-      />
       <path
-        d='M4.76 5.51a10.4 10.4 0 0 1 9.4-2.06A9.01 9.01 0 1 1 3.48 16.28'
+        d='M3.67 6.13a11.1 11.1 0 0 1 9.56-3.67 9.6 9.6 0 1 1-9.18 15.2'
         stroke='currentColor'
       />
-      <rect x='12.34' y='9.19' width='3.97' height='6.86' rx='1.98' stroke='currentColor' />
+      <rect x='12.55' y='9.35' width='4.13' height='6.75' rx='2' stroke='currentColor' />
       <path
-        d='M7.05 7.3C5.32 6.97 4.46 6.8 4 6.2l-.12-.18c-.4-.66-.23-1.52.1-3.25m2.68 8.56 1.3-1.18c.71-.65 1.07-.98 1.37-.85s.3.62.3 1.6V16'
+        d='M6.85 7.22H5.7c-1.41 0-2.12 0-2.56-.44S2.7 5.63 2.7 4.22V3.07'
+        stroke='currentColor'
+      />
+      <path
+        d='m6.3 11.74 1.6-1.45c.71-.65 1.07-.98 1.37-.85s.3.62.3 1.59V16'
         stroke='currentColor'
       />
     </svg>

@@ -4,11 +4,10 @@ export const IconEyeScan: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,23 +23,37 @@ export const IconEyeScan: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'eye-scan-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'eye-scan-title'}>{title}</title> : null}
       <path
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M12 8c-2.91 0-4.72 2.02-5.52 3.2a1.4 1.4 0 0 0 0 1.61c.79 1.18 2.59 3.22 5.52 3.22s4.73-2.04 5.52-3.22c.34-.5.33-1.12 0-1.62C16.72 10.02 14.92 8 12 8m0 5.68a1.68 1.68 0 1 0 0-3.36 1.68 1.68 0 0 0 0 3.36'
+        d='M12 7.87c-3.03 0-4.9 2.12-5.72 3.32-.33.5-.33 1.13 0 1.62.8 1.21 2.67 3.35 5.72 3.35s4.91-2.14 5.72-3.35c.33-.5.33-1.13 0-1.62-.82-1.2-2.7-3.32-5.72-3.32m0 5.87a1.74 1.74 0 1 0 0-3.48 1.74 1.74 0 0 0 0 3.48'
         fill='currentColor'
       />
       <path
-        d='M12 8a6.5 6.5 0 0 0-4.94 2.44c-.47.55-.7.83-.71 1.56 0 .74.23 1.01.7 1.56A6.5 6.5 0 0 0 12 16.03c2.37 0 4-1.33 4.96-2.47.46-.55.7-.82.69-1.56 0-.73-.24-1-.7-1.56A6.5 6.5 0 0 0 12 8m3.79 12.98c2.07 0 3.1 0 3.86-.49a3 3 0 0 0 .87-.87c.48-.75.48-1.78.48-3.86m-5.18-12.7c2.04 0 3.06 0 3.8.47a3 3 0 0 1 .9.9c.48.74.48 1.77.48 3.81M8.22 20.98c-2.08 0-3.12 0-3.87-.49a3 3 0 0 1-.86-.87c-.5-.75-.5-1.78-.5-3.86m5.23-12.7c-2.08 0-3.12 0-3.87.49a3 3 0 0 0-.86.86c-.5.75-.5 1.79-.5 3.87'
+        d='M12 7.87a6.7 6.7 0 0 0-5.15 2.57c-.47.56-.7.84-.7 1.56s.23 1 .7 1.57a6.7 6.7 0 0 0 5.15 2.6 6.7 6.7 0 0 0 5.16-2.6c.46-.56.7-.84.7-1.57 0-.72-.24-1-.71-1.56A6.7 6.7 0 0 0 12 7.87'
         stroke='currentColor'
       />
-      <circle cx='12.01' cy='12' r='1.68' stroke='currentColor' />
+      <path
+        d='M15.91 21.27c2.24 0 3.36 0 4.14-.56a3 3 0 0 0 .69-.68c.56-.79.56-1.9.56-4.15'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.95 2.76c2.2 0 3.3 0 4.08.55a3 3 0 0 1 .72.72c.55.78.55 1.88.55 4.09'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.1 21.27c-2.25 0-3.37 0-4.16-.56a3 3 0 0 1-.67-.68c-.57-.78-.57-1.9-.57-4.15'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.1 2.76c-2.25 0-3.37 0-4.16.57a3 3 0 0 0-.67.67c-.57.79-.57 1.91-.57 4.15'
+        stroke='currentColor'
+      />
+      <circle cx='12.01' cy='12' r='1.74' stroke='currentColor' />
     </svg>
   )
 }

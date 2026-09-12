@@ -4,11 +4,10 @@ export const IconDashboard: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,24 +23,23 @@ export const IconDashboard: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'dashboard-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'dashboard-title'}>{title}</title> : null}
-      <rect opacity='.2' x='2.96' y='8.68' width='7.04' height='11.32' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='1.96' y='8.68' width='7.82' height='11.32' rx='1' fill='currentColor' />
       <rect
         opacity='.2'
-        x='3'
+        x='2.01'
         y='9'
         width='5'
-        height='17.73'
+        height='19.69'
         rx='1'
-        transform='rotate(-90 3 9)'
+        transform='rotate(-90 2.01 9)'
         fill='currentColor'
       />
-      <rect x='2.74' y='3.64' width='18.53' height='16.71' rx='3' stroke='currentColor' />
-      <path d='M10 20V9M3 9h18' stroke='currentColor' />
+      <rect x='1.72' y='3.64' width='20.57' height='16.71' rx='3' stroke='currentColor' />
+      <path d='M9.78 20V9' stroke='currentColor' />
+      <path d='M2.01 9h19.98' stroke='currentColor' />
     </svg>
   )
 }

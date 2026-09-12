@@ -3,12 +3,13 @@
     "media"
   ],
   "tags": [
+   "playback",
     "entertainment",
     "broadcast",
-    "rewind",
-    "previous",
     "skip",
     "fast",
+    "ahead",
+    "10",
     "back"
   ]
 }

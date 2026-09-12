@@ -4,11 +4,10 @@ export const IconTextCenterlineCenter: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,15 +23,9 @@ export const IconTextCenterlineCenter: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={
-        isLabelled && title && !ariaLabel ? 'text-centerline-center-title' : undefined
-      }
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-centerline-center-title'}>{title}</title>
-      ) : null}
       <rect
         opacity='.2'
         width='6.84'
@@ -48,10 +41,12 @@ export const IconTextCenterlineCenter: Icon = ({
         transform='matrix(-1 0 0 1 15.42 8.53)'
         stroke='currentColor'
       />
-      <path
-        d='M2.71 19.38H21.3M2.71 4.62h18.58M2.71 9.6h2.63m13.31 0h2.64M2.71 14.3h2.63m13.31 0h2.64'
-        stroke='currentColor'
-      />
+      <path d='M2.71 19.38H21.3' stroke='currentColor' />
+      <path d='M2.71 4.62h18.58' stroke='currentColor' />
+      <path d='M2.71 9.6h2.63' stroke='currentColor' />
+      <path d='M18.65 9.6h2.64' stroke='currentColor' />
+      <path d='M2.71 14.3h2.63' stroke='currentColor' />
+      <path d='M18.65 14.3h2.64' stroke='currentColor' />
     </svg>
   )
 }

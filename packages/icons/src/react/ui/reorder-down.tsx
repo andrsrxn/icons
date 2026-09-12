@@ -4,11 +4,10 @@ export const IconReorderDown: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,15 @@ export const IconReorderDown: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'reorder-down-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? <title id={'reorder-down-title'}>{title}</title> : null}
+      <path d='M9.78 18h-7.1' stroke='currentColor' />
+      <path d='M13.08 12H2.68' stroke='currentColor' />
+      <path d='M15.75 6H2.68' stroke='currentColor' />
+      <path d='M14.23 18h1.03c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V5.29' stroke='currentColor' />
       <path
-        d='M9.32 18.02H2.69m10.32-6H2.7m12.87-6H2.7M13.61 18.1h.99c2.82 0 4.24 0 5.12-.88s.88-2.3.88-5.12V5.4'
-        stroke='currentColor'
-      />
-      <path
-        d='M14.68 20.77c-1.19-1.18-1.78-1.77-1.84-2.5v-.34c.06-.73.65-1.32 1.84-2.5'
+        d='M15.75 20.67c-1.18-1.18-1.77-1.77-1.84-2.5v-.35c.07-.72.66-1.31 1.84-2.5'
         stroke='currentColor'
       />
     </svg>

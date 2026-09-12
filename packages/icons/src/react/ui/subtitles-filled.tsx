@@ -4,11 +4,10 @@ export const IconSubtitlesFilled: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,20 +23,16 @@ export const IconSubtitlesFilled: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'subtitles-filled-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'subtitles-filled-title'}>{title}</title>
-      ) : null}
       <path
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M2.7 11.55c0-2.82 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h6.6c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12v1.04c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87H8.7c-2.83 0-4.25 0-5.13-.87-.87-.88-.87-2.3-.87-5.13zm16.53.63a.75.75 0 0 0-.75-.75H12a.75.75 0 1 0 0 1.5h6.48c.42 0 .75-.33.75-.75m-10.65-.75a.75.75 0 1 1 0 1.5H5.52a.75.75 0 0 1 0-1.5zm5.22 4a.75.75 0 0 0-.75-.76H5.52a.75.75 0 0 0 0 1.5h7.53c.41 0 .75-.33.75-.75m4.68-.76a.75.75 0 1 1 0 1.5h-2.41a.75.75 0 1 1 0-1.5z'
+        d='M1.78 10.7c0-2.82 0-4.23.88-5.11s2.3-.88 5.12-.88h8.44c2.83 0 4.24 0 5.12.88s.88 2.29.88 5.12v2.58c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.78c-2.83 0-4.24 0-5.12-.88s-.88-2.29-.88-5.12zm18.16 1.42a.83.83 0 0 0-.82-.84H12a.83.83 0 0 0-.82.84c0 .46.37.84.82.84h7.12c.45 0 .82-.38.82-.84m-11.7-.84c.46 0 .83.38.83.84s-.37.84-.82.84H4.88a.83.83 0 0 1-.82-.84c0-.46.37-.84.82-.84zm5.73 4.46a.83.83 0 0 0-.82-.84H4.88a.83.83 0 0 0-.82.84c0 .47.37.84.82.84h8.27c.46 0 .82-.37.82-.84m5.15-.84c.45 0 .82.38.82.84 0 .47-.37.84-.82.84h-2.66a.83.83 0 0 1-.82-.84c0-.46.37-.84.82-.84z'
         fill='currentColor'
       />
-      <rect x='2.7' y='5.55' width='18.61' height='13.04' rx='3' stroke='currentColor' />
+      <rect x='1.78' y='4.71' width='20.44' height='14.58' rx='3' stroke='currentColor' />
     </svg>
   )
 }

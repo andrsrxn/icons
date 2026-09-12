@@ -4,11 +4,10 @@ export const IconTextHeadingFour: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,17 +23,21 @@ export const IconTextHeadingFour: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'text-heading-four-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'text-heading-four-title'}>{title}</title>
-      ) : null}
       <path
-        d='M20.44 21.18v-4.9c0-1.33 0-2-.36-2.11-.35-.11-.72.45-1.47 1.56l-.93 1.39c-.46.68-.69 1.02-.55 1.29.14.26.56.26 1.38.26h3.1M4.18 4.03v14.74m9.1-14.74v14.74m-9.1-7.47h9.1m0-7.27v14.74m-1.45 0h2.9m-12 0h2.9m6.2-14.74h2.9m-12 0h2.9'
+        d='M20.44 21.18v-4.9c0-1.33 0-2-.36-2.11-.35-.11-.72.45-1.47 1.56l-.93 1.39c-.46.68-.69 1.02-.55 1.29.14.26.56.26 1.38.26h3.1'
         stroke='currentColor'
       />
+      <path d='M4.18 4.03v14.74' stroke='currentColor' />
+      <path d='M13.28 4.03v14.74' stroke='currentColor' />
+      <path d='M4.18 11.3h9.1' stroke='currentColor' />
+      <path d='M13.28 4.03v14.74' stroke='currentColor' />
+      <path d='M11.83 18.77h2.9' stroke='currentColor' />
+      <path d='M2.73 18.77h2.9' stroke='currentColor' />
+      <path d='M11.83 4.03h2.9' stroke='currentColor' />
+      <path d='M2.73 4.03h2.9' stroke='currentColor' />
     </svg>
   )
 }

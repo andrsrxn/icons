@@ -4,11 +4,10 @@ export const IconChartCombined: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
-  title,
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel || title)
+  const isLabelled = Boolean(ariaLabel)
 
   return (
     <svg
@@ -24,19 +23,19 @@ export const IconChartCombined: Icon = ({
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
-      aria-labelledby={isLabelled && title && !ariaLabel ? 'chart-combined-title' : undefined}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      {isLabelled && title && !ariaLabel ? (
-        <title id={'chart-combined-title'}>{title}</title>
-      ) : null}
       <path
-        d='M20.58 21.32h-9.83c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-10'
+        d='M6 9.45 8.51 7.6c.84-.62 1.26-.93 1.74-1.01a2 2 0 0 1 .67 0c.47.08.89.4 1.73 1.02.94.71 1.42 1.06 1.94 1.13a2 2 0 0 0 .74-.05c.51-.12.94-.53 1.8-1.35l2-1.91'
         stroke='currentColor'
       />
+      <path d='M6.5 13.29v4.18' stroke='currentColor' />
+      <path d='M14.83 13.29v4.18' stroke='currentColor' />
+      <path d='M10.66 11.47v6' stroke='currentColor' />
+      <path d='M19 11.47v6' stroke='currentColor' />
       <path
-        d='M6 9.45 8.51 7.6c.84-.62 1.26-.93 1.74-1.01a2 2 0 0 1 .67 0c.47.08.89.4 1.73 1.02.94.71 1.42 1.06 1.94 1.13a2 2 0 0 0 .74-.05c.51-.12.94-.53 1.8-1.35l2-1.91M6.5 13.29v4.18m8.33-4.18v4.18m-4.17-6v6m8.34-6v6'
+        d='M21.24 21.33H10.76c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.63'
         stroke='currentColor'
       />
     </svg>
