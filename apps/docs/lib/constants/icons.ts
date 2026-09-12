@@ -6,7 +6,6 @@ export const ICON_CATEGORIES = [
   'buildings',
   'business',
   'charts',
-  'code',
   'communication',
   'cursor',
   'design',
@@ -53,15 +52,11 @@ export const ICON_PROPS = {
     },
     strokeWidth: { type: 'number', default: '1.5', description: 'Stroke width in pixels' },
     color: { type: 'string', default: 'currentColor', description: 'Stroke and fill colors' },
-    title: {
-      type: 'string',
-      default: 'undefined',
-      description: 'Removes aria-hidden and add img role',
-    },
+
     'aria-label': {
       type: 'string',
       default: 'undefined',
-      description: 'Overrides title prop, keeps same behavior',
+      description: 'Removes aria-hidden and add role of img',
     },
     className: {
       type: 'string',
@@ -81,17 +76,13 @@ export const ICON_PROPS = {
       description: 'Size in pixels or any valid css length unit',
     },
     color: { type: 'string', default: 'currentColor', description: 'Stroke and fill colors' },
-    title: {
-      type: 'string',
-      default: (countryCode: string) => countryCode,
-      description: 'Country code in uppercase',
-    },
     role: { type: 'string', default: 'img', description: 'Treated as image' },
     'aria-label': {
       type: 'string',
-      default: 'undefined',
-      description: 'Overrides title prop, keeps same behavior',
+      default: (countryCode: string) => countryCode,
+      description: 'Uppercase flag name (Country code)',
     },
+
     className: {
       type: 'string',
       default: 'icon-flag',
@@ -104,7 +95,7 @@ export const ICON_PROPS = {
     },
     'aria-hidden': {
       type: 'boolean',
-      default: 'true',
+      default: 'false',
       description: 'Set true to hide it from screen readers',
     },
   },
