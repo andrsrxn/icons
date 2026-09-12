@@ -44,13 +44,16 @@
       "cache": false
     },
     "generate-icons": {
-      "cache": false
+      "cache": false,
+      "outputs": []
     },
     "generate-flags": {
-      "cache": false
+      "cache": false,
+      "outputs": []
     },
     "generate-raw-metadata": {
-      "cache": false
+      "cache": false,
+      "outputs": []
     }
   }
 }
