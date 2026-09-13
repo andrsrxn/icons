@@ -29,7 +29,7 @@
     "url": "git+https://github.com/andrsrxn/icons.git",
     "directory": "packages/icons"
   },
-  "homepage": "https://github.com/andrsrxn/icons#readme",
+  "homepage": "https://icons.andrsrnx.com",
   "bugs": {
     "url": "https://github.com/andrsrxn/icons/issues"
   },
@@ -41,6 +41,7 @@
     "dist/**/*.css"
   ],
   "files": [
+    "assets",
     "dist",
     "LICENSE",
     "README.md",

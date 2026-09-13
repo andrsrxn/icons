@@ -4,6 +4,8 @@
 
 React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
 
+![Icons banner with logo in the center](./assets/banner-github.webp)
+
 ## Overview
 
 **andrsrxn/icons** is a React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.
