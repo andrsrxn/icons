@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconQuotesDown: Icon = ({
+export const IconEclipse: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconQuotesDown: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-quotes-down'
+      data-slot='icon-ui-eclipse'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -28,28 +28,14 @@ export const IconQuotesDown: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M14.01 15.12a4.25 4.25 0 1 0 8.5 0 4.25 4.25 0 0 0-8.5 0'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M7.4 21.23a10.31 10.31 0 0 1 0-18.46c2 1.12 5.95 4.54 5.7 9.23-.26 4.69-3.9 8.11-5.7 9.23'
         fill='currentColor'
       />
+      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
       <path
-        opacity='.2'
-        d='M2.2 15.12a4.25 4.25 0 1 0 8.5 0 4.25 4.25 0 0 0-8.5 0'
-        fill='currentColor'
-      />
-      <path
-        d='M14.01 15.12a4.24 4.24 0 0 0 4.25 4.25 4.25 4.25 0 1 0-4.25-4.25'
-        stroke='currentColor'
-      />
-      <path
-        d='M2.21 15.12a4.24 4.24 0 0 0 4.25 4.25 4.25 4.25 0 1 0-4.25-4.25'
-        stroke='currentColor'
-      />
-      <path
-        d='M14.01 15.06c-.09-1.05-.31-3.72.66-5.42 1.16-2.04 2.74-3.15 4.89-3.17'
-        stroke='currentColor'
-      />
-      <path
-        d='M2.21 15.06c-.1-1.05-.32-3.72.65-5.42 1.17-2.04 2.75-3.15 4.9-3.17'
+        d='M7.4 21.18A10.7 10.7 0 0 0 13.06 12 10.3 10.3 0 0 0 7.5 2.85'
         stroke='currentColor'
       />
     </svg>
