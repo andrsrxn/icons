@@ -50,12 +50,12 @@ describe('Package Exports', () => {
   })
 
   it('exports every UI icon from the barrel', () => {
-    const { files, exports } = testBarrelExports(path.resolve('src/react/ui'))
+    const { files, exports } = testBarrelExports(path.resolve('src/ui'))
     expect(new Set(exports)).toEqual(new Set(files))
   })
 
   it('exports every Flag icon from the barrel', () => {
-    const { files, exports } = testBarrelExports(path.resolve('src/react/flags'))
+    const { files, exports } = testBarrelExports(path.resolve('src/flags'))
     expect(new Set(exports)).toEqual(new Set(files))
   })
 })
