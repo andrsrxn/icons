@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconTextClock: Icon = ({
+export const IconListClock: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconTextClock: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-text-clock'
+      data-slot='icon-ui-list-clock'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}

@@ -33,7 +33,7 @@ export const IconTextPath: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M20.23 21.6c-2.1-1.82-5-2.95-8.23-2.95a12.5 12.5 0 0 0-8.23 2.96'
+        d='M20.23 21.6c-2.1-1.55-5-2.52-8.23-2.52-3.22 0-6.14.97-8.23 2.53'
         stroke='currentColor'
       />
     </svg>
