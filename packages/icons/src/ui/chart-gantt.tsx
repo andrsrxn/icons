@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconGantt: Icon = ({
+export const IconChartGantt: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconGantt: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-gantt'
+      data-slot='icon-ui-chart-gantt'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}

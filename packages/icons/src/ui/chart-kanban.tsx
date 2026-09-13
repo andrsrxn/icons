@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconKanban: Icon = ({
+export const IconChartKanban: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconKanban: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-kanban'
+      data-slot='icon-ui-chart-kanban'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}

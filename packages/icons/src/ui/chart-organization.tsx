@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconOrganizationChart: Icon = ({
+export const IconChartOrganization: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconOrganizationChart: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-organization-chart'
+      data-slot='icon-ui-chart-organization'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
