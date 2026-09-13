@@ -4,12 +4,12 @@
 import fs from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
-import { IconFlagGB } from '../../src/react/flags/gb'
-import { IconFlagMX } from '../../src/react/flags/mx'
-import { IconFlagUS } from '../../src/react/flags/us'
-import { IconActivity } from '../../src/react/ui/activity'
-import { IconSearch } from '../../src/react/ui/search'
-import { IconSettings } from '../../src/react/ui/settings'
+import { IconFlagGB } from '../../src/flags/gb'
+import { IconFlagMX } from '../../src/flags/mx'
+import { IconFlagUS } from '../../src/flags/us'
+import { IconActivity } from '../../src/ui/activity'
+import { IconSearch } from '../../src/ui/search'
+import { IconSettings } from '../../src/ui/settings'
 
 function getIconFiles(directory: string) {
   return fs
