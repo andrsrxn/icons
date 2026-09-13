@@ -6,6 +6,7 @@ import { type ReactNode, Suspense } from 'react'
 import { preconnect } from 'react-dom'
 import { AppProviders } from '@/components/providers/providers'
 import { Footer } from '@/components/sections/footer'
+import { structuredData } from '@/lib/constants/structured-data'
 import { cn } from '@/lib/utils'
 
 const fontSans = Geist({
@@ -36,6 +37,14 @@ export default function RootLayout({ children, modal }: { children: ReactNode; m
           {modal}
           <Footer className='mt-8' />
         </AppProviders>
+        <script
+          type='application/ld+json'
+          // biome-ignore lint/security/noDangerouslySetInnerHtml: jsonLd is safe
+          dangerouslySetInnerHTML={{
+            // biome-ignore lint/style/useNamingConvention: react api
+            __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+          }}
+        />
       </body>
     </html>
   )
