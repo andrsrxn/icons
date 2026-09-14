@@ -16,7 +16,7 @@ Thanks for taking the time to suggest a new icon!
 
 ---
 
-### Category
+### Group
 
 <!-- It could be UI or Flag -->
 *e.g., UI*
