@@ -20,7 +20,7 @@ import {
 } from '@/components/ui/drawer'
 
 export const DrawerIcon = ({ iconName }: { iconName: string }) => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const isLaptop = useMedia('(min-width: 1024px)')
   const router = useRouter()
 
@@ -36,6 +36,10 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
     setOpen(false)
     setTimeout(() => router.back(), animationDuration)
   }
+
+  useEffect(() => {
+    setOpen(true)
+  }, [])
 
   return isLaptop ? (
     <Dialog open={open} onOpenChange={onDismiss}>
