@@ -142,7 +142,7 @@ const CommandItem = ({ children, className }: { children: ReactNode; className?:
 
 export default function ExamplesPage() {
   return (
-    <section className='py-10 block w-full'>
+    <section className='pt-10 block w-full'>
       <div className='wrapper lg:max-w-7xl'>
         <Link
           href='/'
@@ -170,11 +170,11 @@ export default function ExamplesPage() {
           </AlertDescription>
         </Alert>
       </div>
-      <div className='wrapper mt-8 max-w-6xl'>
+      <div className='wrapper my-10 max-w-7xl'>
         <Separator />
       </div>
       <div className='overflow-x-auto scroll-fade-x overflow-y-clip px-[5%]'>
-        <div className='grid grid-cols-4 w-275 xl:max-w-6xl xl:zoom-110 xl:wrapper lg:w-7xl lg:px-0 xl:w-full lg:zoom-105 gap-6 animate-in zoom-in-85 duration-600 ease-in-out fade-in py-8'>
+        <div className='grid grid-cols-4 py-1 w-275 xl:max-w-6xl xl:zoom-110 xl:wrapper lg:w-7xl lg:px-0 xl:w-full lg:zoom-105 gap-6 animate-in zoom-in-85 duration-600 ease-in-out fade-in'>
           <div className='grid gap-6 h-max'>
             <div
               className={
