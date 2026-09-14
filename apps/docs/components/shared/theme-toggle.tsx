@@ -24,7 +24,7 @@ export const ThemeToggle = ({
       <DropdownMenuTrigger
         className={cn('', className)}
         render={
-          <Button aria-label='Toggle theme' variant='outline' size='sm'>
+          <Button aria-label='Toggle theme' variant='outline' size='xs'>
             <IconSun className='dark:hidden' />
             <IconMoon className='hidden dark:block' />
             Change theme

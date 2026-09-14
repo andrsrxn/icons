@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 export const Footer = ({ className, ...props }: ComponentProps<'footer'>) => {
   return (
-    <footer className={cn('w-full py-4 overflow-hidden', className)} {...props}>
+    <footer className={cn('w-full py-8 overflow-hidden', className)} {...props}>
       <div className='wrapper max-w-7xl relative flex flex-col items-center justify-center gap-2 md:block'>
         <p className='text-muted-foreground text-center text-sm'>
           Designed and developed by{' '}
@@ -18,7 +18,66 @@ export const Footer = ({ className, ...props }: ComponentProps<'footer'>) => {
             {COMPANY.author.name} ({COMPANY.author.commercialName})
           </Link>
         </p>
-        <ThemeToggle className='md:absolute md:right-0 md:bottom-0 w-fit' />
+        <nav>
+          <ul className='flex items-center justify-center flex-wrap mt-4 gap-x-4 gap-y-2'>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                href='/docs'>
+                Documentation
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                href='/examples'>
+                Examples
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                href='/privacy'>
+                Privacy
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                target='_blank'
+                rel='noopener noreferrer'
+                href={COMPANY.repo.licenceUrl}>
+                Licence
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                target='_blank'
+                rel='noopener noreferrer'
+                href={COMPANY.repo.npm}>
+                npm
+              </Link>
+            </li>
+            <li>
+              <Link
+                className='text-muted-foreground hover:underline decoration-1 underline-offset-2 text-sm hover:text-foreground'
+                prefetch={false}
+                target='_blank'
+                rel='noopener noreferrer'
+                href={COMPANY.repo.url}>
+                GitHub
+              </Link>
+            </li>
+
+            <ThemeToggle className='w-fit' />
+          </ul>
+        </nav>
       </div>
     </footer>
   )

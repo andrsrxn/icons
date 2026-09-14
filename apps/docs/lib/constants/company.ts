@@ -15,6 +15,8 @@ export const COMPANY = {
     discussions: { showAndTell: 'https://github.com/andrsrxn/icons/discussions/16' },
     version: '7',
     license: 'MIT',
+    licenceUrl: 'https://github.com/andrsrxn/icons/blob/main/LICENSE',
+    npm: 'https://www.npmjs.com/package/@andrsrxn/icons',
   },
   brand: {
     primaryColor: '#0047cc',
