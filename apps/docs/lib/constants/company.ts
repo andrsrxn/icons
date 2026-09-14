@@ -3,7 +3,7 @@ export const COMPANY = {
   fullName: 'andrsrxn/icons',
   category: 'Icon Library',
   description:
-    'React icon library with 1,000+ duotone icons and 250+ flag icons. Smooth, RTL-aware, and optimized SVGs.',
+    'React icon library with 1,000+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.',
   author: {
     name: 'Andres Raxón',
     commercialName: 'andrsrxn',
