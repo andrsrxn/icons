@@ -20,7 +20,7 @@ import {
 } from '@/components/ui/drawer'
 
 export const DrawerIcon = ({ iconName }: { iconName: string }) => {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(true)
   const isLaptop = useMedia('(min-width: 1024px)')
   const router = useRouter()
 
@@ -37,10 +37,6 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
     setTimeout(() => router.back(), animationDuration)
   }
 
-  useEffect(() => {
-    setOpen(true)
-  }, [])
-
   return isLaptop ? (
     <Dialog open={open} onOpenChange={onDismiss}>
       <DialogContent className='wrapper w-full sm:max-w-4xl'>
@@ -54,7 +50,7 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
       </DialogContent>
     </Dialog>
   ) : (
-    <Drawer open={open} onOpenChange={onDismiss} showSwipeHandle>
+    <Drawer open={open} showSwipeHandle onOpenChange={onDismiss}>
       <DrawerContent className='wrapper max-w-4xl'>
         <DrawerHeader>
           <DrawerTitle className='sr-only'>Icon overview</DrawerTitle>
