@@ -5,7 +5,5 @@
   "fixed": [],
   "linked": [],
   "access": "public",
-  "baseBranch": "main",
-  "updateInternalDependencies": "patch",
-  "ignore": ["docs", "@andrsrxn/raw-icons", "@andrsrxn/ts-config"]
+  "updateInternalDependencies": "patch"
 }

@@ -20,7 +20,7 @@
     "test": "turbo run test",
     "test:check": "turbo run test:check",
     "changeset": "changeset",
-    "version-package": "changeset version && pnpm install --no-frozen-lockfile",
+    "version-package": "changeset version || true && pnpm install --no-frozen-lockfile",
     "release": "pnpm build:icons && changeset publish",
     "generate-icons": "turbo run generate-icons",
     "generate-flags": "turbo run generate-flags",
@@ -37,7 +37,7 @@
     "@biomejs/biome": "2.5.6",
     "typescript": "7.0.2",
     "lefthook": "2.1.12",
-    "@changesets/changelog-github": "0.7.0",
-    "@changesets/cli": "2.31.1"
+    "@changesets/changelog-github": "1.0.1",
+    "@changesets/cli": "3.0.2"
   }
 }
