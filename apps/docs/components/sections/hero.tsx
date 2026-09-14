@@ -67,11 +67,11 @@ export const HeroSection = () => {
           <h1 className='text-3xl md:text-4xl font-bold tracking-tight text-center'>
             {COMPANY.fullName}
           </h1>
-          <p className='text-muted-foreground max-w-md w-11/12 text-center text-pretty text-base'>
+          <p className='text-muted-foreground max-w-md text-center text-pretty text-base'>
             {COMPANY.description}
           </p>
         </div>
-        <Tabs defaultValue='pnpm'>
+        <Tabs defaultValue='pnpm' className='w-11/12 max-w-xs'>
           <TabsList variant='line'>
             <TabsTrigger value='pnpm'>pnpm</TabsTrigger>
             <TabsTrigger value='npm'>npm</TabsTrigger>
