@@ -5,6 +5,7 @@ import {
   IconBookmark,
   IconBookmarkFilled,
   IconCalendar,
+  IconChartKanban,
   IconChartLineUp,
   IconCheck,
   IconCheckBadge,
@@ -17,6 +18,7 @@ import {
   IconCreditCard,
   IconDatabase,
   IconDevicePc,
+  IconExternalLink,
   IconFaceSmile,
   IconFilePdf,
   IconFileX,
@@ -26,7 +28,6 @@ import {
   IconHouse,
   IconInbox,
   IconInvoice,
-  IconKanban,
   IconKeyCommand,
   IconLike,
   IconLikeFilled,
@@ -108,8 +109,10 @@ import {
 } from '@/components/ui/field'
 import { InputGroup, InputGroupAddon, InputGroupInput } from '@/components/ui/input-group'
 import { Item, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
+import { Separator } from '@/components/ui/separator'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { COMPANY } from '@/lib/constants/company'
 import { cn } from '@/lib/utils'
 
 const DropdownMenuItem = ({ children, className }: { children: ReactNode; className?: string }) => {
@@ -150,15 +153,32 @@ export default function ExamplesPage() {
         </Link>
         <h1 className='text-3xl font-bold tracking-tight md:text-4xl'>Examples</h1>
         <p className='text-muted-foreground w-11/12 mt-2 max-w-md text-base text-pretty'>
-          See our icons in action with real life use cases
+          See our icons in action on different components and states.
         </p>
+        <Alert className='p-4 mt-4 max-w-md'>
+          <AlertTitle>Are you using {COMPANY.fullName} in production?</AlertTitle>
+          <AlertDescription>
+            Tell us about it, we'd love to see where the library is being used.
+            <a
+              href={COMPANY.repo.discussions.showAndTell}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='text-primary leading-none hover:underline! no-underline! hover:text-primary! flex max-w-max items-center gap-1.5 decoration-1 underline-offset-2 mt-2'>
+              Share your project
+              <IconExternalLink className='size-4' />
+            </a>
+          </AlertDescription>
+        </Alert>
+      </div>
+      <div className='wrapper mt-8 max-w-6xl'>
+        <Separator />
       </div>
       <div className='overflow-x-auto scroll-fade-x overflow-y-clip px-[5%]'>
         <div className='grid grid-cols-4 w-275 xl:max-w-6xl xl:zoom-110 xl:wrapper lg:w-7xl lg:px-0 xl:w-full lg:zoom-105 gap-6 animate-in zoom-in-85 duration-600 ease-in-out fade-in py-8'>
           <div className='grid gap-6 h-max'>
             <div
               className={
-                'w-full rounded-lg bg-popover p-1 text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100 outline-none'
+                'w-full rounded-lg bg-popover p-1 text-popover-foreground  ring-1 ring-foreground/10 duration-100 outline-none'
               }>
               <DropdownMenuItem>
                 <IconUser /> Account
@@ -231,7 +251,7 @@ export default function ExamplesPage() {
             </Button>
             <div
               className={
-                'w-full break-inside-avoid overflow-x-hidden overflow-y-auto rounded-lg bg-popover p-1 text-popover-foreground shadow-md ring-1 ring-foreground/10 duration-100 outline-none'
+                'w-full break-inside-avoid overflow-x-hidden overflow-y-auto rounded-lg bg-popover p-1 text-popover-foreground  ring-1 ring-foreground/10 duration-100 outline-none'
               }>
               <DropdownMenuItem>
                 <IconSun /> Light
@@ -502,7 +522,7 @@ export default function ExamplesPage() {
             <Empty>
               <EmptyHeader>
                 <EmptyMedia variant='icon'>
-                  <IconKanban />
+                  <IconChartKanban />
                 </EmptyMedia>
                 <EmptyTitle>No Projects Yet</EmptyTitle>
                 <EmptyDescription>
@@ -519,6 +539,7 @@ export default function ExamplesPage() {
           </div>
         </div>
       </div>
+      <div className='wrapper max-w-7xl grid gap-8' />
     </section>
   )
 }

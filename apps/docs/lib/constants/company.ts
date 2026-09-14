@@ -12,6 +12,7 @@ export const COMPANY = {
   repo: {
     url: 'https://github.com/andrsrxn/icons',
     issues: 'https://github.com/andrsrxn/icons/issues',
+    discussions: { showAndTell: 'https://github.com/andrsrxn/icons/discussions/16' },
     version: '7',
     license: 'MIT',
   },
