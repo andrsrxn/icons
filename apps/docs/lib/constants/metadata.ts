@@ -21,14 +21,16 @@ export const baseMetadata: Metadata = {
   },
   keywords: [
     'icons',
-    'icon library',
+    'library',
+    'Hugeicons alternative',
+    'Phosphor icons alternative',
     'duotone',
     'flags',
     'RTL',
     'react',
     'typescript',
     'svg',
-    'UI icons',
+    'UI',
     'design system',
   ],
   authors: [
