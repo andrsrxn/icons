@@ -1025,9 +1025,9 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
                 <img
                   src='/assets/huge-icons.webp'
                   className='size-5 rounded-full'
-                  alt='HugeIcons'
+                  alt='Hugeicons'
                 />
-                HugeIcons
+                Hugeicons
               </a>
             }
           />
