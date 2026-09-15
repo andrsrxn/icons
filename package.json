@@ -32,12 +32,12 @@
   },
   "packageManager": "pnpm@11.20.0",
   "devDependencies": {
-    "turbo": "2.10.12",
+    "turbo": "2.10.13",
     "prettier": "3.9.6",
     "@biomejs/biome": "2.5.6",
     "typescript": "7.0.2",
-    "lefthook": "2.1.12",
+    "lefthook": "2.1.14",
     "@changesets/changelog-github": "1.0.1",
-    "@changesets/cli": "3.0.2"
+    "@changesets/cli": "3.0.3"
   }
 }
