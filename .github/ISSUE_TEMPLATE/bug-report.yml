@@ -1,0 +1,105 @@
+name: Bug report
+description: Report a problem with an icon, component behavior, or the package itself
+title: "[Bug]: "
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem! Please fill out the form below to help us investigate and resolve the issue quickly.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe what is wrong or behaving unexpectedly...
+    validations:
+      required: true
+
+  - type: input
+    id: affected-icons
+    attributes:
+      label: Affected icons
+      description: Component name(s) involved (e.g. IconRocket, IconFlagUS). Enter "N/A" if not tied to a specific icon.
+      placeholder: e.g. IconRocket, IconFlagUS, or N/A
+    validations:
+      required: false
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      description: Which part of the package or library is affected?
+      options:
+        - UI icon
+        - Flag icon
+        - Styling/CSS
+        - TypeScript types
+        - Build/package resolution
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: minimal-reproduction
+    attributes:
+      label: Minimal reproduction
+      description: The smallest possible code snippet that reproduces the issue.
+      placeholder: |
+        import { IconRocket } from '@andrsrxn/icons'
+
+        export function Example() {
+          return <IconRocket size={24} />
+        }
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: A clear and concise description of what you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual-behavior
+    attributes:
+      label: Actual behavior
+      description: A clear and concise description of what actually happened instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: Drag and drop images or screen recordings showing visual bugs here.
+    validations:
+      required: false
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Package version, React version, framework, browser, OS, etc.
+      placeholder: |
+        - Package version: @andrsrxn/icons@7.0.0
+        - React version: 19.3.0
+        - Framework: Next.js
+        - Browser: Chrome 130
+        - OS: Windows 11
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and confirmed this hasn't already been reported
+          required: true
+        - label: I confirmed this issue happens on the latest published version of @andrsrxn/icons
+          required: true

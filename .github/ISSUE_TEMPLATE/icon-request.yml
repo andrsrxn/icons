@@ -1,0 +1,64 @@
+name: Icon request
+description: Suggest a new UI or Flag icon to add
+title: "[Icon Request]: "
+labels: ["enhancement", "icon request"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to suggest a new icon! Please fill out as much detail as you can - a clear use case and a visual reference make it much faster to design and add.
+
+  - type: input
+    id: icon-name
+    attributes:
+      label: Icon name
+      description: What should this icon be named? Use kebab-case.
+      placeholder: e.g. credit-card-shield
+    validations:
+      required: true
+
+  - type: dropdown
+    id: group
+    attributes:
+      label: Group
+      description: Is this a general UI icon, or a country/region flag?
+      options:
+        - UI
+        - Flag
+    validations:
+      required: true
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use case
+      description: Describe why this icon is needed and where it would be used.
+      placeholder: e.g. Needed for a checkout dashboard to represent saved payment methods...
+    validations:
+      required: true
+
+  - type: textarea
+    id: similar-icon
+    attributes:
+      label: Closest existing icon (if any)
+      description: Is there an icon already in the library that's close but not quite right? This helps us tell whether this needs to be a brand new icon or an adjustment to an existing one.
+      placeholder: e.g. credit-card is close, but doesn't convey security/protection
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: Examples or references
+      description: Attach images, Figma links, or references showing how this icon should look. Drag and drop images directly into this box.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched the existing icon catalog on the docs site and confirmed this icon doesn't already exist
+          required: true

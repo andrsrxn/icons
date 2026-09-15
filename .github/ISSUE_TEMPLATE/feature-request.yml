@@ -1,0 +1,82 @@
+name: Feature request
+description: Request a new prop, styling capability, or package-level feature
+title: "[Feature]: "
+labels: ["enhancement"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting an improvement! Please fill out the fields below.
+
+        **Note:** If you want to request a new icon (UI or Flag), please use the [Icon request](icon-request.yml) template instead.
+
+  - type: dropdown
+    id: feature-category
+    attributes:
+      label: Category
+      description: What kind of feature or improvement is this?
+      options:
+        - New prop or component API
+        - Styling or theming capability
+        - Documentation
+        - Tooling or developer experience
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: feature-summary
+    attributes:
+      label: Feature summary
+      description: A clear and concise description of what feature or API capability you want added.
+      placeholder: Describe the feature or improvement...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem statement/use case
+      description: Is your request related to a problem or limitation? Describe what you're trying to build.
+      placeholder: e.g. I am trying to build [...] but currently cannot because there is no way to [...]
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-solution
+    attributes:
+      label: Proposed solution
+      description: Describe how you want this feature to work. If you have a prop or API design in mind, include code examples.
+      placeholder: |
+        I would like a prop like:
+
+        ```tsx
+        <IconRocket customProp="value" />
+        ```
+    validations:
+      required: false
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Describe any alternative solutions or workarounds you've tried.
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional context
+      description: Add any other context, screenshots, or mockups about the feature request here.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checklist
+    attributes:
+      label: Checklist
+      options:
+        - label: I searched existing issues and confirmed this feature hasn't already been requested
+          required: true
