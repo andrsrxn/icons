@@ -192,6 +192,7 @@ export const HeroSection = () => {
         <div className='flex items-center gap-4 mt-2'>
           <Link
             href='/docs'
+            prefetch={false}
 
             className='text-primary hover:underline flex items-center gap-1 decoration-1 underline-offset-2'>
             Documentation
@@ -199,7 +200,7 @@ export const HeroSection = () => {
           </Link>
           <Link
             href='/examples'
-
+            prefetch={false}
             className='text-primary hover:underline flex items-center gap-1 decoration-1 underline-offset-2'>
             Examples
             <IconChevronRight className='size-4' />
