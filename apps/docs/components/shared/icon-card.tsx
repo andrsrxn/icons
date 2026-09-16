@@ -20,6 +20,7 @@ export const IconCard = memo(function IconCard({ icon, queryString }: IconCardPr
   return (
     <Link
       href={href}
+      prefetch={false}
       className='group rounded-xl focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 outline-none'>
       <Card className='flex flex-col gap-2 items-center justify-center p-4 relative group-hover:ring-primary transition-colors!'>
         <IconComponent className='size-8' />

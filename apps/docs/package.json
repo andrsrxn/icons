@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3001",
     "lint": "biome check && echo Lint finished.",
     "lint:check": "biome ci && echo Lint finished.",
     "type:check": "tsc --noEmit && echo Type check finished.",
