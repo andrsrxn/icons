@@ -6,6 +6,7 @@ import { type ReactNode, Suspense } from 'react'
 import { preconnect } from 'react-dom'
 import { AppProviders } from '@/components/providers/providers'
 import { Footer } from '@/components/sections/footer'
+import { env } from '@/lib/config/env'
 import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import { structuredData } from '@/lib/constants/structured-data'
 import { cn } from '@/lib/utils'
@@ -46,7 +47,7 @@ export default function RootLayout({ children, modal }: { children: ReactNode; m
             __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
           }}
         />
-        <Analytics />
+        {env.NODE_ENV === 'production' ? <Analytics /> : null}
       </body>
     </html>
   )

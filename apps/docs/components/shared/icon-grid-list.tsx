@@ -1,6 +1,6 @@
 'use client'
 
-import { IconHelp } from '@andrsrxn/icons'
+import { IconHelp, IconInfo } from '@andrsrxn/icons'
 import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
 import { useSearchParams } from 'next/navigation'
 import { IconCard } from '@/components/shared/icon-card'
@@ -27,6 +27,7 @@ export const IconGridList = ({
 }: IconGridListProps) => {
   const searchParams = useSearchParams()
   const queryString = searchParams.toString()
+  console.log({ queryString })
 
   if (icons.length === 0) {
     return (
@@ -51,6 +52,12 @@ export const IconGridList = ({
   return (
     <div
       className={cn('grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] h-max gap-4', className)}>
+      {icons.length > 0 && queryString !== '' && queryString.includes('q=') ? (
+        <div className='flex items-center gap-2 col-span-full h-max'>
+          <IconInfo className='size-4 text-muted-foreground' />
+          <span className='text-sm text-muted-foreground'>{icons.length} icons found</span>
+        </div>
+      ) : null}
       {icons.map(icon => (
         <IconCard queryString={queryString} icon={icon} key={icon.name} />
       ))}
