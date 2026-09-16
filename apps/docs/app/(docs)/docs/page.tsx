@@ -173,7 +173,7 @@ export default function DocsPage() {
           <TabsContent value='pnpm'>
             <CodeBlock
               code='pnpm add @andrsrxn/icons'
-              language='bash'
+
               className='max-w-prose'
               filename='bash'
             />
@@ -181,7 +181,7 @@ export default function DocsPage() {
           <TabsContent value='npm'>
             <CodeBlock
               code='npm install @andrsrxn/icons'
-              language='bash'
+
               className='max-w-prose'
               filename='bash'
             />
@@ -189,7 +189,7 @@ export default function DocsPage() {
           <TabsContent value='yarn'>
             <CodeBlock
               code='yarn add @andrsrxn/icons'
-              language='bash'
+
               className='max-w-prose'
               filename='bash'
             />
@@ -197,7 +197,7 @@ export default function DocsPage() {
           <TabsContent value='bun'>
             <CodeBlock
               code='bun add @andrsrxn/icons'
-              language='bash'
+
               className='max-w-prose'
               filename='bash'
             />
@@ -222,7 +222,7 @@ export function App() {
     </div>
   )
 }`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
 
@@ -247,7 +247,7 @@ export function App() {
     </div>
   )
 }`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
         <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
@@ -268,7 +268,7 @@ export function App() {
         </p>
         <CodeBlock
           code="import '@andrsrxn/icons/rtl.css'"
-          language='typescript'
+
           className='max-w-prose'
           filename='index.tsx'
         />
@@ -558,7 +558,7 @@ export function App() {
           code={`[dir=rtl] [data-slot='icon-ui-arrow-start'] {
   transform: scaleX(1);
 }`}
-          language='css'
+
           className='max-w-prose'
         />
 
@@ -602,25 +602,25 @@ export function App() {
         <div className='flex items-center gap-4 md:gap-6'>
           <div
             className={
-              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+              'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
             <IconListOrderedRtl />
           </div>
           <div
             className={
-              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+              'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
             <IconListCheckRtl />
           </div>
           <div
             className={
-              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+              'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
             <IconSeekBackwardRtl />
           </div>
           <div
             className={
-              'flex size-25 md:size-36 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-25 md:[&>svg]:size-36'
+              'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
             <IconSeekForwardRtl />
           </div>
@@ -637,7 +637,7 @@ export function App() {
         </p>
         <CodeBlock
           code={`<IconArrowStart aria-label='Back' onClick={() => back()} />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
         <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
@@ -658,7 +658,11 @@ export function App() {
           If you want to treat them as <strong>decorative</strong>, use the <code>aria-hidden</code>{' '}
           attribute:
         </p>
-        <CodeBlock code={'<IconFlagUs aria-hidden />'} language='tsx' className='max-w-prose' />
+        <CodeBlock
+          code={'<IconFlagUs aria-hidden />'}
+          filename='page.tsx'
+          className='max-w-prose'
+        />
 
         <h2 id='naming'>Naming</h2>
 
@@ -694,7 +698,7 @@ export function App() {
   stroke-width: 2px;
 }
 `}
-          language='css'
+
           className='max-w-prose'
         />
         <CodeBlock
@@ -704,7 +708,7 @@ export function App() {
   pointer-events: none;
 }
 `}
-          language='css'
+
           className='max-w-prose'
         />
         <p>
@@ -726,7 +730,7 @@ export function App() {
   stroke-width: 1px;
 }
 `}
-          language='css'
+
           className='max-w-prose'
         />
 
@@ -747,7 +751,7 @@ export function App() {
 
 // Or with className
 <IconRocket className='size-6' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
 
@@ -759,7 +763,7 @@ export function App() {
           code={`// Keep 3:2 proportions
 <IconFlagGT width={80} />
 <IconFlagGT className='w-16' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose mt-6'
         />
 
@@ -771,7 +775,7 @@ export function App() {
           code={`// Square proportions
 <IconFlagGT size={80} />
 <IconFlagGT className='size-20' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose mt-6'
         />
 
@@ -783,7 +787,7 @@ export function App() {
           code={`// To fill the entire square
 <IconFlagGT size={80} preserveAspectRatio='xMidYMid slice' />
 <IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose mt-6'
         />
 
@@ -803,7 +807,7 @@ export function App() {
 
 // Or use className
 <IconRocket className='text-blue-500' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
 
@@ -828,7 +832,7 @@ export function App() {
 
 // Or use className
 <IconRocket className='stroke-2' />`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
 
@@ -843,7 +847,7 @@ export function App() {
         <CodeBlock
           code={`import type { Icon, IconProps } from '@andrsrxn/icons/types'
 import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
-          language='tsx'
+          filename='page.tsx'
           className='max-w-prose'
         />
 

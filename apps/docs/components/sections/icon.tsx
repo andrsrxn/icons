@@ -47,7 +47,7 @@ export const IconSection = ({
 
   const copyCodeExample = `import { ${componentName} } from '@andrsrxn/icons'
 
-return <${componentName} />
+<${componentName} />
 `
 
   const isUI = isUIIcon(icon)
@@ -144,12 +144,7 @@ return <${componentName} />
               </div>
             </div>
 
-            <CodeBlock
-              aria-label='Example usage'
-              code={copyCodeExample}
-              language='tsx'
-              filename='page'
-            />
+            <CodeBlock aria-label='Example usage' code={copyCodeExample} filename='page.tsx' />
 
             <div className='grid grid-cols-2 gap-4'>
               <ButtonCopy variant='outline' value='' onClick={copyRawSVG}>
