@@ -16,6 +16,7 @@ export const COMPANY = {
     version: '7',
     license: 'MIT',
     licenceUrl: 'https://github.com/andrsrxn/icons/blob/main/LICENSE',
+    skills: 'https://github.com/andrsrxn/icons/tree/main/skills',
     npm: 'https://www.npmjs.com/package/@andrsrxn/icons',
   },
   brand: {
