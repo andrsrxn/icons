@@ -1,14 +1,14 @@
-# TypeScript API and Export Entrypoints Reference
+# TypeScript API and export entrypoints reference
 
-This reference details the TypeScript types, entrypoint export paths, and prop definitions for `@andrsrxn/icons`.
+This reference details the TypeScript types, entrypoint export paths, and prop definitions for `andrsrxn/icons`.
 
 ---
 
-## 1. Export Entrypoints Summary
+## 1. Export entrypoints summary
 
-`@andrsrxn/icons` exposes modular entrypoints for clean imports and bundle isolation:
+`andrsrxn/icons` exposes modular entrypoints for clean imports and bundle isolation:
 
-| Package Subpath                     | Description                                      | Example Import                                                               |
+| Package subpath                     | Description                                      | Example import                                                               |
 | :---------------------------------- | :----------------------------------------------- | :--------------------------------------------------------------------------- |
 | `@andrsrxn/icons`                   | Main entrypoint for all UI icons (tree-shakable) | `import { IconRocket } from '@andrsrxn/icons'`                               |
 | `@andrsrxn/icons/<icon-name>`       | Specific subpath import for a single UI icon     | `import { IconRocket } from '@andrsrxn/icons/rocket'`                        |
@@ -20,33 +20,33 @@ This reference details the TypeScript types, entrypoint export paths, and prop d
 
 ---
 
-## 2. TypeScript Types
+## 2. TypeScript types
 
 Type definitions are intentionally scoped and separated by group to avoid naming collisions (e.g., preventing conflicts between `FlagIcon` types and UI icons like `IconFlag`).
 
-### UI Icons Types
+### UI icons types
 
 ```tsx
 import type { Icon, IconProps } from '@andrsrxn/icons/types'
 
-// Icon: SVG Element type (React.SVGSVGElement)
+// Icon: SVG element type (React.SVGSVGElement)
 // IconProps: Props interface for UI Icon components
 ```
 
-### Flag Icons Types
+### Flag icons types
 
 ```tsx
 import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
 
-// FlagIcon: SVG Element type for flags
+// FlagIcon: SVG element type for flags
 // FlagIconProps: Props interface for Flag Icon components
 ```
 
 ---
 
-## 3. Props Definitions
+## 3. Props definitions
 
-### UI Icon Props (`IconProps`)
+### UI icon props (`IconProps`)
 
 UI icons accept standard React SVG attributes (`React.ComponentProps<'svg'>`) along with custom shortcut props:
 
@@ -59,7 +59,7 @@ UI icons accept standard React SVG attributes (`React.ComponentProps<'svg'>`) al
 | `className`   | `string`           | `'icon-ui'`               | Base CSS class applied for global styling                                |
 | `data-slot`   | `string`           | `'icon-ui-{{icon-name}}'` | Unique data attribute for targeted styling                               |
 
-#### Usage Examples:
+#### Usage examples
 
 ```tsx
 // Custom size and color via props
@@ -68,13 +68,13 @@ UI icons accept standard React SVG attributes (`React.ComponentProps<'svg'>`) al
 // Custom size via Tailwind CSS
 <IconRocket className="size-6 text-blue-500" />
 
-// Accessible informative UI icon (override decorative default). BEST PRACTICES: THIS IS NOT A RECOMMENDED PATTERN.
+// Accessible informative UI icon (override decorative default). Best practices: use only when strictly required.
 <IconArrowStart aria-label="Go Back" onClick={() => handleBack()} />
 ```
 
 ---
 
-### Flag Icon Props (`FlagIconProps`)
+### Flag icon props (`FlagIconProps`)
 
 Flag icons accept standard React SVG attributes and feature custom sizing behavior to preserve their 3:2 rectangular aspect ratio:
 
@@ -90,7 +90,7 @@ Flag icons accept standard React SVG attributes and feature custom sizing behavi
 | `className`   | `string`           | `'icon-flag'`               | Base CSS class applied for global styling                                     |
 | `data-slot`   | `string`           | `'icon-flag-{{flag-name}}'` | Unique data attribute for targeted styling                                    |
 
-#### Usage and Aspect Ratio Examples:
+#### Usage and aspect ratio examples
 
 ```tsx
 // 1. Maintain 3:2 aspect ratio (recommended)
@@ -106,12 +106,12 @@ Flag icons accept standard React SVG attributes and feature custom sizing behavi
 
 ---
 
-## 4. CSS Slot and Global Class Selectors
+## 4. CSS slot and global class selectors
 
 Icons expose built-in classes and data attributes for global or specific CSS styling:
 
 ```css
-/* Recommended Baseline Global Styles */
+/* Recommended baseline global styles */
 .icon-ui {
   flex-shrink: 0;
   pointer-events: none;

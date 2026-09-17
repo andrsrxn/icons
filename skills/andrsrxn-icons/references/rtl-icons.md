@@ -1,6 +1,6 @@
-# RTL Icons Reference
+# RTL icons reference
 
-This document details the complete inventory of RTL-aware icons and directional behavior in `@andrsrxn/icons`.
+This document details the complete inventory of RTL-aware icons and directional behavior in `andrsrxn/icons`.
 
 ---
 
@@ -16,7 +16,7 @@ The CSS implementation uses `[dir='rtl']` descendant selectors paired with a mat
 
 ---
 
-## Exclusive RTL Icons (`-rtl` Suffix)
+## Exclusive RTL icons (-rtl suffix)
 
 These icons are **exclusive for RTL layouts**. Because their design requires structural adaptation rather than a simple horizontal mirror, they are exported as separate components with the `-rtl` suffix:
 
@@ -27,15 +27,15 @@ These icons are **exclusive for RTL layouts**. Because their design requires str
 
 ---
 
-## Automatic RTL-Flipped Icons List
+## Automatic RTL-flipped icons list
 
 The following icons automatically flip under `[dir='rtl']`:
 
-### Opt-in Directional Icons
+### Opt-in directional icons
 
 Icons designed with explicit directional semantics (`start` / `end`):
 
-#### Arrows and Navigation
+#### Arrows and navigation
 
 - `icon-ui-arrow-start`
 - `icon-ui-arrow-end`
@@ -45,7 +45,7 @@ Icons designed with explicit directional semantics (`start` / `end`):
 - `icon-ui-arrow-up-end`
 - `icon-ui-arrows-start-end`
 
-#### Layout and Alignments
+#### Layout and alignments
 
 - `icon-ui-border-start`
 - `icon-ui-border-end`
@@ -59,7 +59,7 @@ Icons designed with explicit directional semantics (`start` / `end`):
 - `icon-ui-chevron-start-double`
 - `icon-ui-chevron-end-double`
 
-#### Typography and Alignment
+#### Typography and alignment
 
 - `icon-ui-text-align-start`
 - `icon-ui-text-align-end`
@@ -67,7 +67,7 @@ Icons designed with explicit directional semantics (`start` / `end`):
 - `icon-ui-text-centerline-end`
 - `icon-ui-text-firstline-start`
 
-#### Panels and Sidebars
+#### Panels and sidebars
 
 - `icon-ui-panel-start`
 - `icon-ui-panel-end`
@@ -78,18 +78,18 @@ Icons designed with explicit directional semantics (`start` / `end`):
 - `icon-ui-panel-start-open-filled`
 - `icon-ui-panel-end-open-filled`
 
-#### Slides and Presentation
+#### Slides and presentation
 
 - `icon-ui-slides-start`
 - `icon-ui-slides-end`
 
 ---
 
-### Opt-out Flipped Icons
+### Opt-out flipped icons
 
 Icons that represent standard Left-to-Right interface concepts which are mirrored under RTL:
 
-#### Lists and Documents
+#### Lists and documents
 
 - `icon-ui-list-asterisk`
 - `icon-ui-list-unordered`
@@ -104,13 +104,13 @@ Icons that represent standard Left-to-Right interface concepts which are mirrore
 - `icon-ui-text-items`
 - `icon-ui-text-line-height`
 
-#### Keyboards and Controls
+#### Keyboards and controls
 
 - `icon-ui-key-backspace`
 - `icon-ui-key-enter`
 - `icon-ui-key-tab`
 
-#### Media and Links
+#### Media and links
 
 - `icon-ui-external-link`
 - `icon-ui-chevron-first`
@@ -122,7 +122,7 @@ Icons that represent standard Left-to-Right interface concepts which are mirrore
 
 ---
 
-## Opting Out of Automatic Flipping
+## Opting out of automatic flipping
 
 If an icon should retain its default orientation regardless of `dir="rtl"`, you can override the transformation using Tailwind CSS or custom CSS.
 
@@ -132,7 +132,7 @@ If an icon should retain its default orientation regardless of `dir="rtl"`, you 
 <IconArrowStart className='rtl:scale-x-100' />
 ```
 
-### Using Custom CSS
+### Using custom CSS
 
 ```css
 [dir='rtl'] [data-slot='icon-ui-arrow-start'] {

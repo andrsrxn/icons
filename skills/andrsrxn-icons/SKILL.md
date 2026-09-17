@@ -1,162 +1,134 @@
 ---
 name: andrsrxn-icons
-description: Guide for AI agents to integrate, import, style, and query icons from @andrsrxn/icons in React applications, covering UI icons, flag icons, RTL support, accessibility, design fill criteria, and TypeScript usage. Use when asked to add icons, pick icon components, set up icon RTL styling, handle icon accessibility, or configure @andrsrxn/icons in a project.
+description: Integrate, import, style, and handle accessibility or RTL for UI icons and flag icons from the @andrsrxn/icons library in React applications. Use when the user asks to add icons, search or pick icon components, set up icon RTL flipping, configure icon global CSS, or work with andrsrxn/icons types.
+license: MIT
+metadata:
+  version: 1.0.0
 ---
 
-# `@andrsrxn/icons` Agent Skill
+# `andrsrxn/icons` agent skill
 
-This skill provides comprehensive instructions for AI agents consuming `@andrsrxn/icons` in React applications.
-
-## Library Summary and Requirements
-
-- **Package**: `@andrsrxn/icons` (Free, open-source React icon library)
-- **Style**: Smooth duotone aesthetic for UI icons (1,000+ icons) and minimal illustrated 3:2 flags (250+ flags).
-- **Peer Requirements**: React 19 and `react-dom` 19 (`react^19.0.0`).
-- **Runtime Environment**: ESM-only package (`"type": "module"` in `package.json`, Node.js 20.16.0+, 22.19.0+, 24.0.0+).
+A consumer-focused guide for AI agents to correctly select, import, style, and configure `andrsrxn/icons` in React applications. The full documentation is on [https://icons.andrsrxn.com](https://icons.andrsrxn.com).
 
 ---
 
-## Core Mental Model: Groups vs Categories
+## What this skill does
 
-It is critical to distinguish between **Groups** (code structure) and **Categories** (documentation filter only):
-
-1. **Groups (Code and Components)**:
-   - **UI Group (`Icon...`)**: Functional icons for app interfaces (1,000+ icons). Aspect ratio 1:1. Exported from root `@andrsrxn/icons` or direct subpaths `@andrsrxn/icons/<icon-name>`. Decorative by default. Usually only named and referenced as "Icons".
-   - **Flags Group (`IconFlag...`)**: Illustrated, minimal country and region flags (250+ flags). Aspect ratio 3:2. Exported from `@andrsrxn/icons/flags` or direct subpaths `@andrsrxn/icons/flags/<flag-code>`. Informational by default. Usually only named and referenced as "Flags".
-2. **Categories (Documentation Only)**:
-   - Categories, tags, and catalog filters exist **solely in the documentation search interface in https://icons.andrsrxn.com** to help humans search for UI icons. They are **not** part of exports, namespaces, or component props.
+- Provides rules for selecting and importing UI icons (`Icon...`) and flag icons (`IconFlag...`).
+- Configures global styles (`.icon-ui`), bundle import paths, and TypeScript interfaces.
+- Implements accessibility standards for decorative UI icons and informational flags.
+- Configures automatic RTL layout flipping with `@andrsrxn/icons/rtl.css` and exclusive `-rtl` icons.
+- Applies design principles for duotone fill selection and active `filled` state variants.
 
 ---
 
-## Installation and Mandatory Global Styles
+## When to use it (and when not to)
 
-### Installation
+### When to use
 
-```bash
-pnpm add @andrsrxn/icons
-# or npm install @andrsrxn/icons / yarn add @andrsrxn/icons / bun add @andrsrxn/icons
-```
+Use this skill when:
 
-### Recommended Global Styles
+- Integrating or importing icons from `@andrsrxn/icons` or `@andrsrxn/icons/flags` in React apps.
+- Configuring global CSS, Tailwind styles, or RTL behavior for icons.
+- Adding accessibility labels (`aria-label`, `aria-hidden`) to icons.
+- Working with TypeScript types (`IconProps`, `FlagIconProps`).
 
-When installing `@andrsrxn/icons`, consumers should add these recommended baseline styles to their project's global CSS (e.g., `globals.css` or `index.css`):
+### When not to use
 
-```css
-.icon-ui {
-  flex-shrink: 0;
-  pointer-events: none;
-}
-```
+Do not use this skill when:
 
-This prevents unwanted flex deformation in layouts and ensures click events pass through decorative icons to their parent interactive containers.
+- Creating source SVG files or generating TSX component code inside the `andrsrxn/icons` library repository.
+- Working with internal package code (e.g. `raw-icons`, build scripts).
+- Seeking brand or company logos (use SVGL or Simple Icons instead).
 
 ---
 
-## Import Strategies
+## Inputs needed
 
-### 1. Barrel Imports (Tree-Shakable)
+Before executing tasks, identify:
 
-Recommended for standard usage. Modern bundlers auto-shake unused icons.
-
-```tsx
-import { IconRocket, IconFolderCheck } from '@andrsrxn/icons'
-import { IconFlagGT, IconFlagUS } from '@andrsrxn/icons/flags'
-```
-
-### 2. Specific Subpath Imports (Granular Isolation)
-
-Use when explicit bundle size isolation or strict subpath control is required.
-
-```tsx
-import { IconRocket } from '@andrsrxn/icons/rocket'
-import { IconFlagGT } from '@andrsrxn/icons/flags/gt'
-```
-
-> [!WARNING]
-> Avoid wildcard imports or importing everything from root into large bundles without tree-shaking enabled.
+1. **Target icon type**: UI icon (`Icon...`) or flag icon (`IconFlag...`).
+2. **Import style preference**: Barrel import (`@andrsrxn/icons`) or specific path import (`@andrsrxn/icons/rocket`).
+3. **Accessibility role**: Decorative (default for UI) or informational (default for flags / UI with `aria-label`).
+4. **Layout direction**: Standard LTR or RTL requiring `@andrsrxn/icons/rtl.css`.
 
 ---
 
-## Icon Naming and Variety Rules
+## Step-by-step procedure
 
-See detailed reference: [naming-and-design-rules.md](file:///c:/Users/carlo/Desktop/Projects/Personal/Apps/icons/Library/skills/andrsrxn-icons/references/naming-and-design-rules.md)
-
-- **Prefixes**: All UI icons start with `Icon` (e.g., `IconSearch`). All Flag icons start with `IconFlag` (e.g., `IconFlagGT`).
-- **Object-Based Naming**: Component names are PascalCase based on the represented object (e.g., `IconSave`, `IconExternalLink`).
-- **Prominent Element First**: Multi-concept icons put the prominent object first (e.g., `IconHeartScan`, **not** `IconScanHeart`).
-- **Action and State Variations**: Common objects feature standard action/state suffixes:
-  - Examples: `IconFolderX`, `IconFolderCheck`, `IconFolderWarning`, `IconFolderOff`, `IconFolderClock`, `IconFolderPlus`, `IconFolderMinus`, `IconFolderLock`, `IconFolderEdit`.
-  - Same pattern applies to `Calendar`, `User`, `Mail`, `File`, `Book`, `Message`,`CreditCard`, `Globe`, `Pin`, `Phone`, `Shield`, `ShoppingBag`, `Signal`, etc.
-- **Flag Naming Standards**:
-  - Country flags use ISO 3166-1 alpha-2 codes in uppercase: `IconFlagGT`, `IconFlagUS`, `IconFlagMX`, `IconFlagES`.
-  - **LGBT Flag**: `IconFlagLGTB`.
-  - **Continent Flags**: Prefixed with `C`: `IconFlagCNA` (North America), `IconFlagCAF` (Africa), `IconFlagCEU` (Europe), `IconFlagCAS` (Asia), `IconFlagCSA` (South America), `IconFlagCOC` (Oceania).
-
----
-
-## Icon Design Principles and Duotone Fill Logic
-
-Understanding the duotone fill rules helps agents select and recommend icons accurately:
-
-1. **Duotone Criteria**: Duotone is applied only when there is a meaningful distinction between primary paths and background fill.
-2. **Stroke-Only / Geometric Icons (No Fill)**: Simple geometric icons (e.g., `+`, `-`, `/`, `×`, `IconX`, arrows) contain stroke lines only. No decorative fill layer is added to prevent visual noise.
-3. **Fill Meaning**: The secondary fill layer represents background, depth, or shadow.
-4. **Stack Icons (Layering Rule)**: For layered/stacked objects (`IconUsers`, `IconBookmarks`, `IconFiles`), the front element is always the unfilled "surface", while the element behind receives the duotone fill layer.
-5. **Continuous Line Exception**: Icons with enclosed loops like `fingerprint` or `hashtag` are treated as continuous lines; their interior spaces are **not** filled.
-6. **Letters and Numbers**: Letter and number icons contain **no** duotone fill.
-7. **Filled Variant (`filled`)**: A `filled` component variant (e.g., `IconHeartFilled`, `IconBookmarkFilled`, `IconStarFilled`, `IconBellFilled`) exists **only on demand** for active/selected states, not as a blanket alternative style.
+1. **Install package and apply global styles**:
+   - Install: `pnpm add @andrsrxn/icons` (or npm/yarn/bun).
+   - Add recommended styles to global CSS:
+     ```css
+     .icon-ui {
+       flex-shrink: 0;
+       pointer-events: none;
+     }
+     ```
+2. **Select the correct component and group**:
+   - UI icons (`Icon...`): Aspect ratio 1:1, exported from `@andrsrxn/icons`.
+   - Flag icons (`IconFlag...`): Aspect ratio 3:2, exported from `@andrsrxn/icons/flags`.
+3. **Import using appropriate strategy**:
+   - Standard: `import { IconRocket } from '@andrsrxn/icons'`
+   - Granular: `import { IconRocket } from '@andrsrxn/icons/rocket'`
+4. **Configure accessibility**:
+   - UI icons are decorative by default (`aria-hidden="true"`). Provide `aria-label` only when strictly required as an informative action button.
+   - Flag icons are informational by default (`role="img"`, `aria-label="<COUNTRY_CODE>"`). Pass `aria-hidden` if decorative.
+5. **Configure RTL if needed**:
+   - Import `@andrsrxn/icons/rtl.css` at app root.
+   - Use exclusive `-rtl` suffix components (`IconListCheckRtl`, `IconSeekForwardRtl`) for adapted RTL icons.
+6. **Apply styling and sizing**:
+   - Use `size` prop or Tailwind `size-6` for UI icons.
+   - Use `width` prop (e.g. `width={60}`) for flags to maintain 3:2 aspect ratio.
 
 ---
 
-## RTL (Right-to-Left) Support
+## Validation and "how to know we're done"
 
-See detailed reference: [rtl-icons.md](file:///c:/Users/carlo/Desktop/Projects/Personal/Apps/icons/Library/skills/andrsrxn-icons/references/rtl-icons.md)
-
-To enable automatic icon flipping under RTL layouts:
-
-1. Import `@andrsrxn/icons/rtl.css` in the project root:
-   ```tsx
-   import '@andrsrxn/icons/rtl.css'
-   ```
-2. RTL-aware icons automatically detect `[dir="rtl"]` on ancestor elements and apply `transform: scaleX(-1)`.
-3. **Opting Out**: Override via CSS or Tailwind (`rtl:scale-x-100` / `[dir='rtl'] [data-slot='...'] { transform: scaleX(1); }`).
-4. **Exclusive RTL Suffix Icons (`-rtl`)**: Direction-dependent icons that require specialized adaptations rather than simple horizontal flipping:
-   - `IconListCheckRtl`
-   - `IconListOrderedRtl`
-   - `IconSeekBackwardsRtl`
-   - `IconSeekForwardRtl`
+- **Build check**: Project compiles cleanly without missing module or export errors.
+- **Import verify**: Icons import from correct group entrypoints (`@andrsrxn/icons` vs `@andrsrxn/icons/flags`).
+- **Styling verify**: UI icons render at intended dimensions without flex distortion (`flex-shrink: 0`). Flags retain 3:2 aspect ratio when using only the `width` prop, 1:1 when using the `width` and `height` or `size` prop and keeping the 3:2 aspect inside the square, or fill all the square space with the `preserveAspectRatio` attribute set to `'xMidYMid slice'`. If none of the above is true, ask the user to fix it.
+- **Accessibility verify**: Decorative UI icons have `aria-hidden="true"`; interactive icons have descriptive labels; flags have uppercase country code labels or explicit `aria-hidden`.
+- **RTL verify**: RTL stylesheet is imported at project root if RTL layout is used.
 
 ---
 
-## Accessibility Models
+## Common failure modes and fixes
 
-| Icon Group                    | Default Behavior         | Attributes                                  | Customizing Behavior                                                                                                                    |
-| :---------------------------- | :----------------------- | :------------------------------------------ | :-------------------------------------------------------------------------------------------------------------------------------------- |
-| **UI Icons (`.icon-ui`)**     | Decorative by default    | `aria-hidden="true"`                        | Provide `aria-label="..."` to automatically switch to `role="img"` and `aria-hidden="false"`. _(Use sparingly when strictly necessary)_ |
-| **Flag Icons (`.icon-flag`)** | Informational by default | `role="img"`, `aria-label="<COUNTRY_CODE>"` | Pass `aria-hidden` (`<IconFlagGT aria-hidden />`) to treat as decorative.                                                               |
-
----
-
-## TypeScript and API Props
-
-See detailed reference: [typescript-and-exports.md](file:///c:/Users/carlo/Desktop/Projects/Personal/Apps/icons/Library/skills/andrsrxn-icons/references/typescript-and-exports.md)
-
-### Importing Types
-
-```tsx
-import type { Icon, IconProps } from '@andrsrxn/icons/types'
-import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'
-```
-
-### Key Props Summary
-
-- **UI Icons (`IconProps`)**: `size` (default `24`), `color` (default `'currentColor'`), `strokeWidth` (default `1.5`, changing not recommended), `className` (default `'icon-ui'`), `data-slot` (e.g., `'icon-ui-rocket'`), `aria-label`.
-- **Flag Icons (`FlagIconProps`)**: `size` (default `24`), `width`, `height`, `preserveAspectRatio` (e.g., `'xMidYMid slice'`), `role` (default `'img'`), `aria-label` (default uppercase country code), `className` (default `'icon-flag'`), `data-slot` (e.g., `'icon-flag-gt'`), `aria-hidden`.
+| Failure mode                      | Cause                                                                                                  | Fix                                                                                                |
+| :-------------------------------- | :----------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------------------------------------- |
+| **Wrong flag aspect ratio**       | Setting both `width` and `height` or `size` to fill all the square space without `preserveAspectRatio` | Set only `width` (e.g. `<IconFlagGT width={40} />`) or add `preserveAspectRatio="xMidYMid slice"`. |
+| **Import path errors**            | Importing flag icons from `@andrsrxn/icons` root instead of `@andrsrxn/icons/flags`                    | Update import path to `@andrsrxn/icons/flags` or `@andrsrxn/icons/flags/<code-or-name>`.           |
+| **Icon squishing in flex layout** | Missing baseline global CSS                                                                            | Add `.icon-ui { flex-shrink: 0; pointer-events: none; }` to global CSS.                            |
+| **Type collision errors**         | Importing `IconProps` and `FlagIconProps` from root                                                    | Import types from scoped paths: `@andrsrxn/icons/types` or `@andrsrxn/icons/flags/types`.          |
+| **Icons not flipping in RTL**     | Missing global RTL stylesheet                                                                          | Import `@andrsrxn/icons/rtl.css` in project root file.                                             |
 
 ---
 
-## Quick Reference Links
+## Library specifics and rules
 
-- [RTL Icons Reference](./references/rtl-icons.md)
-- [Naming and Design Rules Reference](./references/naming-and-design-rules.md)
-- [TypeScript & Exports Reference](./references/typescript-and-exports.md)
+For detailed reference documentation:
+
+- [Naming and design rules](./references/naming-and-design-rules.md)
+- [RTL icons reference](./references/rtl-icons.md)
+- [TypeScript and exports reference](./references/typescript-and-exports.md)
+
+### Core mental model: groups vs categories
+
+- **Groups (code structure)**: `Icon...` (UI group) and `IconFlag...` (Flags group) represent actual component code exports.
+- **Categories (documentation only)**: Categories, tags, and catalog filters exist **only** on the search interface at `https://icons.andrsrxn.com`.
+
+### Duotone design principles
+
+- **Duotone by criteria**: Applied only when there is a clear distinction between paths and background fill.
+- **Stroke-only icons**: Geometric icons (`+`, `/`, `×`, `IconX`, arrows) contain no fill layer.
+- **Stack icons**: Front element is unfilled surface; background element receives fill (e.g. `IconUsers`, `IconBookmarks`).
+- **Continuous lines**: Looped icons (`IconFingerprint`, `IconHashtag`) contain no fill.
+- **Letters and numbers**: Contain no fill.
+- **Filled variants**: `filled` suffix components exist on demand only for active/selected states (e.g. `IconHeartFilled`, `IconBookmarkFilled`).
+
+### Flag group naming
+
+- Country flags use ISO 3166-1 alpha-2 uppercase codes (`IconFlagGT`, `IconFlagUS`).
+- LGBT flag: `IconFlagLGTB`.
+- Continent flags use `C` prefix (`IconFlagCNA` for North America, `IconFlagCAF` for Africa, `IconFlagCEU` for Europe, `IconFlagCAS` for Asia, `IconFlagCSA` for South America, `IconFlagCOC` for Oceania).
