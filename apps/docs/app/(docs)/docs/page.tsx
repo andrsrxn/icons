@@ -209,6 +209,7 @@ export default function DocsPage() {
           If you are using an AI coding assistant (such as Antigravity, Cursor, Copilot, or Claude
           Code), you can install the official agent skill into your project:
         </p>
+        <h4>Automatic installation</h4>
         <Tabs defaultValue='pnpm'>
           <TabsList variant='line'>
             <TabsTrigger value='pnpm'>pnpm</TabsTrigger>
@@ -250,6 +251,25 @@ export default function DocsPage() {
             />
           </TabsContent>
         </Tabs>
+        <h4>Manual installation</h4>
+        <p>
+          Copy the{' '}
+          <a href={COMPANY.repo.skills} rel='noopener noreferrer' target='_blank'>
+            skills/andrsrxn-icons
+          </a>{' '}
+          directory into your project's <code>.agents/skills/</code> directory.
+        </p>
+        <CodeBlock
+          code={`.agents/
+└── skills/
+    └── andrsrxn-icons/
+        ├── references/
+        ├── README.md
+        └── SKILL.md`}
+
+          className='max-w-prose'
+          filename='tree'
+        />
 
         <h2 id='usage'>Usage</h2>
 
