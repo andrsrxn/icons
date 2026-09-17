@@ -204,6 +204,53 @@ export default function DocsPage() {
           </TabsContent>
         </Tabs>
 
+        <h3 id='agent-skill'>Agent skill</h3>
+        <p>
+          If you are using an AI coding assistant (such as Antigravity, Cursor, Copilot, or Claude
+          Code), you can install the official agent skill into your project:
+        </p>
+        <Tabs defaultValue='pnpm'>
+          <TabsList variant='line'>
+            <TabsTrigger value='pnpm'>pnpm</TabsTrigger>
+            <TabsTrigger value='npm'>npm</TabsTrigger>
+            <TabsTrigger value='yarn'>yarn</TabsTrigger>
+            <TabsTrigger value='bun'>bun</TabsTrigger>
+          </TabsList>
+
+          <TabsContent value='pnpm'>
+            <CodeBlock
+              code='pnpm dlx skills add andrsrxn/icons --skill andrsrxn-icons'
+
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='npm'>
+            <CodeBlock
+              code='npx skills add andrsrxn/icons --skill andrsrxn-icons'
+
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='yarn'>
+            <CodeBlock
+              code='yarn dlx skills add andrsrxn/icons --skill andrsrxn-icons'
+
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+          <TabsContent value='bun'>
+            <CodeBlock
+              code='bunx skills add andrsrxn/icons --skill andrsrxn-icons'
+
+              className='max-w-prose'
+              filename='bash'
+            />
+          </TabsContent>
+        </Tabs>
+
         <h2 id='usage'>Usage</h2>
 
         <h3 id='global-import'>Global import</h3>

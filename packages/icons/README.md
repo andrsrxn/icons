@@ -43,6 +43,30 @@ Execute the following command:
 
 ```bash
 pnpm add @andrsrxn/icons
+
+npm add @andrsrxn/icons
+
+yarn add @andrsrxn/icons
+
+bun add @andrsrxn/icons
+```
+
+### Agent skill
+
+If you are using an AI coding assistant (such as Antigravity, Cursor, Copilot, or Claude Code), you can install the official agent skill into your project:
+
+```bash
+# pnpm
+pnpm dlx skills add andrsrxn/icons --skill andrsrxn-icons
+
+# npm
+npx skills add andrsrxn/icons --skill andrsrxn-icons
+
+# yarn
+yarn dlx skills add andrsrxn/icons --skill andrsrxn-icons
+
+# bun
+bunx skills add andrsrxn/icons --skill andrsrxn-icons
 ```
 
 ## Usage

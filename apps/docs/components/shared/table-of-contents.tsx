@@ -106,6 +106,13 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
               <a href='#installation' data-active={isActive('installation')}>
                 Installation
               </a>
+              <ul>
+                <li>
+                  <a href='#agent-skill' data-active={isActive('agent-skill')}>
+                    Agent skill
+                  </a>
+                </li>
+              </ul>
             </li>
 
             <li>
