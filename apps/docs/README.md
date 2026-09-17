@@ -2,7 +2,7 @@
 
 # Overview
 
-Official documentation and icon catalog application for **[@andrsrxn/icons](https://icons.andrsrxn.com)**, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
+Official documentation and icon catalog application for **[andrsrxn/icons](https://icons.andrsrxn.com)**, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
 ## Features
 
@@ -45,7 +45,7 @@ Official documentation and icon catalog application for **[@andrsrxn/icons](http
 - [shadcn/ui](https://ui.shadcn.com/) and [Base UI](https://base-ui.com/) primitives
 - [nuqs](https://nuqs.47ng.com/) for URL-synced search/filter state
 - [Shiki](https://shiki.style/) for syntax-highlighted code snippets
-- [@andrsrxn/icons](https://www.npmjs.com/package/@andrsrxn/icons) and `@andrsrxn/raw-icons` (internal, workspace-only) as catalog source
+- [andrsrxn/icons](https://www.npmjs.com/package/@andrsrxn/icons) and `andrsrxn/raw-icons` (internal, workspace-only) as catalog source
 
 ## Deployment
 
