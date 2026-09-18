@@ -95,8 +95,7 @@
     "react:check": "pnpm dlx react-doctor@latest . && echo React check finished."
   },
   "peerDependencies": {
-    "react": "^19",
-    "react-dom": "^19"
+    "react": "^19.0.0"
   },
   "devDependencies": {
     "@andrsrxn/ts-config": "workspace:*",
