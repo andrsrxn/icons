@@ -102,7 +102,7 @@ export default function DocsPage() {
           </li>
         </ul>
 
-        <h2 id='categories'>Categories</h2>
+        <h2 id='groups'>Groups</h2>
 
         <ul>
           <li>
@@ -728,7 +728,7 @@ export function App() {
         <h2 id='naming'>Naming</h2>
 
         <p>
-          All of the categories have an <code>Icon</code> prefix to differentiate them from other
+          All of the groups have an <code>Icon</code> prefix to differentiate them from other
           components and be easily importable.
         </p>
         <p>

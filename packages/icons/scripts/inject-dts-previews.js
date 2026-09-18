@@ -5,7 +5,7 @@
  * the preview directly from the original SVG source and injects it into the generated
  * declaration file, so only the types have it when developing.
  *
- * The script processes every category defined in CATEGORIES. Each category must have
+ * The script processes every category defined in GROUPS. Each category must have
  * a matching directory structure between src/raw and dist.
  *
  * Usage:
@@ -28,7 +28,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const require = createRequire(import.meta.url)
 const rawIconsRoot = path.dirname(require.resolve('@andrsrxn/raw-icons/package.json'))
 
-const CATEGORIES = ['ui', 'flags']
+const GROUPS = ['ui', 'flags']
 const RAW_ROOT = path.join(rawIconsRoot, 'src')
 const DTS_ROOT = path.resolve(__dirname, '../dist')
 
@@ -128,7 +128,7 @@ function main() {
   let totalInjected = 0
   let totalSkipped = 0
 
-  for (const category of CATEGORIES) {
+  for (const category of GROUPS) {
     const result = processCategory(category)
 
     totalScanned += result.scanned
@@ -139,7 +139,7 @@ function main() {
   // Summary
 
   console.log('\nSummary:')
-  console.log(`   Categories processed: ${CATEGORIES.length}`)
+  console.log(`   Groups processed: ${GROUPS.length}`)
   console.log(`   Files scanned:        ${totalScanned}`)
   console.log(`   Files injected:      ${totalInjected}`)
   console.log(`   Files skipped:        ${totalSkipped}`)

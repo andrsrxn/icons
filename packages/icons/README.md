@@ -22,9 +22,9 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 - **Outline when appropriate**: Simple geometric icons such as `+`, `/`, or `×` do not receive a decorative background layer that would only reduce clarity.
 - **Filled on demand**: A `filled` variant is included only for icons that have a meaningful active or selected state, such as `like`, `bookmark`, or `star`, not as a blanket alternative style.
 
-## Categories
+## Groups
 
-- **UI**: 1,000+ functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **UI**: 1,000+ icons for apps, each with its own preview image. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app) or [Simple Icons](https://simpleicons.org/).
@@ -158,7 +158,7 @@ If you want to treat them as decorative, use the `aria-hidden` attribute:
 
 ## Naming
 
-All of the categories have an `Icon` prefix to differentiate them from other components and be easily importable.
+All of the groups have an `Icon` prefix to differentiate them from other components and be easily importable.
 
 The icon names are based on the object it represents, using kebab-case for the file names and PascalCase for the component names.
 

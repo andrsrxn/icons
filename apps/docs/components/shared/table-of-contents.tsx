@@ -93,8 +93,8 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
               </a>
             </li>
             <li>
-              <a href='#categories' data-active={isActive('categories')}>
-                Categories
+              <a href='#groups' data-active={isActive('groups')}>
+                Groups
               </a>
             </li>
             <li>
