@@ -8,9 +8,7 @@ React icon library with 1,000+ duotone icons and 250+ flags. Smooth, RTL-aware, 
 
 ## Overview
 
-This library was built to serve as the icon foundation for `andrsrxn/ui`, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
-
-While `andrsrxn/icons` is tightly coupled to that vision, it is intentionally published as a **standalone package**. This keeps it lightweight, independently versioned, and freely usable by anyone.
+`andrsrxn/icons` is an open-source icon library designed on Figma and built for modern React applications. The set is lightweight, visually consistent, and accessible.
 
 ### Why another icon library?
 
@@ -33,7 +31,7 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Requirements
 
-You only need to be using `react` and `react-dom` version 19.
+You only need to be using `react` 19 or higher.
 
 > **Warning**: This is an ESM-only package, make sure your project is using Node `20.16.0`, `22.19.0`, `24.0.0` or higher, and has the `"type": "module"` field in your `package.json`.
 

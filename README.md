@@ -16,9 +16,7 @@ React icon library with 1,000+ duotone icons and 250+ flags. Smooth, RTL-aware, 
 
 ## Overview
 
-This library was built to serve as the icon foundation for `andrsrxn/ui`, an upcoming open-source, opinionated Design System and Component Library aimed at enterprise-grade products.
-
-While `andrsrxn/icons` is tightly coupled to that vision, it is intentionally published as a **standalone package**. This keeps it lightweight, independently versioned, and freely usable by anyone.
+`andrsrxn/icons` is an open-source icon library designed on Figma and built for modern React applications. The set is lightweight, visually consistent, and accessible.
 
 ### Why another icon library?
 

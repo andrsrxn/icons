@@ -67,14 +67,8 @@ export default function DocsPage() {
           <strong>{COMPANY.fullName}</strong> is a {COMPANY.description}
         </p>
         <p>
-          This library was built to serve as the icon foundation for <code>andrsrxn/ui</code>, an
-          upcoming open-source, opinionated Design System and Component Library aimed at
-          enterprise-grade products.
-        </p>
-        <p>
-          While <code>andrsrxn/icons</code> is tightly coupled to that vision, it is intentionally
-          published as a <strong>standalone package</strong>. This keeps it lightweight,
-          independently versioned, and freely usable by anyone.
+          <code>andrsrxn/icons</code> is an open-source icon library designed on Figma and built for
+          modern React applications. The set is lightweight, visually consistent, and accessible.
         </p>
 
         <h2 id='why-another-icon-library'>Why another icon library?</h2>
@@ -146,7 +140,7 @@ export default function DocsPage() {
         <h2 id='requirements'>Requirements</h2>
 
         <p>
-          You only need to be using <code>react</code> and <code>react-dom</code> version 19.
+          You only need to be using <code>react</code> 19 or higher.
         </p>
         <Alert className='max-w-prose bg-amber-50 border-amber-300 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-50 text-amber-950'>
           <IconWarningTriangle />

@@ -1,6 +1,8 @@
 <img src="../../packages/icons/assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
 
-# Overview
+# andrsrxn/icons docs
+
+## Overview
 
 Official documentation and icon catalog application for **[andrsrxn/icons](https://icons.andrsrxn.com)**, built with [Next.js](https://nextjs.org) and [Tailwind CSS](https://tailwindcss.com).
 
