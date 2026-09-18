@@ -1,5 +1,13 @@
 # @andrsrxn/icons
 
+## 7.0.1
+
+### Patch Changes
+
+- [`8b36c39`](https://github.com/andrsrxn/icons/commit/8b36c396c33e2ccf0bbcc421b8625ec626f2a1de) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Loosened peer dependency requirements. Removed `react-dom` from `peerDependencies` entirely; the package only ever used `react` (components are plain functions returning JSX, nothing imports from `react-dom` directly).
+  
+  No action needed for existing consumers.
+
 ## 7.0.0
 
 ### Major Changes
