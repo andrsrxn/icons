@@ -1,6 +1,7 @@
 ---
 name: andrsrxn-icons
 description: Integrate, import, style, and handle accessibility or RTL for UI icons and flag icons from the @andrsrxn/icons library in React applications. Use when the user asks to add icons, search or pick icon components, set up icon RTL flipping, configure icon global CSS, or work with andrsrxn/icons types.
+compatibility: React 19 or higher. ESM-only package. Requires Node 20.16.0, 22.19.0, 24.0.0, or higher, and 'type' 'module' in the consuming project's package.json.
 license: MIT
 metadata:
   version: 1.0.0
