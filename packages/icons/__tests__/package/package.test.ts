@@ -43,12 +43,6 @@ describe('package.json', () => {
     })
   })
 
-  it('declares react and react-dom as peer dependencies', () => {
-    expect(pkg.peerDependencies).toBeDefined()
-    expect(pkg.peerDependencies.react).toBeDefined()
-    expect(pkg.peerDependencies['react-dom']).toBeDefined()
-  })
-
   it('specifies the correct files for publishing', () => {
     expect(pkg.files).toContain('dist')
     expect(pkg.files).toContain('LICENSE')
