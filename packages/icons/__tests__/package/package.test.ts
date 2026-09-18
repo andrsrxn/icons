@@ -43,6 +43,11 @@ describe('package.json', () => {
     })
   })
 
+  it('declares react as peer dependency', () => {
+    expect(pkg.peerDependencies).toBeDefined()
+    expect(pkg.peerDependencies.react).toBeDefined()
+  })
+
   it('specifies the correct files for publishing', () => {
     expect(pkg.files).toContain('dist')
     expect(pkg.files).toContain('LICENSE')
