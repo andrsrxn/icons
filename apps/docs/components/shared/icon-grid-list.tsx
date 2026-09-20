@@ -27,7 +27,6 @@ export const IconGridList = ({
 }: IconGridListProps) => {
   const searchParams = useSearchParams()
   const queryString = searchParams.toString()
-  console.log({ queryString })
 
   if (icons.length === 0) {
     return (

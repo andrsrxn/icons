@@ -46,7 +46,7 @@ export const IconKeylineContainer = ({
     setStrokeWidth(ICON_STROKE_WIDTH)
     setColor(resolvedTheme === 'dark' ? '#ffffff' : '#000000')
   }
-  // fix reset on darkmode with resolve theme, start with figma
+
   useEffect(() => {
     setColor(resolvedTheme === 'dark' ? '#ffffff' : '#000000')
     setMounted(true)
