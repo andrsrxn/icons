@@ -8,7 +8,8 @@
     "./flags/*": "./src/flags/*",
     "./types": "./src/types.d.ts",
     "./package.json": "./package.json",
-    "./catalog.json": "./dist/catalog.json"
+    "./catalog.json": "./dist/catalog.json",
+    "./catalog-with-svgs.json": "./dist/catalog-with-svgs.json"
   },
   "scripts": {
     "generate-raw-metadata": "node scripts/generate-raw-metadata.js",

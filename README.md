@@ -1,6 +1,5 @@
+<div align='center'>
 <img src="./packages/icons/assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
-
-# andrsrxn/icons
 
 [![npm version](https://img.shields.io/npm/v/@andrsrxn/icons)](https://www.npmjs.com/package/@andrsrxn/icons)
 [![Dependency count](https://img.shields.io/badge/dependency%20count-0-blue)](https://www.npmjs.com/package/@andrsrxn/icons)
@@ -10,9 +9,14 @@
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 [![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
+# andrsrxn/icons
+
 React icon library with 1,000+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.
 
+[Documentation](https://icons.andrsrxn.com/docs) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [npm](https://www.npmjs.com/package/@andrsrxn/icons)
+
 ![Icons banner with logo in the center](./packages/icons/assets/banner-github.webp)
+</div>
 
 ## Overview
 
@@ -33,7 +37,7 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 ## Groups
 
 - **UI**: 1,000+ icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `title` included. (aspect ratio 3:2)
+- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `aria-label` included. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app) or [Simple Icons](https://simpleicons.org/).
 

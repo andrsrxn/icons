@@ -5,6 +5,7 @@
     "start": "turbo run start",
     "dev": "turbo run dev",
     "dev:icons": "turbo run dev --filter=@andrsrxn/icons",
+    "dev:figma": "turbo run dev --filter=@andrsrxn/icons-figma-plugin",
     "dev:docs": "turbo run dev --filter=docs",
     "build": "turbo run build",
     "build:icons": "turbo run build --filter=@andrsrxn/icons",

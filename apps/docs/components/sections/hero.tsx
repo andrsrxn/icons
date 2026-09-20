@@ -10,6 +10,7 @@ import {
   IconDevices,
   IconDiff,
   IconDownload,
+  IconExternalLink,
   IconFaceFilter,
   IconFlame,
   IconHandPointer,
@@ -61,7 +62,7 @@ const IconContainer = ({
 export const HeroSection = () => {
   return (
     <section className='py-12 lg:py-16 overflow-hidden bg-dotted dark:bg-dotted-dark relative flex items-center justify-center'>
-      <div className='wrapper max-w-6xl flex flex-col gap-6 items-center'>
+      <div className='wrapper max-w-6xl flex flex-col gap-5 items-center'>
         <div className='flex flex-col items-center justify-center gap-4'>
           <img src={IMAGES.brand.symbol.svg} alt={`${COMPANY.name} symbol`} className='size-14' />
           <h1 className='text-3xl md:text-4xl font-bold tracking-tight text-center'>
@@ -189,21 +190,29 @@ export const HeroSection = () => {
             <IconMessageDots />
           </IconContainer>
         </div>
-        <div className='flex items-center gap-4 mt-2'>
+        <div className='flex items-center gap-x-5 gap-y-3 flex-wrap mt-2 w-11/12 mx-auto justify-center'>
           <Link
             href='/docs'
             prefetch={false}
-
-            className='text-primary hover:underline flex items-center gap-1 decoration-1 underline-offset-2'>
+            className='text-primary hover:underline flex items-center gap-0.5 decoration-1 underline-offset-2'>
             Documentation
             <IconChevronRight className='size-4' />
           </Link>
           <Link
             href='/examples'
             prefetch={false}
-            className='text-primary hover:underline flex items-center gap-1 decoration-1 underline-offset-2'>
+            className='text-primary hover:underline flex items-center gap-0.5 decoration-1 underline-offset-2'>
             Examples
             <IconChevronRight className='size-4' />
+          </Link>
+          <Link
+            href={COMPANY.figma.plugin}
+            prefetch={false}
+            rel='noopener noreferrer'
+            target='_blank'
+            className='text-primary hover:underline flex items-center gap-1 decoration-1 underline-offset-2'>
+            Figma plugin
+            <IconExternalLink className='size-4' />
           </Link>
         </div>
       </div>

@@ -1,0 +1,14 @@
+{
+  "extends": ["@andrsrxn/ts-config/react"],
+  "compilerOptions": {
+    "noEmit": false,
+    "allowImportingTsExtensions": false,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "resolveJsonModule": true,
+    "typeRoots": ["./node_modules/@types", "./node_modules/@figma"],
+    "allowArbitraryExtensions": true
+  },
+  "include": ["src"],
+  "exclude": [".turbo", "build", "node_modules"]
+}

@@ -8,9 +8,10 @@
       "!**/.next",
       "!**/.turbo",
       "!**/.changeset/*.md",
-      "!**/raw-icons/src/flags/**",
-      "!**/raw-icons/src/ui/**",
+      "!**/raw-icons/src/flags",
+      "!**/raw-icons/src/ui",
       "!**/dist",
+      "!**/build",
       "!**/*.mjs",
       "!**/*.cjs",
       "!**/.agents",
@@ -213,7 +214,7 @@
   "css": {
     "parser": {
       "allowWrongLineComments": true,
-      "cssModules": false,
+      "cssModules": true,
       "tailwindDirectives": true
     }
   },

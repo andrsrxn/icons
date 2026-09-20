@@ -1,0 +1,61 @@
+{
+  "name": "@andrsrxn/icons-figma-plugin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Figma plugin for andrsrxn/icons",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Andrés Raxón",
+    "email": "info@andrsrxn.com",
+    "url": "https://andrsrxn.com"
+  },
+  "sideEffects": false,
+  "engines": {
+    "node": "^24",
+    "pnpm": "^11"
+  },
+  "figma-plugin": {
+    "name": "andrsrxn/icons",
+    "id": "1682600602773496009",
+    "api": "1.0.0",
+    "capabilities": [],
+    "enableProposedApi": false,
+    "documentAccess": "dynamic-page",
+    "editorType": [
+      "figma",
+      "figjam"
+    ],
+    "main": "src/main.ts",
+    "ui": "src/ui.tsx",
+    "networkAccess": {
+      "allowedDomains": [
+        "none"
+      ],
+      "reasoning": "This plugin does not require network access."
+    }
+  },
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "build": "build-figma-plugin --typecheck --minify",
+    "dev": "build-figma-plugin --typecheck --watch",
+    "lint": "biome check && echo Lint finished.",
+    "lint:check": "biome ci && echo Lint finished.",
+    "type:check": "tsc --noEmit && echo Type check finished.",
+    "dep:check": "pnpm dlx knip && echo Dep check finished."
+  },
+  "dependencies": {
+    "@create-figma-plugin/build": "4.0.3",
+    "@create-figma-plugin/ui": "4.0.3",
+    "@create-figma-plugin/utilities": "4.0.3",
+    "preact": "^10",
+    "@andrsrxn/raw-icons": "workspace:*"
+  },
+  "devDependencies": {
+    "@andrsrxn/ts-config": "workspace:*",
+    "@create-figma-plugin/tsconfig": "4.0.3",
+    "@types/node": "24.13.3",
+    "@figma/plugin-typings": "1.138.0",
+    "typescript": "5.9.3"
+  }
+}

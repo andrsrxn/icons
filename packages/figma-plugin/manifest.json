@@ -1,0 +1,15 @@
+{
+  "api": "1.0.0",
+  "editorType": ["figma", "figjam"],
+  "id": "1682600602773496009",
+  "name": "andrsrxn/icons",
+  "main": "build/main.js",
+  "ui": "build/ui.js",
+  "capabilities": [],
+  "enableProposedApi": false,
+  "documentAccess": "dynamic-page",
+  "networkAccess": {
+    "allowedDomains": ["none"],
+    "reasoning": "This plugin does not require network access."
+  }
+}

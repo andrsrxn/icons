@@ -19,6 +19,9 @@ export const COMPANY = {
     skills: 'https://github.com/andrsrxn/icons/tree/main/skills',
     npm: 'https://www.npmjs.com/package/@andrsrxn/icons',
   },
+  figma: {
+    plugin: 'https://www.figma.com/community/plugin/1682600602773496009',
+  },
   brand: {
     primaryColor: '#0047cc',
     backgroundColor: '#F6F7FE',
