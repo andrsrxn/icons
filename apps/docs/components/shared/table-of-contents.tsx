@@ -1,6 +1,6 @@
 'use client'
 
-import { type ComponentProps, useEffect, useState } from 'react'
+import { type ComponentProps, useCallback, useEffect, useRef, useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const HEADER_OFFSET = 80
@@ -55,7 +55,7 @@ function getActiveIds(targets: TocTarget[]): string[] {
 
 export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
   const [activeIds, setActiveIds] = useState<string[]>([])
-
+  const tocRef = useRef<HTMLUListElement>(null)
   useEffect(() => {
     const targets = getTocTargets()
 
@@ -73,11 +73,40 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
 
   const isActive = (id: string) => activeIds.includes(id)
 
+  const scrollTo = useCallback((id: string) => {
+    const container = tocRef.current
+    const el = container?.querySelector<HTMLElement>(`a[href="#${id}"]`)
+    if (!(container && el)) {
+      return
+    }
+
+    const containerRect = container.getBoundingClientRect()
+    const elRect = el.getBoundingClientRect()
+
+    // el's position relative to the container's full scrollable content,
+    // independent of the container's current scroll offset.
+    const elOffset = elRect.top - containerRect.top + container.scrollTop
+    const target = elOffset - container.clientHeight / 2 + elRect.height / 2
+
+    container.scrollTo({
+      top: target,
+      behavior: 'smooth',
+    })
+  }, [])
+
+  useEffect(() => {
+    const lastActiveId = activeIds.at(-1)
+    if (lastActiveId) {
+      scrollTo(lastActiveId)
+    }
+  }, [activeIds, scrollTo])
+
   return (
     <div className={cn('relative hidden lg:block w-44', className)}>
       <ul
+        ref={tocRef}
         aria-label='Table of contents'
-        className='text-sm pr-2 max-h-[calc(100dvh-120px)] text-muted-foreground overflow-y-auto scroll-fade-y [&_a]:hover:text-foreground [&_a[data-active=true]]:text-foreground [&_a[data-active=true]]:font-medium [&_a]:transition-colors list-disc marker:text-primary/50 [&_ul]:list-disc [&_ul]:marker:text-primary/50 [&_ul]:mt-1 [&_ul]:pl-4 [&_ul]:grid [&_ul]:gap-1 sticky top-22'>
+        className='text-sm pr-2 max-h-[calc(100dvh-160px)] text-muted-foreground overflow-y-auto scroll-fade-y [&_a]:hover:text-foreground [&_a[data-active=true]]:text-foreground [&_a[data-active=true]]:font-medium [&_a]:transition-colors list-disc marker:text-primary/50 [&_ul]:list-disc [&_ul]:marker:text-primary/50 [&_ul]:mt-1 [&_ul]:pl-4 [&_ul]:grid [&_ul]:gap-1 sticky top-22 scrollbar-none'>
         <li>
           <ul>
             <li>
@@ -187,6 +216,11 @@ export const TableOfContents = ({ className }: ComponentProps<'div'>) => {
                   </a>
                 </li>
               </ul>
+            </li>
+            <li>
+              <a href='#figma' data-active={isActive('figma')}>
+                Figma
+              </a>
             </li>
             <li>
               <a href='#contributing' data-active={isActive('contributing')}>
