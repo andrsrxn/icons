@@ -64,11 +64,9 @@ export default function DocsPage() {
         </h1>
         <h2 id='overview'>Overview</h2>
         <p>
-          <strong>{COMPANY.fullName}</strong> is a {COMPANY.description}
-        </p>
-        <p>
-          <code>andrsrxn/icons</code> is an open-source icon library designed on Figma and built for
-          modern React applications. The set is lightweight, visually consistent, and accessible.
+          <strong>{COMPANY.fullName}</strong> is a {COMPANY.description} An open-source icon library
+          designed on Figma and built for modern React applications. The set is lightweight,
+          visually consistent, and accessible.
         </p>
 
         <h2 id='why-another-icon-library'>Why another icon library?</h2>
@@ -114,8 +112,8 @@ export default function DocsPage() {
             code (<code>IconFlagGT</code>, <code>IconFlagUS</code>), the exceptions are{' '}
             <code>IconFlagLGTB</code> and continent flags, which have a <code>C</code> prefix (
             <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, and so
-            on); treated as image assets with country code as <code>title</code> included. (aspect
-            ratio 3:2)
+            on); treated as image assets with country code as <code>aria-label</code> included.
+            (aspect ratio 3:2)
           </li>
         </ul>
         <Alert className='max-w-prose'>
@@ -1004,6 +1002,17 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           </TableBody>
         </Table>
 
+        <h2 id='figma'>Figma</h2>
+
+        <p>
+          If you want to use this library in Figma, visit the{' '}
+          <a href={COMPANY.figma.plugin} target='_blank' rel='noopener noreferrer'>
+            official Figma plugin
+          </a>{' '}
+          or search for <code>andrsrxn/icons</code> in the Figma Community or in the{' '}
+          <code>Plugins & widgets</code> panel.
+        </p>
+
         <h2 id='contributing'>Contributing</h2>
 
         <p>
@@ -1114,8 +1123,11 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
 
         <h2 id='license'>License</h2>
         <p>
-          All icons are free; personal or commercial use is allowed under MIT License - Copyright
-          2026 Andrés Raxón (andrsrxn).
+          All icons are free; personal or commercial use is allowed under{' '}
+          <a href={COMPANY.repo.licenceUrl} target='_blank' rel='noopener noreferrer'>
+            MIT License
+          </a>{' '}
+          - Copyright 2026 Andrés Raxón (andrsrxn).
         </p>
       </div>
     </section>
