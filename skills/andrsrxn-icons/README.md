@@ -1,8 +1,9 @@
+<div align='center'>
+
 # `andrsrxn/icons` agent skill
 
 An agent skill designed to equip AI coding assistants (such as Antigravity, Cursor, Copilot, Vercel Agent, and Claude Code) with expert knowledge for integrating, styling, and using [`andrsrxn/icons`](https://github.com/andrsrxn/icons) in React applications.
-
----
+</div>
 
 ## Overview
 
