@@ -1,6 +1,9 @@
+<div align='center'>
 <img src="../../packages/icons/assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
 
-# andrsrxn/icons docs
+# Documentation for andrsrxn/icons
+
+</div>
 
 ## Overview
 
@@ -63,4 +66,4 @@ This project doesn't accept external contributions, for either the icon library 
 
 ## License
 
-MIT — see the root [LICENSE](../../LICENSE).
+[MIT License](../../LICENSE) - Copyright 2026 Andrés Raxón (andrsrxn).
