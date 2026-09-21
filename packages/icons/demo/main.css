@@ -31,6 +31,7 @@ body {
   pointer-events: none;
   /* To test all strokes are consistent */
   stroke-width: 1px;
+  color: blue;
 }
 
 .icon-grid-container {
