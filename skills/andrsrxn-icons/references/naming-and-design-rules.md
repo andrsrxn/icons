@@ -35,7 +35,7 @@ Unlike icon libraries that apply duotone fill indiscriminately across all icons,
 2. **Fill represents shadow / background**:
    - The secondary duotone fill layer represents a background surface, shadow, or underlying layer.
 3. **Stack icons (layering surface rule)**:
-   - For icons depicting stacked or overlapping elements (such as `IconUsers`, `IconBookmarks`, `IconFiles`), the front element is always the **unfilled surface**, while the element behind receives the **duotone fill layer**.
+   - For icons depicting stacked or overlapping elements (such as `IconUsers`, `IconBookmarks`, `IconFiles`), the front element is always the **unfilled surface**, while the element behind receives the **duotone fill layer**. The exception is only when the single icon already has a fill layer like `IconImages`.
 4. **Continuous line exception**:
    - Icons formed by continuous looping lines—such as `fingerprint` (`IconFingerprint`) or `hashtag` (`IconHashtag`)—enclose interior spaces, but are **not** filled.
 5. **Letters and numbers**:
@@ -59,6 +59,10 @@ For icons combining multiple visual concepts, the component name prioritizes the
 
 - Correct: `IconHeartScan` (Heart is the primary object, Scan is the modifier).
 - Incorrect: `IconScanHeart`.
+
+### Numbers
+
+If an icon includes a number, such as the Heading 1, is represented as letters, such as: `IconHeadingOne`, `IconSortZeroOne`, and so on. The exception is when the object name has a natural numeric representation, such as: `Icon3d` or `Icon4k`.
 
 ### Action and state variations
 
