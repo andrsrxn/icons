@@ -1,6 +1,8 @@
 <div align='center'>
 <img src="./packages/icons/assets/symbol.svg" alt="andrsrxn/icons symbol" width="64" height="64" />
 
+# andrsrxn/icons
+
 [![npm version](https://img.shields.io/npm/v/@andrsrxn/icons)](https://www.npmjs.com/package/@andrsrxn/icons)
 [![Dependency count](https://img.shields.io/badge/dependency%20count-0-blue)](https://www.npmjs.com/package/@andrsrxn/icons)
 [![npm downloads](https://img.shields.io/npm/dm/@andrsrxn/icons)](https://www.npmjs.com/package/@andrsrxn/icons)
@@ -10,7 +12,7 @@
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 [![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
-# andrsrxn/icons
+
 
 React icon library with 1,000+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.
 
