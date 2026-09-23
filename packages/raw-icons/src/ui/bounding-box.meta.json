@@ -3,11 +3,15 @@
     "design"
   ],
   "tags": [
-    "package",
     "container",
     "select",
     "transform",
     "scale",
-    "area"
+    "area",
+    "vector",
+    "rect",
+    "square",
+    "anchor point",
+    "handle"
   ]
 }
