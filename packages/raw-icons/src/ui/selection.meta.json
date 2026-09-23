@@ -9,6 +9,8 @@
     "box",
     "highlight",
     "pick",
-    "tool"
+    "tool",
+    "square", 
+    "dashed"
   ]
 }
