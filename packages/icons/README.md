@@ -135,10 +135,11 @@ To opt-out of RTL on these icons and keep them as they are, add the Tailwind dir
 
 These icons are exclusive for RTL, as they cannot be just flipped, but adapted:
 
-- `IconListCheckRtl`
-- `IconListOrderedRtl`
-- `IconSeekBackwardsRtl`
-- `IconSeekForwardRtl`
+- `list-check-rtl`
+- `list-ordered-rtl`
+- `seek-backward-rtl`
+- `seek-forward-rtl`
+- `list-todo-rtl`
 
 ## Accessibility
 

@@ -657,6 +657,11 @@ export function App() {
               <code>seek-forward-rtl</code>
             </p>
           </li>
+          <li>
+            <p>
+              <code>list-todo-rtl</code>
+            </p>
+          </li>
         </ul>
         <div className='flex items-center gap-4 md:gap-6'>
           <div
