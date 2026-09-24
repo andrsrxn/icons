@@ -1,8 +1,10 @@
 {
   "categories": [
-    "tools"
+    "tools",
+    "development"
   ],
   "tags": [
+    "keyboard",
     "utility",
     "action",
     "backslash",

@@ -1,8 +1,11 @@
 {
   "categories": [
-    "tools"
+    "tools",
+    "development"
+
   ],
   "tags": [
+    "keyboard",
     "utility",
     "action",
     "forward slash",

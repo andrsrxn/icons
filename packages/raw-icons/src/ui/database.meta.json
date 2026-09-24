@@ -1,9 +1,11 @@
 {
   "categories": [
-    "development"
+    "development", 
+    "business",
+    "devices"
   ],
   "tags": [
-    "data storage",
+    "storage",
     "server",
     "sql",
     "backend",
