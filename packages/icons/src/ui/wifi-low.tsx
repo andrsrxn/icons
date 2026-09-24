@@ -27,11 +27,11 @@ export const IconWifiLow: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M12.9 18.51a.9.9 0 1 1-1.8 0 .9.9 0 0 1 1.8 0'
+        d='M12.96 18.36a.96.96 0 1 1-1.92 0 .96.96 0 0 1 1.92 0'
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M7.63 15.79c1.06-1.29 2.43-1.87 4.37-1.87s3.3.58 4.37 1.87' stroke='currentColor' />
+      <path d='M7.28 15.12A7.7 7.7 0 0 1 12 13.45c2.1 0 3.55.74 4.72 1.67' stroke='currentColor' />
     </svg>
   )
 }

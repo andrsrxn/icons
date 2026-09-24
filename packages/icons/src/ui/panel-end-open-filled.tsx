@@ -27,7 +27,7 @@ export const IconPanelEndOpenFilled: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.2 8.1'
+        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.21 8.1'
         stroke='currentColor'
       />
       <rect

@@ -34,7 +34,7 @@ export const IconBicycle: Icon = ({
         d='M5.75 15.82h3.27c1.19 0 1.78 0 2.26-.3.47-.28.75-.8 1.3-1.86l3.54-6.82'
         stroke='currentColor'
       />
-      <path d='m12.25 12.1-4.4-4.39' stroke='currentColor' />
+      <path d='M12.9 12.76 7.85 7.71' stroke='currentColor' />
       <path d='M18.67 15.82 15.65 4.47' stroke='currentColor' />
       <path d='M10.84 7.71H5.75' stroke='currentColor' />
       <path d='m19.89 5.3-4.21-.83' stroke='currentColor' />

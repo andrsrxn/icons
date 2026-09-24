@@ -36,17 +36,17 @@ export const IconBorderEnd: Icon = ({
         transform='rotate(-180 21.24 21.24)'
         fill='currentColor'
       />
-      <path
-        d='M14.78 21.24H8.76c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.02'
-        stroke='currentColor'
-        strokeDasharray='4 4'
-      />
       <path d='M12 15.37V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
       <path
-        d='M18 2.76h.43A3 3 0 0 1 21.24 6v12.43a3 3 0 0 1-2.8 2.8l-.44.01'
+        d='M18 2.76h.43a3 3 0 0 1 2.8 2.8l.01.44v12.43a3 3 0 0 1-2.8 2.8l-.44.01'
         stroke='currentColor'
       />
+      <path d='M6.04 2.71H5.5a3 3 0 0 0-2.8 2.8v.45' stroke='currentColor' />
+      <path d='M6.04 21.3h-.08l-.45-.01a3 3 0 0 1-2.8-2.8v-.45' stroke='currentColor' />
+      <path d='M2.78 10.19v3.57' stroke='currentColor' />
+      <path d='M10.23 21.2h3.57' stroke='currentColor' />
+      <path d='M10.23 2.72h3.57' stroke='currentColor' />
     </svg>
   )
 }

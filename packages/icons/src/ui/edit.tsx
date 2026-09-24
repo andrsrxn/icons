@@ -26,20 +26,20 @@ export const IconEdit: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
+      <path d='M2.34 22.19h19.32' stroke='currentColor' />
       <rect
         opacity='.2'
-        width='5.68'
-        height='6.36'
+        width='5.17'
+        height='6.08'
         rx='1'
-        transform='scale(1 -1)rotate(45 21.2 17.83)'
+        transform='scale(1 -1)rotate(45 20.66 18.45)'
         fill='currentColor'
       />
+      <path d='m19.11 9.07-4.16-4.16' stroke='currentColor' />
       <path
-        d='M4.46 22.12c.82 0 1.23 0 1.6-.15.36-.16.65-.45 1.23-1.02L20.86 7.37a5 5 0 0 0 1.17-1.39 2 2 0 0 0 0-1.5 5 5 0 0 0-1.17-1.38 5 5 0 0 0-1.38-1.17 2 2 0 0 0-1.5 0c-.38.16-.72.5-1.4 1.17L3.02 16.67c-.57.58-.86.87-1.01 1.24-.16.36-.16.77-.16 1.59v.62c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3z'
+        d='M6.27 21.24c.47-.14.71-.2.92-.33s.39-.3.74-.65L20.98 7.41a5 5 0 0 0 1.19-1.4 2 2 0 0 0 0-1.5A5 5 0 0 0 21 3.12a5 5 0 0 0-1.4-1.18 2 2 0 0 0-1.48 0c-.38.15-.72.49-1.4 1.17l-13 12.94c-.34.35-.52.53-.65.74-.12.21-.2.45-.34.92l-.46 1.5c-.48 1.58-.73 2.37-.3 2.8.42.42 1.2.18 2.79-.3z'
         stroke='currentColor'
       />
-      <path d='M19.03 9.06 14.87 4.9' stroke='currentColor' />
-      <path d='M5.08 22.12H21.7' stroke='currentColor' />
     </svg>
   )
 }

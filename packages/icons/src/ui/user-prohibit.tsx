@@ -36,7 +36,7 @@ export const IconUserProhibit: Icon = ({
       <path d='m16.62 16.3 4.75 4.76' stroke='currentColor' />
       <path
         opacity='.2'
-        d='M15.4 7.92a5.33 5.33 0 1 1-10.65 0 5.33 5.33 0 0 1 10.66 0'
+        d='M15.47 7.99a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
         fill='currentColor'
       />
       <path
@@ -44,11 +44,8 @@ export const IconUserProhibit: Icon = ({
         d='M16.47 21.84H1.77a8.4 8.4 0 0 1 8.3-8.46c2.9 0 5.44 1.5 6.93 3.8-2.05-.27-1 3.87-.53 4.66'
         fill='currentColor'
       />
-      <path
-        d='M15.4 7.92a5.3 5.3 0 0 1-5.33 5.33 5.33 5.33 0 1 1 5.34-5.33'
-        stroke='currentColor'
-      />
-      <path d='M1.78 21.68a8.3 8.3 0 0 1 12.32-7.26' stroke='currentColor' />
+      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>
   )
 }

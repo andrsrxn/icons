@@ -28,21 +28,31 @@ export const IconSparkles: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M14.88 8.85 12 3.99 9.26 8.5 4.03 12l5.23 2.9L12 20.67l2.88-5.77 5.52-3.16z'
+        d='M14.71 9.1 12 4 9.26 9.1 4.03 12l5.23 2.7L12 20.66l2.71-5.98 5.7-2.95z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m5.34 18.41-.94-1.76-.94 1.76-1.8 1 1.8.92.94 2.06.94-2.06 1.95-1.01z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m20.39 3.36-.94-1.76-.94 1.76-1.8 1 1.8.92.94 2.06.94-2.06 1.95-1.02z'
         fill='currentColor'
       />
       <path d='M3.16 12C7.42 12 12 7.4 12 3.16' stroke='currentColor' />
       <path d='M20.84 12C16.6 12 12 7.4 12 3.16' stroke='currentColor' />
       <path d='M3.16 12C7.4 12 12 16.68 12 20.84' stroke='currentColor' />
       <path d='M20.84 12C16.65 12 12 16.62 12 20.84' stroke='currentColor' />
-      <path d='M17.05 4.22c1.31 0 2.73-1.42 2.73-2.73' stroke='currentColor' />
-      <path d='M1.5 19.78c1.31 0 2.72-1.42 2.72-2.73' stroke='currentColor' />
-      <path d='M22.5 4.22c-1.3 0-2.72-1.42-2.72-2.73' stroke='currentColor' />
-      <path d='M6.95 19.78c-1.31 0-2.73-1.42-2.73-2.73' stroke='currentColor' />
-      <path d='M17.05 4.22c1.3 0 2.73 1.44 2.73 2.73' stroke='currentColor' />
-      <path d='M1.5 19.78c1.3 0 2.72 1.44 2.72 2.72' stroke='currentColor' />
-      <path d='M22.5 4.22c-1.29 0-2.72 1.43-2.72 2.73' stroke='currentColor' />
-      <path d='M6.95 19.78c-1.3 0-2.73 1.42-2.73 2.72' stroke='currentColor' />
+      <path d='M16.55 4.47c1.44 0 2.98-1.55 2.98-2.98' stroke='currentColor' />
+      <path d='M1.5 19.52c1.44 0 2.98-1.55 2.98-2.98' stroke='currentColor' />
+      <path d='M22.5 4.47c-1.43 0-2.97-1.55-2.97-2.98' stroke='currentColor' />
+      <path d='M7.46 19.52c-1.43 0-2.98-1.55-2.98-2.98' stroke='currentColor' />
+      <path d='M16.55 4.47c1.43 0 2.98 1.57 2.98 2.98' stroke='currentColor' />
+      <path d='M1.5 19.52c1.43 0 2.98 1.58 2.98 2.98' stroke='currentColor' />
+      <path d='M22.5 4.47c-1.4 0-2.97 1.55-2.97 2.98' stroke='currentColor' />
+      <path d='M7.46 19.52c-1.41 0-2.98 1.56-2.98 2.98' stroke='currentColor' />
     </svg>
   )
 }

@@ -30,7 +30,7 @@ export const IconTextIndent: Icon = ({
       <path d='M2.74 11.98h18.52' stroke='currentColor' />
       <path d='M10.42 6.1h10.84' stroke='currentColor' />
       <path
-        d='m3 4 .3.1c2.5.77 3.74 1.16 3.74 1.9 0 .73-1.25 1.13-3.75 1.9L3 8'
+        d='m2.74 3.34 1.58.68c1.81.79 2.72 1.18 2.72 1.84 0 .65-.9 1.05-2.72 1.83l-1.58.69'
         stroke='currentColor'
       />
     </svg>

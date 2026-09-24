@@ -28,29 +28,28 @@ export const IconScale: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='9.69'
-        height='9.69'
+        width='9.2'
+        height='9.2'
         rx='2'
-        transform='matrix(0 -1 -1 0 12.3 21.34)'
+        transform='matrix(0 -1 -1 0 12 21.14)'
         fill='currentColor'
       />
-      <path
-        d='M2.67 9.16v-.58c0-2.82 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88h6.66c2.83 0 4.25 0 5.12.88s.88 2.3.88 5.12v6.76c0 2.83 0 4.24-.88 5.12-.87.88-2.29.88-5.12.88h-.56'
-        stroke='currentColor'
-        strokeDasharray='3 3'
-      />
       <rect
-        width='9.69'
-        height='9.69'
+        width='9.2'
+        height='9.2'
         rx='2'
-        transform='matrix(0 -1 -1 0 12.3 21.34)'
+        transform='matrix(0 -1 -1 0 12 21.14)'
         stroke='currentColor'
       />
-      <path d='m15.43 8.58-3.56 3.55' stroke='currentColor' />
-      <path
-        d='M12.24 7.43h.33c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v.33'
-        stroke='currentColor'
-      />
+      <path d='m15.18 8.74-3.64 3.64' stroke='currentColor' />
+      <path d='M11.75 7.5h.66c1.88 0 2.83 0 3.41.58.6.6.6 1.53.6 3.42v.66' stroke='currentColor' />
+      <path d='M6.07 2.66h-.08l-.45.01a3 3 0 0 0-2.8 2.8v.45' stroke='currentColor' />
+      <path d='M18.02 2.66h.07l.45.01a3 3 0 0 1 2.8 2.8v.45' stroke='currentColor' />
+      <path d='M18.02 21.24h.52a3 3 0 0 0 2.8-2.8V18' stroke='currentColor' />
+      <path d='M21.28 10.14v3.57' stroke='currentColor' />
+      <path d='M10.26 2.67h3.56' stroke='currentColor' />
+      <path d='M2.8 10.14v5.15' stroke='currentColor' />
+      <path d='M8.5 21.14h5.32' stroke='currentColor' />
     </svg>
   )
 }

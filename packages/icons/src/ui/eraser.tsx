@@ -32,13 +32,14 @@ export const IconEraser: Icon = ({
         fill='currentColor'
       />
       <rect
-        width='18.88'
-        height='13.64'
+        width='19.66'
+        height='12.17'
         rx='3'
-        transform='scale(1 -1)rotate(45 33.44 .5)'
+        transform='scale(1 -1)rotate(45 32.94 -.8)'
         stroke='currentColor'
       />
-      <path d='m9.73 4.63 9.64 9.64' stroke='currentColor' />
+      <path d='m10.32 5.22 8.46 8.46' stroke='currentColor' />
+      <path d='M21.59 22.26H9.45' stroke='currentColor' />
     </svg>
   )
 }

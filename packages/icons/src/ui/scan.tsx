@@ -26,20 +26,28 @@ export const IconScan: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
+      <rect
+        opacity='.2'
+        width='18.57'
+        height='18.57'
+        rx='3'
+        transform='scale(1 -1)rotate(90 21.29 0)'
+        fill='currentColor'
+      />
       <path
-        d='M15.91 21.27h1.39c1.89 0 2.83 0 3.42-.58s.58-1.53.58-3.42v-1.39'
+        d='M15.91 21.27c2.24 0 3.36 0 4.14-.56a3 3 0 0 0 .69-.68c.56-.79.56-1.9.56-4.15'
         stroke='currentColor'
       />
       <path
-        d='M15.95 2.76h1.35c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v1.36'
+        d='M15.95 2.76c2.2 0 3.3 0 4.08.55a3 3 0 0 1 .72.72c.55.78.55 1.88.55 4.09'
         stroke='currentColor'
       />
       <path
-        d='M8.1 21.27H6.7c-1.89 0-2.83 0-3.42-.58s-.58-1.53-.58-3.42v-1.39'
+        d='M8.1 21.27c-2.25 0-3.37 0-4.16-.56a3 3 0 0 1-.67-.68c-.57-.78-.57-1.9-.57-4.15'
         stroke='currentColor'
       />
       <path
-        d='M8.1 2.76H6.7c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v1.4'
+        d='M8.1 2.76c-2.25 0-3.37 0-4.16.57a3 3 0 0 0-.67.67c-.57.79-.57 1.91-.57 4.15'
         stroke='currentColor'
       />
       <path d='M6.8 12h10.4' stroke='currentColor' />

@@ -27,14 +27,14 @@ export const IconArrowsHorizontal: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='m17.51 7.18 2 1.99c1.33 1.33 2 2 2 2.83 0 .82-.67 1.5-2 2.83l-2 1.99'
+        d='m18.24 7.18 1.98 1.99c1.34 1.33 2 2 2 2.83 0 .82-.66 1.5-2 2.83l-1.98 1.99'
         stroke='currentColor'
       />
       <path
-        d='M6.66 7.18 4.67 9.17c-1.34 1.33-2 2-2 2.83 0 .82.66 1.5 2 2.83l1.99 1.99'
+        d='m5.8 7.18-2 1.99c-1.33 1.33-2 2-2 2.83 0 .82.67 1.5 2 2.83l2 1.99'
         stroke='currentColor'
       />
-      <path d='M2.69 12H21.3' stroke='currentColor' />
+      <path d='M1.98 12h20.04' stroke='currentColor' />
     </svg>
   )
 }

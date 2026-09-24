@@ -39,11 +39,12 @@ export const IconCompare: Icon = ({
         d='M11.51 4.73H7.98c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v2.54c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h3.53'
         stroke='currentColor'
       />
-      <path
-        d='M14.76 4.7h1.84m5.67 8.9v-3.18m0-3.9c0-1-.81-1.82-1.81-1.82h-.55m2.36 12.73c0 1-.81 1.82-1.81 1.82h-.55m-5.15.05h1.84'
-        stroke='currentColor'
-      />
       <path d='M11.51 2.3v19.4' stroke='currentColor' />
+      <path d='M19.39 4.76h.06A2.74 2.74 0 0 1 22.2 7.5' stroke='currentColor' />
+      <path d='M19.57 19.26h.06c1.48 0 2.68-1.2 2.68-2.68' stroke='currentColor' />
+      <path d='M22.28 10.7v2.67' stroke='currentColor' />
+      <path d='M14.43 19.25h1.94' stroke='currentColor' />
+      <path d='M14.43 4.75h1.94' stroke='currentColor' />
     </svg>
   )
 }

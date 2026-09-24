@@ -26,14 +26,8 @@ export const IconCircleFilled: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <circle
-        cx='12'
-        cy='12'
-        r='10.21'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-        stroke='currentColor'
-      />
+      <circle cx='12' cy='12' r='10.3' transform='rotate(90 12 12)' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.21' transform='rotate(90 12 12)' stroke='currentColor' />
     </svg>
   )
 }

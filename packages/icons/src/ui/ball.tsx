@@ -33,9 +33,8 @@ export const IconBall: Icon = ({
       />
       <path
         opacity='.2'
-        d='m3.99 11.13-1.64-2.5-.53 4.18 3.44 7.4 7.53 2.05-3.2-3.03-1.73-6.42z'
+        d='m3.99 11.13-1.64-2.5-.64 5.53 3.55 6.05 7.53 2.05-3.2-3.03-1.73-6.42z'
         fill='currentColor'
-        stroke='currentColor'
       />
       <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
       <path d='M14.04 22c-3.4 0-6.17-4.46-6.17-9.97s2.77-9.98 6.17-9.98' stroke='currentColor' />

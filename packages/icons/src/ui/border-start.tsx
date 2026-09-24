@@ -35,17 +35,17 @@ export const IconBorderStart: Icon = ({
         rx='3'
         fill='currentColor'
       />
-      <path
-        d='M9.22 2.76h6.02c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.48c0 2.83 0 4.25-.88 5.12s-2.3.88-5.12.88H9.22'
-        stroke='currentColor'
-        strokeDasharray='4 4'
-      />
       <path d='M12 15.37V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
       <path
         d='M6 2.76h-.43a3 3 0 0 0-2.8 2.8L2.75 6v12.43A3 3 0 0 0 6 21.24'
         stroke='currentColor'
       />
+      <path d='M18 2.71h.52a3 3 0 0 1 2.8 2.8v.45' stroke='currentColor' />
+      <path d='M18 21.3h.07l.45-.01a3 3 0 0 0 2.8-2.8v-.45' stroke='currentColor' />
+      <path d='M21.26 10.19v3.57' stroke='currentColor' />
+      <path d='M13.8 21.2h-3.57' stroke='currentColor' />
+      <path d='M13.8 2.72h-3.57' stroke='currentColor' />
     </svg>
   )
 }

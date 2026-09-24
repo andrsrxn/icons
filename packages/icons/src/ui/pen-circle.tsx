@@ -39,7 +39,12 @@ export const IconPenCircle: Icon = ({
         stroke='currentColor'
       />
       <path d='M12.5 7.82v-2.4' stroke='currentColor' />
-      <path d='M17.02 18.83H8' stroke='currentColor' />
+      <path d='M17.02 17.76H8' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M16.6 20.45c.23-.9.34-1.34.18-1.67a1 1 0 0 0-.24-.31c-.29-.25-.75-.25-1.67-.25H10.2c-.89 0-1.33 0-1.61.23a1 1 0 0 0-.24.3c-.17.32-.08.76.1 1.62.13.6.19.9.37 1.1a1 1 0 0 0 .23.18c.24.14.54.14 1.15.14h4.67c.58 0 .87 0 1.1-.13a1 1 0 0 0 .22-.18c.19-.19.26-.47.4-1.03'
+        fill='currentColor'
+      />
     </svg>
   )
 }

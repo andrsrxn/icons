@@ -44,9 +44,6 @@ export const IconClipboard: Icon = ({
         transform='rotate(-90 7.33 5.59)'
         stroke='currentColor'
       />
-      <path d='M15.2 9.56H8.8' stroke='currentColor' />
-      <path d='M15.2 13.83H8.8' stroke='currentColor' />
-      <path d='M15.2 18.1H8.8' stroke='currentColor' />
     </svg>
   )
 }

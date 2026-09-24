@@ -43,18 +43,18 @@ export const IconSnowflake: Icon = ({
         d='m14.2 21.75.41-1.55c.25-.91.37-1.37.73-1.57.35-.21.81-.09 1.72.16l1.55.41'
         stroke='currentColor'
       />
-      <path d='M8.23 12.07H1.7' stroke='currentColor' />
-      <path d='M15.77 12.07h6.53' stroke='currentColor' />
+      <path d='M8.25 12H1.72' stroke='currentColor' />
+      <path d='M15.77 12h6.53' stroke='currentColor' />
       <path d='m6.96 2.45 3.4 5.88' stroke='currentColor' />
       <path d='m6.96 21.5 3.4-5.88' stroke='currentColor' />
       <path d='m17.04 2.45-3.4 5.88' stroke='currentColor' />
       <path d='m17.04 21.5-3.4-5.88' stroke='currentColor' />
       <path
-        d='m2.82 9.63 1.03 1.03c.67.66 1 1 1 1.41 0 .42-.33.75-1 1.42l-1.03 1.03'
+        d='m2.84 9.55 1.03 1.03c.67.67 1 1 1 1.42s-.33.75-1 1.41l-1.03 1.04'
         stroke='currentColor'
       />
       <path
-        d='m21.18 9.63-1.03 1.03c-.67.66-1 1-1 1.41 0 .42.33.75 1 1.42l1.03 1.03'
+        d='m21.18 9.55-1.03 1.03c-.67.67-1 1-1 1.42s.33.75 1 1.41l1.03 1.04'
         stroke='currentColor'
       />
       <circle cx='12' cy='11.95' r='3.67' stroke='currentColor' />

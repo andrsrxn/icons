@@ -34,14 +34,14 @@ export const IconCircleDashed: Icon = ({
         transform='rotate(90 12 12)'
         fill='currentColor'
       />
-      <circle
-        cx='12'
-        cy='12'
-        r='10.28'
-        transform='rotate(90 12 12)'
-        stroke='currentColor'
-        strokeDasharray='4 4'
-      />
+      <path d='M14 22.1a11 11 0 0 1-4.01 0' stroke='currentColor' />
+      <path d='M14 1.9a11 11 0 0 0-4.01 0' stroke='currentColor' />
+      <path d='M22.1 10a11 11 0 0 1 0 4.01' stroke='currentColor' />
+      <path d='M1.9 10a11 11 0 0 0 0 4.01' stroke='currentColor' />
+      <path d='M17.72 3.44a11 11 0 0 1 2.84 2.84' stroke='currentColor' />
+      <path d='M3.44 17.72a11 11 0 0 0 2.84 2.84' stroke='currentColor' />
+      <path d='M3.44 6.28a11 11 0 0 1 2.84-2.84' stroke='currentColor' />
+      <path d='M17.72 20.56a11 11 0 0 0 2.84-2.84' stroke='currentColor' />
     </svg>
   )
 }

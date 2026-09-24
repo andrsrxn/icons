@@ -37,7 +37,7 @@ export const IconPanelEndFilled: Icon = ({
         width='18.53'
         height='18.37'
         rx='3'
-        transform='matrix(1 0 0 -1 2.74 21.18)'
+        transform='matrix(1 0 0 -1 2.73 21.18)'
         stroke='currentColor'
       />
       <path d='M14.65 3.2v17.6' stroke='currentColor' />

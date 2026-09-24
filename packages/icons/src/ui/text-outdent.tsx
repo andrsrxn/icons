@@ -30,7 +30,7 @@ export const IconTextOutdent: Icon = ({
       <path d='M2.74 11.98h18.52' stroke='currentColor' />
       <path d='M10 6.1h11.26' stroke='currentColor' />
       <path
-        d='m6.8 4-.29.1c-2.5.77-3.75 1.16-3.75 1.9 0 .73 1.25 1.13 3.75 1.9l.3.1'
+        d='m7.07 3.34-1.58.68c-1.81.79-2.71 1.18-2.72 1.84 0 .65.9 1.05 2.72 1.83l1.58.69'
         stroke='currentColor'
       />
     </svg>

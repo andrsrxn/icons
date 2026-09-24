@@ -26,11 +26,8 @@ export const IconRecordFilled: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path
-        d='M18.23 12A6.2 6.2 0 0 0 12 5.77 6.23 6.23 0 1 0 18.23 12'
-        fill='currentColor'
-        stroke='currentColor'
-      />
+      <path d='M18.23 12A6.2 6.2 0 0 0 12 5.77 6.23 6.23 0 1 0 18.23 12' fill='currentColor' />
+      <path d='M18.23 12A6.2 6.2 0 0 0 12 5.77 6.23 6.23 0 1 0 18.23 12' stroke='currentColor' />
       <path
         d='M22.22 12A10.2 10.2 0 0 0 12 1.78 10.22 10.22 0 1 0 22.22 12'
         stroke='currentColor'

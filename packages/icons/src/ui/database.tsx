@@ -35,6 +35,7 @@ export const IconDatabase: Icon = ({
         transform='rotate(-180 12 5.23)'
         fill='currentColor'
       />
+      <path d='M20.88 5.23v13.73' stroke='currentColor' />
       <path
         opacity='.2'
         d='M3.25 16.32c0-1.15 0-1.72.38-2.02.37-.3.93-.18 2.04.06l5.95 1.27c.21.05.31.07.42.07s.21-.02.42-.06l6.02-1.28c1.12-.24 1.68-.36 2.05-.06s.37.87.37 2.01v2.19c0 .75 0 1.13-.22 1.4-.2.27-.58.36-1.3.54l-6.86 1.68c-.24.05-.36.08-.48.08s-.24-.03-.48-.09l-6.78-1.67c-.73-.18-1.1-.27-1.31-.54-.22-.27-.22-.65-.22-1.4z'
@@ -52,8 +53,7 @@ export const IconDatabase: Icon = ({
       <path d='M6.06 11.3c.4.26 1.15.59 2.2.8 1.17.22 1.74.25 2.67.25' stroke='currentColor' />
       <path d='M6.06 17.66c.4.25 1.15.58 2.2.79 1.17.23 1.74.26 2.67.26' stroke='currentColor' />
       <path d='M3.12 18.83c0 1.87 3.98 3.38 8.88 3.38s8.88-1.51 8.88-3.38' stroke='currentColor' />
-      <path d='M20.88 5.74V18.6' stroke='currentColor' />
-      <path d='M3.12 5.74V18.6' stroke='currentColor' />
+      <path d='M3.12 5.23v13.38' stroke='currentColor' />
     </svg>
   )
 }

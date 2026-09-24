@@ -26,13 +26,13 @@ export const IconArrowsVertical: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M12.09 2.74V21.1' stroke='currentColor' />
+      <path d='M12 2.03V21.8' stroke='currentColor' />
       <path
-        d='m16.9 17.43-1.98 1.99c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-2-2'
+        d='m16.82 18.28-1.99 1.98c-1.33 1.34-2 2-2.83 2-.82 0-1.5-.66-2.83-2l-1.99-1.98'
         stroke='currentColor'
       />
       <path
-        d='m16.9 6.57-1.98-1.99c-1.33-1.33-2-2-2.83-2s-1.5.67-2.83 2l-2 2'
+        d='m16.82 5.77-1.99-1.99c-1.33-1.34-2-2-2.83-2-.82 0-1.5.66-2.83 2L7.18 5.77'
         stroke='currentColor'
       />
     </svg>

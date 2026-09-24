@@ -26,27 +26,41 @@ export const IconMagicWand: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <rect
-        opacity='.2'
-        width='17.07'
-        height='6.05'
-        rx='2'
-        transform='scale(-1 1)rotate(45 -14.4 -12.52)'
-        fill='currentColor'
-      />
-      <path
-        d='M3.26 20.59c.79.79 1.18 1.18 1.63 1.33a2 2 0 0 0 1.26 0c.45-.15.84-.54 1.63-1.33L20.74 7.63c.79-.79 1.18-1.18 1.33-1.64a2 2 0 0 0 0-1.24c-.15-.45-.54-.85-1.33-1.64s-1.18-1.18-1.64-1.33a2 2 0 0 0-1.24 0c-.46.15-.85.54-1.64 1.33L3.26 16.07c-.79.8-1.18 1.18-1.33 1.64a2 2 0 0 0 0 1.25c.15.45.54.84 1.33 1.63'
-        stroke='currentColor'
-      />
-      <path d='m12.9 6.67 4.28 4.28' stroke='currentColor' />
-      <path d='M15.92 19.13c1.54 0 3.2-1.66 3.2-3.2' stroke='currentColor' />
-      <path d='M22.3 19.13c-1.53 0-3.19-1.66-3.19-3.2' stroke='currentColor' />
-      <path d='M15.92 19.13c1.53 0 3.2 1.7 3.2 3.2' stroke='currentColor' />
-      <path d='M22.3 19.13c-1.5 0-3.19 1.67-3.19 3.2' stroke='currentColor' />
-      <path d='M1.6 4.99c1.54 0 3.2-1.67 3.2-3.2' stroke='currentColor' />
-      <path d='M7.99 4.99c-1.54 0-3.2-1.67-3.2-3.2' stroke='currentColor' />
-      <path d='M1.6 4.99c1.53 0 3.2 1.68 3.2 3.19' stroke='currentColor' />
-      <path d='M7.99 4.99c-1.52 0-3.2 1.66-3.2 3.19' stroke='currentColor' />
+      <g clipPath='url(#a)'>
+        <path
+          opacity='.2'
+          d='m2.41 17.17 9.25-9.24a2 2 0 0 1 2.82 0l1.45 1.45a2 2 0 0 1 0 2.83L6.7 21.45a2 2 0 0 1-2.83 0L2.41 20a2 2 0 0 1 0-2.83'
+          fill='currentColor'
+        />
+        <path
+          d='M3.26 20.59c.79.79 1.18 1.18 1.63 1.33a2 2 0 0 0 1.26 0c.45-.15.84-.54 1.63-1.33L20.74 7.63c.79-.79 1.18-1.18 1.33-1.64a2 2 0 0 0 0-1.24c-.15-.45-.54-.85-1.33-1.64s-1.18-1.18-1.64-1.33a2 2 0 0 0-1.24 0c-.46.15-.85.54-1.64 1.33L3.26 16.07c-.79.8-1.18 1.18-1.33 1.64a2 2 0 0 0 0 1.25c.15.45.54.84 1.33 1.63'
+          stroke='currentColor'
+        />
+        <path d='m12.9 6.67 4.28 4.28' stroke='currentColor' />
+        <path d='M15.92 19.13c1.54 0 3.2-1.66 3.2-3.2' stroke='currentColor' />
+        <path d='M22.3 19.13c-1.53 0-3.19-1.66-3.19-3.2' stroke='currentColor' />
+        <path d='M15.92 19.13c1.53 0 3.2 1.7 3.2 3.2' stroke='currentColor' />
+        <path d='M22.3 19.13c-1.5 0-3.19 1.67-3.19 3.2' stroke='currentColor' />
+        <path d='M1.6 4.99c1.54 0 3.2-1.67 3.2-3.2' stroke='currentColor' />
+        <path d='M7.99 4.99c-1.54 0-3.2-1.67-3.2-3.2' stroke='currentColor' />
+        <path d='M1.6 4.99c1.53 0 3.2 1.68 3.2 3.19' stroke='currentColor' />
+        <path d='M7.99 4.99c-1.52 0-3.2 1.66-3.2 3.19' stroke='currentColor' />
+        <path
+          opacity='.2'
+          d='m5.68 4.04-.94-1.77-.94 1.77-1.81 1 1.8.93.95 2.07.94-2.07 1.97-1.02z'
+          fill='currentColor'
+        />
+        <path
+          opacity='.2'
+          d='m20.04 17.73-.93-1.77-.95 1.77-1.81 1 1.8.93.96 2.07.93-2.07 1.97-1.02z'
+          fill='currentColor'
+        />
+      </g>
+      <defs>
+        <clipPath id='a'>
+          <path fill='#fff' d='M0 0h24v24H0z' />
+        </clipPath>
+      </defs>
     </svg>
   )
 }

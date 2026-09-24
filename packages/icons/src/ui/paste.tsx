@@ -32,11 +32,11 @@ export const IconPaste: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M16.2 3.65h.44c1.3 0 2.36 1.06 2.36 2.36M6.6 3.65a3 3 0 0 0-2.98 2.98v9.65c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h7.1A2.27 2.27 0 0 0 19 20'
+        d='M6.6 3.65a3 3 0 0 0-2.98 2.98v9.65c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h7.1A2.27 2.27 0 0 0 19 20'
         stroke='currentColor'
       />
       <path
-        d='m18.07 17.24 1.1-1.1c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83l-1.1-1.1'
+        d='m18.53 16.76.7-.7c1.33-1.32 2-2 2-2.82 0-.83-.67-1.5-2-2.83l-.7-.7'
         stroke='currentColor'
       />
       <rect
@@ -48,7 +48,8 @@ export const IconPaste: Icon = ({
         transform='rotate(-90 6.64 5.59)'
         stroke='currentColor'
       />
-      <path d='M11.42 13.3h9.41' stroke='currentColor' />
+      <path d='M11.47 13.24h9.6' stroke='currentColor' />
+      <path d='M16.2 3.65h.04A2.76 2.76 0 0 1 19 6.42' stroke='currentColor' />
     </svg>
   )
 }

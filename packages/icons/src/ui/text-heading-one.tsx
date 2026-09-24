@@ -26,10 +26,6 @@ export const IconTextHeadingOne: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path
-        d='m17.35 15.82 1.42-1.29c.72-.64 1.08-.96 1.38-.83s.3.61.3 1.58v5.35'
-        stroke='currentColor'
-      />
       <path d='M4.18 4.03v14.74' stroke='currentColor' />
       <path d='M13.28 4.03v14.74' stroke='currentColor' />
       <path d='M4.18 11.3h9.1' stroke='currentColor' />
@@ -38,6 +34,10 @@ export const IconTextHeadingOne: Icon = ({
       <path d='M11.83 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 18.77h2.9' stroke='currentColor' />
+      <path
+        d='m17.7 16.12 1.3-1.15c.72-.65 1.08-.97 1.37-.84s.3.61.3 1.58v5'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

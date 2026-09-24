@@ -31,7 +31,7 @@ export const IconReload: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M21.4 3.61v1.18c0 1.89 0 2.83-.58 3.42s-1.53.59-3.41.59h-1.2'
+        d='M21.4 2.77v2.02c0 1.89 0 2.83-.58 3.42s-1.53.59-3.41.59h-2.03'
         stroke='currentColor'
       />
     </svg>

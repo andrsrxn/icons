@@ -28,14 +28,12 @@ export const IconEclipse: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        d='M7.4 21.23a10.31 10.31 0 0 1 0-18.46c2 1.12 5.95 4.54 5.7 9.23-.26 4.69-3.9 8.11-5.7 9.23'
+        d='M15.13 15a6.57 6.57 0 0 1-6.35-6.45c-.83-6.74 1.33-7.18 6.35-5.97s5.34 2.65 6.48 6.41c1.77 4.25 1.48 6.15-6.48 6.01'
         fill='currentColor'
       />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.3' transform='rotate(90 12 12)' stroke='currentColor' />
       <path
-        d='M7.4 21.18A10.7 10.7 0 0 0 13.06 12 10.3 10.3 0 0 0 7.5 2.85'
+        d='M22.17 13.76s-6.64 3.83-11.22-.75C5.9 7.98 9.89 2.02 9.89 2.02'
         stroke='currentColor'
       />
     </svg>

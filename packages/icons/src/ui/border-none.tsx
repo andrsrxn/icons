@@ -36,13 +36,22 @@ export const IconBorderNone: Icon = ({
         transform='rotate(90 21.24 2.76)'
         fill='currentColor'
       />
-      <path
-        d='M15.24 21.24H8.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.48c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88'
-        stroke='currentColor'
-        strokeDasharray='4 4'
-      />
       <path d='M12 15.36V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
+      <path d='M6.03 2.66h-.08l-.45.01a3 3 0 0 0-2.8 2.8v.45' stroke='currentColor' />
+      <path
+        d='M17.98 2.66h.07c1.17 0 1.76 0 2.2.24a2 2 0 0 1 .82.82c.23.44.23 1.03.23 2.2'
+        stroke='currentColor'
+      />
+      <path d='M6.03 21.24H5.5a3 3 0 0 1-2.8-2.8V18' stroke='currentColor' />
+      <path
+        d='M17.98 21.24h.07c1.17 0 1.76 0 2.2-.23a2 2 0 0 0 .82-.82c.23-.44.23-1.03.23-2.2'
+        stroke='currentColor'
+      />
+      <path d='M2.76 10.14v3.57' stroke='currentColor' />
+      <path d='M21.24 10.14v3.57' stroke='currentColor' />
+      <path d='M10.22 21.14h3.57' stroke='currentColor' />
+      <path d='M10.22 2.67h3.57' stroke='currentColor' />
     </svg>
   )
 }

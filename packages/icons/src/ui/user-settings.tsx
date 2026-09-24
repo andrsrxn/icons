@@ -28,12 +28,12 @@ export const IconUserSettings: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M18.55 21.84H1.77a8.4 8.4 0 0 1 8.3-8.46c2.9 0 5.44 1.5 6.93 3.8-1.15 2.46.67 3.35 1.55 4.66'
+        d='M18.55 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c2.89 0 5.43 1.5 6.92 3.8-1.15 2.46.67 3.35 1.55 4.66'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M15.4 7.92a5.33 5.33 0 1 1-10.65 0 5.33 5.33 0 0 1 10.66 0'
+        d='M15.47 7.99a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
         fill='currentColor'
       />
       <circle
@@ -49,11 +49,8 @@ export const IconUserSettings: Icon = ({
       <path d='m22.02 16.73-1.07.58' stroke='currentColor' />
       <path d='m20.89 19.83 1.13.64' stroke='currentColor' />
       <path d='m15.5 16.73 1 .58' stroke='currentColor' />
-      <path
-        d='M15.4 7.92a5.3 5.3 0 0 1-5.33 5.33 5.33 5.33 0 1 1 5.34-5.33'
-        stroke='currentColor'
-      />
-      <path d='M1.78 21.68a8.3 8.3 0 0 1 12.32-7.26' stroke='currentColor' />
+      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>
   )
 }

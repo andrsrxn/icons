@@ -37,16 +37,16 @@ export const IconBorderBottom: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M2.76 14.79V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.03'
-        stroke='currentColor'
-        strokeDasharray='4 4'
-      />
-      <path
         d='M2.76 18v.43A3 3 0 0 0 6 21.24h12.43a3 3 0 0 0 2.8-2.8l.01-.44'
         stroke='currentColor'
       />
       <path d='M12 15.37V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
+      <path d='M2.71 6v-.52a3 3 0 0 1 2.8-2.8h.45' stroke='currentColor' />
+      <path d='M21.29 6v-.52a3 3 0 0 0-2.8-2.8h-.45' stroke='currentColor' />
+      <path d='M10.19 2.75h3.56' stroke='currentColor' />
+      <path d='M21.2 10.2v3.57' stroke='currentColor' />
+      <path d='M2.72 10.2v3.57' stroke='currentColor' />
     </svg>
   )
 }

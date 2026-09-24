@@ -28,17 +28,17 @@ export const IconRectangle: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='14.04'
+        width='14.5'
         height='20.4'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.02)'
+        transform='matrix(0 -1 -1 0 22.2 19.25)'
         fill='currentColor'
       />
       <rect
-        width='14.04'
+        width='14.5'
         height='20.4'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.02)'
+        transform='matrix(0 -1 -1 0 22.2 19.25)'
         stroke='currentColor'
       />
     </svg>

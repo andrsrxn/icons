@@ -39,7 +39,7 @@ export const IconSpeedometer: Icon = ({
       <path d='m15.65 6.24-2.54 4.35' stroke='currentColor' />
       <path d='M1.68 12A10.3 10.3 0 0 0 12 22.32 10.32 10.32 0 1 0 1.68 12' stroke='currentColor' />
       <path d='M5.45 12.18A6.55 6.55 0 0 1 12 5.63' stroke='currentColor' />
-      <path d='M18.2 8.45a6.3 6.3 0 0 1 .83 4.33' stroke='currentColor' />
+      <path d='M17.95 8.51a6.3 6.3 0 0 1 .83 4.33' stroke='currentColor' />
     </svg>
   )
 }

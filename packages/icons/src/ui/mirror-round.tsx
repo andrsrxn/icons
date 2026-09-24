@@ -26,11 +26,12 @@ export const IconMirrorRound: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path opacity='.2' d='M20 9.75a8 8 0 1 0-16 0 8 8 0 0 0 16 0' fill='#000' />
-      <path
-        d='M20 9.75a8 8 0 1 0-16 0 8 8 0 0 0 16 0M10 5.1 7.36 7.76m7.01-2.3-6.62 6.62M8 22.22h8m-4 0v-4.47'
-        stroke='#000'
-      />
+      <path opacity='.2' d='M20 9.75a8 8 0 1 0-16 0 8 8 0 0 0 16 0' fill='currentColor' />
+      <path d='M20 9.75a8 8 0 1 0-16 0 8 8 0 0 0 16 0' stroke='currentColor' />
+      <path d='M10 5.1 7.36 7.76' stroke='currentColor' />
+      <path d='m14.37 5.46-6.62 6.62' stroke='currentColor' />
+      <path d='M8 22.22h8' stroke='currentColor' />
+      <path d='M12 22.22v-4.47' stroke='currentColor' />
     </svg>
   )
 }
