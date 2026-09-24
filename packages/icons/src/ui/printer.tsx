@@ -44,7 +44,7 @@ export const IconPrinter: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M18.93 9.71a.45.45 0 1 1-.9 0 .45.45 0 0 1 .9 0'
+        d='M18.48 10.06a.45.45 0 1 1-.9 0 .45.45 0 0 1 .9 0'
         fill='currentColor'
         stroke='currentColor'
       />
