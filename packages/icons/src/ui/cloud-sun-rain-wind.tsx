@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconCloudSunRainWind: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cloud-sun-rain-wind'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M7.55 12.65a3.3 3.3 0 0 0-2.69-1.42 3.47 3.47 0 0 0-3.37 3.56c0 .97.37 1.84.97 2.49q.54.57 1.27.86'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.26 11.23a4.06 4.06 0 0 1 7.46-.94c.66 1.15.64 2.32.48 3.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.32 11.92a2.8 2.8 0 0 1 2.69.1 3.4 3.4 0 0 1 1.25 4.66 4 4 0 0 1-1.25 1.35'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M15.64 12.36c-1.47-.79-2.8-.34-2.96-2.1-.16-1.77.57-2.74 2.33-2.9a3.2 3.2 0 0 1 3.5 2.9c.15 1.76-1.2 2.86-2.87 2.1'
+        fill='currentColor'
+      />
+      <path d='M17.27 13.09a3.2 3.2 0 1 0-4.96-3.7' stroke='currentColor' />
+      <path d='M21.09 10.82h1.42' stroke='currentColor' />
+      <path d='M14.18 4.95V3.54' stroke='currentColor' />
+      <path d='m19.35 6.1.96-1.15' stroke='currentColor' />
+      <path d='m7.62 16.35-.67 2.48' stroke='currentColor' />
+      <path d='m10.88 15.74-.66 2.48' stroke='currentColor' />
+      <path d='m13.1 18.05-.67 2.49' stroke='currentColor' />
+    </svg>
+  )
+}

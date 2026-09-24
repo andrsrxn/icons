@@ -1,0 +1,66 @@
+import type { Icon } from './types'
+
+export const IconPaintBoardBrush: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-paint-board-brush'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12.06 22.3a10.3 10.3 0 1 1 0-20.57c5.68 0 10.63 4.3 10.14 9.97a3.2 3.2 0 0 1-1.67 2.5c-.08.04-.37-.28-.78-.75-1.07-1.2-2.97-3.32-4.19-2.38-1.27.2-.6 4.41-.6 4.41s-1.84.8-1.56 2.49c.36 2.2.7 4.34-1.34 4.34m.42-16.45-.64 3.67 2.05 2.18 2.8-1.79-.3-2.22z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.46 15.26a2.4 2.4 0 0 0-2.2 1.13l-.1.16c-.4.69-.46 1.52-.15 2.26l.32.77a1.8 1.8 0 0 1-.9 2.33q-.36.18-.77.17c-4-.19-9.6-3.15-9.7-10.03C1.86 6.4 5.88 1.7 12.12 1.7c3.81 0 9.95 1.63 9.95 8.23 0 2.15-.62 3.22-1.55 4.02'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.55 8a.8.8 0 1 1-1.14 1.14A.8.8 0 0 1 8.55 8'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.41 13.05a.8.8 0 1 1-1.14 1.14.8.8 0 0 1 1.14-1.14'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.8 8.4.37-1.57c.17-.7.25-1.04.48-1.14.24-.1.57.1 1.25.5q.46.28.86.39A2.45 2.45 0 1 1 11.8 8.4'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M22.3 19.28a1.58 1.58 0 0 1-2.65 1.57l-1.96-2.1-.32-.37-.24-.4-1-1.8-.17-.29a2 2 0 0 1 .93-2.65q.2-.14.29-.17a2 2 0 0 1 2.7.86L21 15.67c.14.22.21.33.27.45.05.12.1.24.17.49z'
+        fill='currentColor'
+      />
+      <path
+        d='M14.41 11.6s.64 3.02 2.32 5.73a17 17 0 0 0 3.7 4.04c.37.3.89.32 1.31.1.44-.24.7-.7.64-1.2a16 16 0 0 0-1.6-5.35c-1.5-2.8-4.38-4.6-4.38-4.6'
+        stroke='currentColor'
+      />
+      <path d='m15.33 14.18 3-1.9' stroke='currentColor' />
+    </svg>
+  )
+}

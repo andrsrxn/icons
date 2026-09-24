@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "devices",
+    "communication"
+  ],
+  "tags": [
+    "haptic",
+    "buzz",
+    "alert",
+    "notification",
+    "pulse",
+    "shake",
+    "rumble"
+  ]
+}

@@ -1,0 +1,35 @@
+import type { Icon } from './types'
+
+export const IconMusicNoteG: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-music-note-g'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M10.5 21.42c.62.8 1.67 1.2 2.57.73.75-.4 1.37-1.05 1.03-2.62-1.34-6.25-2.04-8.84-3.1-14.92-.32-1.79.63-2.75 1.67-2.92 1.18-.2 2.45.38 2.73 1.61.24 1.07.27 2.47-1.98 3.33-2.89 1.1-4.53 1.36-5.9 3.5a4.9 4.9 0 0 0 0 5.3c1.13 1.94 3.5 2.64 5.73 2.4 2.22-.22 3.8-1.66 3.98-3.74.16-1.84-1.27-3.05-3.12-3.2a3.9 3.9 0 0 0-3.61 1.83'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

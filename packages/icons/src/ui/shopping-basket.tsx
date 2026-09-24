@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconShoppingBasket: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-shopping-basket'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.42 19.7c1.48 0 2.22 0 2.76-.4.54-.42.73-1.13 1.1-2.56l.55-2c.62-2.32.92-3.48.32-4.26s-1.8-.78-4.19-.78h-7.7c-2.49 0-3.73 0-4.33.81s-.23 2 .5 4.38l.63 2c.43 1.36.64 2.04 1.17 2.43s1.23.39 2.65.39z'
+        fill='currentColor'
+      />
+      <path
+        d='m20.92 9.7-1.5 5.57c-.57 2.13-.86 3.2-1.67 3.82s-1.91.62-4.12.62h-3.25c-2.25 0-3.37 0-4.19-.64-.81-.63-1.09-1.72-1.63-3.9L3.18 9.7'
+        stroke='currentColor'
+      />
+      <path d='M1.74 9.7h20.52' stroke='currentColor' />
+      <path d='M4.61 14.7h14.78' stroke='currentColor' />
+      <path d='M4.8 9.68 7.29 3.7' stroke='currentColor' />
+      <path d='m19.02 9.68-2.3-5.98' stroke='currentColor' />
+      <path d='m14.39 19.69.82-9.85' stroke='currentColor' />
+      <path d='M9.61 19.7 8.8 9.87' stroke='currentColor' />
+    </svg>
+  )
+}

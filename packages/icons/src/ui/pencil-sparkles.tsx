@@ -1,0 +1,62 @@
+import type { Icon } from './types'
+
+export const IconPencilSparkles: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-pencil-sparkles'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m5.99 3.98-.94-1.76-.94 1.76-1.8 1 1.8.92.94 2.06L6 5.9l1.94-1z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m20.14 17.9-.94-1.76-.94 1.76-1.8 1 1.8.92.94 2.06.94-2.06 1.95-1.02z'
+        fill='currentColor'
+      />
+      <path d='M1.76 5.1c1.63 0 3.37-1.76 3.37-3.37' stroke='currentColor' />
+      <path d='M15.7 19c1.62 0 3.36-1.74 3.36-3.35' stroke='currentColor' />
+      <path d='M8.49 5.1c-1.62 0-3.36-1.76-3.36-3.37' stroke='currentColor' />
+      <path d='M22.42 19c-1.61 0-3.36-1.74-3.36-3.35' stroke='currentColor' />
+      <path d='M1.76 5.1c1.62 0 3.37 1.77 3.37 3.35' stroke='currentColor' />
+      <path d='M15.7 19c1.6 0 3.36 1.79 3.36 3.37' stroke='currentColor' />
+      <path d='M8.49 5.1c-1.6 0-3.36 1.75-3.36 3.35' stroke='currentColor' />
+      <path d='M22.42 19c-1.6 0-3.36 1.76-3.36 3.37' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        width='5.17'
+        height='6.08'
+        rx='1'
+        transform='scale(1 -1)rotate(45 20.66 18.45)'
+        fill='currentColor'
+      />
+      <path d='m19.11 9.07-4.16-4.16' stroke='currentColor' />
+      <path
+        d='M6.27 21.24c.47-.14.71-.2.92-.33s.39-.3.74-.65L20.98 7.41a5 5 0 0 0 1.19-1.4 2 2 0 0 0 0-1.5A5 5 0 0 0 21 3.12a5 5 0 0 0-1.4-1.18 2 2 0 0 0-1.48 0c-.38.15-.72.49-1.4 1.17l-13 12.94c-.34.35-.52.53-.65.74-.12.21-.2.45-.34.92l-.46 1.5c-.48 1.58-.73 2.37-.3 2.8.42.42 1.2.18 2.79-.3z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

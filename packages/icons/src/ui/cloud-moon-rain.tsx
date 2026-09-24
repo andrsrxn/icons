@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconCloudMoonRain: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cloud-moon-rain'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M7.5 12.16a3.3 3.3 0 0 0-2.68-1.42 3.47 3.47 0 0 0-3.37 3.56c0 .97.37 1.85.96 2.49q.52.55 1.23.84'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.22 10.74a4.06 4.06 0 0 1 7.45-.94c.67 1.15.64 2.32.49 3.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.27 11.43a2.8 2.8 0 0 1 2.7.1 3.4 3.4 0 0 1 1.24 4.66q-.4.73-.88 1.1'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M17.44 13.83c-.95-2.5-2.74-2.87-4.34-2.32a5 5 0 0 1-.88-2.9c0-2.9 1.87-4.37 3.21-4.7 0 0-.81 2.78 1.27 5.36 2.52 2.51 5.5.4 5.62.88.12.5-1.99 3.67-4.88 3.67'
+        fill='currentColor'
+      />
+      <path
+        d='M17.66 13.97a4.9 4.9 0 0 0 4.24-2.57c.36-.62.54-.93.37-1.19s-.61-.2-1.5-.1c-1.18.13-2.72.03-3.78-1.02a4.6 4.6 0 0 1-1.3-3.54c.04-1 .06-1.5-.22-1.64s-.58.09-1.18.56a5.6 5.6 0 0 0-2.2 4.35'
+        stroke='currentColor'
+      />
+      <path d='M7.32 16.88v2.57' stroke='currentColor' />
+      <path d='M10.35 15.8v2.57' stroke='currentColor' />
+      <path d='M12.98 17.63v2.57' stroke='currentColor' />
+    </svg>
+  )
+}

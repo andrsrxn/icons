@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconBolt: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-bolt'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M4 7.38 2.55 10.1c-.5.93-.76 1.4-.76 1.9s.26.97.76 1.9l1.47 2.72 1.61 2.62c.56.9.83 1.35 1.27 1.6.44.26.97.27 2.03.3l3.08.09 3.08-.09c1.06-.03 1.59-.04 2.03-.3.44-.25.71-.7 1.27-1.6L20 16.62l1.47-2.72c.5-.93.76-1.4.76-1.9s-.26-.97-.76-1.9L20 7.38l-1.61-2.62c-.56-.9-.83-1.35-1.27-1.6-.44-.26-.97-.27-2.03-.3L12 2.77l-3.08.09c-1.06.03-1.59.04-2.03.3-.44.25-.71.7-1.27 1.6zM16.35 12a4.35 4.35 0 1 1-8.7 0 4.35 4.35 0 0 1 8.7 0'
+        fill='currentColor'
+      />
+      <path
+        d='M2.63 13.97c-.55-.96-.82-1.44-.82-1.97s.27-1 .82-1.97l1.47-2.6 1.5-2.56c.57-.95.85-1.43 1.3-1.7.46-.26 1.02-.26 2.12-.27L12 2.87l2.98.03c1.1 0 1.66.01 2.11.28.46.26.74.74 1.3 1.7l1.51 2.56 1.47 2.59c.55.96.82 1.44.82 1.97s-.27 1-.82 1.97l-1.47 2.6-1.5 2.56c-.57.95-.85 1.43-1.3 1.7-.46.26-1.02.26-2.12.27l-2.98.03-2.98-.03c-1.1 0-1.66-.01-2.12-.28-.45-.26-.73-.74-1.3-1.7l-1.5-2.56z'
+        stroke='currentColor'
+      />
+      <circle cx='11.98' cy='12' r='4.35' stroke='currentColor' />
+    </svg>
+  )
+}

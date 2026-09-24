@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconShoeSport: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-shoe-sport'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m1.9 10.67 3.28-6.65a.5.5 0 0 1 .76-.17l2.5 2.02q.13.1.28.11l4.6.3a.5.5 0 0 1 .41.25L15.1 9.1q.04.08.1.13l7.2 6.72a.5.5 0 0 1 .05.68l-1.3 1.68a.5.5 0 0 1-.45.19l-7.5-.78-.2-.07-10.9-6.32a.5.5 0 0 1-.2-.66'
+        fill='currentColor'
+      />
+      <path
+        d='M8.33 5.85a4.7 4.7 0 0 1-1.91-1.83c-.25-.43-1.08-.51-1.31-.08L2.35 9.22a2 2 0 0 0 .82 2.69l11.76 6.37a2 2 0 0 0 .95.24h4.26a2.1 2.1 0 0 0 1.31-3.74 78 78 0 0 1-6.08-5.47A6 6 0 0 1 14.17 7a1.3 1.3 0 0 0-1.47-.88c-1.18.25-3 .45-4.37-.27Z'
+        stroke='currentColor'
+      />
+      <path d='M2.58 18.52H20.1' stroke='currentColor' />
+      <path d='M1.77 15.57h2.16' stroke='currentColor' />
+      <path d='m3.14 8.04 5.69 3' stroke='currentColor' />
+    </svg>
+  )
+}

@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "weather",
+    "development"
+  ],
+  "tags": [
+    "sync",
+    "reload",
+    "update",
+    "reconnect",
+    "fetch",
+    "loop",
+    "server"
+  ]
+}

@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconCloudMoon: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cloud-moon'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M4.82 18.91c-.92 0-1.8-.41-2.41-1.07a3.7 3.7 0 0 1-.96-2.49c0-1.96 1.5-3.56 3.37-3.56 1.1 0 2.07.56 2.69 1.43'
+        stroke='currentColor'
+      />
+      <path d='M14.94 18.91H4.68' stroke='currentColor' />
+      <path d='M5.22 11.8a4.06 4.06 0 0 1 7.45-.95c.67 1.16.64 2.33.49 3.1' stroke='currentColor' />
+      <path
+        d='M13.27 12.49a2.8 2.8 0 0 1 2.7.09 3.4 3.4 0 0 1 1.24 4.66c-.55.97-1.31 1.56-2.1 1.66'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M17.44 14.88c-.95-2.5-2.74-2.86-4.34-2.32a5 5 0 0 1-.88-2.9c0-2.89 1.87-4.36 3.21-4.69 0 0-.81 2.78 1.27 5.35 2.52 2.52 5.5.4 5.62.89s-1.99 3.67-4.88 3.67'
+        fill='currentColor'
+      />
+      <path
+        d='M17.66 15.03a4.9 4.9 0 0 0 4.24-2.57c.36-.63.54-.94.37-1.2-.17-.25-.61-.2-1.5-.1-1.18.13-2.72.04-3.78-1.02a4.6 4.6 0 0 1-1.3-3.53c.04-1 .06-1.5-.22-1.64-.28-.15-.58.08-1.18.55a5.6 5.6 0 0 0-2.2 4.35'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

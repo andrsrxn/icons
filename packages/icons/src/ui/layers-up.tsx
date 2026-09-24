@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconLayersUp: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-layers-up'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m10.81 21.27-8.55-3.6a1 1 0 0 1 .02-1.86l3.34-1.31a1 1 0 0 1 .73 0l4.53 1.78a3 3 0 0 0 2.2 0l4.54-1.78a1 1 0 0 1 .73 0l3.36 1.31a1 1 0 0 1 .02 1.86l-8.6 3.6a3 3 0 0 1-2.32 0'
+        fill='currentColor'
+      />
+      <path
+        d='m5.61 14.36-1.13.48c-1.9.81-2.85 1.22-2.85 1.89.01.67.98 1.05 2.9 1.8l5.25 2.07c1.08.43 1.63.64 2.2.64.56 0 1.1-.2 2.19-.63l5.14-2.02c1.99-.78 2.98-1.17 2.98-1.85 0-.67-.98-1.07-2.96-1.87l-1.28-.51'
+        stroke='currentColor'
+      />
+      <path
+        d='m7.57 14.93-2.84-1.06c-2-.74-3-1.11-3.02-1.79-.01-.68.97-1.1 2.94-1.92l1.34-.57'
+        stroke='currentColor'
+      />
+      <path
+        d='m15.65 5.53-.82-.82c-1.33-1.34-2-2-2.83-2s-1.5.66-2.83 2l-.82.82'
+        stroke='currentColor'
+      />
+      <path d='M12 16.6V2.93' stroke='currentColor' />
+      <path
+        d='m16.47 14.9 2.76-1.02c2.02-.75 3.03-1.12 3.04-1.8s-.97-1.1-2.96-1.93L18 9.6'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

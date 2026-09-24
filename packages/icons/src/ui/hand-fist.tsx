@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconHandFist: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-hand-fist'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m5.6 2.93 2.28-.77 2.08.99 3.11-1.23L16.2 3.4h3.86l.37 15.72-2.78 2.24-7.91.97-3.8-1.42-3.53-7.63L5.16 8.5z'
+        fill='currentColor'
+      />
+      <path
+        d='M10.27 7.66V4.33a2.55 2.55 0 0 1 5.11 0v4.11c0 1.5-1.22 2.72-2.72 2.72'
+        stroke='currentColor'
+      />
+      <path
+        d='M20.49 5.7v2.9a2.55 2.55 0 1 1-5.11 0V5.7a2.55 2.55 0 0 1 5.1 0'
+        stroke='currentColor'
+      />
+      <path d='M10.27 7.9v-3a2.55 2.55 0 0 0-5.1 0v3.33' stroke='currentColor' />
+      <path
+        d='M20.48 8.14c0 4.59.66 5.55.22 9.29-.18 1.63-1.37 2.86-2.47 3.66a7 7 0 0 1-4.2 1.12h-3.67a7.04 7.04 0 0 1-6.89-5.59l-.6-2.84a4.68 4.68 0 0 1 4.59-5.64h2.38a2.3 2.3 0 0 1 0 4.59H7.78s.96.78 1.44 1.64c.47.86.62 1.79.62 1.79'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,59 @@
+import type { Icon } from './types'
+
+export const IconVibrateOff: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-vibrate-off'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        x='6.68'
+        y='20.25'
+        width='16.5'
+        height='10.64'
+        rx='3'
+        transform='rotate(-90 6.68 20.25)'
+        fill='currentColor'
+      />
+      <rect
+        x='6.68'
+        y='20.25'
+        width='16.5'
+        height='10.64'
+        rx='3'
+        transform='rotate(-90 6.68 20.25)'
+        stroke='currentColor'
+      />
+      <path
+        d='m22.38 17.51-1.1-1.54c-.3-.42-.45-.63-.52-.85q-.16-.5.03-1c.08-.2.24-.41.56-.82s.48-.6.56-.82q.18-.49.03-.99a4 4 0 0 0-.52-.85l-.07-.1a4 4 0 0 1-.62-1.06 1.5 1.5 0 0 1 .02-.79c.09-.27.29-.52.69-1.02l.94-1.18'
+        stroke='currentColor'
+      />
+      <path
+        d='m1.62 17.51 1.1-1.54c.3-.42.45-.63.52-.85q.16-.5-.03-1a4 4 0 0 0-.56-.82c-.32-.4-.48-.6-.56-.82a1.5 1.5 0 0 1-.03-.99c.07-.22.22-.43.52-.85l.07-.1c.37-.52.55-.78.62-1.06a1.5 1.5 0 0 0-.02-.79 4 4 0 0 0-.69-1.02L1.62 6.5'
+        stroke='currentColor'
+      />
+      <path d='m2.67 2.67 18.66 18.66' stroke='currentColor' />
+    </svg>
+  )
+}

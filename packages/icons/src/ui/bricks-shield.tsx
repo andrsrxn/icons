@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconBricksShield: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-bricks-shield'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.68 6.68c0-1.89 0-2.83.59-3.41.58-.6 1.52-.6 3.41-.6h10.64c1.89.01 2.83.01 3.41.6.59.58.59 1.52.59 3.41v8.75l-2.52-1.17-2.27 1.17-1.54 1.43 1.54 4.46H6.68c-1.89 0-2.83 0-3.41-.59-.59-.58-.59-1.52-.59-3.41z'
+        fill='currentColor'
+      />
+      <path
+        d='M21.32 11.26V8.68c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H8.68c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v6.64c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h3.27'
+        stroke='currentColor'
+      />
+      <path d='M2.68 8.5h18.64' stroke='currentColor' />
+      <path d='M12 15.5v-7' stroke='currentColor' />
+      <path d='M7.39 8.5V2.68' stroke='currentColor' />
+      <path d='M7.39 21.32V15.5' stroke='currentColor' />
+      <path d='M16.61 8.5V2.68' stroke='currentColor' />
+      <path d='M2.68 15.5H12' stroke='currentColor' />
+      <path d='M18.8 14.19c-.57.5-2.1 1.6-3.73 1.99' stroke='currentColor' />
+      <path d='M18.8 14.19c.56.5 2.1 1.6 3.72 1.99' stroke='currentColor' />
+      <path d='M22.52 16.18c0 2.34-.89 5-3.73 6.42' stroke='currentColor' />
+      <path d='M15.07 16.18c0 2.34.88 5 3.72 6.42' stroke='currentColor' />
+    </svg>
+  )
+}

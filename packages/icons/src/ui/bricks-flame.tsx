@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconBricksFlame: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-bricks-flame'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.68 6.68c0-1.89 0-2.83.59-3.41.58-.6 1.52-.6 3.41-.6h10.64c1.89.01 2.83.01 3.41.6.59.58.59 1.52.59 3.41v8.75l-2.23-3.28-1.26 1.78-.5 2.59h-2.16l-.3 2.85.9 1.95H6.68c-1.89 0-2.83 0-3.41-.59-.59-.58-.59-1.52-.59-3.41z'
+        fill='currentColor'
+      />
+      <path
+        d='M21.32 8.44c0-2.6 0-3.9-.75-4.75l-.26-.26c-.85-.75-2.15-.75-4.75-.75H8.68c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v6.64c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h3.27'
+        stroke='currentColor'
+      />
+      <path d='M2.68 8.5h18.64' stroke='currentColor' />
+      <path d='M12 15.5v-7' stroke='currentColor' />
+      <path d='M7.39 8.5V2.68' stroke='currentColor' />
+      <path d='M7.39 21.32V15.5' stroke='currentColor' />
+      <path d='M16.61 8.5V2.68' stroke='currentColor' />
+      <path d='M2.68 15.5H12' stroke='currentColor' />
+      <path
+        d='M21.1 15.54a6 6 0 0 1-1.29-2.8c-.1-.52-.14-.78-.45-.86-.3-.08-.43.07-.69.37q-.41.45-.76 1.2c-.38.83-.5 1.78-.52 2.5-.02.56-.02.84-.32.96-.3.13-.42.01-.68-.22q-.16-.15-.3-.34c-.16-.24-.25-.36-.55-.32s-.34.13-.4.32c-.2.55-.34 1.33-.24 2.29.29 2.7 2.17 3.82 3.78 3.82 1.3 0 3.33-.42 3.76-2.96.21-1.22-.08-2.48-1.34-3.96'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

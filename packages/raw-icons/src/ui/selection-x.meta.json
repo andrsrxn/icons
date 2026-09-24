@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "design",
+    "editor",
+    "cursor"
+  ],
+  "tags": [
+    "select",
+    "deselect",
+    "clear",
+    "cancel",
+    "dismiss",
+    "box",
+    "marquee",
+    "reset"
+  ]
+}
