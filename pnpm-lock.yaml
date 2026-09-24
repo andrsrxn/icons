@@ -179,6 +179,9 @@ importers:
       lightningcss-cli:
         specifier: 1.33.0
         version: 1.33.0
+      react-dom:
+        specifier: 19.3.0
+        version: 19.3.0(react@19.3.0)
       svgo:
         specifier: 4.1.0
         version: 4.1.0
