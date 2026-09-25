@@ -11,18 +11,6 @@ export const structuredData = {
       name: COMPANY.fullName,
       description: COMPANY.description,
       inLanguage: 'en',
-      potentialAction: {
-        '@type': 'SearchAction',
-        target: {
-          '@type': 'EntryPoint',
-          urlTemplate: `${SITE.baseUrl}?q={search_term_string}`,
-        },
-        'query-input': {
-          '@type': 'PropertyValueSpecification',
-          valueRequired: true,
-          valueName: 'search_term_string',
-        },
-      },
     },
 
     {
