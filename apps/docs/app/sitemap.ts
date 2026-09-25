@@ -5,19 +5,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: SITE.baseUrl,
-      lastModified: new Date('2026-09-16'),
+      lastModified: new Date('2026-09-23'),
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
       url: `${SITE.baseUrl}/docs`,
-      lastModified: new Date('2026-09-16'),
+      lastModified: new Date('2026-09-23'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },
     {
       url: `${SITE.baseUrl}/examples`,
-      lastModified: new Date('2026-09-16'),
+      lastModified: new Date('2026-09-23'),
       changeFrequency: 'monthly',
       priority: 0.9,
     },

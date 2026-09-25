@@ -1,9 +1,15 @@
 import { IconChevronLeft } from '@andrsrxn/icons'
+import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
+import type { IconCatalog } from '@andrsrxn/raw-icons/types'
 import Link from 'next/link'
 import { IconSection } from '@/components/sections/icon'
 
-export const dynamic = 'force-dynamic'
-export const revalidate = 60 * 60 * 24 // 24 hours
+const catalog = rawCatalog as IconCatalog
+
+// biome-ignore lint/suspicious/useAwait: nextjs api
+export async function generateStaticParams() {
+  return catalog.filter(icon => icon.group === 'flags').map(icon => ({ icon: icon.name }))
+}
 
 export default async function FlagsPage({ params }: { params: Promise<{ flag: string }> }) {
   const { flag: iconName } = await params
