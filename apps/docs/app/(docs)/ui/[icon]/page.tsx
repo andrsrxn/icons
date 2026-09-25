@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { IconSection } from '@/components/sections/icon'
 
 export const dynamic = 'force-dynamic'
+export const revalidate = 60 * 60 * 24 // 24 hours
 
 export default async function IconPage({ params }: { params: Promise<{ icon: string }> }) {
   const { icon: iconName } = await params
