@@ -10,10 +10,8 @@
     "task",
     "done",
     "approved",
-    "verified",
     "success",
     "complete",
-    "inspection",
     "survey"
   ]
 }
