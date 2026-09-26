@@ -57,7 +57,7 @@ export const IconKeylineContainer = ({
   const isUI = isUIIcon(icon)
 
   return (
-    <div className='mb-4 flex flex-col gap-4'>
+    <div className='mb-4 flex shrink-0 flex-col gap-4'>
       <div
         ref={containerRef}
         dir={hasRTL ? 'rtl' : 'ltr'}

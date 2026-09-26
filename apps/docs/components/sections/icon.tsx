@@ -1,10 +1,11 @@
 'use client'
 
 import { IconDownload } from '@andrsrxn/icons'
-import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
+import type { IconCatalog, IconCatalogEntry } from '@andrsrxn/raw-icons/types'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
-import { useCallback, useRef } from 'react'
+import { useCallback, useMemo, useRef } from 'react'
 import { useCopyToClipboard } from 'react-use'
 import { ButtonCopy } from '@/components/shared/button-copy'
 import { IconGridList } from '@/components/shared/icon-grid-list'
@@ -22,9 +23,52 @@ import {
 } from '@/components/ui/table'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { ICON_PROPS, MAX_RELATED_ICONS } from '@/lib/constants/icons'
-import { useIcon, useIconCatalog } from '@/lib/hooks/use-icon-catalog'
+import { useIcon } from '@/lib/hooks/use-icon-catalog'
 import { capitalize } from '@/lib/utils'
 import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
+
+const catalog = rawCatalog as IconCatalog
+
+function matchesRelatedUI(targetCategories: Set<string>, candidate: IconCatalogEntry): boolean {
+  return (
+    isUIIcon(candidate) && candidate.categories.some(category => targetCategories.has(category))
+  )
+}
+
+function matchesRelatedFlag(targetTags: Set<string>, candidate: IconCatalogEntry): boolean {
+  return !isUIIcon(candidate) && candidate.tags.some(tag => targetTags.has(tag))
+}
+
+function isSameGroup(isUI: boolean, candidate: IconCatalogEntry): boolean {
+  return isUI ? isUIIcon(candidate) : !isUIIcon(candidate)
+}
+
+function getRelatedIcons(icon: IconCatalogEntry): IconCatalogEntry[] {
+  const isUI = isUIIcon(icon)
+  const lookupSet = new Set(isUI ? icon.categories : icon.tags)
+  const isMatch = isUI ? matchesRelatedUI : matchesRelatedFlag
+  const [baseName] = icon.name.split('-')
+
+  const baseMatch: IconCatalogEntry[] = []
+  const nameMatches: IconCatalogEntry[] = []
+  const categoryMatches: IconCatalogEntry[] = []
+
+  for (const candidate of catalog) {
+    if (candidate.name === icon.name || !isSameGroup(isUI, candidate)) {
+      continue
+    }
+
+    if (candidate.name === baseName) {
+      baseMatch.push(candidate) // Exact base icon (e.g. "file" for "file-binary")
+    } else if (candidate.name.startsWith(`${baseName}-`)) {
+      nameMatches.push(candidate) // Sibling variants (e.g. "file-check", "file-code")
+    } else if (isMatch(lookupSet, candidate)) {
+      categoryMatches.push(candidate) // Category/tag matches
+    }
+  }
+
+  return [...baseMatch, ...nameMatches, ...categoryMatches].slice(0, MAX_RELATED_ICONS)
+}
 
 export const IconSection = ({
   iconName,
@@ -35,7 +79,6 @@ export const IconSection = ({
 }) => {
   const [_, copyToClipboard] = useCopyToClipboard()
 
-  const { catalog } = useIconCatalog()
   const icon = useIcon(iconName)
 
   if (!icon) {
@@ -43,36 +86,34 @@ export const IconSection = ({
   }
 
   const iconContainerRef = useRef<HTMLDivElement>(null)
-  const componentName = getIconComponentName(icon.name, isUIIcon(icon) ? 'ui' : 'flags')
-
-  const copyCodeExample = `import { ${componentName} } from '@andrsrxn/icons'
-
-<${componentName} />
-`
-
   const isUI = isUIIcon(icon)
 
-  const relatedIcons = showFullData
-    ? catalog
-        .filter((catalogIcon: IconCatalogEntry) =>
-          isUI && isUIIcon(catalogIcon)
-            ? catalogIcon.categories.some(category => icon.categories.includes(category)) &&
-              catalogIcon.name !== icon.name
-            : catalogIcon.tags.some(tag => icon.tags.includes(tag)) &&
-              catalogIcon.name !== icon.name &&
-              !isUIIcon(catalogIcon)
-        )
-        .slice(0, MAX_RELATED_ICONS)
-    : []
+  const componentName = useMemo(
+    () => getIconComponentName(icon.name, isUI ? 'ui' : 'flags'),
+    [icon.name, isUI]
+  )
+
+  const copyCodeExample = useMemo(
+    () => `import { ${componentName} } from '@andrsrxn/icons'\n\n<${componentName} />\n`,
+    [componentName]
+  )
+
+  const relatedIcons = useMemo(
+    () => (showFullData ? getRelatedIcons(icon) : []),
+    [icon, showFullData]
+  )
+
+  const propEntries = useMemo(() => Object.entries(ICON_PROPS[isUI ? 'ui' : 'flags']), [isUI])
 
   const downloadRawSVG = useCallback(() => {
     const svg = iconContainerRef.current?.innerHTML ?? ''
-    const url = URL.createObjectURL(new Blob([svg], { type: 'image/svg+xml' }))
+    const blob = new Blob([svg], { type: 'image/svg+xml' })
+    const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
     a.download = `${iconName}.svg`
     a.click()
-    URL.revokeObjectURL(url)
+    setTimeout(() => URL.revokeObjectURL(url), 100)
   }, [iconName])
 
   const copyRawSVG = useCallback(() => {
@@ -128,7 +169,7 @@ export const IconSection = ({
                 />
               </div>
 
-              <div className='flex flex-wrap items-center gap-2 mt-2'>
+              <div className='flex flex-wrap items-center gap-2 mt-2 w-fit'>
                 <span className='sr-only'>Tags</span>
                 {icon.tags.map(tag => (
                   <Badge
@@ -168,7 +209,7 @@ export const IconSection = ({
             </TableRow>
           </TableHeader>
           <TableBody>
-            {Object.entries(ICON_PROPS[isUI ? 'ui' : 'flags']).map(([key, value]) => (
+            {propEntries.map(([key, value]) => (
               <TableRow key={key}>
                 <TableCell className='font-medium text-primary'>{key}</TableCell>
                 <TableCell>
