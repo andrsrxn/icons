@@ -63,6 +63,50 @@ function scoreIcon(name: string, tags: string[], query: string): number {
   return 0
 }
 
+interface ScoredIcon {
+  icon: IconCatalogEntry
+  score: number
+  index: number
+}
+
+function compareScoredIcons(a: ScoredIcon, b: ScoredIcon): number {
+  if (b.score !== a.score) {
+    return b.score - a.score
+  }
+
+  // When prefix-matching (e.g. typing "fil"), prioritize base root icons without hyphens
+  const aIsBase = !a.icon.name.includes('-')
+  const bIsBase = !b.icon.name.includes('-')
+  if (aIsBase !== bIsBase) {
+    return aIsBase ? -1 : 1
+  }
+
+  // Sibling variants preserve natural alphabetical / catalog order
+  return a.index - b.index
+}
+
+function searchAndScoreIcons(icons: IconCatalogEntry[], query: string): IconCatalogEntry[] {
+  const scored: ScoredIcon[] = []
+
+  for (let i = 0; i < icons.length; i++) {
+    const icon = icons[i]
+    const score = icon ? scoreIcon(icon.name, icon.tags, query) : 0
+    if (icon && score > 0) {
+      scored.push({ icon, score, index: i })
+    }
+  }
+
+  return scored.sort(compareScoredIcons).map(({ icon }) => icon)
+}
+
+function filterByCategory(icons: IconCatalogEntry[], category: string | null): IconCatalogEntry[] {
+  if (!category) {
+    return icons
+  }
+  const normalizedCategory = category.toLowerCase()
+  return icons.filter(icon => isUIIcon(icon) && icon.categories.includes(normalizedCategory))
+}
+
 /**
  * Owns every piece of state behind the icon grid (page/category/group/query,
  * all synced to the URL via nuqs) and derives the filtered + paginated data
@@ -83,49 +127,10 @@ export const useIconCatalog = () => {
 
   const filtered = useMemo(() => {
     const baseIcons = group && group in ICONS_BY_GROUP ? ICONS_BY_GROUP[group] : catalog
-    const normalizedCategory = category?.toLowerCase()
-
-    // 1. Filter by category if specified
-    const categoryFiltered = normalizedCategory
-      ? baseIcons.filter(icon => isUIIcon(icon) && icon.categories.includes(normalizedCategory))
-      : baseIcons
-
-    // Normalize spaces→dashes so "x circle" matches "x-circle".
+    const categoryFiltered = filterByCategory(baseIcons, category)
     const q = normalizeQuery(deferredQuery?.toLowerCase().trim() ?? '')
 
-    // If there is no search query, skip scoring and sorting passes
-    if (!q) {
-      return categoryFiltered
-    }
-
-    // 2. Score and sort matches in a single pass
-    const scored: { icon: IconCatalogEntry; score: number; index: number }[] = []
-
-    for (let i = 0; i < categoryFiltered.length; i++) {
-      const icon = categoryFiltered[i]
-      const score = icon ? scoreIcon(icon.name, icon.tags, q) : 0
-      if (icon && score > 0) {
-        scored.push({ icon, score, index: i })
-      }
-    }
-
-    return scored
-      .sort((a, b) => {
-        if (b.score !== a.score) {
-          return b.score - a.score
-        }
-
-        // When prefix-matching (e.g. typing "fil"), prioritize base root icons without hyphens
-        const aIsBase = !a.icon.name.includes('-')
-        const bIsBase = !b.icon.name.includes('-')
-        if (aIsBase !== bIsBase) {
-          return aIsBase ? -1 : 1
-        }
-
-        // Sibling variants preserve natural alphabetical / catalog order
-        return a.index - b.index
-      })
-      .map(({ icon }) => icon)
+    return q ? searchAndScoreIcons(categoryFiltered, q) : categoryFiltered
   }, [category, deferredQuery, group])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
