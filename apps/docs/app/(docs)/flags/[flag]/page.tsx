@@ -3,12 +3,15 @@ import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog } from '@andrsrxn/raw-icons/types'
 import Link from 'next/link'
 import { IconSection } from '@/components/sections/icon'
+import { isUIIcon } from '@/lib/utils/icons'
 
 const catalog = rawCatalog as IconCatalog
 
+// TODO revalidate
+
 // biome-ignore lint/suspicious/useAwait: nextjs api
 export async function generateStaticParams() {
-  return catalog.filter(icon => icon.group === 'flags').map(icon => ({ icon: icon.name }))
+  return catalog.filter(icon => !isUIIcon(icon)).map(icon => ({ icon: icon.name }))
 }
 
 export default async function FlagsPage({ params }: { params: Promise<{ flag: string }> }) {

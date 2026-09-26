@@ -123,8 +123,13 @@ function main() {
       const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'))
       const baseEntry = buildCatalogEntry(group, iconName, meta)
 
-      // 1. Light JSON Entry
-      catalog.push(baseEntry)
+      // 1. Light JSON Entry (without `group`, and flags omit `categories`)
+      const { categories: _categories, ...flagsMeta } = meta
+      const lightEntry = {
+        name: iconName,
+        ...(group === 'flags' ? flagsMeta : meta),
+      }
+      catalog.push(lightEntry)
 
       // 2. Full JSON Entry with raw inline SVG code
       let rawSvg = fs.readFileSync(svgPath, 'utf-8').trim()

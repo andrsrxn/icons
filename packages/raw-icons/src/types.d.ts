@@ -1,6 +1,5 @@
 interface IconCatalogUIEntry {
   name: string
-  group: 'ui'
   categories: string[]
   tags: string[]
   rtl?: boolean
@@ -8,10 +7,10 @@ interface IconCatalogUIEntry {
 
 interface IconCatalogFlagsEntry {
   name: string
-  group: 'flags'
-  categories: string[]
   tags: string[]
 }
+
+export type IconCatalogGroup = 'ui' | 'flags'
 
 export type IconCatalogEntry = IconCatalogUIEntry | IconCatalogFlagsEntry
 

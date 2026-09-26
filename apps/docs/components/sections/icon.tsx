@@ -43,7 +43,7 @@ export const IconSection = ({
   }
 
   const iconContainerRef = useRef<HTMLDivElement>(null)
-  const componentName = getIconComponentName(icon.name, icon.group)
+  const componentName = getIconComponentName(icon.name, isUIIcon(icon) ? 'ui' : 'flags')
 
   const copyCodeExample = `import { ${componentName} } from '@andrsrxn/icons'
 
@@ -60,7 +60,7 @@ export const IconSection = ({
               catalogIcon.name !== icon.name
             : catalogIcon.tags.some(tag => icon.tags.includes(tag)) &&
               catalogIcon.name !== icon.name &&
-              catalogIcon.group === 'flags'
+              !isUIIcon(catalogIcon)
         )
         .slice(0, MAX_RELATED_ICONS)
     : []

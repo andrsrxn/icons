@@ -11,11 +11,12 @@ interface IconCardProps {
 }
 
 export const IconCard = memo(function IconCard({ icon, queryString }: IconCardProps) {
-  const componentName = getIconComponentName(icon.name, icon.group)
+  const group = isUIIcon(icon) ? 'ui' : 'flags'
+  const componentName = getIconComponentName(icon.name, group)
 
   const IconComponent = ICON_LOOKUP[componentName as keyof typeof ICON_LOOKUP]
 
-  const href = `/${icon.group}/${icon.name}${queryString ? `?${queryString}` : ''}`
+  const href = `/${group}/${icon.name}${queryString ? `?${queryString}` : ''}`
 
   return (
     <Link

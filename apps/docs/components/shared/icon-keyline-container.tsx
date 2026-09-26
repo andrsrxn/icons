@@ -26,9 +26,11 @@ import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 
 export const IconKeylineContainer = ({
   icon,
+
   containerRef,
 }: {
   icon: IconCatalogEntry
+
   containerRef: RefObject<HTMLDivElement | null>
 }) => {
   const [shouldShowKeyline, setShouldShowKeyline] = useLocalStorage('should-show-keyline', true)
@@ -39,7 +41,7 @@ export const IconKeylineContainer = ({
 
   const { resolvedTheme } = useTheme()
   const keylineURL = 'url(/assets/keyline.svg)'
-  const componentName = getIconComponentName(icon.name, icon.group)
+  const componentName = getIconComponentName(icon.name, isUIIcon(icon) ? 'ui' : 'flags')
   const IconComponent = ICON_LOOKUP[componentName as keyof typeof ICON_LOOKUP]
 
   function reset() {

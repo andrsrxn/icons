@@ -8,6 +8,7 @@ import { InputIconSearch } from '@/components/shared/input-icon-search'
 import { SelectIconCategory } from '@/components/shared/select-icon-category'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useIconCatalog } from '@/lib/hooks/use-icon-catalog'
+import { isUIIcon } from '@/lib/utils/icons'
 
 export const IconGrid = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -27,11 +28,8 @@ export const IconGrid = () => {
     catalog,
   } = useIconCatalog()
 
-  const UIIconsCount = useMemo(() => catalog.filter(icon => icon.group === 'ui').length, [catalog])
-  const flagsIconsCount = useMemo(
-    () => catalog.filter(icon => icon.group === 'flags').length,
-    [catalog]
-  )
+  const UIIconsCount = useMemo(() => catalog.filter(icon => isUIIcon(icon)).length, [catalog])
+  const flagsIconsCount = useMemo(() => catalog.filter(icon => !isUIIcon(icon)).length, [catalog])
   const handlePageChange = (nextPage: number) => {
     containerRef.current?.scrollIntoView({ behavior: 'instant', block: 'start' })
     setPage(nextPage)

@@ -2,7 +2,7 @@
 'use client'
 
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
-import type { IconCatalog, IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import { parseAsInteger, useQueryState } from 'nuqs'
 import { useDeferredValue, useMemo } from 'react'
 import { ICON_PAGE_SIZE } from '@/lib/constants/icons'
@@ -71,14 +71,20 @@ export const useIconCatalog = () => {
 
     return catalog
       .filter((icon: IconCatalogEntry) => {
-        const matchesGroup = !group || icon.group === group
+        // const matchesGroup = !group || icon.group === group
 
+        // const matchesCategory =
+        //   !category || (isUIIcon(icon) && icon.categories.includes(category.toLowerCase()))
+
+        // const matchesQuery =
+        //   !query || icon.name.includes(query) || icon.tags.some(tag => tag.includes(query))
+
+        // return matchesGroup && matchesCategory && matchesQuery
+        const matchesGroup = !group || (group === 'ui' ? isUIIcon(icon) : !isUIIcon(icon))
         const matchesCategory =
           !category || (isUIIcon(icon) && icon.categories.includes(category.toLowerCase()))
-
         const matchesQuery =
           !query || icon.name.includes(query) || icon.tags.some(tag => tag.includes(query))
-
         return matchesGroup && matchesCategory && matchesQuery
       })
       .map((icon: IconCatalogEntry, index) => {
@@ -107,7 +113,7 @@ export const useIconCatalog = () => {
     setPage(1)
   }
 
-  const setGroup = (value: IconCatalogEntry['group']) => {
+  const setGroup = (value: IconCatalogGroup) => {
     setGroupState(value)
     setCategoryState(null)
     setPage(1)

@@ -1,6 +1,10 @@
 /** biome-ignore-all lint/style/noMagicNumbers: pagination sequence */
 
-import type { IconCatalogEntry, IconCatalogUIEntry } from '@andrsrxn/raw-icons/types'
+import type {
+  IconCatalogEntry,
+  IconCatalogGroup,
+  IconCatalogUIEntry,
+} from '@andrsrxn/raw-icons/types'
 
 const MAX_PAGES_TO_SHOW = 4
 
@@ -25,10 +29,10 @@ export const getPaginationRange = (page: number, totalPages: number): number[] =
 }
 
 export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
-  return icon.group === 'ui'
+  return 'categories' in icon
 }
 
-export const getIconComponentName = (iconName: string, group: IconCatalogEntry['group']) => {
+export const getIconComponentName = (iconName: string, group: IconCatalogGroup) => {
   if (group === 'ui') {
     return `Icon${iconName
       .split('-')
