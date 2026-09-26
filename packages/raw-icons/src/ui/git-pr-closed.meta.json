@@ -6,6 +6,7 @@
     "rejected",
     "done",
     "version",
-    "pull request"
+    "pull",
+    "request"
   ]
 }

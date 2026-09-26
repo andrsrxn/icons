@@ -1,12 +1,14 @@
 {
   "categories": [
-    "design"
+    "design",
+    "tools"
   ],
   "tags": [
     "curve",
     "path",
     "vector",
-    "pen tool",
+    "pen",
+    "tool",
     "nodes"
   ]
 }

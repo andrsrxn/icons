@@ -3,7 +3,8 @@
     "development"
   ],
   "tags": [
-    "bad request",
+    "bad",
+    "request",
     "status",
     "http",
     "client",

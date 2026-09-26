@@ -1,6 +1,7 @@
 {
   "categories": [
-    "editor", "typography"
+    "editor",
+    "typography"
   ],
   "tags": [
     "items",
@@ -8,7 +9,9 @@
     "bullets",
     "format",
     "menu",
-    "table of contents"
+    "table",
+    "contents",
+    "TOC"
   ],
   "rtl": true
 }

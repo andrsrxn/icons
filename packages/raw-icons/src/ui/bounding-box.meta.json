@@ -11,7 +11,8 @@
     "vector",
     "rect",
     "square",
-    "anchor point",
+    "anchor",
+    "point",
     "handle"
   ]
 }

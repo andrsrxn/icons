@@ -4,7 +4,8 @@
     "devices"
   ],
   "tags": [
-    "on off",
+    "on",
+    "off",
     "switch",
     "reboot",
     "shutdown",

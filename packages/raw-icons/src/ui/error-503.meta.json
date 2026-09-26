@@ -3,7 +3,8 @@
     "development"
   ],
   "tags": [
-    "service unavailable",
+    "service",
+    "unavailable",
     "overload",
     "status",
     "http",

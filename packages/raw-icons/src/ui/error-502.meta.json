@@ -3,7 +3,8 @@
     "development"
   ],
   "tags": [
-    "bad gateway",
+    "bad",
+    "gateway",
     "proxy",
     "status",
     "http",

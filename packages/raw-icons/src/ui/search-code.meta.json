@@ -1,14 +1,17 @@
 {
   "categories": [
-    "tools", "development", "security"
+    "tools",
+    "development",
+    "security"
   ],
   "tags": [
     "find",
     "lookup",
-    "zoom out",
+    "zoom",
+    "out",
     "decrease",
     "shrink",
-    "magnifying glass"
-    
+    "magnifying",
+    "glass"
   ]
 }

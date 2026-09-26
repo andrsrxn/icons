@@ -6,6 +6,7 @@
     "review",
     "merge",
     "version",
-    "pull request"
+    "pull",
+    "request"
   ]
 }
