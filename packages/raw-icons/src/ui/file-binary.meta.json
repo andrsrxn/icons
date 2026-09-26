@@ -8,7 +8,9 @@
     "paper",
     "data",
     "bits",
-    "executable",
-    "ones zeros"
+    "one",
+    "zero",
+    "01",
+    "executable"
   ]
 }

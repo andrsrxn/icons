@@ -7,8 +7,7 @@
     "right",
     "solid",
     "dock",
-    "pane",
-    "filled"
+    "pane"
   ],
   "rtl": true
 }

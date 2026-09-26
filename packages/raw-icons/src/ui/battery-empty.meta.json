@@ -7,7 +7,6 @@
     "power",
     "charge",
     "dead",
-    "drained",
-    "out of power"
+    "drained"
   ]
 }

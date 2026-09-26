@@ -3,12 +3,10 @@
     "layout"
   ],
   "tags": [
-    "multi panel",
     "right",
     "solid",
     "split",
-    "sections",
-    "filled"
+    "sections"
   ],
   "rtl": true
 }

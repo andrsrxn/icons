@@ -1,12 +1,13 @@
 {
   "categories": [
-    "science", "nature", "weather"
+    "science",
+    "nature",
+    "weather"
   ],
   "tags": [
     "planet",
     "space",
     "astronomy",
-    "solar system",
-    "gas giant"
+    "solar system"
   ]
 }

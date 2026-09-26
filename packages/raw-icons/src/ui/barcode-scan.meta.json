@@ -5,13 +5,11 @@
   ],
   "tags": [
     "code",
-    "upc",
-    "reader",
     "laser",
     "detect",
     "price",
     "inventory",
-    "sku",
-    "qr"
+    "SKU",
+    "QR"
   ]
 }

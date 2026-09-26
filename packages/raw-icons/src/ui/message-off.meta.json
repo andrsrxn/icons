@@ -1,12 +1,11 @@
 {
   "categories": [
-    "messages"
+    "messages",
+    "communication"
   ],
   "tags": [
-  "chat",
-    "message",
+    "chat",
     "bubble",
-    "communication",
     "talk",
     "disabled",
     "hidden",

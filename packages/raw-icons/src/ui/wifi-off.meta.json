@@ -8,7 +8,6 @@
     "disconnected",
     "error",
     "wireless",
-    "offline",
-    "no signal"
+    "offline"
   ]
 }

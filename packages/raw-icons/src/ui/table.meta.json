@@ -1,9 +1,10 @@
 {
   "categories": [
-    "layout"
+    "layout",
+    "editor"
   ],
   "tags": [
-    "data grid",
+    "data",
     "spreadsheet",
     "rows",
     "columns",

@@ -1,11 +1,11 @@
 {
   "categories": [
-    "media"
+    "media",
+    "devices"
   ],
   "tags": [
-    "sound level",
+    "sound",
     "mute",
-    "silent",
     "speaker",
     "audio",
     "zero"

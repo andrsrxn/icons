@@ -1,10 +1,11 @@
 {
   "categories": [
-    "devices", "energy"
+    "devices",
+    "energy"
   ],
   "tags": [
+    "wire",
     "network",
-    "wired connection",
     "connector",
     "lan",
     "internet",

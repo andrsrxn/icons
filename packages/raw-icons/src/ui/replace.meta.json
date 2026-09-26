@@ -1,12 +1,13 @@
 {
   "categories": [
-    "design", "development", "editor"
+    "design",
+    "development",
+    "editor"
   ],
   "tags": [
-    "replace",
     "move",
     "edit",
-    "switch", 
+    "switch",
     "change"
   ]
 }

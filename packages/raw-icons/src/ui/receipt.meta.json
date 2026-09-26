@@ -1,9 +1,11 @@
 {
   "categories": [
-    "shopping", "documents"
+    "shopping",
+    "documents"
   ],
   "tags": [
-    "purchase record",
+    "purchase",
+    "record",
     "bill",
     "invoice",
     "payment",

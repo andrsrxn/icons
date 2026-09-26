@@ -1,6 +1,7 @@
 {
   "categories": [
-    "arrows", "media"
+    "arrows",
+    "media"
   ],
   "tags": [
     "play",
@@ -9,8 +10,7 @@
     "start",
     "rewind",
     "fast",
-    "skip",
-    "backward"
+    "skip"
   ],
   "rtl": true
 }

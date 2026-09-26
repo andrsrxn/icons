@@ -1,14 +1,13 @@
 {
   "categories": [
-    "messages"
+    "messages",
+    "communication"
   ],
   "tags": [
     "chat",
-    "message",
     "bubble",
-    "communication",
+    
     "talk",
-    "more options",
     "ellipsis",
     "typing"
   ]

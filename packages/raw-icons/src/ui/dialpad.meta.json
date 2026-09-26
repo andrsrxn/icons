@@ -3,9 +3,11 @@
     "communication"
   ],
   "tags": [
-    "phone keypad",
+    "phone",
+    "keypad",
     "numbers",
     "input",
+    "pin",
     "call",
     "buttons",
     "grid"

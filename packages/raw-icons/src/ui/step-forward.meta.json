@@ -1,14 +1,14 @@
 {
   "categories": [
-    "arrows", "media"
+    "arrows",
+    "media"
   ],
   "tags": [
     "play",
     "next",
     "end",
     "fast",
-    "skip",
-    "forward"
+    "skip"
   ],
   "rtl": true
 }

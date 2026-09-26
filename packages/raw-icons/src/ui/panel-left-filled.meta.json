@@ -4,10 +4,8 @@
   ],
   "tags": [
     "sidebar",
-    "left",
     "solid",
     "dock",
-    "pane",
-    "filled"
+    "pane"
   ]
 }

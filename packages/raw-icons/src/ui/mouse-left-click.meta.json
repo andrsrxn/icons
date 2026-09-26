@@ -1,9 +1,10 @@
 {
   "categories": [
-    "cursor"
+    "cursor",
+    "device"
   ],
   "tags": [
-    "pointer device",
+    "pointer",
     "computer",
     "hardware",
     "select",

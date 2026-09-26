@@ -1,11 +1,11 @@
 {
   "categories": [
-    "editor", "typography"
+    "editor",
+    "typography"
   ],
   "tags": [
     "numbered",
     "sequence",
-    "enumerated",
-    "ordered"
+    "enumerated"
   ]
 }

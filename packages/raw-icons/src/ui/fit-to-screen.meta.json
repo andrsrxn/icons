@@ -11,9 +11,8 @@
     "viewport",
     "stretch",
     "adapt",
-    "fullscreen",
+    "screen",
     "display",
-    "zoom",
-    "screen"
+    "zoom"
   ]
 }
