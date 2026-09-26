@@ -2,7 +2,7 @@
 /** biome-ignore-all lint/style/noMagicNumbers: score numbers */
 
 import catalog from '@andrsrxn/raw-icons/catalog-with-svgs.json'
-import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import type { IconCatalogEntry, IconCatalogUIEntry } from '@andrsrxn/raw-icons/types'
 import {
   Container,
   render,
@@ -28,23 +28,45 @@ const TABS_OPTIONS: TabsOption[] = [
 
 const normalizeQuery = (q: string) => q.replace(/\s+/g, '-')
 
+export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
+  return 'categories' in icon
+}
+
+/**
+ * Returns a relevance score for an icon given a normalized query.
+ * 0 means no match.
+ * Higher is better:
+ *   7 — exact name match
+ *   6 — direct variant match (e.g. "file-*")
+ *   5 — general prefix match
+ *   4 — name contains query
+ *   3 — exact tag match
+ *   2 — tag starts with query
+ *   1 — tag contains query
+ */
 function scoreIcon(name: string, tags: string[], query: string): number {
   if (name === query) {
+    return 7
+  }
+  if (name.startsWith(`${query}-`)) {
     return 6
   }
-  if (tags.includes(query)) {
+  if (name.startsWith(query)) {
     return 5
   }
-  if (name.startsWith(query)) {
+  if (name.includes(query)) {
     return 4
   }
-  if (tags.some(tag => tag.startsWith(query))) {
+  if (tags.includes(query)) {
     return 3
   }
-  if (name.includes(query)) {
+  if (tags.some(tag => tag.startsWith(query))) {
     return 2
   }
-  return 1
+  if (tags.some(tag => tag.includes(query))) {
+    return 1
+  }
+  return 0
 }
 
 function Plugin() {
@@ -53,27 +75,41 @@ function Plugin() {
   const deferredQuery = useDeferredValue(query)
 
   const filtered = useMemo(() => {
-    const query = normalizeQuery(deferredQuery?.toLowerCase().trim() ?? '')
+    const q = normalizeQuery(deferredQuery?.toLowerCase().trim() ?? '')
+    const isUI = group === 'UI'
 
-    return icons
-      .filter((icon: IconCatalogEntry & { svg: string }) => {
-        const matchesGroup = !group || icon.group === group.toLowerCase()
+    const groupIcons = icons.filter(icon => (isUI ? isUIIcon(icon) : !isUIIcon(icon)))
 
-        const matchesQuery =
-          !query ||
-          icon.name.includes(query) ||
-          icon.tags.some(tag => tag.includes(query)) ||
-          icon.categories.includes(query.toLowerCase())
+    if (!q) {
+      return groupIcons
+    }
 
-        return matchesGroup && matchesQuery
-      })
-      .map((icon: IconCatalogEntry & { svg: string }, index) => {
-        if (!query) {
-          return { icon, score: 0, index }
+    const scored: { icon: CatalogIcon; score: number; index: number }[] = []
+
+    for (let i = 0; i < groupIcons.length; i++) {
+      const icon = groupIcons[i]
+      if (!icon) {
+        continue
+      }
+      const score = scoreIcon(icon.name, icon.tags, q)
+      if (score > 0) {
+        scored.push({ icon, score, index: i })
+      }
+    }
+
+    return scored
+      .sort((a, b) => {
+        if (b.score !== a.score) {
+          return b.score - a.score
         }
-        return { icon, score: scoreIcon(icon.name, icon.tags, query), index }
+        // Base icons (no hyphen) before variants at the same score tier
+        const aIsBase = !a.icon.name.includes('-')
+        const bIsBase = !b.icon.name.includes('-')
+        if (aIsBase !== bIsBase) {
+          return aIsBase ? -1 : 1
+        }
+        return a.index - b.index
       })
-      .sort((a, b) => b.score - a.score || a.index - b.index)
       .map(({ icon }) => icon)
   }, [group, deferredQuery])
 
@@ -117,8 +153,6 @@ function Plugin() {
               className={styles.iconButton}
               title={icon.name}
               onClick={() => handleInsert(icon)}>
-              {/* Icon SVG content comes from our own generated catalog, not
-                  user input, so rendering it directly is safe here. */}
               {/** biome-ignore lint/security/noDangerouslySetInnerHtml: secure */}
               {/** biome-ignore lint/style/useNamingConvention: secure */}
               <span className={styles.iconPreview} dangerouslySetInnerHTML={{ __html: icon.svg }} />
