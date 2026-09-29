@@ -13,7 +13,7 @@ Official documentation and icon catalog application for **[andrsrxn/icons](https
 
 ### Icon catalog
 
-- Browse the full catalog of 1,000+ duotone UI icons and 250+ flag icons, split by category
+- Browse the full catalog of 1,500+ duotone UI icons and 250+ flag icons, split by category
 - Search by icon name, category, or tag
 - Every filter, search term, and page number lives in the URL as shareable, bookmarkable state (no state is lost on navigation or a hard refresh)
 - Paginated grid, tuned for the size of the full catalog
