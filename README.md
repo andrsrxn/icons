@@ -12,7 +12,9 @@
 [![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
 [![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
 
-React icon library with 1,500+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.
+React icon library with 1,500+ duotone icons and 250+ flags.
+<br />
+Smooth, RTL-aware, and optimized SVGs.
 
 [Documentation](https://icons.andrsrxn.com/docs) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [npm](https://www.npmjs.com/package/@andrsrxn/icons)
 
