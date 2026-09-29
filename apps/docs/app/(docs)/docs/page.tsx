@@ -349,6 +349,26 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>arrow-start-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-end-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-start-dot</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-end-dot</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>arrow-down-start</code>
             </p>
           </li>
@@ -510,6 +530,36 @@ export function App() {
           <li>
             <p>
               <code>logs</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>timeline</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>playlist-first</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>playlist-last</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-increase-spacing</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-decrease-spacing</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-wrap</code>
             </p>
           </li>
           <li>
