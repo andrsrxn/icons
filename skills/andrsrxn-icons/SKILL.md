@@ -4,7 +4,7 @@ description: Integrate, import, style, and handle accessibility or RTL for UI ic
 compatibility: React 19 or higher. ESM-only package. Requires Node 20.16.0, 22.19.0, 24.0.0, or higher, and 'type' 'module' in the consuming project's package.json.
 license: MIT
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # `andrsrxn/icons` agent skill
