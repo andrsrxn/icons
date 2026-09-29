@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconHandBicep: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-hand-bicep'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.6 20.59V11.3l3.7-.96 3.7 2.22 6 .24-.61-5.8H12.4l-1.69-3L15 2.45l3.47 1.2L21.6 17l-5.2 4-5.4-1.28-5 2.02z'
+        fill='currentColor'
+      />
+      <path
+        d='M10.8 19.97a8.8 8.8 0 0 0 7.07.42c1.82-.83 3.5-2.27 3.5-4.27 0-3.03-1.5-8-2.41-10.73-.31-.94-.47-1.4-.84-1.75s-.87-.48-1.86-.74l-.51-.13c-.58-.15-.87-.23-1.17-.22s-.57.11-1.14.3l-.54.2c-1.06.36-1.6.54-1.83 1.24-.24.7-.03 1 .38 1.62q.33.52.92.84c.76.39 1.8.3 2.51.17q.55-.12.64-.02c.08.08.03.26-.06.63-.15.6-.3 1.46-.3 2.46 0 1.83.84 3.26.84 3.26'
+        stroke='currentColor'
+      />
+      <path d='M8.64 14s1.55-1.54 4.09-1.54A8 8 0 0 1 17 14' stroke='currentColor' />
+      <path d='M2.75 11.23s1.71-1.16 4.07-.7c2.17.4 3.7 2.19 3.7 2.19' stroke='currentColor' />
+      <path d='M2.63 20.53s1.98 1.38 4.69.86c2.48-.47 4.24-2.57 4.24-2.57' stroke='currentColor' />
+    </svg>
+  )
+}

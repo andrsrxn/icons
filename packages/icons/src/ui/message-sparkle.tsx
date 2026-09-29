@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconMessageSparkle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-message-sparkle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12.43 21.86a9.8 9.8 0 1 0-9.8-9.8q.01 1.24.14 2.02a10 10 0 0 1 .16 1.43c-.02.2-.1.47-.25.99l-.08.24c-.71 2.39-1.07 3.59-.54 4.37a2 2 0 0 0 .36.4c.71.62 1.94.4 4.4-.02a5 5 0 0 1 .73-.1c.15 0 .34.04.72.1.88.15 2.44.37 4.16.37m1.83-11.54c.37.35.55.53.68.71a2 2 0 0 1 .06 2.12c-.11.19-.28.38-.63.75-.4.43-.59.64-.79.77a2 2 0 0 1-2.26-.03c-.2-.14-.39-.35-.77-.79-.32-.37-.48-.55-.58-.74a2 2 0 0 1 .06-2.05c.11-.17.28-.35.63-.7.36-.36.54-.55.73-.67a2 2 0 0 1 2.12-.03c.19.12.37.3.75.65'
+        fill='currentColor'
+      />
+      <path
+        d='M12.43 21.86a9.8 9.8 0 1 0-9.8-9.8q.01 1.24.14 2.02a10 10 0 0 1 .16 1.43c-.02.2-.1.47-.25.99h0l-.08.24c-.71 2.39-1.07 3.59-.54 4.37a2 2 0 0 0 .36.4c.71.62 1.94.4 4.4-.02a5 5 0 0 1 .73-.1c.15 0 .34.04.72.1h0c.88.15 2.44.37 4.16.37'
+        stroke='currentColor'
+      />
+      <path d='M7.4 12.19c2.47 0 5.12-2.67 5.12-5.12' stroke='currentColor' />
+      <path d='M17.65 12.19c-2.46 0-5.13-2.66-5.13-5.12' stroke='currentColor' />
+      <path d='M7.4 12.19c2.45 0 5.12 2.7 5.12 5.12' stroke='currentColor' />
+      <path d='M17.65 12.19c-2.43 0-5.13 2.68-5.13 5.12' stroke='currentColor' />
+    </svg>
+  )
+}

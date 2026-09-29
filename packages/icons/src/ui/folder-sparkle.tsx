@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconFolderSparkle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-folder-sparkle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m18.37 14.5-2.48 2.18 2.48 3.5H7.67c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V7.42c0-.66 0-1 .05-1.27a3 3 0 0 1 2.4-2.4c.27-.04.6-.04 1.27-.04h1.06c1.1 0 1.64 0 2.14.18.5.19.92.54 1.75 1.25l.4.34c.84.71 1.25 1.06 1.76 1.25.5.18 1.04.18 2.14.18h1.6c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v3.6z'
+        fill='currentColor'
+      />
+      <path
+        d='M22.24 10.6c0-.67 0-1-.05-1.29a3 3 0 0 0-2.38-2.38c-.28-.05-.62-.05-1.3-.05H14.2c-1.04 0-1.56 0-2.05-.17l-.2-.08c-.48-.2-.86-.56-1.62-1.27S9.17 4.29 8.7 4.09L8.5 4c-.48-.16-1-.16-2.05-.16h-2.2A2.57 2.57 0 0 0 1.67 6.4v7.77c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h4.55'
+        stroke='currentColor'
+      />
+      <path d='M14.8 16.67c1.83 0 3.8-1.98 3.8-3.8' stroke='currentColor' />
+      <path d='M22.41 16.67c-1.83 0-3.8-1.98-3.8-3.8' stroke='currentColor' />
+      <path d='M14.8 16.67c1.82 0 3.8 2.01 3.8 3.8' stroke='currentColor' />
+      <path d='M22.41 16.67c-1.8 0-3.8 1.99-3.8 3.8' stroke='currentColor' />
+    </svg>
+  )
+}

@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconPineTree: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-pine-tree'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M6.73 6.1a.91.91 0 0 0 .41 1.55.9.9 0 0 1 .6 1.29l-1.43 2.93-.03.07a1 1 0 0 0 .56 1.34l.07.03.1.03a1 1 0 0 1 .42 1.56l-.5.7c-.67.93-1 1.39-.95 1.77a1 1 0 0 0 .32.62c.28.26.85.26 1.99.26h7.54c1.17 0 1.75 0 2.04-.29a1 1 0 0 0 .27-.48c.1-.4-.22-.9-.84-1.89l-.95-1.52a.75.75 0 0 1 .63-1.14c.56 0 .92-.59.66-1.08l-1.52-2.98a.86.86 0 0 1 .55-1.22c.66-.17.87-1 .37-1.46l-3.88-3.6c-.66-.61-.98-.91-1.38-.9-.4 0-.72.3-1.36.9z'
+        fill='currentColor'
+      />
+      <path d='M12 22v-9.01' stroke='currentColor' />
+      <path d='M8.45 22.24h7.1' stroke='currentColor' />
+      <path
+        d='M12 18.09h4.9c.9 0 1.35 0 1.5-.28.13-.27-.15-.62-.7-1.3l-1.5-1.87c-.55-.67-.82-1.01-.69-1.28l.01-.02c.14-.27.59-.27 1.47-.27.86 0 1.29 0 1.43-.26l.01-.02c.14-.26-.12-.6-.62-1.26L15.98 9.1c-.4-.54-.6-.8-.54-1.02l.1-.2c.16-.18.5-.18 1.18-.18.84 0 1.25 0 1.4-.2l.1-.22c.04-.25-.26-.53-.86-1.09L13.2 2.33c-.47-.44-.7-.65-.98-.72q-.22-.04-.46 0c-.28.07-.5.28-.98.72'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 18.09H7.1c-.9 0-1.35 0-1.5-.28-.13-.27.15-.62.7-1.3l1.5-1.87c.55-.67.82-1.01.69-1.28l-.01-.02c-.14-.27-.59-.27-1.47-.27-.86 0-1.29 0-1.43-.26l-.01-.02c-.14-.26.12-.6.62-1.26L8.02 9.1c.4-.54.6-.8.54-1.02l-.1-.2c-.16-.18-.5-.18-1.18-.18-.84 0-1.25 0-1.4-.2l-.1-.22c-.04-.25.26-.53.86-1.09l3.95-3.68c.67-.62 1-.93 1.41-.93s.75.3 1.42.93l.08.07'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconLampDesk: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-lamp-desk'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m16.66 7.42 1.78-3.07c.48-.85.73-1.27.5-1.74-.22-.48-.6-.54-1.37-.67a5.6 5.6 0 0 0-4.19.98.5.5 0 0 1-.32 0q-.07-.01-.22-.11l-.61-.35-.13-.07a2 2 0 0 0-2.64.7l-.08.13-.07.13a2 2 0 0 0 .7 2.64l.13.08.61.35.21.13q.14.12.16.29v.28a5.6 5.6 0 0 0 1.25 3.83c.5.6.74.9 1.26.86s.77-.46 1.25-1.3z'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='5'
+        cy='13.91'
+        r='2.28'
+        transform='rotate(90 5 13.9)'
+        fill='currentColor'
+      />
+      <path d='m11.31 22.22-5.47-6.18' stroke='currentColor' />
+      <path d='m10.97 6.8-5.13 4.92' stroke='currentColor' />
+      <path d='M14.34 22.22h-8' stroke='currentColor' />
+      <circle cx='5' cy='13.91' r='2.28' transform='rotate(90 5 13.9)' stroke='currentColor' />
+      <path d='M15.83 9.95a2.6 2.6 0 0 0 2.6-4.51' stroke='currentColor' />
+      <path
+        d='m16.66 7.42 1.78-3.07c.48-.85.73-1.27.5-1.74-.22-.48-.6-.54-1.37-.67a5.6 5.6 0 0 0-4.19.98.5.5 0 0 1-.32 0q-.07-.01-.22-.11l-.61-.35-.13-.07a2 2 0 0 0-2.64.7l-.08.13-.07.13a2 2 0 0 0 .7 2.64l.13.08.61.35.21.13q.14.12.16.29v.28a5.6 5.6 0 0 0 1.25 3.83c.5.6.74.9 1.26.86s.77-.46 1.25-1.3z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

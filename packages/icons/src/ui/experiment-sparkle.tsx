@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconExperimentSparkle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-experiment-sparkle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m3.88 16.5 1.58-2.08a2 2 0 0 1 1.72-.78l1.78.11a2 2 0 0 1 .43.08l4.64 1.36a2 2 0 0 0 1.26-.04l3-1.12.65 1.2a2 2 0 0 1-.18 2.19l-.64.82a2 2 0 0 0-.16 2.22l1.02 1.8H6.64a2 2 0 0 1-1.81-1.16l-1.18-2.55a2 2 0 0 1 .23-2.05'
+        fill='currentColor'
+      />
+      <path
+        d='M8.66 2.2v5.03c0 1.24 0 1.86-.18 2.45-.18.58-.54 1.09-1.24 2.1l-3.11 4.5a3.82 3.82 0 0 0 3.14 6H14M15.32 2.2v5.24c0 1.13 0 1.7.15 2.24s.45 1.02 1.05 1.98l1.28 2.06'
+        stroke='currentColor'
+      />
+      <path d='M6.2 1.8h11.6' stroke='currentColor' />
+      <path d='M16.13 19.47c1.57 0 3.24-1.69 3.24-3.24' stroke='currentColor' />
+      <path d='M22.62 19.47c-1.56 0-3.25-1.68-3.25-3.24' stroke='currentColor' />
+      <path d='M16.13 19.47c1.56 0 3.24 1.72 3.24 3.25' stroke='currentColor' />
+      <path d='M22.62 19.47c-1.54 0-3.25 1.7-3.25 3.25' stroke='currentColor' />
+      <path
+        d='M5.36 14.65a6.3 6.3 0 0 1 3.68-1.08c1.84 0 4.04 1.39 5.83 1.39 1.8 0 2.62-.75 2.97-1.16'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

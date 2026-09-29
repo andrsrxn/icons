@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "devices"
+  ],
+  "tags": [
+    "mobile",
+    "landscape",
+    "portrait",
+    "orientation",
+    "tilt",
+    "gyroscope",
+    "turn"
+  ]
+}

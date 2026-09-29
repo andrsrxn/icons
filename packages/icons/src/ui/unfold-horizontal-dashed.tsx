@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconUnfoldHorizontalDashed: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-unfold-horizontal-dashed'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M15.77 12h5.97' stroke='currentColor' />
+      <path
+        d='m19.8 15.2.38-.37c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83l-.38-.38'
+        stroke='currentColor'
+      />
+      <path d='M8.23 12H2.26' stroke='currentColor' />
+      <path
+        d='m4.2 15.2-.38-.37c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l.38-.38'
+        stroke='currentColor'
+      />
+      <path d='M12 19.5v2.77' stroke='currentColor' />
+      <path d='M12 13.55v2.76' stroke='currentColor' />
+      <path d='M12 7.54v2.76' stroke='currentColor' />
+      <path d='M12 1.61v2.76' stroke='currentColor' />
+    </svg>
+  )
+}

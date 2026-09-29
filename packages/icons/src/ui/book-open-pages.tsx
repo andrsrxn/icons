@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconBookOpenPages: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-book-open-pages'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M18.84 14.92V5.84c0-.9 0-1.36.22-1.63a1 1 0 0 1 .45-.32c.33-.12.76.04 1.61.34.46.16.68.24.84.4a1 1 0 0 1 .2.29c.1.2.1.44.1.92v11.93c0 1.26 0 1.9-.35 2.2s-1.03.2-2.4-.01a16 16 0 0 0-6.33.3c-.58.14-1.18-.3-1.18-.9 0-.36.23-.69.58-.81l4.92-1.74c.65-.23.97-.34 1.16-.6s.18-.6.18-1.29'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m9.03 3.58 1.64.58c.64.23.96.35 1.15.6.18.26.18.6.18 1.29v11.72c0 1.26 0 1.9-.35 2.2s-1.03.2-2.4-.01a16 16 0 0 0-4.76 0c-1.37.2-2.05.3-2.4 0s-.35-.93-.35-2.19V6.02c0-.85 0-1.27.25-1.55.26-.29.67-.34 1.51-.44l4.61-.56c.24-.02.35-.04.47-.03s.22.06.45.14'
+        fill='currentColor'
+      />
+      <path
+        d='M6.87 3.12c2.2 0 3.65.59 4.43 1.03.28.16.43.24.56.48s.14.44.14.86v12.25c0 1.27 0 1.9-.37 2.2s-1.04.17-2.38-.1c-.77-.16-1.6-.28-2.38-.28s-1.6.12-2.38.27c-1.34.28-2.01.41-2.38.11s-.37-.93-.37-2.2V6.35c0-.82 0-1.24.34-1.74s.6-.62 1.14-.83a10 10 0 0 1 3.65-.66'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.12 3.35c1.14.2 1.94.53 2.44.81.28.15.42.23.56.47s.14.44.14.85v12.26c0 1.27 0 1.9-.37 2.2s-1.04.17-2.38-.1c-.77-.16-1.61-.28-2.38-.28-.97 0-2.04.18-2.95.4-.81.19-1.21.29-1.47.2a1 1 0 0 1-.57-.44c-.14-.24-.14-.62-.14-1.4'
+        stroke='currentColor'
+      />
+      <path
+        d='M11.99 5.07s.5-2.14 3.24-3.2a8 8 0 0 1 2.75-.61c.37 0 .55 0 .84.29.3.29.3.55.3 1.07v11.67c0 1.1 0 1.64-.22 1.9-.22.28-.91.44-2.3.75q-.54.12-1.17.35a5.2 5.2 0 0 0-2.93 2.77'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

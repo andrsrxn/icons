@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconLeafLightning: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-leaf-lightning'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M6.52 5.59c4.29-3.82 10-3.91 12.51-3.74.78.06 1.4.62 1.5 1.4.34 2.46.52 8.08-3.62 12.66-3.76 4.15-8.78 3.36-11.27 1.12-2.27-2.05-3.5-7.55.88-11.44m8.7 0-4.74 2.38a1.7 1.7 0 0 0-.59 2.53c.44.57.47 1.35.08 1.95l-1.74 2.68 5.44-2.42c.99-.44 1.3-1.7.63-2.54a1.7 1.7 0 0 1-.23-1.63z'
+        fill='currentColor'
+      />
+      <path
+        d='M6.52 5.59c3.67-3.27 8.38-3.8 11.23-3.79 1.1.01 1.66.02 2.23.56s.6 1.08.68 2.16c.17 2.81-.22 7.48-3.75 11.39-3.76 4.15-8.78 3.36-11.27 1.12-2.27-2.05-3.5-7.55.88-11.44'
+        stroke='currentColor'
+      />
+      <path d='M3.78 22.52c.38-2.07 1.13-3.7 2.05-5.32' stroke='currentColor' />
+      <path
+        d='m9.99 8 2.68-1.44c1.43-.76 2.15-1.15 2.44-1.08.36.08.61.4.62.76.01.3-.51.92-1.55 2.18h0a2 2 0 0 0-.42.6.8.8 0 0 0 .05.6 2 2 0 0 0 .53.51l.16.14c.65.53.97.8 1 1.12a1 1 0 0 1-.03.34c-.1.3-.47.5-1.22.9l-2.64 1.4c-1.56.81-2.33 1.22-2.65 1.12a.8.8 0 0 1-.56-.69c-.03-.33.53-1 1.66-2.35.28-.34.42-.5.46-.69a1 1 0 0 0-.06-.53c-.08-.17-.25-.3-.6-.57l-.07-.07c-.6-.46-.89-.7-.95-.97a1 1 0 0 1 .04-.48c.11-.27.44-.45 1.1-.8'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconEraserSparkle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-eraser-sparkle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M18.53 4.1c-.97-.96-1.46-1.45-2-1.68a3 3 0 0 0-2.33 0c-.54.23-1.03.72-2 1.69-.33.32-.49.49-.56.67a1 1 0 0 0 0 .77c.07.18.23.35.56.67l6.12 6.12c.32.32.48.49.66.56q.39.15.78 0c.18-.07.34-.24.67-.56.97-.98 1.46-1.46 1.69-2a3 3 0 0 0 0-2.33c-.23-.54-.72-1.03-1.7-2z'
+        fill='currentColor'
+      />
+      <rect
+        width='20.84'
+        height='11.17'
+        rx='3'
+        transform='scale(1 -1)rotate(45 32.75 -1.17)'
+        stroke='currentColor'
+      />
+      <path d='m11.3 5.3 7.76 7.77' stroke='currentColor' />
+      <path d='M21.59 22.26H9.45' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='m5.2 3.4-.84-1.57L3.5 3.4l-1.62.9 1.62.83.85 1.85.84-1.85 1.76-.92z'
+        fill='currentColor'
+      />
+      <path d='M1.5 4.46c1.44 0 2.97-1.55 2.97-2.97' stroke='currentColor' />
+      <path d='M7.44 4.46c-1.42 0-2.97-1.55-2.97-2.97' stroke='currentColor' />
+      <path d='M1.5 4.46c1.43 0 2.97 1.57 2.97 2.97' stroke='currentColor' />
+      <path d='M7.44 4.46c-1.4 0-2.97 1.55-2.97 2.97' stroke='currentColor' />
+    </svg>
+  )
+}
