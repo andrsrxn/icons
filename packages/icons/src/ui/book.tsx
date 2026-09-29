@@ -39,7 +39,7 @@ export const IconBook: Icon = ({
         d='M3.02 18.5c0 1.66 0 2.49.46 3.04l.26.26c.56.46 1.39.46 3.05.46h8.85c1.66 0 2.5 0 3.05-.46l.26-.26c.46-.55.46-1.38.46-3.05'
         stroke='currentColor'
       />
-      <path d='M7.42 2.18v7.35' stroke='currentColor' />
+      <path d='M8.03 2.18v7.35' stroke='currentColor' />
     </svg>
   )
 }
