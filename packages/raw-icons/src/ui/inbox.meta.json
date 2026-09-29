@@ -1,12 +1,10 @@
 {
   "categories": [
-    "mail"
+    "mail",
+    "messages"
   ],
   "tags": [
-    "mailbox",
-    "messages",
-    "email",
-    "tray",
+    "chat",
     "receive",
     "communication"
   ]

@@ -1,8 +1,13 @@
 {
   "categories": [
-    "buildings"
+    "buildings",
+    "shopping"
   ],
   "tags": [
+    "storage",
+    "stock",
+    "depot",
+    "supply",
     "inventory",
     "logistics",
     "factory",
