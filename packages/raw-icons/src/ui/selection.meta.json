@@ -1,15 +1,14 @@
 {
   "categories": [
-    "design"
+    "design",
+    "tools"
   ],
   "tags": [
     "select",
     "choose",
     "marquee",
     "box",
-    "highlight",
-    "pick",
-    "tool",
+    "template",
     "square", 
     "dashed"
   ]
