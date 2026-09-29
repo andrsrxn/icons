@@ -39,16 +39,18 @@ export const IconFilePng: Icon = ({
         d='m13.2 2.28-.01 2.4c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h2.4'
         stroke='currentColor'
       />
-      <path d='M2.2 15.76v6.4' stroke='currentColor' />
+      <path d='M2.82 15.89v6.4' stroke='currentColor' />
       <path
-        d='M2.22 15.76H4.5c.96 0 1.73.82 1.73 1.83s-.77 1.83-1.73 1.83H2.22'
+        d='M2.84 15.89h2.28c.96 0 1.73.82 1.73 1.83s-.77 1.83-1.73 1.83H2.84'
         stroke='currentColor'
       />
-      <path d='M22.2 19.02a3.26 3.26 0 1 1-1.78-2.9' stroke='currentColor' />
-      <path d='M19.36 19.02h2.84' stroke='currentColor' />
-      <path d='M8.88 15.8v6.47' stroke='currentColor' />
-      <path d='m8.96 15.76 4.08 6.51' stroke='currentColor' />
-      <path d='M13.04 15.8v6.47' stroke='currentColor' />
+      <path d='M9.64 15.93v6.47' stroke='currentColor' />
+      <path d='m9.73 15.89 4.08 6.51' stroke='currentColor' />
+      <path d='M13.8 15.93v6.47' stroke='currentColor' />
+      <path
+        d='M21.13 16.28a3.26 3.26 0 1 0-.32 5.95c.33-.12.5-.18.67-.44s.18-.5.18-1.01V19.4h-1.74'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

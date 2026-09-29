@@ -27,6 +27,11 @@ export const IconSeekBackward: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
+        opacity='.2'
+        d='M2.14 12a9.57 9.57 0 1 0 19.14 0 9.57 9.57 0 0 0-19.14 0'
+        fill='currentColor'
+      />
+      <path
         d='M3.67 6.13a11.1 11.1 0 0 1 9.56-3.67 9.6 9.6 0 1 1-9.18 15.2'
         stroke='currentColor'
       />

@@ -39,12 +39,14 @@ export const IconFileGif: Icon = ({
         d='M13.22 2.29v2.46c0 1.9 0 2.83.58 3.42.59.59 1.53.59 3.42.59h2.47'
         stroke='currentColor'
       />
-      <path d='M16.31 16.14v6.25' stroke='currentColor' />
-      <path d='M6.99 19.2h2.78' stroke='currentColor' />
-      <path d='M16.31 16.13h4.33' stroke='currentColor' />
-      <path d='M16.31 19.45h3.25' stroke='currentColor' />
-      <path d='M12.85 22.39v-6.25' stroke='currentColor' />
-      <path d='M9.77 19.2a3.2 3.2 0 1 1-1.74-2.85' stroke='currentColor' />
+      <path d='M15.21 15.8v6.59' stroke='currentColor' />
+      <path d='M15.21 15.8h4.56' stroke='currentColor' />
+      <path d='M15.21 19.3h3.43' stroke='currentColor' />
+      <path d='M11.86 22.39V15.8' stroke='currentColor' />
+      <path
+        d='M8.53 16.16a3.26 3.26 0 1 0-.32 5.95c.32-.13.49-.2.66-.45.18-.26.18-.5.18-1.01v-1.37H7.31'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

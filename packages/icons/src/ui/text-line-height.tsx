@@ -26,16 +26,20 @@ export const IconTextLineHeight: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M2.64 6.11 3.75 5c.67-.67 1-1 1.42-1s.75.33 1.41 1L7.7 6.1' stroke='currentColor' />
       <path
-        d='M2.64 17.88 3.75 19c.67.67 1 1 1.42 1s.75-.33 1.41-1l1.12-1.12'
+        d='m2.72 5.88 1.22-1.22c.66-.67 1-1 1.41-1s.75.33 1.42 1l1.22 1.22'
         stroke='currentColor'
       />
-      <path d='M5.17 4.48v5.51' stroke='currentColor' />
-      <path d='M5.17 14.04v5.51' stroke='currentColor' />
-      <path d='M11 6h10.37' stroke='currentColor' />
-      <path d='M11 12h10.37' stroke='currentColor' />
-      <path d='M11 18h10.37' stroke='currentColor' />
+      <path
+        d='m2.72 18.14 1.22 1.22c.66.67 1 1 1.41 1s.75-.33 1.42-1l1.22-1.22'
+        stroke='currentColor'
+      />
+      <path d='M5.35 4.03v15.94' stroke='currentColor' />
+      <path
+        d='m12.37 17.56 2.56-8.18c.8-2.52 1.18-3.77 1.92-3.77s1.13 1.26 1.9 3.77l2.53 8.18'
+        stroke='currentColor'
+      />
+      <path d='M19.66 12.99h-5.67' stroke='currentColor' />
     </svg>
   )
 }

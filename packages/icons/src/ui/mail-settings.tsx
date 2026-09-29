@@ -28,7 +28,7 @@ export const IconMailSettings: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M2.09 8.55c0-1.87 0-2.81.58-3.08s1.3.34 2.72 1.56l5.48 4.68c.62.53.93.8 1.3.8s.68-.27 1.3-.8l5.48-4.68c1.42-1.22 2.13-1.83 2.72-1.56.58.27.58 1.2.58 3.08v7.56l-1.42-.24q-.24-.05-.34-.05c-.09 0-.17.02-.34.05l-2.21.4L16.72 20H8.1c-2.83 0-4.24 0-5.12-.88S2.1 16.82 2.1 14z'
+        d='M2.09 8.55c0-1.87 0-2.81.58-3.08s1.3.34 2.72 1.56l5.48 4.68c.62.53.93.8 1.3.8s.68-.27 1.3-.8l5.48-4.68c1.42-1.22 2.13-1.83 2.72-1.56.58.27.58 1.2.58 3.08v8.84l-1.5-1.16c-.53-.41-.8-.62-1.1-.63s-.6.15-1.17.5l-1.5.91.96 2.99H8.09c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
         fill='currentColor'
       />
       <path
@@ -40,18 +40,18 @@ export const IconMailSettings: Icon = ({
         stroke='currentColor'
       />
       <circle
-        cx='19.45'
+        cx='19.46'
         cy='17.7'
         r='2.25'
-        transform='rotate(-60 19.45 17.7)'
+        transform='rotate(-90 19.46 17.7)'
         stroke='currentColor'
       />
-      <path d='m16.45 15.98.92.54' stroke='currentColor' />
-      <path d='m22.46 15.98-.98.54' stroke='currentColor' />
-      <path d='m21.42 18.84 1.04.59' stroke='currentColor' />
-      <path d='m16.45 19.43.92-.5' stroke='currentColor' />
-      <path d='M19.42 21.18v-.87' stroke='currentColor' />
-      <path d='M19.42 15.06v-.87' stroke='currentColor' />
+      <path d='M16 17.71h1.06' stroke='currentColor' />
+      <path d='m21.2 14.7-.58.96' stroke='currentColor' />
+      <path d='m21.73 17.7 1.2-.01' stroke='currentColor' />
+      <path d='m17.72 20.7.55-.9' stroke='currentColor' />
+      <path d='m21.17 20.73-.43-.76' stroke='currentColor' />
+      <path d='m18.1 15.43-.42-.76' stroke='currentColor' />
     </svg>
   )
 }

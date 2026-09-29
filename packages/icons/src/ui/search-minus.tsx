@@ -32,7 +32,7 @@ export const IconSearchMinus: Icon = ({
         fill='currentColor'
       />
       <path d='M6.54 10.26h7.29' stroke='currentColor' />
-      <path d='m15.6 15.56 5.78 5.77' stroke='currentColor' />
+      <path d='m15.71 15.66 5.67 5.67' stroke='currentColor' />
       <path d='M17.8 10.26a7.6 7.6 0 0 1-7.62 7.6 7.61 7.61 0 1 1 7.61-7.6' stroke='currentColor' />
     </svg>
   )

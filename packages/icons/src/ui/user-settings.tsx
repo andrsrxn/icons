@@ -37,18 +37,18 @@ export const IconUserSettings: Icon = ({
         fill='currentColor'
       />
       <circle
-        cx='18.76'
-        cy='18.59'
+        cx='18.75'
+        cy='18.73'
         r='2.44'
-        transform='rotate(-60 18.76 18.6)'
+        transform='rotate(-90 18.75 18.73)'
         stroke='currentColor'
       />
-      <path d='m15.5 20.47 1-.55' stroke='currentColor' />
-      <path d='M18.77 14.84v.94' stroke='currentColor' />
-      <path d='M18.72 22.37v-.94' stroke='currentColor' />
-      <path d='m22.02 16.73-1.07.58' stroke='currentColor' />
-      <path d='m20.89 19.83 1.13.64' stroke='currentColor' />
-      <path d='m15.5 16.73 1 .58' stroke='currentColor' />
+      <path d='m16.86 21.98.6-.97' stroke='currentColor' />
+      <path d='m16.89 15.47.46.82' stroke='currentColor' />
+      <path d='m20.6 22.02-.46-.82' stroke='currentColor' />
+      <path d='M20.65 15.48 20 16.52' stroke='currentColor' />
+      <path d='m21.21 18.73 1.3-.01' stroke='currentColor' />
+      <path d='M15 18.74h1.15' stroke='currentColor' />
       <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
       <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>

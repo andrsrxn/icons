@@ -39,9 +39,9 @@ export const IconStoryDown: Icon = ({
       <path d='M16.39 2.7a10.3 10.3 0 0 1 5.06 5.18' stroke='currentColor' />
       <path d='M18.92 19.62q-.88.79-1.92 1.36' stroke='currentColor' />
       <path d='M22.32 12c0 1.7-.42 3.3-1.15 4.72' stroke='currentColor' />
-      <path d='M12 8.1v7.68' stroke='currentColor' />
+      <path d='M12 7.25v8.77' stroke='currentColor' />
       <path
-        d='m8.04 13.06 1.13 1.13c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l1.13-1.13'
+        d='m7.28 13.17 1.89 1.9c1.33 1.33 2 2 2.83 2 .82 0 1.5-.67 2.83-2l1.89-1.9'
         stroke='currentColor'
       />
     </svg>

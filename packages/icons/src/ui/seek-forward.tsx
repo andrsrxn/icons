@@ -26,6 +26,11 @@ export const IconSeekForward: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
+      <path
+        opacity='.2'
+        d='M2.7 12a9.57 9.57 0 1 0 19.15 0 9.57 9.57 0 0 0-19.14 0'
+        fill='currentColor'
+      />
       <path d='M20.3 6.18a11 11 0 0 0-9.49-3.63 9.51 9.51 0 1 0 9.1 15.07' stroke='currentColor' />
       <rect x='12.98' y='9.38' width='4.09' height='6.69' rx='2' stroke='currentColor' />
       <path

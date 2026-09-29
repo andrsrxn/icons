@@ -26,17 +26,17 @@ export const IconLightbulb: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M12 3.47v-1.9' stroke='currentColor' />
-      <path d='M20.63 11.15h1.9' stroke='currentColor' />
-      <path d='M1.47 11.15h1.9' stroke='currentColor' />
-      <path d='m5.34 5.43-1-1.48' stroke='currentColor' />
-      <path d='m18.62 5.43 1.04-1.48' stroke='currentColor' />
-      <circle cx='11.86' cy='12.22' r='5.96' stroke='currentColor' />
       <path
-        d='M8.94 17.83v1.55a5 5 0 0 0 .13 1.64 2 2 0 0 0 1.16 1.16c.34.13.77.13 1.63.13.87 0 1.3 0 1.64-.13a2 2 0 0 0 1.16-1.16c.13-.34.13-.78.13-1.64v-1.55'
+        d='m15.33 17.16.01-.55c.06-.59.15-.8.57-1.21.06-.07.28-.24.7-.6a7.6 7.6 0 0 0 2.57-5.88 7.32 7.32 0 0 0-14.63 0 7.5 7.5 0 0 0 3.08 6.27c.59.46.76.8.77 1.56v.14'
         stroke='currentColor'
       />
-      <rect opacity='.2' x='9.06' y='17.83' width='5.61' height='4.48' rx='1' fill='currentColor' />
+      <rect opacity='.2' x='8.81' y='17.05' width='6.11' height='5.25' rx='1' fill='currentColor' />
+      <path d='M15.33 17.06H8.65' stroke='currentColor' />
+      <path
+        d='M8.4 17.06v1.78c0 1.37 0 2.06.32 2.56a2 2 0 0 0 .58.58c.5.33 1.19.33 2.56.33s2.07 0 2.56-.33a2 2 0 0 0 .59-.58c.32-.5.32-1.19.32-2.56v-1.78'
+        stroke='currentColor'
+      />
+      <path d='M12 11.07v5.98' stroke='currentColor' />
     </svg>
   )
 }

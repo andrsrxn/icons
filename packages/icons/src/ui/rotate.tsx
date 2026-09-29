@@ -36,7 +36,7 @@ export const IconRotate: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='m16.24 1.6-1.98 1.8c-.76.69-1.14 1.03-1.14 1.47 0 .45.38.8 1.14 1.48l1.98 1.8'
+        d='m15.92 1.9-1.66 1.5c-.76.69-1.14 1.03-1.14 1.47 0 .45.38.8 1.14 1.48l1.66 1.51'
         stroke='currentColor'
       />
     </svg>

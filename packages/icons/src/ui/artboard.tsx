@@ -35,10 +35,10 @@ export const IconArtboard: Icon = ({
         rx='2'
         fill='currentColor'
       />
-      <path d='M19.87 2v20' stroke='currentColor' />
-      <path d='M2 4.13h20' stroke='currentColor' />
-      <path d='M2 19.87h20' stroke='currentColor' />
-      <path d='M4.13 2v20' stroke='currentColor' />
+      <path d='M19.34 2v20' stroke='currentColor' />
+      <path d='M2 4.79h20' stroke='currentColor' />
+      <path d='M2 19.31h20' stroke='currentColor' />
+      <path d='M4.69 2v20' stroke='currentColor' />
     </svg>
   )
 }

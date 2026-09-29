@@ -89,10 +89,10 @@ export const IconServerIn: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M22.44 17.45c-1.21-1.22-1.82-1.82-2.57-1.88h-.27c-.75.05-1.36.66-2.58 1.88'
+        d='m22.68 17.42-.12-.12c-1.33-1.34-2-2-2.83-2-.82 0-1.5.66-2.83 2l-.12.12'
         stroke='currentColor'
       />
-      <path d='M19.73 20.9v-5.08' stroke='currentColor' />
+      <path d='M19.73 21.17v-5.53' stroke='currentColor' />
     </svg>
   )
 }

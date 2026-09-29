@@ -26,14 +26,40 @@ export const IconRoute: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path
-        d='M15.96 18.35c-4.32 0-7.82 2.04-10.84.19-2.17-1.33-2.68-5.23-.23-6.64 4.99-2.85 8.92 3.24 14.6-.05 2.34-1.36 2.25-4.84.2-6.2-3.52-2.32-6.95 0-11.4 0'
+      <circle
+        opacity='.2'
+        cx='2.71'
+        cy='2.71'
+        r='2.71'
+        transform='matrix(1 0 0 -1 16.07 8.36)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='2.71'
+        cy='2.71'
+        r='2.71'
+        transform='matrix(1 0 0 -1 2.51 21.06)'
+        fill='currentColor'
+      />
+      <circle
+        cx='2.71'
+        cy='2.71'
+        r='2.71'
+        transform='matrix(1 0 0 -1 16.07 8.36)'
         stroke='currentColor'
       />
-      <circle opacity='.2' cx='18.78' cy='18.35' r='2.71' fill='currentColor' />
-      <circle cx='18.78' cy='18.35' r='2.71' stroke='currentColor' />
-      <circle opacity='.2' cx='5.22' cy='5.65' r='2.71' fill='currentColor' />
-      <circle cx='5.22' cy='5.65' r='2.71' stroke='currentColor' />
+      <circle
+        cx='2.71'
+        cy='2.71'
+        r='2.71'
+        transform='matrix(1 0 0 -1 2.51 21.06)'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.09 18.64h9.37a2.68 2.68 0 0 0 .5-5.31L5.88 11.02a2.7 2.7 0 0 1 .51-5.37h9.58'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

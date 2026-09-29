@@ -39,18 +39,20 @@ export const IconFileJpg: Icon = ({
         d='M13.21 2.36v2.42c0 1.88 0 2.83.58 3.41.59.6 1.53.6 3.42.6h2.43'
         stroke='currentColor'
       />
-      <path d='M9.24 15.85v6.42' stroke='currentColor' />
+      <path d='M9.88 15.85v6.42' stroke='currentColor' />
       <path
-        d='M9.26 15.85h2.29c.96 0 1.74.82 1.74 1.84 0 1.01-.78 1.83-1.74 1.83H9.26'
+        d='M9.9 15.85h2.3c.95 0 1.73.82 1.73 1.84 0 1.01-.78 1.83-1.74 1.83H9.9'
         stroke='currentColor'
       />
       <path
-        d='M5.98 15.9v3.43c0 2.26-1.07 2.94-2.4 2.94S1.81 21.2 1.81 21.2'
+        d='M6.62 15.9v3.43c0 2.26-1.07 2.94-2.4 2.94S2.46 21.2 2.46 21.2'
         stroke='currentColor'
       />
-      <path d='M22.19 19.05a3.27 3.27 0 1 1-1.79-2.92' stroke='currentColor' />
-      <path d='M19.34 19.05h2.85' stroke='currentColor' />
-      <path d='M2.32 15.85h3.66' stroke='currentColor' />
+      <path d='M2.96 15.85h3.66' stroke='currentColor' />
+      <path
+        d='M21.02 16.16a3.26 3.26 0 1 0-.32 5.95c.33-.13.49-.2.67-.45.17-.26.17-.5.17-1.01v-1.37h-1.73'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

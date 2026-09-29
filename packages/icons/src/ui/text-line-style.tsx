@@ -26,12 +26,12 @@ export const IconTextLineStyle: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M6.42 6H2.59' stroke='currentColor' />
+      <path d='M6.42 18H2.59' stroke='currentColor' />
       <path d='M10.08 12h-7.5' stroke='currentColor' />
-      <path d='M21.32 6H17.5' stroke='currentColor' />
+      <path d='M21.32 18H17.5' stroke='currentColor' />
       <path d='M21.32 12h-7.4' stroke='currentColor' />
-      <path d='M13.92 6h-3.84' stroke='currentColor' />
-      <path d='M21.32 18H2.6' stroke='currentColor' />
+      <path d='M13.92 18h-3.84' stroke='currentColor' />
+      <path d='M21.32 6H2.6' stroke='currentColor' />
     </svg>
   )
 }

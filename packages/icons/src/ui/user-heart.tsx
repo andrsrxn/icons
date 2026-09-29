@@ -40,7 +40,7 @@ export const IconUserHeart: Icon = ({
         d='M18.38 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c2.36 0 4.49 1 6 2.62-1.82 2.88.2 3.93 2.3 5.84'
         fill='currentColor'
       />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='M15.47 7.87a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
       <path d='M1.78 21.56a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>
   )

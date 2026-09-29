@@ -36,7 +36,7 @@ export const IconCreditCardMinus: Icon = ({
         stroke='currentColor'
       />
       <path d='M1.66 9.38H22' stroke='currentColor' />
-      <path d='M16.85 16.62h5.64' stroke='currentColor' />
+      <path d='M16.85 16.94h5.64' stroke='currentColor' />
       <path d='M4.97 12.84H10' stroke='currentColor' />
     </svg>
   )

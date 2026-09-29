@@ -34,22 +34,10 @@ export const IconRectangleDashed: Icon = ({
         transform='matrix(0 -1 -1 0 22.2 19.22)'
         fill='currentColor'
       />
-      <path
-        d='M4.47 4.02c.4 0 .74.34.74.76s-.33.76-.74.76zM2.5 7.5c0 .42-.33.76-.74.76a.75.75 0 0 1-.74-.76zm1.97-2.72v.76H4.4V4.02h.06zm-.06 0v.76c-1.05 0-1.9.88-1.9 1.96h-1.5A3.43 3.43 0 0 1 4.4 4.02z'
-        fill='currentColor'
-      />
-      <path
-        d='M19.4 4.02c-.4 0-.74.34-.74.76s.34.76.74.76zm1.97 3.48c0 .42.34.76.74.76.41 0 .74-.34.74-.76zM19.4 4.78v.76h.07V4.02h-.07zm.07 0v.76c1.05 0 1.9.88 1.9 1.96h1.48a3.44 3.44 0 0 0-3.38-3.48z'
-        fill='currentColor'
-      />
-      <path
-        d='M4.43 19.98c.41 0 .74-.34.74-.76a.75.75 0 0 0-.74-.76zM2.5 16.54a.75.75 0 0 0-.74-.76c-.4 0-.73.34-.73.76zm1.93 2.68v-.76h-.06v1.52h.06zm-.06 0v-.76a1.9 1.9 0 0 1-1.87-1.92H1.03a3.4 3.4 0 0 0 3.34 3.44z'
-        fill='currentColor'
-      />
-      <path
-        d='M19.58 19.98a.75.75 0 0 1-.74-.76c0-.42.33-.76.74-.76zm1.92-3.43c0-.42.33-.76.74-.76s.73.34.73.76zm-1.92 2.67v-.76h.06v1.52h-.06zm.06 0v-.76a1.9 1.9 0 0 0 1.86-1.91h1.47c0 1.9-1.49 3.43-3.33 3.43z'
-        fill='currentColor'
-      />
+      <path d='M4.47 4.78H4.4A2.7 2.7 0 0 0 1.76 7.5' stroke='currentColor' />
+      <path d='M19.4 4.78h.07A2.7 2.7 0 0 1 22.1 7.5' stroke='currentColor' />
+      <path d='M4.43 19.22h-.06a2.65 2.65 0 0 1-2.6-2.68' stroke='currentColor' />
+      <path d='M19.58 19.22h.06c1.43 0 2.6-1.2 2.6-2.67' stroke='currentColor' />
       <path d='M1.8 10.7v2.65' stroke='currentColor' />
       <path d='M22.2 10.7v2.65' stroke='currentColor' />
       <path d='M7.7 19.22h2.6' stroke='currentColor' />

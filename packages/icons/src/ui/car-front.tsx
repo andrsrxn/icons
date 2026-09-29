@@ -36,14 +36,14 @@ export const IconCarFront: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='m5.06 9.66.69-2.31c.61-2.07.92-3.1 1.72-3.7.8-.59 1.87-.59 4.03-.59h1.02c2.15 0 3.22 0 4.02.6.8.58 1.1 1.61 1.73 3.67l.7 2.33'
+        d='m5.06 9.66.22-1.5c.37-2.43.55-3.65 1.4-4.37s2.07-.73 4.53-.73h1.65c2.55 0 3.83 0 4.68.76s1 2.03 1.28 4.56l.15 1.28'
         stroke='currentColor'
       />
       <path d='M4.8 18.24v.44a2.26 2.26 0 0 0 4.52 0v-.44' stroke='currentColor' />
       <path d='M14.85 18.24v.44a2.26 2.26 0 0 0 4.51 0v-.44' stroke='currentColor' />
       <path d='m19.5 9.66 2.16-2.15' stroke='currentColor' />
-      <path d='M15.77 14.88h2.67' stroke='currentColor' />
-      <path d='M5.56 14.88h2.7' stroke='currentColor' />
+      <path d='M15.77 14.88h2.16' stroke='currentColor' />
+      <path d='M5.98 14.88h2.27' stroke='currentColor' />
       <path d='M5 9.66 2.83 7.5' stroke='currentColor' />
     </svg>
   )

@@ -35,9 +35,9 @@ export const IconFolderWarning: Icon = ({
         d='M22.24 14.2c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.76c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V6.5a2.56 2.56 0 0 1 2.56-2.56H6.5c1.04 0 1.55 0 2.03.16l.23.1c.46.2.84.55 1.6 1.25s1.14 1.06 1.6 1.26l.23.1c.47.16 1 .16 2.03.16h2.01c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12z'
         stroke='currentColor'
       />
-      <path d='M12 13.85v-3.9' stroke='currentColor' />
+      <path d='M12 13.45V10.2' stroke='currentColor' />
       <path
-        d='M12.42 17.08a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0'
+        d='M12.42 16.68a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0'
         fill='currentColor'
         stroke='currentColor'
       />

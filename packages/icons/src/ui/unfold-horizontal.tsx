@@ -36,10 +36,7 @@ export const IconUnfoldHorizontal: Icon = ({
         d='m4.2 15.2-.38-.37c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l.38-.38'
         stroke='currentColor'
       />
-      <path d='M12 4.36V1.6' stroke='currentColor' />
-      <path d='M12 10.32V7.56' stroke='currentColor' />
-      <path d='M12 16.33v-2.76' stroke='currentColor' />
-      <path d='M12 22.26V19.5' stroke='currentColor' />
+      <path d='M12 22.26V1.6' stroke='currentColor' />
     </svg>
   )
 }
