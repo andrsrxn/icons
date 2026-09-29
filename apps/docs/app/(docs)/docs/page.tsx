@@ -659,6 +659,36 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>seek-backward-five-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-forward-five-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-backward-fifteen-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-forward-fifteen-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-backward-thirty-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-forward-thirty-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>list-todo-rtl</code>
             </p>
           </li>

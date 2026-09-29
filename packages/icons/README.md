@@ -139,6 +139,12 @@ These icons are exclusive for RTL, as they cannot be just flipped, but adapted:
 - `list-ordered-rtl`
 - `seek-backward-rtl`
 - `seek-forward-rtl`
+- `seek-backward-five-rtl`
+- `seek-forward-five-rtl`
+- `seek-backward-fifteen-rtl`
+- `seek-forward-fifteen-rtl`
+- `seek-backward-thirty-rtl`
+- `seek-forward-thirty-rtl`
 - `list-todo-rtl`
 
 ## Accessibility
