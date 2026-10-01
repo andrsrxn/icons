@@ -12,5 +12,6 @@
     "flow",
     "formatting",
     "return"
-  ]
+  ],
+  "rtl": true
 }

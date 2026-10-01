@@ -11,5 +11,6 @@
     "spacing",
     "hierarchy",
     "sublist"
-  ]
+  ],
+  "rtl": true
 }

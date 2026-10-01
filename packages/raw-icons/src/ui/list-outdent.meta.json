@@ -11,5 +11,6 @@
     "spacing",
     "hierarchy",
     "parent"
-  ]
+  ],
+  "rtl": true
 }

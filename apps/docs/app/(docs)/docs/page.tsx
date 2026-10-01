@@ -459,7 +459,7 @@ export function App() {
           </li>
           <li>
             <p>
-              <code>text-firstline-start</code>
+              <code>text-firstline-end</code>
             </p>
           </li>
           <li>
@@ -504,6 +504,26 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>panels-end-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panels-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panels-start-filled</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>panels-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>slides-start</code>
             </p>
           </li>
@@ -512,6 +532,11 @@ export function App() {
               <code>slides-end</code>
             </p>
           </li>
+        </ul>
+        <h3 className='mt-3' id='opt-out-icons'>
+          Opt-out icons
+        </h3>
+        <ul className='grid mb-3 grid-cols-2 lg:grid-cols-3'>
           <li>
             <p>
               <code>list-asterisk</code>
@@ -522,14 +547,24 @@ export function App() {
               <code>list-unordered</code>
             </p>
           </li>
-        </ul>
-        <h3 className='mt-3' id='opt-out-icons'>
-          Opt-out icons
-        </h3>
-        <ul className='grid mb-3 grid-cols-2 lg:grid-cols-3'>
           <li>
             <p>
               <code>logs</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>app-window</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>notes</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>article</code>
             </p>
           </li>
           <li>
@@ -564,21 +599,6 @@ export function App() {
           </li>
           <li>
             <p>
-              <code>app-window</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>notes</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>article</code>
-            </p>
-          </li>
-          <li>
-            <p>
               <code>receipt</code>
             </p>
           </li>
@@ -590,6 +610,16 @@ export function App() {
           <li>
             <p>
               <code>text-outdent</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-outdent</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-indent</code>
             </p>
           </li>
           <li>
@@ -629,16 +659,6 @@ export function App() {
           </li>
           <li>
             <p>
-              <code>redo</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>undo</code>
-            </p>
-          </li>
-          <li>
-            <p>
               <code>chevron-first</code>
             </p>
           </li>
@@ -649,12 +669,32 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>skip-forward</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>step-backward</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>step-forward</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>chevron-last</code>
             </p>
           </li>
           <li>
             <p>
-              <code>skip-forward</code>
+              <code>redo</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>undo</code>
             </p>
           </li>
         </ul>

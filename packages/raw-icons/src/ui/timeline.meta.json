@@ -12,5 +12,6 @@
     "sequence",
     "progress",
     "history"
-  ]
+  ],
+  "rtl": true
 }
