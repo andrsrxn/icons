@@ -7,5 +7,6 @@
     "swipe",
     "gesture",
     "direction"
-  ]
+  ],
+  "rtl": true
 }

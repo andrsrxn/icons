@@ -7,6 +7,8 @@
     "pointer",
     "height",
     "resize",
-    "stretch"
+    "stretch",
+    "reorder",
+    "sort"
   ]
 }

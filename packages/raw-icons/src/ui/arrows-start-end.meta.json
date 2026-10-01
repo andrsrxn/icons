@@ -8,7 +8,8 @@
     "width",
     "resize",
     "stretch",
-    "range"
+    "range",
+    "change"
   ],
   "rtl": true
 }
