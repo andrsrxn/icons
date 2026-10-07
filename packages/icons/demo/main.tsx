@@ -10,6 +10,7 @@ import * as icons from '../src/ui/index'
 // Helper: convert PascalCase export name to kebab-case filename (or match your naming convention)
 const getFileName = (name: string) =>
   name
+    // biome-ignore lint/performance/useTopLevelRegex: unnecessary
     .replace(/^Icon(Flag)?/, '')
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
     .toLowerCase()
