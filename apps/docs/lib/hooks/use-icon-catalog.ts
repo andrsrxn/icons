@@ -3,7 +3,7 @@
 
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
-import { parseAsInteger, useQueryState } from 'nuqs'
+import { debounce, parseAsInteger, useQueryState } from 'nuqs'
 import { useCallback, useDeferredValue, useMemo } from 'react'
 import { ICON_PAGE_SIZE } from '@/lib/constants/icons'
 import { getPaginationRange, isUIIcon } from '@/lib/utils/icons'
@@ -14,11 +14,19 @@ const catalog = rawCatalog as IconCatalog
 
 const UI_ICONS = catalog.filter(isUIIcon)
 const FLAGS_ICONS = catalog.filter(icon => !isUIIcon(icon))
+
 const ICONS_BY_GROUP: Record<IconCatalogGroup, IconCatalogEntry[]> = {
   ui: UI_ICONS,
   flags: FLAGS_ICONS,
 }
-const ICON_MAP = new Map<string, IconCatalogEntry>(catalog.map(icon => [icon.name, icon]))
+
+const UI_ICON_MAP = new Map<string, IconCatalogEntry>(UI_ICONS.map(icon => [icon.name, icon]))
+const FLAGS_ICON_MAP = new Map<string, IconCatalogEntry>(FLAGS_ICONS.map(icon => [icon.name, icon]))
+
+const ICON_MAPS_BY_GROUP: Record<IconCatalogGroup, Map<string, IconCatalogEntry>> = {
+  ui: UI_ICON_MAP,
+  flags: FLAGS_ICON_MAP,
+}
 
 /**
  * Normalizes a search term so that spaces and dashes are interchangeable.
@@ -120,7 +128,9 @@ export const useIconCatalog = () => {
     defaultValue: 'ui',
     parse: (value: string) => (value === 'ui' || value === 'flags' ? value : 'ui'),
   })
-  const [query, setQueryState] = useQueryState('q')
+  const [query, setQueryState] = useQueryState('q', {
+    limitUrlUpdates: debounce(300),
+  })
 
   // useDeferredValue lets the input update immediately while the (more expensive) filtering trails slightly behind.
   const deferredQuery = useDeferredValue(query)
@@ -192,6 +202,9 @@ export const useIconCatalog = () => {
   }
 }
 
-export const useIcon = (iconName: string): IconCatalogEntry | undefined => {
-  return ICON_MAP.get(iconName)
+export const useIcon = (
+  iconName: string,
+  group: IconCatalogGroup
+): IconCatalogEntry | undefined => {
+  return ICON_MAPS_BY_GROUP[group]?.get(iconName)
 }
