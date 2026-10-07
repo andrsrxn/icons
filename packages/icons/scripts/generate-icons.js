@@ -20,6 +20,7 @@ import { createRequire } from 'node:module'
 import path from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import prettier from 'prettier'
 
 // Config
 
@@ -174,7 +175,7 @@ export const Icon${componentName}: Icon = ({
 `
 }
 
-function main() {
+async function main() {
   if (!fs.existsSync(ICONS_DIR)) {
     console.error(`Directory not found: ${ICONS_DIR}`)
     process.exit(1)
@@ -184,32 +185,47 @@ function main() {
     fs.mkdirSync(ICONS_OUT, { recursive: true })
   }
 
+  const forceAll = process.argv.includes('--all') || process.argv.includes('--force')
   const files = fs.readdirSync(ICONS_DIR)
   const svgFiles = files.filter(file => file.endsWith('.svg'))
 
-  let processedCount = 0
+  const prettierConfig = await prettier.resolveConfig(ICONS_OUT)
 
-  svgFiles.forEach(file => {
+  let generatedCount = 0
+  let skippedCount = 0
+
+  for (const file of svgFiles) {
+    const outputFilePath = path.join(ICONS_OUT, file.replace('.svg', '.tsx'))
+
+    if (!forceAll && fs.existsSync(outputFilePath)) {
+      skippedCount++
+      continue
+    }
+
     const filePath = path.join(ICONS_DIR, file)
     const svgContent = fs.readFileSync(filePath, 'utf-8')
 
     const componentContent = generateComponent(file, svgContent)
 
     if (componentContent) {
-      const outputFilePath = path.join(ICONS_OUT, file.replace('.svg', '.tsx'))
+      const formattedContent = await prettier.format(componentContent, {
+        ...prettierConfig,
+        filepath: outputFilePath,
+      })
 
-      fs.writeFileSync(outputFilePath, componentContent)
-      processedCount++
+      fs.writeFileSync(outputFilePath, formattedContent)
+      generatedCount++
 
       console.log(` Generated: ${file.replace('.svg', '.tsx')}`)
     } else {
       console.warn(` No SVG found in ${file}`)
     }
-  })
+  }
 
   console.log('\n Summary:')
   console.log(`   Files scanned:    ${svgFiles.length}`)
-  console.log(`   Files generated:  ${processedCount}`)
+  console.log(`   Files skipped:    ${skippedCount}`)
+  console.log(`   Files generated:  ${generatedCount}`)
 }
 
 // Testing purposes
