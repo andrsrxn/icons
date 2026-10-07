@@ -34,7 +34,11 @@ export function generateExportLines(files) {
       // 1. Filter for .tsx files and exclude the barrel file itself
       .filter(file => file.endsWith('.tsx') && file !== 'index.tsx')
       // 2. Sort alphabetically for a deterministic output
-      .sort()
+      .sort((a, b) => {
+        const nameA = path.basename(a, '.tsx')
+        const nameB = path.basename(b, '.tsx')
+        return nameA.localeCompare(nameB)
+      })
       // 3. Map to export statements
       .map(file => {
         const basename = path.basename(file, '.tsx')
