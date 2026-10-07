@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconSpatula: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-spatula'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m9.68 8.06 6.38-6.34a1 1 0 0 1 1.4 0l5.62 5.6a1 1 0 0 1-.01 1.43l-6.51 6.33a1 1 0 0 1-.82.28l-2.5-.3a1 1 0 0 0-.81.28l-7.17 7a1 1 0 0 1-1.02.23l-.97-.33a1 1 0 0 1-.63-.65l-.28-.9a1 1 0 0 1 .23-.97l7.05-7.46a1 1 0 0 0 .26-.89l-.5-2.4a1 1 0 0 1 .28-.91'
+        fill='currentColor'
+      />
+      <path d='M15 2.55a2.5 2.5 0 0 1 3.5.01l3.91 3.9c.88.88.88 2.3 0 3.18' stroke='currentColor' />
+      <path
+        d='m15.38 2.2-5.1 5.1c-.25.25-.37.37-.47.5a2 2 0 0 0-.32 1.65c.04.16.11.32.25.65s.21.5.25.65a2 2 0 0 1-.31 1.64c-.1.14-.23.26-.48.51l-6.5 6.52a1.97 1.97 0 1 0 2.77 2.78l6.55-6.55c.23-.23.34-.34.47-.43a2 2 0 0 1 1.66-.33c.15.03.3.1.6.22.3.13.46.19.6.22a2 2 0 0 0 1.67-.33c.12-.09.24-.2.47-.43l5.13-5.13'
+        stroke='currentColor'
+      />
+      <path d='m13.86 8.74 2.93-2.93' stroke='currentColor' />
+      <path d='m16.18 10.83 2.7-2.7' stroke='currentColor' />
+    </svg>
+  )
+}

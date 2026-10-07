@@ -1,0 +1,42 @@
+import type { Icon } from './types'
+
+export const IconUserFemalePlus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-user-female-plus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M6.13 7.46c.01 1.41-.6 3.25-1.19 4.64-.3.7.2 1.5.96 1.5h2.8a1 1 0 0 1 1 1v.72c0 .47-.32.88-.77 1.01-1.1.35-3.13 1.11-4.04 2.35-.46.62-.8 1.6-1.01 2.36-.17.6.3 1.17.92 1.17h14.42a.93.93 0 0 0 .92-1.16 8 8 0 0 0-1-2.37c-.92-1.28-3.03-2.03-4.18-2.36a1.1 1.1 0 0 1-.79-1.02v-.7a1 1 0 0 1 1-1h2.9c.77 0 1.27-.82.98-1.52a14 14 0 0 1-1.08-3.8c-.22-2.08.51-4.52-1.4-5.1-1.18-.36-2.07-.34-2.9.1a.6.6 0 0 1-.76-.18c-.44-.6-1.21-1.3-2.98-1.3-2.81 0-3.81 3.13-3.8 5.66'
+        fill='currentColor'
+      />
+      <path
+        d='m15.32 16.5-.11-.04c-.35-.13-.52-.2-.62-.27a1 1 0 0 1-.39-.56c-.03-.13-.03-.29-.03-.6 0-.4 0-.6.05-.75a1 1 0 0 1 .63-.62c.15-.06.35-.06.74-.06h.8c1.46 0 2.2 0 2.5-.4s.05-1.18-.43-2.7q-.36-1.09-.5-2.23c-.2-2.07.52-4.51-1.4-5.09a4 4 0 0 0-2.4-.11c-.51.16-.77.24-.9.2-.14-.03-.33-.21-.7-.58-.48-.48-1.26-.9-2.63-.9-2.81 0-3.81 3.14-3.8 5.67 0 .93-.25 2.04-.6 3.09-.5 1.48-.74 2.23-.44 2.64s1.02.41 2.47.41h.74c.37 0 .56 0 .7.05q.48.17.65.65c.05.15.05.33.05.7 0 .32 0 .48-.03.6a1 1 0 0 1-.43.6q-.13.08-.61.23c-1.15.38-2.9 1.12-3.74 2.25a6 6 0 0 0-.64 1.22c-.37.95-.56 1.43-.26 1.87s.87.44 2 .44h8.74'
+        stroke='currentColor'
+      />
+      <path d='M19.53 16.9v5.52' stroke='currentColor' />
+      <path d='M16.77 19.66h5.52' stroke='currentColor' />
+    </svg>
+  )
+}

@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconQuill: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-quill'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M20.22 6.62c.13-.12.19-.18.24-.26q.07-.09.16-.31l.38-.82c.61-1.33.92-1.99.6-2.46-.3-.46-1.04-.43-2.5-.37l-5.48.23a2 2 0 0 0-.65.07 2 2 0 0 0-.54.38L7.4 7.25a2 2 0 0 0-.41.4 2 2 0 0 0-.21.53l-1.76 5.45c-.1.3-.15.45-.15.61s.05.31.15.62l.43 1.33c.26.8.4 1.2.72 1.4.33.2.74.11 1.57-.05l6.65-1.3c.23-.05.35-.08.46-.13.1-.05.2-.12.4-.27l4.45-3.52c.5-.4.75-.6.85-.82a1 1 0 0 0-.05-.91c-.12-.21-.39-.38-.93-.72-.49-.3-.73-.46-.85-.65a1 1 0 0 1-.1-.86c.08-.22.28-.42.69-.83z'
+        fill='currentColor'
+      />
+      <path
+        d='M19.94 12.35c.64-.63.96-.94.92-1.4 0-.1-.04-.24-.08-.34-.2-.42-.66-.56-1.6-.83-.93-.27-1.4-.4-1.49-.63l-.03-.18c0-.24.4-.57 1.22-1.2a10 10 0 0 0 1.89-1.93c.58-.8.99-1.79 1.23-2.5.14-.4.21-.6.1-.8-.12-.2-.33-.23-.74-.3-2.16-.42-7.7-.94-12.1 3.17-5.6 5.22-3.9 12.13-3.9 12.13s3.84.63 9.24-1.63a17 17 0 0 0 5.34-3.56'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.06 22.36s1.37-2.46 4.35-6.24c2.73-3.47 5.82-5.46 5.82-5.46'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconSevenSquare: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-seven-square'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='19.17'
+        height='19.17'
+        rx='3'
+        transform='scale(1 -1)rotate(90 21.58 0)'
+        fill='currentColor'
+      />
+      <rect
+        width='19.17'
+        height='19.17'
+        rx='3'
+        transform='scale(1 -1)rotate(90 21.58 0)'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.88 6.96h4.71c.7 0 1.04 0 1.18.23.15.22.02.54-.26 1.17l-3.77 8.68'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

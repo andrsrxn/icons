@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconCurrencyExchange: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-currency-exchange'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M1.77 12c0 5.31 4.92 9.61 10.23 9.61S22.1 18.5 22.1 12c0-5.31-4.79-9.61-10.1-9.61S1.47 6.05 1.77 12'
+        fill='currentColor'
+      />
+      <path
+        d='m22.64 5.96-.08.5c-.22 1.4-.33 2.1-.83 2.47s-1.2.26-2.6.04l-.51-.08'
+        stroke='currentColor'
+      />
+      <path
+        d='m1.53 18.22.06-.61c.12-1.41.18-2.12.66-2.52s1.18-.33 2.6-.2l.61.05'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.95 9.11c-.26-.85-1.5-1.51-2.95-1.51s-3.03.57-3.03 2.3c0 3.37 5.8.74 6.07 4.06.12 1.59-1.56 2.44-3.04 2.44s-2.56-.66-3.03-1.54'
+        stroke='currentColor'
+      />
+      <path d='M12 7.6V6.52' stroke='currentColor' />
+      <path d='M12 17.48V16.4' stroke='currentColor' />
+      <path
+        d='M21.2 8.27c-2.03-3.68-5.44-5.88-9.65-5.88S3.78 4.52 2.49 7.92'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.86 15.72a11.2 11.2 0 0 0 9.6 5.9c4.22 0 7.5-1.78 9.04-5.53'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

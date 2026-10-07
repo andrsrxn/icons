@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconMessageNotification: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-message-notification'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M12.43 21.86a9.8 9.8 0 0 0 8.9-13.94c-.63.73-1.65 2-4.45.7-.25-.12-.38-.18-.62-.4-.24-.24-.27-.3-.34-.44-.95-1.82.16-4.73.16-4.73a8 8 0 0 0-3.65-.8 9.8 9.8 0 0 0-9.8 9.8q.01 1.24.14 2.03a10 10 0 0 1 .16 1.43c-.02.2-.1.47-.25.99l-.08.24c-.71 2.39-1.07 3.59-.54 4.37a2 2 0 0 0 .36.4c.71.62 1.94.4 4.4-.02a5 5 0 0 1 .73-.1c.15 0 .34.04.72.1.88.15 2.44.37 4.16.37'
+        fill='currentColor'
+      />
+      <path
+        d='M22.23 12.06a9.8 9.8 0 0 1-9.8 9.8c-1.72 0-3.28-.22-4.16-.36a6 6 0 0 0-.8-.1c-.16 0-.32.03-.65.09-2.46.42-3.69.64-4.4.02a2 2 0 0 1-.36-.4c-.53-.78-.17-1.98.54-4.37l.08-.24a6 6 0 0 0 .25-1.04c.01-.2-.05-.6-.16-1.38q-.13-.79-.14-2.02a9.8 9.8 0 0 1 9.8-9.8'
+        stroke='currentColor'
+      />
+      <circle
+        cx='18.76'
+        cy='5.72'
+        r='3.47'
+        transform='rotate(90 18.76 5.72)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconFish: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-fish'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M16.11 7.42s-3.64-3.2-4.88-3.2l-1.21 3.2A122 122 0 0 0 5.6 8.94L2.18 7.42l.62 4.72-.62 4.15 3.42-1.04 4.88 1.53.45 3.05 4.01-1.47.72-1.86c3.9-.66 6.68-2.4 6.68-4.45 0-2.04-2.48-3.9-6.23-4.63'
+        fill='currentColor'
+      />
+      <path
+        d='M15.6 16.69c3.68-.76 5.54-2.4 6.42-3.54.27-.34.4-.51.4-1.2.01-.68-.12-.85-.39-1.2-.89-1.16-2.76-2.84-6.43-3.53'
+        stroke='currentColor'
+      />
+      <path
+        d='M10.48 7.35A9 9 0 0 0 6.08 9c-.14.1-.21.15-.3.18-.28.13-.65.1-.92-.06-.08-.05-.15-.1-.28-.23a12 12 0 0 0-1.54-1.3c-.65-.26-1.25.09-1.36.79-.02.17.12.83.4 2.15q.18.83.2 1.47 0 .84-.28 1.94c-.23 1-.35 1.5-.35 1.6-.02.86.77 1.32 1.5.89.1-.05.44-.37 1.13-1l.36-.33c.41-.3.59-.3 1.04-.09l.62.4c.8.5 2.1 1.06 4.18 1.24'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.6 7.22a5.5 5.5 0 0 0-3.85-2.96c-.51-.12-.77-.18-.96-.01-.2.16-.17.48-.12 1.1.05.6.04 1.32-.15 1.96'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.54 16.78a5.4 5.4 0 0 1-3.79 2.87c-.5.12-.76.18-.96.01s-.16-.48-.12-1.12c.04-.57.03-1.24-.15-1.85'
+        stroke='currentColor'
+      />
+      <path d='M13.11 9.7a3.5 3.5 0 0 0-.77 2.3c0 .94.3 1.78.77 2.3' stroke='currentColor' />
+      <path
+        d='M17.32 11.16a.44.44 0 1 1-.87 0 .44.44 0 0 1 .87 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

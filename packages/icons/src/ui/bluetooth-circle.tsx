@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconBluetoothCircle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-bluetooth-circle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M22.25 12a10.25 10.25 0 1 1-20.5 0 10.25 10.25 0 0 1 20.5 0M11.8 12l5.03 3.72-4.68 2.98zm0 0 5.03-3.72-4.68-2.98z'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
+      <path
+        d='m7.23 15.47 7.75-5.62c.94-.69 1.42-1.03 1.45-1.5v-.14c-.04-.47-.51-.8-1.46-1.48-1.27-.91-1.9-1.36-2.42-1.15l-.15.07c-.47.3-.47 1.08-.47 2.64v7.42c0 1.56 0 2.34.47 2.63l.16.09c.5.2 1.14-.25 2.4-1.16.95-.67 1.43-1.01 1.47-1.47v-.16c-.04-.46-.51-.8-1.45-1.48L7.23 8.57'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

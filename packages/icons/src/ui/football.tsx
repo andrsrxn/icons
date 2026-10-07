@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconFootball: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-football'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M20.18 4.73c1.18 0 2.13.95 2.13 2.13v.18c0 1.08-.87 1.96-1.95 1.96-1.09 0-1.96.88-1.96 1.96v2.08c0 1.08.87 1.96 1.96 1.96s1.95.88 1.95 1.96v.18c0 1.18-.95 2.13-2.13 2.13H3.82a2.14 2.14 0 0 1-2.13-2.13v-.17c0-1.09.88-1.97 1.97-1.97 1.1 0 1.98-.88 1.98-1.97v-2.06C5.64 9.88 4.75 9 3.66 9A1.97 1.97 0 0 1 1.7 7.03v-.17c0-1.18.95-2.13 2.13-2.13zM14 11.95a2 2 0 1 1-4 0 2 2 0 0 1 4 0'
+        fill='currentColor'
+      />
+      <path
+        d='M22.31 10.73v2.54c0 2.83 0 4.25-.88 5.13s-2.29.87-5.12.87H7.7c-2.83 0-4.24 0-5.12-.87-.88-.88-.88-2.3-.88-5.13v-2.54c0-2.83 0-4.25.88-5.13s2.29-.87 5.12-.87h8.62c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13'
+        stroke='currentColor'
+      />
+      <path
+        d='M1.84 8.78h.94c1.14 0 1.7 0 2.14.23a2 2 0 0 1 .86.85C6 10.3 6 10.86 6 12s0 1.7-.22 2.14a2 2 0 0 1-.86.85c-.43.23-1 .23-2.14.23h-.94'
+        stroke='currentColor'
+      />
+      <path
+        d='M22.16 8.78h-.94c-1.14 0-1.7 0-2.14.23a2 2 0 0 0-.86.85c-.22.44-.22 1-.22 2.14s0 1.7.22 2.14a2 2 0 0 0 .86.85c.43.23 1 .23 2.14.23h.94'
+        stroke='currentColor'
+      />
+      <path d='M12 9.95v-5' stroke='currentColor' />
+      <path d='M12 19.27v-5.32' stroke='currentColor' />
+      <circle cx='12' cy='11.95' r='2' stroke='currentColor' />
+    </svg>
+  )
+}

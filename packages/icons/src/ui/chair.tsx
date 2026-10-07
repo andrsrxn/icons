@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconChair: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-chair'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M19.98 14.9c0 .36-.29.65-.65.65H4.67a.65.65 0 0 1-.65-.65 2.9 2.9 0 0 1 2.91-2.91h10.14c1.6 0 2.9 1.3 2.9 2.9'
+        fill='currentColor'
+      />
+      <path
+        d='M19.4 14.29a.9.9 0 0 1-.81 1.26H5.46a.9.9 0 0 1-.8-1.3A4 4 0 0 1 8.27 12h7.5c1.55 0 2.96.9 3.61 2.3'
+        stroke='currentColor'
+      />
+      <path d='M6.28 15.55v6.91' stroke='currentColor' />
+      <path d='M6.28 18.48h11.44' stroke='currentColor' />
+      <path d='M17.72 15.55v6.91' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M16.98 6.62c0-1.85 0-2.77-.4-3.46a3 3 0 0 0-1.12-1.12c-.69-.4-1.61-.4-3.46-.4s-2.77 0-3.46.4a3 3 0 0 0-1.12 1.12c-.4.69-.4 1.61-.4 3.46v5.37h9.96z'
+        fill='currentColor'
+      />
+      <path
+        d='M7.02 11.99V6.62c0-1.85 0-2.77.4-3.46a3 3 0 0 1 1.12-1.12c.69-.4 1.61-.4 3.46-.4s2.77 0 3.46.4a3 3 0 0 1 1.12 1.12c.4.69.4 1.61.4 3.46v5.37'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

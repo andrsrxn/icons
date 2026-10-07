@@ -1,0 +1,121 @@
+import type { Icon } from './types'
+
+export const IconLaurelWreathOne: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-laurel-wreath-one'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <ellipse
+        opacity='.2'
+        cx='7.82'
+        cy='5.37'
+        rx='2.71'
+        ry='1.57'
+        transform='rotate(92.04 7.82 5.37)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='2.71'
+        cy='1.57'
+        rx='2.71'
+        ry='1.57'
+        transform='scale(1 -1)rotate(-87.66 5.8 -8.9)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='7.43'
+        cy='18.51'
+        rx='2.71'
+        ry='1.57'
+        transform='rotate(152.04 7.43 18.5)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='2.71'
+        cy='1.57'
+        rx='2.71'
+        ry='1.57'
+        transform='scale(1 -1)rotate(-27.66 -31.14 -36.7)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='4.47'
+        cy='12.1'
+        rx='2.71'
+        ry='1.57'
+        transform='rotate(-162.96 4.47 12.1)'
+        fill='currentColor'
+      />
+      <ellipse
+        opacity='.2'
+        cx='2.71'
+        cy='1.57'
+        rx='2.71'
+        ry='1.57'
+        transform='scale(1 -1)rotate(17.34 55.92 49.87)'
+        fill='currentColor'
+      />
+      <path
+        d='M8.31 7.9c-.24.27-.36.4-.6.4-.23-.01-.34-.16-.56-.44a3.8 3.8 0 0 1-.9-2.35c.03-.94.6-1.76 1.07-2.28.24-.26.36-.4.6-.39.22.01.33.15.56.44.42.54.93 1.4.9 2.34A3.7 3.7 0 0 1 8.31 7.9'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.67 7.92c.24.26.36.4.6.39s.34-.16.56-.44a3.8 3.8 0 0 0 .89-2.35 3.8 3.8 0 0 0-1.08-2.28c-.25-.26-.37-.4-.6-.38-.23 0-.34.15-.56.43a3.8 3.8 0 0 0-.9 2.35 3.8 3.8 0 0 0 1.09 2.28'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.48 20.2c-.35-.08-.52-.12-.63-.32s-.04-.37.09-.7c.26-.65.75-1.52 1.58-1.96a3.8 3.8 0 0 1 2.5-.22c.36.08.54.12.64.32.11.2.05.37-.09.7A3.8 3.8 0 0 1 8 20c-.83.44-1.83.35-2.5.2'
+        stroke='currentColor'
+      />
+      <path
+        d='M18.56 20.2c.35-.08.53-.12.63-.33.11-.2.04-.37-.1-.7a3.8 3.8 0 0 0-1.58-1.95 3.8 3.8 0 0 0-2.51-.2c-.35.08-.53.12-.64.32s-.04.38.1.7c.26.65.75 1.52 1.6 1.96.83.44 1.82.35 2.5.2'
+        stroke='currentColor'
+      />
+      <path
+        d='M1.9 11.92c-.2-.3-.3-.45-.23-.67s.24-.3.57-.44c.64-.27 1.6-.54 2.5-.26.9.27 1.55 1.04 1.92 1.62.2.3.3.45.23.68-.07.22-.23.29-.56.43-.64.27-1.6.54-2.5.27a3.8 3.8 0 0 1-1.93-1.63'
+        stroke='currentColor'
+      />
+      <path
+        d='M22.1 11.9c.2-.3.3-.45.22-.67s-.23-.3-.56-.43a3.8 3.8 0 0 0-2.5-.26 3.8 3.8 0 0 0-1.92 1.64c-.2.3-.3.45-.22.67s.23.3.56.43c.64.27 1.6.54 2.5.26a3.8 3.8 0 0 0 1.92-1.64'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.65 17.16c-.97-.56-1.96-1.89-2.44-3.97-.47-2.07-.12-3.7.46-4.64'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.39 17.18c.95-.56 1.94-1.9 2.4-3.98.47-2.09.12-3.71-.46-4.65'
+        stroke='currentColor'
+      />
+      <path
+        d='m10.4 11.24.74-.67c.72-.66 1.08-.98 1.38-.85s.3.62.3 1.59v3.1'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

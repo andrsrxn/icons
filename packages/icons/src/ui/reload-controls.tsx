@@ -1,0 +1,67 @@
+import type { Icon } from './types'
+
+export const IconReloadControls: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-reload-controls'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M20.62 7.9c-3.12-4.09-6.2-4.86-8.67-4.86a9.08 9.08 0 1 0 6.36 15.55'
+        stroke='currentColor'
+      />
+      <path
+        d='M21.4 5.19v.6c0 1.42 0 2.13-.43 2.57-.44.44-1.15.44-2.56.44h-.61'
+        stroke='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='10.1'
+        cy='9.75'
+        r='1.63'
+        transform='rotate(90 10.1 9.75)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='1.63'
+        cy='1.63'
+        r='1.63'
+        transform='matrix(0 1 1 0 12 13.73)'
+        fill='currentColor'
+      />
+      <path d='M15.26 9.75h-3.53' stroke='currentColor' />
+      <path d='M7.15 15.35H12' stroke='currentColor' />
+      <path d='M8.47 9.75H7.15' stroke='currentColor' />
+      <path d='M15.26 15.35h1.07' stroke='currentColor' />
+      <circle cx='10.1' cy='9.75' r='1.63' transform='rotate(90 10.1 9.75)' stroke='currentColor' />
+      <circle
+        cx='1.63'
+        cy='1.63'
+        r='1.63'
+        transform='matrix(0 1 1 0 12 13.73)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

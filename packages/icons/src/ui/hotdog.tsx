@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconHotdog: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-hotdog'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M12.74 20.82c-.34.34-.51.5-.68.62a2 2 0 0 1-2.2-.01 5 5 0 0 1-.68-.63c-.34-.34-.5-.51-.62-.69a2 2 0 0 1 .01-2.2c.12-.16.29-.33.63-.67l5.5-5.47 3.82-3.63h.01a2 2 0 0 1 2.08-.42h.02q.4.16.7.46a2.95 2.95 0 0 1-.02 4.18z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M5.36 15.08a1.57 1.57 0 0 1-2.21-2.24l5.31-5.27 3.62-3.47c.33-.33.8-.46 1.26-.36l.06.02q.34.08.58.32c.68.69.68 1.8-.01 2.49z'
+        fill='currentColor'
+      />
+      <path
+        d='M8.09 20.2c-.26.2-.67.5-1.14.81-1.4.97-3.28.78-4.48-.41a2.43 2.43 0 0 1 .33-3.7 61 61 0 0 0 7.41-5.97 61 61 0 0 0 5.93-7.49 2.64 2.64 0 0 1 3.77-.6 3.54 3.54 0 0 1 .8 4.18l-.2.4'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.75 13.35a41 41 0 0 1-4.59 3.8 2.62 2.62 0 0 0-.33 3.95c.88.88 2.28.98 3.26.2a66 66 0 0 0 5.23-4.53 64 64 0 0 0 4.4-5.16c.77-.98.67-2.38-.22-3.27a2.62 2.62 0 0 0-3.95.36 42 42 0 0 1-3.8 4.65'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.87 4.62a2.84 2.84 0 0 0-4.3.44A29 29 0 0 1 7.7 8.63c-.99 1-2.4 2.1-3.67 3a2.85 2.85 0 0 0-.4 4.3'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

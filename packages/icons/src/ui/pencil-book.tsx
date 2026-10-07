@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconPencilBook: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-pencil-book'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M8.53 8.06c0-1.88 0-2.82.58-3.41.59-.59 1.53-.59 3.42-.59h5.74c1.89 0 2.83 0 3.41.59s.59 1.53.59 3.41v4.82c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.41.58H8.53z'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='3.17'
+        height='3.73'
+        rx='1'
+        transform='matrix(0 -1 -1 0 5.47 7.54)'
+        fill='currentColor'
+      />
+      <path
+        d='M8.53 10.06c0-2.82 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88h1.74c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v.82c0 2.83 0 4.25-.88 5.13s-2.3.87-5.12.87H8.53z'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.53 16.88a5 5 0 0 0 .12 1.57 2 2 0 0 0 1.2 1.2c.33.12.74.12 1.56.12h6.77c.83 0 1.24 0 1.57-.12a2 2 0 0 0 1.2-1.2c.12-.33.12-.74.12-1.57'
+        stroke='currentColor'
+      />
+      <path d='M12.36 4.4v5.63' stroke='currentColor' />
+      <path d='M5.41 7.47H1.8' stroke='currentColor' />
+      <path
+        d='M5.03 18.52c.15-.28.22-.42.27-.57l.09-.33c.02-.16.03-.32.03-.63L5.5 5.94c0-.62 0-.93-.1-1.18a1.2 1.2 0 0 0-.59-.58c-.24-.12-.55-.12-1.17-.12s-.93 0-1.17.11a1.2 1.2 0 0 0-.58.59c-.12.24-.12.55-.12 1.16L1.76 17c0 .31 0 .47.02.62l.08.35c.06.15.13.28.28.56.48.91.72 1.37 1.05 1.5q.39.16.77 0c.33-.13.58-.59 1.07-1.5'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

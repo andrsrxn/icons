@@ -1,0 +1,61 @@
+import type { Icon } from './types'
+
+export const IconSoilMoistureThermometer: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-soil-moisture-thermometer'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M13.34 13.5H3.11' stroke='currentColor' />
+      <path d='M13.34 17.21H3.11' stroke='currentColor' />
+      <path d='M13.34 20.92H3.11' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M10.43 3.45a4.8 4.8 0 0 1 2.86-1.12c.51-.04.77-.06 1.1.25.31.3.3.56.29 1.06a4.5 4.5 0 0 1-1.13 2.9c-1.13 1.25-2.64 1.02-3.39.34-.68-.61-1.05-2.26.27-3.43'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M6.16 6.55a4.8 4.8 0 0 0-3.03-.54c-.51.06-.77.1-1.02.46-.26.36-.2.6-.09 1.1A4.5 4.5 0 0 0 3.7 10.2c1.34 1 2.78.48 3.38-.33.55-.73.6-2.42-.92-3.32'
+        fill='currentColor'
+      />
+      <path
+        d='M10.43 3.45a4.8 4.8 0 0 1 2.86-1.12c.51-.04.77-.06 1.1.25.31.3.3.56.29 1.06a4.5 4.5 0 0 1-1.13 2.9c-1.13 1.25-2.64 1.02-3.39.34-.68-.61-1.05-2.26.27-3.43'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.12 6.4a4.8 4.8 0 0 0-3.02-.55c-.51.06-.77.1-1.02.46-.26.36-.2.6-.09 1.1a4.5 4.5 0 0 0 1.67 2.63c1.35 1 2.79.48 3.39-.33.55-.73.6-2.42-.93-3.32'
+        stroke='currentColor'
+      />
+      <path d='M10.36 7.12a9 9 0 0 0-1.65 6.38' stroke='currentColor' />
+      <path d='M8.61 12.93c-.12-1.05-.4-2.2-1.76-2.96' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M18.52 16.84v-6.38a1.24 1.24 0 0 1 2.49 0v6.38s1.08 1.18 1.08 2.19a2.32 2.32 0 1 1-4.65 0c0-1.01 1.08-2.2 1.08-2.2'
+        fill='currentColor'
+      />
+      <path d='M18.42 17.07a2.5 2.5 0 1 0 2.7 0' stroke='currentColor' />
+      <path d='M21.07 17.01v-6.6a1.3 1.3 0 0 0-2.61 0v6.6' stroke='currentColor' />
+    </svg>
+  )
+}

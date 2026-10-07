@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconTrainSpeed: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-train-speed'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M22 12.07c.05-.49.08-.73.03-.91a1 1 0 0 0-.7-.7 3 3 0 0 0-.9.03l-1.1.12c-.7.08-1.05.12-1.4.07s-.67-.16-1.33-.4l-2.37-.87-.55-.21a3 3 0 0 1-1.56-1.79l-.14-.57c-.1-.4-.14-.61-.2-.79A3 3 0 0 0 9.4 4.09c-.19-.02-.4-.03-.82-.04h-.32a3 3 0 0 0-.72.02 1 1 0 0 0-.73.92c0 .15.04.34.14.72l.65 2.45a2.33 2.33 0 0 1-2.25 2.92H1.58v4.76h16.17c1.07 0 1.6 0 2.05-.14a3 3 0 0 0 1.82-1.62c.2-.43.25-.95.38-2.01'
+        fill='currentColor'
+      />
+      <path d='M20.61 20.16H1.77' stroke='currentColor' />
+      <path d='M3.72 18.63v1.53' stroke='currentColor' />
+      <path d='M8.7 18.63v1.53' stroke='currentColor' />
+      <path d='M13.68 18.63v1.53' stroke='currentColor' />
+      <path d='M18.66 18.63v1.53' stroke='currentColor' />
+      <path
+        d='M4.67 3.84h8.68c.8 0 1.2 0 1.58.07q.76.15 1.42.58c.33.21.61.5 1.19 1.05 2.93 2.86 4.4 4.3 4.65 5.49a4 4 0 0 1-1.68 4.13c-1.01.68-3.06.68-7.16.68H1.75'
+        stroke='currentColor'
+      />
+      <path d='M11.38 4.15s-.3 4.57 3.88 6.08c4.19 1.5 6.48-.14 6.48-.14' stroke='currentColor' />
+      <path
+        d='M1.77 10.7h1.88c1.83 0 2.74 0 3.29-.44a2 2 0 0 0 .62-.87c.24-.67-.06-1.53-.66-3.25-.33-.92-.49-1.38-.8-1.7a2 2 0 0 0-.57-.4c-.4-.2-.9-.2-1.88-.2H1.77'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

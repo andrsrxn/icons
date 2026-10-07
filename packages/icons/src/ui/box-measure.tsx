@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconBoxMeasure: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-box-measure'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m18.86 18.51-5.8 3.45a.5.5 0 0 1-.76-.44v-6.56q.01-.29.26-.44l5.81-3.1a.5.5 0 0 1 .74.44v6.22a.5.5 0 0 1-.25.43'
+        fill='currentColor'
+      />
+      <path
+        d='M4.77 16.25v-3.52c0-1.13 0-1.69.26-2.15.27-.47.76-.75 1.74-1.31L10 7.4c.98-.56 1.46-.85 2-.85s1.02.29 2 .85l3.23 1.87c.98.56 1.47.84 1.74 1.3.26.47.26 1.03.26 2.16v3.52c0 1.13 0 1.7-.26 2.16-.27.46-.76.74-1.74 1.3L14 21.59c-.98.57-1.46.85-2 .85s-1.02-.28-2-.85l-3.23-1.86c-.98-.57-1.47-.85-1.74-1.31-.26-.47-.26-1.03-.26-2.16'
+        stroke='currentColor'
+      />
+      <path d='M5.18 11.06 12 14.81' stroke='currentColor' />
+      <path d='M12 14.81v7.6' stroke='currentColor' />
+      <path d='M8.39 12.63v3.54' stroke='currentColor' />
+      <path d='M18.82 11.06 12 14.81' stroke='currentColor' />
+      <path d='m8.39 12.63 7.02-4.17' stroke='currentColor' />
+      <path d='M4.07 3.2h15.86' stroke='currentColor' />
+      <path d='M4.07 5.1V1.4' stroke='currentColor' />
+      <path d='M19.93 5.1V1.4' stroke='currentColor' />
+    </svg>
+  )
+}

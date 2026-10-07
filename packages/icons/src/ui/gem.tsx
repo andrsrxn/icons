@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconGem: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-gem'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m1.62 10.35 4.1-7.2c.14-.24.22-.37.33-.43.12-.07.26-.07.54-.07h2.28c.57 0 .85 0 1 .18.15.19.1.46-.02 1.02l-1.5 7.25-.03.2.04.2 1.23 5.82c.31 1.45.47 2.17.13 2.34-.34.18-.84-.36-1.84-1.45l-6.13-6.7c-.24-.25-.36-.38-.37-.54s.07-.32.24-.62'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m22.4 10.35-4.06-7.2c-.14-.24-.21-.37-.33-.43-.12-.07-.26-.07-.54-.07h-2.23c-.57 0-.85 0-1 .18-.15.19-.1.46.02 1.02l1.47 7.25.03.2-.03.2-1.22 5.8c-.3 1.45-.46 2.18-.12 2.35.34.18.84-.37 1.84-1.47l6.04-6.67c.23-.25.35-.38.37-.54.01-.16-.07-.31-.24-.62'
+        fill='currentColor'
+      />
+      <path
+        d='m3.25 7.14.9-1.53C5 4.16 5.42 3.44 6.12 3.04c.69-.4 1.53-.4 3.2-.4h5.36c1.67 0 2.51 0 3.2.4S19 4.16 19.85 5.61l.9 1.53c1.08 1.85 1.63 2.78 1.52 3.76-.1.99-.84 1.77-2.3 3.35l-3.56 3.86c-2.07 2.24-3.1 3.35-4.41 3.35s-2.34-1.11-4.4-3.35l-3.58-3.86c-1.45-1.58-2.18-2.36-2.29-3.35-.1-.98.44-1.9 1.52-3.76'
+        stroke='currentColor'
+      />
+      <path d='m22.22 10.16-6 1.41h-8.3l-5.94-1.41' stroke='currentColor' />
+      <path d='m10.02 2.65-1.78 8.92 1.78 8.84' stroke='currentColor' />
+      <path d='m13.9 2.65 1.86 8.92-1.86 8.84' stroke='currentColor' />
+    </svg>
+  )
+}

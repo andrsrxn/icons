@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconCoupon: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-coupon'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M1.95 7.08c0-.87 0-1.3.25-1.58l.08-.1c.29-.24.72-.24 1.59-.24h16.28c.77 0 1.15 0 1.42.2a1 1 0 0 1 .2.2c.2.27.2.65.2 1.41 0 .47 0 .7-.1.9l-.1.17c-.12.18-.32.29-.73.52l-.04.02c-.44.25-.66.37-.8.58l-.05.1c-.11.2-.11.46-.11.97v3.59c0 .54 0 .81.12 1.04l.01.02c.13.22.37.36.83.63l.1.06c.37.22.55.33.67.5l.12.2c.08.19.08.4.08.83 0 .72 0 1.08-.18 1.33a1 1 0 0 1-.25.26c-.26.18-.62.18-1.34.18H3.5c-.74 0-1.1 0-1.37-.19a1 1 0 0 1-.23-.23c-.19-.26-.19-.63-.19-1.37v-.79a1 1 0 0 1 1-.94l.12-.01a1 1 0 0 0 .83-.79l.6-2.16.07-.34v-.34l-.12-1.5a2 2 0 0 0-.1-.67 1 1 0 0 0-.4-.47 2 2 0 0 0-.64-.2c-.35-.1-.53-.14-.67-.23a1 1 0 0 1-.4-.52c-.05-.15-.05-.34-.05-.7zM14.7 16.3a1.3 1.3 0 1 0 0-2.58 1.3 1.3 0 0 0 0 2.58M10.56 9A1.28 1.28 0 1 1 8 9a1.28 1.28 0 0 1 2.56 0'
+        fill='currentColor'
+      />
+      <path
+        d='M20.16 5H3.55A2 2 0 0 0 1.7 6.87v.57c0 .75.46 1.43 1.16 1.7s1.16.94 1.16 1.7v2.5c0 .74-.46 1.4-1.16 1.65-.7.26-1.16.92-1.16 1.66v.45A2 2 0 0 0 3.8 19h16.56a2 2 0 0 0 1.93-1.93v-.32c0-.76-.47-1.45-1.18-1.73a1.9 1.9 0 0 1-1.2-1.73v-2.42c0-.79.48-1.5 1.2-1.8a2 2 0 0 0 1.18-1.8v-.38A2 2 0 0 0 20.42 5z'
+        stroke='currentColor'
+      />
+      <path d='m15.93 8.07-7.81 7.81' stroke='currentColor' />
+      <circle cx='14.71' cy='15.02' r='1.41' stroke='currentColor' />
+      <circle cx='9.28' cy='8.99' r='1.4' stroke='currentColor' />
+    </svg>
+  )
+}

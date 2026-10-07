@@ -1,0 +1,75 @@
+import type { Icon } from './types'
+
+export const IconChartCandlestick: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-chart-candlestick'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='5.84'
+        height='4.22'
+        rx='1'
+        transform='matrix(0 -1 -1 0 11.4 13.84)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='9.62'
+        height='4.22'
+        rx='1'
+        transform='matrix(0 -1 -1 0 19.24 15.73)'
+        fill='currentColor'
+      />
+      <path
+        d='M21.43 21.32H10.75c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.67'
+        stroke='currentColor'
+      />
+      <path d='M9.3 13.84v4.18' stroke='currentColor' />
+      <path
+        d='M10.04 3.82a.75.75 0 1 0-1.5 0zM8.54 8a.75.75 0 0 0 1.5 0zm.75-4.18h-.75V8h1.5V3.82z'
+        fill='currentColor'
+      />
+      <path d='M17.13 15.73v2.29' stroke='currentColor' />
+      <path
+        d='M17.88 3.82a.75.75 0 0 0-1.5 0zm-1.5 2.3a.75.75 0 0 0 1.5 0zm.75-2.3h-.75v2.3h1.5v-2.3z'
+        fill='currentColor'
+      />
+      <rect
+        width='5.84'
+        height='4.22'
+        rx='1'
+        transform='matrix(0 -1 -1 0 11.4 13.84)'
+        stroke='currentColor'
+      />
+      <rect
+        width='9.62'
+        height='4.22'
+        rx='1'
+        transform='matrix(0 -1 -1 0 19.24 15.73)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,65 @@
+import type { Icon } from './types'
+
+export const IconDomino: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-domino'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M8.95 22.24c-1.88 0-2.82 0-3.41-.59s-.59-1.53-.59-3.41v-2.4c0-1.9 0-2.84.59-3.42s1.53-.59 3.41-.59h5.84c1.89 0 2.83 0 3.42.59.58.58.58 1.53.58 3.41v.4c0 2.83 0 4.25-.87 5.13-.88.88-2.3.88-5.13.88z'
+        fill='currentColor'
+      />
+      <path
+        d='M4.95 7.78v8.46c0 2.82 0 4.24.88 5.12s2.3.88 5.12.88h1.84c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12V7.78c0-2.83 0-4.24-.87-5.12-.88-.88-2.3-.88-5.13-.88h-1.84c-2.82 0-4.24 0-5.12.88s-.88 2.3-.88 5.12'
+        stroke='currentColor'
+      />
+      <path d='M18.8 12H4.94' stroke='currentColor' />
+      <circle
+        cx='9.17'
+        cy='15.9'
+        r='.62'
+        transform='rotate(90 9.17 15.9)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='12'
+        cy='6.62'
+        r='.62'
+        transform='rotate(90 12 6.62)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='14.83'
+        cy='18.17'
+        r='.62'
+        transform='rotate(90 14.83 18.17)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

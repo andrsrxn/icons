@@ -1,0 +1,40 @@
+import type { Icon } from './types'
+
+export const IconTriangleRight: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-triangle-right'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M22.23 6.63c0-.67 0-1-.17-1.26l-.01-.02c-.19-.25-.5-.37-1.13-.59-.44-.16-.66-.23-.89-.21h-.01c-.23.03-.42.15-.82.4L2.82 15.17c-.45.28-.68.42-.8.64l-.09.19c-.07.23-.03.5.05 1.01.11.66.16.98.36 1.2l.2.16c.24.16.57.17 1.23.17l16.45.13c.95 0 1.42 0 1.72-.29s.3-.76.3-1.71z'
+        fill='currentColor'
+      />
+      <path
+        d='M18.23 18.62h-7.35c-5.7 0-8.55 0-8.96-1.46-.41-1.45 2-2.95 6.85-5.95l7.36-4.55c2.7-1.67 4.05-2.5 5.08-1.94 1.02.58 1.02 2.17 1.02 5.34v4.56c0 1.88 0 2.82-.58 3.41-.59.59-1.53.59-3.42.59'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

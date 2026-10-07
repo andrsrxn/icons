@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconGlassWater: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-glass-water'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m18.48 10.73-2.56.37c-.8.11-1.2.17-1.6.12s-.77-.2-1.53-.51l-1.29-.54c-1.18-.48-1.77-.73-2.4-.71-.61 0-1.2.27-2.36.8l-1.04.47 1.12 7.1c.3 1.86.45 2.8 1 3.44a3 3 0 0 0 .7.61c.73.44 1.68.44 3.57.44 1.9 0 2.85 0 3.57-.44a3 3 0 0 0 .71-.6c.55-.65.7-1.59 1-3.46z'
+        fill='currentColor'
+      />
+      <path
+        d='M18.54 8.31c.33-3.1.5-4.65-.4-5.64-.9-1-2.45-1-5.57-1H11.4c-3.1 0-4.65 0-5.54 1-.9.98-.74 2.53-.42 5.62l.91 8.96c.23 2.26.35 3.38 1.04 4.12a3 3 0 0 0 .38.34c.8.61 1.93.61 4.2.61 2.26 0 3.4 0 4.2-.6a3 3 0 0 0 .37-.34c.7-.74.81-1.86 1.05-4.1z'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.74 10.12c1-.31 1.75-.68 3.57-.68 2.04 0 3.08 1.58 5.1 1.71 1.85.12 2.34-.12 3.85-1.03'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

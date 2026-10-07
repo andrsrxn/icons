@@ -1,0 +1,91 @@
+import type { Icon } from './types'
+
+export const IconDominos: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-dominos'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M8.77 21.64c-1.7.46-2.56.69-3.24.33l-.17-.1c-.65-.41-.88-1.27-1.34-2.97-.45-1.7-.68-2.56-.33-3.24l.1-.17c.42-.65 1.27-.88 2.97-1.34L10 13.3c.99-.27 1.48-.4 1.92-.32a2 2 0 0 1 1.2.69c.27.33.4.83.67 1.82.4 1.49.6 2.23.49 2.88a3 3 0 0 1-1.04 1.8c-.5.42-1.25.62-2.74 1.02z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m13.11 13.27-1.08-4.49L18 10.44c1 .27 1.5.4 1.83.7q.55.46.67 1.17c.08.44-.05.93-.32 1.93l-.26.97c-.16.6-.24.89-.35 1.12a3 3 0 0 1-2.98 1.73c-.26-.02-.56-.1-1.15-.26-.26-.07-.38-.1-.5-.15a2 2 0 0 1-1.14-1.2l-.12-.5z'
+        fill='currentColor'
+      />
+      <path
+        d='m2.42 12.9 1.27 4.76c.52 1.95.79 2.93 1.43 3.51a3 3 0 0 0 1.13.66c.83.26 1.8 0 3.76-.52s2.92-.78 3.5-1.42a3 3 0 0 0 .67-1.14c.26-.83 0-1.8-.53-3.76l-1.27-4.75c-.52-1.95-.79-2.93-1.42-3.52a3 3 0 0 0-1.14-.65c-.83-.26-1.8 0-3.76.52-1.94.52-2.92.78-3.5 1.42a3 3 0 0 0-.67 1.14c-.26.83 0 1.8.53 3.75'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.4 7.21.22-.87c.53-1.95.79-2.92 1.42-3.51a3 3 0 0 1 1.15-.66c.83-.26 1.8 0 3.75.52s2.92.78 3.5 1.42a3 3 0 0 1 .67 1.14c.26.83 0 1.8-.53 3.75l-1.36 5.09c-.44 1.66-.67 2.5-1.17 3.04a3 3 0 0 1-1.52.88c-.72.17-1.56-.05-3.22-.48'
+        stroke='currentColor'
+      />
+      <path d='m13.02 12.62-9.96 2.66' stroke='currentColor' />
+      <path d='M20.94 11.39 12.1 8.96' stroke='currentColor' />
+      <circle
+        cx='6.84'
+        cy='17.27'
+        r='.46'
+        transform='rotate(75 6.84 17.27)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='7.09'
+        cy='10.05'
+        r='.46'
+        transform='rotate(75 7.09 10.05)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='17.09'
+        cy='6.2'
+        r='.46'
+        transform='rotate(105 17.1 6.2)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='11.35'
+        cy='17.81'
+        r='.46'
+        transform='rotate(75 11.35 17.81)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <circle
+        cx='16.53'
+        cy='14.72'
+        r='.46'
+        transform='rotate(105 16.53 14.72)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

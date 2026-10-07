@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconPiggyBankCoin: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-piggy-bank-coin'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M8.12 4.73A2.46 2.46 0 0 1 5.65 7.2a2.46 2.46 0 1 1 2.47-2.47'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M1.32 12.06v1.81a3.7 3.7 0 0 0 3.71 3.71v1.93c0 .53.44.97.97.97h.87c.8 0 1.45-.65 1.45-1.45s.64-1.44 1.44-1.44h1.57c.8 0 1.44.64 1.44 1.44s.65 1.45 1.45 1.45h.44c.8 0 1.44-.65 1.44-1.45s.67-1.4 1.41-1.7a4.5 4.5 0 0 0 2.38-2.7c.18-.5.63-.9 1.17-.9.6 0 1.1-.49 1.1-1.1V10.9c0-.56-.46-1.02-1.02-1.02s-1-.47-1.17-1c-.59-1.75-2.7-2.3-3.85-2.33l-.02-.02v-.99c0-1.86-1.7-3.02-2.64-1.4-.78 1.35-2.06 2.4-3.63 2.4h-3a5.5 5.5 0 0 0-5.5 5.52'
+        fill='currentColor'
+      />
+      <path
+        d='M2.06 9.42s-.46.88-.46 2.15c0 .6.02 1.31.06 2a4.4 4.4 0 0 0 3.37 4.02v2.01c0 .49.4.88.88.88h1.46l.3-.01a1 1 0 0 0 .86-.86v-.58c0-.41 0-.62.07-.78a1 1 0 0 1 .6-.6c.16-.06.37-.06.78-.06h1.1c.42 0 .63 0 .8.06.27.1.5.32.6.6.05.16.05.37.05.78s0 .62.06.79q.16.44.6.6c.17.06.37.06.79.06h.68c.41 0 .62 0 .78-.06a1 1 0 0 0 .6-.6c.06-.17.06-.37.06-.79 0-.4 0-.6.04-.72.07-.29.12-.36.36-.54.1-.08.4-.2 1.01-.45 1.26-.51 2-1.67 2.36-2.66.2-.52.66-.93 1.22-.93.63 0 1.13-.5 1.13-1.13v-1.67c0-.58-.47-1.05-1.05-1.05-.57 0-1.02-.48-1.21-1.03-.6-1.73-2.7-2.26-3.84-2.3l-.02-.02v-.99c0-1.86-1.65-3.07-2.6-1.47q-.24.4-.43.84c-.41.92-1.28 1.64-2.3 1.64'
+        stroke='currentColor'
+      />
+      <circle
+        cx='15.86'
+        cy='10.38'
+        r='.53'
+        transform='rotate(90 15.86 10.38)'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M5.71 10.19c.56-.18.88-.25 1.46-.34 1.09-.16 2.81 0 2.81 0' stroke='currentColor' />
+    </svg>
+  )
+}

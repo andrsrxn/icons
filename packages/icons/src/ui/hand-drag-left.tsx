@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconHandDragLeft: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-hand-drag-left'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M6.66 6.34a5.01 5.01 0 0 1 10 .5v.1' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='m9.78 5.55 1.83-.61 1.41.61.75 5.44 2.83-.58 1.4 1.93h2.91l.42 8.52-1.28 1.77H9.98L6.73 18.5l-2.09-4.86 2.23-1.74 2.58 1.45z'
+        fill='currentColor'
+      />
+      <path d='M17.47 15.3v-3.05a1.98 1.98 0 1 0-3.97 0v3.05' stroke='currentColor' />
+      <path
+        d='M17.47 14.96v-1.02a1.98 1.98 0 0 1 3.97 0v3.99c0 2.38-1.4 4.47-1.4 4.47'
+        stroke='currentColor'
+      />
+      <path d='M13.5 13.95V6.83a1.98 1.98 0 1 0-3.97 0v7.72' stroke='currentColor' />
+      <path
+        d='M9.53 14.66 8.56 13a2.14 2.14 0 0 0-2.92-.78 2.06 2.06 0 0 0-.89 2.6 31 31 0 0 0 2.07 4.08 41 41 0 0 0 2.7 3.47'
+        stroke='currentColor'
+      />
+      <path d='M2.6 6.36h4.02' stroke='currentColor' />
+      <path d='m4 8.6-.12-.12c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.12L4 4.1' stroke='currentColor' />
+    </svg>
+  )
+}

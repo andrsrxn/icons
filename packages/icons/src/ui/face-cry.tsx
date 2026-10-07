@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconFaceCry: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-face-cry'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M9.3 21.88a10 10 0 0 0 5.14.06l3.65-1.71a10 10 0 0 0 2.9-3.31l-2.2-1.52.55-3.4 2.73 1.83q.17-.9.17-1.83a10.24 10.24 0 1 0-20.31 1.83l2.62-1.62.98 3.2-2.6 1.33a10 10 0 0 0 3.05 3.54zm-1.24-5.71 1.62 1.1h4.62l1.66-1.1-3.82-2.34z'
+        fill='currentColor'
+      />
+      <path d='M21.93 9.49a10.24 10.24 0 0 0-19.86 0' stroke='currentColor' />
+      <path d='m19.4 19.1-.42.39a10.2 10.2 0 0 1-14.36-.4' stroke='currentColor' />
+      <path d='M5.99 9.75S6.6 9.2 8 9.2s2.02.54 2.02.54' stroke='currentColor' />
+      <path d='M13.96 9.75S14.6 9.2 16 9.2s2.02.54 2.02.54' stroke='currentColor' />
+      <path
+        d='M11.9 13.89q2.09 0 3.18 1.32c.66.77 1 1.15.73 1.74-.27.58-.91.58-2.2.58h-3.22c-1.27 0-1.9 0-2.18-.58-.26-.58.07-.97.72-1.74a3.7 3.7 0 0 1 2.97-1.32'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.6 16.27c-.9-.45-1.32-1.5-.9-2.37.5-1.05 1.62-1.54 2.33-1.76.28-.08.42-.12.6-.04.17.09.22.22.33.5.27.68.57 1.86.07 2.9-.42.87-1.5 1.2-2.42.77'
+        stroke='currentColor'
+      />
+      <path
+        d='M21.39 16.27c.92-.45 1.33-1.5.9-2.37-.5-1.05-1.6-1.54-2.32-1.76-.28-.08-.42-.12-.6-.04-.17.09-.22.22-.33.5-.27.68-.58 1.86-.07 2.9.42.87 1.5 1.2 2.42.77'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

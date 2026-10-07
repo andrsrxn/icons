@@ -1,0 +1,61 @@
+import type { Icon } from './types'
+
+export const IconChocolateBar: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-chocolate-bar'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='7.75'
+        height='10.84'
+        rx='2'
+        transform='scale(1 -1)rotate(45 32.27 -1.4)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='9.49'
+        height='10.84'
+        rx='2'
+        transform='scale(1 -1)rotate(45 26.54 12.43)'
+        fill='currentColor'
+      />
+      <path
+        d='m16.77 14.92 3.67-3.67c1.33-1.34 2-2 2-2.83s-.67-1.5-2-2.83l-2-2c-1.34-1.34-2-2-2.83-2s-1.5.66-2.83 2L9.1 7.25'
+        stroke='currentColor'
+      />
+      <path
+        d='m13.75 17.94-2.46 2.46c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-2-2c-1.34-1.34-2-2-2-2.84s.66-1.5 2-2.83l2.45-2.45'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.84 18.04c.7.69 1.04 1.04 1.53.97.48-.06.7-.42 1.12-1.15.29-.48.51-1.02.53-1.5.03-1.36-1.67-2.86-1.67-2.86L10.2 8.36S8.91 6.8 7.57 6.91c-.42.04-.9.2-1.34.42-.86.4-1.3.6-1.38 1.11-.1.51.3.9 1.06 1.66z'
+        stroke='currentColor'
+      />
+      <path d='m19.44 4.59-6.5 6.5' stroke='currentColor' />
+      <path d='m12.94 4.59 6.5 6.5' stroke='currentColor' />
+    </svg>
+  )
+}

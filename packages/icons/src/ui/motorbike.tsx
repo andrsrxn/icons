@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconMotorbike: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-motorbike'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <circle opacity='.2' cx='5.33' cy='16.15' r='3.71' fill='currentColor' />
+      <circle opacity='.2' cx='18.67' cy='16.15' r='3.71' fill='currentColor' />
+      <path
+        opacity='.2'
+        d='M14.04 8.27H7.37c-.34 0-.52 0-.65.1-.13.09-.18.26-.3.59l-.65 1.98c-.2.6-.3.9-.15 1.11.15.2.46.2 1.1.2h6.44c.31 0 .47 0 .6-.07.12-.08.18-.23.31-.52l.88-1.98c.28-.64.43-.95.28-1.18s-.5-.23-1.2-.23'
+        fill='currentColor'
+      />
+      <circle cx='5.33' cy='16.15' r='3.71' stroke='currentColor' />
+      <circle cx='18.67' cy='16.15' r='3.71' stroke='currentColor' />
+      <path d='m7.4 12.43-2.07 3.72' stroke='currentColor' />
+      <path d='m4.9 12.43 2.3-4.4' stroke='currentColor' />
+      <path
+        d='m16.11 8.04-1.18 2.26c-.55 1.04-.82 1.56-1.3 1.85-.48.28-1.07.28-2.24.28H4.92'
+        stroke='currentColor'
+      />
+      <path d='M16.11 8.04H3.61' stroke='currentColor' />
+      <path
+        d='M18.67 16.15 15.51 5.57c-.2-.69-.31-1.03-.58-1.23s-.62-.2-1.34-.2h-1.23'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

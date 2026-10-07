@@ -30,7 +30,13 @@ const SVG_GRAPHICAL_ELEMENTS = /<(path|rect|circle|ellipse|line|polyline|polygon
 
 // Helpers
 export function findSvgFiles(files) {
-  return files.filter(file => file.endsWith('.svg')).sort()
+  return files
+    .filter(file => file.endsWith('.svg'))
+    .sort((a, b) => {
+      const nameA = path.basename(a, '.svg')
+      const nameB = path.basename(b, '.svg')
+      return nameA.localeCompare(nameB)
+    })
 }
 
 export function buildCatalogEntry(group, iconName, meta) {

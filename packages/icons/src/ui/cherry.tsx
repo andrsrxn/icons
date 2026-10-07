@@ -1,0 +1,61 @@
+import type { Icon } from './types'
+
+export const IconCherry: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cherry'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <circle
+        opacity='.2'
+        cx='6.27'
+        cy='12.9'
+        r='4.6'
+        transform='rotate(90 6.27 12.9)'
+        fill='currentColor'
+      />
+      <circle
+        opacity='.2'
+        cx='17.79'
+        cy='17.26'
+        r='4.55'
+        transform='rotate(90 17.8 17.26)'
+        fill='currentColor'
+      />
+      <circle cx='6.27' cy='12.9' r='4.6' transform='rotate(90 6.27 12.9)' stroke='currentColor' />
+      <circle
+        cx='17.79'
+        cy='17.26'
+        r='4.55'
+        transform='rotate(90 17.8 17.26)'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.34 14.85c-1.65-2.57-3.07-6.76-3.25-12.61-1.2 3.22-3.63 6.24-6.44 8.7'
+        stroke='currentColor'
+      />
+      <path d='M4.24 13.32c-.04-.46.01-.84.18-1.26.2-.5.37-.71.8-1.01' stroke='currentColor' />
+      <path d='M17.46 19.24a2.6 2.6 0 0 1-1.09-.67c-.37-.37-.5-.62-.6-1.14' stroke='currentColor' />
+    </svg>
+  )
+}

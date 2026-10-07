@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconKeyframeMinus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-keyframe-minus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M9.14 3.68C10.5 2.31 11.16 1.62 12 1.62s1.51.69 2.86 2.06l2.7 2.76 2.76 2.7c1.37 1.35 2.06 2.02 2.06 2.86s-.69 1.51-2.06 2.86l-2.76 2.7-2.7 2.76c-1.35 1.37-2.02 2.06-2.86 2.06s-1.51-.69-2.86-2.06l-2.7-2.76-2.76-2.7C2.31 13.5 1.62 12.84 1.62 12s.69-1.51 2.06-2.86l2.76-2.7z'
+        fill='currentColor'
+      />
+      <path d='M8.17 12h7.66' stroke='currentColor' />
+      <path
+        d='M7.71 4.9C9.73 2.82 10.74 1.8 12 1.8s2.27 1.03 4.29 3.1l1.4 1.42 1.42 1.4c2.06 2.01 3.09 3.02 3.09 4.28s-1.03 2.27-3.09 4.29l-1.43 1.4-1.4 1.42c-2.01 2.06-3.02 3.09-4.28 3.09s-2.27-1.03-4.29-3.09l-1.4-1.43-1.42-1.4c-2.06-2-3.09-3.01-3.09-4.28s1.03-2.27 3.1-4.29l1.42-1.4z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

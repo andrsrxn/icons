@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconMoonZzz: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-moon-zzz'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M11.71 22.3a9.96 9.96 0 0 1-9.95-9.95c0-5.5 3.57-8.3 6.12-8.92 0 0-1.56 5.28 2.42 10.2 4.8 4.79 10.48.75 10.7 1.68.23.93-3.79 7-9.29 7'
+        fill='currentColor'
+      />
+      <path
+        d='M1.76 12.35a9.96 9.96 0 0 0 18.96 4.25c.4-.84.6-1.25.37-1.5s-.71-.08-1.71.25c-2.33.77-6.18 1.34-9.15-1.63a8.2 8.2 0 0 1-2.13-8.6c.35-1.17.53-1.76.26-1.97-.26-.2-.72.05-1.62.58a10 10 0 0 0-4.98 8.62'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.6 6.13h-1.24c-.94 0-1.42 0-1.55-.29-.13-.3.18-.65.8-1.36l.96-1.11c.61-.71.92-1.07.79-1.36s-.6-.3-1.55-.3h-1.3'
+        stroke='currentColor'
+      />
+      <path
+        d='M22.29 8.98h-1.93c-.94 0-1.4 0-1.54-.3-.13-.29.17-.64.78-1.35l1.75-2.05c.61-.72.92-1.07.78-1.36-.13-.3-.6-.3-1.54-.3h-2'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.14 12.3h-1.28c-.6 0-.9 0-.97-.18-.08-.19.12-.4.53-.84l1.08-1.14c.4-.43.61-.65.53-.83s-.37-.18-.97-.18h-1.3'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

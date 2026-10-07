@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconPhoneCheck: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-phone-check'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M10.77 14.2 9.7 13.15c-.77-.78-1.16-1.16-1.3-1.64a2 2 0 0 1-.1-.68c.03-.5.3-.97.86-1.91.43-.72.65-1.09.7-1.48a2 2 0 0 0 0-.55c-.05-.4-.26-.76-.68-1.48L7.8 3.03c-.47-.8-.7-1.21-1.1-1.32-.4-.1-.8.12-1.61.58l-1.13.64c-.46.26-.69.39-.93.68s-.3.48-.4.83C2 6.4 1.42 11.13 7.09 16.8s10.39 5.1 12.37 4.48c.35-.11.53-.17.83-.41s.43-.47.69-.94l.63-1.13c.46-.8.68-1.21.58-1.6s-.51-.64-1.32-1.1l-2.38-1.4a4 4 0 0 0-1.47-.68 2 2 0 0 0-.58 0c-.39.07-.75.28-1.46.7-.93.56-1.4.84-1.88.87a2 2 0 0 1-.72-.1c-.47-.14-.85-.52-1.61-1.28'
+        fill='currentColor'
+      />
+      <path
+        d='M10.77 14.2 9.7 13.15c-.77-.78-1.16-1.16-1.3-1.64a2 2 0 0 1-.1-.68c.03-.5.3-.97.86-1.91.43-.72.65-1.09.7-1.48a2 2 0 0 0 0-.55c-.05-.4-.26-.76-.68-1.48L7.8 3.03c-.47-.8-.7-1.21-1.1-1.32-.4-.1-.8.12-1.61.58l-1.13.64c-.46.26-.69.39-.93.68s-.3.48-.4.83C2 6.4 1.42 11.13 7.09 16.8s10.39 5.1 12.37 4.48c.35-.11.53-.17.83-.41s.43-.47.69-.94l.63-1.13c.46-.8.68-1.21.58-1.6s-.51-.64-1.32-1.1l-2.38-1.4a4 4 0 0 0-1.47-.68 2 2 0 0 0-.58 0c-.39.07-.75.28-1.46.7-.93.56-1.4.84-1.88.87a2 2 0 0 1-.72-.1c-.47-.14-.85-.52-1.61-1.28'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.43 6.45.64.79c.72.88 1.08 1.32 1.56 1.32.47 0 .83-.44 1.54-1.33l3.09-3.8'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

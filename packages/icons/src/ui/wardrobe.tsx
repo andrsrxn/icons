@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconWardrobe: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-wardrobe'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M18.19 17.51c.94 0 1.41 0 1.7-.29.3-.3.3-.76.3-1.7V7.74c0-2.83 0-4.25-.88-5.12s-2.3-.88-5.12-.88H9.8c-2.83 0-4.24 0-5.12.88-.88.87-.88 2.29-.88 5.12v7.76c0 .95 0 1.42.3 1.71.29.3.76.3 1.7.3z'
+        fill='currentColor'
+      />
+      <rect
+        width='19.08'
+        height='16.38'
+        rx='3'
+        transform='matrix(0 -1 -1 0 20.19 20.82)'
+        stroke='currentColor'
+      />
+      <path d='M12.05 1.75V17.5' stroke='currentColor' />
+      <path d='M4.16 17.51h15.76' stroke='currentColor' />
+      <path d='M8.68 8.44v2.38' stroke='currentColor' />
+      <path d='M15.32 8.44v2.38' stroke='currentColor' />
+      <path
+        d='M3.55 21.83a.8.8 0 0 0 .23 1.06.7.7 0 0 0 1-.22l-.61-.42zm2.1-.58a.8.8 0 0 0-.23-1.07.7.7 0 0 0-1 .22l.62.42zm-1.48 1 .62.42.87-1.42-.62-.43-.63-.42-.86 1.43z'
+        fill='currentColor'
+      />
+      <path
+        d='M20.54 21.83a.8.8 0 0 1-.23 1.06.7.7 0 0 1-1-.22l.61-.42zm-2.1-.58a.8.8 0 0 1 .23-1.07.7.7 0 0 1 1 .22l-.61.42zm1.48 1-.62.42-.87-1.42.63-.43.62-.42.86 1.43z'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

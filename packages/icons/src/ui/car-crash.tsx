@@ -1,0 +1,69 @@
+import type { Icon } from './types'
+
+export const IconCarCrash: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-car-crash'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M4.1 15.3H1.46V9.7h2.76l5.13.51c.24.02.37.04.47.07a1 1 0 0 1 .65.69c.03.1.04.23.05.48l.1 2.27a1.35 1.35 0 0 1-2.62.5l-.07-.2H7.3c-.6 0-1.18.23-1.61.64s-1 .65-1.6.65'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M19.9 15.3h2.63V9.7h-2.76l-5.13.51c-.24.02-.37.04-.47.07a1 1 0 0 0-.65.69c-.03.1-.04.23-.05.48l-.1 2.27a1.35 1.35 0 0 0 2.62.5l.07-.2h.63c.6 0 1.18.23 1.61.64s1 .65 1.6.65'
+        fill='currentColor'
+      />
+      <path
+        d='m7.62 9.69-.4-.65c-.85-1.4-1.28-2.1-1.97-2.49-.68-.38-1.5-.38-3.14-.38h-.56'
+        stroke='currentColor'
+      />
+      <path
+        d='m16.38 9.69.4-.65c.85-1.4 1.28-2.1 1.97-2.49.68-.38 1.5-.38 3.14-.38h.56'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.66 15.3h.25a2 2 0 0 0 1.89-1.88v-1.13a2 2 0 0 0-.42-1.01l-.3-.33-.22-.22a4 4 0 0 0-.78-.7 2 2 0 0 0-.52-.22c-.25-.07-.52-.07-1.05-.07H1.73'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.34 15.3h-.25a2 2 0 0 1-1.89-1.88v-1.13a2 2 0 0 1 .42-1.01l.3-.33.22-.22c.37-.38.56-.57.78-.7a2 2 0 0 1 .52-.22c.25-.07.52-.07 1.05-.07h5.78'
+        stroke='currentColor'
+      />
+      <circle cx='6.7' cy='15.86' r='1.97' transform='rotate(90 6.7 15.86)' stroke='currentColor' />
+      <circle
+        cx='1.97'
+        cy='1.97'
+        r='1.97'
+        transform='matrix(0 1 1 0 15.33 13.9)'
+        stroke='currentColor'
+      />
+      <path d='M1.47 15.3h3.26' stroke='currentColor' />
+      <path d='M22.53 15.3h-3.27' stroke='currentColor' />
+      <path d='m14.53 5.32-1.1 1.96' stroke='currentColor' />
+      <path d='m9.47 5.32 1.1 1.96' stroke='currentColor' />
+    </svg>
+  )
+}

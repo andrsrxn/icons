@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconPencilBluetooth: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-pencil-bluetooth'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='4.31'
+        height='5.07'
+        rx='1'
+        transform='scale(1 -1)rotate(45 24.16 17.95)'
+        fill='currentColor'
+      />
+      <path d='m19.78 11.71-3.47-3.47' stroke='currentColor' />
+      <path
+        d='M8.91 21.92c.47-.14.7-.22.92-.34.2-.12.38-.3.73-.64l10.78-10.61c.35-.35.53-.53.65-.7a2 2 0 0 0 0-2.2 5 5 0 0 0-.64-.7 5 5 0 0 0-.7-.64 2 2 0 0 0-2.18 0 5 5 0 0 0-.7.64L7.05 17.4c-.35.35-.52.53-.65.74s-.2.45-.35.92l-.15.5c-.48 1.58-.73 2.37-.3 2.8.42.42 1.21.18 2.79-.3z'
+        stroke='currentColor'
+      />
+      <path opacity='.2' d='M9.4 3.7 5.42 6.72l.27-5.4z' fill='currentColor' />
+      <path opacity='.2' d='M9.4 9.54 5.42 6.71l.27 5.1z' fill='currentColor' />
+      <path
+        d='m1.7 9.34 6.65-4.63c.54-.37.81-.56.81-.82 0-.27-.27-.45-.81-.82l-1.37-.94c-.69-.47-1.03-.7-1.3-.56-.26.14-.26.55-.26 1.39v7.5c0 .84 0 1.25.26 1.4.27.14.61-.1 1.3-.57l1.36-.93c.55-.38.82-.56.82-.82 0-.27-.27-.46-.81-.83L1.7 4.11'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

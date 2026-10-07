@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconFacePlus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-face-plus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M11.57 22.29a9.85 9.85 0 1 1 5.6-17.96c1.27.89 1.34.94 2.3 2.24a9.85 9.85 0 0 1-7.9 15.72'
+        fill='currentColor'
+      />
+      <path d='M12.65 2.66a9.85 9.85 0 1 0 8.76 9.78c0-.24 0-.62-.03-1.05' stroke='currentColor' />
+      <path
+        d='M9.26 10.44a.77.77 0 1 1-1.54 0 .77.77 0 0 1 1.54 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.42 10.44a.77.77 0 1 1-1.53 0 .77.77 0 0 1 1.53 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M15.14 15.93a5 5 0 0 1-3.57 1.23 5.4 5.4 0 0 1-3.56-1.23' stroke='currentColor' />
+      <path d='M18.53 2.86v5.4' stroke='currentColor' />
+      <path d='M15.82 5.56h5.4' stroke='currentColor' />
+    </svg>
+  )
+}

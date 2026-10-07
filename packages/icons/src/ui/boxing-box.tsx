@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconBoxingBox: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-boxing-box'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.28 8.28c1.06.1 1.6.14 1.91-.13a1 1 0 0 0 .23-.27c.2-.36.06-.88-.23-1.9-.15-.52-.22-.79-.4-.97l-.16-.14c-.21-.13-.48-.16-1.02-.21l-3.47-.33h-.39l-3.31.33c-.5.05-.75.08-.95.2L7.32 5c-.17.17-.25.4-.41.88-.37 1.06-.55 1.58-.36 1.96a1 1 0 0 0 .23.3c.33.28.88.23 2 .14l3-.27h.34z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M15.33 18.25c1-.08 1.5-.13 1.81.11a1 1 0 0 1 .29.35c.17.35.03.83-.26 1.8-.14.48-.2.72-.37.9l-.21.17c-.2.12-.45.14-.95.19l-3.6.32-.18.02-.19-.02-3.43-.33c-.47-.04-.7-.06-.88-.17l-.22-.17c-.15-.15-.23-.37-.39-.8-.36-1-.54-1.5-.38-1.86a1 1 0 0 1 .3-.38c.3-.25.83-.2 1.88-.12l3.14.27h.34z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.51 21.86c.84-.2 1.26-.3 1.7-.84s.43-1.09.43-2.18V7.65c0-1.06 0-1.59-.44-2.13-.43-.55-.83-.64-1.64-.83a16 16 0 0 0-3.61-.38 16 16 0 0 0-3.61.38c-.81.19-1.22.28-1.65.83s-.43 1.07-.43 2.13v11.2c0 1.08 0 1.63.43 2.17.43.55.85.65 1.7.84.9.2 2.08.38 3.56.38 1.47 0 2.66-.17 3.56-.38'
+        stroke='currentColor'
+      />
+      <path d='M17.44 8.51s-3.31-.48-5.44-.48-5.44.48-5.44.48' stroke='currentColor' />
+      <path d='M17.44 18.04s-3.31.48-5.44.48-5.44-.48-5.44-.48' stroke='currentColor' />
+      <path d='M12 1.57V4.1' stroke='currentColor' />
+    </svg>
+  )
+}

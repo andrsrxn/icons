@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconFaceGlasses: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-face-glasses'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M12 22.26a10.26 10.26 0 1 1 0-20.52 10.26 10.26 0 0 1 0 20.52m1.84-11.14-.7-2.9 5.95.24-1.55 3.02zM4.96 8.46l1.4 3.02 3.65-.47.51-2.8z'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='10.26' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path d='M15.71 15.38A5.2 5.2 0 0 1 12 16.67a5.6 5.6 0 0 1-3.71-1.3' stroke='currentColor' />
+      <path d='M10.69 9.5s.79-.22 1.31-.22 1.31.22 1.31.22' stroke='currentColor' />
+      <path d='m2.3 8.92 2.72.47' stroke='currentColor' />
+      <path d='m21.68 8.92-2.73.47' stroke='currentColor' />
+      <path
+        d='M7.9 11.9c1.27 0 2.11-.82 2.54-1.94.28-.73.42-1.1.13-1.53C10.27 8 9.77 8 8.79 8H7.13c-.98 0-1.47 0-1.77.43-.3.42-.16.8.11 1.53.4 1.09 1.19 1.95 2.43 1.95'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.97 11.9c1.27 0 2.12-.82 2.55-1.94.28-.73.42-1.1.12-1.53S17.85 8 16.87 8H15.2c-.98 0-1.47 0-1.77.43-.3.42-.17.8.1 1.53.41 1.09 1.2 1.95 2.43 1.95'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

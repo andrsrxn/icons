@@ -1,0 +1,66 @@
+import type { Icon } from './types'
+
+export const IconGuitar: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-guitar'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M13.76 18.28c-.37.84-.55 1.26-.85 1.6l-.25.27c-.34.3-.75.5-1.58.89-1.37.64-2.05.96-2.76.95a3 3 0 0 1-.57-.07c-.7-.15-1.28-.63-2.46-1.57l-.34-.28c-.33-.27-.5-.4-.64-.56-.15-.15-.27-.33-.51-.68L3.22 18c-.64-.92-.96-1.38-1.1-1.9a3 3 0 0 1-.1-.73c0-.54.2-1.07.57-2.12.35-.97.52-1.45.83-1.83a3 3 0 0 1 .47-.48c.39-.3.87-.48 1.83-.83L8.6 9.05l.27-.1a3 3 0 0 0 .46-.24l.19-.1c.87-.5 1.3-.76 1.74-.86a3 3 0 0 1 2.07.27c.4.21.76.58 1.49 1.3a7 7 0 0 1 1.3 1.48 3 3 0 0 1 .22 2.29 7 7 0 0 1-.97 1.68l-.13.2-.15.26-.1.21zm-2.6-2.5c-.92.93-2.08.85-2.88.06-.8-.8-.92-2.04 0-2.97.93-.92 2.1-.8 2.89 0 .8.8.93 1.99 0 2.92'
+        fill='currentColor'
+      />
+      <path
+        d='M5.33 20.6c.42.41.63.63.85.79a4 4 0 0 0 4.05.47c.24-.1.5-.26 1-.57l.7-.44a6 6 0 0 0 2-2.46l.3-.76.1-.31.2-.5a9 9 0 0 1 1.1-2l.33-.42c.3-.38.44-.57.55-.75a3 3 0 0 0-.2-3.3c-.13-.17-.3-.34-.64-.68L14.3 8.3l-.34-.33a3 3 0 0 0-4 .04l-.13.1-.03.03a9 9 0 0 1-3.33 1.58h-.04l-.07.02a6 6 0 0 0-3.91 3.1l-.03.06-.14.28c-.15.3-.23.45-.29.6a4 4 0 0 0 1.12 4.6l1.3 1.3z'
+        stroke='currentColor'
+      />
+      <circle
+        cx='9.69'
+        cy='14.49'
+        r='2.14'
+        transform='rotate(45 9.69 14.49)'
+        stroke='currentColor'
+      />
+      <path d='m13.04 11.14 5.56-5.57' stroke='currentColor' />
+      <path d='m5.19 16.69 2.3 2.3' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        width='2.77'
+        height='4.02'
+        rx='1'
+        transform='scale(-1 1)rotate(-45 -6.82 28.9)'
+        fill='currentColor'
+      />
+      <rect
+        width='3.18'
+        height='4.26'
+        rx='1'
+        transform='scale(-1 1)rotate(-45 -7.02 29.26)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

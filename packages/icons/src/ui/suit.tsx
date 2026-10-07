@@ -1,0 +1,67 @@
+import type { Icon } from './types'
+
+export const IconSuit: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-suit'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M7.63 22.2c.84 0 1.26 0 1.54-.24.28-.25.34-.66.45-1.5l.99-7.62v-1.51c0-.76-.61-1.37-1.37-1.37-.5 0-.96-.27-1.2-.7l-2.43-4.4a1.37 1.37 0 0 0-2.57.66v12.69c0 1.88 0 2.83.59 3.41.58.59 1.52.59 3.41.59z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M16.37 22.2c-.84 0-1.26 0-1.54-.24-.28-.25-.34-.66-.45-1.5l-.99-7.62v-1.46c0-.79.63-1.42 1.42-1.42.53 0 1.02-.3 1.26-.78l2.29-4.58c.21-.43.67-.72 1.15-.76.8-.06 1.45.57 1.45 1.37v13c0 1.88 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M12.52 5.27c-.34.32-.5.47-.71.47s-.36-.17-.69-.5L9.45 3.5c-.7-.72-1.06-1.08-.93-1.39s.63-.3 1.65-.3h3.54c1.08 0 1.62 0 1.74.31.13.32-.27.69-1.06 1.42z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M11.6 11.92c-.36-.03-.53-.04-.66-.15-.12-.1-.16-.27-.25-.61l-.36-1.5c-.06-.24-.1-.36-.07-.48s.11-.21.27-.4l.7-.82c.32-.38.48-.57.7-.58s.4.16.76.51l.68.66c.18.18.28.27.31.39.04.12.02.24-.03.5l-.3 1.7c-.07.43-.11.64-.26.76s-.37.1-.8.07z'
+        fill='currentColor'
+      />
+      <path
+        d='M5.5 3.73a2.46 2.46 0 0 0-2.46 2.45v10.03c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h5.89c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V6.23a2.5 2.5 0 0 0-2.5-2.5'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.51 4.54v.06c-.03.3-.05.46-.01.6.03.16.1.29.25.56l1.49 2.68c.73 1.32 1.1 1.98 1.67 2 .57.01.97-.63 1.77-1.92l.5-.8c.4-.65.61-.98.57-1.33s-.32-.62-.87-1.16L8.9 3.3C7.6 2.02 6.95 1.39 6.36 1.6c-.6.22-.68 1.13-.85 2.94'
+        stroke='currentColor'
+      />
+      <path
+        d='m16.74 8.35 1.46-2.67c.13-.25.2-.37.23-.5v-.02c.03-.14.02-.28 0-.55-.1-1.83-.17-2.75-.74-2.99l-.06-.02c-.59-.2-1.24.44-2.54 1.73l-1.94 1.92h0c-.54.52-.8.79-.85 1.13-.04.35.15.67.54 1.31l.43.72c.8 1.33 1.2 2 1.77 1.99s.95-.7 1.7-2.05'
+        stroke='currentColor'
+      />
+      <path d='M6.66 1.56H17.4' stroke='currentColor' />
+      <path d='m14.04 9.8-.46 1.17a1.67 1.67 0 0 1-3.13-.02l-.44-1.16' stroke='currentColor' />
+      <path d='M10.95 12.03 9.2 22.21' stroke='currentColor' />
+      <path d='m14.78 22.2-1.74-10.17' stroke='currentColor' />
+    </svg>
+  )
+}

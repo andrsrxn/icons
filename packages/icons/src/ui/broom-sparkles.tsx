@@ -1,0 +1,61 @@
+import type { Icon } from './types'
+
+export const IconBroomSparkles: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-broom-sparkles'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m5.68 3.8-.86-1.64-.88 1.63-1.67.93 1.67.86.88 1.9.86-1.9 1.82-.94z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m19.94 18.06-.9-1.7-.91 1.7-1.74.96 1.74.9.9 1.98.9-1.99 1.9-.98z'
+        fill='currentColor'
+      />
+      <path d='M1.88 4.88c1.47 0 3.06-1.6 3.06-3.07' stroke='currentColor' />
+      <path d='M15.98 19.18c1.53 0 3.18-1.66 3.18-3.18' stroke='currentColor' />
+      <path d='M8 4.88c-1.47 0-3.06-1.6-3.06-3.07' stroke='currentColor' />
+      <path d='M22.34 19.18c-1.52 0-3.18-1.65-3.18-3.18' stroke='currentColor' />
+      <path d='M1.88 4.88c1.46 0 3.06 1.62 3.06 3.06' stroke='currentColor' />
+      <path d='M15.98 19.18c1.52 0 3.18 1.69 3.18 3.19' stroke='currentColor' />
+      <path d='M8 4.88c-1.45 0-3.06 1.6-3.06 3.06' stroke='currentColor' />
+      <path d='M22.34 19.18c-1.5 0-3.18 1.66-3.18 3.19' stroke='currentColor' />
+      <path d='m22.18 1.81-9.32 9.32' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M11.71 16.2c.42.41.62.62.84.7a1 1 0 0 0 .94-.16c.18-.13.31-.4.58-.91.3-.59.44-.88.5-1.17a2 2 0 0 0-.21-1.3 5 5 0 0 0-.84-.95l-1.82-1.82c-.46-.47-.7-.7-.96-.84a2 2 0 0 0-1.16-.22c-.3.03-.6.17-1.21.43-.6.27-.9.4-1.05.6a1 1 0 0 0-.17.9c.07.24.3.48.76.94z'
+        fill='currentColor'
+      />
+      <path
+        d='M7.18 21.16c.74.74 1.11 1.11 1.56 1.09s.78-.44 1.43-1.27l2.93-3.73a4 4 0 0 0 .21-5.39 6 6 0 0 0-.56-.58c-.3-.3-.44-.45-.59-.57a4 4 0 0 0-4.71-.29c-.16.1-.32.23-.66.49l-3.75 2.93c-.84.65-1.25.97-1.28 1.42s.35.82 1.1 1.57z'
+        stroke='currentColor'
+      />
+      <path d='m6.68 11.17 6.2 6.26' stroke='currentColor' />
+      <path d='m3.82 17.8 2.32-2.32' stroke='currentColor' />
+    </svg>
+  )
+}

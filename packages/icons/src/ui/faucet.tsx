@@ -1,0 +1,63 @@
+import type { Icon } from './types'
+
+export const IconFaucet: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-faucet'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <circle opacity='.2' cx='11.76' cy='6.17' r='2.02' fill='currentColor' />
+      <circle cx='11.76' cy='6.17' r='2.02' stroke='currentColor' />
+      <path
+        d='M8.14 13.03a4.2 4.2 0 0 1 3.7-2.39c1.17 0 2.24.53 3.01 1.4.5.54.74.82.94.9.2.1.45.1.97.1h1.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.14 17.2a4.2 4.2 0 0 0 3.7 2.4c1.17 0 2.24-.54 3.01-1.4.5-.55.74-.83.94-.91s.45-.09.97-.09h1.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.98 13.03H6.73c-2.64 0-5.02 2.38-5.02 4.55v1.02c0 .24 0 .35.02.45.08.4.39.7.78.78.1.02.22.02.46.02h1.16c.74 0 1.34-.6 1.34-1.33s.6-1.33 1.34-1.33h1.33'
+        stroke='currentColor'
+      />
+      <path d='M5 6.17h4.74' stroke='currentColor' />
+      <path d='M13.77 6.17h4.74' stroke='currentColor' />
+      <path d='M11.76 10.64V8.2' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        width='8.82'
+        height='4.19'
+        rx='1'
+        transform='matrix(0 -1 -1 0 22.29 19.46)'
+        fill='currentColor'
+      />
+      <rect
+        width='8.82'
+        height='4.19'
+        rx='1'
+        transform='matrix(0 -1 -1 0 22.29 19.46)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

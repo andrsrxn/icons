@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconGoldBars: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-gold-bars'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M6.7 20.82c2.43 0 3.65 0 4.25-.8s.26-1.97-.41-4.31l-.1-.32c-.4-1.39-.6-2.09-1.13-2.49-.54-.4-1.26-.4-2.71-.4h-.21c-1.47 0-2.2 0-2.74.4-.53.42-.73 1.13-1.12 2.54l-.09.32c-.63 2.32-.95 3.48-.35 4.27s1.8.79 4.21.79z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M17.68 20.82c2.44 0 3.66 0 4.26-.8s.26-1.97-.41-4.31l-.1-.32c-.4-1.39-.6-2.09-1.13-2.49s-1.26-.4-2.7-.4h-.22c-1.47 0-2.2 0-2.74.4-.53.42-.73 1.13-1.12 2.54l-.08.32c-.64 2.32-.96 3.48-.36 4.27s1.8.79 4.21.79z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M12.23 11.5c2.44 0 3.66 0 4.26-.8s.26-1.97-.41-4.3l-.1-.33c-.4-1.39-.6-2.08-1.13-2.49-.53-.4-1.26-.4-2.7-.4h-.22c-1.47 0-2.2 0-2.74.41-.53.41-.73 1.12-1.12 2.53L8 6.44c-.64 2.32-.96 3.48-.36 4.27s1.8.79 4.21.79z'
+        fill='currentColor'
+      />
+      <path
+        d='M17.85 20.82c2.37 0 3.55 0 4.15-.77.6-.78.31-1.92-.27-4.21l-.08-.32c-.37-1.45-.55-2.18-1.1-2.6-.53-.42-1.28-.42-2.78-.42h-.44c-1.47 0-2.2 0-2.74.4-.53.42-.73 1.13-1.12 2.54l-.09.32c-.63 2.32-.95 3.48-.35 4.27s1.8.79 4.21.79z'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.86 20.82c2.37 0 3.55 0 4.15-.77.6-.78.3-1.92-.27-4.21l-.08-.32c-.37-1.45-.55-2.18-1.1-2.6-.54-.42-1.28-.42-2.78-.42h-.44c-1.47 0-2.2 0-2.74.4-.54.42-.73 1.13-1.12 2.54l-.09.32c-.64 2.32-.96 3.48-.36 4.27s1.8.79 4.22.79z'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.4 11.5c2.37 0 3.55 0 4.15-.77s.31-1.92-.27-4.21l-.08-.32c-.37-1.45-.55-2.17-1.1-2.6-.53-.42-1.28-.42-2.78-.42h-.44c-1.47 0-2.2 0-2.74.41s-.73 1.12-1.12 2.53l-.09.32c-.64 2.32-.95 3.48-.35 4.27s1.8.79 4.21.79z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

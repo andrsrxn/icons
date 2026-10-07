@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconBallYoga: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-ball-yoga'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M3.37 7C1.44 10.34 1 14.16 2.24 14.88s3.72-1.93 5.65-5.27c1.93-3.35 2.97-6.79 1.73-7.5C8.37 1.37 5.3 3.65 3.37 7'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M16.87 14.99c2.69-4.66 3.43-9.93 2.14-10.68 0 0-2.9-2.96-4.06-1.75-.39 2.55-.6 6.6-2.07 9.13-1.02 1.76-2.45 4.39-7.09 6.9-1.03 2.55 2.02 2.72 2.82 3.19 1.3.75 5.57-2.13 8.26-6.8'
+        fill='currentColor'
+      />
+      <path
+        d='M3.07 6.85a10.3 10.3 0 0 0 3.78 14.08A10.31 10.31 0 1 0 3.07 6.85'
+        stroke='currentColor'
+      />
+      <path d='M2.53 14.56s3.43-.96 5.6-4.74c2.2-3.77 1.32-7.22 1.32-7.22' stroke='currentColor' />
+      <path d='M4.56 18.88s5.03-1.24 8.1-6.56 1.63-10.3 1.63-10.3' stroke='currentColor' />
+      <path d='M9.06 21.81s5.01-1.35 8.15-6.8 1.81-10.45 1.81-10.45' stroke='currentColor' />
+    </svg>
+  )
+}

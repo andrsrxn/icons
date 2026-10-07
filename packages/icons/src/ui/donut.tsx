@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconDonut: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-donut'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M22.31 12a10.31 10.31 0 1 1-7.07-9.8l.21 2.94 3.22.65.42 2.55 2.95 1.3q.27 1.13.27 2.36m-10.3 3.43c-2.4 0-3.5-1.05-3.5-3.43S9.62 8.34 12 8.34s3.45 1.28 3.45 3.66c0 1.18-.24 1.85-1 2.63-.78.8-1.24.8-2.45.8'
+        fill='currentColor'
+      />
+      <path
+        d='M1.69 12a10.31 10.31 0 1 0 20.3-2.56S20.2 10 19 8.66c-.95-1.07-.41-3.02-.41-3.02s-1.65.6-2.83-.46c-1.3-1.18-.64-3-.64-3A10.3 10.3 0 0 0 1.69 12'
+        stroke='currentColor'
+      />
+      <path d='M15.56 12A3.55 3.55 0 0 1 12 15.56 3.56 3.56 0 1 1 15.56 12' stroke='currentColor' />
+    </svg>
+  )
+}

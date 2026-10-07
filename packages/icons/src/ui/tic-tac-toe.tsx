@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconTicTacToe: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-tic-tac-toe'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M12 2.2v19.6' stroke='currentColor' />
+      <path d='M2.2 12h19.6' stroke='currentColor' />
+      <path d='m15.37 15.35 4.78 4.79' stroke='currentColor' />
+      <path d='m3.9 3.9 4.7 4.7' stroke='currentColor' />
+      <path d='m15.35 20.14 4.79-4.79' stroke='currentColor' />
+      <path d='m3.89 8.6 4.7-4.7' stroke='currentColor' />
+      <circle opacity='.2' cx='17.76' cy='6.25' r='2.78' fill='currentColor' />
+      <circle opacity='.2' cx='6.26' cy='17.74' r='2.78' fill='currentColor' />
+      <circle cx='17.76' cy='6.25' r='2.78' stroke='currentColor' />
+      <circle cx='6.26' cy='17.74' r='2.78' stroke='currentColor' />
+    </svg>
+  )
+}

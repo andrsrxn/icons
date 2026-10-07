@@ -1,0 +1,68 @@
+import type { Icon } from './types'
+
+export const IconPickaxe: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-pickaxe'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='14.7'
+        height='3.87'
+        rx='1'
+        transform='scale(1 -1)rotate(45 29.55 -6.51)'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M13.48 5.6c.38-.37.57-.56.55-.8-.02-.22-.23-.38-.66-.7L9.92 1.53c-.23-.16-.34-.25-.47-.26s-.26.04-.52.14L7.8 1.9c-.62.26-.93.39-.98.65-.06.26.18.5.66.98l3.34 3.33c.33.34.5.5.7.5.21 0 .38-.16.71-.5z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M18.05 10.32c.37-.37.56-.56.78-.55.23.02.4.23.72.65l2.93 3.83c.17.22.25.32.27.45s-.03.25-.13.5l-.4 1.08c-.24.66-.36.98-.63 1.04s-.51-.19-1-.68l-3.73-3.72c-.33-.34-.5-.5-.5-.7 0-.22.17-.38.5-.72z'
+        fill='currentColor'
+      />
+      <rect
+        width='7.58'
+        height='6.01'
+        rx='1'
+        transform='scale(1 -1)rotate(45 23.73 11.2)'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.11 12.74-8.69 8.7c-.62.62-.93.93-1.32.95H4c-.38-.02-.7-.33-1.32-.95-.62-.63-.93-.94-.95-1.32v-.1c.02-.39.33-.7.95-1.32l8.7-8.7'
+        stroke='currentColor'
+      />
+      <path
+        d='M11.2 7.89 6.7 3.4c-.41-.42-.62-.63-.55-.9.07-.28.33-.35.85-.5a6.7 6.7 0 0 1 5.34.7c2.08 1.24 2.23 1.8 2.23 1.8'
+        stroke='currentColor'
+      />
+      <path
+        d='m15.84 12.53 4.91 4.92c.43.42.64.64.92.55s.35-.34.47-.87a7 7 0 0 0-1.03-5.49c-1.4-2.2-1.99-2.4-1.99-2.4'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}
