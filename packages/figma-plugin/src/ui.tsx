@@ -5,6 +5,7 @@ import catalog from '@andrsrxn/raw-icons/catalog-with-svgs.json'
 import type { IconCatalogEntry, IconCatalogUIEntry } from '@andrsrxn/raw-icons/types'
 import {
   Container,
+  Link,
   render,
   SearchTextbox,
   Tabs,
@@ -19,7 +20,35 @@ import { useMemo, useState } from 'preact/hooks'
 import type { CatalogIcon, InsertIconHandler } from './types'
 import styles from './ui.css'
 
-const icons = catalog as CatalogIcon[]
+const SVG_WIDTH_REGEX = /\bwidth="([\d.]+)(?:px)?"/
+const SVG_HEIGHT_REGEX = /\bheight="([\d.]+)(?:px)?"/
+const SVG_REPLACE_WIDTH_REGEX = /\bwidth="[\d.]+(?:px)?"/
+const SVG_REPLACE_HEIGHT_REGEX = /\bheight="[\d.]+(?:px)?"/
+
+export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
+  return 'categories' in icon
+}
+
+function normalizeSvgTo24(svg: string): string {
+  const widthMatch = svg.match(SVG_WIDTH_REGEX)
+  const heightMatch = svg.match(SVG_HEIGHT_REGEX)
+
+  if (widthMatch && heightMatch) {
+    const origWidth = Number.parseFloat(widthMatch[1] ?? '0')
+    const origHeight = Number.parseFloat(heightMatch[1] ?? '0')
+    if (origWidth > 0 && Math.abs(origWidth - 24) > 0.01) {
+      const newHeight = Number(((origHeight * 24) / origWidth).toFixed(2))
+      return svg
+        .replace(SVG_REPLACE_WIDTH_REGEX, 'width="24"')
+        .replace(SVG_REPLACE_HEIGHT_REGEX, `height="${newHeight}"`)
+    }
+  }
+  return svg
+}
+
+const icons = (catalog as CatalogIcon[]).map(icon =>
+  isUIIcon(icon) ? icon : { ...icon, svg: normalizeSvgTo24(icon.svg) }
+)
 
 const TABS_OPTIONS: TabsOption[] = [
   { value: 'UI', children: null },
@@ -27,10 +56,6 @@ const TABS_OPTIONS: TabsOption[] = [
 ]
 
 const normalizeQuery = (q: string) => q.replace(/\s+/g, '-')
-
-export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
-  return 'categories' in icon
-}
 
 /**
  * Returns a relevance score for an icon given a normalized query.
@@ -137,28 +162,45 @@ function Plugin() {
         />
         <VerticalSpace space='small' />
       </Container>
-
-      <div className={styles.grid}>
-        {filtered.length === 0 ? (
-          <Container space='medium' style={{ gridColumn: '1 / -1' }}>
-            <VerticalSpace space='medium' />
-            <Text>No icons match your search.</Text>
-            <VerticalSpace space='medium' />
-          </Container>
-        ) : (
-          filtered.map(icon => (
-            <button
-              key={icon.name}
-              type='button'
-              className={styles.iconButton}
-              title={icon.name}
-              onClick={() => handleInsert(icon)}>
-              {/** biome-ignore lint/security/noDangerouslySetInnerHtml: secure */}
-              {/** biome-ignore lint/style/useNamingConvention: secure */}
-              <span className={styles.iconPreview} dangerouslySetInnerHTML={{ __html: icon.svg }} />
-            </button>
-          ))
-        )}
+      <div className={styles.gridContainer}>
+        <Container space='small'>
+          <Text className={styles.iconLength}>
+            {filtered.length} {group === 'UI' ? 'icons' : 'flags'}
+          </Text>
+        </Container>
+        <div className={styles.grid}>
+          {filtered.length === 0 ? (
+            <Container space='extraSmall' style={{ gridColumn: '1 / -1' }}>
+              <VerticalSpace space='medium' />
+              <Text className={styles.iconLength}>
+                No {group === 'UI' ? 'icons' : 'flags'} match your search.
+              </Text>
+              <VerticalSpace space='medium' />
+            </Container>
+          ) : (
+            filtered.map(icon => (
+              <button
+                key={icon.name}
+                type='button'
+                className={styles.iconButton}
+                title={icon.name}
+                onClick={() => handleInsert(icon)}>
+                <span
+                  className={styles.iconPreview}
+                  // biome-ignore lint/security/noDangerouslySetInnerHtml: It's a self generated list of icons
+                  // biome-ignore lint/style/useNamingConvention: react api
+                  dangerouslySetInnerHTML={{ __html: icon.svg }}
+                />
+              </button>
+            ))
+          )}
+        </div>
+        <Container space='small'>
+          <Text className={styles.footer}>
+            All icons and documentation at{' '}
+            <Link href='https://icons.andrsrxn.com/'>icons.andrsrxn.com</Link>
+          </Text>
+        </Container>
       </div>
     </Fragment>
   )
