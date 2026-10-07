@@ -1,14 +1,14 @@
 {
   "categories": [
-    "development"
+    "development",
+    "symbols"
   ],
   "tags": [
+    "absolute",
     "placeholder",
-    "parameter",
     "math",
     "x",
     "algebra",
-    "programming",
-    "developer"
+    "programming"
   ]
 }

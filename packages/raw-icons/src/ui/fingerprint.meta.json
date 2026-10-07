@@ -1,10 +1,14 @@
 {
   "categories": [
-    "security"
+    "security",
+    "people"
   ],
   "tags": [
     "biometric",
     "identity",
+    "access",
+    "lock",
+    "privacy",
     "scan",
     "authentication"
   ]

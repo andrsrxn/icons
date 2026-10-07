@@ -1,13 +1,14 @@
 {
   "categories": [
-    "devices"
+    "design",
+    "business"
   ],
   "tags": [
-    "hardware",
-    "gadget",
-    "mount",
+    "artboard",
     "holder",
-    "monitor",
-    "support"
+    "display",
+    "presentation",
+    "tripod",
+    "podium"
   ]
 }
