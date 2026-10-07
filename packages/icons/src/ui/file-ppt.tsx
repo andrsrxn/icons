@@ -36,16 +36,16 @@ export const IconFilePpt: Icon = ({
         stroke='currentColor'
       />
       <path d='M13.18 2.33v2.44c0 1.88 0 2.83.58 3.41s1.53.59 3.41.59h2.44' stroke='currentColor' />
-      <path d='M18.95 16.02v6.42' stroke='currentColor' />
+      <path d='M18.95 16.02v6.43' stroke='currentColor' />
       <path d='M16.58 16.02h4.74' stroke='currentColor' />
-      <path d='M3.53 15.89v6.43' stroke='currentColor' />
-      <path d='M10.34 15.89v6.43' stroke='currentColor' />
+      <path d='M3.49 15.89v6.56' stroke='currentColor' />
+      <path d='M10.3 15.89v6.56' stroke='currentColor' />
       <path
-        d='M3.55 15.89h2.3c.96 0 1.74.82 1.74 1.84a1.8 1.8 0 0 1-1.74 1.84h-2.3'
+        d='M3.51 15.89h2.34c.98 0 1.78.84 1.78 1.88 0 1.03-.8 1.87-1.78 1.87H3.51'
         stroke='currentColor'
       />
       <path
-        d='M10.36 15.89h2.3c.96 0 1.74.82 1.74 1.84a1.8 1.8 0 0 1-1.74 1.84h-2.3'
+        d='M10.32 15.89h2.34c.98 0 1.78.84 1.78 1.88 0 1.03-.8 1.87-1.78 1.87h-2.34'
         stroke='currentColor'
       />
     </svg>

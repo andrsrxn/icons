@@ -33,17 +33,17 @@ export const IconBallBowling: Icon = ({
       />
       <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
       <path
-        d='M17.26 7.6a.7.7 0 1 1-1.38 0 .7.7 0 0 1 1.38 0'
+        d='M17.79 10.76a.74.74 0 1 1-1.11-.99.74.74 0 0 1 1.1 1'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M12 7.27a.7.7 0 1 1-1.39 0 .7.7 0 0 1 1.39 0'
+        d='M13.8 6.73a.74.74 0 1 1-1.1-.99.74.74 0 0 1 1.1.99'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M14.7 12a.7.7 0 1 1-1.39 0 .7.7 0 0 1 1.39 0'
+        d='M12.59 12.45a.74.74 0 1 1-1.11-.99.74.74 0 0 1 1.1 1'
         fill='currentColor'
         stroke='currentColor'
       />

@@ -41,7 +41,7 @@ export const IconFaceBlink: Icon = ({
         stroke='currentColor'
       />
       <path d='M15.7 15.37a5 5 0 0 1-3.7 1.28 5.6 5.6 0 0 1-3.7-1.28' stroke='currentColor' />
-      <path d='M13.96 9.54h2.49' stroke='currentColor' />
+      <path d='M13.69 9.54s.6-.43 1.51-.43 1.52.43 1.52.43' stroke='currentColor' />
     </svg>
   )
 }

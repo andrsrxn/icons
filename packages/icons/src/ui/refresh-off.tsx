@@ -26,8 +26,11 @@ export const IconRefreshOff: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M20.38 8.6c-2.24-3.19-4.95-5.38-8.8-5.38q-5.75 0-8.43 5' stroke='currentColor' />
-      <path d='M3.65 15.4c2.24 3.14 4.92 5.38 8.77 5.38q5.75 0 8.43-5' stroke='currentColor' />
+      <path
+        d='M20.38 8.6c-2.24-3.19-4.95-5.38-8.8-5.38-3.84 0-6.83 1.72-8.43 5'
+        stroke='currentColor'
+      />
+      <path d='M3.65 15.4c2.24 3.14 4.92 5.38 8.77 5.38s7-1.52 8.43-5' stroke='currentColor' />
       <path
         d='M21.34 4.23v1.3c0 1.9 0 2.84-.58 3.43-.59.58-1.53.58-3.42.58h-1.31'
         stroke='currentColor'

@@ -39,17 +39,17 @@ export const IconFileHtml: Icon = ({
         d='M13.18 2.3v2.48c0 1.9 0 2.83.58 3.42.59.59 1.53.59 3.42.59h2.48'
         stroke='currentColor'
       />
-      <path d='M5.22 16.64v5.03' stroke='currentColor' />
-      <path d='M1.82 16.64v5.03' stroke='currentColor' />
-      <path d='M1.82 19.16h3.4' stroke='currentColor' />
-      <path d='M9.35 16.64v5.03' stroke='currentColor' />
-      <path d='M13.34 16.64v5.03' stroke='currentColor' />
-      <path d='m13.4 16.6 2.09 2.5' stroke='currentColor' />
-      <path d='m17.5 16.6-2.01 2.5' stroke='currentColor' />
-      <path d='M17.5 16.64v5.03' stroke='currentColor' />
-      <path d='M7.5 16.64h3.7' stroke='currentColor' />
-      <path d='M20.18 16.54v5.13' stroke='currentColor' />
-      <path d='M22.87 21.67h-2.69' stroke='currentColor' />
+      <path d='M4.99 16.64v5.03' stroke='currentColor' />
+      <path d='M1.6 16.64v5.03' stroke='currentColor' />
+      <path d='M1.6 19.16h3.39' stroke='currentColor' />
+      <path d='M9.12 16.64v5.03' stroke='currentColor' />
+      <path d='M13.1 16.64v5.03' stroke='currentColor' />
+      <path d='m13.17 16.6 2.09 2.5' stroke='currentColor' />
+      <path d='m17.27 16.6-2.01 2.5' stroke='currentColor' />
+      <path d='M17.27 16.64v5.03' stroke='currentColor' />
+      <path d='M7.27 16.64h3.7' stroke='currentColor' />
+      <path d='M19.95 16.54v5.13' stroke='currentColor' />
+      <path d='M22.64 21.67h-2.69' stroke='currentColor' />
     </svg>
   )
 }

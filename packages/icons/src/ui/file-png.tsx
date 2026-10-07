@@ -39,9 +39,9 @@ export const IconFilePng: Icon = ({
         d='m13.2 2.28-.01 2.4c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h2.4'
         stroke='currentColor'
       />
-      <path d='M2.82 15.89v6.4' stroke='currentColor' />
+      <path d='M2.78 15.89v6.51' stroke='currentColor' />
       <path
-        d='M2.84 15.89h2.28c.96 0 1.73.82 1.73 1.83s-.77 1.83-1.73 1.83H2.84'
+        d='M2.8 15.89h2.33c.97 0 1.76.83 1.76 1.86s-.79 1.87-1.76 1.87H2.8'
         stroke='currentColor'
       />
       <path d='M9.64 15.93v6.47' stroke='currentColor' />

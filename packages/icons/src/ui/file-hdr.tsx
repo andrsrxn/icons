@@ -39,17 +39,17 @@ export const IconFileHdr: Icon = ({
         d='M13.21 2.35v2.43c0 1.88 0 2.83.59 3.41.58.59 1.52.59 3.41.59h2.44'
         stroke='currentColor'
       />
-      <path d='M6.75 15.86v6.42' stroke='currentColor' />
-      <path d='m19 19.65 2.59 2.63' stroke='currentColor' />
-      <path d='M17.53 15.86v6.42' stroke='currentColor' />
-      <path d='M2.41 15.86v6.42' stroke='currentColor' />
-      <path d='M2.41 19.07h4.34' stroke='currentColor' />
+      <path d='M6.75 15.95v6.43' stroke='currentColor' />
+      <path d='m19 19.74 2.59 2.64' stroke='currentColor' />
+      <path d='M17.53 15.95v6.43' stroke='currentColor' />
+      <path d='M2.41 15.95v6.43' stroke='currentColor' />
+      <path d='M2.41 19.17h4.34' stroke='currentColor' />
       <path
-        d='M9.83 17.64v2.86c0 .84 0 1.26.34 1.56.33.3.68.25 1.39.17 1.4-.17 3.16-.84 3.16-3.16s-1.76-3-3.16-3.16c-.7-.09-1.06-.13-1.4.17s-.33.72-.33 1.56'
+        d='M9.83 17.74v2.86c0 .84 0 1.26.34 1.55.33.3.68.26 1.39.18 1.4-.17 3.16-.85 3.16-3.16s-1.76-3-3.16-3.17c-.7-.08-1.06-.12-1.4.18s-.33.71-.33 1.56'
         stroke='currentColor'
       />
       <path
-        d='M17.56 15.86h2.29c.96 0 1.74.82 1.74 1.83a1.8 1.8 0 0 1-1.74 1.84h-2.3'
+        d='M17.56 15.95h2.29c.96 0 1.74.83 1.74 1.84a1.8 1.8 0 0 1-1.74 1.84h-2.3'
         stroke='currentColor'
       />
     </svg>

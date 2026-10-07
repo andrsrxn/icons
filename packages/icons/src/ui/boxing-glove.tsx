@@ -46,10 +46,7 @@ export const IconBoxingGlove: Icon = ({
         transform='matrix(-.7863 -.61785 .59169 -.80617 10.17 23)'
         stroke='currentColor'
       />
-      <path
-        d='M3.23 14.42a.8.8 0 0 1-.14-1.06c.24-.34.7-.4 1.03-.15l-.44.6zm3.48.83c.33.25.4.73.15 1.07a.73.73 0 0 1-1.04.14l.45-.6zm-3.03-1.43.44-.6 2.59 2.03-.44.6-.45.6-2.59-2.03z'
-        fill='currentColor'
-      />
+      <path d='m3.68 13.82 2.93 2.33' stroke='currentColor' />
     </svg>
   )
 }

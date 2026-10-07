@@ -26,10 +26,18 @@ export const IconDevicePc: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <rect opacity='.2' x='1.74' y='3.9' width='20.52' height='13.75' rx='3' fill='currentColor' />
-      <rect x='1.74' y='3.9' width='20.52' height='13.75' rx='3' stroke='currentColor' />
-      <path d='M7.64 21.77h8.7' stroke='currentColor' />
-      <path d='M12 21.77v-3.99' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        x='1.74'
+        y='3.34'
+        width='20.52'
+        height='13.75'
+        rx='3'
+        fill='currentColor'
+      />
+      <rect x='1.74' y='3.34' width='20.52' height='13.75' rx='3' stroke='currentColor' />
+      <path d='M7.64 21.2h8.7' stroke='currentColor' />
+      <path d='M12 21.2v-3.99' stroke='currentColor' />
     </svg>
   )
 }

@@ -28,51 +28,61 @@ export const IconKeyboardOff: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='14'
+        width='14.97'
         height='20.57'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.28 19)'
+        transform='matrix(0 -1 -1 0 22.32 19.48)'
         fill='currentColor'
       />
       <rect
-        width='14'
+        width='14.97'
         height='20.57'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.28 19)'
+        transform='matrix(0 -1 -1 0 22.32 19.48)'
         stroke='currentColor'
       />
+      <path d='M16.45 16.52H8.44' stroke='currentColor' />
+      <path d='m2.74 2.64 18.52 18.51' stroke='currentColor' />
       <path
-        d='M5.79 9.57a.57.57 0 1 1-1.15 0 .57.57 0 0 1 1.15 0'
+        d='M6.13 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M5.72 14.43a.57.57 0 1 1-1.15 0 .57.57 0 0 1 1.15 0'
+        d='M10.32 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M10.33 9.57a.57.57 0 1 1-1.14 0 .57.57 0 0 1 1.14 0'
+        d='M6.13 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M14.88 9.57a.57.57 0 1 1-1.15 0 .57.57 0 0 1 1.15 0'
+        d='M10.32 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M19.43 9.57a.57.57 0 1 1-1.15 0 .57.57 0 0 1 1.15 0'
+        d='M14.5 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M19.36 14.43a.57.57 0 1 1-1.15 0 .57.57 0 0 1 1.15 0'
+        d='M14.5 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M14.3 14.5H9.13' stroke='currentColor' />
-      <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
+      <path
+        d='M18.69 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M18.69 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

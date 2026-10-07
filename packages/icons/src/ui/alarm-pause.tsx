@@ -38,6 +38,8 @@ export const IconAlarmPause: Icon = ({
       <path d='M1.41 5.16 5.07 1.5' stroke='currentColor' />
       <rect x='7.47' y='7.88' width='3.18' height='9.53' rx='1' stroke='currentColor' />
       <rect x='13.36' y='7.88' width='3.18' height='9.53' rx='1' stroke='currentColor' />
+      <path d='m2.17 21.59 2.4-2.4' stroke='currentColor' />
+      <path d='m21.77 21.53-2.34-2.34' stroke='currentColor' />
     </svg>
   )
 }

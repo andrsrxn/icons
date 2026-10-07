@@ -55,8 +55,8 @@ export const IconTruckDelivery: Icon = ({
         stroke='currentColor'
       />
       <path d='M8.67 16.79h4.66' stroke='currentColor' />
-      <path d='M7.15 5.55H1.22' stroke='currentColor' />
-      <path d='M9.78 8.7H3.85' stroke='currentColor' />
+      <path d='M7.66 5.55H1.73' stroke='currentColor' />
+      <path d='M10.33 8.7H4.4' stroke='currentColor' />
     </svg>
   )
 }

@@ -41,12 +41,12 @@ export const IconLightbulbSparkle: Icon = ({
         stroke='currentColor'
       />
       <path d='M15.33 17.06H8.65' stroke='currentColor' />
-      <path d='M12 11.07v5.98' stroke='currentColor' />
       <path d='M13.84 4.82c1.56 0 3.24-1.7 3.24-3.25' stroke='currentColor' />
       <path d='M20.33 4.82c-1.56 0-3.25-1.69-3.25-3.25' stroke='currentColor' />
       <path d='M13.84 4.82c1.55 0 3.24 1.72 3.24 3.25' stroke='currentColor' />
       <path d='M20.33 4.82c-1.54 0-3.25 1.7-3.25 3.25' stroke='currentColor' />
       <path d='M15.33 17.05c0-.73.44-1.38 1.04-1.82a5.8 5.8 0 0 0 2.4-4.36' stroke='currentColor' />
+      <path d='M8.4 9.46c0-.62.13-1.11.41-1.66.33-.63.75-.97 1.22-1.23' stroke='currentColor' />
     </svg>
   )
 }

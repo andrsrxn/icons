@@ -39,12 +39,12 @@ export const IconFileXls: Icon = ({
         d='M13.21 2.27V4.7c0 1.9 0 2.84.58 3.42.59.59 1.53.59 3.42.59h2.44'
         stroke='currentColor'
       />
-      <path d='m3.23 22.32 4.45-6.42' stroke='currentColor' />
-      <path d='M7.68 22.32 3.23 15.9' stroke='currentColor' />
-      <path d='M10.7 15.82v6.5' stroke='currentColor' />
-      <path d='M14.16 22.32H10.7' stroke='currentColor' />
+      <path d='m3.16 22.37 4.49-6.47' stroke='currentColor' />
+      <path d='M7.65 22.37 3.16 15.9' stroke='currentColor' />
+      <path d='M10.7 15.82v6.55' stroke='currentColor' />
+      <path d='M14.18 22.37h-3.49' stroke='currentColor' />
       <path
-        d='M20.86 16.59a3.5 3.5 0 0 0-2.3-.87c-1.08 0-2.28.55-2.28 1.72 0 2.51 4.58.51 4.58 3.06 0 1.19-1.17 1.83-2.3 1.83-1.1 0-1.86-.32-2.38-1.02'
+        d='M20.93 16.6a3.6 3.6 0 0 0-2.3-.88c-1.11 0-2.32.56-2.32 1.74 0 2.52 4.62.51 4.62 3.08 0 1.2-1.18 1.84-2.3 1.84-1.14 0-1.9-.32-2.41-1.02'
         stroke='currentColor'
       />
     </svg>

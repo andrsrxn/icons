@@ -29,7 +29,7 @@ export const IconCalculator: Icon = ({
       <rect
         opacity='.2'
         width='18.49'
-        height='5.56'
+        height='5.18'
         rx='2'
         transform='matrix(-1 0 0 1 21.25 2.73)'
         fill='currentColor'
@@ -41,17 +41,15 @@ export const IconCalculator: Icon = ({
         transform='matrix(-1 0 0 1 21.25 2.73)'
         stroke='currentColor'
       />
-      <path d='M2.75 8.3h18.5' stroke='currentColor' />
-      <path d='M14.5 5.5h3.54' stroke='currentColor' />
-      <path d='M6 11.17h1.6' stroke='currentColor' />
-      <path d='M11.22 11.17h1.6' stroke='currentColor' />
-      <path d='M16.44 11.17h1.6' stroke='currentColor' />
-      <path d='M6 14.94h1.6' stroke='currentColor' />
-      <path d='M6 18.53h1.6' stroke='currentColor' />
-      <path d='M11.22 14.94h1.6' stroke='currentColor' />
-      <path d='M11.22 18.53h1.6' stroke='currentColor' />
-      <path d='M16.44 14.94h1.6' stroke='currentColor' />
-      <path d='M16.44 18.53h1.6' stroke='currentColor' />
+      <path d='M2.75 7.9h18.5' stroke='currentColor' />
+      <path d='M5.98 10.68h1.6' stroke='currentColor' />
+      <path d='M11.2 10.68h1.6' stroke='currentColor' />
+      <path d='M16.42 10.68h1.6' stroke='currentColor' />
+      <path d='M5.98 14.53h1.6' stroke='currentColor' />
+      <path d='M5.98 18.2h1.6' stroke='currentColor' />
+      <path d='M11.2 14.53h1.6' stroke='currentColor' />
+      <path d='M16.42 14.53h1.6' stroke='currentColor' />
+      <path d='M11.2 18.2h6.82' stroke='currentColor' />
     </svg>
   )
 }

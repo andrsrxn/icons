@@ -28,28 +28,31 @@ export const IconScale: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='9.2'
-        height='9.2'
+        width='8.16'
+        height='8.16'
         rx='2'
-        transform='matrix(0 -1 -1 0 12 21.14)'
+        transform='matrix(0 -1 -1 0 10.96 21.14)'
         fill='currentColor'
       />
       <rect
-        width='9.2'
-        height='9.2'
+        width='8.16'
+        height='8.16'
         rx='2'
-        transform='matrix(0 -1 -1 0 12 21.14)'
+        transform='matrix(0 -1 -1 0 10.96 21.14)'
         stroke='currentColor'
       />
-      <path d='m15.18 8.74-3.64 3.64' stroke='currentColor' />
-      <path d='M11.75 7.5h.66c1.88 0 2.83 0 3.41.58.6.6.6 1.53.6 3.42v.66' stroke='currentColor' />
-      <path d='M6.07 2.66h-.08l-.45.01a3 3 0 0 0-2.8 2.8v.45' stroke='currentColor' />
-      <path d='M18.02 2.66h.07l.45.01a3 3 0 0 1 2.8 2.8v.45' stroke='currentColor' />
-      <path d='M18.02 21.24h.52a3 3 0 0 0 2.8-2.8V18' stroke='currentColor' />
-      <path d='M21.28 10.14v3.57' stroke='currentColor' />
-      <path d='M10.26 2.67h3.56' stroke='currentColor' />
-      <path d='M2.8 10.14v5.15' stroke='currentColor' />
-      <path d='M8.5 21.14h5.32' stroke='currentColor' />
+      <path d='m14.97 9.2-4.36 4.36' stroke='currentColor' />
+      <path
+        d='M11.5 8.42h1.25c1.42 0 2.12 0 2.56.43.44.44.44 1.15.44 2.56v1.25'
+        stroke='currentColor'
+      />
+      <path d='M21.3 5.98V5.9l-.01-.45a3 3 0 0 0-2.8-2.8h-.45' stroke='currentColor' />
+      <path d='M21.3 17.93V18l-.01.45a3 3 0 0 1-2.8 2.8h-.45' stroke='currentColor' />
+      <path d='M2.71 5.98v-.53a3 3 0 0 1 2.8-2.8h.45' stroke='currentColor' />
+      <path d='M13.82 2.72h-3.57' stroke='currentColor' />
+      <path d='M14.52 21.2h-1.05' stroke='currentColor' />
+      <path d='M2.81 9.48v1.23' stroke='currentColor' />
+      <path d='M21.29 10.17v3.57' stroke='currentColor' />
     </svg>
   )
 }

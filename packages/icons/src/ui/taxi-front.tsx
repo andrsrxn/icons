@@ -39,13 +39,27 @@ export const IconTaxiFront: Icon = ({
         d='m5.06 9.66.08-.47c.44-2.35.66-3.52 1.49-4.21.83-.7 2.03-.7 4.41-.7H13c2.49 0 3.73 0 4.58.74S18.6 7 18.94 9.46l.03.2'
         stroke='currentColor'
       />
-      <path d='M4.8 18.24v.44a2.26 2.26 0 0 0 4.52 0v-.44' stroke='currentColor' />
-      <path d='M14.85 18.24v.44a2.26 2.26 0 0 0 4.51 0v-.44' stroke='currentColor' />
+      <path
+        d='M4.8 18.24v.44c0 .7 0 1.06.12 1.34q.24.56.8.8c.29.12.64.12 1.34.12s1.06 0 1.34-.12q.56-.24.8-.8c.12-.28.12-.63.12-1.34v-.44'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.85 18.24v.44a4 4 0 0 0 .11 1.34q.24.56.8.8c.29.12.64.12 1.34.12s1.06 0 1.34-.12q.56-.24.8-.8c.12-.28.12-.63.12-1.34v-.44'
+        stroke='currentColor'
+      />
       <path d='m19.5 9.66 2.16-2.15' stroke='currentColor' />
       <path d='M9.23 1.77h5.57' stroke='currentColor' />
-      <path d='M15.77 14.88h2.16' stroke='currentColor' />
-      <path d='M5.98 14.88h2.27' stroke='currentColor' />
       <path d='M5 9.66 2.83 7.5' stroke='currentColor' />
+      <path
+        d='M7.42 14.88a.44.44 0 1 1-.88 0 .44.44 0 0 1 .88 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.46 14.88a.44.44 0 1 1-.88 0 .44.44 0 0 1 .88 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

@@ -36,7 +36,7 @@ export const IconLightbulb: Icon = ({
         d='M8.4 17.06v1.78c0 1.37 0 2.06.32 2.56a2 2 0 0 0 .58.58c.5.33 1.19.33 2.56.33s2.07 0 2.56-.33a2 2 0 0 0 .59-.58c.32-.5.32-1.19.32-2.56v-1.78'
         stroke='currentColor'
       />
-      <path d='M12 11.07v5.98' stroke='currentColor' />
+      <path d='M7.7 9.38c0-.86.18-1.54.57-2.3a4 4 0 0 1 1.7-1.7' stroke='currentColor' />
     </svg>
   )
 }

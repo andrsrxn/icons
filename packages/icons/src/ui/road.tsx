@@ -35,8 +35,9 @@ export const IconRoad: Icon = ({
         d='M14.6 22.25c3.33 0 5 0 5.9-1.08s.6-2.72 0-6l-1.55-8.5c-.42-2.35-.64-3.52-1.47-4.22-.84-.7-2.03-.7-4.43-.7h-2.02c-2.4 0-3.6 0-4.43.7-.84.7-1.05 1.88-1.48 4.24l-1.53 8.5c-.6 3.27-.89 4.9.01 5.98s2.56 1.08 5.9 1.08z'
         stroke='currentColor'
       />
-      <path d='M12 5.61V10' stroke='currentColor' />
-      <path d='M12 14v4.39' stroke='currentColor' />
+      <path d='M12 9.8v4.4' stroke='currentColor' />
+      <path d='M12 1.75v4.03' stroke='currentColor' />
+      <path d='M12 18.38v3.87' stroke='currentColor' />
     </svg>
   )
 }

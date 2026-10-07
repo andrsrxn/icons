@@ -30,13 +30,10 @@ export const IconGitMerge: Icon = ({
       <circle opacity='.2' cx='6.99' cy='18.42' r='3.08' fill='currentColor' />
       <circle opacity='.2' cx='17.54' cy='12.18' r='3.08' fill='currentColor' />
       <path d='M7 9.02v6.31' stroke='currentColor' />
-      <path
-        d='m6.9 8.9 1.9 1.73a6 6 0 0 0 1.8 1.38c.53.2 1.11.2 2.26.2h1.6'
-        stroke='currentColor'
-      />
       <circle cx='6.99' cy='5.64' r='3.08' stroke='currentColor' />
       <circle cx='6.99' cy='18.42' r='3.08' stroke='currentColor' />
       <circle cx='17.54' cy='12.18' r='3.08' stroke='currentColor' />
+      <path d='M6.9 8.9s1.23 1.75 2.97 2.62c2.27 1.13 4.5.9 4.5.9' stroke='currentColor' />
     </svg>
   )
 }

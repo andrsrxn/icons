@@ -44,8 +44,14 @@ export const IconTruckFront: Icon = ({
         d='M4.67 5.65a2.8 2.8 0 0 1 2.82-2.82h9.02a2.8 2.8 0 0 1 2.82 2.82'
         stroke='currentColor'
       />
-      <path d='M5.08 18.62v.42a2.13 2.13 0 1 0 4.26 0v-.42' stroke='currentColor' />
-      <path d='M14.66 18.62v.42a2.13 2.13 0 0 0 4.26 0v-.42' stroke='currentColor' />
+      <path
+        d='M5.08 18.62v.42c0 .59 0 .88.08 1.11.15.44.5.79.94.94.23.08.53.08 1.11.08s.88 0 1.11-.08c.44-.15.79-.5.94-.94.08-.23.08-.52.08-1.11v-.42'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.66 18.62v.42c0 .59 0 .88.08 1.11.15.44.5.79.94.94.23.08.52.08 1.1.08.6 0 .89 0 1.12-.08.44-.15.79-.5.94-.94.08-.23.08-.52.08-1.11v-.42'
+        stroke='currentColor'
+      />
       <path d='M2.77 12.98H21.1' stroke='currentColor' />
       <path d='M5.46 15.68h3.5' stroke='currentColor' />
       <path d='M15.04 15.68h3.5' stroke='currentColor' />

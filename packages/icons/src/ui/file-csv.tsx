@@ -36,14 +36,14 @@ export const IconFileCsv: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M13.21 2.27v2.41c0 1.89 0 2.83.59 3.42.58.59 1.53.59 3.41.59h2.42'
+        d='M13.22 2.27v2.41c0 1.89-.01 2.83.58 3.42.58.59 1.53.59 3.41.59h2.42'
         stroke='currentColor'
       />
-      <path d='m16.78 15.81 2.45 6.45' stroke='currentColor' />
-      <path d='m21.67 15.81-2.44 6.45' stroke='currentColor' />
-      <path d='M7.05 16.03a3.3 3.3 0 1 0 0 5.87' stroke='currentColor' />
+      <path d='m16.86 15.81 2.5 6.56' stroke='currentColor' />
+      <path d='m21.84 15.81-2.49 6.56' stroke='currentColor' />
+      <path d='M6.96 16.04a3.35 3.35 0 1 0 0 5.97' stroke='currentColor' />
       <path
-        d='M14.39 16.54a3.5 3.5 0 0 0-2.29-.86c-1.09 0-2.28.55-2.28 1.71 0 2.5 4.57.5 4.57 3.05 0 1.18-1.17 1.82-2.29 1.82-1.1 0-1.86-.32-2.37-1.01'
+        d='M14.43 16.55a3.6 3.6 0 0 0-2.32-.87c-1.11 0-2.32.56-2.32 1.74 0 2.54 4.64.52 4.64 3.1 0 1.2-1.19 1.85-2.32 1.85-1.14 0-1.9-.32-2.42-1.03'
         stroke='currentColor'
       />
     </svg>

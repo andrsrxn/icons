@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconGitPr: Icon = ({
+export const IconGamepad: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,26 +19,38 @@ export const IconGitPr: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-git-pr'
+      data-slot='icon-ui-gamepad'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <circle opacity='.2' cx='6.01' cy='18.37' r='3.07' fill='currentColor' />
-      <path d='M6.01 9v6.3' stroke='currentColor' />
-      <circle cx='6.01' cy='18.37' r='3.07' stroke='currentColor' />
-      <circle opacity='.2' cx='6.01' cy='5.63' r='3.07' fill='currentColor' />
-      <circle opacity='.2' cx='17.99' cy='18.37' r='3.07' fill='currentColor' />
-      <circle cx='6.01' cy='5.63' r='3.07' stroke='currentColor' />
-      <circle cx='17.99' cy='18.37' r='3.07' stroke='currentColor' />
+      <rect
+        opacity='.2'
+        width='11.33'
+        height='20.75'
+        rx='5.67'
+        transform='matrix(0 -1 -1 0 22.38 17.67)'
+        fill='currentColor'
+      />
+      <path d='M5.36 12h5.01' stroke='currentColor' />
+      <path d='M7.86 14.5v-5' stroke='currentColor' />
       <path
-        d='M13.23 5.71h.76c1.88 0 2.83 0 3.41.59.59.58.59 1.53.59 3.41v5.58'
+        d='M15.54 13.72a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0'
+        fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M14.5 3.2c-1.04 1.02-1.55 1.54-1.66 2.16a2 2 0 0 0 0 .7c.1.62.62 1.13 1.65 2.17'
+        d='M18.25 10.28a.5.5 0 1 1-.98 0 .5.5 0 0 1 .98 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <rect
+        width='11.33'
+        height='20.75'
+        rx='5.67'
+        transform='matrix(0 -1 -1 0 22.38 17.67)'
         stroke='currentColor'
       />
     </svg>

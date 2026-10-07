@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconPlayingHeart: Icon = ({
+export const IconLightningFilled: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconPlayingHeart: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-playing-heart'
+      data-slot='icon-ui-lightning-filled'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}
@@ -27,12 +27,11 @@ export const IconPlayingHeart: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        opacity='.2'
-        d='M17.25 3.35c-1.8 0-3.27.9-4.23 1.8-.55.52-.82.78-1.02.78s-.47-.26-1.02-.78a6.3 6.3 0 0 0-4.23-1.8C3.4 3.35.88 7.17 1.96 11.2c1.03 3.85 5.67 7.26 9.5 9.85.26.18.39.27.54.27s.29-.09.55-.27c3.93-2.58 8.46-6 9.49-9.85 1.08-4.04-1.44-7.86-4.79-7.86'
+        d='m6.27 10.9 3.93-5.3c2.09-2.8 3.13-4.2 3.86-3.88s.4 2.04-.3 5.47l-.04.22c-.22 1.1-.33 1.66-.03 2.03s.86.36 2 .36h.63c1.73 0 2.59 0 2.87.55s-.24 1.24-1.26 2.64l-4 5.43c-2.1 2.86-3.16 4.28-3.89 3.96s-.38-2.06.32-5.54l.07-.36c.22-1.1.33-1.66.03-2.03s-.86-.36-2-.36h-.59c-1.74 0-2.6 0-2.88-.55s.24-1.25 1.28-2.65'
         fill='currentColor'
       />
       <path
-        d='M17.25 3.35c-1.8 0-3.27.9-4.23 1.8-.55.52-.82.78-1.02.78s-.47-.26-1.02-.78a6.3 6.3 0 0 0-4.23-1.8C3.4 3.35.88 7.17 1.96 11.2c1.05 3.9 4.7 6.88 9.53 9.9.25.15.37.23.51.23s.27-.07.52-.22c5.28-3.17 8.47-6 9.52-9.91 1.08-4.04-1.44-7.86-4.79-7.86'
+        d='m6.27 10.9 3.93-5.3c2.09-2.8 3.13-4.2 3.86-3.88s.4 2.04-.3 5.47l-.04.22c-.22 1.1-.33 1.66-.03 2.02s.86.37 2 .37h.63c1.73 0 2.59 0 2.87.55s-.24 1.24-1.26 2.64l-4 5.43c-2.1 2.86-3.16 4.28-3.89 3.96s-.38-2.06.32-5.54l.07-.36c.22-1.1.33-1.66.03-2.03s-.86-.36-2-.36h-.59c-1.74 0-2.6 0-2.88-.55s.24-1.25 1.28-2.65'
         stroke='currentColor'
       />
     </svg>

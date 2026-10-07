@@ -40,7 +40,8 @@ export const IconVolumeSilent: Icon = ({
         d='m7.48 15.47 3.62 3.11c1.42 1.22 2.14 1.83 2.72 1.57.58-.27.58-1.21.58-3.09V6.81c0-1.83 0-2.75-.57-3.02s-1.28.31-2.7 1.47l-3.65 3'
         stroke='currentColor'
       />
-      <path d='m17.65 14.41 4.82-4.82m0 4.82L17.65 9.6' stroke='currentColor' />
+      <path d='m22.47 9.63-4.78 4.78' stroke='currentColor' />
+      <path d='m17.69 9.62 4.78 4.78' stroke='currentColor' />
     </svg>
   )
 }

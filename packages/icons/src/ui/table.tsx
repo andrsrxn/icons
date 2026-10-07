@@ -38,10 +38,10 @@ export const IconTable: Icon = ({
         transform='scale(1 -1)rotate(90 21.24 0)'
         stroke='currentColor'
       />
-      <path d='M21 9H3' stroke='currentColor' />
-      <path d='M21 13.12H3' stroke='currentColor' />
+      <path d='M21 8.38H3' stroke='currentColor' />
+      <path d='M21 12.68H3' stroke='currentColor' />
       <path d='M21 17.12H3' stroke='currentColor' />
-      <path d='M12 9v12.24' stroke='currentColor' />
+      <path d='M12 8.38v12.86' stroke='currentColor' />
     </svg>
   )
 }

@@ -28,7 +28,7 @@ export const IconFileTxt: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M3.9 13V5.77c0-1.87 0-2.8.59-3.39.57-.58 1.5-.59 3.38-.6l2.15-.03c1.27-.01 1.9-.02 2.38.25a2 2 0 0 1 .73.72c.27.47.27 1.1.27 2.37 0 1.26 0 1.89.27 2.35a2 2 0 0 0 .72.72c.47.28 1.1.28 2.36.28s1.88 0 2.35.27a2 2 0 0 1 .72.72c.27.47.27 1.1.27 2.35V13z'
+        d='M3.9 13V5.77c0-1.87 0-2.8.59-3.39.57-.58 1.5-.59 3.38-.6l2.15-.03c1.27-.01 1.9-.02 2.38.25a2 2 0 0 1 .73.72c.27.47.27 1.1.27 2.37 0 1.26 0 1.89.27 2.35a2 2 0 0 0 .72.72c.47.28 1.1.28 2.36.28s1.88 0 2.35.27a2 2 0 0 1 .72.72c.27.46.27 1.1.27 2.35V13z'
         fill='currentColor'
       />
       <path
@@ -39,12 +39,12 @@ export const IconFileTxt: Icon = ({
         d='M13.2 2.32V4.7c0 1.89 0 2.83.59 3.42.58.58 1.53.58 3.41.58h2.39'
         stroke='currentColor'
       />
-      <path d='M9.88 22.11 14.12 16' stroke='currentColor' />
-      <path d='M14.12 22.11 9.88 16' stroke='currentColor' />
-      <path d='M4.88 16.03v6.23' stroke='currentColor' />
-      <path d='M19.12 16.03v6.23' stroke='currentColor' />
-      <path d='M2.58 16.03h4.59' stroke='currentColor' />
-      <path d='M16.83 16.03h4.59' stroke='currentColor' />
+      <path d='m9.78 22.45 4.44-6.4' stroke='currentColor' />
+      <path d='m14.22 22.45-4.44-6.4' stroke='currentColor' />
+      <path d='M4.68 16.05v6.4' stroke='currentColor' />
+      <path d='M19.32 16.05v6.4' stroke='currentColor' />
+      <path d='M2.32 16.05h4.72' stroke='currentColor' />
+      <path d='M16.96 16.05h4.72' stroke='currentColor' />
     </svg>
   )
 }

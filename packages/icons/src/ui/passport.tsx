@@ -39,8 +39,8 @@ export const IconPassport: Icon = ({
         stroke='currentColor'
       />
       <path d='M15.19 11.56a5.6 5.6 0 0 0-6.38 0' stroke='currentColor' />
-      <path d='M8.64 14.95h6.7' stroke='currentColor' />
-      <path d='M8.64 18.21h6.7' stroke='currentColor' />
+      <path d='M7.96 14.95h8.06' stroke='currentColor' />
+      <path d='M9.35 18.21h5.28' stroke='currentColor' />
     </svg>
   )
 }

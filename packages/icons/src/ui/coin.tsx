@@ -26,13 +26,9 @@ export const IconCoin: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <ellipse
+      <path
         opacity='.2'
-        cx='10.07'
-        cy='12'
-        rx='10.18'
-        ry='4.93'
-        transform='rotate(90 10.07 12)'
+        d='M14.74 22.18c-4.78 0 0-4.27 0-9.9 0-7.04-4.7-10.46 0-10.46 2.73 0 4.94 4.56 4.94 10.18s-2.21 10.18-4.94 10.18'
         fill='currentColor'
       />
       <ellipse
@@ -49,7 +45,7 @@ export const IconCoin: Icon = ({
       />
       <path d='M10.07 1.82h4.67' stroke='currentColor' />
       <path d='M14.13 5.76h4.32' stroke='currentColor' />
-      <path d='M15.36 12h4.32' stroke='currentColor' />
+      <path d='M15 12h4.68' stroke='currentColor' />
       <path d='M14.13 18.21h4.32' stroke='currentColor' />
       <path d='M10.07 22.18h4.67' stroke='currentColor' />
     </svg>

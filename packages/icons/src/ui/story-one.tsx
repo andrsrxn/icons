@@ -40,7 +40,7 @@ export const IconStoryOne: Icon = ({
       <path d='M18.92 19.62q-.88.79-1.92 1.36' stroke='currentColor' />
       <path d='M22.32 12c0 1.7-.42 3.3-1.15 4.72' stroke='currentColor' />
       <path
-        d='m9.04 11.3 2.55-2.32c.72-.65 1.08-.98 1.38-.85s.3.62.3 1.59v7.11'
+        d='m8.67 11.04 3.05-2.78c.72-.65 1.08-.98 1.37-.85s.3.62.3 1.59v8.22'
         stroke='currentColor'
       />
     </svg>

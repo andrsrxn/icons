@@ -35,11 +35,11 @@ export const IconFileBinary: Icon = ({
         d='M3.8 13.02V7.76c0-2.83 0-4.25.88-5.12s2.3-.88 5.13-.88h1.9c1.23 0 1.85 0 2.4.22.55.23.98.66 1.85 1.53l1.24 1.24 1.18 1.15c.9.87 1.34 1.3 1.57 1.86.24.56.24 1.19.24 2.43v2.83'
         stroke='currentColor'
       />
-      <path d='M13.22 2.27v2.46c0 1.89 0 2.83.58 3.42s1.53.58 3.42.58h2.46' stroke='currentColor' />
+      <path d='M13.22 2.27v2.46c0 1.88 0 2.83.58 3.42s1.53.58 3.42.58h2.46' stroke='currentColor' />
       <rect x='3.71' y='15.78' width='3.82' height='6.62' rx='1.91' stroke='currentColor' />
       <rect x='16.51' y='15.78' width='3.82' height='6.62' rx='1.91' stroke='currentColor' />
       <path
-        d='m10.2 17.88 1.2-1.1c.71-.65 1.07-.98 1.37-.85.3.14.3.62.3 1.6v4.87'
+        d='m10.18 17.81 1.23-1.12c.72-.66 1.08-.99 1.38-.86s.3.62.3 1.6v4.97'
         stroke='currentColor'
       />
     </svg>

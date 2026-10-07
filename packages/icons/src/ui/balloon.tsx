@@ -28,7 +28,7 @@ export const IconBalloon: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M18.63 7.8c0 3.32-2.93 9.15-6.26 9.15S6.6 11.12 6.6 7.8a6.02 6.02 0 0 1 12.04 0'
+        d='M18.63 7.8c0 3.32-2.93 9.15-6.26 9.15S6.6 11.12 6.6 7.8a6.02 6.02 0 1 1 12.04 0'
         fill='currentColor'
       />
       <path
@@ -39,7 +39,7 @@ export const IconBalloon: Icon = ({
         d='M12.79 16.95c.59.98.37 2-.7 2.79-1.21.89-2.94-.12-4.52.33-1.5.42-1.77 1.45-2.02 2.38'
         stroke='currentColor'
       />
-      <path d='M12.44 5.17c.66.07 1.46.28 2.09.92.68.68.9 1.6.9 2.3' stroke='currentColor' />
+      <path d='M12.6 5.17c-.65.07-1.45.28-2.08.92a3.3 3.3 0 0 0-.9 2.3' stroke='currentColor' />
     </svg>
   )
 }

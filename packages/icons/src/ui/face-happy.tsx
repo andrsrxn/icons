@@ -26,12 +26,11 @@ export const IconFaceHappy: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <circle
+      <path
         opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.28'
-        transform='rotate(90 12 12)'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M1.72 12a10.28 10.28 0 1 0 20.56 0 10.28 10.28 0 0 0-20.56 0m5.85 2.58.93 2.33 3.5 1.46 3.17-1.46 1.47-2.52z'
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.28' transform='rotate(90 12 12)' stroke='currentColor' />
@@ -45,8 +44,10 @@ export const IconFaceHappy: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M16.56 14.4c0 2.1-1.98 3.69-4.56 3.69s-4.56-1.58-4.56-3.7' stroke='currentColor' />
-      <path d='M7.44 14.4h9.12' stroke='currentColor' />
+      <path
+        d='M12 18.09a4.8 4.8 0 0 0 3.97-1.82c.37-.53.56-.8.28-1.34s-.75-.54-1.69-.54H9.44c-.94 0-1.41 0-1.69.54s-.1.8.28 1.34A4.8 4.8 0 0 0 12 18.09'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

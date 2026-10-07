@@ -34,7 +34,7 @@ export const IconStrokeAlignOutside: Icon = ({
         fill='currentColor'
       />
       <path d='m21.16 22.23-.05-15.7' stroke='currentColor' />
-      <path d='M22.3 4.26a2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 1 1 2.5-2.5' stroke='currentColor' />
+      <path d='M22.16 4.47a2.5 2.5 0 0 1-2.49 2.49 2.5 2.5 0 1 1 2.5-2.5' stroke='currentColor' />
       <path d='M1.82 3.47h15.2' stroke='currentColor' />
       <path
         d='M9.44 22.23v-4.79c0-1.88 0-2.82-.59-3.41-.58-.59-1.53-.59-3.41-.59H1.82'

@@ -39,14 +39,14 @@ export const IconFileXml: Icon = ({
         d='M13.19 2.34v2.4c0 1.9 0 2.84.58 3.43.59.58 1.53.58 3.42.58h2.41'
         stroke='currentColor'
       />
-      <path d='m2.69 22.3 4.43-6.4' stroke='currentColor' />
-      <path d='m7.12 22.3-4.43-6.4' stroke='currentColor' />
-      <path d='M18.34 15.84v6.46' stroke='currentColor' />
-      <path d='M21.78 22.3h-3.44' stroke='currentColor' />
-      <path d='M10.02 15.9v6.37' stroke='currentColor' />
-      <path d='m10.1 15.87 2.64 3.2' stroke='currentColor' />
-      <path d='m15.29 15.87-2.55 3.22' stroke='currentColor' />
-      <path d='M15.29 15.9v6.37' stroke='currentColor' />
+      <path d='m2.53 22.4 4.5-6.5' stroke='currentColor' />
+      <path d='m7.04 22.4-4.5-6.5' stroke='currentColor' />
+      <path d='M18.43 15.84v6.57' stroke='currentColor' />
+      <path d='M21.93 22.4h-3.5' stroke='currentColor' />
+      <path d='M9.98 15.9v6.47' stroke='currentColor' />
+      <path d='m10.07 15.87 2.67 3.25' stroke='currentColor' />
+      <path d='m15.34 15.87-2.6 3.27' stroke='currentColor' />
+      <path d='M15.34 15.9v6.47' stroke='currentColor' />
     </svg>
   )
 }
