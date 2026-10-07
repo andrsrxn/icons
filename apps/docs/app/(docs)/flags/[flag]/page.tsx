@@ -27,7 +27,7 @@ export default async function FlagsPage({ params }: { params: Promise<{ flag: st
         Back to icons
       </Link>
 
-      <IconSection iconName={iconName} />
+      <IconSection group='flags' iconName={iconName} />
     </div>
   )
 }

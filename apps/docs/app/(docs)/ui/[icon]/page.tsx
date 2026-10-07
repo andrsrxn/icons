@@ -25,7 +25,7 @@ export default async function IconPage({ params }: { params: Promise<{ icon: str
         Back to icons
       </Link>
 
-      <IconSection iconName={iconName} />
+      <IconSection group='ui' iconName={iconName} />
     </div>
   )
 }
