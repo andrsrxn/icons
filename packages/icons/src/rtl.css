@@ -120,24 +120,20 @@
 [dir='ltr'] [data-slot='icon-ui-arrows-start-end'],
 [dir='ltr'] [data-slot='icon-ui-arrows-start-from-line'],
 [dir='ltr'] [data-slot='icon-ui-arrows-end-from-line'],
-
 [dir='ltr'] [data-slot='icon-ui-border-end'],
 [dir='ltr'] [data-slot='icon-ui-border-start'],
 [dir='ltr'] [data-slot='icon-ui-bounce-end'],
 [dir='ltr'] [data-slot='icon-ui-bounce-start'],
-
 [dir='ltr'] [data-slot='icon-ui-chevron-start'],
 [dir='ltr'] [data-slot='icon-ui-chevron-end'],
 [dir='ltr'] [data-slot='icon-ui-chevron-start-double'],
 [dir='ltr'] [data-slot='icon-ui-chevron-end-double'],
-
 [dir='ltr'] [data-slot='icon-ui-text-align-start'],
 [dir='ltr'] [data-slot='icon-ui-text-align-end'],
 [dir='ltr'] [data-slot='icon-ui-text-centerline-end'],
 [dir='ltr'] [data-slot='icon-ui-text-centerline-start'],
 [dir='ltr'] [data-slot='icon-ui-text-firstline-start'],
 [dir='ltr'] [data-slot='icon-ui-text-firstline-end'],
-
 [dir='ltr'] [data-slot='icon-ui-panel-end-filled'],
 [dir='ltr'] [data-slot='icon-ui-panel-end-open-filled'],
 [dir='ltr'] [data-slot='icon-ui-panel-end-open'],
@@ -150,10 +146,8 @@
 [dir='ltr'] [data-slot='icon-ui-panels-end'],
 [dir='ltr'] [data-slot='icon-ui-panels-start-filled'],
 [dir='ltr'] [data-slot='icon-ui-panels-start'],
-
 [dir='ltr'] [data-slot='icon-ui-slides-start'],
 [dir='ltr'] [data-slot='icon-ui-slides-end'],
-
 [dir='ltr'] [data-slot='icon-ui-list-asterisk'],
 [dir='ltr'] [data-slot='icon-ui-list-unordered'],
 [dir='ltr'] [data-slot='icon-ui-logs'],
@@ -167,7 +161,6 @@
 [dir='ltr'] [data-slot='icon-ui-relocate-end'],
 [dir='ltr'] [data-slot='icon-ui-flag-triangle-start'],
 [dir='ltr'] [data-slot='icon-ui-flag-triangle-end'],
-
 [dir='ltr'] [data-slot='icon-ui-timeline'],
 [dir='ltr'] [data-slot='icon-ui-playlist-first'],
 [dir='ltr'] [data-slot='icon-ui-playlist-last'],
@@ -179,7 +172,6 @@
 [dir='ltr'] [data-slot='icon-ui-text-insert-image-down'],
 [dir='ltr'] [data-slot='icon-ui-text-insert-image-center'],
 [dir='ltr'] [data-slot='icon-ui-list-nested'],
-
 [dir='ltr'] [data-slot='icon-ui-receipt'],
 [dir='ltr'] [data-slot='icon-ui-text-indent'],
 [dir='ltr'] [data-slot='icon-ui-text-outdent'],
@@ -188,11 +180,9 @@
 [dir='ltr'] [data-slot='icon-ui-text-initial'],
 [dir='ltr'] [data-slot='icon-ui-text-items'],
 [dir='ltr'] [data-slot='icon-ui-text-line-height'],
-
 [dir='ltr'] [data-slot='icon-ui-key-backspace'],
 [dir='ltr'] [data-slot='icon-ui-key-enter'],
 [dir='ltr'] [data-slot='icon-ui-key-tab'],
-
 [dir='ltr'] [data-slot='icon-ui-external-link'],
 [dir='ltr'] [data-slot='icon-ui-chevron-first'],
 [dir='ltr'] [data-slot='icon-ui-skip-backward'],
@@ -204,4 +194,3 @@
 [dir='ltr'] [data-slot='icon-ui-undo'] {
   transform: none;
 }
-
