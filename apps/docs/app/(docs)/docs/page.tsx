@@ -354,6 +354,16 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>arrow-start-from-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-end-from-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>arrow-end-line</code>
             </p>
           </li>
@@ -390,6 +400,16 @@ export function App() {
           <li>
             <p>
               <code>arrows-start-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrows-start-from-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrows-end-from-line</code>
             </p>
           </li>
           <li>
@@ -569,6 +589,41 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>license</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>mail-letter</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>newspaper</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>relocate-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>relocate-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>flag-triangle-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>flag-triangle-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>timeline</code>
             </p>
           </li>
@@ -595,6 +650,31 @@ export function App() {
           <li>
             <p>
               <code>text-wrap</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-quote</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-insert-image-up</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-insert-image-down</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-insert-image-center</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>list-nested</code>
             </p>
           </li>
           <li>
