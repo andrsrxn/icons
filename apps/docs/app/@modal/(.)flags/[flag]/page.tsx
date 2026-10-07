@@ -6,5 +6,5 @@ export default async function InterceptedFlagPage({
   params: Promise<{ flag: string }>
 }) {
   const { flag: iconName } = await params
-  return <DrawerIcon iconName={iconName} />
+  return <DrawerIcon group='flags' iconName={iconName} />
 }

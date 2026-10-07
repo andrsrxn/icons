@@ -2,7 +2,7 @@
 
 import { IconDownload } from '@andrsrxn/icons'
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
-import type { IconCatalog, IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { useCallback, useMemo, useRef } from 'react'
@@ -73,13 +73,15 @@ function getRelatedIcons(icon: IconCatalogEntry): IconCatalogEntry[] {
 export const IconSection = ({
   iconName,
   showFullData = true,
+  group,
 }: {
   iconName: string
   showFullData?: boolean
+  group: IconCatalogGroup
 }) => {
   const [_, copyToClipboard] = useCopyToClipboard()
 
-  const icon = useIcon(iconName)
+  const icon = useIcon(iconName, group)
 
   if (!icon) {
     notFound()
@@ -113,6 +115,7 @@ export const IconSection = ({
     a.href = url
     a.download = `${iconName}.svg`
     a.click()
+    // biome-ignore lint/style/noMagicNumbers: transition time
     setTimeout(() => URL.revokeObjectURL(url), 100)
   }, [iconName])
 
@@ -128,6 +131,23 @@ export const IconSection = ({
           <IconKeylineContainer containerRef={iconContainerRef} icon={icon} />
           <div className='grid gap-6'>
             <div className='grid gap-3'>
+              <div className='flex items-center gap-2'>
+                {isUI
+                  ? icon.categories.map(cat => (
+                      <Badge
+                        variant='default'
+                        key={cat}
+                        className='leading-none'
+                        render={
+                          showFullData ? (
+                            <Link href={`/?category=${cat}`} prefetch={false} />
+                          ) : undefined
+                        }>
+                        {cat === 'ai' ? 'AI' : capitalize(cat)}
+                      </Badge>
+                    ))
+                  : null}
+              </div>
               <div className='flex items-center gap-2'>
                 <Tooltip>
                   <TooltipTrigger className='w-fit'>
@@ -175,12 +195,12 @@ export const IconSection = ({
                   <Badge
                     key={tag}
                     variant='outline'
+                    className='leading-none'
                     render={
-                      <Link href={`/?q=${tag}`} prefetch={false}>
-                        <span className='leading-none'>{capitalize(tag)}</span>
-                      </Link>
-                    }
-                  />
+                      showFullData ? <Link href={`/?q=${tag}`} prefetch={false} /> : undefined
+                    }>
+                    {capitalize(tag)}
+                  </Badge>
                 ))}
               </div>
             </div>

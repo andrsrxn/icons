@@ -1,5 +1,6 @@
 'use client'
 
+import type { IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import { useMedia } from 'react-use'
@@ -19,7 +20,7 @@ import {
   DrawerTitle,
 } from '@/components/ui/drawer'
 
-export const DrawerIcon = ({ iconName }: { iconName: string }) => {
+export const DrawerIcon = ({ iconName, group }: { iconName: string; group: IconCatalogGroup }) => {
   const [open, setOpen] = useState(false)
   const isLaptop = useMedia('(min-width: 1024px)')
   const router = useRouter()
@@ -49,7 +50,7 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
           <DialogDescription className='sr-only'>Details about {iconName}</DialogDescription>
         </DialogHeader>
         <div className='px-4 pb-2 pt-4 max-h-[calc(100dvh-120px)] overflow-y-auto scroll-fade-y'>
-          <IconSection iconName={iconName} showFullData={false} />
+          <IconSection group={group} iconName={iconName} showFullData={false} />
         </div>
       </DialogContent>
     </Dialog>
@@ -61,7 +62,7 @@ export const DrawerIcon = ({ iconName }: { iconName: string }) => {
           <DrawerDescription className='sr-only'>Details about {iconName}</DrawerDescription>
         </DrawerHeader>
         <div className='overflow-y-auto scroll-fade-y px-4 pt-2 pb-12 md:pb-20 md:px-8 md:pt-6'>
-          <IconSection iconName={iconName} showFullData={false} />
+          <IconSection group={group} iconName={iconName} showFullData={false} />
         </div>
       </DrawerContent>
     </Drawer>
