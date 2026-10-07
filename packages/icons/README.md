@@ -3,7 +3,7 @@
 
 # andrsrxn/icons
 
-React icon library with 1,500+ duotone icons and 250+ flags.
+React icon library with 2,000+ duotone icons and 250+ flags.
 <br />
 Smooth, RTL-aware, and optimized SVGs.
 
@@ -30,7 +30,7 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Groups
 
-- **UI**: 1,500+ icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **UI**: 2,000+ icons for apps, each with its own preview image. (aspect ratio 1:1)
 - **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `aria-label` included. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app) or [Simple Icons](https://simpleicons.org/).

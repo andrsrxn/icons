@@ -11,7 +11,7 @@ Understanding the difference between groups and categories is essential for corr
 ```
 andrsrxn/icons ecosystem
 ├── Groups (code exports and components)
-│   ├── UI icons (`Icon...`)     --> 1,500+ icons, 1:1 ratio, decorative by default
+│   ├── UI icons (`Icon...`)     --> 2,000+ icons, 1:1 ratio, decorative by default
 │   └── Flags (`IconFlag...`)    --> 250+ flags, 3:2 ratio, informational by default
 └── Categories (documentation filters only)
     └── UI icon categories, tags, catalog filters (NOT part of code exports)
