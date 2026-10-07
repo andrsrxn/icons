@@ -117,8 +117,8 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
 | `-lock` | `"secure"`, `"protected"`, `"private"`, `"restricted"` |
 | `-edit` | `"modify"`, `"change"`, `"write"`, `"update"` |
 | `-warning` | `"alert"`, `"caution"`, `"danger"`, `"notice"` |
-| `-heart` | `"like"`, `"favorite"`, `"love"` |
-| `-star` | `"favorite"`, `"rate"`, `"bookmark"`, `"featured"` |
+| `-heart` | `"like"`, `"favorite"`, `"love"`, `"saved"` |
+| `-star` | `"favorite"`, `"rate"`, `"bookmark"`, `"saved"` |
 | `-sparkle` | `"magic"`, `"ai"`, `"generated"`, `"intelligent"` |
 | `-currency` | `"money"`, `"payment"`, `"price"`, `"cash"` |
 | `-off` | `"disabled"`, `"inactive"`, `"hidden"` |
