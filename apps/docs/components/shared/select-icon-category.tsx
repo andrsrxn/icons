@@ -13,7 +13,10 @@ import { capitalize, cn } from '@/lib/utils'
 // Built once at module load instead of on every render of the component.
 const CATEGORY_OPTIONS = [
   { label: 'All categories', value: null as string | null },
-  ...ICON_CATEGORIES.map(category => ({ label: capitalize(category), value: category })),
+  ...ICON_CATEGORIES.map(category => ({
+    label: category === 'ai' ? 'AI' : capitalize(category),
+    value: category,
+  })),
 ]
 
 interface SelectIconCategoryProps {

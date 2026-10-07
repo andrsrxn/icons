@@ -19,7 +19,7 @@ import {
   IconEdit,
   IconFaceBlink,
   IconFile,
-  IconGamingPad,
+  IconGameController,
   IconGitFork,
   IconHamburger,
   IconHeartPulse,
@@ -75,7 +75,7 @@ const CATEGORIES_WITH_ICONS = [
   { title: 'emoji', icon: IconFaceBlink },
   { title: 'finance', icon: IconCoins },
   { title: 'food', icon: IconHamburger },
-  { title: 'gaming', icon: IconGamingPad },
+  { title: 'gaming', icon: IconGameController },
   { title: 'home', icon: IconHouse },
   { title: 'layout', icon: IconLayout },
   { title: 'mail', icon: IconMail },
@@ -160,7 +160,7 @@ export const IconGridSidebar = ({
                 }}>
                 <span className='flex items-center gap-2'>
                   <cat.icon />
-                  {capitalize(cat.cat)}{' '}
+                  {cat.cat === 'ai' ? 'AI' : capitalize(cat.cat)}{' '}
                 </span>
                 <Badge variant='secondary' className='text-muted-foreground'>
                   {cat.count}
