@@ -3,11 +3,18 @@
   grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
   gap: 6px;
   padding: 0 8px 8px;
-  max-height: 350px;
-
+  place-content: start;
+  max-height: 340px;
+  flex: 1;
   overflow-y: auto;
 }
-
+.gridContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+}
 .iconButton {
   display: flex;
   align-items: center;
@@ -27,12 +34,26 @@
 
 .iconPreview {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
 }
 
 .iconButton :global(svg) {
-  width: 100%;
+  width: 24px;
+  height: auto;
+  max-height: 24px;
   cursor: pointer;
-  flex-shrink: none;
+  flex-shrink: 0;
+}
+
+.iconLength {
+  opacity: 0.7;
+  padding-bottom: 12px;
+  padding-left: 2px;
+}
+
+.footer {
+  padding: 8px 0;
 }
