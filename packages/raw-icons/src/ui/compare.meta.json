@@ -1,6 +1,8 @@
 {
   "categories": [
-    "tools"
+    "tools",
+    "layout",
+    "editor"
   ],
   "tags": [
     "utility",

@@ -1,13 +1,18 @@
 {
   "categories": [
-    "design"
+    "design",
+    "math",
+    "navigation",
+    "science"
   ],
   "tags": [
     "position",
-    "location",
     "grid",
     "axis",
-    "math",
-    "graph"
+    "x",
+    "y",
+    "z",
+    "graph",
+    "dimensions"
   ]
 }

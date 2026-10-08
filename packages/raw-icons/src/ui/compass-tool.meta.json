@@ -1,6 +1,8 @@
 {
   "categories": [
-    "navigation"
+    "tools",
+    "navigation",
+    "math"
   ],
   "tags": [
     "direction",
@@ -8,7 +10,6 @@
     "utility",
     "measure",
     "draw",
-    "geometry",
-    "math"
+    "geometry"
   ]
 }

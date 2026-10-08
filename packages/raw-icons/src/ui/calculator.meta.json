@@ -1,14 +1,15 @@
 {
   "categories": [
     "finance",
-    "tools"
+    "tools",
+    "math",
+    "devices"
   ],
   "tags": [
-    "math",
     "arithmetic",
     "compute",
     "numbers",
-    "devices",
-    "accounting"
+    "accounting",
+    "operations"
   ]
 }

@@ -1,6 +1,7 @@
 {
   "categories": [
-    "documents"
+    "documents",
+    "math"
   ],
   "tags": [
     "page",
@@ -8,7 +9,6 @@
     "spreadsheet",
     "excel",
     "data",
-    "table",
-    "math"
+    "table"
   ]
 }

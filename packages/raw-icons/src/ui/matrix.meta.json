@@ -1,10 +1,10 @@
 {
   "categories": [
     "science",
-    "development"
+    "development",
+    "math"
   ],
   "tags": [
-    "math",
     "array",
     "grid",
     "algebra",

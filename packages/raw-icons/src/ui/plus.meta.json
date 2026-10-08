@@ -1,6 +1,8 @@
 {
   "categories": [
-    "tools"
+    "tools",
+    "math",
+    "symbols"
   ],
   "tags": [
     "utility",
@@ -8,7 +10,6 @@
     "add",
     "new",
     "create",
-    "cross",
-    "math"
+    "cross"
   ]
 }

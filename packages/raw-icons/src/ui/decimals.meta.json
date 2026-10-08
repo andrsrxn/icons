@@ -1,9 +1,9 @@
 {
   "categories": [
-    "finance"
+    "finance",
+    "math"
   ],
   "tags": [
-    "math",
     "precision",
     "digits",
     "dot",

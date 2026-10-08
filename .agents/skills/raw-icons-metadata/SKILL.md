@@ -41,6 +41,7 @@ export const ICON_CATEGORIES = [
   'home',
   'layout',
   'mail',
+  'math',
   'media',
   'medical',
   'messages',

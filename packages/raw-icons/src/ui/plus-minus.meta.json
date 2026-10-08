@@ -1,11 +1,11 @@
 {
   "categories": [
-    "symbols"
+    "symbols",
+    "math"
   ],
   "tags": [
     "notation",
     "character",
-    "math",
     "calculate",
     "tolerance",
     "variance"

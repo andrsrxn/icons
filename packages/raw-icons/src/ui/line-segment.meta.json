@@ -1,11 +1,11 @@
 {
   "categories": [
     "science",
-    "design"
+    "design",
+    "math"
   ],
   "tags": [
     "geometry",
-    "math",
     "vector",
     "distance",
     "endpoints",

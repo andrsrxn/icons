@@ -1,12 +1,12 @@
 {
   "categories": [
-    "symbols"
+    "symbols",
+    "math"
   ],
   "tags": [
     "greek",
     "testing",
     "software",
-    "prerelease",
-    "math"
+    "prerelease"
   ]
 }
