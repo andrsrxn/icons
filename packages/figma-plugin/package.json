@@ -55,7 +55,7 @@
     "@andrsrxn/ts-config": "workspace:*",
     "@create-figma-plugin/tsconfig": "4.0.3",
     "@types/node": "24.13.3",
-    "@figma/plugin-typings": "1.138.0",
+    "@figma/plugin-typings": "1.141.0",
     "typescript": "5.9.3"
   }
 }
