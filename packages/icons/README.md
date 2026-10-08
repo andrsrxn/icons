@@ -7,7 +7,7 @@ React icon library with 2,000+ duotone icons and 250+ flags.
 <br />
 Smooth, RTL-aware, and optimized SVGs.
 
-[Documentation](https://icons.andrsrxn.com/docs) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [npm](https://www.npmjs.com/package/@andrsrxn/icons) • [GitHub](https://github.com/andrsrxn/icons)
+[Documentation](https://icons.andrsrxn.com/docs) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [GitHub](https://github.com/andrsrxn/icons)
 
 ![Icons banner with logo in the center](./assets/banner-github.webp)
 </div>
