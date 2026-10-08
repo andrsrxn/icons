@@ -101,7 +101,7 @@ Flag icons accept standard React SVG attributes and feature custom sizing behavi
 <IconFlagGT size={80} />
 
 // 3. Fill entire square crop
-<IconFlagGT size={80} preserveAspectRatio="xMidYMid slice" />
+<IconFlagGT size={80} cover />
 ```
 
 ---

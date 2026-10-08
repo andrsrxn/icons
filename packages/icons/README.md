@@ -240,8 +240,8 @@ Or you can use the custom props as the following examples.
 
 ```tsx
 // To fill the entire square
-<IconFlagGT size={80} preserveAspectRatio='xMidYMid slice' />
-<IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />
+<IconFlagGT size={80} cover />
+<IconFlagGT className='size-20' cover />
 ```
 
 ### Color

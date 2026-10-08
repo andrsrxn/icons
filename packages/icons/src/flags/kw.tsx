@@ -7,6 +7,8 @@ export const IconFlagKW: FlagIcon = ({
   height = size,
   'aria-label': ariaLabel = 'KW',
   'aria-hidden': ariaHidden,
+  preserveAspectRatio,
+  cover,
   ...props
 }) => {
   const isLabelled = Boolean(ariaLabel)
@@ -25,6 +27,7 @@ export const IconFlagKW: FlagIcon = ({
       aria-hidden={isHidden || !isLabelled ? true : undefined}
       aria-label={isHidden ? undefined : ariaLabel}
       focusable={isHidden || !isLabelled ? false : undefined}
+      preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
       {...props}>
       <defs>

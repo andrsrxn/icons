@@ -14,6 +14,7 @@ const getFileName = (name: string) =>
     .replace(/^Icon(Flag)?/, '')
     .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
     .toLowerCase()
+
 const flagIcons = Object.entries(fIcons)
   .filter(([name]) => name.startsWith('IconFlag') && name.length > 8)
   // Sort descending (newest modified first):
@@ -30,6 +31,7 @@ const flagIcons = Object.entries(fIcons)
       <span>{name.slice(name.lastIndexOf('IconFlag') + 8)}</span>
     </div>
   ))
+
 const uiIcons = Object.entries(icons)
   .filter(([name]) => name.startsWith('Icon') && name.length > 4)
   // Sort descending (newest modified first):

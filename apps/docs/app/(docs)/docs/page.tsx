@@ -116,7 +116,7 @@ export default function DocsPage() {
             (aspect ratio 3:2)
           </li>
         </ul>
-        <Alert className='max-w-prose'>
+        <Alert className='max-w-154'>
           <IconInfo />
           <AlertTitle>Notice</AlertTitle>
           <AlertDescription>
@@ -166,7 +166,7 @@ export default function DocsPage() {
             <CodeBlock
               code='pnpm add @andrsrxn/icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -174,7 +174,7 @@ export default function DocsPage() {
             <CodeBlock
               code='npm install @andrsrxn/icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -182,7 +182,7 @@ export default function DocsPage() {
             <CodeBlock
               code='yarn add @andrsrxn/icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -190,11 +190,25 @@ export default function DocsPage() {
             <CodeBlock
               code='bun add @andrsrxn/icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
         </Tabs>
+        <p>
+          Add an <strong>optional</strong> but <strong>recommended</strong> global CSS styles to UI
+          icons:
+        </p>
+        <CodeBlock
+          filename='globals.css'
+          code={`.icon-ui {
+  flex-shrink: 0;
+  pointer-events: none;
+}
+`}
+
+          className='max-w-154'
+        />
 
         <h3 id='agent-skill'>Agent skill</h3>
         <p>
@@ -214,7 +228,7 @@ export default function DocsPage() {
             <CodeBlock
               code='pnpm dlx skills add andrsrxn/icons --skill andrsrxn-icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -222,7 +236,7 @@ export default function DocsPage() {
             <CodeBlock
               code='npx skills add andrsrxn/icons --skill andrsrxn-icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -230,7 +244,7 @@ export default function DocsPage() {
             <CodeBlock
               code='yarn dlx skills add andrsrxn/icons --skill andrsrxn-icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -238,7 +252,7 @@ export default function DocsPage() {
             <CodeBlock
               code='bunx skills add andrsrxn/icons --skill andrsrxn-icons'
 
-              className='max-w-prose'
+              className='max-w-154'
               filename='bash'
             />
           </TabsContent>
@@ -259,7 +273,7 @@ export default function DocsPage() {
         ├── README.md
         └── SKILL.md`}
 
-          className='max-w-prose'
+          className='max-w-154'
           filename='tree'
         />
 
@@ -282,7 +296,7 @@ export function App() {
   )
 }`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <h3 id='specific-import' className='mt-4'>
@@ -307,7 +321,7 @@ export function App() {
   )
 }`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
         <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
           <IconInfo />
@@ -328,7 +342,7 @@ export function App() {
         <CodeBlock
           code="import '@andrsrxn/icons/rtl.css'"
 
-          className='max-w-prose'
+          className='max-w-154'
           filename='index.tsx'
         />
         <p>
@@ -787,8 +801,8 @@ export function App() {
           code={`[dir=rtl] [data-slot='icon-ui-arrow-start'] {
   transform: scaleX(1);
 }`}
-
-          className='max-w-prose'
+          filename='globals.css'
+          className='max-w-154'
         />
 
         <p>Try it out in the following demo:</p>
@@ -902,7 +916,7 @@ export function App() {
         <CodeBlock
           code={`<IconArrowStart aria-label='Back' onClick={() => back()} />`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
         <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
           <IconInfo />
@@ -922,11 +936,7 @@ export function App() {
           If you want to treat them as <strong>decorative</strong>, use the <code>aria-hidden</code>{' '}
           attribute:
         </p>
-        <CodeBlock
-          code={'<IconFlagUs aria-hidden />'}
-          filename='page.tsx'
-          className='max-w-prose'
-        />
+        <CodeBlock code={'<IconFlagUs aria-hidden />'} filename='page.tsx' className='max-w-154' />
 
         <h2 id='naming'>Naming</h2>
 
@@ -957,24 +967,17 @@ export function App() {
           </li>
         </ul>
         <CodeBlock
+          filename='globals.css'
           code={`/* Apply styles to all icons */
+
 .icon-ui {
   stroke-width: 2px;
 }
 `}
 
-          className='max-w-prose'
+          className='max-w-154'
         />
-        <CodeBlock
-          code={`/* Recommended global styles */
-.icon-ui {
-  flex-shrink: 0;
-  pointer-events: none;
-}
-`}
 
-          className='max-w-prose'
-        />
         <p>
           Also, the icons include a <code>data-slot</code> with its specific name, for example:
         </p>
@@ -988,14 +991,16 @@ export function App() {
           </li>
         </ul>
         <CodeBlock
+          filename='globals.css'
           code={`/* Target a specific icon */
+
 [data-slot='icon-ui-rocket'] {
   color: #f00;
   stroke-width: 1px;
 }
 `}
 
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <p>Or you can use the custom props as the following examples.</p>
@@ -1011,12 +1016,14 @@ export function App() {
 
         <CodeBlock
           code={`// Set the size with size prop
+
 <IconRocket size={80} />
 
 // Or with className
+
 <IconRocket className='size-6' />`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
@@ -1025,10 +1032,11 @@ export function App() {
 
         <CodeBlock
           code={`// Keep 3:2 proportions
+
 <IconFlagGT width={80} />
 <IconFlagGT className='w-16' />`}
           filename='page.tsx'
-          className='max-w-prose mt-6'
+          className='max-w-154 mt-6'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
@@ -1037,10 +1045,11 @@ export function App() {
 
         <CodeBlock
           code={`// Square proportions
+            
 <IconFlagGT size={80} />
 <IconFlagGT className='size-20' />`}
           filename='page.tsx'
-          className='max-w-prose mt-6'
+          className='max-w-154 mt-6'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
@@ -1049,14 +1058,15 @@ export function App() {
 
         <CodeBlock
           code={`// To fill the entire square
-<IconFlagGT size={80} preserveAspectRatio='xMidYMid slice' />
-<IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />`}
+
+<IconFlagGT size={80} cover />
+<IconFlagGT className='size-20' cover />`}
           filename='page.tsx'
-          className='max-w-prose mt-6'
+          className='max-w-154 mt-6'
         />
 
         <div className='bg-card rounded-md size-20 shadow-sm border '>
-          <IconFlagGT className='size-20' preserveAspectRatio='xMidYMid slice' />
+          <IconFlagGT className='size-20' cover />
         </div>
 
         <h3 id='color'>Color</h3>
@@ -1067,12 +1077,14 @@ export function App() {
 
         <CodeBlock
           code={`// Use color prop
+
 <IconRocket color='#0047CC' />
 
 // Or use className
+
 <IconRocket className='text-blue-500' />`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <div className='bg-card rounded-md shadow-sm border w-max'>
@@ -1092,12 +1104,14 @@ export function App() {
 
         <CodeBlock
           code={`// Use strokeWidth prop
+
 <IconRocket strokeWidth={2} />
 
 // Or use className
+
 <IconRocket className='stroke-2' />`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <div className='bg-card rounded-md size-20 shadow-sm border '>
@@ -1112,7 +1126,7 @@ export function App() {
           code={`import type { Icon, IconProps } from '@andrsrxn/icons/types'
 import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           filename='page.tsx'
-          className='max-w-prose'
+          className='max-w-154'
         />
 
         <ul>
@@ -1124,7 +1138,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             SVG and custom props
           </li>
         </ul>
-        <Alert className='max-w-prose'>
+        <Alert className='max-w-154'>
           <IconInfo />
           <AlertTitle>Note</AlertTitle>
           <AlertDescription>
