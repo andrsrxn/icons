@@ -3,8 +3,9 @@
 
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
-import { debounce, parseAsInteger, useQueryState } from 'nuqs'
-import { useCallback, useDeferredValue, useMemo } from 'react'
+import { parseAsInteger, useQueryState } from 'nuqs'
+import { useCallback, useMemo, useState } from 'react'
+import { useDebounce } from 'react-use'
 import { ICON_PAGE_SIZE } from '@/lib/constants/icons'
 import { getPaginationRange, isUIIcon } from '@/lib/utils/icons'
 
@@ -128,20 +129,27 @@ export const useIconCatalog = () => {
     defaultValue: 'ui',
     parse: (value: string) => (value === 'ui' || value === 'flags' ? value : 'ui'),
   })
-  const [query, setQueryState] = useQueryState('q', {
-    limitUrlUpdates: debounce(300),
-  })
+  const [query, setQueryState] = useQueryState('q')
 
   // useDeferredValue lets the input update immediately while the (more expensive) filtering trails slightly behind.
-  const deferredQuery = useDeferredValue(query)
+  const [debouncedQuery, setDebouncedQuery] = useState(query)
+  useDebounce(
+    () => {
+      setDebouncedQuery(query)
+    },
+    250,
+    [query]
+  )
+
+  // continue
 
   const filtered = useMemo(() => {
     const baseIcons = group && group in ICONS_BY_GROUP ? ICONS_BY_GROUP[group] : catalog
     const categoryFiltered = filterByCategory(baseIcons, category)
-    const q = normalizeQuery(deferredQuery?.toLowerCase().trim() ?? '')
+    const q = normalizeQuery(debouncedQuery?.toLowerCase().trim() ?? '')
 
     return q ? searchAndScoreIcons(categoryFiltered, q) : categoryFiltered
-  }, [category, deferredQuery, group])
+  }, [category, debouncedQuery, group])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const safePage = Math.min(Math.max(1, page), totalPages)
@@ -198,7 +206,7 @@ export const useIconCatalog = () => {
     catalog,
     // Exposed in case the UI wants to show a subtle "updating…" indicator
     // while a deferred filter is catching up to the latest keystroke.
-    isFiltering: query !== deferredQuery,
+    isFiltering: query !== debouncedQuery,
   }
 }
 
