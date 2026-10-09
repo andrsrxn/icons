@@ -57,6 +57,7 @@ import {
   IconUsersPlus,
   IconX,
 } from '@andrsrxn/icons'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import type { ReactNode } from 'react'
 import { SliderDemo } from '@/components/shared/slider-demo'
@@ -113,6 +114,7 @@ import { Separator } from '@/components/ui/separator'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { COMPANY } from '@/lib/constants/company'
+import { baseMetadata } from '@/lib/constants/metadata'
 import { cn } from '@/lib/utils'
 
 const DropdownMenuItem = ({ children, className }: { children: ReactNode; className?: string }) => {
@@ -140,6 +142,15 @@ const CommandItem = ({ children, className }: { children: ReactNode; className?:
   )
 }
 
+export const metadata: Metadata = {
+  title: 'Examples',
+  description: `See ${COMPANY.name} in action, different components ans states.`,
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'Examples',
+    description: `See ${COMPANY.name} in action, different components ans states.`,
+  },
+}
 export default function ExamplesPage() {
   return (
     <section className='pt-10 block w-full'>

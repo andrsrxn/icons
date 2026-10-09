@@ -15,6 +15,7 @@ import {
   IconWarningTriangle,
 } from '@andrsrxn/icons'
 import { IconFlagGT } from '@andrsrxn/icons/flags'
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RTLIcon } from '@/components/shared/rtl-icon'
 import { TableOfContents } from '@/components/shared/table-of-contents'
@@ -32,6 +33,17 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { COMPANY } from '@/lib/constants/company'
 import { ICON_PROPS } from '@/lib/constants/icons'
+import { baseMetadata } from '@/lib/constants/metadata'
+
+export const metadata: Metadata = {
+  title: 'Documentation',
+  description: `Full documentation of ${COMPANY.name}, how to use it, best practices, and more.`,
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: 'Documentation',
+    description: `Full documentation of ${COMPANY.name}, how to use it, best practices, and more.`,
+  },
+}
 
 // biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export default function DocsPage() {
