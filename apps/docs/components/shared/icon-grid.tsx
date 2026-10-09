@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useRef } from 'react'
+import { ButtonRandomIcon } from '@/components/shared/button-random-icon'
 import { IconGridList } from '@/components/shared/icon-grid-list'
 import { IconGridPagination } from '@/components/shared/icon-grid-pagination'
 import { IconGridSidebar } from '@/components/shared/icon-grid-sidebar'
@@ -37,7 +38,10 @@ export const IconGrid = () => {
 
   return (
     <div className='grid gap-4 md:pt-4' ref={containerRef}>
-      <InputIconSearch value={query} onChange={setQuery} />
+      <div className='flex items-center gap-2 justify-center mx-auto w-full max-w-md lg:max-w-lg'>
+        <InputIconSearch value={query} onChange={setQuery} />
+        <ButtonRandomIcon />
+      </div>
 
       <Tabs className='gap-6' value={group} onValueChange={setGroup}>
         <TabsList className='w-full max-w-md lg:max-w-lg mx-auto'>

@@ -14,7 +14,7 @@ interface InputIconSearchProps {
 }
 
 export const InputIconSearch = ({ value, onChange }: InputIconSearchProps) => (
-  <InputGroup className='bg-card max-w-md lg:max-w-lg mx-auto'>
+  <InputGroup className='bg-card'>
     <InputGroupAddon>
       <IconSearch />
     </InputGroupAddon>
