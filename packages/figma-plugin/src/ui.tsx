@@ -55,42 +55,72 @@ const TABS_OPTIONS: TabsOption[] = [
   { value: 'Flags', children: null },
 ]
 
-const normalizeQuery = (q: string) => q.replace(/\s+/g, '-')
+const normalizeSearchText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[-\s]+/g, ' ')
+    .trim()
 
 /**
- * Returns a relevance score for an icon given a normalized query.
- * 0 means no match.
- * Higher is better:
- *   7 — exact name match
- *   6 — direct variant match (e.g. "file-*")
- *   5 — general prefix match
- *   4 — name contains query
- *   3 — exact tag match
- *   2 — tag starts with query
- *   1 — tag contains query
+ * Returns a relevance score for an icon given a query.
+ * Every query word must match somewhere in the searchable fields.
+ *
+ * 7 — exact name match
+ * 6 — direct variant match
+ * 5 — general name prefix match
+ * 4 — name contains the complete query
+ * 3 — all query words match the name
+ * 2 — all query words match tags
+ * 1 — all query words match tags or categories
+ * 0 — no match
  */
-function scoreIcon(name: string, tags: string[], query: string): number {
-  if (name === query) {
+function scoreIcon(icon: CatalogIcon, query: string): number {
+  const name = normalizeSearchText(icon.name)
+  const normalizedQuery = normalizeSearchText(query)
+  const queryWords = normalizedQuery.split(' ').filter(Boolean)
+
+  if (queryWords.length === 0) {
+    return 0
+  }
+
+  if (name === normalizedQuery) {
     return 7
   }
-  if (name.startsWith(`${query}-`)) {
+
+  if (name.startsWith(`${normalizedQuery} `)) {
     return 6
   }
-  if (name.startsWith(query)) {
+
+  if (name.startsWith(normalizedQuery)) {
     return 5
   }
-  if (name.includes(query)) {
+
+  if (name.includes(normalizedQuery)) {
     return 4
   }
-  if (tags.includes(query)) {
+
+  const nameWords = name.split(' ')
+  const tagWords = icon.tags.flatMap(tag => normalizeSearchText(tag).split(' '))
+
+  const categoryWords = isUIIcon(icon)
+    ? icon.categories.flatMap(category => normalizeSearchText(category).split(' '))
+    : []
+
+  const allWordsMatch = (words: string[]) =>
+    queryWords.every(queryWord => words.some(word => word.includes(queryWord)))
+
+  if (allWordsMatch(nameWords)) {
     return 3
   }
-  if (tags.some(tag => tag.startsWith(query))) {
+
+  if (allWordsMatch(tagWords)) {
     return 2
   }
-  if (tags.some(tag => tag.includes(query))) {
+
+  if (allWordsMatch([...tagWords, ...categoryWords])) {
     return 1
   }
+
   return 0
 }
 
@@ -100,7 +130,7 @@ function Plugin() {
   const deferredQuery = useDeferredValue(query)
 
   const filtered = useMemo(() => {
-    const q = normalizeQuery(deferredQuery?.toLowerCase().trim() ?? '')
+    const q = normalizeSearchText(deferredQuery)
     const isUI = group === 'UI'
 
     const groupIcons = icons.filter(icon => (isUI ? isUIIcon(icon) : !isUIIcon(icon)))
@@ -109,14 +139,20 @@ function Plugin() {
       return groupIcons
     }
 
-    const scored: { icon: CatalogIcon; score: number; index: number }[] = []
+    const scored: {
+      icon: CatalogIcon
+      score: number
+      index: number
+    }[] = []
 
     for (let i = 0; i < groupIcons.length; i++) {
       const icon = groupIcons[i]
       if (!icon) {
         continue
       }
-      const score = scoreIcon(icon.name, icon.tags, q)
+
+      const score = scoreIcon(icon, q)
+
       if (score > 0) {
         scored.push({ icon, score, index: i })
       }
@@ -127,12 +163,14 @@ function Plugin() {
         if (b.score !== a.score) {
           return b.score - a.score
         }
-        // Base icons (no hyphen) before variants at the same score tier
+
         const aIsBase = !a.icon.name.includes('-')
         const bIsBase = !b.icon.name.includes('-')
+
         if (aIsBase !== bIsBase) {
           return aIsBase ? -1 : 1
         }
+
         return a.index - b.index
       })
       .map(({ icon }) => icon)

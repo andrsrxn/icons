@@ -30,45 +30,72 @@ const ICON_MAPS_BY_GROUP: Record<IconCatalogGroup, Map<string, IconCatalogEntry>
 }
 
 /**
- * Normalizes a search term so that spaces and dashes are interchangeable.
- * e.g. "x circle" → "x-circle", "arrow-right" → "arrow-right"
+ * Normalizes search text so spaces and hyphens are interchangeable.
+ * e.g. "north america" → "north america"
+ *      "arrow-right"   → "arrow right"
  */
-const normalizeQuery = (q: string) => q.replace(/\s+/g, '-')
+const normalizeSearchText = (value: string) =>
+  value
+    .toLowerCase()
+    .replace(/[-\s]+/g, ' ')
+    .trim()
 
 /**
- * Returns a relevance score for an icon given a normalized query.
- * 0 means no match.
- * Higher is better:
- *   7 — exact name match (e.g. "file")
- *   6 — direct variant match (e.g. "file-*")
- *   5 — general prefix match (e.g. "files", or "fil" matching "file")
- *   4 — name contains query
- *   3 — exact tag match
- *   2 — tag starts with query
- *   1 — tag contains query
+ * Returns a relevance score for an icon given a query.
+ * Every query word must match somewhere in the searchable fields.
+ * Partial-word matches are supported.
  */
-function scoreIcon(name: string, tags: string[], query: string): number {
-  if (name === query) {
+function scoreIcon(icon: IconCatalogEntry, query: string): number {
+  const name = normalizeSearchText(icon.name)
+  const normalizedQuery = normalizeSearchText(query)
+  const queryWords = normalizedQuery.split(' ').filter(Boolean)
+
+  if (queryWords.length === 0) {
+    return 0
+  }
+
+  // Preserve the highest relevance for exact and name-based matches.
+  if (name === normalizedQuery) {
     return 7
   }
-  if (name.startsWith(`${query}-`)) {
+
+  if (name.startsWith(`${normalizedQuery} `)) {
     return 6
   }
-  if (name.startsWith(query)) {
+
+  if (name.startsWith(normalizedQuery)) {
     return 5
   }
-  if (name.includes(query)) {
+
+  if (name.includes(normalizedQuery)) {
     return 4
   }
-  if (tags.includes(query)) {
+
+  const nameWords = name.split(' ')
+
+  const tagWords = icon.tags.flatMap(tag => normalizeSearchText(tag).split(' '))
+
+  const categoryWords = isUIIcon(icon)
+    ? icon.categories.flatMap(category => normalizeSearchText(category).split(' '))
+    : []
+
+  // Every query word must match at least one word in the icon metadata.
+  // Includes partial-word matches and matches across multiple tags/categories.
+  const allWordsMatch = (words: string[]) =>
+    queryWords.every(queryWord => words.some(word => word.includes(queryWord)))
+
+  if (allWordsMatch(nameWords)) {
     return 3
   }
-  if (tags.some(tag => tag.startsWith(query))) {
+
+  if (allWordsMatch(tagWords)) {
     return 2
   }
-  if (tags.some(tag => tag.includes(query))) {
+
+  if (allWordsMatch([...tagWords, ...categoryWords])) {
     return 1
   }
+
   return 0
 }
 
@@ -99,7 +126,7 @@ function searchAndScoreIcons(icons: IconCatalogEntry[], query: string): IconCata
 
   for (let i = 0; i < icons.length; i++) {
     const icon = icons[i]
-    const score = icon ? scoreIcon(icon.name, icon.tags, query) : 0
+    const score = icon ? scoreIcon(icon, query) : 0
     if (icon && score > 0) {
       scored.push({ icon, score, index: i })
     }
@@ -146,7 +173,7 @@ export const useIconCatalog = () => {
   const filtered = useMemo(() => {
     const baseIcons = group && group in ICONS_BY_GROUP ? ICONS_BY_GROUP[group] : catalog
     const categoryFiltered = filterByCategory(baseIcons, category)
-    const q = normalizeQuery(debouncedQuery?.toLowerCase().trim() ?? '')
+    const q = normalizeSearchText(debouncedQuery?.toLowerCase().trim() ?? '')
 
     return q ? searchAndScoreIcons(categoryFiltered, q) : categoryFiltered
   }, [category, debouncedQuery, group])
