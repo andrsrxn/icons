@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconSlice: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-slice'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M10.06 15.2c.65.94.98 1.41 1.46 1.45.48.03.87-.4 1.65-1.23l8.63-9.3c.63-.69.95-1.03.93-1.44 0-.41-.35-.73-1.02-1.38l-.86-.8c-.7-.67-1.05-1-1.48-.99s-.74.38-1.39 1.1L9.64 11.9c-.5.56-.76.84-.78 1.2-.02.34.2.65.63 1.27z'
+        fill='currentColor'
+      />
+      <path
+        d='m11.77 17.1 9.72-11.28c.26-.31.4-.46.48-.61a2 2 0 0 0-.17-2.3c-.1-.13-.26-.27-.57-.53s-.46-.4-.6-.48a2 2 0 0 0-2.3.16c-.13.11-.27.27-.53.57L7.17 14.94'
+        stroke='currentColor'
+      />
+      <path
+        d='m8.7 13.2.46.66c2.25 3.3 3.38 4.94 3 6.3a3 3 0 0 1-.59 1.1c-.9 1.08-2.9 1.08-6.89 1.08-1.51 0-2.27 0-2.57-.4a1 1 0 0 1-.19-.4c-.1-.49.4-1.06 1.4-2.2z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

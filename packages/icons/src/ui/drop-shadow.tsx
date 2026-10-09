@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconDropShadow: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-drop-shadow'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M14.98 22.99c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-1.3l-.4.56c-.8 1.05-1.19 1.57-1.74 1.88s-1.2.37-2.51.5l-3.78.35-.57.04-.57-.04-3.71-.36c-1.22-.12-1.83-.18-2.35-.46-.53-.28-.92-.75-1.7-1.7l-.63-.76v1.29c0 2.83 0 4.24.88 5.12.87.88 2.29.88 5.12.88z'
+        fill='currentColor'
+      />
+      <rect
+        width='16.86'
+        height='16.86'
+        rx='3'
+        transform='matrix(0 -1 -1 0 20.43 18.7)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

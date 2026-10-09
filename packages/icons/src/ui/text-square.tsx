@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconTextSquare: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-text-square'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.24 2.76c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.15c0 1.89 0 2.83-.59 3.42-.58.58-1.52.58-3.4.58H6.74c-1.88 0-2.82 0-3.4-.58-.6-.6-.6-1.53-.6-3.42V8.76c0-2.83 0-4.24.89-5.12.88-.88 2.3-.88 5.12-.88z'
+        fill='currentColor'
+      />
+      <rect
+        width='18.48'
+        height='18.48'
+        rx='3'
+        transform='scale(1 -1)rotate(90 21.24 0)'
+        stroke='currentColor'
+      />
+      <path d='M12 6.95v10.52' stroke='currentColor' />
+      <path d='M13.74 17.47h-3.48' stroke='currentColor' />
+      <path
+        d='M16.26 8.18c0-.68-.55-1.23-1.23-1.23H8.97c-.68 0-1.23.55-1.23 1.23'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}
