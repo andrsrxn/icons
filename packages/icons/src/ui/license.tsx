@@ -35,15 +35,9 @@ export const IconLicense: Icon = ({
         d='M3.8 7.82v8.46c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.12.88h4.42c2.82 0 4.24 0 5.12-.88s.88-2.3.88-5.12V7.82c0-2.82 0-4.24-.88-5.12s-2.3-.88-5.12-.88H9.79c-2.82 0-4.24 0-5.12.88S3.8 5 3.8 7.82'
         stroke='currentColor'
       />
-      <path
-        d='M13.1 12.79a.75.75 0 0 0 0-1.5zm-5.31-1.5a.75.75 0 0 0 0 1.5zm5.32.75v-.75H7.79v1.5h5.32z'
-        fill='currentColor'
-      />
-      <path
-        d='M13.1 17.33a.75.75 0 1 0 0-1.5zm-5.31-1.5a.75.75 0 0 0 0 1.5zm5.32.75v-.75H7.79v1.5h5.32z'
-        fill='currentColor'
-      />
-      <path d='M16.46 7.5H7.8' stroke='currentColor' />
+      <path d='M12.98 12.05H7.66' stroke='currentColor' />
+      <path d='M12.98 16.6H7.66' stroke='currentColor' />
+      <path d='M16.34 7.56H7.66' stroke='currentColor' />
     </svg>
   )
 }

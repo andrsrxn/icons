@@ -27,18 +27,18 @@ export const IconPool: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M8.13 16.34V4.74c0-1.52.9-2.7 2.5-2.7 1.31 0 2.25 1.05 2.25 2.37'
+        d='M8.13 15.98V4.68c0-1.5.9-2.63 2.5-2.63 1.31 0 2.25 1 2.25 2.3'
         stroke='currentColor'
       />
       <path
-        d='M15.93 18.28V4.73c0-1.52.9-2.68 2.5-2.68 1.3 0 2.24 1.03 2.24 2.34'
+        d='M15.93 17.68V4.63c0-1.46.9-2.58 2.5-2.58 1.3 0 2.24 1 2.24 2.26'
         stroke='currentColor'
       />
       <path d='M15.93 7.53h-7.8' stroke='currentColor' />
       <path d='M15.93 12.25h-7.8' stroke='currentColor' />
       <path opacity='.2' d='M8.14 7.87h7.5v10.41l-3.88-1.2-3.73-1.17z' fill='currentColor' />
       <path
-        d='M3 18.01c.7-.47 2.66-1.3 5.31-1.3s5.82 1.67 8.4 1.67c2.6 0 3.79-.9 4.29-1.4'
+        d='M3 17.46c.7-.48 2.66-1.32 5.31-1.32s5.82 1.69 8.4 1.69c2.6 0 3.79-.91 4.29-1.4'
         stroke='currentColor'
       />
       <path

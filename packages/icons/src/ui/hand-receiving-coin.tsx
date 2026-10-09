@@ -41,8 +41,6 @@ export const IconHandReceivingCoin: Icon = ({
       />
       <path d='M16.94 10.32c1.23 0 2.23-1.93 2.23-4.31s-1-4.31-2.23-4.31' stroke='currentColor' />
       <path d='M14.4 1.7h2.54' stroke='currentColor' />
-      <path d='M16.26 4.53h2.63' stroke='currentColor' />
-      <path d='M16.42 7.49h2.47' stroke='currentColor' />
       <path d='M14.4 10.32H17' stroke='currentColor' />
       <rect opacity='.2' x='2.19' y='13.68' width='4.01' height='7.91' rx='1' fill='currentColor' />
       <path

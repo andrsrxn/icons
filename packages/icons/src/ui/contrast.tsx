@@ -34,7 +34,10 @@ export const IconContrast: Icon = ({
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M12 18.58V5.42a6.58 6.58 0 0 1 0 13.16' stroke='currentColor' />
+      <path
+        d='M13.97 18.28c-.77.24-1.15.36-1.56.06s-.41-.78-.41-1.76V7.42c0-.98 0-1.46.4-1.76.42-.3.8-.18 1.57.06a6.59 6.59 0 0 1 0 12.56'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

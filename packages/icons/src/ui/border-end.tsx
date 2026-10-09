@@ -39,14 +39,14 @@ export const IconBorderEnd: Icon = ({
       <path d='M12 15.37V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
       <path
-        d='M18 2.76h.43a3 3 0 0 1 2.8 2.8l.01.44v12.43a3 3 0 0 1-2.8 2.8l-.44.01'
+        d='M18.68 2.76a2.57 2.57 0 0 1 2.56 2.56v13.36a2.57 2.57 0 0 1-2.56 2.56'
         stroke='currentColor'
       />
-      <path d='M6.04 2.71H5.5a3 3 0 0 0-2.8 2.8v.45' stroke='currentColor' />
-      <path d='M6.04 21.3h-.08l-.45-.01a3 3 0 0 1-2.8-2.8v-.45' stroke='currentColor' />
-      <path d='M2.78 10.19v3.57' stroke='currentColor' />
-      <path d='M10.23 21.2h3.57' stroke='currentColor' />
-      <path d='M10.23 2.72h3.57' stroke='currentColor' />
+      <path d='M5.39 2.7h-.06a2.6 2.6 0 0 0-2.61 2.62' stroke='currentColor' />
+      <path d='M5.25 21.3h-.06a2.47 2.47 0 0 1-2.47-2.48' stroke='currentColor' />
+      <path d='M2.78 10.85v2.25' stroke='currentColor' />
+      <path d='M10.9 21.2h2.24' stroke='currentColor' />
+      <path d='M10.9 2.72h2.24' stroke='currentColor' />
     </svg>
   )
 }

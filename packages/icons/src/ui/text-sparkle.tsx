@@ -28,19 +28,19 @@ export const IconTextSparkle: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='m18.73 13.86-.9-1.7-.93 1.7-1.75.97 1.75.9.92 2 .9-2 1.91-.99z'
+        d='m18.23 13.76-1-1.86-1 1.86-1.9 1.06 1.9.98 1 2.18 1-2.18 2.07-1.08z'
         fill='currentColor'
       />
-      <path d='M12 3.75v16.5' stroke='currentColor' />
-      <path d='M14.74 20.25H9.26' stroke='currentColor' />
+      <path d='M9.8 3.75v16.5' stroke='currentColor' />
+      <path d='M12.54 20.25H7.07' stroke='currentColor' />
       <path
-        d='M18.67 5.67c0-1.06-.86-1.92-1.92-1.92h-9.5c-1.06 0-1.92.86-1.92 1.92'
+        d='M16.48 5.67c0-1.06-.86-1.92-1.92-1.92H5.05c-1.06 0-1.92.86-1.92 1.92'
         stroke='currentColor'
       />
-      <path d='M14.74 15c1.55 0 3.2-1.68 3.2-3.21' stroke='currentColor' />
-      <path d='M21.16 15c-1.55 0-3.21-1.67-3.21-3.21' stroke='currentColor' />
-      <path d='M14.74 15c1.53 0 3.2 1.7 3.2 3.2' stroke='currentColor' />
-      <path d='M21.16 15c-1.53 0-3.21 1.67-3.21 3.2' stroke='currentColor' />
+      <path d='M13.88 15c1.69 0 3.5-1.83 3.5-3.5' stroke='currentColor' />
+      <path d='M20.87 15c-1.68 0-3.5-1.82-3.5-3.5' stroke='currentColor' />
+      <path d='M13.88 15c1.67 0 3.5 1.85 3.5 3.5' stroke='currentColor' />
+      <path d='M20.87 15c-1.66 0-3.5 1.82-3.5 3.5' stroke='currentColor' />
     </svg>
   )
 }

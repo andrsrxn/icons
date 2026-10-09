@@ -30,12 +30,12 @@ export const IconLockCircle: Icon = ({
         opacity='.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M1.74 12a10.26 10.26 0 1 0 20.52 0 10.26 10.26 0 0 0-20.52 0m9-5.2h3.16s-.1 3.67 0 3.68c1.64.1 2.95 1.89 3.06 3.52-.1 1.8-1.42 3.42-3.06 3.53h-3.36C8.91 17.43 7.6 15.64 7.5 14c.1-1.63 1.42-3.41 3.05-3.52.1 0 .2-3.68.2-3.68'
+        d='M2.1 12a10.26 10.26 0 1 0 20.53 0A10.26 10.26 0 0 0 2.1 12m8.8-1.52h4.05c1.64.1 2.27 1.89 2.37 3.52-.1 1.8-.13 3.53-3.05 3.53H10.9c-3.7-.2-3.36-1.89-3.47-3.53.1-1.63-.62-3.29 3.47-3.52'
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.26' transform='rotate(90 12 12)' stroke='currentColor' />
-      <rect x='7.49' y='10.47' width='9.47' height='7.06' rx='2' stroke='currentColor' />
-      <path d='m14.63 10.47-.24-2.18a2.16 2.16 0 0 0-4.3-.02l-.25 2.2' stroke='currentColor' />
+      <rect x='7.27' y='10.33' width='9.47' height='7.06' rx='2' stroke='currentColor' />
+      <path d='m14.4 10.33-.23-2.19a2.16 2.16 0 0 0-4.3-.01l-.25 2.2' stroke='currentColor' />
     </svg>
   )
 }

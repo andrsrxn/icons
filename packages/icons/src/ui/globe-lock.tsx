@@ -28,7 +28,7 @@ export const IconGlobeLock: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M12 22.3a10.3 10.3 0 1 1 9.1-5.44l-1.81-2.1-1.52.78-1.24 2.32-.27 3.39A7 7 0 0 1 12 22.31'
+        d='M12 22.3a10.3 10.3 0 1 1 9.1-5.44l-.96.7-3.6.3-.28 3.39A7 7 0 0 1 12 22.31'
         fill='currentColor'
       />
       <path d='M12 22.3A10.3 10.3 0 1 1 22.3 12' stroke='currentColor' />

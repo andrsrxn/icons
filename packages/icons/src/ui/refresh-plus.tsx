@@ -26,22 +26,22 @@ export const IconRefreshPlus: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M12 7.66v8.68' stroke='currentColor' />
-      <path d='M7.66 12h8.68' stroke='currentColor' />
+      <path d='M12.19 7.66v8.68' stroke='currentColor' />
+      <path d='M7.84 12h8.68' stroke='currentColor' />
       <path
-        d='M21.2 8.45c-2.03-3.67-5.44-5.88-9.65-5.88S3.78 4.7 2.49 8.11'
+        d='M21.38 8.17c-2.02-3.67-4.98-5.93-9.2-5.93s-8.21 2.18-9.5 5.58'
         stroke='currentColor'
       />
       <path
-        d='M2.86 15.9a11.2 11.2 0 0 0 9.6 5.9c4.22 0 7.5-1.78 9.04-5.52'
+        d='M3.05 15.62c1.68 3.19 4.88 6.12 9.1 6.12 4.2 0 8-2 9.54-5.75'
         stroke='currentColor'
       />
       <path
-        d='m22.64 6.14-.08.51c-.22 1.4-.33 2.1-.83 2.47-.5.36-1.2.25-2.6.03l-.51-.08'
+        d='m22.83 5.86-.08.51c-.22 1.4-.33 2.1-.83 2.46-.5.37-1.2.26-2.6.04l-.51-.08'
         stroke='currentColor'
       />
       <path
-        d='m1.53 18.4.06-.61c.12-1.41.18-2.12.66-2.51.48-.4 1.18-.34 2.6-.21l.61.05'
+        d='m1.72 18.12.06-.61c.12-1.41.18-2.12.66-2.52s1.18-.33 2.6-.2l.6.05'
         stroke='currentColor'
       />
     </svg>

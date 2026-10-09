@@ -28,25 +28,25 @@ export const IconBorderTop: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        x='21.24'
-        y='2.76'
+        x='20.6'
+        y='2.05'
         width='18.48'
         height='18.48'
         rx='3'
-        transform='rotate(90 21.24 2.76)'
+        transform='rotate(90 20.6 2.05)'
         fill='currentColor'
       />
-      <path d='M12 15.37V8.63' stroke='currentColor' />
-      <path d='M15.37 12H8.63' stroke='currentColor' />
+      <path d='M14.72 11.3H8' stroke='currentColor' />
+      <path d='M11.36 7.93v6.73' stroke='currentColor' />
       <path
-        d='M2.76 6v-.43a3 3 0 0 1 2.8-2.8h12.87a3 3 0 0 1 2.8 2.8l.01.43'
+        d='M2.12 4.62a2.57 2.57 0 0 1 2.56-2.57h13.35a2.57 2.57 0 0 1 2.57 2.57'
         stroke='currentColor'
       />
-      <path d='M2.71 18.02v.53a3 3 0 0 0 2.8 2.8h.45' stroke='currentColor' />
-      <path d='M21.29 18.02v.53a3 3 0 0 1-2.8 2.8h-.45' stroke='currentColor' />
-      <path d='M10.19 21.28h3.56' stroke='currentColor' />
-      <path d='M21.2 13.83v-3.57' stroke='currentColor' />
-      <path d='M2.72 13.83v-3.57' stroke='currentColor' />
+      <path d='M2.07 17.9v.07a2.6 2.6 0 0 0 2.6 2.6' stroke='currentColor' />
+      <path d='M20.66 18.05v.05a2.5 2.5 0 0 1-2.48 2.48' stroke='currentColor' />
+      <path d='M10.2 20.52h2.26' stroke='currentColor' />
+      <path d='M20.55 12.4v-2.24' stroke='currentColor' />
+      <path d='M2.08 12.4v-2.24' stroke='currentColor' />
     </svg>
   )
 }
