@@ -138,7 +138,11 @@ export default function DocsPage() {
               <a href='https://svgl.app' rel='noopener noreferrer' target='_blank'>
                 SVGL
               </a>{' '}
-              or{' '}
+              ,
+              <a href='https://thesvg.org' rel='noopener noreferrer' target='_blank'>
+                theSVG
+              </a>{' '}
+              , or{' '}
               <a href='https://simpleicons.org/' rel='noopener noreferrer' target='_blank'>
                 Simple Icons
               </a>

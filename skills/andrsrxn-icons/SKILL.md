@@ -40,7 +40,7 @@ Do not use this skill when:
 
 - Creating source SVG files or generating TSX component code inside the `andrsrxn/icons` library repository.
 - Working with internal package code (e.g. `raw-icons`, build scripts).
-- Seeking brand or company logos (use SVGL or Simple Icons instead).
+- Seeking brand or company logos (use SVGL, theSVG, or Simple Icons instead).
 
 ---
 
