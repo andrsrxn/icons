@@ -9,6 +9,8 @@
     "controls",
     "preferences",
     "settings",
-    "options"
+    "options",
+    "on",
+    "off"
   ]
 }

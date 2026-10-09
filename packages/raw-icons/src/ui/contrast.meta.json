@@ -1,18 +1,15 @@
 {
   "categories": [
+    "accessibility",
     "design",
-    "editor",
-    "media"
+    "editor"
   ],
   "tags": [
     "brightness",
     "balance",
     "display",
     "screen",
-    "saturation",
-    "exposure",
     "theme",
-    "mode",
-    "tone"
+    "mode"
   ]
 }

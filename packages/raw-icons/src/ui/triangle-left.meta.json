@@ -7,7 +7,6 @@
     "pointer",
     "west",
     "back",
-    "direction",
-    "play-reverse"
+    "direction"
   ]
 }
