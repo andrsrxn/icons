@@ -1,5 +1,41 @@
 # @andrsrxn/icons
 
+## 7.4.0
+
+### Minor Changes
+
+- [`9d35d43`](https://github.com/andrsrxn/icons/commit/9d35d4341991145e08ddba732af3c1b5580f8209) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Improved styling on some icons:
+  
+  `desk-device-pc`, `desk`, `license`, `lock-circle`, `settings`.
+
+- [`9d35d43`](https://github.com/andrsrxn/icons/commit/9d35d4341991145e08ddba732af3c1b5580f8209) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added new icons:
+  
+  `cylinder`, `field-button`, `table-rows`, `table-columns`, `background-gradient`, `background-shades`, `background-blur`, `background-pattern`, `inner-shadow`, `drop-shadow`, `background-texture`, `contrast-off`, `background-solid`, `license-check`, `opacity`, `ladder`, `check-square`, `x-square`, `file-link`, `slice`, `table-rows-plus`, `table-columns-plus`, `hand-squiggle`, `table-rows-measure`, `table-columns-measure`, `text-square`, `text-circle`, `file-orientation`, `file-measure`, `margins`, `file-refresh`, `table-footer`, `table-header`, `image-text`, `scan-image`, `text-replace`, `file-clock`, `text-footnote`, `file-lock`, `accessibility-check`, `explicit`, `explicit-off`, `explicit-filled`, and `accessibility-x`.
+
+- [`e33b1c4`](https://github.com/andrsrxn/icons/commit/e33b1c42cbcbf4a3945d753dc6c059a0e7bd9e0b) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added a new `cover` boolean prop to all flag icon components (`FlagIconProps`).
+  
+  This abstracts `preserveAspectRatio="xMidYMid slice"` into a first-class prop, allowing flags to automatically fill square containers (such as avatar or icon buttons) without manually specifying SVG attributes.
+  
+  ### Example
+  
+  ```tsx
+  // Before
+  <IconFlagGT size={80} preserveAspectRatio="xMidYMid slice" />
+  <IconFlagGT className="size-20" preserveAspectRatio="xMidYMid slice" />
+  
+  // Now
+  <IconFlagGT size={80} cover />
+  <IconFlagGT className="size-20" cover />
+  ```
+
+### Patch Changes
+
+- [`9d35d43`](https://github.com/andrsrxn/icons/commit/9d35d4341991145e08ddba732af3c1b5580f8209) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Improved styling on the following icons:
+  
+  `background`, `books`, `houses`, `border-bottom`, `border-top`, `border-right`, `border-left`, `border-start`, `border-end`, `border-none`, `contrast`, `currency-exchange`, `desk`, `desk-device`, `file-lock`, `folder-lock`, `gift-card`, `globe-lock`, `image-in`, `image`, `image-panoramic`, `image-out`, `image-move`, `image-plus`, `image-x`, `image-sparkle`, `medal`, `medal-first`, `medal-second`, `medal-third`, `license`, `mask`, `pool`, `refresh-plus`, `settings`, `replay`, `table`, and `text-sparkle`.
+
+- [`9d35d43`](https://github.com/andrsrxn/icons/commit/9d35d4341991145e08ddba732af3c1b5580f8209) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added missing icon preview to type declarations on final build.
+
 ## 7.3.0
 
 ### Minor Changes
