@@ -28,13 +28,16 @@ export const IconWarningCircle: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M1.78 12a10.22 10.22 0 1 0 20.43 0 10.22 10.22 0 0 0-20.43 0'
+        d='M1.78 12a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0'
         fill='currentColor'
       />
-      <path d='M1.79 12A10.2 10.2 0 0 0 12 22.22 10.22 10.22 0 1 0 1.8 12' stroke='currentColor' />
-      <path d='M12 6.43v6.01' stroke='currentColor' />
       <path
-        d='M12.68 16.6a.69.69 0 1 1-1.37 0 .69.69 0 0 1 1.37 0'
+        d='M1.79 12a10.2 10.2 0 0 0 10.22 10.22A10.22 10.22 0 1 0 1.79 12'
+        stroke='currentColor'
+      />
+      <path d='M12 6.57v6' stroke='currentColor' />
+      <path
+        d='M12.68 16.75a.69.69 0 1 1-1.37 0 .69.69 0 0 1 1.37 0'
         fill='currentColor'
         stroke='currentColor'
       />

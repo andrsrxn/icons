@@ -35,10 +35,10 @@ export const IconTerminalSquare: Icon = ({
         fill='currentColor'
       />
       <path
-        d='m6.52 7.26.68.49c2.07 1.48 3.1 2.22 3.1 3.25s-1.03 1.76-3.1 3.25l-.68.5'
+        d='M6.52 9.35c1.98 1.42 2.97 2.13 3 3.11v.15c-.03.98-1.02 1.69-3 3.12'
         stroke='currentColor'
       />
-      <path d='M17.48 16.1h-5.75' stroke='currentColor' />
+      <path d='M17.48 17.25h-6.36' stroke='currentColor' />
       <rect
         width='18.61'
         height='18.61'

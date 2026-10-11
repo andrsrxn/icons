@@ -37,7 +37,7 @@ export const IconSeekBackwardFiveRtl: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M10.06 16.48h1.9a2.1 2.1 0 0 0 0-4.22H9.8q0 0 0 0v-1.82c0-.77 0-1.16.2-1.42a1 1 0 0 1 .2-.2c.26-.2.65-.2 1.42-.2h2.02'
+        d='M10.5 16.48h1.91a2.1 2.1 0 0 0 0-4.22h-2.17q0 0 0 0v-1.82c0-.77 0-1.16.2-1.42a1 1 0 0 1 .2-.2c.26-.2.65-.2 1.42-.2h2.02'
         stroke='currentColor'
       />
     </svg>

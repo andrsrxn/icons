@@ -35,9 +35,9 @@ export const IconWarningTriangle: Icon = ({
         d='m6.72 8.3-2.3 4.2c-2.18 3.97-3.27 5.95-2.4 7.42s3.13 1.47 7.65 1.47h4.63c4.53 0 6.8 0 7.67-1.47.87-1.48-.23-3.46-2.42-7.43l-2.32-4.2C14.9 4.1 13.73 2 11.97 2 10.2 2 9.04 4.1 6.72 8.32'
         stroke='currentColor'
       />
-      <path d='M12 7.83v4.83' stroke='currentColor' />
+      <path d='M12 8.12v4.83' stroke='currentColor' />
       <path
-        d='M12.59 16.78a.59.59 0 1 1-1.18 0 .59.59 0 0 1 1.18 0'
+        d='M12.59 17.07a.59.59 0 1 1-1.18 0 .59.59 0 0 1 1.18 0'
         fill='currentColor'
         stroke='currentColor'
       />

@@ -26,13 +26,13 @@ export const IconPendulum: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M1.75 4.63h20.5' stroke='currentColor' />
+      <path d='M1.72 4.63h17.75' stroke='currentColor' />
       <path d='M4.88 14.9V4.63' stroke='currentColor' />
       <path d='M10.6 14.9V4.63' stroke='currentColor' />
       <path d='M18.35 14.9 15.4 4.63' stroke='currentColor' />
       <path
         opacity='.2'
-        d='M7.12 17.14a2.23 2.23 0 1 1-4.47 0 2.23 2.23 0 0 1 4.47 0'
+        d='M7.12 17.14a2.24 2.24 0 1 1-4.47 0 2.24 2.24 0 0 1 4.47 0'
         fill='currentColor'
       />
       <path
@@ -41,15 +41,15 @@ export const IconPendulum: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M7.12 17.14a2.23 2.23 0 0 1-2.24 2.23 2.23 2.23 0 1 1 2.24-2.23'
+        d='M7.12 17.14a2.23 2.23 0 0 1-2.24 2.23 2.24 2.24 0 1 1 2.24-2.23'
         stroke='currentColor'
       />
       <path
-        d='M12.83 17.14a2.23 2.23 0 0 1-2.23 2.23 2.23 2.23 0 1 1 2.23-2.23'
+        d='M12.83 17.14a2.23 2.23 0 0 1-2.23 2.23 2.24 2.24 0 1 1 2.23-2.23'
         stroke='currentColor'
       />
       <path
-        d='M21.35 17.14a2.23 2.23 0 0 1-2.23 2.23 2.23 2.23 0 1 1 2.23-2.23'
+        d='M21.35 17.14a2.23 2.23 0 0 1-2.23 2.23 2.24 2.24 0 1 1 2.23-2.23'
         stroke='currentColor'
       />
     </svg>

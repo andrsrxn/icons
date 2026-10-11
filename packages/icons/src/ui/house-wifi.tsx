@@ -38,12 +38,12 @@ export const IconHouseWifi: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M12.57 17.9a.56.56 0 1 1-1.11 0 .56.56 0 0 1 1.11 0'
+        d='M12.57 17.98a.56.56 0 1 1-1.11 0 .56.56 0 0 1 1.11 0'
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M8.65 15.48A5.7 5.7 0 0 1 12 14.37c1.5 0 2.75.5 3.37 1.11' stroke='currentColor' />
-      <path d='M6.56 12.96A9 9 0 0 1 12 11.04c2.42 0 4.1.85 5.44 1.92' stroke='currentColor' />
+      <path d='M8.65 15.26A5.5 5.5 0 0 1 12 14.08c1.5 0 2.75.54 3.37 1.18' stroke='currentColor' />
+      <path d='M6.56 12.66A8.6 8.6 0 0 1 12 10.62a8 8 0 0 1 5.44 2.04' stroke='currentColor' />
     </svg>
   )
 }

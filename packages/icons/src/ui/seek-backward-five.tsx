@@ -40,7 +40,7 @@ export const IconSeekBackwardFive: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M10.52 16.48h1.91a2.1 2.1 0 0 0 0-4.22h-2.17q0 0 0 0v-1.82c0-.77 0-1.16.2-1.42a1 1 0 0 1 .2-.2c.26-.2.65-.2 1.42-.2h2.02'
+        d='M10.23 16.48h1.9a2.1 2.1 0 0 0 0-4.22H9.98q0 0 0 0v-1.82c0-.77 0-1.16.2-1.42a1 1 0 0 1 .2-.2c.26-.2.64-.2 1.42-.2h2.02'
         stroke='currentColor'
       />
     </svg>
