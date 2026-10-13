@@ -41,13 +41,13 @@ export const IconCloudSun: Icon = ({
       />
       <path
         opacity='.2'
-        d='M15.64 13.18c-1.47-.8-2.8-.35-2.96-2.11s.57-2.74 2.33-2.9a3.2 3.2 0 0 1 3.5 2.9c.15 1.76-1.2 2.86-2.87 2.1'
+        d='M15.87 13.04c-1.62-.88-3.1-.38-3.28-2.34s.63-3.04 2.59-3.22a3.56 3.56 0 0 1 3.88 3.22c.18 1.96-1.32 3.18-3.19 2.34'
         fill='currentColor'
       />
-      <path d='M17.27 13.9a3.2 3.2 0 1 0-4.96-3.7' stroke='currentColor' />
-      <path d='M21.09 11.64h1.42' stroke='currentColor' />
-      <path d='M14.18 5.76v-1.4' stroke='currentColor' />
-      <path d='m19.35 6.92.96-1.16' stroke='currentColor' />
+      <path d='M17.69 13.85a3.56 3.56 0 1 0-5.5-4.1' stroke='currentColor' />
+      <path d='M21.74 11.98h.82' stroke='currentColor' />
+      <path d='M13.6 4.95V4.1' stroke='currentColor' />
+      <path d='m19.7 6.32.65-.76' stroke='currentColor' />
     </svg>
   )
 }

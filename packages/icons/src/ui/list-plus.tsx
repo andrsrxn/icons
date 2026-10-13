@@ -27,10 +27,10 @@ export const IconListPlus: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path d='M21.19 6H2.8' stroke='currentColor' />
-      <path d='M21.19 12H2.8' stroke='currentColor' />
-      <path d='M12 18H2.81' stroke='currentColor' />
-      <path d='M21.19 17.96h-5.5' stroke='currentColor' />
-      <path d='M18.45 15.2v5.5' stroke='currentColor' />
+      <path d='M12.07 12H2.8' stroke='currentColor' />
+      <path d='M12.07 18H2.8' stroke='currentColor' />
+      <path d='M21.98 15.1h-7.04' stroke='currentColor' />
+      <path d='M18.47 11.57v7.04' stroke='currentColor' />
     </svg>
   )
 }

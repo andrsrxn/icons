@@ -28,20 +28,20 @@ export const IconVideoPlus: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        x='1.85'
-        y='5.46'
+        x='1.67'
+        y='5.63'
         width='14.51'
-        height='13.08'
+        height='12.72'
         rx='3'
         fill='currentColor'
       />
-      <rect x='1.85' y='5.46' width='14.51' height='13.08' rx='3' stroke='currentColor' />
+      <path d='M9.02 8.73v6.54' stroke='currentColor' />
+      <path d='M5.74 12h6.55' stroke='currentColor' />
+      <rect x='1.85' y='5.63' width='14.15' height='12.73' rx='3' stroke='currentColor' />
       <path
-        d='m16.36 9.14.63-.32c2.08-1.05 3.12-1.58 3.94-1.28a2 2 0 0 1 .67.41c.64.6.64 1.76.64 4.1 0 2.3 0 3.45-.64 4.04a2 2 0 0 1-.65.41c-.81.31-1.85-.2-3.92-1.2l-.67-.34'
+        d='m16 9.14.93-.45c2.18-1.04 3.28-1.56 4.12-1.18a2 2 0 0 1 .49.3c.7.6.7 1.81.7 4.23 0 2.4 0 3.59-.7 4.18a2 2 0 0 1-.48.32c-.83.37-1.92-.13-4.09-1.13l-.97-.45'
         stroke='currentColor'
       />
-      <path d='M9.02 9v6' stroke='currentColor' />
-      <path d='M6.01 12h6' stroke='currentColor' />
     </svg>
   )
 }

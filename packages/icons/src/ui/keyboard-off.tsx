@@ -41,7 +41,6 @@ export const IconKeyboardOff: Icon = ({
         transform='matrix(0 -1 -1 0 22.32 19.48)'
         stroke='currentColor'
       />
-      <path d='M16.45 16.52H8.44' stroke='currentColor' />
       <path d='m2.74 2.64 18.52 18.51' stroke='currentColor' />
       <path
         d='M6.13 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
@@ -83,6 +82,7 @@ export const IconKeyboardOff: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
+      <path d='M15.63 16.24h-7.2' stroke='currentColor' />
     </svg>
   )
 }

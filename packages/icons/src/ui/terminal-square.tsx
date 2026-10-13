@@ -34,11 +34,6 @@ export const IconTerminalSquare: Icon = ({
         transform='matrix(0 -1 -1 0 21.3 21.3)'
         fill='currentColor'
       />
-      <path
-        d='M6.52 9.35c1.98 1.42 2.97 2.13 3 3.11v.15c-.03.98-1.02 1.69-3 3.12'
-        stroke='currentColor'
-      />
-      <path d='M17.48 17.25h-6.36' stroke='currentColor' />
       <rect
         width='18.61'
         height='18.61'
@@ -46,6 +41,11 @@ export const IconTerminalSquare: Icon = ({
         transform='matrix(0 -1 -1 0 21.3 21.3)'
         stroke='currentColor'
       />
+      <path
+        d='M7.12 9.39c1.99 1.42 2.98 2.13 3.02 3.11v.14c-.04.99-1.03 1.7-3.02 3.12'
+        stroke='currentColor'
+      />
+      <path d='M17.6 17.29h-6.37' stroke='currentColor' />
     </svg>
   )
 }

@@ -33,10 +33,10 @@ export const IconSearchSparkle: Icon = ({
       />
       <path d='m15.7 15.65 5.68 5.68' stroke='currentColor' />
       <path d='M16.77 14.04c-.13.23-.17.32-.32.54A7.6 7.6 0 1 1 12.7 3.07' stroke='currentColor' />
-      <path d='M13.6 6.66c1.88 0 3.89-2.02 3.89-3.89' stroke='currentColor' />
-      <path d='M21.38 6.66c-1.87 0-3.89-2.02-3.89-3.89' stroke='currentColor' />
-      <path d='M13.6 6.67c1.86 0 3.89 2.05 3.89 3.89' stroke='currentColor' />
-      <path d='M21.38 6.67c-1.84 0-3.89 2.03-3.89 3.89' stroke='currentColor' />
+      <path d='M13.52 6.92c2.06 0 4.27-2.23 4.27-4.27' stroke='currentColor' />
+      <path d='M22.07 6.92c-2.05 0-4.28-2.22-4.28-4.27' stroke='currentColor' />
+      <path d='M13.52 6.92c2.05 0 4.27 2.26 4.27 4.28' stroke='currentColor' />
+      <path d='M22.07 6.92c-2.03 0-4.28 2.23-4.28 4.28' stroke='currentColor' />
     </svg>
   )
 }

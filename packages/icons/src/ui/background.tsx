@@ -36,9 +36,9 @@ export const IconBackground: Icon = ({
         fill='currentColor'
       />
       <rect x='2.68' y='2.68' width='18.64' height='18.64' rx='3' stroke='currentColor' />
-      <path d='M2.7 11.14 12.76 21.2' stroke='currentColor' />
-      <path d='m3.88 3.57 16.58 16.57' stroke='currentColor' />
-      <path d='M11.94 2.74 21.21 12' stroke='currentColor' />
+      <path d='m3.04 11.92 9.23 9.24' stroke='currentColor' />
+      <path d='m3.88 3.78 16.57 16.57' stroke='currentColor' />
+      <path d='m11.75 2.86 9.2 9.2' stroke='currentColor' />
     </svg>
   )
 }

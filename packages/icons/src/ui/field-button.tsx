@@ -28,22 +28,22 @@ export const IconFieldButton: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='10.22'
-        height='17.13'
+        width='9.98'
+        height='16.37'
         rx='2'
-        transform='matrix(0 -1 -1 0 18.76 19.12)'
+        transform='matrix(0 -1 -1 0 17.92 19.2)'
         fill='currentColor'
       />
       <rect
-        width='10.22'
-        height='17.13'
+        width='9.98'
+        height='16.37'
         rx='3'
-        transform='matrix(0 -1 -1 0 18.76 19.12)'
+        transform='matrix(0 -1 -1 0 17.92 19.2)'
         stroke='currentColor'
       />
-      <path d='m21.31 9.23 1.07-.17' stroke='currentColor' />
-      <path d='m15.52 5.88-.38-1' stroke='currentColor' />
-      <path d='m18.9 6.7.57-.98' stroke='currentColor' />
+      <path d='M20.72 12.13h1.73' stroke='currentColor' />
+      <path d='M15.35 6.46V4.8' stroke='currentColor' />
+      <path d='m19.36 7.81 1.36-1.35' stroke='currentColor' />
     </svg>
   )
 }

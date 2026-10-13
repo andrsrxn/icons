@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconScanImage: Icon = ({
+export const IconImageScan: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconScanImage: Icon = ({
       strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
-      data-slot='icon-ui-scan-image'
+      data-slot='icon-ui-image-scan'
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
       aria-label={ariaLabel}

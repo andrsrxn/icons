@@ -27,22 +27,16 @@ export const IconSplit: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='m9.5 19.44-.73.73c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.73-.73'
+        d='M8.08 2.73H6.7c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42V8.1'
         stroke='currentColor'
       />
       <path
-        d='m21.62 19.44-.73.73c-1.33 1.33-2 2-2.83 2-.82 0-1.5-.67-2.83-2l-.72-.73'
+        d='M21.3 8.11V6.73c0-1.89 0-2.83-.58-3.42s-1.53-.58-3.41-.58h-1.39'
         stroke='currentColor'
       />
-      <path d='M12 1.74v8.13' stroke='currentColor' />
-      <path
-        d='M5.9 21.72V18.9c0-1.75 0-2.63.35-3.4.34-.78.99-1.36 2.29-2.54L12 9.83'
-        stroke='currentColor'
-      />
-      <path
-        d='M18.06 21.72V18.8c0-1.75 0-2.62-.34-3.4s-.99-1.35-2.28-2.53l-3.35-3.03'
-        stroke='currentColor'
-      />
+      <path d='M12 21.77v-9.8' stroke='currentColor' />
+      <path d='M3.46 3.44 12 11.98' stroke='currentColor' />
+      <path d='M20.54 3.44 12 11.98' stroke='currentColor' />
     </svg>
   )
 }

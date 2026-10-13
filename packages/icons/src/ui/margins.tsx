@@ -26,7 +26,18 @@ export const IconMargins: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path opacity='.2' d='M17.39 6.55v10.58H6.6V6.55z' fill='currentColor' />
+      <path
+        opacity='.2'
+        d='M7.22 2.95v17.77h-.46c-1.89 0-2.83 0-3.41-.59-.6-.58-.6-1.53-.6-3.41V6.95c0-1.88 0-2.83.6-3.41.58-.59 1.52-.59 3.4-.59z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M16.78 2.95v17.77h.46c1.89 0 2.83 0 3.41-.59.6-.58.6-1.53.6-3.41V6.95c0-1.88 0-2.83-.6-3.41-.58-.59-1.52-.59-3.4-.59z'
+        fill='currentColor'
+      />
+      <path opacity='.2' d='M7.22 7.14h9.56V2.95H7.22z' fill='currentColor' />
+      <path opacity='.2' d='M7.22 21.24h9.56v-4.19H7.22z' fill='currentColor' />
       <rect
         width='18.48'
         height='18.48'
@@ -34,10 +45,10 @@ export const IconMargins: Icon = ({
         transform='scale(1 -1)rotate(90 21.24 0)'
         stroke='currentColor'
       />
-      <path d='M21 6.7H3' stroke='currentColor' />
-      <path d='M21 17.2H3' stroke='currentColor' />
-      <path d='M6.72 2.95v18' stroke='currentColor' />
-      <path d='M17.28 2.95v18' stroke='currentColor' />
+      <path d='M21 7.14H3' stroke='currentColor' />
+      <path d='M21 16.76H3' stroke='currentColor' />
+      <path d='M7.22 2.95v18' stroke='currentColor' />
+      <path d='M16.78 2.95v18' stroke='currentColor' />
     </svg>
   )
 }

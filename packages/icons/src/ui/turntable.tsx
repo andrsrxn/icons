@@ -46,10 +46,7 @@ export const IconTurntable: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path
-        d='M18.3 7.6v3.7c0 .96 0 1.44-.12 1.9s-.33.88-.76 1.73l-.8 1.57'
-        stroke='currentColor'
-      />
+      <path d='M18.3 8.25v2.6c0 1.1 0 1.64-.15 2.16s-.43 1-.99 1.93l-.54.9' stroke='currentColor' />
     </svg>
   )
 }

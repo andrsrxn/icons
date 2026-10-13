@@ -28,10 +28,10 @@ export const IconTranslateSparkle: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='m19.85 4.59-.95-1.8-.96 1.8L16.1 5.6l1.84.95.96 2.1.95-2.1 2-1.04z'
+        d='m19.67 4.25-1.02-1.92-1.02 1.92-1.97 1.09 1.97 1 1.02 2.25 1.02-2.24 2.14-1.11z'
         fill='currentColor'
       />
-      <path d='M1.79 5.48h10.6' stroke='currentColor' />
+      <path d='M1.79 5.48h10.34' stroke='currentColor' />
       <path d='M7.73 5.48V2.86' stroke='currentColor' />
       <path d='m4.86 8.82 7.53 7.53' stroke='currentColor' />
       <path
@@ -43,10 +43,10 @@ export const IconTranslateSparkle: Icon = ({
         stroke='currentColor'
       />
       <path d='M17.93 16.56h-5.47' stroke='currentColor' />
-      <path d='M15.67 5.78c1.62 0 3.36-1.76 3.36-3.37' stroke='currentColor' />
-      <path d='M22.4 5.78c-1.62 0-3.37-1.75-3.37-3.37' stroke='currentColor' />
-      <path d='M15.67 5.78c1.6 0 3.36 1.78 3.36 3.36' stroke='currentColor' />
-      <path d='M22.4 5.78c-1.6 0-3.37 1.75-3.37 3.36' stroke='currentColor' />
+      <path d='M15.2 5.52c1.73 0 3.6-1.88 3.6-3.6' stroke='currentColor' />
+      <path d='M22.4 5.52c-1.74 0-3.6-1.87-3.6-3.6' stroke='currentColor' />
+      <path d='M15.2 5.52c1.72 0 3.6 1.9 3.6 3.6' stroke='currentColor' />
+      <path d='M22.4 5.52c-1.71 0-3.6 1.88-3.6 3.6' stroke='currentColor' />
     </svg>
   )
 }

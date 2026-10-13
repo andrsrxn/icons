@@ -30,8 +30,8 @@ export const IconCurrencyKrw: Icon = ({
       <path d='m12 5.58 4.54 14.07' stroke='currentColor' />
       <path d='M12 5.58 7.46 19.65' stroke='currentColor' />
       <path d='m21.09 5.58-4.55 14.07' stroke='currentColor' />
-      <path d='M2.01 9.95H22' stroke='currentColor' />
-      <path d='M2.01 13.97H22' stroke='currentColor' />
+      <path d='M2.01 10.25H22' stroke='currentColor' />
+      <path d='M2.01 14.27H22' stroke='currentColor' />
     </svg>
   )
 }

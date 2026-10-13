@@ -44,9 +44,9 @@ export const IconUsbWarning: Icon = ({
         stroke='currentColor'
       />
       <path d='M11.27 4.72h1.46' stroke='currentColor' />
-      <path d='M12 14.96V12' stroke='currentColor' />
+      <path d='M12 14.96v-3.68' stroke='currentColor' />
       <path
-        d='M12.44 18.08a.44.44 0 1 1-.88 0 .44.44 0 0 1 .88 0'
+        d='M12.44 18.22a.44.44 0 1 1-.88 0 .44.44 0 0 1 .88 0'
         fill='currentColor'
         stroke='currentColor'
       />

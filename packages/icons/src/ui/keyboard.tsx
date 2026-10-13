@@ -81,7 +81,7 @@ export const IconKeyboard: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M15.63 16.52h-7.2' stroke='currentColor' />
+      <path d='M15.63 16.24h-7.2' stroke='currentColor' />
     </svg>
   )
 }

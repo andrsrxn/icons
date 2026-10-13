@@ -27,10 +27,10 @@ export const IconCent: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M17.73 5.23a8 8 0 0 0-3.58-.82A7.73 7.73 0 0 0 6.27 12c0 4.2 3.53 7.6 7.88 7.6q1.95-.02 3.58-.83'
+        d='M17.38 5.23a8 8 0 0 0-3.57-.82A7.73 7.73 0 0 0 5.93 12c0 4.2 3.53 7.6 7.88 7.6q1.95-.02 3.57-.83'
         stroke='currentColor'
       />
-      <path d='M12.77 21.41V2.59' stroke='currentColor' />
+      <path d='M12.14 21.41V2.59' stroke='currentColor' />
     </svg>
   )
 }

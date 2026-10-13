@@ -31,14 +31,17 @@ export const IconMicrophoneSparkle: Icon = ({
         d='M12 14.52h.19a4 4 0 0 0 3.91-3.92V6.74l-.55-.54a1.5 1.5 0 0 1-.12-2.03 3 3 0 0 0-2.93-2.42h-.73A3.9 3.9 0 0 0 7.9 5.63v4.98a4 4 0 0 0 4.1 3.9'
         fill='currentColor'
       />
-      <path d='M12 1.65a4.1 4.1 0 0 0-4.1 4.1v4.97a4.1 4.1 0 1 0 8.2 0' stroke='currentColor' />
+      <path
+        d='M11.79 1.65a3.9 3.9 0 0 0-3.9 3.9v5.17a4.1 4.1 0 0 0 4.11 4.1h.26a3.85 3.85 0 0 0 3.85-3.84'
+        stroke='currentColor'
+      />
       <path d='M19.02 9.44v1.4a7.02 7.02 0 0 1-14.04 0v-2.1' stroke='currentColor' />
       <path d='M12 18v4.29' stroke='currentColor' />
       <path d='M15 22.29H9' stroke='currentColor' />
-      <path d='M13.12 4.64c1.44 0 2.99-1.56 2.99-2.99' stroke='currentColor' />
-      <path d='M19.09 4.64c-1.43 0-2.98-1.55-2.98-2.99' stroke='currentColor' />
-      <path d='M13.12 4.64c1.43 0 2.99 1.58 2.99 2.98' stroke='currentColor' />
-      <path d='M19.09 4.64c-1.41 0-2.98 1.56-2.98 2.98' stroke='currentColor' />
+      <path d='M12.8 4.7c1.59 0 3.3-1.74 3.3-3.32' stroke='currentColor' />
+      <path d='M19.42 4.7c-1.6 0-3.32-1.73-3.32-3.32' stroke='currentColor' />
+      <path d='M12.8 4.7c1.58 0 3.3 1.74 3.3 3.3' stroke='currentColor' />
+      <path d='M19.42 4.7c-1.57 0-3.32 1.72-3.32 3.3' stroke='currentColor' />
     </svg>
   )
 }

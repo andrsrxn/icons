@@ -28,8 +28,8 @@ export const IconCurrencyCup: Icon = ({
       {...props}>
       <path d='M7.09 3.03v18.2' stroke='currentColor' />
       <path d='M7.09 3.03h5.5a5.34 5.34 0 0 1 0 10.68h-5.5' stroke='currentColor' />
-      <path d='M3.6 9.97h17.32' stroke='currentColor' />
-      <path d='M3.6 6.13h17.32' stroke='currentColor' />
+      <path d='M3.34 10.3h17.32' stroke='currentColor' />
+      <path d='M3.34 6.45h17.32' stroke='currentColor' />
     </svg>
   )
 }

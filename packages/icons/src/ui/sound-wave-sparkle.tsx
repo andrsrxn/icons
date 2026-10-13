@@ -28,7 +28,7 @@ export const IconSoundWaveSparkle: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='m20.03 16.25-.93-1.74-.93 1.74-1.8 1 1.8.91.93 2.05.93-2.05 1.94-1z'
+        d='m19.78 16.95-1.07-2.02-1.09 2.02-2.06 1.14 2.06 1.06 1.09 2.36 1.07-2.36L22.02 18z'
         fill='currentColor'
       />
       <path d='M1.75 15.4V8.6' stroke='currentColor' />
@@ -37,10 +37,10 @@ export const IconSoundWaveSparkle: Icon = ({
       <path d='M9.95 17.32V6.68' stroke='currentColor' />
       <path d='M5.85 19.61V4.4' stroke='currentColor' />
       <path d='M18.15 11V4.39' stroke='currentColor' />
-      <path d='M15.95 17.41c1.58 0 3.28-1.7 3.28-3.28' stroke='currentColor' />
-      <path d='M22.5 17.41c-1.57 0-3.27-1.7-3.27-3.28' stroke='currentColor' />
-      <path d='M15.95 17.41c1.57 0 3.28 1.73 3.28 3.28' stroke='currentColor' />
-      <path d='M22.5 17.41c-1.55 0-3.27 1.71-3.27 3.28' stroke='currentColor' />
+      <path d='M14.98 17.94c1.84 0 3.81-1.98 3.81-3.8' stroke='currentColor' />
+      <path d='M22.6 17.94c-1.83 0-3.8-1.98-3.8-3.8' stroke='currentColor' />
+      <path d='M14.98 17.94c1.83 0 3.81 2.02 3.81 3.81' stroke='currentColor' />
+      <path d='M22.6 17.94c-1.8 0-3.8 2-3.8 3.81' stroke='currentColor' />
     </svg>
   )
 }

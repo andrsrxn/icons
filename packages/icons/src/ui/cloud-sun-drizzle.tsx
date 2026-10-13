@@ -40,13 +40,13 @@ export const IconCloudSunDrizzle: Icon = ({
       />
       <path
         opacity='.2'
-        d='M15.64 12.36c-1.47-.79-2.8-.34-2.96-2.1-.16-1.77.57-2.74 2.33-2.9a3.2 3.2 0 0 1 3.5 2.9c.15 1.76-1.2 2.86-2.87 2.1'
+        d='M15.93 12.26c-1.58-.85-3.03-.37-3.2-2.29-.18-1.91.61-2.97 2.53-3.14a3.5 3.5 0 0 1 3.79 3.14c.17 1.92-1.3 3.11-3.12 2.3'
         fill='currentColor'
       />
-      <path d='M17.27 13.09a3.2 3.2 0 1 0-4.96-3.7' stroke='currentColor' />
-      <path d='M21.05 11.23h1.42' stroke='currentColor' />
-      <path d='M13.72 4.95V3.54' stroke='currentColor' />
-      <path d='m19.35 6.1.96-1.15' stroke='currentColor' />
+      <path d='M17.7 13.05a3.48 3.48 0 1 0-5.37-4.01' stroke='currentColor' />
+      <path d='M21.67 11.23h.8' stroke='currentColor' />
+      <path d='M13.72 4.35v-.81' stroke='currentColor' />
+      <path d='m19.67 5.7.64-.75' stroke='currentColor' />
       <path d='M9.94 16.27v-.73' stroke='currentColor' />
       <path d='M9.94 19.27v-.73' stroke='currentColor' />
       <path d='M7.05 20.44v-.73' stroke='currentColor' />

@@ -46,6 +46,8 @@ export const IconEarbuds: Icon = ({
         d='M13.78 7.66v10.69c0 .58 0 .87.08 1.1.15.45.5.8.94.94.23.08.52.08 1.1.08s.88 0 1.12-.08c.44-.15.78-.5.93-.93.08-.24.08-.53.08-1.11v-6.26'
         stroke='currentColor'
       />
+      <path d='M5.13 8.98V6.7' stroke='currentColor' />
+      <path d='M18.87 8.98V6.7' stroke='currentColor' />
     </svg>
   )
 }

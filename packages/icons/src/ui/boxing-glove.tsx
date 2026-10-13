@@ -35,10 +35,10 @@ export const IconBoxingGlove: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M12.82 16.88c1.72-.52 6.94-3.65 8.44-6.97 2.2-4.9-5.59-10.4-8.53-7.03-1.94 2.22-1.57 3.5-2.2 5.32'
+        d='M12.82 16.88c1.72-.52 6.94-3.65 8.44-6.97 2.2-4.9-4.84-10.17-8.13-6.94-2.1 2.07-2.27 3.53-2.74 4.82'
         stroke='currentColor'
       />
-      <path d='M7.04 12.31c-.6-2.32-.17-8.79 4.21-8' stroke='currentColor' />
+      <path d='M7.04 12.31C6.44 9.99 7.3 3 11.6 4.64' stroke='currentColor' />
       <rect
         width='10.67'
         height='6.42'

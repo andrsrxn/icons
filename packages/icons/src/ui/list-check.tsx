@@ -26,12 +26,13 @@ export const IconListCheck: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M21.38 6H10.34' stroke='currentColor' />
-      <path d='M21.38 12H10.34' stroke='currentColor' />
-      <path d='M21.38 18H10.34' stroke='currentColor' />
-      <path d='m2.65 6.1.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 4.17' stroke='currentColor' />
-      <path d='m2.65 12.1.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 10.17' stroke='currentColor' />
-      <path d='m2.65 18.1.62.77c.36.44.54.66.78.66s.42-.22.77-.66L7 16.17' stroke='currentColor' />
+      <path d='M21.19 6H2.8' stroke='currentColor' />
+      <path d='M11.57 12H2.81' stroke='currentColor' />
+      <path d='M11.57 18H2.81' stroke='currentColor' />
+      <path
+        d='m14.83 15.13.6.72c.71.87 1.07 1.3 1.54 1.3.48 0 .83-.43 1.55-1.3l2.98-3.65'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

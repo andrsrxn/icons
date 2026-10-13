@@ -26,19 +26,11 @@ export const IconArtboard: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <rect
-        opacity='.2'
-        x='4.13'
-        y='4.13'
-        width='15.74'
-        height='15.74'
-        rx='2'
-        fill='currentColor'
-      />
-      <path d='M19.34 2v20' stroke='currentColor' />
-      <path d='M2 4.79h20' stroke='currentColor' />
-      <path d='M2 19.31h20' stroke='currentColor' />
-      <path d='M4.69 2v20' stroke='currentColor' />
+      <path opacity='.2' fill='currentColor' d='M5.15 5.15h13.7v13.7H5.15z' />
+      <path d='M18.88 2v20' stroke='currentColor' />
+      <path d='M2 5.32h20' stroke='currentColor' />
+      <path d='M2 18.78h20' stroke='currentColor' />
+      <path d='M5.15 2v20' stroke='currentColor' />
     </svg>
   )
 }

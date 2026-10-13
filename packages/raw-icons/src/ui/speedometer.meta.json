@@ -1,4 +1,15 @@
 {
-  "categories": ["charts", "navigation", "transport"],
-  "tags": ["gauge", "performance", "speed", "fast", "dashboard", "velocity", "drive"]
+  "categories": [
+    "charts",
+    "navigation",
+    "transport"
+  ],
+  "tags": [
+    "gauge",
+    "performance",
+    "fast",
+    "dashboard",
+    "velocity",
+    "drive"
+  ]
 }

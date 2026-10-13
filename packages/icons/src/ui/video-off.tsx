@@ -28,19 +28,19 @@ export const IconVideoOff: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        x='1.81'
-        y='5.43'
-        width='14.56'
-        height='13.13'
+        x='1.85'
+        y='5.63'
+        width='14.15'
+        height='12.73'
         rx='3'
         fill='currentColor'
       />
-      <rect x='1.81' y='5.43' width='14.56' height='13.13' rx='3' stroke='currentColor' />
+      <path d='m2.71 2.71 18.58 18.58' stroke='currentColor' />
+      <rect x='1.85' y='5.63' width='14.15' height='12.73' rx='3' stroke='currentColor' />
       <path
-        d='m16.37 9.13.64-.32c2.1-1.06 3.15-1.6 3.97-1.28a2 2 0 0 1 .64.4c.65.59.65 1.76.65 4.12 0 2.32 0 3.48-.64 4.07a2 2 0 0 1-.63.4c-.82.31-1.86-.2-3.95-1.21l-.68-.33'
+        d='m16 9.14.93-.45c2.18-1.04 3.28-1.56 4.12-1.18a2 2 0 0 1 .49.3c.7.6.7 1.81.7 4.23 0 2.4 0 3.59-.7 4.18a2 2 0 0 1-.48.32c-.83.37-1.92-.13-4.09-1.13l-.97-.45'
         stroke='currentColor'
       />
-      <path d='m2.71 2.71 18.58 18.58' stroke='currentColor' />
     </svg>
   )
 }

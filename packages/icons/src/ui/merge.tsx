@@ -27,18 +27,12 @@ export const IconMerge: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='m15.97 19.02-1.14 1.15c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-1.14-1.15'
+        d='M16.59 6.36 14.83 4.6c-1.33-1.33-2-2-2.83-2-.82 0-1.5.67-2.83 2L7.41 6.36'
         stroke='currentColor'
       />
-      <path d='M12 13.93v7.8' stroke='currentColor' />
-      <path
-        d='M7.39 2.08v4.26c0 1.84 0 2.76.37 3.56.38.8 1.09 1.4 2.5 2.57L12 13.93'
-        stroke='currentColor'
-      />
-      <path
-        d='M16.61 2.08v4.26c0 1.84 0 2.76-.37 3.56-.38.8-1.09 1.4-2.5 2.57L12 13.93'
-        stroke='currentColor'
-      />
+      <path d='M12 13.23V2.99' stroke='currentColor' />
+      <path d='M3.92 21.31 12 13.23' stroke='currentColor' />
+      <path d='M20.08 21.31 12 13.23' stroke='currentColor' />
     </svg>
   )
 }

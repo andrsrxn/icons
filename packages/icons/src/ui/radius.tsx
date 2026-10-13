@@ -36,7 +36,7 @@ export const IconRadius: Icon = ({
       <circle cx='12' cy='12' r='10.3' transform='rotate(90 12 12)' stroke='currentColor' />
       <path d='M13.72 12h5.01' stroke='currentColor' />
       <path
-        d='m17.08 14.46.34-.34c1-1 1.5-1.5 1.5-2.12s-.5-1.12-1.5-2.12l-.34-.34'
+        d='m16.45 15.28 1.16-1.16c1-1 1.5-1.5 1.5-2.12s-.5-1.12-1.5-2.12l-1.16-1.16'
         stroke='currentColor'
       />
       <circle cx='12' cy='12' r='1.72' stroke='currentColor' />

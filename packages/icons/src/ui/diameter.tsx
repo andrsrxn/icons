@@ -34,17 +34,17 @@ export const IconDiameter: Icon = ({
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.3' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M13.72 12h5.01' stroke='currentColor' />
+      <path d='M10.28 12h-5.5' stroke='currentColor' />
       <path
-        d='m17.08 14.46.34-.34c1-1 1.5-1.5 1.5-2.12s-.5-1.12-1.5-2.12l-.34-.34'
-        stroke='currentColor'
-      />
-      <path d='M10.28 12H5.27' stroke='currentColor' />
-      <path
-        d='m6.92 14.46-.34-.34c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.12l.34-.34'
+        d='m7.04 15-.88-.88c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.12L7.04 9'
         stroke='currentColor'
       />
       <circle cx='12' cy='12' r='1.72' stroke='currentColor' />
+      <path d='M13.72 12h5.5' stroke='currentColor' />
+      <path
+        d='m16.96 15 .88-.88c1-1 1.5-1.5 1.5-2.12s-.5-1.12-1.5-2.12L16.96 9'
+        stroke='currentColor'
+      />
     </svg>
   )
 }
