@@ -38,7 +38,7 @@ export const IconGridList = ({
           <EmptyTitle>{emptyTitle}</EmptyTitle>
           <EmptyDescription className='max-w-xs text-pretty'>
             Try with another search term or ask for an specific icon on{' '}
-            <a className='text-foreground font-medium' href={COMPANY.repo.issues}>
+            <a className='text-foreground font-medium' href={COMPANY.repo.issues.new}>
               GitHub
             </a>
             .

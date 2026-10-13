@@ -1253,7 +1253,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
         <p>
           We currently do not accept contributions for new icons, but we appreciate suggestions and
           icon requests through{' '}
-          <a href={COMPANY.repo.issues} target='_blank' rel='noopener noreferrer'>
+          <a href={COMPANY.repo.issues.new} target='_blank' rel='noopener noreferrer'>
             GitHub issues.
           </a>
         </p>
