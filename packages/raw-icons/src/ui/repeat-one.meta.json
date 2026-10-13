@@ -6,8 +6,11 @@
     "loop",
     "again",
     "replay",
+    "reload",
+    "refresh",
     "single",
     "music",
-    "track", "1"
+    "track", 
+    "1"
   ]
 }

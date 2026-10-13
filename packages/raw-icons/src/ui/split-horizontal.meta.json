@@ -1,6 +1,7 @@
 {
   "categories": [
-    "layout"
+    "layout",
+    "editor"
   ],
   "tags": [
     "structure",
@@ -8,6 +9,7 @@
     "divide",
     "separate",
     "columns",
-    "panels"
+    "panels",
+    "flip"
   ]
 }
