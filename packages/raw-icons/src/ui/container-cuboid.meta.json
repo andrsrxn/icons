@@ -1,0 +1,16 @@
+{
+  "categories": [
+    "development",
+    "tools"
+  ],
+  "tags": [
+    "docker",
+    "package",
+    "box",
+    "deploy",
+    "service",
+    "instance",
+    "runtime",
+    "pod"
+  ]
+}

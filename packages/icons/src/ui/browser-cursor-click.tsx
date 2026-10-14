@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconBrowserCursorClick: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-browser-cursor-click'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M9.02 18.4 5.6 8.11c-.55-1.63-.82-2.45-.39-2.89.44-.43 1.26-.17 2.9.36l10.3 3.32c1.37.44 2.05.65 2.24 1.06q.13.31.05.66c-.1.43-.74.76-2.01 1.43-.78.4-1.17.6-1.31.93a1 1 0 0 0-.08.52c.04.35.35.66.97 1.28l2.97 2.97c.67.67 1 1 1 1.42s-.33.74-1 1.41l-.62.62c-.66.67-1 1-1.41 1-.42 0-.75-.33-1.42-1l-2.98-2.99c-.6-.6-.9-.9-1.24-.95a1 1 0 0 0-.56.09c-.3.14-.5.52-.9 1.28-.63 1.22-.95 1.83-1.36 1.95a1 1 0 0 1-.7-.05c-.4-.19-.6-.84-1.04-2.15'
+        fill='currentColor'
+      />
+      <path
+        d='M9.02 18.4 5.6 8.11c-.55-1.63-.82-2.45-.39-2.89.44-.43 1.26-.17 2.9.36l10.3 3.32c1.37.44 2.05.65 2.24 1.06q.13.31.05.66c-.1.43-.74.76-2.01 1.43-.78.4-1.17.6-1.31.93a1 1 0 0 0-.08.52c.04.35.35.66.97 1.28l2.97 2.97c.67.67 1 1 1 1.42s-.33.74-1 1.41l-.62.62c-.66.67-1 1-1.41 1-.42 0-.75-.33-1.42-1l-2.98-2.99h0c-.6-.6-.9-.9-1.24-.95a1 1 0 0 0-.56.09c-.3.14-.5.52-.9 1.28-.63 1.22-.95 1.83-1.36 1.95a1 1 0 0 1-.7-.05c-.4-.19-.6-.84-1.04-2.15'
+        stroke='currentColor'
+      />
+      <path d='m12.17 3.8 1.38-1.37' stroke='currentColor' />
+      <path d='m3.77 12.23-1.39 1.39' stroke='currentColor' />
+      <path d='M9.02 3.12V1.38' stroke='currentColor' />
+      <path d='M3.08 9.08H1.33' stroke='currentColor' />
+    </svg>
+  )
+}

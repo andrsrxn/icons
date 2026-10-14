@@ -1,0 +1,80 @@
+import type { Icon } from './types'
+
+export const IconVideoSwap: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-video-swap'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M18.96 9.24v-1c0-1.88 0-2.83-.59-3.41-.58-.59-1.52-.59-3.41-.59h-.23'
+        stroke='currentColor'
+      />
+      <path d='M5.04 14.7v1c0 1.88 0 2.82.6 3.4.58.6 1.52.6 3.4.6h.23' stroke='currentColor' />
+      <path
+        d='M21.52 7.91c-1.07 1.08-1.6 1.62-2.26 1.71a2 2 0 0 1-.6 0c-.65-.1-1.19-.63-2.26-1.7'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.48 15.98c1.08-1.08 1.61-1.62 2.26-1.71a2 2 0 0 1 .6 0c.65.1 1.19.63 2.27 1.7'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M6.8 1.76c1.53 0 2.3 0 2.88.27a3 3 0 0 1 1.49 1.49c.27.6.27 1.35.27 2.88s0 2.28-.27 2.87a3 3 0 0 1-1.49 1.49c-.59.27-1.35.27-2.87.27-1.53 0-2.29 0-2.88-.27a3 3 0 0 1-1.49-1.49c-.27-.59-.27-1.35-.27-2.87 0-1.53 0-2.29.27-2.88a3 3 0 0 1 1.49-1.49c.6-.27 1.35-.27 2.88-.27M6.4 4.1a1.16 1.16 0 0 0-1.75 1v2.76a1.06 1.06 0 0 0 1.64.88L8.92 7a.85.85 0 0 0-.04-1.43z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M17.63 13.02c1.52 0 2.28 0 2.87.27a3 3 0 0 1 1.5 1.48c.27.6.27 1.36.27 2.88s0 2.28-.27 2.88A3 3 0 0 1 20.5 22c-.6.27-1.35.27-2.87.27-1.53 0-2.29 0-2.88-.27a3 3 0 0 1-1.49-1.48c-.27-.6-.27-1.36-.27-2.88s0-2.29.27-2.88a3 3 0 0 1 1.49-1.48c.6-.27 1.35-.27 2.88-.27m-.42 2.33a1.16 1.16 0 0 0-1.74 1v2.76a1.06 1.06 0 0 0 1.64.89l2.63-1.74a.85.85 0 0 0-.04-1.44z'
+        fill='currentColor'
+      />
+      <rect
+        width='9.27'
+        height='9.27'
+        rx='2'
+        transform='matrix(0 -1 -1 0 11.44 11.03)'
+        stroke='currentColor'
+      />
+      <rect
+        width='9.27'
+        height='9.27'
+        rx='2'
+        transform='matrix(0 -1 -1 0 22.26 22.28)'
+        stroke='currentColor'
+      />
+      <path
+        d='M5 6.4c0-.85 0-1.28.14-1.54a1.2 1.2 0 0 1 1.14-.64c.3.02.65.24 1.38.68.67.42 1 .62 1.16.86.24.39.24.88 0 1.27-.15.24-.49.45-1.16.86-.73.44-1.09.66-1.38.68a1.2 1.2 0 0 1-1.14-.64C5 7.67 5 7.24 5 6.4'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.82 17.65c0-.85 0-1.27.13-1.54a1.2 1.2 0 0 1 1.15-.64c.3.02.65.25 1.38.69.67.4 1 .61 1.15.86.24.38.24.87 0 1.26-.15.24-.48.45-1.15.86-.73.44-1.09.66-1.38.68a1.2 1.2 0 0 1-1.15-.64c-.13-.26-.13-.68-.13-1.53'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

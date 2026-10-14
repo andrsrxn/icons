@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconTerminalSquareSparkle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-terminal-square-sparkle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.3 21.3c2.83 0 4.25 0 5.13-.87.87-.88.87-2.3.87-5.13V5.53l-2.57 2.23-2.44-2.23 2.16-2.83H8.7c-2.83 0-4.25 0-5.13.87-.87.88-.87 2.3-.87 5.13v6.6c0 2.83 0 4.25.87 5.13.88.87 2.3.87 5.13.87z'
+        fill='currentColor'
+      />
+      <path
+        d='M6.76 9.57c1.99 1.42 2.98 2.13 3.02 3.12v.14c-.04.98-1.03 1.7-3.02 3.12'
+        stroke='currentColor'
+      />
+      <path d='M17.24 17.47h-6.37' stroke='currentColor' />
+      <path
+        d='M21.3 12.43v2.87c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87H8.7c-2.83 0-4.25 0-5.13-.87-.87-.88-.87-2.3-.87-5.13V8.7c0-2.83 0-4.25.87-5.13.88-.87 2.3-.87 5.13-.87h2.91'
+        stroke='currentColor'
+      />
+      <path d='M14.7 5.44c1.86 0 3.87-2.02 3.87-3.87' stroke='currentColor' />
+      <path d='M22.44 5.44c-1.86 0-3.87-2.02-3.87-3.87' stroke='currentColor' />
+      <path d='M14.7 5.44c1.85 0 3.87 2.05 3.87 3.87' stroke='currentColor' />
+      <path d='M22.44 5.44c-1.84 0-3.87 2.02-3.87 3.87' stroke='currentColor' />
+    </svg>
+  )
+}

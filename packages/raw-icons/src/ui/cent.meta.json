@@ -6,7 +6,8 @@
     "currency",
     "coin",
     "money",
+    "penny",
     "payment",
-    "fraction"
+    "change"
   ]
 }

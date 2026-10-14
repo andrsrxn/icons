@@ -1,0 +1,60 @@
+import type { Icon } from './types'
+
+export const IconFolderControls: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-folder-controls'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='m17.95 18.06.86-1.2h1.73l1.7 2.18v-6.13c0-2.82 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-1.6c-1.1 0-1.64 0-2.14-.18-.5-.19-.92-.54-1.75-1.25l-.4-.34c-.84-.71-1.26-1.06-1.76-1.25s-1.05-.18-2.14-.18H5.4c-.67 0-1 0-1.28.05a3 3 0 0 0-2.39 2.39c-.05.27-.05.6-.05 1.27v6.76c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88H18.2zm-1.89-3.28c-.9 0-1.73-.75-1.73-1.65s.83-1.66 1.73-1.66 1.73.76 1.73 1.66-.83 1.65-1.73 1.65'
+        fill='currentColor'
+      />
+      <path
+        d='M22.24 9.88q0 0 0 0a3 3 0 0 0-3-3q0 0 0 0h-5.05c-1.04 0-1.56 0-2.05-.17l-.2-.08c-.48-.2-.86-.56-1.62-1.27S9.17 4.29 8.7 4.09L8.5 4c-.48-.16-1-.16-2.05-.16h-2.2A2.57 2.57 0 0 0 1.67 6.4v7.77c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h2.82'
+        stroke='currentColor'
+      />
+      <path d='M21.9 13.42h-4.21' stroke='currentColor' />
+      <path d='M13.77 18.6h4.2' stroke='currentColor' />
+      <path d='M14.43 13.42h-1.32' stroke='currentColor' />
+      <path d='M21.22 18.6h1.35' stroke='currentColor' />
+      <circle
+        cx='16.06'
+        cy='13.42'
+        r='1.63'
+        transform='rotate(90 16.06 13.42)'
+        stroke='currentColor'
+      />
+      <circle
+        cx='1.63'
+        cy='1.63'
+        r='1.63'
+        transform='matrix(0 1 1 0 17.96 16.97)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconFilmSoundWave: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-film-sound-wave'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M11.56 9.58H3.07a1 1 0 0 1-.96-.96v-.33a3 3 0 0 1 2.9-2.9h6.55z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M11.56 14.42h-8.5a1 1 0 0 0-.95.96v.38a3 3 0 0 0 3.16 2.87h6.3z'
+        fill='currentColor'
+      />
+      <path d='M11.74 2.82v18.36' stroke='currentColor' />
+      <path
+        d='M11.64 5.4H7.89c-2.82 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.2c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h3.75'
+        stroke='currentColor'
+      />
+      <path d='M15.3 9.15v6.76' stroke='currentColor' />
+      <path d='M22.1 9.15v6.76' stroke='currentColor' />
+      <path d='M18.7 6.63v11.8' stroke='currentColor' />
+      <path d='M2.11 14.42h9.53' stroke='currentColor' />
+      <path d='M2.11 9.58h9.53' stroke='currentColor' />
+      <path d='M7.14 14.42v4.18' stroke='currentColor' />
+      <path d='M7.14 5.4v4.18' stroke='currentColor' />
+    </svg>
+  )
+}

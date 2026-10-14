@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconStraightenVertical: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-straighten-vertical'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M13.2 3.85c2.38 0 3.57 0 4.4.7.83.68 1.05 1.85 1.5 4.2l.8 4.3c.62 3.3.93 4.94.03 6.03s-2.58 1.08-5.93 1.08H9.96c-3.34 0-5 0-5.9-1.08s-.6-2.72 0-6l.8-4.32c.43-2.35.65-3.52 1.48-4.22.84-.69 2.03-.69 4.42-.69z'
+        fill='currentColor'
+      />
+      <path d='M11.98 1.62v20.76' stroke='currentColor' />
+      <path
+        d='M13.16 3.85c2.37 0 3.56 0 4.39.69s1.05 1.85 1.5 4.18l.82 4.31c.63 3.3.95 4.95.05 6.04s-2.58 1.09-5.94 1.09H9.95c-3.35 0-5.03 0-5.93-1.09-.9-1.08-.59-2.73.04-6.02l.81-4.31c.44-2.34.66-3.5 1.5-4.2.83-.69 2.02-.69 4.4-.69z'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconCloudDrops: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cloud-drops'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m1.62 12.94 3.84 3.8H8.1l1.22-1.3 1.48 1.3h2.6v-1.78l1.6-2.02 1.48 1.8.54 2h2.07l2.96-2.15v-4.28l-3.3-2.35-1.73 1.21-.93-3.5-3.95-2.27-3.3 1.42-1.66 3.14-3.85 1.21z'
+        fill='currentColor'
+      />
+      <path d='M6.97 7.55a5.09 5.09 0 0 1 9.33-1.18c.84 1.44.8 2.9.61 3.88' stroke='currentColor' />
+      <path
+        d='M4.96 16.43c-.65-.14-1.17-.41-1.95-1.2a4.27 4.27 0 0 1 3.06-7.28c1.4 0 2.64.67 3.42 1.71'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.05 8.41a3.6 3.6 0 0 1 3.38.12 4.3 4.3 0 0 1 1.56 5.84c-.7 1.21-1.37 1.86-2.37 2.17'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.4 19.69c.96 0 1.75-.74 1.75-1.65 0-1.9-1.76-2.87-1.76-2.87s-1.75.94-1.75 2.87c0 .9.78 1.65 1.75 1.65'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.98 17.78c.97 0 1.76-.74 1.76-1.65 0-1.9-1.76-2.86-1.76-2.86s-1.75.93-1.75 2.86c0 .91.78 1.65 1.75 1.65'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

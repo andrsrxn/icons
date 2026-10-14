@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconAirplay: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-airplay'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M1.67 9.65c0-2.83 0-4.25.88-5.13s2.29-.87 5.12-.87h8.66c2.83 0 4.24 0 5.12.87.88.88.88 2.3.88 5.13v2.98c0 1.74 0 2.6-.35 3.26a3 3 0 0 1-1.24 1.25c-.66.35-1.53.35-3.27.35h-1.34c-.84 0-1.62-.43-2.07-1.15a2.45 2.45 0 0 0-4.14 0 2.5 2.5 0 0 1-2.07 1.15H6.53c-1.74 0-2.6 0-3.26-.35a3 3 0 0 1-1.25-1.25c-.35-.66-.35-1.52-.35-3.26z'
+        fill='currentColor'
+      />
+      <path
+        d='M14.62 17.49h1.71c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V9.65c0-2.83 0-4.25-.88-5.13s-2.29-.87-5.12-.87H7.67c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.84c0 2.83 0 4.24.88 5.12s2.29.88 5.12.88H9.1'
+        stroke='currentColor'
+      />
+      <path
+        d='m9.71 17.23.68-.92c.74-.99 1.1-1.48 1.61-1.48.5 0 .87.5 1.6 1.48l.69.92c1.03 1.4 1.55 2.09 1.27 2.64s-1.14.55-2.88.55h-1.36c-1.74 0-2.6 0-2.88-.55s.24-1.25 1.27-2.64'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

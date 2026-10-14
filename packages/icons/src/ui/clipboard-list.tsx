@@ -1,0 +1,67 @@
+import type { Icon } from './types'
+
+export const IconClipboardList: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-clipboard-list'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M7.5 22.28c-1.88 0-2.82 0-3.4-.59-.6-.58-.6-1.53-.6-3.41V5.58a2 2 0 0 1 1.93-1.92h.62c.51 0 .98.28 1.21.73.19.36.53.62.92.7l3.19.68c.31.07.47.1.63.11s.32 0 .64-.04l2.73-.3c.53-.06.98-.43 1.15-.94.19-.56.71-.94 1.3-.94h.77a2 2 0 0 1 1.9 1.9v12.72c0 1.88 0 2.83-.58 3.41-.59.59-1.53.59-3.42.59z'
+        fill='currentColor'
+      />
+      <path
+        d='M17.4 3.66h.17a3 3 0 0 1 2.92 2.92v9.7c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H9.51c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V6.43a3 3 0 0 1 2.77-2.77h.51'
+        stroke='currentColor'
+      />
+      <rect
+        x='7.33'
+        y='5.59'
+        width='3.87'
+        height='9.33'
+        rx='1'
+        transform='rotate(-90 7.33 5.59)'
+        stroke='currentColor'
+      />
+      <path d='M16.67 9.56h-4.98' stroke='currentColor' />
+      <path d='M16.67 13.83h-4.98' stroke='currentColor' />
+      <path d='M16.67 18.1h-4.98' stroke='currentColor' />
+      <path
+        d='M8.06 9.98a.42.42 0 1 1 0-.84.42.42 0 0 1 0 .84'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.06 14.25a.42.42 0 1 1 0-.84.42.42 0 0 1 0 .84'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.06 18.51a.42.42 0 1 1 0-.84.42.42 0 0 1 0 .84'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

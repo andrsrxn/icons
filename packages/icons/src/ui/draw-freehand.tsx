@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconDrawFreehand: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-draw-freehand'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='4.31'
+        height='4.82'
+        rx='1'
+        transform='scale(1 -1)rotate(45 19.8 19.43)'
+        fill='currentColor'
+      />
+      <path d='M19.66 7.73 16.64 4.7' stroke='currentColor' />
+      <path
+        d='M11 15.67a4 4 0 0 0 .94-.35c.19-.12.35-.28.67-.6l8.72-8.58c.43-.43.65-.64.76-.87.2-.41.2-.89.01-1.3a4 4 0 0 0-.76-.88 4 4 0 0 0-.87-.76 1.6 1.6 0 0 0-1.3 0c-.23.11-.44.33-.87.76l-8.68 8.65c-.31.31-.47.47-.6.66l-.06.1c-.1.2-.17.41-.3.84-.38 1.34-.58 2.01-.27 2.41l.18.2c.4.3 1.08.1 2.43-.28'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.18 22.09c-4.74-2.74-8.84-8.21-6.9-11.37 1.3-2.13 5.05-3.35 9.23-1.22'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.56 12.2c3.2 2.87 4.4 6.43 3.2 8.5-.57 1-2.65 2.04-5.16-1.52'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

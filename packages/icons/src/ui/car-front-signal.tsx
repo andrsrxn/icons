@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconCarFrontSignal: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-car-front-signal'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M19.11 15.5c-.1-.56-.16-.84-.24-1.07a3 3 0 0 0-2.32-1.93c-.25-.04-.53-.04-1.1-.04H5.93c-.55 0-.82 0-1.06.04a3 3 0 0 0-2.3 1.83c-.09.23-.15.5-.27 1.03-.18.8-.27 1.2-.28 1.53a3 3 0 0 0 2.36 2.95c.32.07.73.07 1.55.07h9.52c.8 0 1.2 0 1.5-.07A3 3 0 0 0 19.33 17c.01-.32-.06-.71-.2-1.5'
+        fill='currentColor'
+      />
+      <path
+        d='M19.16 15.53c-.1-.56-.15-.84-.24-1.08a3 3 0 0 0-2.32-1.94c-.25-.05-.53-.05-1.1-.05H5.7c-.57 0-.85 0-1.1.05a3 3 0 0 0-2.32 1.94c-.09.24-.14.52-.24 1.08-.14.78-.2 1.17-.2 1.48a3 3 0 0 0 2.37 2.83c.31.07.7.07 1.5.07h9.79c.78 0 1.18 0 1.49-.07a3 3 0 0 0 2.37-2.83c0-.31-.06-.7-.2-1.48'
+        stroke='currentColor'
+      />
+      <path
+        d='m3.85 12.46.06-.34c.44-2.35.65-3.52 1.49-4.21.83-.7 2.02-.7 4.41-.7h1.6c2.5 0 3.74 0 4.6.74.84.74 1.01 1.97 1.35 4.44l.01.07'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.95 19.91c0 .79 0 1.18.14 1.48q.23.49.72.72c.3.14.7.14 1.48.14h.08c.78 0 1.18 0 1.48-.14q.49-.23.72-.72c.14-.3.14-.7.14-1.48'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.41 19.91c0 .79 0 1.18.15 1.48q.23.49.71.72c.3.14.7.14 1.48.14h.07c.79 0 1.18 0 1.48-.14q.49-.23.72-.72c.14-.3.14-.7.14-1.48'
+        stroke='currentColor'
+      />
+      <path d='m17.37 12.46 1.39-1.38' stroke='currentColor' />
+      <path d='M13.91 15.3h1.88' stroke='currentColor' />
+      <path d='M5.33 15.3H7.3' stroke='currentColor' />
+      <path d='m3.85 12.46-1.41-1.4' stroke='currentColor' />
+      <path d='M19.55 7.7c-.07-1.44-1.25-2.66-2.73-3.02' stroke='currentColor' />
+      <path d='M22.62 7.24c-.15-2.72-2.4-5.02-5.21-5.7' stroke='currentColor' />
+    </svg>
+  )
+}

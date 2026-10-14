@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconVideoSoundWave: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-video-sound-wave'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M11.74 2.82v18.36' stroke='currentColor' />
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M11.98 10.9V5.4H7.89c-2.82 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.2c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h4.09v-5.73l-4.5 2.54a1.5 1.5 0 0 1-2.22-1.3v-3.99a1.65 1.65 0 0 1 2.41-1.46z'
+        fill='currentColor'
+      />
+      <path
+        d='M11.64 5.4H7.89c-2.82 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.2c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h3.75'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.64 12.86-1.96 1.3c-1.6 1.07-2.39 1.6-3.04 1.43a1.5 1.5 0 0 1-.62-.33c-.5-.45-.5-1.4-.5-3.32 0-1.87 0-2.8.5-3.25q.26-.24.6-.33c.65-.18 1.43.32 3.01 1.33l2 1.28'
+        stroke='currentColor'
+      />
+      <path d='M15.3 9.15v6.76' stroke='currentColor' />
+      <path d='M22.1 9.15v6.76' stroke='currentColor' />
+      <path d='M18.7 6.63v11.8' stroke='currentColor' />
+    </svg>
+  )
+}

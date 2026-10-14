@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconMirrorLeft: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-mirror-left'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='20.38'
+        height='17.27'
+        rx='3'
+        transform='matrix(-1 0 0 1 22.2 3.36)'
+        fill='currentColor'
+      />
+      <path
+        d='M12.67 3.36h3.53c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v5.28c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-3.53'
+        stroke='currentColor'
+      />
+      <path d='M12.06 1.53v20.94' stroke='currentColor' />
+      <path d='M4.4 3.4h-.06a2.4 2.4 0 0 0-2.42 2.4' stroke='currentColor' />
+      <path d='M4.35 20.63H4.3a2.37 2.37 0 0 1-2.38-2.38' stroke='currentColor' />
+      <path d='M9.23 3.4H7.34' stroke='currentColor' />
+      <path d='M1.86 10.46V8.68' stroke='currentColor' />
+      <path d='M1.86 15.33v-1.78' stroke='currentColor' />
+      <path d='M9.23 20.63H7.34' stroke='currentColor' />
+    </svg>
+  )
+}

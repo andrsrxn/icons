@@ -1,0 +1,35 @@
+import type { Icon } from './types'
+
+export const IconSpiral: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-spiral'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M14.03 13.3c0-.97-.79-1.76-1.76-1.76h-.23a2 2 0 0 0-2 2v.7a2.7 2.7 0 0 0 2.68 2.7H14a4 4 0 0 0 4.04-3.99v-.84A4.83 4.83 0 0 0 13.2 7.3h-1.23a6.06 6.06 0 0 0-6.06 6.07v.81a6.87 6.87 0 0 0 6.88 6.86h1.27a8.15 8.15 0 0 0 8.14-8.18v-.88a9.03 9.03 0 0 0-9.03-9H12A10.2 10.2 0 0 0 1.8 13.23v1.06'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

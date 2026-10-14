@@ -1,0 +1,41 @@
+import type { Icon } from './types'
+
+export const IconHouseSmile: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-house-smile'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M3.26 18.7c-.02.75-.04 1.12.17 1.4.2.28.56.38 1.28.59l3.4.97.28.07.28.01h6.75l.26-.07 3.62-1c.73-.2 1.1-.3 1.3-.57.2-.28.2-.66.17-1.42l-.3-8.95a2 2 0 0 0-.11-.86c-.1-.2-.27-.34-.61-.62L13.3 2.94c-.61-.5-.92-.76-1.28-.76s-.66.25-1.27.76L4.31 8.25c-.34.28-.5.43-.6.62s-.1.41-.12.85z'
+        fill='currentColor'
+      />
+      <path
+        d='M9.2 21.64h5.6c2.82 0 4.23 0 5.11-.88s.88-2.29.88-5.12v-3.7c0-1.28 0-1.92-.25-2.5-.25-.57-.72-1.01-1.66-1.89l-2.8-2.6h0c-1.93-1.8-2.9-2.7-4.08-2.7s-2.15.9-4.09 2.7l-2.79 2.6c-.94.88-1.41 1.32-1.66 1.9s-.25 1.2-.25 2.5v3.7c0 2.82 0 4.23.88 5.11s2.29.88 5.12.88'
+        stroke='currentColor'
+      />
+      <path d='M15.85 16.13A5.4 5.4 0 0 1 12 17.47a5.8 5.8 0 0 1-3.86-1.34' stroke='currentColor' />
+    </svg>
+  )
+}

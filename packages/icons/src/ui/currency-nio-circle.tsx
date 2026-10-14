@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconCurrencyNioCircle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-currency-nio-circle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
+        fill='currentColor'
+      />
+      <path
+        d='M18.36 9.43c-.23-.77-1.28-1.36-2.5-1.36-1.24 0-2.58.51-2.58 2.05 0 3 4.93.67 5.15 3.63.1 1.41-1.32 2.18-2.58 2.18s-2.17-.6-2.57-1.38'
+        stroke='currentColor'
+      />
+      <path d='M15.86 16.9V7.1' stroke='currentColor' />
+      <path
+        d='M10.98 8.7s-.52-.63-2.02-.63S5.56 9.2 5.56 12c0 2.78 1.86 3.94 3.4 3.94 1.44 0 2.02-.6 2.02-.6'
+        stroke='currentColor'
+      />
+      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+    </svg>
+  )
+}

@@ -1,14 +1,16 @@
 {
   "categories": [
+    "people",
     "security"
   ],
   "tags": [
-    "scanner",
     "account",
     "profile",
+    "person",
+    "avatar",
     "identity",
-    "biometrics",
-    "id",
-    "recognition"
+    "biometric",
+    "verify",
+    "recognize"
   ]
 }

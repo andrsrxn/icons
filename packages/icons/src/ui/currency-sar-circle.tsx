@@ -1,0 +1,59 @@
+import type { Icon } from './types'
+
+export const IconCurrencySarCircle: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-currency-sar-circle'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
+        fill='currentColor'
+      />
+      <path
+        d='M12.65 14.6a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.67 15.02a.43.43 0 1 1-.87 0 .43.43 0 0 1 .87 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.26 5.78.72 4.32c.04.27.06.4.1.52.23.76.9 1.3 1.72 1.37h.55c.16 0 .24-.01.37-.03.7-.1 1.52-.85 1.68-1.52l.03-.14q.04-.28.01-.5'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.02 5.9c.62 0 1.12.56 1.16 1.28l.3 6.36.01.19c.02 1.13-.76 2.06-1.72 2.07H7.6l-.67-.03c-1.09-.04-1.72-1.44-1.15-2.53'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.23 17.76s1.03.3 2.05-.35c.84-.54 1.26-1.23 1.13-2.49-.08-.78-.4-1.24-.4-1.24'
+        stroke='currentColor'
+      />
+      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+    </svg>
+  )
+}

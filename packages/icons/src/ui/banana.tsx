@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconBanana: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-banana'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m4.11 10.93.05.11a1 1 0 0 0 .52.48l.12.04 4.03 1.33c.6.2.9.3 1.2.22.28-.08.5-.32.92-.8l.21-.24c.93-1.03 1.39-1.55 1.24-2.07s-.8-.74-2.12-1.16L9 8.43c-.3-.1-.46-.15-.61-.15-.16 0-.31.05-.62.15l-2.96.96q-.18.06-.25.1A1 1 0 0 0 4 10.67z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m11.64 11.97 5.15-.43 3.5 4.15-.1 6.3-1.54.77-3.45-5.2-5.23 3.67-6.03 1.04-1.38-3.01z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.12 17.54a17.3 17.3 0 0 1-9.82 4.48c-1.04.08-1.95-.26-2.3-1.26s.21-1.91 1.26-2.68c1.94-1.44 4.72-2.83 7.84-6.87 2.2-2.85 4.08-6.8 4.99-8.38.56-.98 1.29-1.43 2.36-1.14 1.05.28 1.5.93 1.47 2.08-.07 2.01-.47 5.81-2.37 9.12'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.12 9.53c-2.67-1.44-6.39-1.09-8.87.2-1.05.55-.54 1.82.63 1.99 1.91.28 4.23.84 4.9 1.98'
+        stroke='currentColor'
+      />
+      <path
+        d='M11.09 12.5c2.66-1.7 6.04-1.49 7.94 1.34a9.2 9.2 0 0 1 1.01 7.5c-.3 1.1-1.64 1.01-2.17.02a24 24 0 0 0-1.95-3.12c-1.12-1.44-2.38-2.47-3.84-1.96'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

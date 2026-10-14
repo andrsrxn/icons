@@ -1,0 +1,36 @@
+import type { Icon } from './types'
+
+export const IconTouchpadOff: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-touchpad-off'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect opacity='.2' x='1.74' y='12' width='20.52' height='7.69' rx='2' fill='currentColor' />
+      <rect x='1.74' y='4.31' width='20.52' height='15.39' rx='3' stroke='currentColor' />
+      <path d='M1.74 12h20.52' stroke='currentColor' />
+      <path d='M12 19.7V12' stroke='currentColor' />
+      <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
+    </svg>
+  )
+}
