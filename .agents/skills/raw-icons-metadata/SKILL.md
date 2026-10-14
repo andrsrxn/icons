@@ -120,7 +120,7 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
 | `-warning` | `"alert"`, `"caution"`, `"danger"`, `"notice"` |
 | `-heart` | `"like"`, `"favorite"`, `"love"`, `"saved"` |
 | `-star` | `"favorite"`, `"rate"`, `"bookmark"`, `"saved"` |
-| `-sparkle` | `"magic"`, `"ai"`, `"generated"`, `"intelligent"` |
+| `-sparkle` | `"magic"`, `"generated"`, `"intelligent"` |
 | `-currency` | `"money"`, `"payment"`, `"price"`, `"cash"` |
 | `-off` | `"disabled"`, `"inactive"`, `"hidden"` |
 | `-in` | `"import"`, `"enter"`, `"inside"`, `"upload"` |
@@ -175,6 +175,10 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
      }
      ```
 
+**Note:** DO NOT set the rtl property in the metadata file. It is made manually.
+
+**Note 2:** To create the metadata files, if there are more than 10 files, you should create a temp batch script, otherwise, generate them individually.
+
 ### Mode 2: Audit Existing Metadata
 
 1. **Verify if all svg files have a .meta.json file, if not, create one.**
@@ -185,7 +189,6 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
    - Ensure `tags.length >= 1 && tags.length <= 10`.
    - Verify no tags duplicate category names or file name parts.
    - Verify standard suffix tags are placed at the end.
-   - Verify RTL icons maintain `"rtl": true` if present.
 
 it could be a dry-run, when only should return the hyperlink to the metadata file with its file name, or it could be a fix run, when it should directly replace the .meta.json file with the fixes.
 
