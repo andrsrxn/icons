@@ -54,6 +54,7 @@
 
 /* Opt-out */
 [dir='rtl'] [data-slot='icon-ui-list-asterisk'],
+[dir='rtl'] [data-slot='icon-ui-clipboard-list'],
 [dir='rtl'] [data-slot='icon-ui-list-unordered'],
 [dir='rtl'] [data-slot='icon-ui-logs'],
 [dir='rtl'] [data-slot='icon-ui-app-window'],
@@ -148,6 +149,7 @@
 [dir='ltr'] [data-slot='icon-ui-panels-start'],
 [dir='ltr'] [data-slot='icon-ui-slides-start'],
 [dir='ltr'] [data-slot='icon-ui-slides-end'],
+[dir='ltr'] [data-slot='icon-ui-clipboard-list'],
 [dir='ltr'] [data-slot='icon-ui-list-asterisk'],
 [dir='ltr'] [data-slot='icon-ui-list-unordered'],
 [dir='ltr'] [data-slot='icon-ui-logs'],

@@ -594,6 +594,11 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>clipboard-list</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>list-unordered</code>
             </p>
           </li>
