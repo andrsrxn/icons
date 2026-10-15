@@ -12,7 +12,8 @@
     "sieve",
     "organize",
     "search",
-    "CI/CD",
+    "CI",
+    "CD",
     "filter"
   ]
 }

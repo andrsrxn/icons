@@ -39,42 +39,42 @@ export const IconBackgroundGradient: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M7.94 6.88a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
+        d='M8.13 6.88a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M12.88 7.33a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
+        d='M13.07 7.33a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M7.94 12a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
+        d='M8.13 12a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M12.88 12a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
+        d='M13.07 12a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M17.67 9.4a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        d='M17.48 9.43a.43.43 0 1 1-.87 0 .43.43 0 0 1 .87 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M7.94 17.12a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
+        d='M8.13 17.12a.76.76 0 1 1-1.53 0 .76.76 0 0 1 1.53 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M12.88 16.67a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
+        d='M13.07 16.67a.57.57 0 1 1-1.13 0 .57.57 0 0 1 1.13 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M17.67 14.55a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        d='M17.48 14.57a.43.43 0 1 1-.87 0 .43.43 0 0 1 .87 0'
         fill='currentColor'
         stroke='currentColor'
       />

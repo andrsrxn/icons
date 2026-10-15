@@ -45,14 +45,14 @@ export const IconFlow: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M4.54 8.23c0 1.67 0 2.51.48 3.07l.23.24c.56.47 1.4.47 3.08.47H9'
+        d='M4.54 8.23c0 1.67 0 2.51.48 3.07l.23.24c.56.47 1.4.47 3.08.47h.4'
         stroke='currentColor'
       />
       <path
-        d='M19.56 15.77c0-1.67 0-2.51-.47-3.07l-.24-.24c-.56-.47-1.4-.47-3.08-.47h-.7'
+        d='M19.56 15.77c0-1.67 0-2.51-.47-3.07l-.24-.24c-.56-.47-1.4-.47-3.08-.47h-.4'
         stroke='currentColor'
       />
-      <circle cx='12.05' cy='12.01' r='3.01' stroke='currentColor' />
+      <circle cx='12.05' cy='12.01' r='3.31' stroke='currentColor' />
     </svg>
   )
 }

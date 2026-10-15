@@ -11,7 +11,8 @@
     "new",
     "create",
     "append",
-    "CI/CD",
+    "CI",
+    "CD",
     "stage"
   ]
 }

@@ -28,24 +28,24 @@ export const IconScreenShare: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='14.07'
-        height='20.29'
+        width='14.24'
+        height='20.53'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.14 19.03)'
+        transform='matrix(0 -1 -1 0 22.27 19.12)'
         fill='currentColor'
-      />
-      <rect
-        width='14.07'
-        height='20.29'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.14 19.03)'
-        stroke='currentColor'
       />
       <path
         d='m8.42 11.31.75-.75c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.75.75'
         stroke='currentColor'
       />
       <path d='M12 15.95V8.8' stroke='currentColor' />
+      <rect
+        width='14.24'
+        height='20.53'
+        rx='3'
+        transform='matrix(0 -1 -1 0 22.27 19.12)'
+        stroke='currentColor'
+      />
     </svg>
   )
 }
