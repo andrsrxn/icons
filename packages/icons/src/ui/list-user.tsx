@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconListUser: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-list-user'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M21.36 13.01a2.42 2.42 0 1 1-4.85 0 2.42 2.42 0 0 1 4.85 0'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M22.7 19.27h-7.53a3.8 3.8 0 0 1 3.76-3.83 3.8 3.8 0 0 1 3.76 3.83'
+        fill='currentColor'
+      />
+      <path d='M21.42 6H2.67' stroke='currentColor' />
+      <path d='M12.25 12H2.67' stroke='currentColor' />
+      <path d='M11.63 18H2.67' stroke='currentColor' />
+      <path d='M21.42 12.94a2.5 2.5 0 0 1-2.49 2.5 2.5 2.5 0 1 1 2.5-2.5' stroke='currentColor' />
+      <path d='M22.43 18.94a3.5 3.5 0 1 0-7 0' stroke='currentColor' />
+    </svg>
+  )
+}

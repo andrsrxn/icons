@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconGlobeClock: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-globe-clock'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M12 22.22A10.22 10.22 0 1 1 22.22 12c0 2.97-1.3 4.82-1.3 4.82s-2.05-4.21-6.03-.96l-1.35 3.23 1.75 2.58s-1.88.55-3.29.55'
+        fill='currentColor'
+      />
+      <path d='M22.3 12a10.3 10.3 0 1 0-11.23 10.27' stroke='currentColor' />
+      <path
+        d='M16.37 12c0-5.7-1.96-10.3-4.37-10.3S7.63 6.3 7.63 12c0 4.77 1.56 9.03 3.42 10.2'
+        stroke='currentColor'
+      />
+      <path d='M1.7 12h20.6' stroke='currentColor' />
+      <circle cx='17.67' cy='18.52' r='4.02' stroke='currentColor' />
+      <path
+        d='m18.72 19.4-.68-.44c-.22-.15-.33-.22-.38-.33-.06-.11-.06-.24-.06-.5v-.98'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

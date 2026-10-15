@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconCameraFlash: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-camera-flash'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M20.46 6.77c.94 0 1.7.76 1.7 1.7v5.76c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V9.45c0-.47 0-.7.03-.9a3 3 0 0 1 2.57-2.58c.2-.03.44-.03.9-.03h.31A3 3 0 0 0 7.76 5l.1-.12.11-.12a3 3 0 0 1 2.12-.95h4.9c.47 0 .93.21 1.23.58l.64.76a.82.82 0 0 1-.27 1.26l2.38 2.52zM12 16.9a4 4 0 1 0 0-8 4 4 0 0 0 0 8'
+        fill='currentColor'
+      />
+      <path
+        d='M13.74 3.42h-3.9a2.8 2.8 0 0 0-2.39 1.35 2.8 2.8 0 0 1-2.4 1.36h-.27a3 3 0 0 0-2.95 2.94v5.16c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h8.34c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12v-3.79'
+        stroke='currentColor'
+      />
+      <path d='M15.35 6.26c1.75 0 3.63-1.89 3.63-3.63' stroke='currentColor' />
+      <path d='M22.6 6.26c-1.74 0-3.62-1.88-3.62-3.63' stroke='currentColor' />
+      <path d='M15.35 6.26c1.74 0 3.63 1.92 3.63 3.63' stroke='currentColor' />
+      <path d='M22.6 6.26c-1.71 0-3.62 1.9-3.62 3.63' stroke='currentColor' />
+      <circle cx='12' cy='12.91' r='4' transform='rotate(90 12 12.91)' stroke='currentColor' />
+    </svg>
+  )
+}

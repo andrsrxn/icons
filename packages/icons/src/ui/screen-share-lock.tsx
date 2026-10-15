@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconScreenShareLock: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-screen-share-lock'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M16.27 4.88c2.82 0 4.24 0 5.12.88s.88 2.3.88 5.12v2.24c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.73c-2.82 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12v-2.24c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88zm-1.12 6.23v4.58H8.77v-4.58z'
+        fill='currentColor'
+      />
+      <rect
+        width='14.24'
+        height='20.53'
+        rx='3'
+        transform='matrix(0 -1 -1 0 22.27 19.12)'
+        stroke='currentColor'
+      />
+      <rect x='8.63' y='10.95' width='6.75' height='5.03' rx='1' stroke='currentColor' />
+      <path d='m13.9 10.95-.17-1.41a1.72 1.72 0 0 0-3.41-.02l-.18 1.43' stroke='currentColor' />
+    </svg>
+  )
+}
