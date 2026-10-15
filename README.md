@@ -50,7 +50,7 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Contributing
 
-We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues).
+We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml).
 
 ## Support
 
