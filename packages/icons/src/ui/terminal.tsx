@@ -30,7 +30,7 @@ export const IconTerminal: Icon = ({
         d='m3.7 5 3.47 2.49c2.06 1.48 3.1 2.22 3.1 3.25s-1.04 1.77-3.1 3.25l-3.47 2.5'
         stroke='currentColor'
       />
-      <path d='M20.47 18h-9.9' stroke='currentColor' />
+      <path d='M20.47 18H12' stroke='currentColor' />
     </svg>
   )
 }

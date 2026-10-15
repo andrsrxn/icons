@@ -28,20 +28,20 @@ export const IconField: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='10.75'
-        height='20.61'
-        rx='2'
-        transform='matrix(0 -1 -1 0 22.3 17.38)'
-        fill='currentColor'
-      />
-      <rect
-        width='10.75'
+        width='12.42'
         height='20.61'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.3 17.38)'
-        stroke='currentColor'
+        transform='scale(1 -1)rotate(90 20 1.8)'
+        fill='currentColor'
       />
       <path d='M5.45 13.93H12' stroke='currentColor' />
+      <rect
+        width='12.42'
+        height='20.61'
+        rx='3'
+        transform='scale(1 -1)rotate(90 20 1.8)'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

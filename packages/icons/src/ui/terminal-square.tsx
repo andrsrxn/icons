@@ -42,10 +42,10 @@ export const IconTerminalSquare: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M7.12 9.39c1.99 1.42 2.98 2.13 3.02 3.11v.14c-.04.99-1.03 1.7-3.02 3.12'
+        d='M6.76 9.31c1.99 1.42 2.98 2.13 3.02 3.12v.14c-.04.98-1.03 1.7-3.02 3.12'
         stroke='currentColor'
       />
-      <path d='M17.6 17.29h-6.37' stroke='currentColor' />
+      <path d='M17.24 17.21h-5.87' stroke='currentColor' />
     </svg>
   )
 }

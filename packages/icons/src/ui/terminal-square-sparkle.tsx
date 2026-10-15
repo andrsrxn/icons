@@ -32,11 +32,6 @@ export const IconTerminalSquareSparkle: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M6.76 9.57c1.99 1.42 2.98 2.13 3.02 3.12v.14c-.04.98-1.03 1.7-3.02 3.12'
-        stroke='currentColor'
-      />
-      <path d='M17.24 17.47h-6.37' stroke='currentColor' />
-      <path
         d='M21.3 12.43v2.87c0 2.83 0 4.25-.87 5.13-.88.87-2.3.87-5.13.87H8.7c-2.83 0-4.25 0-5.13-.87-.87-.88-.87-2.3-.87-5.13V8.7c0-2.83 0-4.25.87-5.13.88-.87 2.3-.87 5.13-.87h2.91'
         stroke='currentColor'
       />
@@ -44,6 +39,11 @@ export const IconTerminalSquareSparkle: Icon = ({
       <path d='M22.44 5.44c-1.86 0-3.87-2.02-3.87-3.87' stroke='currentColor' />
       <path d='M14.7 5.44c1.85 0 3.87 2.05 3.87 3.87' stroke='currentColor' />
       <path d='M22.44 5.44c-1.84 0-3.87 2.02-3.87 3.87' stroke='currentColor' />
+      <path
+        d='M6.76 9.31c1.99 1.42 2.98 2.13 3.02 3.12v.14c-.04.98-1.03 1.7-3.02 3.12'
+        stroke='currentColor'
+      />
+      <path d='M17.24 17.21h-5.87' stroke='currentColor' />
     </svg>
   )
 }

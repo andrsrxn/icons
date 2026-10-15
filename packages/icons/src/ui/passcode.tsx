@@ -28,17 +28,17 @@ export const IconPasscode: Icon = ({
       {...props}>
       <rect
         opacity='.2'
-        width='10.75'
+        width='12.42'
         height='20.61'
         rx='2'
-        transform='matrix(0 -1 -1 0 22.3 17.38)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         fill='currentColor'
       />
       <rect
-        width='10.75'
+        width='12.42'
         height='20.61'
         rx='3'
-        transform='matrix(0 -1 -1 0 22.3 17.38)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         stroke='currentColor'
       />
       <path
