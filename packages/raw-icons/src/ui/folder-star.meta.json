@@ -4,9 +4,12 @@
   ],
   "tags": [
     "directory",
-    "favorite",
     "rating",
     "important",
-    "featured"
+    "featured",
+    "favorite",
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

@@ -5,9 +5,12 @@
   "tags": [
     "reading",
     "literature",
-    "favorite",
     "rating",
     "popular",
-    "bestseller"
+    "bestseller",
+    "favorite",
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

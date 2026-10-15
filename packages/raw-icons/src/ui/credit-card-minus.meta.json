@@ -9,9 +9,9 @@
     "purchase",
     "checkout",
     "bank",
-    "plastic",
     "remove",
-    "subtract",
-    "debt"
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

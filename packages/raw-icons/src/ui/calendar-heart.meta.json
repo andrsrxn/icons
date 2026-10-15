@@ -7,9 +7,10 @@
     "schedule",
     "date",
     "event",
+    "anniversary",
+    "like",
     "favorite",
     "love",
-    "like",
-    "anniversary"
+    "saved"
   ]
 }

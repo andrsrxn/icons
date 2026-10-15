@@ -7,10 +7,11 @@
     "ecommerce",
     "buy",
     "store",
-    "remove",
-    "delete",
     "subtract",
+    "checkout",
+    "remove",
+    "reduce",
     "decrease",
-    "checkout"
+    "delete"
   ]
 }

@@ -6,9 +6,11 @@
     "retail",
     "pouch",
     "sack",
+    "checkout",
+    "store",
     "add",
     "new",
-    "checkout",
-    "store"
+    "create",
+    "append"
   ]
 }

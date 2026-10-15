@@ -6,9 +6,10 @@
     "account",
     "profile",
     "verified",
+    "person",
     "approved",
-    "done",
     "success",
-    "person"
+    "done",
+    "confirm"
   ]
 }

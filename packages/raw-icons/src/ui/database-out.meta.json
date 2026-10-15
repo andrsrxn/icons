@@ -1,6 +1,6 @@
 {
   "categories": [
-    "development", 
+    "development",
     "business",
     "devices"
   ],
@@ -8,10 +8,12 @@
     "storage",
     "sql",
     "records",
-    "export",
     "outgoing",
     "eject",
     "send",
-    "dump"
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

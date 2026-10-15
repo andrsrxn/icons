@@ -5,10 +5,11 @@
   "tags": [
     "countdown",
     "stopwatch",
-    "disabled",
-    "hidden",
     "stop",
     "cancel",
-    "clock"
+    "clock",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

@@ -7,10 +7,12 @@
     "audio",
     "call",
     "microphone",
-    "active",
     "support",
     "customer",
     "service",
-    "gaming"
+    "gaming",
+    "active",
+    "solid",
+    "selected"
   ]
 }

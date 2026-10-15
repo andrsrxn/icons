@@ -9,8 +9,9 @@
     "purchase",
     "checkout",
     "bank",
-    "plastic",
+    "approved",
     "success",
-    "verified"
+    "done",
+    "confirm"
   ]
 }

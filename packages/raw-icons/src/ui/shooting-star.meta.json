@@ -4,11 +4,14 @@
   ],
   "tags": [
     "meteor",
-    "favorite",
     "rating",
     "wish",
     "space",
     "astronomy",
-    "magic"
+    "magic",
+    "favorite",
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

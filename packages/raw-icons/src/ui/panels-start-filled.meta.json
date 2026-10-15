@@ -4,9 +4,11 @@
   ],
   "tags": [
     "left",
-    "solid",
     "split",
-    "sections"
+    "sections",
+    "active",
+    "solid",
+    "selected"
   ],
   "rtl": true
 }

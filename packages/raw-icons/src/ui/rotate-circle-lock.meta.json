@@ -8,6 +8,9 @@
     "fixed",
     "portrait",
     "rotation",
-    "secure"
+    "secure",
+    "protected",
+    "private",
+    "restricted"
   ]
 }

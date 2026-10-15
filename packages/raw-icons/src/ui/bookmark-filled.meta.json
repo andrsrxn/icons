@@ -7,6 +7,9 @@
     "favorite",
     "marker",
     "later",
-    "ribbon"
+    "ribbon",
+    "active",
+    "solid",
+    "selected"
   ]
 }

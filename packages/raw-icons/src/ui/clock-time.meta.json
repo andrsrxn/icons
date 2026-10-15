@@ -8,7 +8,6 @@
     "hours",
     "minutes",
     "seconds",
-    "chronometer",
-    "timer"
+    "chronometer"
   ]
 }

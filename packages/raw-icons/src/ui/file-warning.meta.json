@@ -5,11 +5,13 @@
   "tags": [
     "page",
     "paper",
-    "alert",
     "error",
-    "caution",
     "issue",
     "problem",
-    "exclamation"
+    "exclamation",
+    "alert",
+    "caution",
+    "danger",
+    "notice"
   ]
 }

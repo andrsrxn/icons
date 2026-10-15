@@ -8,6 +8,10 @@
     "reminder",
     "read",
     "seen",
-    "acknowledged"
+    "acknowledged",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

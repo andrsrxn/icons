@@ -7,8 +7,10 @@
     "audio",
     "microphone",
     "muted",
-    "disabled",
     "disconnected",
-    "silent"
+    "silent",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

@@ -6,8 +6,9 @@
     "account",
     "profile",
     "pencil",
-    "change",
     "modify",
+    "change",
+    "write",
     "update"
   ]
 }

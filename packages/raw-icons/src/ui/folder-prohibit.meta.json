@@ -4,9 +4,10 @@
   ],
   "tags": [
     "directory",
-    "forbidden",
     "not",
     "allowed",
+    "blocked",
+    "forbidden",
     "banned",
     "restricted"
   ]

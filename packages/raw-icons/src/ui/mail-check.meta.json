@@ -8,9 +8,10 @@
     "letter",
     "send",
     "inbox",
-    "done",
-    "success",
     "verified",
-    "approved"
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

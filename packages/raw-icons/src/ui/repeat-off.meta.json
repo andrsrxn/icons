@@ -1,6 +1,7 @@
 {
   "categories": [
-    "media", "tools"
+    "media",
+    "tools"
   ],
   "tags": [
     "loop",
@@ -10,7 +11,8 @@
     "refresh",
     "single",
     "music",
-    "track",
-    "disabled"
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

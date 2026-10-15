@@ -11,6 +11,7 @@
     "clear",
     "approved",
     "success",
-    "done"
+    "done",
+    "confirm"
   ]
 }

@@ -7,9 +7,12 @@
     "utility",
     "action",
     "login",
-    "enter",
     "door",
     "arrow",
-    "access"
+    "access",
+    "import",
+    "enter",
+    "inside",
+    "upload"
   ]
 }

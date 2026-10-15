@@ -1,17 +1,18 @@
 {
   "categories": [
     "development",
-    "devices", 
+    "devices",
     "business"
   ],
   "tags": [
     "datacenter",
     "host",
     "rack",
-    "remove",
-    "delete",
     "subtract",
+    "drop",
+    "remove",
+    "reduce",
     "decrease",
-    "drop"
+    "delete"
   ]
 }

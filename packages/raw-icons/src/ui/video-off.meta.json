@@ -7,8 +7,9 @@
     "clip",
     "camera",
     "record",
+    "mute",
     "disabled",
-    "hidden",
-    "mute"
+    "inactive",
+    "hidden"
   ]
 }

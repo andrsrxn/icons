@@ -7,6 +7,10 @@
     "pairing",
     "disconnected",
     "error",
-    "network"
+    "network",
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

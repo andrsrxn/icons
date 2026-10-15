@@ -9,9 +9,9 @@
     "purchase",
     "checkout",
     "bank",
-    "plastic",
-    "error",
+    "remove",
+    "delete",
     "cancel",
-    "invalid"
+    "close"
   ]
 }

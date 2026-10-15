@@ -9,7 +9,9 @@
     "send",
     "inbox",
     "subtract",
-    "delete",
-    "remove"
+    "remove",
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

@@ -7,9 +7,11 @@
     "marker",
     "place",
     "error",
-    "cancel",
     "invalid",
+    "GPS",
     "remove",
-    "GPS"
+    "delete",
+    "cancel",
+    "close"
   ]
 }

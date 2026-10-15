@@ -6,9 +6,11 @@
     "retail",
     "pouch",
     "sack",
-    "remove",
-    "delete",
     "checkout",
-    "store"
+    "store",
+    "remove",
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

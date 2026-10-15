@@ -8,9 +8,10 @@
     "envelope",
     "email",
     "gear",
+    "setup",
     "preferences",
-    "configure",
     "options",
-    "setup"
+    "configure",
+    "customize"
   ]
 }

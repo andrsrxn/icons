@@ -8,11 +8,12 @@
     "world",
     "earth",
     "planet",
-    "done",
-    "approved",
     "verified",
-    "success",
     "complete",
-    "global"
+    "global",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

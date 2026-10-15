@@ -10,6 +10,8 @@
     "silent",
     "mic",
     "audio",
-    "disabled"
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

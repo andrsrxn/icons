@@ -9,8 +9,9 @@
     "send",
     "inbox",
     "pencil",
-    "change",
     "modify",
+    "change",
+    "write",
     "update"
   ]
 }

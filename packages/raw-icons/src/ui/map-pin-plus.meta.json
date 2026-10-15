@@ -5,10 +5,12 @@
   "tags": [
     "location",
     "attach",
-    "add",
-    "new",
     "GPS",
     "marker",
-    "place"
+    "place",
+    "add",
+    "new",
+    "create",
+    "append"
   ]
 }

@@ -1,17 +1,18 @@
 {
   "categories": [
     "development",
-    "devices", 
+    "devices",
     "business"
   ],
   "tags": [
     "datacenter",
     "host",
     "rack",
-    "done",
-    "approved",
     "verified",
+    "complete",
+    "approved",
     "success",
-    "complete"
+    "done",
+    "confirm"
   ]
 }

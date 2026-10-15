@@ -1,13 +1,17 @@
 {
   "categories": [
-    "editor", "typography"
+    "editor",
+    "typography",
+    "time"
   ],
   "tags": [
     "items",
     "todo",
-    "pending",
     "overdue",
     "due",
-    "time"
+    "time",
+    "pending",
+    "schedule",
+    "history"
   ]
 }

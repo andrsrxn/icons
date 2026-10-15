@@ -7,11 +7,12 @@
   "tags": [
     "wireless",
     "network",
-    "protected",
-    "secure",
-    "private",
     "encrypted",
     "wpa",
-    "hotspot"
+    "hotspot",
+    "secure",
+    "protected",
+    "private",
+    "restricted"
   ]
 }

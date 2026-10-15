@@ -6,9 +6,11 @@
     "location",
     "marker",
     "place",
-    "remove",
-    "delete",
     "subtract",
-    "GPS"
+    "GPS",
+    "remove",
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

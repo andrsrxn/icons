@@ -4,10 +4,12 @@
   ],
   "tags": [
     "directory",
-    "secure",
-    "private",
     "encrypted",
     "secret",
-    "password"
+    "password",
+    "secure",
+    "protected",
+    "private",
+    "restricted"
   ]
 }

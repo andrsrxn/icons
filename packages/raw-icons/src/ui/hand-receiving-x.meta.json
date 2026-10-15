@@ -8,6 +8,10 @@
     "reject",
     "decline",
     "block",
-    "halt"
+    "halt",
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

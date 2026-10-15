@@ -8,7 +8,6 @@
     "wake",
     "start",
     "resume",
-    "active",
-    "timer"
+    "active"
   ]
 }

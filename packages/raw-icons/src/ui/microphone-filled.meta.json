@@ -10,6 +10,9 @@
     "mic",
     "sound",
     "talk",
-    "podcast"
+    "podcast",
+    "active",
+    "solid",
+    "selected"
   ]
 }

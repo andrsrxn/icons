@@ -1,14 +1,18 @@
 {
   "categories": [
-    "editor", "typography"
+    "editor",
+    "typography"
   ],
   "tags": [
     "items",
     "checklist",
     "tasks",
     "todo",
-    "done",
     "complete",
-    "menu"
+    "menu",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

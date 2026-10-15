@@ -7,10 +7,12 @@
     "notepad",
     "copy",
     "paste",
-    "remove",
-    "cancel",
     "dismiss",
     "rejected",
-    "failed"
+    "failed",
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

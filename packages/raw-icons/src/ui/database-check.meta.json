@@ -1,6 +1,6 @@
 {
   "categories": [
-    "development", 
+    "development",
     "business",
     "devices"
   ],
@@ -8,10 +8,11 @@
     "storage",
     "sql",
     "records",
-    "done",
-    "approved",
     "verified",
+    "complete",
+    "approved",
     "success",
-    "complete"
+    "done",
+    "confirm"
   ]
 }

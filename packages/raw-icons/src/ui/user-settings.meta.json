@@ -5,10 +5,13 @@
   "tags": [
     "account",
     "profile",
-    "preferences",
     "config",
     "gear",
     "admin",
-    "person"
+    "person",
+    "preferences",
+    "options",
+    "configure",
+    "customize"
   ]
 }

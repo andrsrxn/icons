@@ -1,16 +1,17 @@
 {
   "categories": [
     "development",
-    "devices", 
+    "devices",
     "business"
   ],
   "tags": [
     "datacenter",
     "host",
     "rack",
-    "transfer",
+    "migrate",
     "relocate",
-    "shift",
-    "migrate"
+    "transfer",
+    "send",
+    "shift"
   ]
 }

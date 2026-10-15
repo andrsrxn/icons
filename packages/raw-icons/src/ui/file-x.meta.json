@@ -5,10 +5,11 @@
   "tags": [
     "page",
     "paper",
+    "error",
+    "destroy",
     "remove",
     "delete",
-    "error",
     "cancel",
-    "destroy"
+    "close"
   ]
 }

@@ -5,10 +5,11 @@
   ],
   "tags": [
     "captions",
-    "disabled",
     "text",
     "hearing",
     "muted",
+    "disabled",
+    "inactive",
     "hidden"
   ]
 }

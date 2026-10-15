@@ -1,13 +1,15 @@
 {
   "categories": [
-    "editor", "typography"
+    "editor",
+    "typography"
   ],
   "tags": [
     "items",
     "checklist",
+    "menu",
     "add",
     "new",
     "create",
-    "menu"
+    "append"
   ]
 }

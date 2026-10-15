@@ -9,6 +9,8 @@
     "record",
     "film",
     "cinema",
-    "solid"
+    "active",
+    "solid",
+    "selected"
   ]
 }

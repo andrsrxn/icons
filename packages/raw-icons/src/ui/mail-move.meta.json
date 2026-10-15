@@ -6,11 +6,12 @@
     "message",
     "envelope",
     "letter",
-    "send",
     "inbox",
     "copy",
+    "replace",
+    "relocate",
     "transfer",
-    "shift",
-    "replace"
+    "send",
+    "shift"
   ]
 }

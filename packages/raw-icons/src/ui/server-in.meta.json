@@ -1,17 +1,19 @@
 {
   "categories": [
     "development",
-    "devices", 
+    "devices",
     "business"
   ],
   "tags": [
     "datacenter",
     "host",
     "rack",
-    "import",
     "incoming",
     "insert",
+    "receive",
+    "import",
     "enter",
-    "receive"
+    "inside",
+    "upload"
   ]
 }

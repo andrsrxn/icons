@@ -1,6 +1,6 @@
 {
   "categories": [
-    "development", 
+    "development",
     "business",
     "devices"
   ],
@@ -8,9 +8,10 @@
     "storage",
     "sql",
     "records",
-    "transfer",
+    "migrate",
     "relocate",
-    "shift",
-    "migrate"
+    "transfer",
+    "send",
+    "shift"
   ]
 }

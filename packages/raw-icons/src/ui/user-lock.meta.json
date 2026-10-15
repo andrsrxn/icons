@@ -5,10 +5,12 @@
   "tags": [
     "account",
     "profile",
-    "secure",
-    "private",
     "password",
     "admin",
-    "person"
+    "person",
+    "secure",
+    "protected",
+    "private",
+    "restricted"
   ]
 }

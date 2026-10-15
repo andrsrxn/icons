@@ -8,6 +8,7 @@
     "event",
     "find",
     "lookup",
-    "explore"
+    "explore",
+    "scan"
   ]
 }

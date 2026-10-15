@@ -2,6 +2,7 @@
   "categories": [
     "communication",
     "mail",
+    "time",
     "arrows"
   ],
   "tags": [
@@ -12,7 +13,6 @@
     "submit",
     "pending",
     "schedule",
-    "history",
-    "timer"
+    "history"
   ]
 }

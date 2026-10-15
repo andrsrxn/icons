@@ -6,10 +6,12 @@
   "tags": [
     "view",
     "visibility",
-    "hidden",
     "hide",
     "blind",
     "private",
-    "secret"
+    "secret",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

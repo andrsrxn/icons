@@ -11,6 +11,9 @@
     "marker",
     "save",
     "bookmark",
-    "pushpin"
+    "pushpin",
+    "active",
+    "solid",
+    "selected"
   ]
 }

@@ -6,8 +6,11 @@
     "schedule",
     "date",
     "event",
-    "favorite",
     "rating",
-    "important"
+    "important",
+    "favorite",
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

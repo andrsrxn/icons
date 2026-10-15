@@ -10,6 +10,8 @@
     "protection",
     "guard",
     "record",
-    "solid"
+    "active",
+    "solid",
+    "selected"
   ]
 }

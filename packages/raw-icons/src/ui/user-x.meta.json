@@ -5,10 +5,12 @@
   "tags": [
     "account",
     "profile",
-    "remove",
-    "delete",
     "ban",
     "block",
-    "person"
+    "person",
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

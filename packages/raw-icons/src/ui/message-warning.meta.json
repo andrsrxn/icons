@@ -7,8 +7,10 @@
     "chat",
     "bubble",
     "talk",
+    "attention",
     "alert",
+    "caution",
     "danger",
-    "attention"
+    "notice"
   ]
 }

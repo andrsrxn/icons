@@ -6,7 +6,9 @@
     "audio",
     "waveform",
     "muted",
+    "silence",
     "disabled",
-    "silence"
+    "inactive",
+    "hidden"
   ]
 }

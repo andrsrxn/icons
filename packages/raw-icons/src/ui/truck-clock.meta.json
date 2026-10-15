@@ -10,7 +10,6 @@
     "shipping",
     "pending",
     "schedule",
-    "history",
-    "timer"
+    "history"
   ]
 }

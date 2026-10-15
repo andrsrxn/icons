@@ -4,9 +4,11 @@
   ],
   "tags": [
     "directory",
-    "shift",
     "replace",
+    "copy",
+    "relocate",
     "transfer",
-    "copy"
+    "send",
+    "shift"
   ]
 }

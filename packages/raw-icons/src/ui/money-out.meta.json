@@ -9,9 +9,9 @@
     "banknote",
     "payment",
     "dollar",
-    "pay",
-    "atm",
-    "withdraw",
-    "debit"
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

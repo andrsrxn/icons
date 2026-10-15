@@ -7,8 +7,11 @@
     "email",
     "envelope",
     "card",
-    "love",
     "romance",
-    "valentine"
+    "valentine",
+    "like",
+    "favorite",
+    "love",
+    "saved"
   ]
 }

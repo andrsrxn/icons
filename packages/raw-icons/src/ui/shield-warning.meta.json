@@ -3,11 +3,12 @@
     "security"
   ],
   "tags": [
+    "protection",
+    "exclamation",
+    "threat",
     "alert",
     "caution",
     "danger",
-    "protection",
-    "exclamation",
-    "threat"
+    "notice"
   ]
 }

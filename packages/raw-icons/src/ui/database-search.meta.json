@@ -1,6 +1,6 @@
 {
   "categories": [
-    "development", 
+    "development",
     "business",
     "devices"
   ],
@@ -8,10 +8,11 @@
     "storage",
     "sql",
     "records",
+    "query",
+    "filter",
     "find",
     "lookup",
-    "query",
     "explore",
-    "filter"
+    "scan"
   ]
 }

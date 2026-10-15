@@ -5,9 +5,11 @@
   "tags": [
     "sidebar",
     "right",
-    "solid",
     "dock",
-    "pane"
+    "pane",
+    "active",
+    "solid",
+    "selected"
   ],
   "rtl": true
 }

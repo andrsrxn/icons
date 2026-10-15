@@ -6,12 +6,13 @@
   "tags": [
     "chat",
     "bubble",
-    "done",
-    "approved",
     "verified",
-    "success",
     "complete",
     "read",
-    "delivered"
+    "delivered",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

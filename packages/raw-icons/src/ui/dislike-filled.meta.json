@@ -9,6 +9,9 @@
     "bad",
     "hate",
     "reject",
-    "disapprove"
+    "disapprove",
+    "active",
+    "solid",
+    "selected"
   ]
 }

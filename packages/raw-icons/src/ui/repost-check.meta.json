@@ -1,6 +1,7 @@
 {
   "categories": [
-    "social", "tools"
+    "social",
+    "tools"
   ],
   "tags": [
     "share",
@@ -8,9 +9,10 @@
     "retweet",
     "forward",
     "post",
-    "success",
     "verify",
-    "approve",
-    "done"
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

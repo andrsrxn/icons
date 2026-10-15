@@ -7,7 +7,8 @@
     "date",
     "event",
     "remove",
+    "delete",
     "cancel",
-    "delete"
+    "close"
   ]
 }

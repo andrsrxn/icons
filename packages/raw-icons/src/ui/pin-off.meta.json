@@ -10,6 +10,9 @@
     "remove",
     "unpin",
     "detach",
-    "delete"
+    "delete",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

@@ -8,10 +8,11 @@
     "storage",
     "hdd",
     "ssd",
-    "import",
     "incoming",
     "insert",
+    "import",
     "enter",
-    "receive"
+    "inside",
+    "upload"
   ]
 }

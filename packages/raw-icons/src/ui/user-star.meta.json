@@ -5,10 +5,13 @@
   "tags": [
     "account",
     "profile",
-    "favorite",
     "rating",
     "vip",
     "important",
-    "person"
+    "person",
+    "favorite",
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

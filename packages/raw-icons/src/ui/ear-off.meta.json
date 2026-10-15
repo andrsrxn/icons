@@ -5,9 +5,11 @@
   "tags": [
     "deaf",
     "hearing",
-    "disabled",
     "muted",
     "silent",
-    "impairment"
+    "impairment",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

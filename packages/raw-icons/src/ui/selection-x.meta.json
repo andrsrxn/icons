@@ -6,12 +6,13 @@
   "tags": [
     "deselect",
     "clear",
-    "cancel",
     "dismiss",
     "box",
     "marquee",
     "reset",
-    "square",
-    "dashed"
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

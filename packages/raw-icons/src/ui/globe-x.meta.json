@@ -8,6 +8,10 @@
     "error",
     "offline",
     "network",
-    "internet"
+    "internet",
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

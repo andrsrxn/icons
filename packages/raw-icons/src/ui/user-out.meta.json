@@ -6,8 +6,11 @@
     "account",
     "profile",
     "person",
-    "leave",
     "move",
-    "relocate"
+    "relocate",
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

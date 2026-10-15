@@ -9,6 +9,9 @@
     "unprotected",
     "error",
     "danger",
-    "ban"
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

@@ -7,8 +7,10 @@
     "profile",
     "person",
     "request",
-    "transfer",
+    "change",
     "relocate",
-    "change"
+    "transfer",
+    "send",
+    "shift"
   ]
 }

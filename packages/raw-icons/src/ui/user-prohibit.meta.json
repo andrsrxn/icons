@@ -5,11 +5,13 @@
   "tags": [
     "account",
     "profile",
-    "forbidden",
     "not",
     "allowed",
-    "banned",
     "block",
-    "person"
+    "person",
+    "blocked",
+    "forbidden",
+    "banned",
+    "restricted"
   ]
 }

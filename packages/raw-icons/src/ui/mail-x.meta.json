@@ -9,7 +9,9 @@
     "send",
     "inbox",
     "error",
+    "remove",
+    "delete",
     "cancel",
-    "delete"
+    "close"
   ]
 }

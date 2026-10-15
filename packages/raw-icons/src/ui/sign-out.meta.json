@@ -9,7 +9,10 @@
     "logout",
     "exit",
     "door",
+    "arrow",
+    "export",
     "leave",
-    "arrow"
+    "outside",
+    "download"
   ]
 }

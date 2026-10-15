@@ -5,10 +5,11 @@
   "tags": [
     "font",
     "letters",
-    "disabled",
-    "hidden",
     "remove",
     "clear",
-    "format"
+    "format",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

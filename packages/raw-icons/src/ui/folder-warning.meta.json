@@ -4,10 +4,12 @@
   ],
   "tags": [
     "directory",
-    "alert",
-    "caution",
     "issue",
     "error",
-    "exclamation"
+    "exclamation",
+    "alert",
+    "caution",
+    "danger",
+    "notice"
   ]
 }

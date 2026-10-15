@@ -8,6 +8,9 @@
     "forbidden",
     "car",
     "garage",
-    "banned"
+    "banned",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

@@ -9,6 +9,9 @@
     "error",
     "offline",
     "network",
-    "cellular"
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

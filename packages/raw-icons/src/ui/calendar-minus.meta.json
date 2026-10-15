@@ -6,8 +6,10 @@
     "schedule",
     "date",
     "event",
+    "cancel",
     "remove",
-    "delete",
-    "cancel"
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

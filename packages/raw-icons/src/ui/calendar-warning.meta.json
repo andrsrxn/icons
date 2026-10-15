@@ -3,11 +3,13 @@
     "time"
   ],
   "tags": [
-    "alert",
     "reminder",
     "schedule",
     "deadline",
+    "event",
+    "alert",
     "caution",
-    "event"
+    "danger",
+    "notice"
   ]
 }

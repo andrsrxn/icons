@@ -4,12 +4,14 @@
     "shopping"
   ],
   "tags": [
-    "price",
     "label",
-    "money",
     "cost",
     "value",
     "sale",
-    "amount"
+    "amount",
+    "money",
+    "payment",
+    "price",
+    "cash"
   ]
 }

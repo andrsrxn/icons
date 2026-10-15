@@ -10,6 +10,8 @@
     "share",
     "disable",
     "broken",
-    "unavailable"
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

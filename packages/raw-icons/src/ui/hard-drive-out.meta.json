@@ -8,10 +8,11 @@
     "storage",
     "hdd",
     "ssd",
-    "export",
     "outgoing",
     "eject",
-    "send",
-    "leave"
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

@@ -115,7 +115,7 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
 | `-x` | `"remove"`, `"delete"`, `"cancel"`, `"close"` |
 | `-plus` | `"add"`, `"new"`, `"create"`, `"append"` |
 | `-minus` | `"remove"`, `"reduce"`, `"decrease"`, `"delete"` |
-| `-lock` | `"secure"`, `"protected"`, `"private"`, `"restricted"` |
+| `-lock` | `"protected"`, `"private"`, `"restricted"` |
 | `-edit` | `"modify"`, `"change"`, `"write"`, `"update"` |
 | `-warning` | `"alert"`, `"caution"`, `"danger"`, `"notice"` |
 | `-heart` | `"like"`, `"favorite"`, `"love"`, `"saved"` |
@@ -199,4 +199,4 @@ it could be a dry-run, when only should return the hyperlink to the metadata fil
 - **Strict Sandbox / Command Scope:**
   - DO NOT run build scripts, bundling, or icon generation commands (such as `npm run generate-icons`, `npm run build`, `turbo run build`, or type-checks).
   - ONLY inspect git status / files, read SVG contents, and write `.meta.json` files.
-  - Return the amount of files changed, and if its necessary a note about something important, mention it.
+  - Return the amount of files changed, and if its necessary a note about something important such as a bug, a wrong naming, a typo, etc. mention it. Is not necessary to return all the tags and categories added to each file.

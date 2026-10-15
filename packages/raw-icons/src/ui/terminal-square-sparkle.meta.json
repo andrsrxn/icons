@@ -5,7 +5,7 @@
     "ai"
   ],
   "tags": [
-    "cli",
+    "CLI",
     "console",
     "command",
     "prompt",
@@ -13,6 +13,7 @@
     "bash",
     "code",
     "magic",
+    "generated",
     "intelligent"
   ]
 }

@@ -7,11 +7,12 @@
     "chat",
     "bubble",
     "draft",
-    "done",
-    "approved",
     "verified",
-    "success",
     "complete",
-    "outline"
+    "outline",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

@@ -5,10 +5,11 @@
   ],
   "tags": [
     "light",
-    "disabled",
     "switch",
-    "inactive",
     "power",
-    "save"
+    "save",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

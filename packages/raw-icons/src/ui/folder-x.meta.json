@@ -4,10 +4,11 @@
   ],
   "tags": [
     "directory",
+    "error",
+    "destroy",
     "remove",
     "delete",
-    "error",
     "cancel",
-    "destroy"
+    "close"
   ]
 }

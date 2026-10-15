@@ -10,8 +10,10 @@
     "stream",
     "display",
     "stop",
-    "cancel",
     "disconnect",
-    "unshare"
+    "remove",
+    "delete",
+    "cancel",
+    "close"
   ]
 }

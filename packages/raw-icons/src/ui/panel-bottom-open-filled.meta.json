@@ -3,8 +3,10 @@
     "layout"
   ],
   "tags": [
-    "solid",
     "collapsed",
-    "expanded"
+    "expanded",
+    "active",
+    "solid",
+    "selected"
   ]
 }

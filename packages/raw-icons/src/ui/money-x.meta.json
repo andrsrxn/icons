@@ -9,9 +9,9 @@
     "banknote",
     "payment",
     "dollar",
-    "pay",
-    "error",
+    "remove",
+    "delete",
     "cancel",
-    "invalid"
+    "close"
   ]
 }

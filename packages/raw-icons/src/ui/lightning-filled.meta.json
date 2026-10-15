@@ -10,6 +10,9 @@
     "flash",
     "charge",
     "fast",
-    "strike"
+    "strike",
+    "active",
+    "solid",
+    "selected"
   ]
 }

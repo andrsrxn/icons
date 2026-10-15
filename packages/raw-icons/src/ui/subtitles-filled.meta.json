@@ -8,6 +8,9 @@
     "cc",
     "captions",
     "text",
-    "video"
+    "video",
+    "active",
+    "solid",
+    "selected"
   ]
 }

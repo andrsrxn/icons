@@ -8,6 +8,9 @@
     "reminder",
     "mute",
     "silent",
-    "quiet"
+    "quiet",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

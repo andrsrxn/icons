@@ -1,17 +1,19 @@
 {
   "categories": [
     "development",
-    "devices", 
+    "devices",
     "business"
   ],
   "tags": [
     "datacenter",
     "host",
     "rack",
-    "export",
     "outgoing",
     "eject",
     "send",
-    "leave"
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

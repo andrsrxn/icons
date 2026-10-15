@@ -4,10 +4,12 @@
   ],
   "tags": [
     "geometry",
-    "remove",
-    "delete",
     "subtract",
     "polygon",
-    "form"
+    "form",
+    "remove",
+    "reduce",
+    "decrease",
+    "delete"
   ]
 }

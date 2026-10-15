@@ -4,9 +4,11 @@
   ],
   "tags": [
     "directions",
-    "disabled",
     "path",
     "GPS",
-    "blocked"
+    "blocked",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

@@ -3,8 +3,10 @@
     "layout"
   ],
   "tags": [
-    "solid",
     "split",
-    "sections"
+    "sections",
+    "active",
+    "solid",
+    "selected"
   ]
 }

@@ -4,10 +4,12 @@
     "messages"
   ],
   "tags": [
-    "disabled",
     "empty",
     "chat",
     "receive",
-    "communication"
+    "communication",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

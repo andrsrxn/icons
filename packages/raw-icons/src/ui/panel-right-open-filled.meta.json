@@ -4,8 +4,10 @@
   ],
   "tags": [
     "sidebar",
-    "solid",
     "collapsed",
-    "expanded"
+    "expanded",
+    "active",
+    "solid",
+    "selected"
   ]
 }

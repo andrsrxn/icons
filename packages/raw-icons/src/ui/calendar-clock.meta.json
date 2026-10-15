@@ -3,11 +3,13 @@
     "time"
   ],
   "tags": [
-    "schedule",
     "date",
     "event",
     "duration",
     "appointment",
-    "meeting"
+    "meeting",
+    "pending",
+    "schedule",
+    "history"
   ]
 }

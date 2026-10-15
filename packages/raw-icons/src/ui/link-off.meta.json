@@ -9,6 +9,9 @@
     "detach",
     "remove",
     "chain",
-    "URL"
+    "URL",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

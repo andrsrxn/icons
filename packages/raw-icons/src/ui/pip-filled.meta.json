@@ -9,6 +9,9 @@
     "broadcast",
     "video",
     "screen",
-    "display"
+    "display",
+    "active",
+    "solid",
+    "selected"
   ]
 }

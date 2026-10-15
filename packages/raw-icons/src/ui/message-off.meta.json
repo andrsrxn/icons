@@ -7,8 +7,9 @@
     "chat",
     "bubble",
     "talk",
+    "mute",
     "disabled",
-    "hidden",
-    "mute"
+    "inactive",
+    "hidden"
   ]
 }

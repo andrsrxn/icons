@@ -9,9 +9,9 @@
     "banknote",
     "payment",
     "dollar",
-    "pay",
-    "success",
     "approved",
-    "verified"
+    "success",
+    "done",
+    "confirm"
   ]
 }

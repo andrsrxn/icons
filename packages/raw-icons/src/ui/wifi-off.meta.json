@@ -8,6 +8,8 @@
     "disconnected",
     "error",
     "wireless",
-    "offline"
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

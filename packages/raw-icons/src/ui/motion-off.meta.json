@@ -9,9 +9,11 @@
     "movement",
     "reduce",
     "static",
-    "disabled",
     "still",
     "calm",
-    "preference"
+    "preference",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

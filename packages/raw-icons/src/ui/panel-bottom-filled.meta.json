@@ -3,8 +3,10 @@
     "layout"
   ],
   "tags": [
-    "solid",
     "sidebar",
-    "dock"
+    "dock",
+    "active",
+    "solid",
+    "selected"
   ]
 }

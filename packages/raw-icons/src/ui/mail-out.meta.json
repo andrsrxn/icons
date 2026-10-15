@@ -9,8 +9,9 @@
     "send",
     "inbox",
     "outgoing",
-    "outbound",
-    "sent",
+    "export",
+    "leave",
+    "outside",
     "download"
   ]
 }

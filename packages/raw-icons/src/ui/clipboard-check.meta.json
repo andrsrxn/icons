@@ -8,10 +8,11 @@
     "copy",
     "paste",
     "task",
-    "done",
+    "complete",
+    "survey",
     "approved",
     "success",
-    "complete",
-    "survey"
+    "done",
+    "confirm"
   ]
 }

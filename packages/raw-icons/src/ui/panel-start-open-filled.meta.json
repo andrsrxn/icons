@@ -5,9 +5,11 @@
   "tags": [
     "sidebar",
     "left",
-    "solid",
     "collapsed",
-    "expanded"
+    "expanded",
+    "active",
+    "solid",
+    "selected"
   ],
   "rtl": true
 }

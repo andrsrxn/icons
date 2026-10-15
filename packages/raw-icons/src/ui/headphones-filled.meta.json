@@ -9,7 +9,9 @@
     "sound",
     "listen",
     "headset",
+    "earphones",
+    "active",
     "solid",
-    "earphones"
+    "selected"
   ]
 }

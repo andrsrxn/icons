@@ -5,9 +5,11 @@
   "tags": [
     "world",
     "international",
-    "offline",
     "disconnected",
     "network",
-    "internet"
+    "internet",
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

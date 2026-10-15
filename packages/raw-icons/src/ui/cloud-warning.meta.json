@@ -4,12 +4,14 @@
     "development"
   ],
   "tags": [
-    "alert",
     "error",
-    "caution",
     "exclamation",
     "problem",
     "server",
-    "issue"
+    "issue",
+    "alert",
+    "caution",
+    "danger",
+    "notice"
   ]
 }

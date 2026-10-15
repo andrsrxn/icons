@@ -4,11 +4,13 @@
   ],
   "tags": [
     "package",
-    "export",
-    "download",
     "outgoing",
     "parcel",
     "dispatch",
-    "extract"
+    "extract",
+    "export",
+    "leave",
+    "outside",
+    "download"
   ]
 }

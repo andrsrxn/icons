@@ -11,6 +11,8 @@
     "24h",
     "recent",
     "ephemeral",
-    "timeline"
+    "pending",
+    "schedule",
+    "history"
   ]
 }

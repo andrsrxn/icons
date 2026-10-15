@@ -12,7 +12,8 @@
     "transmit",
     "deliver",
     "submit",
-    "outbox",
-    "solid"
+    "active",
+    "solid",
+    "selected"
   ]
 }

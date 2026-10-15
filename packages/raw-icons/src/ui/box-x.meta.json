@@ -4,11 +4,13 @@
   ],
   "tags": [
     "package",
-    "cancel",
     "error",
     "parcel",
     "denied",
     "failed",
+    "remove",
+    "delete",
+    "cancel",
     "close"
   ]
 }

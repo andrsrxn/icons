@@ -6,11 +6,12 @@
   "tags": [
     "sync",
     "synced",
-    "done",
-    "approved",
     "verified",
-    "success",
     "complete",
-    "server"
+    "server",
+    "approved",
+    "success",
+    "done",
+    "confirm"
   ]
 }

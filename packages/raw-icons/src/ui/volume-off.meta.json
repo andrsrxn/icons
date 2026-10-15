@@ -9,6 +9,8 @@
     "silent",
     "speaker",
     "audio",
-    "disabled"
+    "disabled",
+    "inactive",
+    "hidden"
   ]
 }

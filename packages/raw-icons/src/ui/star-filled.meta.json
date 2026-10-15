@@ -8,6 +8,8 @@
     "important",
     "bookmark",
     "shape",
-    "solid"
+    "active",
+    "solid",
+    "selected"
   ]
 }

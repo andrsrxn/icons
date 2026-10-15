@@ -7,9 +7,11 @@
     "verified",
     "confirmed",
     "delivered",
+    "parcel",
+    "complete",
     "approved",
     "success",
-    "parcel",
-    "complete"
+    "done",
+    "confirm"
   ]
 }

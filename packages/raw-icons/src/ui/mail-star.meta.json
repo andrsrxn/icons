@@ -8,7 +8,10 @@
     "letter",
     "send",
     "inbox",
+    "like",
     "favorite",
-    "like"
+    "rate",
+    "bookmark",
+    "saved"
   ]
 }

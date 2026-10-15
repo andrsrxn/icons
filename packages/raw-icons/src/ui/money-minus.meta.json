@@ -9,9 +9,9 @@
     "banknote",
     "payment",
     "dollar",
-    "pay",
-    "subtract",
+    "remove",
+    "reduce",
     "decrease",
-    "debt"
+    "delete"
   ]
 }

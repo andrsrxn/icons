@@ -6,8 +6,10 @@
     "schedule",
     "date",
     "event",
-    "done",
+    "planned",
     "approved",
-    "planned"
+    "success",
+    "done",
+    "confirm"
   ]
 }
