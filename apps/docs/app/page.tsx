@@ -3,7 +3,7 @@ import { IconsSection } from '@/components/sections/icons'
 
 export default function Home() {
   return (
-    <main>
+    <main suppressHydrationWarning>
       <HeroSection />
       <IconsSection />
     </main>

@@ -609,11 +609,6 @@ export function App() {
           </li>
           <li>
             <p>
-              <code>app-window</code>
-            </p>
-          </li>
-          <li>
-            <p>
               <code>notes</code>
             </p>
           </li>
@@ -630,11 +625,6 @@ export function App() {
           <li>
             <p>
               <code>mail-letter</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>newspaper</code>
             </p>
           </li>
           <li>

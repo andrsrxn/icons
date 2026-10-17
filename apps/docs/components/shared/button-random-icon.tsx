@@ -3,15 +3,15 @@
 import { IconDices } from '@andrsrxn/icons'
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog } from '@andrsrxn/raw-icons/types'
-import { useRouter } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { useIconCatalog } from '@/lib/hooks/use-icon-catalog'
 import { isUIIcon } from '@/lib/utils/icons'
 
 const catalog = rawCatalog as IconCatalog
 
 export const ButtonRandomIcon = () => {
-  const { push } = useRouter()
+  const { setIconParam, setGroup } = useIconCatalog()
 
   const getRandomIcon = () => {
     const max = catalog.length - 1
@@ -20,10 +20,9 @@ export const ButtonRandomIcon = () => {
     if (!randomIcon) {
       return
     }
-    const group = isUIIcon(randomIcon) ? 'ui' : 'flags'
-    const href = `/${group}/${randomIcon.name}`
 
-    push(href)
+    setIconParam(randomIcon.name)
+    setGroup(isUIIcon(randomIcon) ? 'ui' : 'flags')
   }
 
   return (

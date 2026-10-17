@@ -54,7 +54,7 @@ export const baseMetadata: Metadata = {
         url: IMAGES.brand.bannerOg.png,
         width: 1200,
         height: 630,
-        alt: `Homepage of ${COMPANY.name} on laptop`,
+        alt: `${COMPANY.name} logo with duotone icons around`,
       },
     ],
     locale: 'en',
@@ -92,7 +92,7 @@ export const baseMetadata: Metadata = {
     statusBarStyle: 'default',
     title: COMPANY.name,
   },
-
+  manifest: '/manifest.webmanifest',
   icons: {
     icon: [
       {

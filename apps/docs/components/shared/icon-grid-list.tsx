@@ -11,6 +11,7 @@ import { cn } from '@/lib/utils'
 export interface IconGridListProps {
   icons: IconCatalogEntry[]
   emptyTitle?: string
+  showCount?: boolean
   className?: string
 }
 
@@ -23,6 +24,7 @@ export interface IconGridListProps {
 export const IconGridList = ({
   icons,
   emptyTitle = 'No result found',
+  showCount = true,
   className,
 }: IconGridListProps) => {
   const searchParams = useSearchParams()
@@ -50,8 +52,9 @@ export const IconGridList = ({
 
   return (
     <div
+      id='main-content'
       className={cn('grid grid-cols-[repeat(auto-fill,minmax(100px,1fr))] h-max gap-4', className)}>
-      {icons.length > 0 && queryString !== '' && queryString.includes('q=') ? (
+      {showCount && icons.length > 0 && queryString !== '' && queryString.includes('q=') ? (
         <div className='flex items-center gap-2 col-span-full h-max'>
           <IconInfo className='size-4 text-muted-foreground' />
           <span className='text-sm text-muted-foreground'>{icons.length} icons found</span>

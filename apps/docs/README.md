@@ -20,7 +20,7 @@ Official documentation and icon catalog application for **[andrsrxn/icons](https
 
 ### Icon detail view
 
-- Opens as an intercepting-route modal: navigating to an icon's detail page overlays it on top of the catalog without losing your current scroll position, filters, or search
+- Opens as a drawer modal: navigating to an icon's detail page overlays it on top of the catalog without losing your current scroll position, filters, or search
 - Shows the icon's name, component name, and associated tags (each tag links back to a filtered catalog search)
 - A ready-to-copy code snippet for importing and using the icon
 - Copy or download the icon as a raw SVG file

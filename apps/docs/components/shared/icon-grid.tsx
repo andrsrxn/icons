@@ -39,7 +39,7 @@ export const IconGrid = () => {
   return (
     <div className='grid gap-4 md:pt-4' ref={containerRef}>
       <div className='flex items-center gap-2 justify-center mx-auto w-full max-w-md lg:max-w-lg'>
-        <InputIconSearch value={query} onChange={setQuery} />
+        <InputIconSearch containerRef={containerRef} value={query} onChange={setQuery} />
         <ButtonRandomIcon />
       </div>
 

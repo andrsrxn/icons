@@ -34,4 +34,3 @@ export const InputCopy = ({
     </InputGroup>
   )
 }
-// drawer with card intercepting modela, icon page, docs, dropdown filter with color, stroke y zise

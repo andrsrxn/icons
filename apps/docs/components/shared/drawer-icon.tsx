@@ -1,17 +1,7 @@
 'use client'
 
-import type { IconCatalogGroup } from '@andrsrxn/raw-icons/types'
-import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import { useMedia } from 'react-use'
 import { IconSection } from '@/components/sections/icon'
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-} from '@/components/ui/dialog'
 import {
   Drawer,
   DrawerContent,
@@ -19,50 +9,52 @@ import {
   DrawerHeader,
   DrawerTitle,
 } from '@/components/ui/drawer'
+import { useIconCatalog } from '@/lib/hooks/use-icon-catalog'
 
-export const DrawerIcon = ({ iconName, group }: { iconName: string; group: IconCatalogGroup }) => {
+export const DrawerIcon = () => {
+  const { iconParam, setIconParam, group } = useIconCatalog()
   const [open, setOpen] = useState(false)
-  const isLaptop = useMedia('(min-width: 1024px)')
-  const router = useRouter()
 
   useEffect(() => {
-    const url = new URL(window.location.href)
-    url.search = ''
-    window.history.replaceState(window.history.state, '', url.pathname)
-  }, [])
+    if (iconParam) {
+      setOpen(true)
+    } else {
+      setOpen(false)
+    }
+  }, [iconParam])
 
-  const animationDuration = 250
-
-  function onDismiss() {
-    setOpen(false)
-    setTimeout(() => router.back(), animationDuration)
+  const handleClose = () => {
+    setIconParam(null)
   }
 
-  useEffect(() => {
-    setOpen(true)
-  }, [])
-
-  return isLaptop ? (
-    <Dialog open={open} onOpenChange={onDismiss}>
-      <DialogContent className='wrapper w-full sm:max-w-4xl'>
-        <DialogHeader>
-          <DialogTitle className='sr-only'>Icon overview</DialogTitle>
-          <DialogDescription className='sr-only'>Details about {iconName}</DialogDescription>
-        </DialogHeader>
-        <div className='px-4 pb-2 pt-4 max-h-[calc(100dvh-120px)] overflow-y-auto scroll-fade-y'>
-          <IconSection group={group} iconName={iconName} showFullData={false} />
-        </div>
-      </DialogContent>
-    </Dialog>
-  ) : (
-    <Drawer open={open} showSwipeHandle onOpenChange={onDismiss}>
-      <DrawerContent className='wrapper max-w-4xl'>
+  return (
+    <Drawer
+      open={open}
+      showSwipeHandle
+      onOpenChange={value => {
+        if (value) {
+          setOpen(value)
+        } else {
+          handleClose()
+        }
+      }}>
+      <DrawerContent className='wrapper max-w-4xl' key={iconParam}>
         <DrawerHeader>
           <DrawerTitle className='sr-only'>Icon overview</DrawerTitle>
-          <DrawerDescription className='sr-only'>Details about {iconName}</DrawerDescription>
+          <DrawerDescription className='sr-only'>Details about the icon</DrawerDescription>
         </DrawerHeader>
         <div className='overflow-y-auto scroll-fade-y px-4 pt-2 pb-12 md:pb-20 md:px-8 md:pt-6'>
-          <IconSection group={group} iconName={iconName} showFullData={false} />
+          {iconParam ? (
+            <IconSection
+              group={group}
+              iconName={iconParam}
+              showFullData
+              // biome-ignore lint/performance/noJsxPropsBind: unnecessary
+              onChange={() => {
+                setOpen(false)
+              }}
+            />
+          ) : null}
         </div>
       </DrawerContent>
     </Drawer>

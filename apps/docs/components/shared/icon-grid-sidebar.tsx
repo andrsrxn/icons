@@ -45,7 +45,7 @@ import {
 } from '@andrsrxn/icons'
 import type { Icon } from '@andrsrxn/icons/types'
 import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
-import { type RefObject, useMemo } from 'react'
+import { type RefObject, useEffect, useMemo, useRef } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -101,6 +101,8 @@ const CATEGORIES_WITH_ICONS = [
   { title: 'weather', icon: IconCloud },
 ] satisfies { title: IconCategory; icon: Icon }[]
 
+const SCROLL_OFFSET = 100
+
 export const IconGridSidebar = ({
   containerRef,
   UIIconsCount,
@@ -127,13 +129,59 @@ export const IconGridSidebar = ({
       })),
     [catalog]
   )
+
+  const navRef = useRef<HTMLElement | null>(null)
+  const activeCategoryRef = useRef<HTMLButtonElement | null>(null)
+
+  useEffect(() => {
+    if (category && activeCategoryRef.current && navRef.current) {
+      const nav = navRef.current
+      const button = activeCategoryRef.current
+
+      // Calculate position relative to nav
+      const buttonTop = button.offsetTop
+      const buttonBottom = buttonTop + button.offsetHeight
+      const navScrollTop = nav.scrollTop
+      const navHeight = nav.clientHeight
+
+      // Only scroll if the button is out of nav's view
+      if (buttonTop < navScrollTop) {
+        nav.scrollTo({ top: buttonTop - SCROLL_OFFSET, behavior: 'smooth' })
+      } else if (buttonBottom > navScrollTop + navHeight) {
+        nav.scrollTo({
+          top: buttonBottom - navHeight + SCROLL_OFFSET,
+          behavior: 'smooth',
+        })
+      }
+    }
+  }, [category])
+
+  useEffect(() => {
+    if (category && activeCategoryRef.current) {
+      containerRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }, [category, containerRef.current])
+
   return (
     <aside className='hidden lg:block lg:col-span-2 relative'>
-      <nav className='sticky top-6 h-[calc(100dvh-3rem)] p-2 bg-card border rounded-lg max-h-max overflow-y-scroll scroll-fade-y overscroll-contain'>
+      <nav
+        ref={navRef}
+        className='sticky top-6 h-[calc(100dvh-3rem)] p-2 bg-card border rounded-lg max-h-max overflow-y-scroll scroll-fade-y overscroll-contain'>
         <div className='px-2 my-2 '>
           <h2 className='text-lg font-semibold'>Categories</h2>
         </div>
         <ul className='grid gap-1'>
+          <li className='sr-only focus-within:not-sr-only mb-1!'>
+            <Button
+              variant='outline'
+              nativeButton={false}
+              className='w-full'
+              render={<a href='#main-content'>Skip navigation</a>}
+            />
+          </li>
           <li>
             <Button
               variant={category === null ? 'default' : 'ghost'}
@@ -147,29 +195,34 @@ export const IconGridSidebar = ({
             </Button>
           </li>
           <Separator className='my-2' />
-          {categoriesWithCount.map(cat => (
-            <li key={cat.cat}>
-              <Button
-                variant={cat.cat === category ? 'default' : 'ghost'}
-                className={cn('text-left justify-between w-full')}
-                // biome-ignore lint/performance/noJsxPropsBind: unnecessary
-                onClick={() => {
-                  setCategory(cat.cat)
-                  containerRef.current?.scrollIntoView({
-                    behavior: 'instant',
-                    block: 'start',
-                  })
-                }}>
-                <span className='flex items-center gap-2'>
-                  <cat.icon />
-                  {cat.cat === 'ai' ? 'AI' : capitalize(cat.cat)}{' '}
-                </span>
-                <Badge variant='secondary' className='text-muted-foreground'>
-                  {cat.count}
-                </Badge>
-              </Button>
-            </li>
-          ))}
+          {categoriesWithCount.map(cat => {
+            const isActive = cat.cat === category
+
+            return (
+              <li key={cat.cat}>
+                <Button
+                  ref={isActive ? activeCategoryRef : null}
+                  variant={isActive ? 'default' : 'ghost'}
+                  className={cn('text-left justify-between w-full')}
+                  // biome-ignore lint/performance/noJsxPropsBind: unnecessary
+                  onClick={() => {
+                    setCategory(cat.cat)
+                    containerRef.current?.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'nearest',
+                    })
+                  }}>
+                  <span className='flex items-center gap-2'>
+                    <cat.icon />
+                    {cat.cat === 'ai' ? 'AI' : capitalize(cat.cat)}{' '}
+                  </span>
+                  <Badge variant='secondary' className='text-muted-foreground'>
+                    {cat.count}
+                  </Badge>
+                </Button>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </aside>

@@ -9,7 +9,6 @@ import {
   IconChartLineUp,
   IconCheck,
   IconCheckBadge,
-  IconCheckCircle,
   IconChevronLeft,
   IconCircle,
   IconCircleFilled,
@@ -55,6 +54,7 @@ import {
   IconUpload,
   IconUser,
   IconUsersPlus,
+  IconWarningTriangle,
   IconX,
 } from '@andrsrxn/icons'
 import type { Metadata } from 'next'
@@ -75,6 +75,7 @@ import {
 import { Badge } from '@/components/ui/badge'
 import {
   Breadcrumb,
+  BreadcrumbEllipsis,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
@@ -167,7 +168,13 @@ export default function ExamplesPage() {
           See our icons in action on different components and states.
         </p>
         <Alert className='p-4 mt-4 max-w-md'>
-          <AlertTitle>Are you using {COMPANY.fullName} in production?</AlertTitle>
+          <AlertTitle>
+            Are you using{' '}
+            <code className='text-[0.9em] bg-muted font-mono px-1.5 rounded-sm'>
+              {COMPANY.fullName}
+            </code>{' '}
+            in production?
+          </AlertTitle>
           <AlertDescription>
             Tell us about it, we'd love to see where the library is being used.
             <a
@@ -276,13 +283,6 @@ export default function ExamplesPage() {
             </div>
           </div>
           <div className='grid gap-6 h-max'>
-            <Alert className='h-max bg-green-50 border-green-300 text-green-950 dark:bg-green-950 dark:border-green-700 dark:text-green-50'>
-              <IconCheckCircle />
-              <AlertTitle>Payment successful</AlertTitle>
-              <AlertDescription className='text-green-900! dark:text-green-200!'>
-                Your payment has been processed. Receipt has been sent to your email.
-              </AlertDescription>
-            </Alert>
             <div className='flex justify-center items-center'>
               <Breadcrumb>
                 <BreadcrumbList>
@@ -296,13 +296,22 @@ export default function ExamplesPage() {
                     <BreadcrumbLink href='/examples'>Examples</BreadcrumbLink>
                   </BreadcrumbItem>
                   <BreadcrumbSeparator />
+                  <BreadcrumbEllipsis />
+                  <BreadcrumbSeparator />
+
                   <BreadcrumbItem>
                     <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>
             </div>
-
+            <Alert className='h-max bg-yellow-50 border-yellow-300 text-yellow-950 dark:bg-yellow-950 dark:border-yellow-700 dark:text-yellow-50'>
+              <IconWarningTriangle />
+              <AlertTitle>Pending payment</AlertTitle>
+              <AlertDescription className='text-yellow-900! dark:text-yellow-200!'>
+                Your payment has not been processed. Please try again later.
+              </AlertDescription>
+            </Alert>
             <Attachment state='idle' className='w-full'>
               <AttachmentMedia>
                 <IconClock />
@@ -401,14 +410,18 @@ export default function ExamplesPage() {
             </ButtonGroup>
           </div>
           <div className='grid gap-6 h-max'>
-            <ToggleGroup variant='outline' multiple className='w-full justify-center'>
-              <ToggleGroupItem value='circle' aria-label='Toggle circle'>
-                <IconCircle className='group-aria-pressed/toggle:hidden' />
-                <IconCircleFilled className='group-aria-pressed/toggle:block hidden' />
-              </ToggleGroupItem>
+            <ToggleGroup
+              variant='outline'
+              defaultValue={['heart', 'circle']}
+              multiple
+              className='w-full justify-center'>
               <ToggleGroupItem value='like' aria-label='Toggle like'>
                 <IconLike className='group-aria-pressed/toggle:hidden' />
                 <IconLikeFilled className='group-aria-pressed/toggle:block hidden' />
+              </ToggleGroupItem>
+              <ToggleGroupItem value='circle' aria-label='Toggle circle'>
+                <IconCircle className='group-aria-pressed/toggle:hidden' />
+                <IconCircleFilled className='group-aria-pressed/toggle:block hidden' />
               </ToggleGroupItem>
               <ToggleGroupItem value='bookmark' aria-label='Toggle bookmark'>
                 <IconBookmark className='group-aria-pressed/toggle:hidden' />

@@ -1,9 +1,9 @@
+/** biome-ignore-all lint/performance/noJsxPropsBind: allowed */
 'use client'
 
 import { IconDownload } from '@andrsrxn/icons'
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
-import Link from 'next/link'
 import { notFound } from 'next/navigation'
 import { useCallback, useMemo, useRef } from 'react'
 import { useCopyToClipboard } from 'react-use'
@@ -23,7 +23,7 @@ import {
 } from '@/components/ui/table'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 import { ICON_PROPS, MAX_RELATED_ICONS } from '@/lib/constants/icons'
-import { useIcon } from '@/lib/hooks/use-icon-catalog'
+import { useIcon, useIconCatalog } from '@/lib/hooks/use-icon-catalog'
 import { capitalize } from '@/lib/utils'
 import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 
@@ -70,16 +70,20 @@ function getRelatedIcons(icon: IconCatalogEntry): IconCatalogEntry[] {
   return [...baseMatch, ...nameMatches, ...categoryMatches].slice(0, MAX_RELATED_ICONS)
 }
 
+// biome-ignore lint/complexity/noExcessiveLinesPerFunction: allowed
 export const IconSection = ({
   iconName,
   showFullData = true,
   group,
+  onChange,
 }: {
   iconName: string
   showFullData?: boolean
   group: IconCatalogGroup
+  onChange?: () => void
 }) => {
   const [_, copyToClipboard] = useCopyToClipboard()
+  const { setCategory, setQuery } = useIconCatalog()
 
   const icon = useIcon(iconName, group)
 
@@ -138,10 +142,15 @@ export const IconSection = ({
                         variant='default'
                         key={cat}
                         className='leading-none'
+
                         render={
-                          showFullData ? (
-                            <Link href={`/?category=${cat}`} prefetch={false} />
-                          ) : undefined
+                          <Button
+                            onClick={() => {
+                              onChange?.()
+                              setQuery('')
+                              setCategory(cat)
+                            }}
+                          />
                         }>
                         {cat === 'ai' ? 'AI' : capitalize(cat)}
                       </Badge>
@@ -197,7 +206,14 @@ export const IconSection = ({
                     variant='outline'
                     className='leading-none'
                     render={
-                      showFullData ? <Link href={`/?q=${tag}`} prefetch={false} /> : undefined
+                      <Button
+                        variant='outline'
+                        onClick={() => {
+                          onChange?.()
+                          setCategory(null)
+                          setQuery(tag)
+                        }}
+                      />
                     }>
                     {capitalize(tag)}
                   </Badge>
@@ -258,7 +274,7 @@ export const IconSection = ({
           <div className='grid mt-20 gap-6'>
             <h2 className='font-heading text-2xl leading-none font-bold'>Related icons</h2>
 
-            <IconGridList icons={relatedIcons} />
+            <IconGridList showCount={false} icons={relatedIcons} />
           </div>
         )}
       </div>

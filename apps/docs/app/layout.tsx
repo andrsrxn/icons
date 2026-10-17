@@ -6,6 +6,7 @@ import { type ReactNode, Suspense } from 'react'
 import { preconnect } from 'react-dom'
 import { AppProviders } from '@/components/providers/providers'
 import { Footer } from '@/components/sections/footer'
+import { DrawerIcon } from '@/components/shared/drawer-icon'
 import { env } from '@/lib/config/env'
 import { baseMetadata, baseViewport } from '@/lib/constants/metadata'
 import { structuredData } from '@/lib/constants/structured-data'
@@ -23,6 +24,8 @@ const fontSans = Geist({
 export const metadata = baseMetadata
 export const viewport = baseViewport
 
+export const dynamic = 'force-static'
+
 export default function RootLayout({ children, modal }: { children: ReactNode; modal: ReactNode }) {
   preconnect('https://res.cloudinary.com', {
     crossOrigin: 'anonymous',
@@ -38,6 +41,8 @@ export default function RootLayout({ children, modal }: { children: ReactNode; m
           <Suspense fallback={<div className='min-h-dvh' />}>{children}</Suspense>
           {modal}
           <Footer className='mt-8' />
+
+          <DrawerIcon />
         </AppProviders>
         <script
           type='application/ld+json'

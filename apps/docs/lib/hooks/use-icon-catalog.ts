@@ -4,8 +4,7 @@
 import rawCatalog from '@andrsrxn/raw-icons/catalog.json'
 import type { IconCatalog, IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import { parseAsInteger, useQueryState } from 'nuqs'
-import { useCallback, useMemo, useState } from 'react'
-import { useDebounce } from 'react-use'
+import { useCallback, useDeferredValue, useMemo } from 'react'
 import { ICON_PAGE_SIZE } from '@/lib/constants/icons'
 import { getPaginationRange, isUIIcon } from '@/lib/utils/icons'
 
@@ -150,6 +149,9 @@ function filterByCategory(icons: IconCatalogEntry[], category: string | null): I
  * "render what the hook gives me".
  */
 export const useIconCatalog = () => {
+  const [iconParam, setIconParam] = useQueryState('icon', {
+    history: 'push',
+  })
   const [page, setPage] = useQueryState('page', parseAsInteger.withDefault(1))
   const [category, setCategoryState] = useQueryState('category')
   const [group, setGroupState] = useQueryState<'ui' | 'flags'>('group', {
@@ -159,24 +161,17 @@ export const useIconCatalog = () => {
   const [query, setQueryState] = useQueryState('q')
 
   // useDeferredValue lets the input update immediately while the (more expensive) filtering trails slightly behind.
-  const [debouncedQuery, setDebouncedQuery] = useState(query)
-  useDebounce(
-    () => {
-      setDebouncedQuery(query)
-    },
-    250,
-    [query]
-  )
+  const deferredQuery = useDeferredValue(query)
 
   // continue
 
   const filtered = useMemo(() => {
     const baseIcons = group && group in ICONS_BY_GROUP ? ICONS_BY_GROUP[group] : catalog
     const categoryFiltered = filterByCategory(baseIcons, category)
-    const q = normalizeSearchText(debouncedQuery?.toLowerCase().trim() ?? '')
+    const q = normalizeSearchText(deferredQuery?.toLowerCase().trim() ?? '')
 
     return q ? searchAndScoreIcons(categoryFiltered, q) : categoryFiltered
-  }, [category, debouncedQuery, group])
+  }, [category, deferredQuery, group])
 
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE))
   const safePage = Math.min(Math.max(1, page), totalPages)
@@ -203,8 +198,10 @@ export const useIconCatalog = () => {
 
   const setGroup = useCallback(
     (value: IconCatalogGroup) => {
+      if (value === 'flags') {
+        setCategoryState(null)
+      }
       setGroupState(value)
-      setCategoryState(null)
       setPage(1)
     },
     [setGroupState, setCategoryState, setPage]
@@ -212,10 +209,11 @@ export const useIconCatalog = () => {
 
   const setQuery = useCallback(
     (value: string) => {
+      setIconParam(null)
       setQueryState(value || null)
       setPage(1)
     },
-    [setQueryState, setPage]
+    [setQueryState, setPage, setIconParam]
   )
 
   return {
@@ -231,9 +229,11 @@ export const useIconCatalog = () => {
     totalPages,
     pagesToShow,
     catalog,
+    iconParam,
+    setIconParam,
     // Exposed in case the UI wants to show a subtle "updating…" indicator
     // while a deferred filter is catching up to the latest keystroke.
-    isFiltering: query !== debouncedQuery,
+    isFiltering: query !== deferredQuery,
   }
 }
 

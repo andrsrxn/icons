@@ -3,6 +3,8 @@ import { COMPANY } from '@/lib/constants/company'
 import { IMAGES } from '@/lib/constants/media'
 import { SITE } from '@/lib/constants/site'
 
+export const dynamic = 'force-static'
+
 export default function manifest(): MetadataRoute.Manifest {
   return {
     name: COMPANY.fullName,
