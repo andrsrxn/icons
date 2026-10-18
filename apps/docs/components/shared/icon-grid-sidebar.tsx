@@ -133,18 +133,22 @@ export const IconGridSidebar = ({
   const navRef = useRef<HTMLElement | null>(null)
   const activeCategoryRef = useRef<HTMLButtonElement | null>(null)
 
+  const prevCategoryRef = useRef(category)
+
   useEffect(() => {
+    const prevCategory = prevCategoryRef.current
+    prevCategoryRef.current = category
+
+    // When a category is selected, scroll sidebar to that button
     if (category && activeCategoryRef.current && navRef.current) {
       const nav = navRef.current
       const button = activeCategoryRef.current
 
-      // Calculate position relative to nav
       const buttonTop = button.offsetTop
       const buttonBottom = buttonTop + button.offsetHeight
       const navScrollTop = nav.scrollTop
       const navHeight = nav.clientHeight
 
-      // Only scroll if the button is out of nav's view
       if (buttonTop < navScrollTop) {
         nav.scrollTo({ top: buttonTop - SCROLL_OFFSET, behavior: 'smooth' })
       } else if (buttonBottom > navScrollTop + navHeight) {
@@ -154,7 +158,18 @@ export const IconGridSidebar = ({
         })
       }
     }
-  }, [category])
+    // When transitioning from an active category to null
+    else if (prevCategory !== null && category === null) {
+      // Scroll sidebar nav back to top
+      navRef.current?.scrollTo({ top: 0, behavior: 'smooth' })
+
+      // Scroll main grid into view
+      containerRef.current?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      })
+    }
+  }, [category, containerRef])
 
   useEffect(() => {
     if (category && activeCategoryRef.current) {
