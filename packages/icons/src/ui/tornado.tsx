@@ -27,7 +27,7 @@ export const IconTornado: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M11.6 2.46c-5.25 0-9.1.92-9.1 2.05S6.77 6.55 12 6.55s9.5-.91 9.5-2.04c0-.89-2.36-1.65-6.04-1.93'
+        d='M15.46 2.58c3.68.28 6.03 1.04 6.03 1.93 0 1.13-4.25 2.04-9.49 2.04S2.5 5.64 2.5 4.5c0-1.04 3.27-1.9 7.88-2.03'
         stroke='currentColor'
       />
       <path d='M3.79 8.57s2.97 1.05 7.99 1.05h.9' stroke='currentColor' />

@@ -28,18 +28,18 @@ export const IconAlarmPause: Icon = ({
       {...props}>
       <path
         opacity='.2'
+        d='M21.76 12.64a9.76 9.76 0 1 1-19.52 0 9.76 9.76 0 0 1 19.52 0'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M21.76 12.64a9.76 9.76 0 1 1-19.52 0 9.76 9.76 0 0 1 19.52 0m-8.34 4.31V8.1h2.95v8.86zM7.62 8.1v9.14h3.06l-.33-9.14z'
         fill='currentColor'
       />
       <circle cx='12' cy='12.64' r='9.76' stroke='currentColor' />
       <path d='M22.6 5.16 18.91 1.5' stroke='currentColor' />
       <path d='M1.41 5.16 5.07 1.5' stroke='currentColor' />
-      <rect x='7.47' y='7.88' width='3.18' height='9.53' rx='1' stroke='currentColor' />
-      <rect x='13.36' y='7.88' width='3.18' height='9.53' rx='1' stroke='currentColor' />
-      <path d='m2.17 21.59 2.4-2.4' stroke='currentColor' />
-      <path d='m21.77 21.53-2.34-2.34' stroke='currentColor' />
+      <path d='m2.24 22.4 2.33-3.2' stroke='currentColor' />
+      <path d='m21.76 22.4-2.33-3.2' stroke='currentColor' />
+      <path d='M9.81 16.17V9.11' stroke='currentColor' />
+      <path d='M14.19 16.17V9.11' stroke='currentColor' />
     </svg>
   )
 }

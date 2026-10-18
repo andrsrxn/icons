@@ -30,12 +30,12 @@ export const IconAlarmCheck: Icon = ({
       <circle cx='12' cy='12.64' r='9.76' stroke='currentColor' />
       <path d='M22.6 5.16 18.91 1.5' stroke='currentColor' />
       <path d='M1.41 5.16 5.07 1.5' stroke='currentColor' />
-      <path d='m2.17 21.59 2.4-2.4' stroke='currentColor' />
-      <path d='m21.77 21.53-2.34-2.34' stroke='currentColor' />
       <path
         d='M7.82 13.24 9.1 14.8c.72.88 1.08 1.32 1.56 1.32.47 0 .83-.44 1.54-1.32l4.43-5.47'
         stroke='currentColor'
       />
+      <path d='m2.24 22.4 2.33-3.2' stroke='currentColor' />
+      <path d='m21.76 22.4-2.33-3.2' stroke='currentColor' />
     </svg>
   )
 }

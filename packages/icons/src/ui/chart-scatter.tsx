@@ -31,22 +31,22 @@ export const IconChartScatter: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M9.1 16.7a1.14 1.14 0 1 1-2.26 0 1.14 1.14 0 0 1 2.27 0'
+        d='M9.65 15.27a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M11.57 8.74a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
+        d='M11.34 8.14a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M17.86 14.42a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
+        d='M17.45 13.57a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M19 5.14a1.14 1.14 0 1 1-2.27 0 1.14 1.14 0 0 1 2.27 0'
+        d='M18.66 5.73a.84.84 0 1 1-1.67 0 .84.84 0 0 1 1.67 0'
         fill='currentColor'
         stroke='currentColor'
       />

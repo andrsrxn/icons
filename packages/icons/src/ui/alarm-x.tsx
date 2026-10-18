@@ -30,10 +30,10 @@ export const IconAlarmX: Icon = ({
       <circle cx='12' cy='12.64' r='9.76' stroke='currentColor' />
       <path d='M22.6 5.16 18.91 1.5' stroke='currentColor' />
       <path d='M1.41 5.16 5.07 1.5' stroke='currentColor' />
-      <path d='m2.17 21.59 2.4-2.4' stroke='currentColor' />
-      <path d='m21.77 21.53-2.34-2.34' stroke='currentColor' />
       <path d='m15.33 9.31-6.66 6.66' stroke='currentColor' />
       <path d='m8.67 9.31 6.66 6.66' stroke='currentColor' />
+      <path d='m2.24 22.4 2.33-3.2' stroke='currentColor' />
+      <path d='m21.76 22.4-2.33-3.2' stroke='currentColor' />
     </svg>
   )
 }

@@ -41,7 +41,7 @@ export const IconFieldTextarea: Icon = ({
         transform='matrix(0 -1 -1 0 22.3 20.18)'
         stroke='currentColor'
       />
-      <path d='m17.44 17.66 2.14-2.15' stroke='currentColor' />
+      <path d='m16.07 17.31 3.12-3.12' stroke='currentColor' />
     </svg>
   )
 }

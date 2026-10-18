@@ -26,16 +26,16 @@ export const IconAlarmOn: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <circle opacity='.2' cx='12' cy='12.64' r='9.76' fill='currentColor' />
-      <circle cx='12' cy='12.64' r='9.76' stroke='currentColor' />
-      <path d='M1.28 5.54s.7-1.25 1.9-2.38C4.4 2.03 5.55 1.55 5.55 1.55' stroke='currentColor' />
-      <path d='M22.72 5.54s-.7-1.25-1.9-2.38a9 9 0 0 0-2.37-1.61' stroke='currentColor' />
-      <path d='m2.17 21.59 2.4-2.4' stroke='currentColor' />
-      <path d='m21.77 21.53-2.34-2.34' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='13.2' r='9.34' fill='currentColor' />
+      <circle cx='12' cy='13.2' r='9.34' stroke='currentColor' />
+      <path d='M1.46 6.54s.95-1.5 2.53-2.82a11 11 0 0 1 3.05-1.84' stroke='currentColor' />
+      <path d='M22.55 6.48S21.6 5 20.02 3.7a11 11 0 0 0-3.05-1.8' stroke='currentColor' />
       <path
-        d='m15.84 16.24-2.7-1.8c-.87-.59-1.3-.88-1.54-1.32s-.24-.96-.24-2.01V7.22'
+        d='M11.4 8.02v3.62c0 1.05 0 1.57.23 2.01.23.45.67.74 1.54 1.32l2.5 1.67'
         stroke='currentColor'
       />
+      <path d='m2.24 22.4 2.33-3.2' stroke='currentColor' />
+      <path d='m21.76 22.4-2.33-3.2' stroke='currentColor' />
     </svg>
   )
 }

@@ -28,13 +28,13 @@ export const IconTimerPause: Icon = ({
       {...props}>
       <path
         opacity='.2'
+        d='M20.9 13.5a8.9 8.9 0 1 1-17.8 0 8.9 8.9 0 0 1 17.8 0'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M20.9 13.5a8.9 8.9 0 1 1-17.8 0 8.9 8.9 0 0 1 17.8 0m-7.6 3.93V9.34h2.69v8.1zM8 9.34v8.35h2.8l-.3-8.35z'
         fill='currentColor'
       />
-      <rect x='7.87' y='9.15' width='2.9' height='8.69' rx='1' stroke='currentColor' />
-      <rect x='13.24' y='9.15' width='2.9' height='8.69' rx='1' stroke='currentColor' />
+      <path d='M9.81 16.5v-6.2' stroke='currentColor' />
+      <path d='M14.19 16.5v-6.2' stroke='currentColor' />
       <circle cx='12' cy='13.4' r='8.8' stroke='currentColor' />
       <path d='M16.74 1.79H7.26' stroke='currentColor' />
     </svg>
