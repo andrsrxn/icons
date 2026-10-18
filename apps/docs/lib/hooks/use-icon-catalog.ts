@@ -201,10 +201,12 @@ export const useIconCatalog = () => {
       if (value === 'flags') {
         setCategoryState(null)
       }
+      if (value !== group) {
+        setPage(1)
+      }
       setGroupState(value)
-      setPage(1)
     },
-    [setGroupState, setCategoryState, setPage]
+    [setGroupState, setCategoryState, setPage, group]
   )
 
   const setQuery = useCallback(
