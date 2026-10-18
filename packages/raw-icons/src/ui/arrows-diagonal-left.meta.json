@@ -6,6 +6,7 @@
     "direction",
     "pointer",
     "expand",
-    "stretch"
+    "stretch",
+    "fullscreen"
   ]
 }

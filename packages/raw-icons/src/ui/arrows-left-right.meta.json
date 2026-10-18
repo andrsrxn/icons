@@ -9,6 +9,7 @@
     "resize",
     "stretch",
     "range",
-    "change"
+    "change",
+    "filter"
   ]
 }

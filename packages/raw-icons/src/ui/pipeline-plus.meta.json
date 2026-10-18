@@ -4,15 +4,15 @@
     "tools"
   ],
   "tags": [
-    "workflow",
-    "build",
-    "pipe",
+   "workflow",
+    "sort",
+    "funnel",
+    "CI",
+    "CD",
+    "filter",
     "add",
     "new",
     "create",
-    "append",
-    "CI",
-    "CD",
-    "stage"
+    "append"
   ]
 }
