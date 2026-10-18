@@ -32,37 +32,76 @@ export const IconFlagVE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ve-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ve-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ve-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#063191' />
-            <stop offset='100%' stopColor='#03287c' />
+          <linearGradient
+            id='ve-c'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#063191' />
+            <stop offset='1' stopColor='#03287c' />
           </linearGradient>
-          <linearGradient id='ve-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e2213b' />
-            <stop offset='100%' stopColor='#cd1931' />
+          <linearGradient
+            id='ve-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e2213b' />
+            <stop offset='1' stopColor='#cd1931' />
           </linearGradient>
-          <linearGradient id='ve-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd044' />
-            <stop offset='100%' stopColor='#ffcb2f' />
+          <linearGradient
+            id='ve-e'
+            x1='10.5'
+            x2='10.5'
+            y1='6'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='ve-f'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd044' />
+            <stop offset='1' stopColor='#ffcb2f' />
+          </linearGradient>
+          <clipPath id='ve-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ve-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ve-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ve-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ve-b)' d='M0 5h21v5H0z' />
-          <path fill='url(#ve-c)' d='M0 10h21v5H0z' />
+        <g clipPath='url(#ve-a)'>
+          <path fill='url(#ve-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ve-c)' d='M21 5H0v5h21z' />
+          <path fill='url(#ve-d)' d='M21 10H0v5h21z' />
           <path
-            fill='url(#ve-a)'
+            fill='url(#ve-e)'
+            fillRule='evenodd'
             d='M10.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 .5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m4 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1M7.5 9a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m6 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
-          <path fill='url(#ve-d)' d='M0 0h21v5H0z' />
+          <path fill='url(#ve-f)' d='M21 0H0v5h21z' />
         </g>
       </g>
     </svg>

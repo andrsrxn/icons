@@ -32,40 +32,66 @@ export const IconFlagAD: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ad-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ad-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ad-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1537d1' />
-            <stop offset='100%' stopColor='#0522a5' />
+          <linearGradient
+            id='ad-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1537d1' />
+            <stop offset='1' stopColor='#0522a5' />
           </linearGradient>
-          <linearGradient id='ad-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ea3058' />
-            <stop offset='100%' stopColor='#ce173e' />
+          <linearGradient
+            id='ad-d'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ea3058' />
+            <stop offset='1' stopColor='#ce173e' />
           </linearGradient>
-          <linearGradient id='ad-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffcf3c' />
-            <stop offset='100%' stopColor='#fecb2f' />
+          <linearGradient
+            id='ad-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffcf3c' />
+            <stop offset='1' stopColor='#fecb2f' />
           </linearGradient>
+          <clipPath id='ad-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ad-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ad-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ad-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ad-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#ad-c)' d='M10 0h11v15H10z' />
-          <path fill='url(#ad-d)' d='M7 0h7v15H7z' />
-          <path fill='#ffedb1' d='M9.5 6.5h1V7h-1z' />
+        <g clipPath='url(#ad-a)'>
+          <path fill='url(#ad-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ad-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#ad-d)' d='M21 0H10v15h11z' />
+          <path fill='url(#ad-e)' d='M14 0H7v15h7z' />
+          <path fill='#ffedb1' fillRule='evenodd' d='M9.5 6.5h1V7h-1z' clipRule='evenodd' />
           <path
             fill='#d32e28'
-            fillRule='nonzero'
-            d='M9.665 7.96c.025.295.292.54.587.54h.496a.61.61 0 0 0 .587-.54l.122-1.46H9.543zm-.624-1.465A.446.446 0 0 1 9.495 6h2.01c.273 0 .477.216.454.495l-.126 1.506c-.046.552-.53.999-1.085.999h-.496c-.553 0-1.039-.443-1.085-.999z'
+            d='M9.67 7.96c.02.3.29.54.58.54h.5a.6.6 0 0 0 .59-.54l.12-1.46H9.54zM9.04 6.5A.45.45 0 0 1 9.5 6h2c.28 0 .48.22.46.5L11.83 8c-.04.55-.53 1-1.08 1h-.5a1.1 1.1 0 0 1-1.08-1z'
           />
-          <path fill='#d32e28' d='M9.5 7h2v.5h-2z' />
+          <path fill='#d32e28' fillRule='evenodd' d='M9.5 7h2v.5h-2z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

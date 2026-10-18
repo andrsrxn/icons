@@ -32,34 +32,71 @@ export const IconFlagMW: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mw-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='mw-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='mw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e42038' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='mw-d'
+            x1='10.5'
+            x2='10.5'
+            y1='2'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e42038' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='mw-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#47b849' />
-            <stop offset='100%' stopColor='#399e3b' />
+          <linearGradient
+            id='mw-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e42038' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
+          <linearGradient
+            id='mw-f'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#47b849' />
+            <stop offset='1' stopColor='#399e3b' />
+          </linearGradient>
+          <clipPath id='mw-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mw-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mw-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mw-b)' d='M0 0h21v5H0z' />
-          <circle cx='10.5' cy='5.5' r='3.5' fill='url(#mw-c)' />
-          <path fill='url(#mw-c)' d='M0 5h21v5H0z' />
-          <path fill='url(#mw-d)' d='M0 10h21v5H0z' />
+        <g clipPath='url(#mw-a)'>
+          <path fill='url(#mw-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mw-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#mw-d)' d='M10.5 9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
+          <path fill='url(#mw-e)' d='M21 5H0v5h21z' />
+          <path fill='url(#mw-f)' d='M21 10H0v5h21z' />
         </g>
       </g>
     </svg>

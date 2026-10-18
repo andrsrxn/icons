@@ -32,34 +32,53 @@ export const IconFlagTK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='tk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='tk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='tk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0637c5' />
-            <stop offset='100%' stopColor='#002caa' />
+          <linearGradient
+            id='tk-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0637c5' />
+            <stop offset='1' stopColor='#002caa' />
           </linearGradient>
-          <linearGradient id='tk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fdd33f' />
-            <stop offset='100%' stopColor='#fed02f' />
+          <linearGradient id='tk-d' x1='11' x2='11' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fdd33f' />
+            <stop offset='1' stopColor='#fed02f' />
           </linearGradient>
+          <clipPath id='tk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='tk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#tk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#tk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#tk-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#tk-a)'>
+          <path fill='url(#tk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#tk-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#tk-c)'
-            d='M4 12h15v1H3zm7.5-6c3-2 6.5-4 6.5-4s-1.643 3.073-1.5 4.5C16.69 8.407 19 11 19 11H5s3.5-3 6.5-5'
+            fill='url(#tk-d)'
+            fillRule='evenodd'
+            d='M4 12h15v1H3zm7.5-6c3-2 6.5-4 6.5-4s-1.64 3.07-1.5 4.5C16.7 8.4 19 11 19 11H5s3.5-3 6.5-5'
+            clipRule='evenodd'
           />
           <path
             fill='#fff'
-            d='m4 9-.707.207L3.5 8.5l-.207-.707L4 8l.707-.207L4.5 8.5l.207.707zM5 2.5l-.707.207L4.5 2l-.207-.707L5 1.5l.707-.207L5.5 2l.207.707zM7 5.5l-.707.207L6.5 5l-.207-.707L7 4.5l.707-.207L7.5 5l.207.707zM2 5.5l-.707.207L1.5 5l-.207-.707L2 4.5l.707-.207L2.5 5l.207.707z'
+            fillRule='evenodd'
+            d='m4 9-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm1-6.5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm2 3-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-5 0-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7z'
+            clipRule='evenodd'
           />
         </g>
       </g>

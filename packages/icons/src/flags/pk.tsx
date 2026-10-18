@@ -32,45 +32,82 @@ export const IconFlagPK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0a632f' />
-            <stop offset='100%' stopColor='#05411e' />
-          </linearGradient>
-          <filter
+          <linearGradient
             id='pk-c'
-            width='105.6%'
-            height='111.1%'
-            x='-2.8%'
-            y='-2.8%'
-            filterUnits='objectBoundingBox'>
-            <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0a632f' />
+            <stop offset='1' stopColor='#05411e' />
+          </linearGradient>
+          <linearGradient id='pk-d' x1='3' x2='3' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='pk-f'
+            x1='10.28'
+            x2='16.65'
+            y1='4.15'
+            y2='10.51'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='pk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
+          <filter
+            id='pk-e'
+            width='8.79'
+            height='9.29'
+            x='8.96'
+            y='3.04'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset dy='.5' />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1900' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1900' result='shape' />
           </filter>
-          <path
-            id='pk-d'
-            d='M15.978 10.878a4.18 4.18 0 0 1-2.65.95c-2.383 0-4.314-2.015-4.314-4.5 0-2.486 1.931-4.5 4.314-4.5.999 0 1.919.354 2.65.95a4.2 4.2 0 0 0-1.043-.132c-2.165 0-3.92 1.648-3.92 3.682s1.755 3.681 3.92 3.681q.543-.001 1.043-.131m.036-2.77-1.175.838.434-1.377-1.16-.86 1.443-.013.458-1.368.459 1.368 1.443.013-1.16.86.434 1.377z'
-          />
         </defs>
         <clipPath id='pk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pk-b)' d='M0-.002h21v15H0z' />
-          <path fill='url(#pk-a)' d='M0-.002h6v15H0z' />
-          <g transform='rotate(-45 13.465 7.328)'>
-            <use xlinkHref='#pk-d' fill='#000' filter='url(#pk-c)' />
-            <use xlinkHref='#pk-d' fill='url(#pk-a)' />
+        <g clipPath='url(#pk-a)'>
+          <path fill='url(#pk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pk-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#pk-d)' d='M6 0H0v15h6z' />
+          <g filter='url(#pk-e)'>
+            <path
+              fill='#000'
+              d='M17.75 8.06c-.1.94-.5 1.84-1.2 2.55a4.4 4.4 0 0 1-6.23-.14 4.4 4.4 0 0 1-.13-6.23c.7-.7 1.6-1.1 2.54-1.2q-.45.26-.83.64c-1.53 1.54-1.6 3.94-.17 5.38s3.85 1.36 5.38-.17q.38-.38.64-.83m-1.93-1.98-.24 1.42-.67-1.28-1.42.21 1-1.03-.64-1.29 1.3.64 1.03-1-.22 1.42 1.28.67z'
+            />
           </g>
+          <path
+            fill='url(#pk-f)'
+            d='M17.75 8.06c-.1.94-.5 1.84-1.2 2.55a4.4 4.4 0 0 1-6.23-.14 4.4 4.4 0 0 1-.13-6.23c.7-.7 1.6-1.1 2.54-1.2q-.45.26-.83.64c-1.53 1.54-1.6 3.94-.17 5.38s3.85 1.36 5.38-.17q.38-.38.64-.83m-1.93-1.98-.24 1.42-.67-1.28-1.42.21 1-1.03-.64-1.29 1.3.64 1.03-1-.22 1.42 1.28.67z'
+          />
         </g>
       </g>
     </svg>

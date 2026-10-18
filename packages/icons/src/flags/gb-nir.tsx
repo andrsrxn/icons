@@ -32,55 +32,151 @@ export const IconFlagGBNIR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gb-nir-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gb-nir-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gb-nir-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e82739' />
-            <stop offset='100%' stopColor='#ca1a2b' />
+          <linearGradient
+            id='gb-nir-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e82739' />
+            <stop offset='1' stopColor='#ca1a2b' />
           </linearGradient>
-          <linearGradient id='gb-nir-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e6101e' />
-            <stop offset='100%' stopColor='#ca0814' />
-          </linearGradient>
-          <linearGradient id='gb-nir-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd148' />
-            <stop offset='100%' stopColor='#ffcb2f' />
-          </linearGradient>
-          <path
+          <linearGradient
             id='gb-nir-d'
-            d='M9 3.75 10 4l.5-.5.5.5 1-.25-.404 1.009a.4.4 0 0 1-.341.241h-1.51a.39.39 0 0 1-.341-.241zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
-          />
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gb-nir-e'
+            x1='10.55'
+            x2='10.55'
+            y1='6.13'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e6101e' />
+            <stop offset='1' stopColor='#ca0814' />
+          </linearGradient>
+          <linearGradient
+            id='gb-nir-f'
+            x1='10.5'
+            x2='10.5'
+            y1='2.91'
+            y2='4.1'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gb-nir-g'
+            x1='10.5'
+            x2='10.5'
+            y1='2'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd148' />
+            <stop offset='1' stopColor='#ffcb2f' />
+          </linearGradient>
+          <clipPath id='gb-nir-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gb-nir-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gb-nir-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gb-nir-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gb-nir-b)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
-          <path
-            fill='url(#gb-nir-a)'
-            d='M11.516 9.26 10.5 11 9.484 9.26l-2.015-.01.998-1.75-.998-1.75 2.015-.01L10.5 4l1.016 1.74 2.015.01-.998 1.75.998 1.75z'
-          />
+        <g clipPath='url(#gb-nir-a)'>
+          <path fill='url(#gb-nir-b)' d='M21 0H0v15h21z' />
           <path
             fill='url(#gb-nir-c)'
-            d='M9.55 7.006a.66.66 0 0 1 .425-.664l.55-.184c.263-.087.475.063.475.35V7.5s.321-1.037.5-.5-.128 1.526-.128 1.526a.67.67 0 0 1-.63.474h-.484c-.28 0-.531-.23-.559-.506z'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#gb-nir-a)'
-            fillRule='nonzero'
-            d='M10.5 2.908c-.511 0-.967.304-1.168.763l-.1.229.457.201.1-.229a.775.775 0 0 1 1.418-.005l.102.228.456-.205-.102-.228a1.27 1.27 0 0 0-1.164-.754'
+            fill='url(#gb-nir-d)'
+            fillRule='evenodd'
+            d='M11.52 9.26 10.5 11 9.48 9.26l-2.01-.01 1-1.75-1-1.75 2.01-.01L10.5 4l1.02 1.74 2.01.01-1 1.75 1 1.75z'
+            clipRule='evenodd'
           />
-          <mask id='gb-nir-f' fill='#fff'>
-            <use xlinkHref='#gb-nir-d' />
+          <path
+            fill='url(#gb-nir-e)'
+            fillRule='evenodd'
+            d='M9.55 7a.7.7 0 0 1 .42-.66l.56-.18c.26-.09.47.06.47.35v.99s.32-1.04.5-.5-.13 1.53-.13 1.53a.7.7 0 0 1-.63.47h-.48a.6.6 0 0 1-.56-.5z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#gb-nir-f)'
+            d='M10.5 2.9c-.51 0-.97.31-1.17.77l-.1.23.46.2.1-.23a.77.77 0 0 1 1.42 0l.1.22.46-.2-.1-.23a1.3 1.3 0 0 0-1.17-.75'
+          />
+          <path
+            fill='url(#gb-nir-g)'
+            d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+          />
+          <mask
+            id='gb-nir-h'
+            width='3'
+            height='3'
+            x='9'
+            y='2'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            />
           </mask>
-          <use xlinkHref='#gb-nir-d' fill='url(#gb-nir-e)' />
-          <circle cx='10.5' cy='4.5' r='1' fill='#5169e2' mask='url(#gb-nir-f)' />
-          <circle cx='11.5' cy='4.5' r='1' fill='#d34d43' mask='url(#gb-nir-f)' />
-          <circle cx='9.5' cy='4.5' r='1' fill='#d34d43' mask='url(#gb-nir-f)' />
+          <g mask='url(#gb-nir-h)'>
+            <path fill='#5169e2' d='M10.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
+          <mask
+            id='gb-nir-i'
+            width='3'
+            height='3'
+            x='9'
+            y='2'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            />
+          </mask>
+          <g mask='url(#gb-nir-i)'>
+            <path fill='#d34d43' d='M11.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
+          <mask
+            id='gb-nir-j'
+            width='3'
+            height='3'
+            x='9'
+            y='2'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            />
+          </mask>
+          <g mask='url(#gb-nir-j)'>
+            <path fill='#d34d43' d='M9.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
         </g>
       </g>
     </svg>

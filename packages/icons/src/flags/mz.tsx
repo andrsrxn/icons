@@ -32,46 +32,91 @@ export const IconFlagMZ: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mz-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffe547' />
-            <stop offset='100%' stopColor='#fce032' />
+          <linearGradient
+            id='mz-c'
+            x1='10.5'
+            x2='10.5'
+            y1='11'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffe547' />
+            <stop offset='1' stopColor='#fce032' />
           </linearGradient>
-          <linearGradient id='mz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#118c81' />
-            <stop offset='100%' stopColor='#0d7168' />
+          <linearGradient
+            id='mz-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#118c81' />
+            <stop offset='1' stopColor='#0d7168' />
           </linearGradient>
-          <linearGradient id='mz-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='mz-e'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mz-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ef2147' />
-            <stop offset='100%' stopColor='#d01739' />
+          <linearGradient
+            id='mz-f'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='mz-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fde444' />
-            <stop offset='100%' stopColor='#fce032' />
+          <linearGradient id='mz-g' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ef2147' />
+            <stop offset='1' stopColor='#d01739' />
           </linearGradient>
+          <linearGradient
+            id='mz-h'
+            x1='3.5'
+            x2='3.5'
+            y1='5'
+            y2='9.52'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fde444' />
+            <stop offset='1' stopColor='#fce032' />
+          </linearGradient>
+          <clipPath id='mz-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mz-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mz-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mz-b)' d='M0 11h21v4H0z' />
-          <path fill='url(#mz-c)' d='M0 0h21v4H0z' />
-          <path fill='url(#mz-a)' d='M0 4h21v7H0z' />
-          <path fill='url(#mz-d)' d='M0 5h21v5H0z' />
-          <path fill='url(#mz-e)' d='m0 0 10 7.5L0 15z' />
+        <g clipPath='url(#mz-a)'>
+          <path fill='url(#mz-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mz-c)' d='M21 11H0v4h21z' />
+          <path fill='url(#mz-d)' d='M21 0H0v4h21z' />
+          <path fill='url(#mz-e)' d='M21 4H0v7h21z' />
+          <path fill='url(#mz-f)' d='M21 5H0v5h21z' />
+          <path fill='url(#mz-g)' fillRule='evenodd' d='m0 0 10 7.5L0 15z' clipRule='evenodd' />
           <path
-            fill='url(#mz-f)'
-            d='M3.5 8.456 2.03 9.523l.561-1.728-1.469-1.068h1.816L3.5 5l.562 1.727h1.816l-1.47 1.068.561 1.728z'
+            fill='url(#mz-h)'
+            fillRule='evenodd'
+            d='M3.5 8.46 2.03 9.52 2.6 7.8 1.12 6.73h1.82L3.5 5l.56 1.73h1.82L4.4 7.8l.56 1.72z'
+            clipRule='evenodd'
           />
         </g>
       </g>

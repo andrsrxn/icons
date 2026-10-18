@@ -32,25 +32,54 @@ export const IconFlagPE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pe-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pe-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pe-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e82438' />
-            <stop offset='100%' stopColor='#d7172b' />
+          <linearGradient
+            id='pe-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e82438' />
+            <stop offset='1' stopColor='#d7172b' />
           </linearGradient>
+          <linearGradient id='pe-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e82438' />
+            <stop offset='1' stopColor='#d7172b' />
+          </linearGradient>
+          <linearGradient
+            id='pe-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='pe-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='pe-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pe-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pe-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pe-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#pe-b)' d='M0 0h7v15H0z' />
-          <path fill='url(#pe-a)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#pe-a)'>
+          <path fill='url(#pe-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pe-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#pe-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#pe-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

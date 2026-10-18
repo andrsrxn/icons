@@ -32,27 +32,58 @@ export const IconFlagSG: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='sg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='sg-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='sg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e12237' />
-            <stop offset='100%' stopColor='#ce1126' />
+          <linearGradient
+            id='sg-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e12237' />
+            <stop offset='1' stopColor='#ce1126' />
           </linearGradient>
+          <linearGradient
+            id='sg-d'
+            x1='10.5'
+            x2='10.5'
+            y1='8'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sg-e' x1='6' x2='6' y1='1' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='sg-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='sg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#sg-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#sg-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#sg-b)' d='M0 0h21v8H0z' />
-          <path fill='url(#sg-a)' d='M0 8h21v7H0z' />
+        <g clipPath='url(#sg-a)'>
+          <path fill='url(#sg-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#sg-c)' d='M21 0H0v8h21z' />
+          <path fill='url(#sg-d)' d='M21 8H0v7h21z' />
           <path
-            fill='url(#sg-a)'
-            d='M6.874 1.657a2.5 2.5 0 1 0 0 4.686 3 3 0 1 1 0-4.686M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2-1.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#sg-e)'
+            fillRule='evenodd'
+            d='M6.87 1.66a2.5 2.5 0 1 0 0 4.68 3 3 0 1 1 0-4.69M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2-1.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

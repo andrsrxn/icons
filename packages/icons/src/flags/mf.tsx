@@ -32,29 +32,54 @@ export const IconFlagMF: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mf-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f44653' />
-            <stop offset='100%' stopColor='#ee2a39' />
+          <linearGradient
+            id='mf-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f44653' />
+            <stop offset='1' stopColor='#ee2a39' />
           </linearGradient>
-          <linearGradient id='mf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1035bb' />
-            <stop offset='100%' stopColor='#042396' />
+          <linearGradient id='mf-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1035bb' />
+            <stop offset='1' stopColor='#042396' />
           </linearGradient>
+          <linearGradient
+            id='mf-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='mf-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mf-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mf-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mf-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#mf-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#mf-a)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#mf-a)'>
+          <path fill='url(#mf-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mf-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#mf-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#mf-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

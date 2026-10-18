@@ -32,60 +32,132 @@ export const IconFlagSK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='sk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='sk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='sk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0c47b7' />
-            <stop offset='100%' stopColor='#073da4' />
+          <linearGradient
+            id='sk-c'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0c47b7' />
+            <stop offset='1' stopColor='#073da4' />
           </linearGradient>
-          <linearGradient id='sk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e53b35' />
-            <stop offset='100%' stopColor='#d32e28' />
+          <linearGradient
+            id='sk-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e53b35' />
+            <stop offset='1' stopColor='#d32e28' />
           </linearGradient>
-          <linearGradient id='sk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='sk-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f73744' />
-            <stop offset='100%' stopColor='#ec212f' />
-          </linearGradient>
-          <path
+          <linearGradient
             id='sk-e'
-            d='M1.711 2.001A1.05 1.05 0 0 1 2.751 1H7.25c.553 0 1.018.447 1.04 1.001L8.46 6.5c.022.553-.297 1.289-.72 1.652L6.146 9.518c-.633.542-1.662.54-2.292 0L2.259 8.15c-.419-.36-.742-1.098-.72-1.652z'
-          />
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='sk-f'
+            x1='7.5'
+            x2='7.5'
+            y1='2'
+            y2='12.92'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='sk-g'
+            x1='7.5'
+            x2='7.5'
+            y1='3'
+            y2='11.92'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f73744' />
+            <stop offset='1' stopColor='#ec212f' />
+          </linearGradient>
+          <linearGradient id='sk-i' x1='7.5' x2='7.5' y1='4' y2='10' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='sk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='sk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#sk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#sk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#sk-b)' d='M0 5h21v5H0z' />
-          <path fill='url(#sk-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#sk-a)' d='M0 0h21v5H0z' />
-          <g transform='translate(2.5 2)'>
+        <g clipPath='url(#sk-a)'>
+          <path fill='url(#sk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#sk-c)' d='M21 5H0v5h21z' />
+          <path fill='url(#sk-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#sk-e)' d='M21 0H0v5h21z' />
+          <path
+            fill='url(#sk-f)'
+            d='M5.25 2h4.5c1.09 0 2 .87 2.04 1.96l.17 4.5a3.3 3.3 0 0 1-1.07 2.45l-1.6 1.37c-1 .86-2.58.86-3.59 0L4.1 10.9a3.3 3.3 0 0 1-1.06-2.45l.17-4.5A2.05 2.05 0 0 1 5.25 2'
+          />
+          <path
+            fill='url(#sk-g)'
+            d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'
+          />
+          <mask
+            id='sk-h'
+            width='7'
+            height='9'
+            x='4'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
             <path
-              fill='url(#sk-d)'
-              fillRule='nonzero'
-              d='M2.751 0H7.25c1.09 0 1.997.872 2.039 1.963L9.46 6.46c.033.86-.415 1.89-1.07 2.45l-1.594 1.367c-1.007.863-2.589.861-3.594 0L1.61 8.91C.957 8.352.506 7.32.539 6.46l.173-4.497A2.05 2.05 0 0 1 2.752 0'
+              fill='#fff'
+              d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'
             />
-            <mask id='sk-g' fill='#fff'>
-              <use xlinkHref='#sk-e' />
-            </mask>
-            <use xlinkHref='#sk-e' fill='url(#sk-f)' />
+          </mask>
+          <g mask='url(#sk-h)'>
             <path
-              fill='url(#sk-a)'
-              d='M4.5 6.245A.25.25 0 0 0 4.252 6H3.248A.246.246 0 0 1 3 5.748v-.496C3 5.113 3.118 5 3.248 5h1.004a.246.246 0 0 0 .248-.252v-.496A.25.25 0 0 0 4.248 4h-.496a.25.25 0 0 1-.252-.252v-.496c0-.139.107-.252.252-.252h.496c.139 0 .252-.107.252-.252v-.496c0-.139.107-.252.252-.252h.496c.139 0 .252.107.252.252v.496c0 .139.107.252.252.252h.496c.139 0 .252.107.252.252v.496c0 .139-.107.252-.252.252h-.496a.25.25 0 0 0-.252.252v.496c0 .139.118.252.248.252h1.004C6.89 5 7 5.107 7 5.252v.496C7 5.887 6.882 6 6.752 6H5.748a.245.245 0 0 0-.248.245v1.51A.245.245 0 0 1 5.248 8h-.496a.247.247 0 0 1-.252-.245z'
-              mask='url(#sk-g)'
+              fill='url(#sk-i)'
+              fillRule='evenodd'
+              d='M7 8.25A.25.25 0 0 0 6.75 8h-1a.25.25 0 0 1-.25-.25v-.5c0-.14.12-.25.25-.25h1q.23-.01.25-.25v-.5C7 6.11 6.9 6 6.75 6h-.5A.25.25 0 0 1 6 5.75v-.5c0-.14.1-.25.25-.25h.5c.14 0 .25-.1.25-.25v-.5c0-.14.1-.25.25-.25h.5c.14 0 .25.1.25.25v.5c0 .14.1.25.25.25h.5q.23.01.25.25v.5c0 .14-.1.25-.25.25h-.5q-.23.01-.25.25v.5c0 .14.12.25.25.25h1q.23.01.25.25v.5c0 .14-.12.25-.25.25h-1q-.24.01-.25.25v1.5q-.01.23-.25.25h-.5A.25.25 0 0 1 7 9.75z'
+              clipRule='evenodd'
             />
+          </g>
+          <mask
+            id='sk-j'
+            width='7'
+            height='9'
+            x='4'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'
+            />
+          </mask>
+          <g mask='url(#sk-j)'>
             <path
               fill='#1251a1'
-              d='M4.097 8.07C2.882 8.26 2 8.828 2 9.5c0 .828 1.343 1.5 3 1.5s3-.672 3-1.5c0-.671-.882-1.24-2.097-1.43a1 1 0 0 0-1.806 0'
-              mask='url(#sk-g)'
+              fillRule='evenodd'
+              d='M6.6 10.07c-1.22.2-2.1.76-2.1 1.43 0 .83 1.34 1.5 3 1.5s3-.67 3-1.5c0-.67-.88-1.24-2.1-1.43a1 1 0 0 0-1.8 0'
+              clipRule='evenodd'
             />
           </g>
         </g>

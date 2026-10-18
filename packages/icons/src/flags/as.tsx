@@ -32,43 +32,81 @@ export const IconFlagAS: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='as-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='as-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='as-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#071585' />
-            <stop offset='100%' stopColor='#000b64' />
+          <linearGradient
+            id='as-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#071585' />
+            <stop offset='1' stopColor='#000b64' />
           </linearGradient>
-          <linearGradient id='as-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#d32636' />
-            <stop offset='100%' stopColor='#ba1827' />
+          <linearGradient
+            id='as-d'
+            x1='11'
+            x2='11'
+            y1='-.5'
+            y2='15.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#d32636' />
+            <stop offset='1' stopColor='#ba1827' />
           </linearGradient>
-          <linearGradient id='as-d' x1='50%' x2='35.4%' y1='0%' y2='89.131%'>
-            <stop offset='0%' stopColor='#ab5423' />
-            <stop offset='100%' stopColor='#5a3719' />
+          <linearGradient
+            id='as-e'
+            x1='11.96'
+            x2='11.96'
+            y1='.93'
+            y2='14.07'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='as-f'
+            x1='16.5'
+            x2='15.63'
+            y1='3'
+            y2='7.88'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ab5423' />
+            <stop offset='1' stopColor='#5a3719' />
+          </linearGradient>
+          <clipPath id='as-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='as-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#as-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#as-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#as-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#as-c)' fillRule='nonzero' d='m22 15.5-22-8 22-8z' />
-          <path fill='url(#as-a)' fillRule='nonzero' d='M21 .928 2.926 7.5 21 14.072z' />
+        <g clipPath='url(#as-a)'>
+          <path fill='url(#as-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#as-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#as-d)' d='m22 15.5-22-8 22-8z' />
+          <path fill='url(#as-e)' d='M21 .93 2.93 7.5 21 14.07z' />
           <path
-            fill='url(#as-d)'
-            d='M16 7.038c-.118-.118-.806.156-.806.156L14 6s-.062-.663.5-1c.425-.255 1.22-.16 1.999-.5C17.746 3.956 19 3 19 3l-.802 2.206s.919.473.802.794c-.034.093-.93.385-1 .5-.132.22.524.286.32.538C17.733 7.765 17 8.5 17 8.5L16 8s.15-.811 0-.962'
+            fill='url(#as-f)'
+            fillRule='evenodd'
+            d='M16 7.04c-.12-.12-.8.15-.8.15L14 6s-.06-.66.5-1c.42-.25 1.22-.16 2-.5C17.75 3.96 19 3 19 3l-.8 2.2s.92.48.8.8c-.03.1-.93.38-1 .5-.13.22.52.29.32.54C17.73 7.76 17 8.5 17 8.5L16 8s.15-.81 0-.96'
+            clipRule='evenodd'
           />
-          <circle cx='13.5' cy='7.5' r='1' fill='#ffc322' />
-          <path fill='#ffc322' fillRule='nonzero' d='M12.5 9h5a.5.5 0 1 0 0-1h-5a.5.5 0 1 0 0 1' />
+          <path fill='#ffc322' d='M13.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc322' d='M12.5 9h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0 0 1' />
           <path
             fill='#ffc322'
-            fillRule='nonzero'
-            d='m14.197 10.46 3.5-1.5a.5.5 0 0 0-.394-.92l-3.5 1.5a.5.5 0 0 0 .394.92'
+            d='m14.2 10.46 3.5-1.5a.5.5 0 0 0-.4-.92l-3.5 1.5a.5.5 0 1 0 .4.92'
           />
         </g>
       </g>

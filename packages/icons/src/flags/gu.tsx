@@ -32,81 +32,196 @@ export const IconFlagGU: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gu-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#de3149' />
-            <stop offset='100%' stopColor='#c2273d' />
+          <linearGradient
+            id='gu-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#de3149' />
+            <stop offset='1' stopColor='#c2273d' />
           </linearGradient>
-          <linearGradient id='gu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#053b94' />
-            <stop offset='100%' stopColor='#002e7a' />
+          <linearGradient
+            id='gu-d'
+            x1='10.5'
+            x2='10.5'
+            y1='1'
+            y2='14'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#053b94' />
+            <stop offset='1' stopColor='#002e7a' />
           </linearGradient>
-          <linearGradient id='gu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#de3149' />
-            <stop offset='100%' stopColor='#c2273d' />
+          <linearGradient
+            id='gu-e'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#de3149' />
+            <stop offset='1' stopColor='#c2273d' />
           </linearGradient>
-          <linearGradient id='gu-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#81c1f3' />
-            <stop offset='100%' stopColor='#6ab1e9' />
+          <linearGradient
+            id='gu-f'
+            x1='10.5'
+            x2='10.5'
+            y1='3.5'
+            y2='11.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gu-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#27a07e' />
-            <stop offset='100%' stopColor='#1f9171' />
+          <linearGradient
+            id='gu-h'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#81c1f3' />
+            <stop offset='1' stopColor='#6ab1e9' />
           </linearGradient>
-          <linearGradient id='gu-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1e8ce8' />
-            <stop offset='100%' stopColor='#107fdc' />
+          <linearGradient
+            id='gu-j'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='7.71'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#27a07e' />
+            <stop offset='1' stopColor='#1f9171' />
           </linearGradient>
-          <linearGradient id='gu-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff048' />
-            <stop offset='100%' stopColor='#ffef36' />
+          <linearGradient
+            id='gu-l'
+            x1='10.5'
+            x2='10.5'
+            y1='8'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1e8ce8' />
+            <stop offset='1' stopColor='#107fdc' />
           </linearGradient>
-          <linearGradient id='gu-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#8f5715' />
-            <stop offset='100%' stopColor='#7a480d' />
+          <linearGradient
+            id='gu-n'
+            x1='10.5'
+            x2='10.5'
+            y1='9'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff048' />
+            <stop offset='1' stopColor='#ffef36' />
           </linearGradient>
-          <path id='gu-e' d='M2.5 8.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          <linearGradient
+            id='gu-o'
+            x1='10.97'
+            x2='10.97'
+            y1='6.25'
+            y2='9.75'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#8f5715' />
+            <stop offset='1' stopColor='#7a480d' />
+          </linearGradient>
+          <clipPath id='gu-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gu-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gu-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gu-b)' d='M0 0h21v15H0z' />
-          <rect width='19' height='13' x='1' y='1' fill='url(#gu-c)' rx='.75' />
+        <g clipPath='url(#gu-a)'>
+          <path fill='url(#gu-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gu-c)' d='M21 0H0v15h21z' />
           <path
             fill='url(#gu-d)'
-            d='M10.5 12s3-2.015 3-4.5-3-4.5-3-4.5-3 2.015-3 4.5 3 4.5 3 4.5'
+            d='M19.25 1H1.75a.75.75 0 0 0-.75.75v11.5c0 .41.34.75.75.75h17.5c.41 0 .75-.34.75-.75V1.75a.75.75 0 0 0-.75-.75'
           />
-          <g transform='translate(8 3)'>
-            <mask id='gu-g' fill='#fff'>
-              <use xlinkHref='#gu-e' />
-            </mask>
-            <use xlinkHref='#gu-e' fill='url(#gu-a)' />
-            <path fill='url(#gu-f)' d='M0 0h5v5H0z' mask='url(#gu-g)' />
-            <path
-              fill='url(#gu-h)'
-              d='m2.5 4.1-.882.614.311-1.029-.856-.649 1.074-.021L2.5 2l.353 1.015 1.074.021-.856.65.31 1.028z'
-              mask='url(#gu-g)'
-            />
-            <path fill='url(#gu-i)' d='M0 5h5v4H0z' mask='url(#gu-g)' />
+          <path
+            fill='url(#gu-e)'
+            fillRule='evenodd'
+            d='M10.5 12s3-2.01 3-4.5-3-4.5-3-4.5-3 2.01-3 4.5 3 4.5 3 4.5'
+            clipRule='evenodd'
+          />
+          <path fill='url(#gu-f)' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          <mask
+            id='gu-g'
+            width='5'
+            height='9'
+            x='8'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          </mask>
+          <g mask='url(#gu-g)'>
+            <path fill='url(#gu-h)' d='M13 3H8v5h5z' />
+          </g>
+          <mask
+            id='gu-i'
+            width='5'
+            height='9'
+            x='8'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          </mask>
+          <g mask='url(#gu-i)'>
             <path
               fill='url(#gu-j)'
-              d='M0 6s1.59 1.5 2 1.5c.488 0 .496-.723 1-1 .794-.436 2-.5 2-.5v3H0z'
-              mask='url(#gu-g)'
+              fillRule='evenodd'
+              d='m10.5 7.1-.88.61.3-1.02-.85-.65L10.15 6l.35-1 .35 1.01 1.08.03-.86.65.31 1.02z'
+              clipRule='evenodd'
+            />
+          </g>
+          <mask
+            id='gu-k'
+            width='5'
+            height='9'
+            x='8'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          </mask>
+          <g mask='url(#gu-k)'>
+            <path fill='url(#gu-l)' d='M13 8H8v4h5z' />
+          </g>
+          <mask
+            id='gu-m'
+            width='5'
+            height='9'
+            x='8'
+            y='3'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
+          </mask>
+          <g mask='url(#gu-m)'>
+            <path
+              fill='url(#gu-n)'
+              fillRule='evenodd'
+              d='M8 9s1.59 1.5 2 1.5c.49 0 .5-.72 1-1 .8-.44 2-.5 2-.5v3H8z'
+              clipRule='evenodd'
             />
           </g>
           <path
-            fill='url(#gu-k)'
-            fillRule='nonzero'
-            d='M10.251 6.475a15 15 0 0 0-.067 1.084c-.01.467.01.812.079 1.02.087.261.284.506.557.742.208.18.415.316.557.397a.25.25 0 0 0 .246-.436 3 3 0 0 1-.477-.34c-.21-.182-.356-.363-.409-.521-.044-.134-.063-.442-.053-.85a14 14 0 0 1 .065-1.046.25.25 0 1 0-.498-.05'
+            fill='url(#gu-o)'
+            d='m10.25 6.48-.07 1.08q-.01.7.08 1.02.14.38.56.74.32.28.56.4a.25.25 0 1 0 .24-.44 2 2 0 0 1-.47-.34 1.3 1.3 0 0 1-.41-.52 3 3 0 0 1-.06-.85l.07-1.04a.25.25 0 1 0-.5-.05'
           />
-          <path fill='#fff' d='M9 7.5 10 9H9z' />
+          <path fill='#fff' fillRule='evenodd' d='M9 7.5 10 9H9z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

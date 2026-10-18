@@ -32,28 +32,49 @@ export const IconFlagBT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='bt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='bt-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='bt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff5f38' />
-            <stop offset='100%' stopColor='#fd5026' />
+          <linearGradient
+            id='bt-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff5f38' />
+            <stop offset='1' stopColor='#fd5026' />
           </linearGradient>
-          <linearGradient id='bt-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd951' />
-            <stop offset='100%' stopColor='#ffd43b' />
+          <linearGradient
+            id='bt-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd951' />
+            <stop offset='1' stopColor='#ffd43b' />
           </linearGradient>
+          <clipPath id='bt-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='bt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#bt-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#bt-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#bt-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#bt-c)' d='M0 15 21 0H0z' />
+        <g clipPath='url(#bt-a)'>
+          <path fill='url(#bt-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#bt-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#bt-d)' fillRule='evenodd' d='M0 15 21 0H0z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

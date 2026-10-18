@@ -32,45 +32,71 @@ export const IconFlagER: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='er-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='er-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='er-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#29c53f' />
-            <stop offset='100%' stopColor='#21ac35' />
+          <linearGradient
+            id='er-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='7.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#29c53f' />
+            <stop offset='1' stopColor='#21ac35' />
           </linearGradient>
-          <linearGradient id='er-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#579ded' />
-            <stop offset='100%' stopColor='#458bdb' />
+          <linearGradient
+            id='er-d'
+            x1='10.5'
+            x2='10.5'
+            y1='7.5'
+            y2='15.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#579ded' />
+            <stop offset='1' stopColor='#458bdb' />
           </linearGradient>
-          <linearGradient id='er-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f42d56' />
-            <stop offset='100%' stopColor='#e9103d' />
+          <linearGradient
+            id='er-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f42d56' />
+            <stop offset='1' stopColor='#e9103d' />
           </linearGradient>
+          <clipPath id='er-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='er-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#er-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#er-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#er-b)' d='M0 0h21v7.5H0z' />
-          <path fill='url(#er-c)' d='M0 7.5h21v8H0z' />
-          <path fill='url(#er-d)' d='m0 15 21-7.5L0 0z' />
+        <g clipPath='url(#er-a)'>
+          <path fill='url(#er-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#er-c)' d='M21 0H0v7.5h21z' />
+          <path fill='url(#er-d)' d='M21 7.5H0v8h21z' />
+          <path fill='url(#er-e)' fillRule='evenodd' d='m0 15 21-7.5L0 0z' clipRule='evenodd' />
           <path
             fill='#ffc63c'
-            fillRule='nonzero'
             d='M6.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m0 1a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7'
           />
-          <circle cx='6' cy='6.5' r='1' fill='#ffc63c' />
-          <circle cx='7' cy='7' r='1' fill='#ffc63c' />
-          <circle cx='6.5' cy='6' r='1' fill='#ffc63c' />
-          <circle cx='6' cy='7.5' r='1' fill='#ffc63c' />
-          <circle cx='7' cy='8' r='1' fill='#ffc63c' />
-          <circle cx='6' cy='8.5' r='1' fill='#ffc63c' />
-          <circle cx='7' cy='9' r='1' fill='#ffc63c' />
+          <path fill='#ffc63c' d='M6 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M7 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M6 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M7 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M6 9.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='#ffc63c' d='M7 10a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
         </g>
       </g>
     </svg>

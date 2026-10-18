@@ -32,38 +32,71 @@ export const IconFlagMU: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mu-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1dbb63' />
-            <stop offset='100%' stopColor='#17a455' />
+          <linearGradient
+            id='mu-c'
+            x1='10.5'
+            x2='10.5'
+            y1='12'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1dbb63' />
+            <stop offset='1' stopColor='#17a455' />
           </linearGradient>
-          <linearGradient id='mu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#222b82' />
-            <stop offset='100%' stopColor='#1b236c' />
+          <linearGradient
+            id='mu-d'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#222b82' />
+            <stop offset='1' stopColor='#1b236c' />
           </linearGradient>
-          <linearGradient id='mu-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd741' />
-            <stop offset='100%' stopColor='#ffd430' />
+          <linearGradient
+            id='mu-e'
+            x1='10.5'
+            x2='10.5'
+            y1='8'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd741' />
+            <stop offset='1' stopColor='#ffd430' />
           </linearGradient>
-          <linearGradient id='mu-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f4374a' />
-            <stop offset='100%' stopColor='#e92c3f' />
+          <linearGradient
+            id='mu-f'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f4374a' />
+            <stop offset='1' stopColor='#e92c3f' />
           </linearGradient>
+          <clipPath id='mu-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mu-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mu-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mu-b)' d='M0 12h21v3H0z' />
-          <path fill='url(#mu-c)' d='M0 4h21v4H0z' />
-          <path fill='url(#mu-d)' d='M0 8h21v4H0z' />
-          <path fill='url(#mu-e)' d='M0 0h21v4H0z' />
+        <g clipPath='url(#mu-a)'>
+          <path fill='url(#mu-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mu-c)' d='M21 12H0v3h21z' />
+          <path fill='url(#mu-d)' d='M21 4H0v4h21z' />
+          <path fill='url(#mu-e)' d='M21 8H0v4h21z' />
+          <path fill='url(#mu-f)' d='M21 0H0v4h21z' />
         </g>
       </g>
     </svg>

@@ -32,32 +32,69 @@ export const IconFlagUZ: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='uz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='uz-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='uz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#04aac8' />
-            <stop offset='100%' stopColor='#009ab6' />
+          <linearGradient
+            id='uz-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#04aac8' />
+            <stop offset='1' stopColor='#009ab6' />
           </linearGradient>
-          <linearGradient id='uz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#23c840' />
-            <stop offset='100%' stopColor='#1eb639' />
+          <linearGradient
+            id='uz-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#23c840' />
+            <stop offset='1' stopColor='#1eb639' />
           </linearGradient>
+          <linearGradient
+            id='uz-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='uz-f' x1='6' x2='6' y1='1' y2='4' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='uz-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='uz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#uz-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#uz-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#uz-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#uz-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#uz-a)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#uz-a)'>
+          <path fill='url(#uz-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#uz-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#uz-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#uz-e)' d='M21 5H0v5h21z' />
           <path
-            fill='url(#uz-a)'
-            d='M4.334 1.253a1.5 1.5 0 1 0 0 2.495l-.084.002a1.25 1.25 0 1 1 .084-2.497M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#uz-f)'
+            fillRule='evenodd'
+            d='M4.33 1.25a1.5 1.5 0 1 0 0 2.5h-.08a1.25 1.25 0 1 1 .08-2.5M5.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2-2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

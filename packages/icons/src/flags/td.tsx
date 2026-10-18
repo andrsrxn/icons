@@ -32,33 +32,54 @@ export const IconFlagTD: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='td-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='td-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='td-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#de1d42' />
-            <stop offset='100%' stopColor='#c51335' />
+          <linearGradient
+            id='td-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#de1d42' />
+            <stop offset='1' stopColor='#c51335' />
           </linearGradient>
-          <linearGradient id='td-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#083780' />
-            <stop offset='100%' stopColor='#032862' />
+          <linearGradient id='td-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#083780' />
+            <stop offset='1' stopColor='#032862' />
           </linearGradient>
-          <linearGradient id='td-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd147' />
-            <stop offset='100%' stopColor='#feca2f' />
+          <linearGradient
+            id='td-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd147' />
+            <stop offset='1' stopColor='#feca2f' />
           </linearGradient>
+          <clipPath id='td-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='td-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#td-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#td-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#td-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#td-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#td-d)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#td-a)'>
+          <path fill='url(#td-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#td-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#td-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#td-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

@@ -32,34 +32,71 @@ export const IconFlagLC: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='lc-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='lc-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lc-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#86d7ff' />
-            <stop offset='100%' stopColor='#6bcdfe' />
+          <linearGradient
+            id='lc-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#86d7ff' />
+            <stop offset='1' stopColor='#6bcdfe' />
           </linearGradient>
-          <linearGradient id='lc-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='lc-d'
+            x1='10.5'
+            x2='10.5'
+            y1='2'
+            y2='13'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lc-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffda57' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient
+            id='lc-e'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='13'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
+          <linearGradient
+            id='lc-f'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='13'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffda57' />
+            <stop offset='1' stopColor='#fcd036' />
+          </linearGradient>
+          <clipPath id='lc-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='lc-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#lc-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#lc-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#lc-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#lc-a)' d='M10.5 2 15 13H6z' />
-          <path fill='url(#lc-c)' d='m10.5 4 3.5 9H7z' />
-          <path fill='url(#lc-d)' d='m10.5 7 4.5 6H6z' />
+        <g clipPath='url(#lc-a)'>
+          <path fill='url(#lc-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#lc-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#lc-d)' fillRule='evenodd' d='M10.5 2 15 13H6z' clipRule='evenodd' />
+          <path fill='url(#lc-e)' fillRule='evenodd' d='m10.5 4 3.5 9H7z' clipRule='evenodd' />
+          <path fill='url(#lc-f)' fillRule='evenodd' d='m10.5 7 4.5 6H6z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

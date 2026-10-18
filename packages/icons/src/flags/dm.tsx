@@ -32,48 +32,117 @@ export const IconFlagDM: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='dm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='dm-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='dm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#108753' />
-            <stop offset='100%' stopColor='#0b6b41' />
+          <linearGradient
+            id='dm-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='6'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#108753' />
+            <stop offset='1' stopColor='#0b6b41' />
           </linearGradient>
-          <linearGradient id='dm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='dm-d'
+            x1='10.5'
+            x2='10.5'
+            y1='9'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#108753' />
+            <stop offset='1' stopColor='#0b6b41' />
           </linearGradient>
-          <linearGradient id='dm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fcd449' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient
+            id='dm-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='dm-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e02c42' />
-            <stop offset='100%' stopColor='#d22036' />
+          <linearGradient
+            id='dm-f'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
+          <linearGradient
+            id='dm-g'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fcd449' />
+            <stop offset='1' stopColor='#fcd036' />
+          </linearGradient>
+          <linearGradient
+            id='dm-h'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e02c42' />
+            <stop offset='1' stopColor='#d22036' />
+          </linearGradient>
+          <clipPath id='dm-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='dm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#dm-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#dm-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#dm-b)' d='M0 0h21v6H0z' />
-          <path fill='url(#dm-b)' d='M0 9h21v6H0z' />
-          <path fill='url(#dm-a)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
-          <path fill='url(#dm-c)' d='M10 8v7h1V8h10V7H11V0h-1v7H0v1z' />
-          <path fill='url(#dm-d)' d='M9 7v8h1V7h11V6H10V0H9v6H0v1z' />
-          <circle cx='10.5' cy='7.5' r='3.5' fill='url(#dm-e)' />
+        <g clipPath='url(#dm-a)'>
+          <path fill='url(#dm-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#dm-c)' d='M21 0H0v6h21z' />
+          <path fill='url(#dm-d)' d='M21 9H0v6h21z' />
+          <path
+            fill='url(#dm-e)'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#dm-f)'
+            fillRule='evenodd'
+            d='M10 8v7h1V8h10V7H11V0h-1v7H0v1z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#dm-g)'
+            fillRule='evenodd'
+            d='M9 7v8h1V7h11V6H10V0H9v6H0v1z'
+            clipRule='evenodd'
+          />
+          <path fill='url(#dm-h)' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
           <path
             fill='#0e673f'
-            fillRule='nonzero'
-            d='M10.5 10.5a.5.5 0 1 1 0-1c.274 0 .538-.055.784-.16a.5.5 0 1 1 .392.92c-.369.158-.767.24-1.176.24m2.816-1.965a3 3 0 0 0 .177-1.242.5.5 0 1 0-.998.068 1.983 1.983 0 0 1-.117.83.5.5 0 1 0 .938.344m-.95-3.383a3 3 0 0 0-1.07-.545.5.5 0 0 0-.264.964c.26.072.502.195.712.363a.5.5 0 1 0 .623-.782m-3.422-.217c-.345.21-.645.487-.88.814a.5.5 0 1 0 .811.584c.158-.218.358-.404.588-.544a.5.5 0 0 0-.52-.854M7.564 8.12c.084.397.247.771.479 1.101a.5.5 0 0 0 .818-.574 2 2 0 0 1-.318-.733.5.5 0 1 0-.979.206m2.54 2.354a.5.5 0 1 1 .132-.991q.121.015.245.017a.5.5 0 1 1-.009 1 3 3 0 0 1-.367-.026'
+            d='M10.5 10.5a.5.5 0 0 1 0-1 2 2 0 0 0 .78-.16.5.5 0 0 1 .4.92 3 3 0 0 1-1.18.24m2.82-1.97a3 3 0 0 0 .17-1.24.5.5 0 1 0-1 .07v.19q0 .32-.11.64a.5.5 0 1 0 .94.34m-.95-3.38a3 3 0 0 0-1.07-.54.5.5 0 1 0-.27.96q.4.11.71.36a.5.5 0 0 0 .63-.78m-3.43-.22q-.52.33-.88.82a.5.5 0 0 0 .82.58q.23-.33.58-.54a.5.5 0 0 0-.52-.86M7.56 8.12q.13.6.48 1.1a.5.5 0 0 0 .82-.57 2 2 0 0 1-.32-.74.5.5 0 0 0-.98.2m2.54 2.35a.5.5 0 1 1 .14-.99l.24.02a.5.5 0 0 1 0 1q-.19 0-.38-.03'
           />
           <path
             fill='#0e673f'
-            d='M10.5 8.5c.552 0 .5-.448.5-1s.052-1-.5-1-.5.448-.5 1-.052 1 .5 1'
+            fillRule='evenodd'
+            d='M10.5 8.5c.55 0 .5-.45.5-1s.05-1-.5-1-.5.45-.5 1-.05 1 .5 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

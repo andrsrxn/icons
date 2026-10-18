@@ -32,82 +32,169 @@ export const IconFlagPM: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pm-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pm-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pm-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#138e16' />
-            <stop offset='100%' stopColor='#0f7f12' />
+          <linearGradient
+            id='pm-c'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#138e16' />
+            <stop offset='1' stopColor='#0f7f12' />
           </linearGradient>
-          <linearGradient id='pm-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#26a7dc' />
-            <stop offset='100%' stopColor='#1b94c6' />
+          <linearGradient
+            id='pm-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#26a7dc' />
+            <stop offset='1' stopColor='#1b94c6' />
           </linearGradient>
-          <linearGradient id='pm-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fbcd3f' />
-            <stop offset='100%' stopColor='#ffce2f' />
+          <linearGradient
+            id='pm-e'
+            x1='14'
+            x2='14'
+            y1='3.09'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fbcd3f' />
+            <stop offset='1' stopColor='#ffce2f' />
           </linearGradient>
-          <linearGradient id='pm-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f03633' />
-            <stop offset='100%' stopColor='#d82a28' />
+          <linearGradient id='pm-f' x1='14' x2='14' y1='11' y2='13' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pm-g' x1='82.842%' x2='20.426%' y1='18.137%' y2='78.479%'>
-            <stop offset='0%' stopColor='#2aa854' />
-            <stop offset='100%' stopColor='#219447' />
+          <linearGradient id='pm-g' x1='3.5' x2='3.5' y1='0' y2='5' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f03633' />
+            <stop offset='1' stopColor='#d82a28' />
           </linearGradient>
-          <linearGradient id='pm-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='pm-i'
+            x1='3.56'
+            x2='3.43'
+            y1='-1.62'
+            y2='6.19'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2aa854' />
+            <stop offset='1' stopColor='#219447' />
           </linearGradient>
-          <linearGradient id='pm-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#d7181d' />
-            <stop offset='100%' stopColor='#c60e13' />
+          <linearGradient id='pm-k' x1='3.5' x2='3.5' y1='-1' y2='6' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pm-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fbcd3f' />
-            <stop offset='100%' stopColor='#fecb2f' />
+          <linearGradient id='pm-l' x1='3.5' x2='3.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <path id='pm-e' d='M0 0h7v5H0z' />
+          <linearGradient id='pm-m' x1='3.5' x2='3.5' y1='6' y2='9' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
+          </linearGradient>
+          <linearGradient
+            id='pm-n'
+            x1='3.5'
+            x2='3.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#d7181d' />
+            <stop offset='1' stopColor='#c60e13' />
+          </linearGradient>
+          <linearGradient
+            id='pm-o'
+            x1='3.5'
+            x2='3.5'
+            y1='11'
+            y2='14'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fbcd3f' />
+            <stop offset='1' stopColor='#fecb2f' />
+          </linearGradient>
+          <clipPath id='pm-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='pm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pm-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pm-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pm-b)' d='M0 10h21v5H0z' />
-          <path fill='url(#pm-c)' d='M0 15h21V0H0z' />
+        <g clipPath='url(#pm-a)'>
+          <path fill='url(#pm-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pm-c)' d='M21 10H0v5h21z' />
+          <path fill='url(#pm-d)' fillRule='evenodd' d='M0 15h21V0H0z' clipRule='evenodd' />
           <path
-            fill='url(#pm-d)'
-            d='M17.326 6.429C18.353 6.176 19 6.109 19 7c0 1.657-2.239 3-5 3S9 8.657 9 7c0-.89.647-.824 1.674-.571a4 4 0 0 1-.161-.563c-.287-1.35.137-2.584.947-2.757.81-.172 1.7.783 1.987 2.134.136.636.113 1.247-.034 1.733a7.4 7.4 0 0 0 1.174 0c-.147-.486-.17-1.097-.034-1.733.287-1.35 1.176-2.306 1.987-2.134.81.173 1.234 1.407.947 2.757a4 4 0 0 1-.161.563'
+            fill='url(#pm-e)'
+            fillRule='evenodd'
+            d='M17.33 6.43C18.35 6.18 19 6.1 19 7c0 1.66-2.24 3-5 3S9 8.66 9 7c0-.9.65-.82 1.67-.57a4 4 0 0 1-.16-.56c-.28-1.35.14-2.59.95-2.76s1.7.78 1.99 2.13a3.6 3.6 0 0 1-.04 1.74 7 7 0 0 0 1.18 0 3.6 3.6 0 0 1-.04-1.74c.29-1.35 1.18-2.3 1.99-2.13s1.23 1.4.95 2.76q-.07.3-.16.56'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#pm-a)'
-            fillRule='nonzero'
-            d='M15.776 12.947a.5.5 0 0 0 .448 0l2-1a.5.5 0 0 0-.448-.894L16 11.94l-1.776-.888a.5.5 0 0 0-.448 0L12 11.94l-1.776-.888a.5.5 0 0 0-.448.894l2 1a.5.5 0 0 0 .448 0L14 12.06z'
+            fill='url(#pm-f)'
+            d='M15.78 12.95q.22.1.44 0l2-1a.5.5 0 1 0-.44-.9l-1.78.9-1.78-.9a.5.5 0 0 0-.44 0l-1.78.9-1.78-.9a.5.5 0 1 0-.44.9l2 1q.22.1.44 0l1.78-.9z'
           />
-          <mask id='pm-h' fill='#fff'>
-            <use xlinkHref='#pm-e' />
+          <path fill='url(#pm-g)' d='M7 0H0v5h7z' />
+          <mask
+            id='pm-h'
+            width='7'
+            height='5'
+            x='0'
+            y='0'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M7 0H0v5h7z' />
           </mask>
-          <use xlinkHref='#pm-e' fill='url(#pm-f)' />
+          <g mask='url(#pm-h)'>
+            <path
+              fill='url(#pm-i)'
+              fillRule='evenodd'
+              d='M3.5 1.8.67-1.05l-.7.71L2.78 2.5-.04 5.33l.71.7L3.5 3.22l2.83 2.83.7-.71L4.22 2.5 7.04-.33l-.71-.7z'
+              clipRule='evenodd'
+            />
+          </g>
+          <mask
+            id='pm-j'
+            width='7'
+            height='5'
+            x='0'
+            y='0'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M7 0H0v5h7z' />
+          </mask>
+          <g mask='url(#pm-j)'>
+            <path
+              fill='url(#pm-k)'
+              fillRule='evenodd'
+              d='M4 2v-3H3v3H0v1h3v3h1V3h3V2z'
+              clipRule='evenodd'
+            />
+          </g>
+          <path fill='url(#pm-l)' d='M7 5H0v5h7z' />
           <path
-            fill='url(#pm-g)'
-            d='M4 2v-4H3v4h-4v1h4v4h1V3h4V2z'
-            mask='url(#pm-h)'
-            transform='rotate(-45 3.5 2.5)'
-          />
-          <path fill='url(#pm-a)' d='M4 2v-3H3v3H0v1h3v3h1V3h3V2z' mask='url(#pm-h)' />
-          <path fill='url(#pm-a)' d='M0 5h7v5H0z' />
-          <path
-            fill='url(#pm-i)'
+            fill='url(#pm-m)'
+            fillRule='evenodd'
             d='M1.5 7a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-1 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
-          <path fill='url(#pm-j)' d='M0 10h7v5H0z' />
+          <path fill='url(#pm-n)' d='M7 10H0v5h7z' />
           <path
-            fill='url(#pm-k)'
-            d='M3.5 12c-1.38 0-2.5-.224-2.5-.5s1.12-.5 2.5-.5 2.5.224 2.5.5-1.12.5-2.5.5m0 2c-1.38 0-2.5-.224-2.5-.5s1.12-.5 2.5-.5 2.5.224 2.5.5-1.12.5-2.5.5'
+            fill='url(#pm-o)'
+            fillRule='evenodd'
+            d='M3.5 12c-1.38 0-2.5-.22-2.5-.5s1.12-.5 2.5-.5 2.5.22 2.5.5-1.12.5-2.5.5m0 2c-1.38 0-2.5-.22-2.5-.5s1.12-.5 2.5-.5 2.5.22 2.5.5-1.12.5-2.5.5'
+            clipRule='evenodd'
           />
         </g>
       </g>

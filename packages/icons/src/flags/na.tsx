@@ -32,131 +32,180 @@ export const IconFlagNA: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='na-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='na-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='na-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0c4799' />
-            <stop offset='100%' stopColor='#05387e' />
+          <linearGradient
+            id='na-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0c4799' />
+            <stop offset='1' stopColor='#05387e' />
           </linearGradient>
-          <linearGradient id='na-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd243' />
-            <stop offset='100%' stopColor='#ffcd2f' />
+          <linearGradient
+            id='na-f'
+            x1='3.5'
+            x2='3.5'
+            y1='1.66'
+            y2='5.35'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd243' />
+            <stop offset='1' stopColor='#ffcd2f' />
           </linearGradient>
-          <linearGradient id='na-j' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1bac55' />
-            <stop offset='100%' stopColor='#149447' />
+          <linearGradient
+            id='na-h'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1bac55' />
+            <stop offset='1' stopColor='#149447' />
           </linearGradient>
-          <linearGradient id='na-m' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e52347' />
-            <stop offset='100%' stopColor='#d01739' />
+          <linearGradient
+            id='na-j'
+            x1='10.5'
+            x2='10.5'
+            y1='-2'
+            y2='17'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='na-k'
+            x1='10.5'
+            x2='10.5'
+            y1='-2.3'
+            y2='17.31'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e52347' />
+            <stop offset='1' stopColor='#d01739' />
           </linearGradient>
           <filter
-            id='na-b'
-            width='107.1%'
-            height='115%'
-            x='-3.6%'
-            y='-7.5%'
-            filterUnits='objectBoundingBox'>
-            <feMorphology
-              in='SourceAlpha'
-              operator='dilate'
-              radius='.25'
-              result='shadowSpreadOuter1'
-            />
-            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            id='na-c'
+            width='21'
+            height='10'
+            x='0'
+            y='0'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
           </filter>
           <filter
             id='na-e'
-            width='112.5%'
-            height='125%'
-            x='-6.2%'
-            y='-6.2%'
-            filterUnits='objectBoundingBox'>
-            <feOffset dy='.5' in='SourceAlpha' result='shadowOffsetOuter1' />
+            width='3.7'
+            height='4.2'
+            x='1.65'
+            y='1.66'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset dy='.5' />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
           </filter>
           <filter
-            id='na-h'
-            width='107.1%'
-            height='115%'
-            x='-3.6%'
-            y='-7.5%'
-            filterUnits='objectBoundingBox'>
-            <feMorphology
-              in='SourceAlpha'
-              operator='dilate'
-              radius='.25'
-              result='shadowSpreadOuter1'
-            />
-            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            id='na-g'
+            width='21'
+            height='10'
+            x='0'
+            y='5'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
           </filter>
           <filter
-            id='na-k'
-            width='106.2%'
-            height='107.9%'
-            x='-3.1%'
-            y='-3.9%'
-            filterUnits='objectBoundingBox'>
-            <feMorphology
-              in='SourceAlpha'
-              operator='dilate'
-              radius='.25'
-              result='shadowSpreadOuter1'
-            />
-            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            id='na-i'
+            width='24.26'
+            height='19'
+            x='-1.63'
+            y='-2'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
           </filter>
-          <path id='na-c' d='m3.121 12.304 21-10h-21z' />
-          <path
-            id='na-f'
-            d='m6.621 6.804-.765.848.058-1.14-1.14.057.847-.765-.847-.765 1.14.058-.058-1.14.765.847.766-.848-.058 1.14 1.14-.057-.848.765.848.765-1.14-.058.058 1.14z'
-          />
-          <path id='na-i' d='M3.121 17.304h21v-10z' />
-          <path id='na-l' d='M5.433 19.304 25.75 6.609 21.81.304 1.493 12.999z' />
+          <clipPath id='na-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='na-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#na-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#na-a)' d='M0 0h21v15H0z' />
-          <g transform='translate(-3.12 -2.3)'>
-            <use xlinkHref='#na-c' fill='#000' filter='url(#na-b)' />
-            <use xlinkHref='#na-c' fill='url(#na-d)' />
+        <g clipPath='url(#na-a)'>
+          <path fill='url(#na-b)' d='M21 0H0v15h21z' />
+          <g filter='url(#na-c)'>
+            <path fill='#000' d='M0 10 21 0H0z' />
           </g>
-          <g transform='translate(-3.12 -2.3)'>
-            <use xlinkHref='#na-f' fill='#000' filter='url(#na-e)' />
-            <use xlinkHref='#na-f' fill='url(#na-g)' />
-          </g>
-          <g transform='translate(-3.12 -2.3)'>
-            <use xlinkHref='#na-i' fill='#000' filter='url(#na-h)' />
-            <use xlinkHref='#na-i' fill='url(#na-j)' />
-          </g>
-          <g transform='translate(-3.12 -2.3)'>
-            <use xlinkHref='#na-l' fill='#000' filter='url(#na-k)' />
-            <use xlinkHref='#na-l' fill='url(#na-a)' />
+          <path fill='url(#na-d)' d='M0 10 21 0H0z' />
+          <g filter='url(#na-e)'>
+            <path
+              fill='#000'
+              d='m3.5 4.5-.76.85.05-1.14-1.14.06.85-.77-.85-.76 1.14.06-.05-1.14.76.84.77-.84L4.2 2.8l1.14-.06-.85.76.85.77L4.2 4.2l.06 1.14z'
+            />
           </g>
           <path
-            fill='url(#na-m)'
-            d='M2.65 19.608 27.243 4.24 24.593 0 0 15.368z'
-            transform='translate(-3.12 -2.3)'
+            fill='url(#na-f)'
+            d='m3.5 4.5-.76.85.05-1.14-1.14.06.85-.77-.85-.76 1.14.06-.05-1.14.76.84.77-.84L4.2 2.8l1.14-.06-.85.76.85.77L4.2 4.2l.06 1.14z'
+          />
+          <g filter='url(#na-g)'>
+            <path fill='#000' d='M0 15h21V5z' />
+          </g>
+          <path fill='url(#na-h)' d='M0 15h21V5z' />
+          <g filter='url(#na-i)'>
+            <path fill='#000' d='M2.31 17 22.63 4.3 18.69-2-1.63 10.7z' />
+          </g>
+          <path fill='url(#na-j)' d='M2.31 17 22.63 4.3 18.69-2-1.63 10.7z' />
+          <path
+            fill='url(#na-k)'
+            fillRule='evenodd'
+            d='m-.47 17.3 24.6-15.36-2.66-4.24-24.59 15.37z'
+            clipRule='evenodd'
           />
         </g>
       </g>

@@ -32,41 +32,73 @@ export const IconFlagAO: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ao-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ao-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ao-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff323e' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='ao-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff323e' />
+            <stop offset='1' stopColor='#fd0d1b' />
           </linearGradient>
-          <linearGradient id='ao-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='ao-d'
+            x1='10.5'
+            x2='10.5'
+            y1='8'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='ao-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#dd2137' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='ao-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#dd2137' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='ao-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f8d84b' />
-            <stop offset='100%' stopColor='#f9d536' />
+          <linearGradient
+            id='ao-f'
+            x1='10.7'
+            x2='10.7'
+            y1='4.26'
+            y2='10.18'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f8d84b' />
+            <stop offset='1' stopColor='#f9d536' />
           </linearGradient>
+          <clipPath id='ao-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ao-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ao-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ao-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ao-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#ao-c)' d='M0 8h21v7H0z' />
-          <path fill='url(#ao-d)' d='M0 0h21v8H0z' />
+        <g clipPath='url(#ao-a)'>
+          <path fill='url(#ao-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ao-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#ao-d)' d='M21 8H0v7h21z' />
+          <path fill='url(#ao-e)' d='M21 0H0v8h21z' />
           <path
-            fill='url(#ao-e)'
-            fillRule='nonzero'
-            d='m10.63 8.855-1.407-.939a.5.5 0 0 1 .554-.832l1.536 1.024q.102-.194.161-.414a2 2 0 0 0-1.414-2.45.5.5 0 1 1 .259-.965 3 3 0 0 1 1.83 4.386l.628.419a.5.5 0 0 1-.554.832l-.713-.475c-.727.631-1.744.901-2.744.633a.5.5 0 0 1 .259-.966c.57.153 1.147.044 1.606-.253M9.5 6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#ao-f)'
+            d='m10.63 8.85-1.4-.93a.5.5 0 0 1 .55-.84l1.53 1.03a2 2 0 0 0-1.25-2.87.5.5 0 0 1 .26-.96 3 3 0 0 1 1.83 4.38l.63.42a.5.5 0 1 1-.56.84l-.71-.48a3 3 0 0 1-2.74.63.5.5 0 1 1 .25-.96 2 2 0 0 0 1.61-.26M9.5 6.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
         </g>
       </g>

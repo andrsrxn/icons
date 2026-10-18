@@ -32,45 +32,112 @@ export const IconFlagKN: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='kn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='kn-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='kn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1ec160' />
-            <stop offset='100%' stopColor='#169e4d' />
+          <linearGradient
+            id='kn-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1ec160' />
+            <stop offset='1' stopColor='#169e4d' />
           </linearGradient>
-          <linearGradient id='kn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#df2a40' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='kn-d'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#df2a40' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='kn-d' x1='50%' x2='50%' y1='16.742%' y2='82.422%'>
-            <stop offset='0%' stopColor='#ffd956' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient
+            id='kn-e'
+            x1='10.5'
+            x2='10.5'
+            y1='-.15'
+            y2='14.96'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd956' />
+            <stop offset='1' stopColor='#fcd036' />
           </linearGradient>
-          <linearGradient id='kn-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='kn-f'
+            x1='10.5'
+            x2='10.5'
+            y1='-2.3'
+            y2='17.3'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
+          <linearGradient
+            id='kn-g'
+            x1='14.67'
+            x2='14.67'
+            y1='3.25'
+            y2='6.97'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='kn-h'
+            x1='6.67'
+            x2='6.67'
+            y1='8.1'
+            y2='11.82'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='kn-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='kn-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#kn-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#kn-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#kn-b)' d='m.001 10 21-10h-21z' />
-          <path fill='url(#kn-c)' d='M.001 15h21V5z' />
-          <path fill='url(#kn-d)' d='M.59 19 25.182 3.632 20.413-4-4.18 11.368z' />
-          <path fill='url(#kn-e)' d='M-.47 17.304 24.122 1.936l-2.65-4.24L-3.12 13.064z' />
+        <g clipPath='url(#kn-a)'>
+          <path fill='url(#kn-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#kn-c)' fillRule='evenodd' d='M0 10 21 0H0z' clipRule='evenodd' />
+          <path fill='url(#kn-d)' fillRule='evenodd' d='M0 15h21V5z' clipRule='evenodd' />
           <path
-            fill='url(#kn-a)'
-            d='m15.233 5.848-.709 1.123-.46-1.246-1.287-.327 1.043-.823-.087-1.325 1.105.738 1.234-.492-.36 1.278.848 1.022z'
+            fill='url(#kn-e)'
+            fillRule='evenodd'
+            d='m.59 19 24.6-15.37L20.4-4-4.18 11.37z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#kn-a)'
-            d='m7.233 10.698-.709 1.123-.46-1.246-1.287-.327 1.043-.823L5.733 8.1l1.105.738 1.234-.492-.36 1.278.848 1.022z'
+            fill='url(#kn-f)'
+            fillRule='evenodd'
+            d='m-.47 17.3 24.6-15.36-2.66-4.24-24.59 15.36z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#kn-g)'
+            fillRule='evenodd'
+            d='m15.23 5.85-.7 1.12-.47-1.24-1.28-.33 1.04-.82-.09-1.33 1.1.74 1.24-.5-.36 1.28.85 1.03z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#kn-h)'
+            fillRule='evenodd'
+            d='m7.23 10.7-.7 1.12-.47-1.24-1.28-.33 1.04-.82-.09-1.33 1.1.74 1.24-.5-.36 1.28.85 1.03z'
+            clipRule='evenodd'
           />
         </g>
       </g>

@@ -32,36 +32,69 @@ export const IconFlagTT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='tt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='tt-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='tt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ed233c' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='tt-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ed233c' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='tt-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='tt-d'
+            x1='10.75'
+            x2='10.75'
+            y1='-4.06'
+            y2='19.07'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='tt-e'
+            x1='10.5'
+            x2='10.5'
+            y1='-5.21'
+            y2='20.22'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
+          </linearGradient>
+          <clipPath id='tt-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='tt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#tt-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#tt-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#tt-b)' d='M-.004.005h21v15h-21z' />
+        <g clipPath='url(#tt-a)'>
+          <path fill='url(#tt-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#tt-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#tt-a)'
-            d='m23-1-7.144-3.06-15.1 17.995L-1.5 16l7.653 3.07L20.977 1.403z'
-            transform='matrix(-1 0 0 1 21.5 0)'
+            fill='url(#tt-d)'
+            fillRule='evenodd'
+            d='m-1.5-1 7.14-3.06 15.1 18L23 16l-7.65 3.07L.52 1.4z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#tt-c)'
-            d='M3.09 20.22 21.731-1.997l-3.83-3.214L-.74 17.005z'
-            transform='matrix(-1 0 0 1 20.991 0)'
+            fill='url(#tt-e)'
+            fillRule='evenodd'
+            d='M17.9 20.22-.74-2l3.83-3.2 18.64 22.22z'
+            clipRule='evenodd'
           />
         </g>
       </g>

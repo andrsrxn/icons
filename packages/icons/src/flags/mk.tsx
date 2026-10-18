@@ -32,35 +32,80 @@ export const IconFlagMK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e81b26' />
-            <stop offset='100%' stopColor='#d00914' />
+          <linearGradient
+            id='mk-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e81b26' />
+            <stop offset='1' stopColor='#d00914' />
           </linearGradient>
-          <linearGradient id='mk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffe94f' />
-            <stop offset='100%' stopColor='#ffe633' />
+          <linearGradient
+            id='mk-d'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffe94f' />
+            <stop offset='1' stopColor='#ffe633' />
           </linearGradient>
+          <linearGradient
+            id='mk-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffe94f' />
+            <stop offset='1' stopColor='#ffe633' />
+          </linearGradient>
+          <linearGradient
+            id='mk-f'
+            x1='10.5'
+            x2='10.5'
+            y1='-2.65'
+            y2='17.65'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffe94f' />
+            <stop offset='1' stopColor='#ffe633' />
+          </linearGradient>
+          <clipPath id='mk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mk-b)' d='M-.004-.002h21v15h-21z' />
-          <circle cx='10.496' cy='7.498' r='2.5' fill='url(#mk-c)' />
+        <g clipPath='url(#mk-a)'>
+          <path fill='url(#mk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mk-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#mk-d)' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           <path
-            fill='url(#mk-c)'
-            d='m13.961 7.993 7.035 1.005v-3l-7.035 1.005a3.5 3.5 0 0 1 0 .99m-6.93-.99L-.004 5.998v3l7.035-1.005a3.5 3.5 0 0 1 0-.99m4.152-2.938.813-4.067h-3l.814 4.067a3.5 3.5 0 0 1 1.373 0M9.81 10.931l-.814 4.067h3l-.813-4.067a3.5 3.5 0 0 1-1.373 0'
+            fill='url(#mk-e)'
+            fillRule='evenodd'
+            d='M13.96 8 21 9V6l-7.04 1a4 4 0 0 1 0 1M7.03 7 0 6v3l7.03-1a4 4 0 0 1 0-1m4.15-2.93L12 0H9l.81 4.07a4 4 0 0 1 1.37 0m-1.37 6.86L9 15h3l-.82-4.07a4 4 0 0 1-1.37 0'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#mk-c)'
-            d='M7.652 9.539-.54 15.417l2.007 2.229 6.703-7.533a3.5 3.5 0 0 1-.518-.574m5.688-4.082L21.532-.42 19.525-2.65l-6.702 7.533q.29.258.517.574m-.517 4.656 6.702 7.533 2.007-2.23L13.34 9.54a3.5 3.5 0 0 1-.517.574M8.17 4.883 1.467-2.65-.54-.42l8.192 5.877a3.5 3.5 0 0 1 .518-.574'
+            fill='url(#mk-f)'
+            fillRule='evenodd'
+            d='m7.65 9.54-8.19 5.88 2 2.23 6.71-7.54q-.3-.25-.52-.57m5.69-4.08 8.2-5.88-2.02-2.23-6.7 7.53q.3.26.52.58m-.52 4.65 6.7 7.54 2.01-2.23-8.19-5.88q-.22.3-.52.57M8.17 4.88l-6.7-7.53L-.54-.42l8.2 5.88q.22-.31.51-.58'
+            clipRule='evenodd'
           />
         </g>
       </g>

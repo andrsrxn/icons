@@ -32,35 +32,65 @@ export const IconFlagPY: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='py-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='py-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='py-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e33f39' />
-            <stop offset='100%' stopColor='#d32e28' />
+          <linearGradient
+            id='py-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e33f39' />
+            <stop offset='1' stopColor='#d32e28' />
           </linearGradient>
-          <linearGradient id='py-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#124bba' />
-            <stop offset='100%' stopColor='#073da6' />
+          <linearGradient
+            id='py-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#124bba' />
+            <stop offset='1' stopColor='#073da6' />
           </linearGradient>
+          <linearGradient
+            id='py-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='py-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='py-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#py-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#py-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#py-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#py-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#py-a)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#py-a)'>
+          <path fill='url(#py-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#py-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#py-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#py-e)' d='M21 5H0v5h21z' />
           <path
             fill='#398153'
-            fillRule='nonzero'
             d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m0 .5a2 2 0 1 1 0-4 2 2 0 0 1 0 4'
           />
-          <circle cx='10.5' cy='7.5' r='1' fill='#e5cf58' />
+          <path fill='#e5cf58' d='M10.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
         </g>
       </g>
     </svg>

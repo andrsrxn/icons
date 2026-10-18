@@ -32,98 +32,269 @@ export const IconFlagFK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='fk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='fk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='fk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#07319c' />
-            <stop offset='100%' stopColor='#00247e' />
-          </linearGradient>
-          <linearGradient id='fk-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1f8bde' />
-            <stop offset='100%' stopColor='#1075c2' />
-          </linearGradient>
-          <linearGradient id='fk-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='fk-g' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#187536' />
-            <stop offset='100%' stopColor='#0e5023' />
-          </linearGradient>
-          <linearGradient id='fk-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#db1e36' />
-            <stop offset='100%' stopColor='#d51931' />
-          </linearGradient>
-          <path
+          <linearGradient
             id='fk-c'
-            d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5'
-          />
-          <path
-            id='fk-i'
-            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
-          />
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#07319c' />
+            <stop offset='1' stopColor='#00247e' />
+          </linearGradient>
+          <linearGradient
+            id='fk-d'
+            x1='15.5'
+            x2='15.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1f8bde' />
+            <stop offset='1' stopColor='#1075c2' />
+          </linearGradient>
+          <linearGradient
+            id='fk-f'
+            x1='15.5'
+            x2='15.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='fk-h'
+            x1='15.5'
+            x2='15.5'
+            y1='7'
+            y2='8.27'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#187536' />
+            <stop offset='1' stopColor='#0e5023' />
+          </linearGradient>
+          <linearGradient
+            id='fk-j'
+            x1='15.5'
+            x2='15.5'
+            y1='5'
+            y2='7.01'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='fk-l'
+            x1='15.33'
+            x2='15.33'
+            y1='8.95'
+            y2='10.35'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='fk-n'
+            x1='15.33'
+            x2='15.33'
+            y1='7.45'
+            y2='8.85'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='fk-p'
+            x1='15.33'
+            x2='15.33'
+            y1='10.45'
+            y2='11.85'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='fk-q' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#db1e36' />
+            <stop offset='1' stopColor='#d51931' />
+          </linearGradient>
+          <linearGradient
+            id='fk-r'
+            x1='4.75'
+            x2='4.75'
+            y1='0'
+            y2='7.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='fk-s' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#db1e36' />
+            <stop offset='1' stopColor='#d51931' />
+          </linearGradient>
+          <clipPath id='fk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='fk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#fk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#fk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#fk-b)' d='M0 0h21v15H0z' />
-          <g transform='translate(13 4)'>
-            <mask id='fk-f' fill='#fff'>
-              <use xlinkHref='#fk-c' />
-            </mask>
-            <use xlinkHref='#fk-c' fill='url(#fk-d)' />
+        <g clipPath='url(#fk-a)'>
+          <path fill='url(#fk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#fk-c)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#fk-d)'
+            d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+          />
+          <mask
+            id='fk-e'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
             <path
-              fill='url(#fk-e)'
-              fillRule='nonzero'
-              d='M0 3.5V.51C0 .228.215 0 .498 0h4.004C4.777 0 5 .227 5 .51V3.5C5 6 2.5 7 2.5 7S0 6 0 3.5m2.644 2.87c.263-.15.527-.334.772-.554C4.099 5.2 4.5 4.439 4.5 3.5V.51C4.5.5.499.5.499.5l.001 3c0 .939.401 1.701 1.084 2.316a4.4 4.4 0 0 0 .916.632q.065-.033.144-.078'
-              mask='url(#fk-f)'
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
             />
+          </mask>
+          <g mask='url(#fk-e)'>
             <path
-              fill='url(#fk-g)'
-              d='M1.158 3.475C1.071 3.212 1.216 3 1.495 3h2.01c.273 0 .425.209.337.475l-.184.55c-.087.263-.295.306-.524.133 0 0 .088-.158-.634-.158s-.634.158-.634.158c-.202.189-.436.133-.524-.133z'
-              mask='url(#fk-f)'
-            />
-            <path
-              fill='url(#fk-a)'
-              d='M1.5 3c.27.054.59-.5 1-.5.437 0 .726.567 1 .5.246-.06.5-.739.5-1 0-.552-.672-1-1.5-1S1 1.448 1 2c0 .28.223.945.5 1'
-              mask='url(#fk-f)'
-            />
-            <path
-              fill='url(#fk-a)'
-              fillRule='nonzero'
-              d='m-.323 6.177.35-.35.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3-.35.35L-.854 6l.354.354z'
-              mask='url(#fk-f)'
-            />
-            <path
-              fill='url(#fk-a)'
-              fillRule='nonzero'
-              d='m-.323 4.677.35-.35.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3-.35.35-.177.177.354.354z'
-              mask='url(#fk-f)'
-            />
-            <path
-              fill='url(#fk-a)'
-              fillRule='nonzero'
-              d='m-.323 7.677.35-.35.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3c.291.29.762.291 1.054 0l.3-.3a.244.244 0 0 1 .346 0l.3.3.177.177.354-.354-.177-.177-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3a.244.244 0 0 1-.346 0l-.3-.3a.744.744 0 0 0-1.054 0l-.3.3-.35.35-.177.177.354.354z'
-              mask='url(#fk-f)'
+              fill='url(#fk-f)'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5m2.64 2.87q.4-.22.78-.55A3 3 0 0 0 17.5 7.5V4.51l-4-.01v3c0 .94.4 1.7 1.08 2.32a4 4 0 0 0 .92.63z'
             />
           </g>
-          <use xlinkHref='#fk-i' fill='url(#fk-h)' />
+          <mask
+            id='fk-g'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+            />
+          </mask>
+          <g mask='url(#fk-g)'>
+            <path
+              fill='url(#fk-h)'
+              fillRule='evenodd'
+              d='M14.16 7.47c-.09-.26.06-.47.34-.47h2c.28 0 .43.2.34.47l-.18.56c-.09.26-.3.3-.53.13 0 0 .1-.16-.63-.16-.72 0-.63.16-.63.16-.2.19-.44.13-.53-.13z'
+              clipRule='evenodd'
+            />
+          </g>
+          <mask
+            id='fk-i'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+            />
+          </mask>
+          <g mask='url(#fk-i)'>
+            <path
+              fill='url(#fk-j)'
+              fillRule='evenodd'
+              d='M14.5 7c.27.05.6-.5 1-.5.44 0 .73.57 1 .5.25-.06.5-.74.5-1 0-.55-.67-1-1.5-1S14 5.45 14 6c0 .28.22.94.5 1'
+              clipRule='evenodd'
+            />
+          </g>
+          <mask
+            id='fk-k'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+            />
+          </mask>
+          <g mask='url(#fk-k)'>
+            <path
+              fill='url(#fk-l)'
+              d='m12.68 10.18.35-.35.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3.18.17.35-.35-.17-.18-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3-.35.35-.17.18.35.35z'
+            />
+          </g>
+          <mask
+            id='fk-m'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+            />
+          </mask>
+          <g mask='url(#fk-m)'>
+            <path
+              fill='url(#fk-n)'
+              d='m12.68 8.68.35-.35.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3.18.17.35-.35-.17-.18-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3-.35.35-.17.18.35.35z'
+            />
+          </g>
+          <mask
+            id='fk-o'
+            width='5'
+            height='7'
+            x='13'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
+            />
+          </mask>
+          <g mask='url(#fk-o)'>
+            <path
+              fill='url(#fk-p)'
+              d='m12.68 11.68.35-.35.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3.18.17.35-.35-.17-.18-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3-.35.35-.17.18.35.35z'
+            />
+          </g>
+          <path
+            fill='url(#fk-q)'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25c0 .14-.09.31-.2.4L5.5 3v1l3.31 2.84q.14.15-.06.16a1 1 0 0 1-.46-.15L5 4.5H4L0 7v-.5L3.5 4z'
+          />
           <path
             stroke='#fff'
             strokeWidth='.5'
-            d='M3.25 3.115-.676-.25H.5l.145.047L4.08 2.25h.848L9.25-.451V.25c0 .222-.128.47-.313.602L5.75 3.13v.756l3.225 2.764c.282.242.138.601-.225.601-.193 0-.442-.08-.604-.195L4.92 4.75h-.848L-.25 7.451v-1.08l3.5-2.5z'
+            d='M3.25 3.11-.68-.25H.5l.15.05 3.43 2.45h.85l4.32-2.7v.7a.8.8 0 0 1-.31.6L5.75 3.13v.75l3.22 2.77c.29.24.14.6-.22.6-.2 0-.44-.08-.6-.2l-3.23-2.3h-.85l-4.32 2.7V6.37l3.5-2.5z'
           />
           <path
-            fill='url(#fk-a)'
-            d='M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 0 0 .505-.495V4.5h3.51a.49.49 0 0 0 .49-.505v-.99a.495.495 0 0 0-.49-.505H5.5V0h-2v2.5z'
+            fill='url(#fk-r)'
+            fillRule='evenodd'
+            d='M0 2.5v2h3.5V7c0 .28.21.5.5.5h1a.5.5 0 0 0 .5-.5V4.5h3.51c.27 0 .49-.21.49-.5V3a.5.5 0 0 0-.49-.5H5.5V0h-2v2.5z'
+            clipRule='evenodd'
           />
-          <path fill='url(#fk-h)' d='M0 3h4V0h1v3h4v1H5v3H4V4H0z' />
+          <path
+            fill='url(#fk-s)'
+            fillRule='evenodd'
+            d='M0 3h4V0h1v3h4v1H5v3H4V4H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

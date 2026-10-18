@@ -32,26 +32,53 @@ export const IconFlagTR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='tr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='tr-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='tr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e92434' />
-            <stop offset='100%' stopColor='#e11324' />
+          <linearGradient
+            id='tr-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e92434' />
+            <stop offset='1' stopColor='#e11324' />
           </linearGradient>
+          <linearGradient
+            id='tr-d'
+            x1='10.37'
+            x2='10.37'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='tr-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='tr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#tr-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#tr-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#tr-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#tr-a)'>
+          <path fill='url(#tr-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#tr-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#tr-a)'
-            d='M13.052 4.737A3.9 3.9 0 0 0 10.75 4C8.679 4 7 5.567 7 7.5S8.679 11 10.75 11c.868 0 1.667-.275 2.302-.737a4.5 4.5 0 1 1 0-5.526m1.214 3.34-.919 1.113.063-1.442-1.343-.53 1.39-.386.09-1.441.796 1.204 1.398-.361-.898 1.13.775 1.217z'
+            fill='url(#tr-d)'
+            fillRule='evenodd'
+            d='M13.05 4.74a4 4 0 0 0-2.3-.74C8.68 4 7 5.57 7 7.5S8.68 11 10.75 11a4 4 0 0 0 2.3-.74 4.5 4.5 0 1 1 0-5.52m1.22 3.34-.92 1.11.06-1.44-1.34-.53 1.39-.39.09-1.44.8 1.2 1.4-.36-.9 1.13.77 1.22z'
+            clipRule='evenodd'
           />
         </g>
       </g>

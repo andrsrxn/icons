@@ -32,29 +32,54 @@ export const IconFlagIE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ie-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ie-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ie-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff8515' />
-            <stop offset='100%' stopColor='#ff7a00' />
+          <linearGradient
+            id='ie-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff8515' />
+            <stop offset='1' stopColor='#ff7a00' />
           </linearGradient>
-          <linearGradient id='ie-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#07bb59' />
-            <stop offset='100%' stopColor='#029c48' />
+          <linearGradient id='ie-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#07bb59' />
+            <stop offset='1' stopColor='#029c48' />
           </linearGradient>
+          <linearGradient
+            id='ie-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='ie-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ie-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ie-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ie-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ie-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#ie-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#ie-a)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#ie-a)'>
+          <path fill='url(#ie-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ie-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#ie-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#ie-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

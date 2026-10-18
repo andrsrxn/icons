@@ -32,38 +32,71 @@ export const IconFlagGQ: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gq-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gq-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gq-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ec3938' />
-            <stop offset='100%' stopColor='#e12524' />
+          <linearGradient
+            id='gq-c'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ec3938' />
+            <stop offset='1' stopColor='#e12524' />
           </linearGradient>
-          <linearGradient id='gq-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#51b422' />
-            <stop offset='100%' stopColor='#429919' />
+          <linearGradient
+            id='gq-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#51b422' />
+            <stop offset='1' stopColor='#429919' />
           </linearGradient>
-          <linearGradient id='gq-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#258de7' />
-            <stop offset='100%' stopColor='#1276cc' />
+          <linearGradient
+            id='gq-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient id='gq-f' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#258de7' />
+            <stop offset='1' stopColor='#1276cc' />
+          </linearGradient>
+          <clipPath id='gq-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gq-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gq-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gq-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gq-b)' d='M0 10h21v5H0z' />
-          <path fill='url(#gq-c)' d='M0 0h21v5H0z' />
-          <path fill='url(#gq-a)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#gq-a)'>
+          <path fill='url(#gq-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gq-c)' d='M21 10H0v5h21z' />
+          <path fill='url(#gq-d)' d='M21 0H0v5h21z' />
+          <path fill='url(#gq-e)' d='M21 5H0v5h21z' />
           <path
             fill='#159940'
-            d='M10.066 8.932a.73.73 0 0 0 .175-.425l.008-1.264A.25.25 0 0 0 9.996 7h-.242c-.14 0-.176-.078-.08-.174l.652-.652a.247.247 0 0 1 .348 0l.652.652c.096.096.057.174-.08.174h-.242a.253.253 0 0 0-.254.243v1.264c0 .134.08.322.17.414l-.09-.092c.093.094.063.171-.082.171h-.496c-.139 0-.176-.08-.078-.182z'
+            fillRule='evenodd'
+            d='M10.07 8.93c.1-.1.17-.3.17-.42V7.24A.25.25 0 0 0 10 7h-.25q-.21-.02-.08-.17l.66-.66c.1-.1.25-.1.34 0l.66.66q.13.16-.08.17H11a.25.25 0 0 0-.25.24v1.27c0 .13.08.32.17.41l-.1-.1q.14.16-.07.18h-.5q-.21-.02-.08-.18z'
+            clipRule='evenodd'
           />
-          <path fill='url(#gq-d)' d='m0 0 7 7.5L0 15z' />
+          <path fill='url(#gq-f)' fillRule='evenodd' d='m0 0 7 7.5L0 15z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

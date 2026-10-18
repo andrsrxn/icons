@@ -32,34 +32,69 @@ export const IconFlagXK: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='xk-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='xk-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='xk-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#2f5fbf' />
-            <stop offset='100%' stopColor='#244ea3' />
+          <linearGradient
+            id='xk-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2f5fbf' />
+            <stop offset='1' stopColor='#244ea3' />
           </linearGradient>
-          <linearGradient id='xk-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e9c072' />
-            <stop offset='100%' stopColor='#cfa557' />
+          <linearGradient
+            id='xk-d'
+            x1='10.5'
+            x2='10.5'
+            y1='2.29'
+            y2='6.71'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='xk-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e9c072' />
+            <stop offset='1' stopColor='#cfa557' />
+          </linearGradient>
+          <clipPath id='xk-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='xk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#xk-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#xk-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#xk-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#xk-a)'>
+          <path fill='url(#xk-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#xk-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#xk-a)'
-            d='m9 3.5-.707.207L8.5 3l-.207-.707L9 2.5l.707-.207L9.5 3l.207.707zm3 0-.707.207L11.5 3l-.207-.707L12 2.5l.707-.207L12.5 3l.207.707zm3 1-.707.207L14.5 4l-.207-.707L15 3.5l.707-.207L15.5 4l.207.707zm2 2-.707.207L16.5 6l-.207-.707L17 5.5l.707-.207L17.5 6l.207.707zm-13 0-.707.207L3.5 6l-.207-.707L4 5.5l.707-.207L4.5 6l.207.707zm2-2-.707.207L5.5 4l-.207-.707L6 3.5l.707-.207L6.5 4l.207.707z'
+            fill='url(#xk-d)'
+            fillRule='evenodd'
+            d='m9 3.5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm3 0-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm3 1-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm2 2-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-13 0-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm2-2-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#xk-c)'
+            fill='url(#xk-e)'
+            fillRule='evenodd'
             d='m9 10-1-.5-1-2h1l1-1 .5-1 1-.5.5.5 1 .5v.5l.5.5L14 8l-.5 1.5L12 11l-.5-1-1.5 1v1l-.5-.5z'
+            clipRule='evenodd'
           />
         </g>
       </g>

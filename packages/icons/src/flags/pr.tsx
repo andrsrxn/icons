@@ -32,33 +32,80 @@ export const IconFlagPR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pr-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fa2222' />
-            <stop offset='100%' stopColor='#ed0000' />
+          <linearGradient
+            id='pr-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fa2222' />
+            <stop offset='1' stopColor='#ed0000' />
           </linearGradient>
-          <linearGradient id='pr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1d63f9' />
-            <stop offset='100%' stopColor='#0650f0' />
+          <linearGradient
+            id='pr-d'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='6'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='pr-e'
+            x1='10.5'
+            x2='10.5'
+            y1='9'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pr-f' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1d63f9' />
+            <stop offset='1' stopColor='#0650f0' />
+          </linearGradient>
+          <linearGradient
+            id='pr-g'
+            x1='3.5'
+            x2='3.5'
+            y1='5'
+            y2='9.52'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='pr-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='pr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pr-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pr-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pr-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#pr-a)' d='M0 3h21v3H0z' />
-          <path fill='url(#pr-a)' d='M0 9h21v3H0z' />
-          <path fill='url(#pr-c)' d='m0 0 10 7.5L0 15z' />
+        <g clipPath='url(#pr-a)'>
+          <path fill='url(#pr-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pr-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#pr-d)' d='M21 3H0v3h21z' />
+          <path fill='url(#pr-e)' d='M21 9H0v3h21z' />
+          <path fill='url(#pr-f)' fillRule='evenodd' d='m0 0 10 7.5L0 15z' clipRule='evenodd' />
           <path
-            fill='url(#pr-a)'
-            d='M3.5 8.456 2.03 9.523l.561-1.728-1.469-1.068h1.816L3.5 5l.562 1.727h1.816l-1.47 1.068.561 1.728z'
+            fill='url(#pr-g)'
+            fillRule='evenodd'
+            d='M3.5 8.46 2.03 9.52 2.6 7.8 1.12 6.73h1.82L3.5 5l.56 1.73h1.82L4.4 7.8l.56 1.72z'
+            clipRule='evenodd'
           />
         </g>
       </g>

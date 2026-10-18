@@ -32,33 +32,60 @@ export const IconFlagGA: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ga-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ga-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ga-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#09b470' />
-            <stop offset='100%' stopColor='#019f60' />
+          <linearGradient
+            id='ga-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#09b470' />
+            <stop offset='1' stopColor='#019f60' />
           </linearGradient>
-          <linearGradient id='ga-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#508cde' />
-            <stop offset='100%' stopColor='#3a75c5' />
+          <linearGradient
+            id='ga-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#508cde' />
+            <stop offset='1' stopColor='#3a75c5' />
           </linearGradient>
-          <linearGradient id='ga-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd935' />
-            <stop offset='100%' stopColor='#fdd216' />
+          <linearGradient
+            id='ga-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd935' />
+            <stop offset='1' stopColor='#fdd216' />
           </linearGradient>
+          <clipPath id='ga-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ga-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ga-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ga-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ga-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#ga-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#ga-d)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#ga-a)'>
+          <path fill='url(#ga-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ga-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#ga-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#ga-e)' d='M21 5H0v5h21z' />
         </g>
       </g>
     </svg>

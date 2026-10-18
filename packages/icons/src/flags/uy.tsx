@@ -32,39 +32,73 @@ export const IconFlagUY: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='uy-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='uy-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='uy-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0e4dc5' />
-            <stop offset='100%' stopColor='#073da6' />
+          <linearGradient
+            id='uy-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0e4dc5' />
+            <stop offset='1' stopColor='#073da6' />
           </linearGradient>
-          <linearGradient id='uy-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fed443' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient
+            id='uy-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='14'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='uy-e'
+            x1='5'
+            x2='5'
+            y1='2.14'
+            y2='7.99'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fed443' />
+            <stop offset='1' stopColor='#fcd036' />
+          </linearGradient>
+          <clipPath id='uy-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='uy-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#uy-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#uy-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#uy-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#uy-a)'>
+          <path fill='url(#uy-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#uy-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#uy-a)'
+            fill='url(#uy-d)'
+            fillRule='evenodd'
             d='M10 0h11v2H10zm0 4h11v2H10zm0 4h11v2H10zM0 12h21v2H0zM0 0h10v10H0z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#uy-c)'
-            d='m5 6.991-.668.996L4.163 6.8l-1.033.608.362-1.143-1.195.1.823-.873L2 5.062l1.12-.428-.823-.873 1.195.1-.362-1.144 1.033.608.17-1.187.667.996.668-.996.169 1.187 1.033-.608-.362 1.143 1.195-.099-.823.873L8 5.063l-1.12.429.823.872-1.195-.099.362 1.143L5.837 6.8l-.17 1.187zm0-.02a1.91 1.91 0 1 0 0-3.817 1.91 1.91 0 0 0 0 3.818M5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3'
+            fill='url(#uy-e)'
+            fillRule='evenodd'
+            d='m5 7-.67.99-.17-1.19-1.03.6.36-1.14-1.2.1.83-.87L2 5.06l1.12-.43-.82-.87 1.2.1-.37-1.14 1.03.6.17-1.18.67 1 .67-1 .17 1.19 1.03-.61-.36 1.14 1.2-.1-.83.87L8 5.06l-1.12.43.82.87-1.2-.1.37 1.15-1.03-.61-.17 1.19zm0-.03a1.9 1.9 0 1 0 0-3.82 1.9 1.9 0 0 0 0 3.82m0-.47a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3'
+            clipRule='evenodd'
           />
           <path
             fill='#c6a326'
-            fillRule='nonzero'
-            d='M4.125 5a.125.125 0 0 1 .25 0A.62.62 0 0 0 5 5.625c.243 0 .46-.14.564-.355l.038-.07.014-.023c.048-.08.062-.119.062-.177a.125.125 0 0 1 .25 0 .53.53 0 0 1-.097.304l-.013.022-.028.052A.875.875 0 0 1 4.125 5M5.5 4.75a.25.25 0 1 1 0-.5.25.25 0 0 1 0 .5m-1 0a.25.25 0 1 1 0-.5.25.25 0 0 1 0 .5'
+            d='M4.13 5a.12.12 0 1 1 .25 0 .6.6 0 0 0 .62.63c.24 0 .46-.14.56-.36l.04-.07.02-.02q.06-.1.06-.18a.13.13 0 0 1 .25 0q0 .15-.1.3l-.01.03-.03.05A.87.87 0 0 1 4.13 5m1.37-.25a.25.25 0 1 1 0-.5.25.25 0 0 1 0 .5m-1 0a.25.25 0 1 1 0-.5.25.25 0 0 1 0 .5'
           />
         </g>
       </g>

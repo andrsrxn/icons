@@ -32,28 +32,59 @@ export const IconFlagFO: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='fo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='fo-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='fo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1879d6' />
-            <stop offset='100%' stopColor='#0f67bb' />
+          <linearGradient
+            id='fo-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1879d6' />
+            <stop offset='1' stopColor='#0f67bb' />
           </linearGradient>
-          <linearGradient id='fo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f13e4f' />
-            <stop offset='100%' stopColor='#eb2d3f' />
+          <linearGradient
+            id='fo-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f13e4f' />
+            <stop offset='1' stopColor='#eb2d3f' />
           </linearGradient>
+          <clipPath id='fo-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='fo-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#fo-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#fo-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#fo-b)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
-          <path fill='url(#fo-c)' d='M0 8h7v7h1V8h13V7H8V0H7v7H0z' />
+        <g clipPath='url(#fo-a)'>
+          <path fill='url(#fo-b)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#fo-c)'
+            fillRule='evenodd'
+            d='M0 9h6v6h3V9h12V6H9V0H6v6H0z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#fo-d)'
+            fillRule='evenodd'
+            d='M0 8h7v7h1V8h13V7H8V0H7v7H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

@@ -32,29 +32,60 @@ export const IconFlagLU: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='lu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='lu-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f14455' />
-            <stop offset='100%' stopColor='#eb2d3f' />
+          <linearGradient
+            id='lu-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f14455' />
+            <stop offset='1' stopColor='#eb2d3f' />
           </linearGradient>
-          <linearGradient id='lu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#29b4ee' />
-            <stop offset='100%' stopColor='#1aa3dc' />
+          <linearGradient
+            id='lu-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#29b4ee' />
+            <stop offset='1' stopColor='#1aa3dc' />
           </linearGradient>
+          <linearGradient
+            id='lu-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='lu-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='lu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#lu-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#lu-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#lu-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#lu-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#lu-a)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#lu-a)'>
+          <path fill='url(#lu-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#lu-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#lu-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#lu-e)' d='M21 5H0v5h21z' />
         </g>
       </g>
     </svg>

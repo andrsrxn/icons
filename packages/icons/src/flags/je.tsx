@@ -32,41 +32,74 @@ export const IconFlagJE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='je-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='je-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='je-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ef273f' />
-            <stop offset='100%' stopColor='#db1c33' />
+          <linearGradient
+            id='je-c'
+            x1='10.5'
+            x2='10.5'
+            y1='-1.44'
+            y2='16.43'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ef273f' />
+            <stop offset='1' stopColor='#db1c33' />
           </linearGradient>
-          <linearGradient id='je-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f22a41' />
-            <stop offset='100%' stopColor='#e51d34' />
+          <linearGradient
+            id='je-d'
+            x1='10.5'
+            x2='10.5'
+            y1='2'
+            y2='5.29'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f22a41' />
+            <stop offset='1' stopColor='#e51d34' />
           </linearGradient>
-          <linearGradient id='je-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fadf46' />
-            <stop offset='100%' stopColor='#f9dc38' />
+          <linearGradient
+            id='je-e'
+            x1='10.5'
+            x2='10.5'
+            y1='1'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fadf46' />
+            <stop offset='1' stopColor='#f9dc38' />
           </linearGradient>
+          <clipPath id='je-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='je-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#je-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#je-a)' d='M0 0h21v15H0z' />
-          <path
-            fill='url(#je-b)'
-            d='M10.5 6.291-.962-1.44-2.08.218l10.792 7.28-10.792 7.279 1.118 1.658L10.5 8.704l11.462 7.73 1.118-1.657-10.791-7.28L23.08.218 21.962-1.44z'
-          />
+        <g clipPath='url(#je-a)'>
+          <path fill='url(#je-b)' d='M21 0H0v15h21z' />
           <path
             fill='url(#je-c)'
-            d='M9 2.502c0-.279.216-.505.496-.505h2.009c.273 0 .495.214.495.505v.99c0 .28-.16.666-.348.853l-.804.804a.496.496 0 0 1-.696 0l-.804-.804A1.35 1.35 0 0 1 9 3.493z'
+            fillRule='evenodd'
+            d='M10.5 6.3-.96-1.45-2.08.22 8.72 7.5l-10.8 7.28 1.12 1.65L10.5 8.7l11.46 7.73 1.12-1.65-10.8-7.28L23.09.22l-1.12-1.66z'
+            clipRule='evenodd'
           />
           <path
             fill='url(#je-d)'
-            d='M10.5 3.997a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0-2c-.828 0-1.5-.224-1.5-.5s.672-.5 1.5-.5c.829 0 1.5.224 1.5.5s-.671.5-1.5.5'
+            fillRule='evenodd'
+            d='M9 2.5c0-.28.22-.5.5-.5h2c.28 0 .5.21.5.5v1c0 .27-.16.66-.35.85l-.8.8a.5.5 0 0 1-.7 0l-.8-.8c-.2-.2-.35-.57-.35-.86z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#je-e)'
+            fillRule='evenodd'
+            d='M10.5 4a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0-2C9.67 2 9 1.77 9 1.5c0-.28.67-.5 1.5-.5s1.5.22 1.5.5c0 .27-.67.5-1.5.5'
+            clipRule='evenodd'
           />
         </g>
       </g>

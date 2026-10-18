@@ -32,52 +32,136 @@ export const IconFlagSZ: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='sz-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='sz-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='sz-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#486bca' />
-            <stop offset='100%' stopColor='#3e5fba' />
+          <linearGradient
+            id='sz-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='3'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#486bca' />
+            <stop offset='1' stopColor='#3e5fba' />
           </linearGradient>
-          <linearGradient id='sz-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffdf20' />
-            <stop offset='100%' stopColor='#ffda00' />
+          <linearGradient
+            id='sz-d'
+            x1='10.5'
+            x2='10.5'
+            y1='12'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#486bca' />
+            <stop offset='1' stopColor='#3e5fba' />
           </linearGradient>
-          <linearGradient id='sz-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#cf1615' />
-            <stop offset='100%' stopColor='#b20d0c' />
+          <linearGradient
+            id='sz-e'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffdf20' />
+            <stop offset='1' stopColor='#ffda00' />
           </linearGradient>
-          <linearGradient id='sz-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='sz-f'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#cf1615' />
+            <stop offset='1' stopColor='#b20d0c' />
           </linearGradient>
-          <ellipse id='sz-e' cx='4.5' cy='2.5' rx='4.5' ry='2.5' />
+          <linearGradient
+            id='sz-g'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='sz-i' x1='8.5' x2='8.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
+          </linearGradient>
+          <clipPath id='sz-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='sz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#sz-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#sz-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#sz-b)' d='M0 0h21v3H0z' />
-          <path fill='url(#sz-b)' d='M0 12h21v3H0z' />
-          <path fill='url(#sz-c)' d='M0 3h21v9H0z' />
-          <path fill='url(#sz-d)' d='M0 4h21v7H0z' />
-          <g transform='translate(6 5)'>
-            <mask id='sz-g' fill='#fff'>
-              <use xlinkHref='#sz-e' />
-            </mask>
-            <use xlinkHref='#sz-e' fill='url(#sz-a)' />
+        <g clipPath='url(#sz-a)'>
+          <path fill='url(#sz-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#sz-c)' d='M21 0H0v3h21z' />
+          <path fill='url(#sz-d)' d='M21 12H0v3h21z' />
+          <path fill='url(#sz-e)' d='M21 3H0v9h21z' />
+          <path fill='url(#sz-f)' d='M21 4H0v7h21z' />
+          <path
+            fill='url(#sz-g)'
+            d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
+          />
+          <mask
+            id='sz-h'
+            width='9'
+            height='5'
+            x='6'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
             <path
-              fill='url(#sz-f)'
-              d='M0 0h5v5H1z'
-              mask='url(#sz-g)'
-              transform='matrix(-1 0 0 1 5 0)'
+              fill='#fff'
+              d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
             />
-            <circle cx='5.5' cy='2.5' r='1' fill='#1a1a1a' mask='url(#sz-g)' />
-            <circle cx='3.5' cy='2.5' r='1' fill='#f6f6f6' mask='url(#sz-g)' />
+          </mask>
+          <g mask='url(#sz-h)'>
+            <path fill='url(#sz-i)' fillRule='evenodd' d='M11 5H6v5h4z' clipRule='evenodd' />
+          </g>
+          <mask
+            id='sz-j'
+            width='9'
+            height='5'
+            x='6'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
+            />
+          </mask>
+          <g mask='url(#sz-j)'>
+            <path fill='#1a1a1a' d='M11.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
+          <mask
+            id='sz-k'
+            width='9'
+            height='5'
+            x='6'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
+            />
+          </mask>
+          <g mask='url(#sz-k)'>
+            <path fill='#f6f6f6' d='M9.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
         </g>
       </g>

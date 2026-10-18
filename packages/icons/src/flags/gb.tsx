@@ -32,37 +32,74 @@ export const IconFlagGB: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gb-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gb-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gb-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0a17a7' />
-            <stop offset='100%' stopColor='#030e88' />
+          <linearGradient
+            id='gb-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0a17a7' />
+            <stop offset='1' stopColor='#030e88' />
           </linearGradient>
-          <linearGradient id='gb-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e6273e' />
-            <stop offset='100%' stopColor='#cf152b' />
+          <linearGradient
+            id='gb-d'
+            x1='10.5'
+            x2='10.5'
+            y1='-1.44'
+            y2='16.44'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='gb-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e6273e' />
+            <stop offset='1' stopColor='#cf152b' />
+          </linearGradient>
+          <clipPath id='gb-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gb-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gb-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gb-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gb-b)' d='M-.002 0h21v15h-21z' />
+        <g clipPath='url(#gb-a)'>
+          <path fill='url(#gb-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gb-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#gb-a)'
-            d='M5.003 10H-.002V5h5.005L-2.082.22l1.118-1.657 8.962 6.045V-1h5v5.608l8.962-6.045L23.078.22 15.993 5h5.005v5h-5.005l7.085 4.78-1.118 1.657-8.962-6.045V16h-5v-5.608l-8.962 6.045-1.118-1.658z'
+            fill='url(#gb-d)'
+            fillRule='evenodd'
+            d='M5 10H0V5h5L-2.08.22l1.12-1.66L8 4.61V-1h5v5.6l8.96-6.04L23.08.22 15.99 5h5v5h-5l7.09 4.78-1.12 1.66L13 10.39V16H8v-5.6l-8.96 6.04-1.12-1.66z'
+            clipRule='evenodd'
           />
           <path
             fill='#db1f35'
-            fillRule='nonzero'
-            d='m14.136 4.958 9.5-6.25a.25.25 0 0 0-.275-.417l-9.5 6.25a.25.25 0 1 0 .275.417M14.868 10.48l8.515 5.74a.25.25 0 1 0 .28-.415l-8.516-5.74a.25.25 0 0 0-.279.415M6.142 4.526-2.74-1.461a.25.25 0 0 0-.28.415L5.863 4.94a.25.25 0 0 0 .279-.414M6.827 9.995l-9.845 6.53a.25.25 0 1 0 .276.416l9.846-6.529a.25.25 0 0 0-.277-.417'
+            d='m14.14 4.96 9.5-6.25a.25.25 0 1 0-.28-.42l-9.5 6.25a.25.25 0 1 0 .28.42m.73 5.52 8.51 5.74a.25.25 0 0 0 .28-.41l-8.51-5.74a.25.25 0 1 0-.28.41M6.14 4.53l-8.88-6a.25.25 0 0 0-.28.42l8.88 5.99a.25.25 0 0 0 .28-.41M6.83 10l-9.85 6.52a.25.25 0 1 0 .28.42l9.84-6.53a.25.25 0 1 0-.27-.41'
           />
-          <path fill='url(#gb-c)' d='M-.002 9h9v6h3V9h9V6h-9V0h-3v6h-9z' />
+          <path
+            fill='url(#gb-e)'
+            fillRule='evenodd'
+            d='M0 9h9v6h3V9h9V6h-9V0H9v6H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

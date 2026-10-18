@@ -32,27 +32,62 @@ export const IconFlagAR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ar-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ar-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ar-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#88bbe8' />
-            <stop offset='100%' stopColor='#76addd' />
+          <linearGradient
+            id='ar-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#88bbe8' />
+            <stop offset='1' stopColor='#76addd' />
           </linearGradient>
+          <linearGradient
+            id='ar-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#88bbe8' />
+            <stop offset='1' stopColor='#76addd' />
+          </linearGradient>
+          <linearGradient
+            id='ar-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='ar-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ar-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ar-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ar-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ar-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#ar-b)' d='M0 10h21v5H0z' />
-          <path fill='url(#ar-a)' d='M0 5h21v5H0z' />
-          <path fill='#db7a2c' fillRule='nonzero' d='M10.5 9.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4' />
-          <circle cx='10.5' cy='7.5' r='1.5' fill='#f4b32e' />
+        <g clipPath='url(#ar-a)'>
+          <path fill='url(#ar-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ar-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#ar-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#ar-e)' d='M21 5H0v5h21z' />
+          <path fill='#db7a2c' d='M10.5 9.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4' />
+          <path fill='#f4b32e' d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3' />
         </g>
       </g>
     </svg>

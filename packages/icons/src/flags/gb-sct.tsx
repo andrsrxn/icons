@@ -32,26 +32,53 @@ export const IconFlagGBSCT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gb-sct-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gb-sct-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gb-sct-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1479d0' />
-            <stop offset='100%' stopColor='#0a68ba' />
+          <linearGradient
+            id='gb-sct-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1479d0' />
+            <stop offset='1' stopColor='#0a68ba' />
           </linearGradient>
+          <linearGradient
+            id='gb-sct-d'
+            x1='10.5'
+            x2='10.5'
+            y1='-1.44'
+            y2='16.43'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='gb-sct-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gb-sct-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gb-sct-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gb-sct-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gb-sct-b)' d='M0-.003h21v15H0z' />
+        <g clipPath='url(#gb-sct-a)'>
+          <path fill='url(#gb-sct-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gb-sct-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#gb-sct-a)'
-            d='M10.5 6.291-.962-1.44-2.08.218l10.792 7.28-10.792 7.279 1.118 1.658L10.5 8.704l11.462 7.73 1.118-1.657-10.791-7.28L23.08.218 21.962-1.44z'
+            fill='url(#gb-sct-d)'
+            fillRule='evenodd'
+            d='M10.5 6.3-.96-1.45-2.08.22 8.72 7.5l-10.8 7.28 1.12 1.65L10.5 8.7l11.46 7.73 1.12-1.65-10.8-7.28L23.09.22l-1.12-1.66z'
+            clipRule='evenodd'
           />
         </g>
       </g>

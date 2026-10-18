@@ -32,29 +32,54 @@ export const IconFlagIT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='it-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='it-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='it-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e43d4c' />
-            <stop offset='100%' stopColor='#cc2e3c' />
+          <linearGradient
+            id='it-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e43d4c' />
+            <stop offset='1' stopColor='#cc2e3c' />
           </linearGradient>
-          <linearGradient id='it-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1bb65d' />
-            <stop offset='100%' stopColor='#139149' />
+          <linearGradient id='it-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1bb65d' />
+            <stop offset='1' stopColor='#139149' />
           </linearGradient>
+          <linearGradient
+            id='it-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='it-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='it-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#it-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#it-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#it-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#it-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#it-a)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#it-a)'>
+          <path fill='url(#it-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#it-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#it-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#it-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

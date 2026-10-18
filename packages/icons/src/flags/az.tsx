@@ -32,36 +32,75 @@ export const IconFlagAZ: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='az-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='az-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='az-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#24aad5' />
-            <stop offset='100%' stopColor='#1899c2' />
+          <linearGradient
+            id='az-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#24aad5' />
+            <stop offset='1' stopColor='#1899c2' />
           </linearGradient>
-          <linearGradient id='az-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ed1845' />
-            <stop offset='100%' stopColor='#de0c39' />
+          <linearGradient
+            id='az-d'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ed1845' />
+            <stop offset='1' stopColor='#de0c39' />
           </linearGradient>
-          <linearGradient id='az-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#21bf75' />
-            <stop offset='100%' stopColor='#19ad68' />
+          <linearGradient
+            id='az-e'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#21bf75' />
+            <stop offset='1' stopColor='#19ad68' />
           </linearGradient>
+          <linearGradient
+            id='az-f'
+            x1='10.5'
+            x2='10.5'
+            y1='6'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='az-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='az-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#az-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#az-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#az-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#az-c)' d='M0 5h21v5H0z' />
-          <path fill='url(#az-d)' d='M0 10h21v5H0z' />
+        <g clipPath='url(#az-a)'>
+          <path fill='url(#az-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#az-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#az-d)' d='M21 5H0v5h21z' />
+          <path fill='url(#az-e)' d='M21 10H0v5h21z' />
           <path
-            fill='url(#az-a)'
-            d='m11.334 6.253-.084-.003a1.25 1.25 0 1 0 .084 2.497 1.5 1.5 0 1 1 0-2.495M11.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#az-f)'
+            fillRule='evenodd'
+            d='M11.33 6.25h-.08a1.25 1.25 0 1 0 .08 2.5 1.5 1.5 0 1 1 0-2.5M11.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

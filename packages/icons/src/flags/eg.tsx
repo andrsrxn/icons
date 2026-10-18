@@ -32,38 +32,70 @@ export const IconFlagEG: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='eg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='eg-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='eg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e41d33' />
-            <stop offset='100%' stopColor='#ce1126' />
+          <linearGradient
+            id='eg-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e41d33' />
+            <stop offset='1' stopColor='#ce1126' />
           </linearGradient>
-          <linearGradient id='eg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='eg-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
+          <linearGradient
+            id='eg-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='eg-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='eg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#eg-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#eg-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#eg-b)' d='M0 0h21v5H0z' />
-          <path fill='url(#eg-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#eg-a)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#eg-a)'>
+          <path fill='url(#eg-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#eg-c)' d='M21 0H0v5h21z' />
+          <path fill='url(#eg-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#eg-e)' d='M21 5H0v5h21z' />
           <path
             fill='#f4b32e'
             fillOpacity='.25'
-            d='M8 6.495C8 6.222 8.232 6 8.5 6h.248c.139 0 .298.092.368.232L9.5 7s.55-1 1-1c.5 0 1 1 1 1l.384-.768A.45.45 0 0 1 12.252 6h.248c.276 0 .5.216.5.495v2.01c0 .273-.184.372-.41.222L11.5 8H11v.5c0 .276-.232.5-.5.5a.505.505 0 0 1-.5-.5V8h-.5l-1.09.727c-.226.15-.41.057-.41-.222z'
+            fillRule='evenodd'
+            d='M8 6.5c0-.28.23-.5.5-.5h.25c.14 0 .3.1.37.23L9.5 7s.55-1 1-1c.5 0 1 1 1 1l.38-.77a.4.4 0 0 1 .37-.23h.25c.28 0 .5.22.5.5v2c0 .28-.18.38-.41.23L11.5 8H11v.5a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5V8h-.5l-1.09.73c-.23.15-.41.05-.41-.23z'
+            clipRule='evenodd'
           />
           <path
             fill='#c6a846'
-            fillRule='nonzero'
-            d='M12.5 8.066V6.5h-.191l-.54 1.079zM8.691 6.5h-.19L8.5 6.495v1.57l.73-.486zm1.809 1v1zh.691l-.138-.276c-.05-.1-.146-.265-.266-.424-.12-.16-.23-.26-.271-.29a1.4 1.4 0 0 0-.29.296c-.126.163-.23.33-.288.435l-.142.259zm.874-.724c.08.13.126.224.126.224l.112-.224s.231-.195.157-.313l.115-.231A.45.45 0 0 1 12.252 6h.248c.276 0 .5.216.5.495v2.01c0 .273-.184.372-.41.222L11.5 8H11v.5c0 .276-.232.5-.5.5a.505.505 0 0 1-.5-.5V8h-.5l-1.09.727c-.226.15-.41.057-.41-.222v-2.01C8 6.222 8.232 6 8.5 6h.248c.139 0 .298.092.368.232l.12.24c-.071.108.147.293.147.293L9.5 7s.053-.097.14-.23l.178-.253c.195-.255.451-.517.682-.517.25 0 .502.252.69.503z'
+            d='M12.5 8.07V6.5h-.2l-.53 1.08zM8.7 6.5h-.2v1.57l.73-.5zm1.8 1h.7l-.15-.28a3 3 0 0 0-.26-.42l-.27-.29q-.12.08-.3.3-.19.26-.28.43l-.14.26zm.87-.72.13.22.11-.22s.23-.2.16-.32l.11-.23a.4.4 0 0 1 .37-.23h.25c.28 0 .5.22.5.5v2c0 .28-.18.38-.41.23L11.5 8H11v.5a.5.5 0 0 1-.5.5.5.5 0 0 1-.5-.5V8h-.5l-1.09.73c-.23.15-.41.05-.41-.23v-2c0-.28.23-.5.5-.5h.25c.14 0 .3.1.37.23l.12.24c-.08.11.14.3.14.3L9.5 7l.14-.23.18-.25c.2-.26.45-.52.68-.52.25 0 .5.25.69.5z'
           />
         </g>
       </g>

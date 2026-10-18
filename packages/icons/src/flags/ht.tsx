@@ -32,63 +32,143 @@ export const IconFlagHT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ht-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ht-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ht-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#112ebc' />
-            <stop offset='100%' stopColor='#0620a0' />
+          <linearGradient
+            id='ht-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='7'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#112ebc' />
+            <stop offset='1' stopColor='#0620a0' />
           </linearGradient>
-          <linearGradient id='ht-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e3264a' />
-            <stop offset='100%' stopColor='#d20f34' />
+          <linearGradient
+            id='ht-d'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e3264a' />
+            <stop offset='1' stopColor='#d20f34' />
           </linearGradient>
-          <path
-            id='ht-f'
-            d='m0 5 1.105-.553C1.6 4.2 2.443 4 3 4h1.002c.552 0 1.404.202 1.894.447L7 5v1H0z'
-          />
-          <path
-            id='ht-g'
-            d='M1 3.006c0-.28.18-.362.39-.193l1.72 1.374a.66.66 0 0 0 .78 0l1.72-1.375c.215-.172.39-.081.39.194v1.488c0 .28-.215.506-.498.506H1.498A.505.505 0 0 1 1 4.494z'
-          />
-          <rect id='ht-d' width='7' height='6' x='0' y='0' rx='.5' />
+          <linearGradient
+            id='ht-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='ht-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ht-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ht-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ht-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ht-b)' d='M0 0h21v7H0z' />
-          <path fill='url(#ht-c)' d='M0 7h21v8H0z' />
-          <g transform='translate(7 5)'>
-            <mask id='ht-e' fill='#fff'>
-              <use xlinkHref='#ht-d' />
-            </mask>
-            <use xlinkHref='#ht-d' fill='url(#ht-a)' />
-            <g mask='url(#ht-e)'>
-              <use xlinkHref='#ht-f' fill='#aabcae' />
-              <path
-                stroke='#366c14'
-                strokeWidth='.5'
-                d='M.25 5.155v.595h6.5v-.595l-.967-.484C5.326 4.443 4.513 4.25 4 4.25H2.999c-.516 0-1.321.19-1.782.421z'
-              />
-            </g>
-            <circle cx='3.5' cy='2.5' r='1.5' fill='#d4b872' mask='url(#ht-e)' />
-            <g mask='url(#ht-e)'>
-              <use xlinkHref='#ht-g' fill='#c28321' />
-              <path
-                stroke='#0d3488'
-                strokeWidth='.5'
-                d='M1.25 3.02v1.474c0 .14.114.256.248.256h4.004c.14 0 .248-.11.248-.256V3.02L4.047 4.383a.91.91 0 0 1-1.094 0z'
-              />
-            </g>
+        <g clipPath='url(#ht-a)'>
+          <path fill='url(#ht-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ht-c)' d='M21 0H0v7h21z' />
+          <path fill='url(#ht-d)' d='M21 7H0v8h21z' />
+          <path
+            fill='url(#ht-e)'
+            d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
+          />
+          <mask
+            id='ht-f'
+            width='7'
+            height='6'
+            x='7'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
+            />
+          </mask>
+          <g mask='url(#ht-f)'>
+            <path fill='#aabcae' d='m7 10 1.1-.55A5 5 0 0 1 10 9h1c.55 0 1.4.2 1.9.45L14 10v1H7z' />
+            <path
+              stroke='#366c14'
+              strokeWidth='.5'
+              d='M7.25 10.15v.6h6.5v-.6l-.97-.48A5 5 0 0 0 11 9.25h-1c-.52 0-1.32.2-1.78.42z'
+            />
+          </g>
+          <mask
+            id='ht-g'
+            width='7'
+            height='6'
+            x='7'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
+            />
+          </mask>
+          <g mask='url(#ht-g)'>
+            <path fill='#d4b872' d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3' />
+          </g>
+          <mask
+            id='ht-h'
+            width='7'
+            height='6'
+            x='7'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
+            />
+          </mask>
+          <g mask='url(#ht-h)'>
+            <path
+              fill='#c28321'
+              d='M8 8c0-.27.18-.36.4-.19l1.7 1.38a.7.7 0 0 0 .8 0l1.7-1.38c.23-.17.4-.08.4.2v1.48a.5.5 0 0 1-.5.51h-4a.5.5 0 0 1-.5-.5z'
+            />
+            <path
+              stroke='#0d3488'
+              strokeWidth='.5'
+              d='M8.25 8.02v1.47c0 .14.11.26.25.26h4q.23-.02.25-.26V8.02l-1.7 1.36a.9.9 0 0 1-1.1 0z'
+            />
+          </g>
+          <mask
+            id='ht-i'
+            width='7'
+            height='6'
+            x='7'
+            y='5'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
+            />
+          </mask>
+          <g mask='url(#ht-i)'>
             <path
               fill='#216c30'
-              d='M2.172 1.172C2.077 1.077 2.114 1 2.256 1h2.488c.141 0 .175.08.084.172L3.672 2.328a.247.247 0 0 1-.344 0z'
-              mask='url(#ht-e)'
+              fillRule='evenodd'
+              d='M9.17 6.17q-.14-.16.09-.17h2.48q.23.02.09.17l-1.16 1.16c-.1.1-.25.09-.34 0z'
+              clipRule='evenodd'
             />
           </g>
         </g>

@@ -32,45 +32,83 @@ export const IconFlagZA: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='za-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='za-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='za-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#06a86e' />
-            <stop offset='100%' stopColor='#007a4e' />
+          <linearGradient
+            id='za-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#06a86e' />
+            <stop offset='1' stopColor='#007a4e' />
           </linearGradient>
-          <linearGradient id='za-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffbf2e' />
-            <stop offset='100%' stopColor='#ffb612' />
+          <linearGradient id='za-d' x1='3.5' x2='3.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffbf2e' />
+            <stop offset='1' stopColor='#ffb612' />
           </linearGradient>
-          <linearGradient id='za-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='za-e'
+            x1='2.38'
+            x2='2.38'
+            y1='2.25'
+            y2='12.75'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='za-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f44e46' />
-            <stop offset='100%' stopColor='#df3931' />
+          <linearGradient
+            id='za-f'
+            x1='12.13'
+            x2='12.13'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f44e46' />
+            <stop offset='1' stopColor='#df3931' />
           </linearGradient>
-          <linearGradient id='za-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#072cb4' />
-            <stop offset='100%' stopColor='#042396' />
+          <linearGradient
+            id='za-g'
+            x1='12.13'
+            x2='12.13'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#072cb4' />
+            <stop offset='1' stopColor='#042396' />
           </linearGradient>
+          <clipPath id='za-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='za-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#za-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#za-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#za-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#za-c)' d='m0 2 7 5.5L0 13z' />
-          <path fill='url(#za-d)' d='M-1 2.25 5.75 7.5-1 12.75z' />
-          <path fill='#fff' d='M9 6 2 0h19v6z' />
-          <path fill='url(#za-e)' d='m9.25 5-6-5H21v5z' />
-          <path fill='#fff' d='M2 15h19V9H9z' />
-          <path fill='url(#za-f)' d='M3.25 15H21v-5H9.25z' />
+        <g clipPath='url(#za-a)'>
+          <path fill='url(#za-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#za-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#za-d)' fillRule='evenodd' d='m0 2 7 5.5L0 13z' clipRule='evenodd' />
+          <path
+            fill='url(#za-e)'
+            fillRule='evenodd'
+            d='M-1 2.25 5.75 7.5-1 12.75z'
+            clipRule='evenodd'
+          />
+          <path fill='#fff' fillRule='evenodd' d='M9 6 2 0h19v6z' clipRule='evenodd' />
+          <path fill='url(#za-f)' fillRule='evenodd' d='m9.25 5-6-5H21v5z' clipRule='evenodd' />
+          <path fill='#fff' fillRule='evenodd' d='M2 15h19V9H9z' clipRule='evenodd' />
+          <path fill='url(#za-g)' fillRule='evenodd' d='M3.25 15H21v-5H9.25z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

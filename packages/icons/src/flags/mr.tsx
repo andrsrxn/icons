@@ -32,30 +32,53 @@ export const IconFlagMR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mr-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#108b4d' />
-            <stop offset='100%' stopColor='#0a6135' />
+          <linearGradient
+            id='mr-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#108b4d' />
+            <stop offset='1' stopColor='#0a6135' />
           </linearGradient>
-          <linearGradient id='mr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffc941' />
-            <stop offset='100%' stopColor='#ffc42e' />
+          <linearGradient
+            id='mr-d'
+            x1='10.42'
+            x2='10.42'
+            y1='3.5'
+            y2='11.01'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffc941' />
+            <stop offset='1' stopColor='#ffc42e' />
           </linearGradient>
+          <clipPath id='mr-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mr-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mr-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mr-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#mr-a)'>
+          <path fill='url(#mr-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mr-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#mr-c)'
-            d='M14.86 5.8q.056.346.056.708A4.5 4.5 0 1 1 5.97 5.8a4.501 4.501 0 0 0 8.89 0m-4.36.623-1.236.881.456-1.448-1.22-.903 1.518-.014L10.5 3.5l.482 1.44 1.518.013-1.22.903.456 1.448z'
+            fill='url(#mr-d)'
+            fillRule='evenodd'
+            d='M14.86 5.8q.06.35.06.7a4.5 4.5 0 1 1-8.95-.7 4.5 4.5 0 0 0 8.89 0m-4.36.62-1.24.88.46-1.44-1.22-.9 1.52-.02.48-1.44.48 1.44 1.52.01-1.22.9.46 1.45z'
+            clipRule='evenodd'
           />
         </g>
       </g>

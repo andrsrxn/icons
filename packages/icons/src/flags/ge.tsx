@@ -32,26 +32,48 @@ export const IconFlagGE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ge-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ge-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ge-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff2b37' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='ge-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff2b37' />
+            <stop offset='1' stopColor='#fd0d1b' />
           </linearGradient>
+          <clipPath id='ge-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ge-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ge-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ge-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ge-b)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
+        <g clipPath='url(#ge-a)'>
+          <path fill='url(#ge-b)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#ge-c)'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
+          />
           <path
             fill='#fd0d1b'
-            d='M16.2 2.7 16 1.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1zM4.2 2.7 4 1.5h1l-.2 1.2L6 2.5v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1zM4.2 11.7 4 10.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1zM16.2 11.7l-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1z'
+            fillRule='evenodd'
+            d='M16.2 2.7 16 1.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1zm-12 0L4 1.5h1l-.2 1.2L6 2.5v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1zm0 9L4 10.5h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2H4l.2-1.2-1.2.2v-1zm12 0-.2-1.2h1l-.2 1.2 1.2-.2v1l-1.2-.2.2 1.2h-1l.2-1.2-1.2.2v-1z'
+            clipRule='evenodd'
           />
         </g>
       </g>

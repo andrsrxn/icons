@@ -32,131 +32,391 @@ export const IconFlagGS: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gs-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gs-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gs-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#07319c' />
-            <stop offset='100%' stopColor='#00247e' />
+          <linearGradient
+            id='gs-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#07319c' />
+            <stop offset='1' stopColor='#00247e' />
           </linearGradient>
-          <linearGradient id='gs-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#db1e36' />
-            <stop offset='100%' stopColor='#d51931' />
+          <linearGradient
+            id='gs-d'
+            x1='4.07'
+            x2='4.07'
+            y1='-.9'
+            y2='7.9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gs-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1e1e1e' />
-            <stop offset='100%' />
+          <linearGradient id='gs-e' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#db1e36' />
+            <stop offset='1' stopColor='#d51931' />
           </linearGradient>
-          <linearGradient id='gs-h' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#a2adb0' />
-            <stop offset='100%' stopColor='#8b9497' />
+          <linearGradient
+            id='gs-f'
+            x1='4.75'
+            x2='4.75'
+            y1='0'
+            y2='7.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gs-i' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#4f4f4f' />
-            <stop offset='100%' stopColor='#2b2b2b' />
+          <linearGradient id='gs-g' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#db1e36' />
+            <stop offset='1' stopColor='#d51931' />
           </linearGradient>
-          <linearGradient id='gs-k' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fec241' />
-            <stop offset='100%' stopColor='#febb2c' />
+          <linearGradient
+            id='gs-h'
+            x1='18.5'
+            x2='18.5'
+            y1='8'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1e1e1e' />
+            <stop offset='1' />
           </linearGradient>
-          <linearGradient id='gs-l' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#a84b14' />
-            <stop offset='100%' stopColor='#913f0e' />
+          <linearGradient
+            id='gs-j'
+            x1='18'
+            x2='18'
+            y1='8.5'
+            y2='11.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gs-m' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#cfb063' />
-            <stop offset='100%' stopColor='#bea157' />
+          <linearGradient
+            id='gs-k'
+            x1='14.5'
+            x2='14.5'
+            y1='8'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#a2adb0' />
+            <stop offset='1' stopColor='#8b9497' />
           </linearGradient>
-          <linearGradient id='gs-n' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#2d42ff' />
-            <stop offset='100%' stopColor='#0b24fc' />
+          <linearGradient
+            id='gs-m'
+            x1='15'
+            x2='15'
+            y1='8.5'
+            y2='11.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#4f4f4f' />
+            <stop offset='1' stopColor='#2b2b2b' />
           </linearGradient>
-          <linearGradient id='gs-o' x1='0%' x2='100%' y1='0%' y2='50%'>
-            <stop offset='0%' stopColor='#e3dc3d' />
-            <stop offset='100%' stopColor='#cfc82a' />
+          <linearGradient
+            id='gs-n'
+            x1='16.5'
+            x2='16.5'
+            y1='12'
+            y2='12.8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fec241' />
+            <stop offset='1' stopColor='#febb2c' />
           </linearGradient>
-          <linearGradient id='gs-p' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#7f7d7d' />
-            <stop offset='100%' stopColor='#656263' />
+          <linearGradient
+            id='gs-o'
+            x1='18.5'
+            x2='18.5'
+            y1='4.5'
+            y2='6.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gs-s' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0f8012' />
-            <stop offset='100%' stopColor='#0b6a0d' />
+          <linearGradient
+            id='gs-p'
+            x1='16.5'
+            x2='16.5'
+            y1='3.5'
+            y2='5.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#a84b14' />
+            <stop offset='1' stopColor='#913f0e' />
           </linearGradient>
-          <linearGradient id='gs-t' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffcf44' />
-            <stop offset='100%' stopColor='#fcc72e' />
-          </linearGradient>
-          <ellipse id='gs-d' cx='.5' cy='1.5' rx='1' ry='1.5' />
-          <ellipse id='gs-g' cx='.5' cy='1.5' rx='1' ry='1.5' />
-          <path
+          <linearGradient
             id='gs-q'
-            d='M.007.506A.49.49 0 0 1 .495 0h2.01c.273 0 .498.23.502.506L3.03 2.25a.52.52 0 0 1-.207.388l-1.095.722a.41.41 0 0 1-.417 0L.24 2.639a.53.53 0 0 1-.21-.388z'
-          />
+            x1='16.5'
+            x2='16.5'
+            y1='2.75'
+            y2='4.75'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#cfb063' />
+            <stop offset='1' stopColor='#bea157' />
+          </linearGradient>
+          <linearGradient
+            id='gs-r'
+            x1='16.5'
+            x2='16.5'
+            y1='10.5'
+            y2='12.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gs-s'
+            x1='14.5'
+            x2='14.5'
+            y1='4.5'
+            y2='6.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gs-t'
+            x1='15'
+            x2='15'
+            y1='5.5'
+            y2='7.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2d42ff' />
+            <stop offset='1' stopColor='#0b24fc' />
+          </linearGradient>
+          <linearGradient
+            id='gs-u'
+            x1='18'
+            x2='18'
+            y1='5.5'
+            y2='7.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2d42ff' />
+            <stop offset='1' stopColor='#0b24fc' />
+          </linearGradient>
+          <linearGradient id='gs-v' x1='18' x2='20' y1='7' y2='8' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e3dc3d' />
+            <stop offset='1' stopColor='#cfc82a' />
+          </linearGradient>
+          <linearGradient
+            id='gs-w'
+            x1='16.5'
+            x2='16.5'
+            y1='5'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#7f7d7d' />
+            <stop offset='1' stopColor='#656263' />
+          </linearGradient>
+          <linearGradient
+            id='gs-x'
+            x1='16.52'
+            x2='16.52'
+            y1='8'
+            y2='11.42'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gs-B'
+            x1='16.5'
+            x2='16.5'
+            y1='8'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0f8012' />
+            <stop offset='1' stopColor='#0b6a0d' />
+          </linearGradient>
+          <linearGradient
+            id='gs-D'
+            x1='16.5'
+            x2='16.5'
+            y1='8.5'
+            y2='10.5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffcf44' />
+            <stop offset='1' stopColor='#fcc72e' />
+          </linearGradient>
+          <clipPath id='gs-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gs-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gs-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gs-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gs-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#gs-a)'>
+          <path fill='url(#gs-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gs-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#gs-a)'
-            fillRule='nonzero'
-            d='M3 3.23-1.352-.5H.66L4.16 2h.697L9.5-.902V.25c0 .303-.167.627-.418.806L6 3.257v.513l3.137 2.69c.462.395.204 1.04-.387 1.04-.245 0-.545-.096-.75-.242L4.84 5h-.697L-.5 7.902v-1.66l3.5-2.5z'
+            fill='url(#gs-d)'
+            d='M3 3.23-1.35-.5H.66L4.16 2h.7L9.5-.9V.25c0 .3-.17.63-.42.8L6 3.26v.52l3.14 2.69c.46.4.2 1.04-.39 1.04-.25 0-.54-.1-.75-.24L4.84 5h-.7L-.5 7.9V6.24L3 3.74z'
           />
           <path
-            fill='url(#gs-c)'
-            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25a.54.54 0 0 1-.208.399L5.5 3v1l3.312 2.839c.104.089.072.161-.062.161a.9.9 0 0 1-.458-.149L5 4.5H4L0 7v-.5L3.5 4z'
+            fill='url(#gs-e)'
+            fillRule='evenodd'
+            d='M3.5 3 0 0h.5L4 2.5h1L9 0v.25c0 .14-.09.31-.2.4L5.5 3v1l3.31 2.84q.14.15-.06.16a1 1 0 0 1-.46-.15L5 4.5H4L0 7v-.5L3.5 4z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#gs-a)'
-            d='M0 2.5v2h3.5v2.505c0 .273.214.495.505.495h.99a.496.496 0 0 0 .505-.495V4.5h3.51a.49.49 0 0 0 .49-.505v-.99a.495.495 0 0 0-.49-.505H5.5V0h-2v2.5z'
+            fill='url(#gs-f)'
+            fillRule='evenodd'
+            d='M0 2.5v2h3.5V7c0 .28.21.5.5.5h1a.5.5 0 0 0 .5-.5V4.5h3.51c.27 0 .49-.21.49-.5V3a.5.5 0 0 0-.49-.5H5.5V0h-2v2.5z'
+            clipRule='evenodd'
           />
-          <path fill='url(#gs-c)' d='M0 3h4V0h1v3h4v1H5v3H4V4H0z' />
-          <g transform='translate(18 8)'>
-            <mask id='gs-f' fill='#fff'>
-              <use xlinkHref='#gs-d' />
-            </mask>
-            <use xlinkHref='#gs-d' fill='url(#gs-e)' />
-            <ellipse cy='2' fill='url(#gs-a)' mask='url(#gs-f)' rx='1' ry='1.5' />
-          </g>
-          <g transform='translate(14 8)'>
-            <mask id='gs-j' fill='#fff'>
-              <use xlinkHref='#gs-g' />
-            </mask>
-            <use xlinkHref='#gs-g' fill='url(#gs-h)' />
-            <ellipse cx='1' cy='2' fill='url(#gs-i)' mask='url(#gs-j)' rx='1' ry='1.5' />
+          <path
+            fill='url(#gs-g)'
+            fillRule='evenodd'
+            d='M0 3h4V0h1v3h4v1H5v3H4V4H0z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#gs-h)'
+            d='M18.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
+          />
+          <mask
+            id='gs-i'
+            width='3'
+            height='3'
+            x='17'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M18.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
+            />
+          </mask>
+          <g mask='url(#gs-i)'>
+            <path
+              fill='url(#gs-j)'
+              d='M18 11.5c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
+            />
           </g>
           <path
             fill='url(#gs-k)'
-            d='M16.5 12.5c.828.5 1.5.276 1.5 0s-.672-.5-1.5-.5-1.5.224-1.5.5.672.5 1.5 0'
+            d='M14.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
           />
-          <circle cx='18.5' cy='5.5' r='1' fill='url(#gs-a)' />
-          <circle cx='16.5' cy='4.5' r='1' fill='url(#gs-l)' />
-          <circle cx='16.5' cy='3.75' r='1' fill='url(#gs-m)' />
-          <circle cx='16.5' cy='11.5' r='1' fill='url(#gs-a)' />
-          <circle cx='14.5' cy='5.5' r='1' fill='url(#gs-a)' />
-          <circle cx='15' cy='6.5' r='1' fill='url(#gs-n)' />
-          <circle cx='18' cy='6.5' r='1' fill='url(#gs-n)' />
-          <circle cx='19' cy='8' r='1' fill='url(#gs-o)' />
-          <path fill='url(#gs-p)' d='m16 7.5-.5.5h2l-.5-.5.5-1.5s-.448-1-1-1-1 1-1 1z' />
+          <mask
+            id='gs-l'
+            width='3'
+            height='3'
+            x='13'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M14.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
+            />
+          </mask>
+          <g mask='url(#gs-l)'>
+            <path
+              fill='url(#gs-m)'
+              d='M15 11.5c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
+            />
+          </g>
+          <path
+            fill='url(#gs-n)'
+            fillRule='evenodd'
+            d='M16.5 12.5c.83.5 1.5.28 1.5 0s-.67-.5-1.5-.5-1.5.22-1.5.5.67.5 1.5 0'
+            clipRule='evenodd'
+          />
+          <path fill='url(#gs-o)' d='M18.5 6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-p)' d='M16.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-q)' d='M16.5 4.75a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-r)' d='M16.5 12.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-s)' d='M14.5 6.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-t)' d='M15 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-u)' d='M18 7.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path fill='url(#gs-v)' d='M19 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          <path
+            fill='url(#gs-w)'
+            fillRule='evenodd'
+            d='m16 7.5-.5.5h2l-.5-.5.5-1.5s-.45-1-1-1-1 1-1 1z'
+            clipRule='evenodd'
+          />
           <path
             fill='#5d0543'
-            d='M16.5 6.5s.5-.112.5-.38c0-.008-.5-.12-.5-.12s-.5.112-.5.12c0 .268.5.38.5.38'
+            fillRule='evenodd'
+            d='M16.5 6.5s.5-.11.5-.38L16.5 6l-.5.12c0 .27.5.38.5.38'
+            clipRule='evenodd'
           />
-          <g transform='translate(15 8)'>
-            <mask id='gs-r' fill='#fff'>
-              <use xlinkHref='#gs-q' />
-            </mask>
-            <use xlinkHref='#gs-q' fill='url(#gs-a)' />
-            <circle cx='2.5' cy='2.5' r='1' fill='#225da4' mask='url(#gs-r)' />
-            <circle cx='.5' cy='1.5' r='1' fill='#225da4' mask='url(#gs-r)' />
-            <path fill='url(#gs-s)' d='M0 0h3L1.5 3z' mask='url(#gs-r)' />
-            <circle cx='1.5' cy='1.5' r='1' fill='url(#gs-t)' mask='url(#gs-r)' />
+          <path
+            fill='url(#gs-x)'
+            d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
+          />
+          <mask
+            id='gs-y'
+            width='4'
+            height='4'
+            x='15'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
+            />
+          </mask>
+          <g mask='url(#gs-y)'>
+            <path fill='#225da4' d='M17.5 11.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
+          <mask
+            id='gs-z'
+            width='4'
+            height='4'
+            x='15'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
+            />
+          </mask>
+          <g mask='url(#gs-z)'>
+            <path fill='#225da4' d='M15.5 10.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+          </g>
+          <mask
+            id='gs-A'
+            width='4'
+            height='4'
+            x='15'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
+            />
+          </mask>
+          <g mask='url(#gs-A)'>
+            <path fill='url(#gs-B)' fillRule='evenodd' d='M15 8h3l-1.5 3z' clipRule='evenodd' />
+          </g>
+          <mask
+            id='gs-C'
+            width='4'
+            height='4'
+            x='15'
+            y='8'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path
+              fill='#fff'
+              d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
+            />
+          </mask>
+          <g mask='url(#gs-C)'>
+            <path fill='url(#gs-D)' d='M16.5 10.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
         </g>
       </g>

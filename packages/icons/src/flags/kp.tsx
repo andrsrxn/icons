@@ -32,33 +32,80 @@ export const IconFlagKP: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='kp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='kp-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='kp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1461b6' />
-            <stop offset='100%' stopColor='#0b52a1' />
+          <linearGradient
+            id='kp-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='3'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1461b6' />
+            <stop offset='1' stopColor='#0b52a1' />
           </linearGradient>
-          <linearGradient id='kp-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f53846' />
-            <stop offset='100%' stopColor='#eb2130' />
+          <linearGradient
+            id='kp-d'
+            x1='10.5'
+            x2='10.5'
+            y1='12'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1461b6' />
+            <stop offset='1' stopColor='#0b52a1' />
           </linearGradient>
+          <linearGradient
+            id='kp-e'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='kp-f'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f53846' />
+            <stop offset='1' stopColor='#eb2130' />
+          </linearGradient>
+          <linearGradient id='kp-g' x1='7.5' x2='7.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='kp-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='kp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#kp-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#kp-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#kp-b)' d='M0 0h21v3H0z' />
-          <path fill='url(#kp-b)' d='M0 12h21v3H0z' />
-          <path fill='url(#kp-a)' d='M0 3h21v9H0z' />
-          <path fill='url(#kp-c)' d='M0 4h21v7H0z' />
+        <g clipPath='url(#kp-a)'>
+          <path fill='url(#kp-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#kp-c)' d='M21 0H0v3h21z' />
+          <path fill='url(#kp-d)' d='M21 12H0v3h21z' />
+          <path fill='url(#kp-e)' d='M21 3H0v9h21z' />
+          <path fill='url(#kp-f)' d='M21 4H0v7h21z' />
           <path
-            fill='url(#kp-a)'
-            d='M7.5 10a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0-1.497 1.47 1.02-.516-1.713 1.424-1.083-1.788-.039L7.5 5l-.59 1.688-1.788.04L6.546 7.81 6.03 9.523z'
+            fill='url(#kp-g)'
+            fillRule='evenodd'
+            d='M7.5 10a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5m0-1.5 1.47 1.02-.52-1.71 1.43-1.08-1.79-.04L7.5 5l-.59 1.69-1.79.04L6.55 7.8l-.52 1.71z'
+            clipRule='evenodd'
           />
         </g>
       </g>

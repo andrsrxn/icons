@@ -32,30 +32,58 @@ export const IconFlagGG: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gg-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gg-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gg-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f33349' />
-            <stop offset='100%' stopColor='#e51d34' />
+          <linearGradient
+            id='gg-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f33349' />
+            <stop offset='1' stopColor='#e51d34' />
           </linearGradient>
-          <linearGradient id='gg-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fce24c' />
-            <stop offset='100%' stopColor='#f9dc38' />
+          <linearGradient
+            id='gg-d'
+            x1='10.5'
+            x2='10.5'
+            y1='2'
+            y2='13'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fce24c' />
+            <stop offset='1' stopColor='#f9dc38' />
           </linearGradient>
+          <clipPath id='gg-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gg-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gg-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gg-b)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
+        <g clipPath='url(#gg-a)'>
+          <path fill='url(#gg-b)' d='M21 0H0v15h21z' />
           <path
             fill='url(#gg-c)'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#gg-d)'
+            fillRule='evenodd'
             d='M10 8v4l-.5 1h2l-.5-1V8h4l1 .5v-2L15 7h-4V3l.5-1h-2l.5 1v4H6l-1-.5v2L6 8z'
+            clipRule='evenodd'
           />
         </g>
       </g>

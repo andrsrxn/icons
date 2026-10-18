@@ -32,33 +32,70 @@ export const IconFlagAX: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ax-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ax-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ax-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#157cbb' />
-            <stop offset='100%' stopColor='#0e6ca5' />
+          <linearGradient
+            id='ax-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#157cbb' />
+            <stop offset='1' stopColor='#0e6ca5' />
           </linearGradient>
-          <linearGradient id='ax-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd34d' />
-            <stop offset='100%' stopColor='#fecb2f' />
+          <linearGradient
+            id='ax-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd34d' />
+            <stop offset='1' stopColor='#fecb2f' />
           </linearGradient>
-          <linearGradient id='ax-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#eb363a' />
-            <stop offset='100%' stopColor='#d52b2f' />
+          <linearGradient
+            id='ax-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#eb363a' />
+            <stop offset='1' stopColor='#d52b2f' />
           </linearGradient>
+          <clipPath id='ax-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ax-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ax-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ax-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ax-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#ax-c)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
-          <path fill='url(#ax-d)' d='M0 8h7v7h1V8h13V7H8V0H7v7H0z' />
+        <g clipPath='url(#ax-a)'>
+          <path fill='url(#ax-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ax-c)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#ax-d)'
+            fillRule='evenodd'
+            d='M0 9h6v6h3V9h12V6H9V0H6v6H0z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#ax-e)'
+            fillRule='evenodd'
+            d='M0 8h7v7h1V8h13V7H8V0H7v7H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

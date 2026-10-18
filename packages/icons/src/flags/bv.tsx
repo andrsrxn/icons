@@ -32,29 +32,70 @@ export const IconFlagBV: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='bv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='bv-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='bv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f14247' />
-            <stop offset='100%' stopColor='#ed2f35' />
+          <linearGradient
+            id='bv-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f14247' />
+            <stop offset='1' stopColor='#ed2f35' />
           </linearGradient>
-          <linearGradient id='bv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0a3a85' />
-            <stop offset='100%' stopColor='#032a67' />
+          <linearGradient
+            id='bv-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='bv-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0a3a85' />
+            <stop offset='1' stopColor='#032a67' />
+          </linearGradient>
+          <clipPath id='bv-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='bv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#bv-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#bv-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#bv-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#bv-a)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
-          <path fill='url(#bv-c)' d='M0 8h7v7h1V8h13V7H8V0H7v7H0z' />
+        <g clipPath='url(#bv-a)'>
+          <path fill='url(#bv-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#bv-c)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#bv-d)'
+            fillRule='evenodd'
+            d='M0 9h6v6h3V9h12V6H9V0H6v6H0z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#bv-e)'
+            fillRule='evenodd'
+            d='M0 8h7v7h1V8h13V7H8V0H7v7H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

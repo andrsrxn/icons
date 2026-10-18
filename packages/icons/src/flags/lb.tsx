@@ -32,32 +32,75 @@ export const IconFlagLB: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='lb-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='lb-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lb-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f03340' />
-            <stop offset='100%' stopColor='#eb212e' />
+          <linearGradient
+            id='lb-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f03340' />
+            <stop offset='1' stopColor='#eb212e' />
           </linearGradient>
-          <linearGradient id='lb-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1fc065' />
-            <stop offset='100%' stopColor='#17a555' />
+          <linearGradient
+            id='lb-d'
+            x1='10.5'
+            x2='10.5'
+            y1='11'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f03340' />
+            <stop offset='1' stopColor='#eb212e' />
           </linearGradient>
+          <linearGradient
+            id='lb-e'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='lb-f'
+            x1='10.5'
+            x2='10.5'
+            y1='5.18'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1fc065' />
+            <stop offset='1' stopColor='#17a555' />
+          </linearGradient>
+          <clipPath id='lb-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='lb-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#lb-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#lb-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#lb-b)' d='M0 0h21v4H0z' />
-          <path fill='url(#lb-b)' d='M0 11h21v4H0z' />
-          <path fill='url(#lb-a)' d='M0 4h21v7H0z' />
+        <g clipPath='url(#lb-a)'>
+          <path fill='url(#lb-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#lb-c)' d='M21 0H0v4h21z' />
+          <path fill='url(#lb-d)' d='M21 11H0v4h21z' />
+          <path fill='url(#lb-e)' d='M21 4H0v7h21z' />
           <path
-            fill='url(#lb-c)'
-            d='M9.65 9.35a.497.497 0 0 0-.003-.703l.206.206a.97.97 0 0 0-.837-.232l-1.032.258c-.267.067-.3-.017-.08-.183l1.191-.892c.224-.168.184-.304-.103-.304h-.484c-.28 0-.309-.1-.064-.222l1.112-.556c.245-.123.223-.222-.064-.222h-.484c-.28 0-.323-.138-.103-.304l1.19-.892a.72.72 0 0 1 .81 0l1.19.892c.224.168.184.304-.103.304h-.484c-.28 0-.309.1-.064.222l1.112.556c.245.123.223.222-.064.222h-.484c-.28 0-.323.138-.103.304l1.19.892c.224.168.191.25-.08.183l-1.03-.258a.98.98 0 0 0-.838.232l.206-.206a.496.496 0 0 0-.003.703l.3.3c.193.193.134.35-.145.35h-2.01c-.273 0-.339-.156-.145-.35z'
+            fill='url(#lb-f)'
+            fillRule='evenodd'
+            d='M9.65 9.35c.2-.2.2-.5 0-.7l.2.2a1 1 0 0 0-.83-.23l-1.04.26c-.26.07-.3-.02-.08-.18l1.2-.9c.22-.16.18-.3-.1-.3h-.5q-.41-.02-.06-.22l1.12-.56q.36-.2-.07-.22h-.48c-.28 0-.33-.14-.1-.3l1.19-.9a.7.7 0 0 1 .8 0l1.2.9c.22.16.18.3-.1.3h-.5q-.41.02-.06.22l1.12.56q.36.2-.07.22h-.48c-.28 0-.33.14-.1.3l1.19.9c.22.16.19.25-.08.18l-1.04-.26a1 1 0 0 0-.83.23l.2-.2c-.2.2-.2.5 0 .7l.3.3c.2.2.13.35-.15.35h-2c-.28 0-.34-.16-.15-.35z'
+            clipRule='evenodd'
           />
         </g>
       </g>

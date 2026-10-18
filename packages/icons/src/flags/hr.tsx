@@ -32,45 +32,94 @@ export const IconFlagHR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='hr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='hr-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='hr-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff202d' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='hr-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff202d' />
+            <stop offset='1' stopColor='#fd0d1b' />
           </linearGradient>
-          <linearGradient id='hr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#2027ac' />
-            <stop offset='100%' stopColor='#191f94' />
+          <linearGradient
+            id='hr-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2027ac' />
+            <stop offset='1' stopColor='#191f94' />
           </linearGradient>
-          <linearGradient id='hr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff212e' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='hr-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient
+            id='hr-f'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff212e' />
+            <stop offset='1' stopColor='#fd0d1b' />
+          </linearGradient>
+          <clipPath id='hr-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='hr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#hr-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#hr-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#hr-b)' d='M0 0h21v5H0z' />
+        <g clipPath='url(#hr-a)'>
+          <path fill='url(#hr-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#hr-c)' d='M21 0H0v5h21z' />
           <path
             fill='#1895db'
+            fillRule='evenodd'
             d='m8 4 .5-.5.5.5v1H8zm2 0 .5-.5.5.5v1h-1zm2 0 .5-.5.5.5v1h-1z'
+            clipRule='evenodd'
             opacity='.5'
           />
-          <path fill='#191f94' d='m9 4 .5-.5.5.5v1H9zm2 0 .5-.5.5.5v1h-1z' opacity='.5' />
-          <path fill='url(#hr-c)' d='M0 10h21v5H0z' />
           <path
-            fill='url(#hr-a)'
-            d='M0 10V5h21v5zm12 0h1l-.273.547c-.126.25-.454.453-.727.453zm-2 0h1v1h-1zm-2 0h1v1a.88.88 0 0 1-.727-.453z'
+            fill='#191f94'
+            fillRule='evenodd'
+            d='m9 4 .5-.5.5.5v1H9zm2 0 .5-.5.5.5v1h-1z'
+            clipRule='evenodd'
+            opacity='.5'
+          />
+          <path fill='url(#hr-d)' d='M21 10H0v5h21z' />
+          <path
+            fill='url(#hr-e)'
+            fillRule='evenodd'
+            d='M0 10V5h21v5zm12 0h1l-.27.55A.9.9 0 0 1 12 11zm-2 0h1v1h-1zm-2 0h1v1a.9.9 0 0 1-.73-.45z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#hr-d)'
+            fill='url(#hr-f)'
+            fillRule='evenodd'
             d='M10 5h1v1h-1zm2 0h.5l.5 1h-1zM8.5 5H9v1H8zM9 6h1v1H9zm2 0h1v1h-1zm-1 1h1v1h-1zm2 0h1v1h-1zm-1 1h1v1h-1zM8 7h1v1H8zm1 1h1v1H9zM8 9h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zm-1 1h1v1h-1zm-2 0h1v1H9z'
+            clipRule='evenodd'
           />
         </g>
       </g>

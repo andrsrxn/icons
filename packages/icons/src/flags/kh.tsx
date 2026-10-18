@@ -32,32 +32,75 @@ export const IconFlagKH: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='kh-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='kh-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='kh-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0f3eb6' />
-            <stop offset='100%' stopColor='#09339f' />
+          <linearGradient
+            id='kh-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0f3eb6' />
+            <stop offset='1' stopColor='#09339f' />
           </linearGradient>
-          <linearGradient id='kh-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ed1a3c' />
-            <stop offset='100%' stopColor='#de0b2d' />
+          <linearGradient
+            id='kh-d'
+            x1='10.5'
+            x2='10.5'
+            y1='11'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0f3eb6' />
+            <stop offset='1' stopColor='#09339f' />
           </linearGradient>
+          <linearGradient
+            id='kh-e'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ed1a3c' />
+            <stop offset='1' stopColor='#de0b2d' />
+          </linearGradient>
+          <linearGradient
+            id='kh-f'
+            x1='10.5'
+            x2='10.5'
+            y1='5.5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='kh-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='kh-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#kh-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#kh-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#kh-b)' d='M0 0h21v4H0z' />
-          <path fill='url(#kh-b)' d='M0 11h21v4H0z' />
-          <path fill='url(#kh-c)' d='M0 4h21v7H0z' />
+        <g clipPath='url(#kh-a)'>
+          <path fill='url(#kh-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#kh-c)' d='M21 0H0v4h21z' />
+          <path fill='url(#kh-d)' d='M21 11H0v4h21z' />
+          <path fill='url(#kh-e)' d='M21 4H0v7h21z' />
           <path
-            fill='url(#kh-a)'
-            d='M7.5 8h1v2h-2zM9 8h3v2H9zm3.5 0h1l1 2h-2zm0-1.492A.51.51 0 0 1 13 6a.5.5 0 0 1 .5.508V7.5h-1zM9 6.545h1v-.547c0-.275.232-.498.5-.498.276 0 .5.222.5.498v.547h1V7.5H9zm-1.5-.037A.51.51 0 0 1 8 6a.5.5 0 0 1 .5.508V7.5h-1z'
+            fill='url(#kh-f)'
+            fillRule='evenodd'
+            d='M7.5 8h1v2h-2zM9 8h3v2H9zm3.5 0h1l1 2h-2zm0-1.5c0-.27.23-.5.5-.5.28 0 .5.22.5.5v1h-1zM9 6.56h1V6c0-.28.23-.5.5-.5.28 0 .5.22.5.5v.55h1v.95H9zM7.5 6.5c0-.28.23-.51.5-.51.28 0 .5.22.5.5v1h-1z'
+            clipRule='evenodd'
           />
         </g>
       </g>

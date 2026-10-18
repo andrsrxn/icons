@@ -32,33 +32,54 @@ export const IconFlagML: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ml-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ml-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ml-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e2233a' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='ml-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e2233a' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='ml-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#2ecb4d' />
-            <stop offset='100%' stopColor='#24b441' />
+          <linearGradient id='ml-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#2ecb4d' />
+            <stop offset='1' stopColor='#24b441' />
           </linearGradient>
-          <linearGradient id='ml-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd749' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient
+            id='ml-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd749' />
+            <stop offset='1' stopColor='#fcd036' />
           </linearGradient>
+          <clipPath id='ml-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ml-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ml-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ml-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ml-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#ml-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#ml-d)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#ml-a)'>
+          <path fill='url(#ml-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ml-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#ml-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#ml-e)' d='M14 0H7v15h7z' />
         </g>
       </g>
     </svg>

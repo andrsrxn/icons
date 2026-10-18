@@ -32,46 +32,97 @@ export const IconFlagCF: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='cf-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='cf-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='cf-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#083d96' />
-            <stop offset='100%' stopColor='#053380' />
+          <linearGradient
+            id='cf-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='4'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#083d96' />
+            <stop offset='1' stopColor='#053380' />
           </linearGradient>
-          <linearGradient id='cf-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#37ae39' />
-            <stop offset='100%' stopColor='#2e9630' />
+          <linearGradient
+            id='cf-d'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#37ae39' />
+            <stop offset='1' stopColor='#2e9630' />
           </linearGradient>
-          <linearGradient id='cf-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd13f' />
-            <stop offset='100%' stopColor='#ffcd2f' />
+          <linearGradient
+            id='cf-e'
+            x1='10.5'
+            x2='10.5'
+            y1='11'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd13f' />
+            <stop offset='1' stopColor='#ffcd2f' />
           </linearGradient>
-          <linearGradient id='cf-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e42346' />
-            <stop offset='100%' stopColor='#d01739' />
+          <linearGradient
+            id='cf-f'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='7'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='cf-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd03b' />
-            <stop offset='100%' stopColor='#ffcd2f' />
+          <linearGradient
+            id='cf-g'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e42346' />
+            <stop offset='1' stopColor='#d01739' />
           </linearGradient>
+          <linearGradient
+            id='cf-h'
+            x1='3.5'
+            x2='3.5'
+            y1='.5'
+            y2='3.21'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd03b' />
+            <stop offset='1' stopColor='#ffcd2f' />
+          </linearGradient>
+          <clipPath id='cf-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='cf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#cf-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#cf-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#cf-b)' d='M0 0h21v4H0z' />
-          <path fill='url(#cf-c)' d='M0 7h21v4H0z' />
-          <path fill='url(#cf-d)' d='M0 11h21v4H0z' />
-          <path fill='url(#cf-a)' d='M0 4h21v3H0z' />
-          <path fill='url(#cf-e)' d='M8 0h5v15H8z' />
+        <g clipPath='url(#cf-a)'>
+          <path fill='url(#cf-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#cf-c)' d='M21 0H0v4h21z' />
+          <path fill='url(#cf-d)' d='M21 7H0v4h21z' />
+          <path fill='url(#cf-e)' d='M21 11H0v4h21z' />
+          <path fill='url(#cf-f)' d='M21 4H0v3h21z' />
+          <path fill='url(#cf-g)' d='M13 0H8v15h5z' />
           <path
-            fill='url(#cf-f)'
-            d='m3.5 2.585-.882.629.326-1.033-.87-.645 1.082-.01L3.5.5l.344 1.027 1.083.01-.87.644.325 1.033z'
+            fill='url(#cf-h)'
+            fillRule='evenodd'
+            d='m3.5 2.59-.88.62.32-1.03-.87-.64 1.09-.01L3.5.5l.34 1.03h1.09l-.87.65.32 1.03z'
+            clipRule='evenodd'
           />
         </g>
       </g>

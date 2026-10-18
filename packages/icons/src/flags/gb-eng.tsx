@@ -32,23 +32,43 @@ export const IconFlagGBENG: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gb-eng-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gb-eng-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gb-eng-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e82739' />
-            <stop offset='100%' stopColor='#ca1a2b' />
+          <linearGradient
+            id='gb-eng-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e82739' />
+            <stop offset='1' stopColor='#ca1a2b' />
           </linearGradient>
+          <clipPath id='gb-eng-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gb-eng-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gb-eng-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gb-eng-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gb-eng-b)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
+        <g clipPath='url(#gb-eng-a)'>
+          <path fill='url(#gb-eng-b)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#gb-eng-c)'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

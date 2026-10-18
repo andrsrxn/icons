@@ -32,28 +32,43 @@ export const IconFlagPW: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pw-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pw-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pw-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#65c6ee' />
-            <stop offset='100%' stopColor='#4faed5' />
+          <linearGradient
+            id='pw-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#65c6ee' />
+            <stop offset='1' stopColor='#4faed5' />
           </linearGradient>
-          <linearGradient id='pw-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffe044' />
-            <stop offset='100%' stopColor='#ffdd32' />
+          <linearGradient id='pw-d' x1='9.5' x2='9.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffe044' />
+            <stop offset='1' stopColor='#ffdd32' />
           </linearGradient>
+          <clipPath id='pw-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='pw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pw-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pw-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pw-b)' d='M0 0h21v15H0z' />
-          <circle cx='9.5' cy='7.5' r='4.5' fill='url(#pw-c)' />
+        <g clipPath='url(#pw-a)'>
+          <path fill='url(#pw-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pw-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#pw-d)' d='M9.5 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9' />
         </g>
       </g>
     </svg>

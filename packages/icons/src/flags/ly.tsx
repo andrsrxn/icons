@@ -32,36 +32,75 @@ export const IconFlagLY: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ly-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ly-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ly-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='ly-c'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='ly-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#34b857' />
-            <stop offset='100%' stopColor='#2b9e4a' />
+          <linearGradient
+            id='ly-d'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#34b857' />
+            <stop offset='1' stopColor='#2b9e4a' />
           </linearGradient>
-          <linearGradient id='ly-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f41f34' />
-            <stop offset='100%' stopColor='#e60b21' />
+          <linearGradient
+            id='ly-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f41f34' />
+            <stop offset='1' stopColor='#e60b21' />
           </linearGradient>
+          <linearGradient
+            id='ly-f'
+            x1='10.5'
+            x2='10.5'
+            y1='6'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='ly-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ly-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ly-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ly-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ly-b)' d='M0 5h21v5H0z' />
-          <path fill='url(#ly-c)' d='M0 10h21v5H0z' />
-          <path fill='url(#ly-d)' d='M0 0h21v5H0z' />
+        <g clipPath='url(#ly-a)'>
+          <path fill='url(#ly-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ly-c)' d='M21 5H0v5h21z' />
+          <path fill='url(#ly-d)' d='M21 10H0v5h21z' />
+          <path fill='url(#ly-e)' d='M21 0H0v5h21z' />
           <path
-            fill='url(#ly-a)'
-            d='m11.334 6.253-.084-.003a1.25 1.25 0 1 0 .084 2.497 1.5 1.5 0 1 1 0-2.495M11.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#ly-f)'
+            fillRule='evenodd'
+            d='M11.33 6.25h-.08a1.25 1.25 0 1 0 .08 2.5 1.5 1.5 0 1 1 0-2.5M11.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

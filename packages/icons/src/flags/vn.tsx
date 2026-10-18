@@ -32,30 +32,53 @@ export const IconFlagVN: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='vn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='vn-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='vn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ea403f' />
-            <stop offset='100%' stopColor='#d82827' />
+          <linearGradient
+            id='vn-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ea403f' />
+            <stop offset='1' stopColor='#d82827' />
           </linearGradient>
-          <linearGradient id='vn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fffe4e' />
-            <stop offset='100%' stopColor='#fffe38' />
+          <linearGradient
+            id='vn-d'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='11.14'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fffe4e' />
+            <stop offset='1' stopColor='#fffe38' />
           </linearGradient>
+          <clipPath id='vn-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='vn-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#vn-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#vn-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#vn-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#vn-a)'>
+          <path fill='url(#vn-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#vn-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#vn-c)'
-            d='m10.5 9.255-2.645 1.886.976-3.099L6.22 6.11l3.247-.029L10.5 3l1.032 3.08 3.248.03-2.61 1.932.975 3.099z'
+            fill='url(#vn-d)'
+            fillRule='evenodd'
+            d='m10.5 9.26-2.65 1.88.98-3.1-2.61-1.93 3.25-.03L10.5 3l1.03 3.08 3.25.03-2.61 1.93.97 3.1z'
+            clipRule='evenodd'
           />
         </g>
       </g>

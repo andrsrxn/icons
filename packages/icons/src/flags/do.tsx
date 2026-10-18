@@ -32,41 +32,86 @@ export const IconFlagDO: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='do-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='do-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='do-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#083d7a' />
-            <stop offset='100%' stopColor='#032f61' />
+          <linearGradient id='do-c' x1='4.5' x2='4.5' y1='0' y2='6' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#083d7a' />
+            <stop offset='1' stopColor='#032f61' />
           </linearGradient>
-          <linearGradient id='do-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#df1e35' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='do-d'
+            x1='16.5'
+            x2='16.5'
+            y1='9'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#083d7a' />
+            <stop offset='1' stopColor='#032f61' />
           </linearGradient>
+          <linearGradient id='do-e' x1='4.5' x2='4.5' y1='9' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#df1e35' />
+            <stop offset='1' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient
+            id='do-f'
+            x1='16.5'
+            x2='16.5'
+            y1='0'
+            y2='6'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#df1e35' />
+            <stop offset='1' stopColor='#cc162c' />
+          </linearGradient>
+          <linearGradient
+            id='do-g'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='do-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='do-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#do-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#do-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#do-b)' d='M0 0h9v6H0z' />
-          <path fill='url(#do-b)' d='M12 9h9v6h-9z' />
-          <path fill='url(#do-c)' d='M0 9h9v6H0z' />
-          <path fill='url(#do-c)' d='M12 0h9v6h-9z' />
-          <path fill='url(#do-a)' d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z' />
+        <g clipPath='url(#do-a)'>
+          <path fill='url(#do-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#do-c)' d='M9 0H0v6h9z' />
+          <path fill='url(#do-d)' d='M21 9h-9v6h9z' />
+          <path fill='url(#do-e)' d='M9 9H0v6h9z' />
+          <path fill='url(#do-f)' d='M21 0h-9v6h9z' />
+          <path
+            fill='url(#do-g)'
+            fillRule='evenodd'
+            d='M9 6H0v3h9v6h3V9h9V6h-9V0H9z'
+            clipRule='evenodd'
+          />
           <path
             fill='#c93127'
             fillOpacity='.2'
-            d='M9.44 6.44a1.5 1.5 0 0 0 2.12 2.12 1.5 1.5 0 0 0 0-2.12'
+            fillRule='evenodd'
+            d='M9.44 6.44a1.5 1.5 0 1 0 2.12 0'
+            clipRule='evenodd'
           />
-          <circle cx='10.5' cy='7.5' r='1' fill='#042f60' />
+          <path fill='#042f60' d='M10.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           <path
             fill='#0f6d1a'
-            fillRule='nonzero'
-            d='M11.56 8.56a1.5 1.5 0 0 1-2.12-2.12l.353.353a1 1 0 1 0 1.414 0l.354-.354a1.5 1.5 0 0 1 0 2.122m0 0a1.5 1.5 0 0 1-2.12-2.12l.353.353a1 1 0 1 0 1.414 0l.354-.354a1.5 1.5 0 0 1 0 2.122'
+            d='M11.56 8.56a1.5 1.5 0 0 1-2.12-2.12l.35.35a1 1 0 1 0 1.42 0l.35-.35a1.5 1.5 0 0 1 0 2.12m0 0a1.5 1.5 0 0 1-2.12-2.12l.35.35a1 1 0 1 0 1.42 0l.35-.35a1.5 1.5 0 0 1 0 2.12'
           />
         </g>
       </g>

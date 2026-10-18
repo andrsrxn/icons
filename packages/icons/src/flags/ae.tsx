@@ -32,34 +32,65 @@ export const IconFlagAE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ae-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ae-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ae-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#12833b' />
-            <stop offset='100%' stopColor='#0d7332' />
+          <linearGradient
+            id='ae-c'
+            x1='13.5'
+            x2='13.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#12833b' />
+            <stop offset='1' stopColor='#0d7332' />
           </linearGradient>
-          <linearGradient id='ae-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='ae-d'
+            x1='13.5'
+            x2='13.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='ae-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff323e' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='ae-e'
+            x1='13.5'
+            x2='13.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient id='ae-f' x1='3' x2='3' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff323e' />
+            <stop offset='1' stopColor='#fd0d1b' />
+          </linearGradient>
+          <clipPath id='ae-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ae-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ae-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ae-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ae-b)' d='M6 0h15v5H6z' />
-          <path fill='url(#ae-c)' d='M6 10h15v5H6z' />
-          <path fill='url(#ae-a)' d='M6 5h15v5H6z' />
-          <path fill='url(#ae-d)' d='M0 0h6v15H0z' />
+        <g clipPath='url(#ae-a)'>
+          <path fill='url(#ae-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ae-c)' d='M21 0H6v5h15z' />
+          <path fill='url(#ae-d)' d='M21 10H6v5h15z' />
+          <path fill='url(#ae-e)' d='M21 5H6v5h15z' />
+          <path fill='url(#ae-f)' d='M6 0H0v15h6z' />
         </g>
       </g>
     </svg>

@@ -32,43 +32,82 @@ export const IconFlagLGBT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='lgbt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='lgbt-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lgbt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f71e24' />
-            <stop offset='100%' stopColor='#fb141b' />
+          <linearGradient
+            id='lgbt-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='3'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f71e24' />
+            <stop offset='1' stopColor='#fb141b' />
           </linearGradient>
-          <linearGradient id='lgbt-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fb6c2c' />
-            <stop offset='100%' stopColor='#fc6420' />
+          <linearGradient
+            id='lgbt-d'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='6'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fb6c2c' />
+            <stop offset='1' stopColor='#fc6420' />
           </linearGradient>
-          <linearGradient id='lgbt-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fdfc42' />
-            <stop offset='100%' stopColor='#fffd38' />
+          <linearGradient
+            id='lgbt-e'
+            x1='10.5'
+            x2='10.5'
+            y1='6'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fdfc42' />
+            <stop offset='1' stopColor='#fffd38' />
           </linearGradient>
-          <linearGradient id='lgbt-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#238f35' />
-            <stop offset='100%' stopColor='#1c7e2c' />
+          <linearGradient
+            id='lgbt-f'
+            x1='10.5'
+            x2='10.5'
+            y1='9'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#238f35' />
+            <stop offset='1' stopColor='#1c7e2c' />
           </linearGradient>
-          <linearGradient id='lgbt-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0f62fa' />
-            <stop offset='100%' stopColor='#0059fc' />
+          <linearGradient
+            id='lgbt-g'
+            x1='10.5'
+            x2='10.5'
+            y1='12'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0f62fa' />
+            <stop offset='1' stopColor='#0059fc' />
           </linearGradient>
+          <clipPath id='lgbt-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='lgbt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#lgbt-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#lgbt-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#lgbt-b)' d='M0 0h21v3H0z' />
-          <path fill='url(#lgbt-c)' d='M0 3h21v3H0z' />
-          <path fill='url(#lgbt-d)' d='M0 6h21v3H0z' />
-          <path fill='url(#lgbt-e)' d='M0 9h21v3H0z' />
-          <path fill='url(#lgbt-f)' d='M0 12h21v3H0z' />
+        <g clipPath='url(#lgbt-a)'>
+          <path fill='url(#lgbt-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#lgbt-c)' d='M21 0H0v3h21z' />
+          <path fill='url(#lgbt-d)' d='M21 3H0v3h21z' />
+          <path fill='url(#lgbt-e)' d='M21 6H0v3h21z' />
+          <path fill='url(#lgbt-f)' d='M21 9H0v3h21z' />
+          <path fill='url(#lgbt-g)' d='M21 12H0v3h21z' />
         </g>
       </g>
     </svg>

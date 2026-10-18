@@ -32,31 +32,59 @@ export const IconFlagGT: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gt-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gt-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gt-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#63aee3' />
-            <stop offset='100%' stopColor='#4998d0' />
+          <linearGradient
+            id='gt-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#63aee3' />
+            <stop offset='1' stopColor='#4998d0' />
           </linearGradient>
+          <linearGradient id='gt-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#63aee3' />
+            <stop offset='1' stopColor='#4998d0' />
+          </linearGradient>
+          <linearGradient
+            id='gt-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='gt-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gt-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gt-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gt-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#gt-b)' d='M0 0h7v15H0z' />
-          <path fill='url(#gt-a)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#gt-a)'>
+          <path fill='url(#gt-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gt-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#gt-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#gt-e)' d='M14 0H7v15h7z' />
           <path
             fill='#628a40'
-            fillRule='nonzero'
-            d='M8 7c0 .901.482 1.72 1.247 2.164a.5.5 0 0 0 .502-.865A1.5 1.5 0 0 1 9 7a.5.5 0 0 0-1 0m3.846 2.107A2.5 2.5 0 0 0 13 7a.5.5 0 1 0-1 0c0 .518-.264.99-.693 1.265a.5.5 0 1 0 .539.842'
+            d='M8 7c0 .9.48 1.72 1.25 2.16a.5.5 0 0 0 .5-.86A1.5 1.5 0 0 1 9 7a.5.5 0 0 0-1 0m3.85 2.1A2.5 2.5 0 0 0 13 7a.5.5 0 0 0-1 0c0 .52-.26 1-.7 1.26a.5.5 0 0 0 .55.85'
           />
-          <circle cx='10.5' cy='7' r='1' fill='#dcc26d' />
+          <path fill='#dcc26d' d='M10.5 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
         </g>
       </g>
     </svg>

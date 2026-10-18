@@ -32,37 +32,63 @@ export const IconFlagTL: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='tl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='tl-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='tl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ff323e' />
-            <stop offset='100%' stopColor='#fd0d1b' />
+          <linearGradient
+            id='tl-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ff323e' />
+            <stop offset='1' stopColor='#fd0d1b' />
           </linearGradient>
-          <linearGradient id='tl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffcc51' />
-            <stop offset='100%' stopColor='#ffc63c' />
+          <linearGradient id='tl-d' x1='6.5' x2='6.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffcc51' />
+            <stop offset='1' stopColor='#ffc63c' />
           </linearGradient>
-          <linearGradient id='tl-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient id='tl-e' x1='4.5' x2='4.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
+          <linearGradient
+            id='tl-f'
+            x1='2.92'
+            x2='4.92'
+            y1='5.45'
+            y2='8.92'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='tl-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='tl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#tl-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#tl-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#tl-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#tl-c)' d='m0 0 13 7.5L0 15z' />
-          <path fill='url(#tl-d)' d='m0 0 9 7.5L0 15z' />
+        <g clipPath='url(#tl-a)'>
+          <path fill='url(#tl-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#tl-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#tl-d)' fillRule='evenodd' d='m0 0 13 7.5L0 15z' clipRule='evenodd' />
+          <path fill='url(#tl-e)' fillRule='evenodd' d='m0 0 9 7.5L0 15z' clipRule='evenodd' />
           <path
-            fill='url(#tl-a)'
-            d='M3.92 8.262 2.62 9.19l.48-1.524-1.284-.951L3.413 6.7l.507-1.515.508 1.515 1.598.015-1.284.95.48 1.525z'
-            transform='rotate(-30 3.92 7.187)'
+            fill='url(#tl-f)'
+            fillRule='evenodd'
+            d='m4.46 8.12-.67 1.45-.34-1.56-1.59-.18 1.38-.81-.32-1.57 1.2 1.06 1.39-.78-.64 1.46 1.18 1.08z'
+            clipRule='evenodd'
           />
         </g>
       </g>

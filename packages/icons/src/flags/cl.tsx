@@ -32,32 +32,69 @@ export const IconFlagCL: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='cl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='cl-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='cl-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ea3b2e' />
-            <stop offset='100%' stopColor='#d52b1e' />
+          <linearGradient
+            id='cl-c'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ea3b2e' />
+            <stop offset='1' stopColor='#d52b1e' />
           </linearGradient>
-          <linearGradient id='cl-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0b48c2' />
-            <stop offset='100%' stopColor='#0239a7' />
+          <linearGradient
+            id='cl-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='7'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient id='cl-e' x1='3.5' x2='3.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0b48c2' />
+            <stop offset='1' stopColor='#0239a7' />
+          </linearGradient>
+          <linearGradient
+            id='cl-f'
+            x1='3.5'
+            x2='3.5'
+            y1='1.5'
+            y2='5.12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='cl-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='cl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#cl-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#cl-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#cl-b)' d='M0 7h21v8H0z' />
-          <path fill='url(#cl-a)' d='M0 0h21v7H0z' />
-          <path fill='url(#cl-c)' d='M0 0h7v7H0z' />
+        <g clipPath='url(#cl-a)'>
+          <path fill='url(#cl-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#cl-c)' d='M21 7H0v8h21z' />
+          <path fill='url(#cl-d)' d='M21 0H0v7h21z' />
+          <path fill='url(#cl-e)' d='M7 0H0v7h7z' />
           <path
-            fill='url(#cl-a)'
-            d='m3.5 4.28-1.176.838.434-1.377-1.16-.859 1.444-.013L3.5 1.5l.458 1.369 1.444.013-1.16.859.434 1.377z'
+            fill='url(#cl-f)'
+            fillRule='evenodd'
+            d='m3.5 4.28-1.18.84.44-1.38-1.16-.86 1.44-.01.46-1.37.46 1.37 1.44.01-1.16.86.44 1.38z'
+            clipRule='evenodd'
           />
         </g>
       </g>

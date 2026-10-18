@@ -32,30 +32,53 @@ export const IconFlagEU: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='eu-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='eu-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='eu-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#043cae' />
-            <stop offset='100%' stopColor='#00339a' />
+          <linearGradient
+            id='eu-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#043cae' />
+            <stop offset='1' stopColor='#00339a' />
           </linearGradient>
-          <linearGradient id='eu-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd429' />
-            <stop offset='100%' stopColor='#fc0' />
+          <linearGradient
+            id='eu-d'
+            x1='10.5'
+            x2='10.5'
+            y1='1.79'
+            y2='13.21'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd429' />
+            <stop offset='1' stopColor='#fc0' />
           </linearGradient>
+          <clipPath id='eu-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='eu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#eu-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#eu-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#eu-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#eu-a)'>
+          <path fill='url(#eu-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#eu-c)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#eu-c)'
-            d='m10.5 3-.707.207L10 2.5l-.207-.707L10.5 2l.707-.207L11 2.5l.207.707zm0 10-.707.207L10 12.5l-.207-.707.707.207.707-.207L11 12.5l.207.707zm5-5-.707.207L15 7.5l-.207-.707L15.5 7l.707-.207L16 7.5l.207.707zm-10 0-.707.207L5 7.5l-.207-.707L5.5 7l.707-.207L6 7.5l.207.707zm9.33-2.5-.707.207L14.33 5l-.207-.707.707.207.707-.207L15.33 5l.207.707zm-8.66 5-.707.207L5.67 10l-.207-.707.707.207.707-.207L6.67 10l.207.707zM13 3.67l-.707.207.207-.707-.207-.707.707.207.707-.207-.207.707.207.707zm-5 8.66-.707.207.207-.707-.207-.707.707.207.707-.207-.207.707.207.707zm6.83-1.83-.707.207.207-.707-.207-.707.707.207.707-.207-.207.707.207.707zm-8.66-5-.707.207L5.67 5l-.207-.707.707.207.707-.207L6.67 5l.207.707zM13 12.33l-.707.207.207-.707-.207-.707.707.207.707-.207-.207.707.207.707zM8 3.67l-.707.207.207-.707-.207-.707L8 2.67l.707-.207-.207.707.207.707z'
+            fill='url(#eu-d)'
+            fillRule='evenodd'
+            d='m10.5 3-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm0 10-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm5-5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-10 0-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm9.33-2.5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-8.66 5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zM13 3.67l-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-5 8.66-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm6.83-1.83-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zm-8.66-5-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zM13 12.33l-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7zM8 3.67l-.7.2.2-.7-.2-.7.7.2.7-.2-.2.7.2.7z'
+            clipRule='evenodd'
           />
         </g>
       </g>

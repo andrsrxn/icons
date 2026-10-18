@@ -32,33 +32,60 @@ export const IconFlagBO: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='bo-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='bo-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='bo-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#058c3f' />
-            <stop offset='100%' stopColor='#007a34' />
+          <linearGradient
+            id='bo-c'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#058c3f' />
+            <stop offset='1' stopColor='#007a34' />
           </linearGradient>
-          <linearGradient id='bo-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e63426' />
-            <stop offset='100%' stopColor='#d52b1e' />
+          <linearGradient
+            id='bo-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e63426' />
+            <stop offset='1' stopColor='#d52b1e' />
           </linearGradient>
-          <linearGradient id='bo-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffeb1f' />
-            <stop offset='100%' stopColor='#fae400' />
+          <linearGradient
+            id='bo-e'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffeb1f' />
+            <stop offset='1' stopColor='#fae400' />
           </linearGradient>
+          <clipPath id='bo-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='bo-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#bo-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#bo-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#bo-b)' d='M0 10h21v5H0z' />
-          <path fill='url(#bo-c)' d='M0 0h21v5H0z' />
-          <path fill='url(#bo-d)' d='M0 5h21v5H0z' />
+        <g clipPath='url(#bo-a)'>
+          <path fill='url(#bo-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#bo-c)' d='M21 10H0v5h21z' />
+          <path fill='url(#bo-d)' d='M21 0H0v5h21z' />
+          <path fill='url(#bo-e)' d='M21 5H0v5h21z' />
         </g>
       </g>
     </svg>

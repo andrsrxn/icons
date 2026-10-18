@@ -32,43 +32,76 @@ export const IconFlagGY: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gy-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='gy-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gy-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#08c55f' />
-            <stop offset='100%' stopColor='#009f49' />
+          <linearGradient
+            id='gy-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#08c55f' />
+            <stop offset='1' stopColor='#009f49' />
           </linearGradient>
-          <linearGradient id='gy-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient id='gy-d' x1='10' x2='10' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='gy-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd831' />
-            <stop offset='100%' stopColor='#fdd117' />
+          <linearGradient
+            id='gy-e'
+            x1='9.67'
+            x2='9.67'
+            y1='1.05'
+            y2='13.95'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd831' />
+            <stop offset='1' stopColor='#fdd117' />
           </linearGradient>
-          <linearGradient id='gy-e' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='gy-f'
+            x1='5.25'
+            x2='5.25'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='gy-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e92034' />
-            <stop offset='100%' stopColor='#ce1225' />
+          <linearGradient
+            id='gy-g'
+            x1='4.83'
+            x2='4.83'
+            y1='1.19'
+            y2='13.81'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e92034' />
+            <stop offset='1' stopColor='#ce1225' />
           </linearGradient>
+          <clipPath id='gy-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='gy-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gy-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gy-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#gy-b)' d='M0 0h21v15H0z' />
-          <path fill='url(#gy-c)' fillRule='nonzero' d='M-1 15V0h1l21 7v1L0 15z' />
-          <path fill='url(#gy-d)' fillRule='nonzero' d='M0 1.054v12.892L19.338 7.5z' />
-          <path fill='url(#gy-e)' fillRule='nonzero' d='M-1 15V0h1l11.5 7.5L0 15z' />
-          <path fill='url(#gy-f)' fillRule='nonzero' d='M0 13.806 9.67 7.5 0 1.194z' />
+        <g clipPath='url(#gy-a)'>
+          <path fill='url(#gy-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#gy-c)' d='M21 0H0v15h21z' />
+          <path fill='url(#gy-d)' d='M-1 15V0h1l21 7v1L0 15z' />
+          <path fill='url(#gy-e)' d='M0 1.05v12.9L19.34 7.5z' />
+          <path fill='url(#gy-f)' d='M-1 15V0h1l11.5 7.5L0 15z' />
+          <path fill='url(#gy-g)' d='m0 13.8 9.67-6.3L0 1.2z' />
         </g>
       </g>
     </svg>

@@ -32,28 +32,49 @@ export const IconFlagUA: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ua-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ua-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ua-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#156dd1' />
-            <stop offset='100%' stopColor='#0d5eb9' />
+          <linearGradient
+            id='ua-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#156dd1' />
+            <stop offset='1' stopColor='#0d5eb9' />
           </linearGradient>
-          <linearGradient id='ua-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#ffd948' />
-            <stop offset='100%' stopColor='#ffd430' />
+          <linearGradient
+            id='ua-d'
+            x1='10.5'
+            x2='10.5'
+            y1='8'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#ffd948' />
+            <stop offset='1' stopColor='#ffd430' />
           </linearGradient>
+          <clipPath id='ua-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ua-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ua-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ua-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ua-b)' d='M0 0h21v8H0z' />
-          <path fill='url(#ua-c)' d='M0 8h21v7H0z' />
+        <g clipPath='url(#ua-a)'>
+          <path fill='url(#ua-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ua-c)' d='M21 0H0v8h21z' />
+          <path fill='url(#ua-d)' d='M21 8H0v7h21z' />
         </g>
       </g>
     </svg>

@@ -32,23 +32,43 @@ export const IconFlagFI: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='fi-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='fi-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='fi-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0848a6' />
-            <stop offset='100%' stopColor='#003480' />
+          <linearGradient
+            id='fi-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0848a6' />
+            <stop offset='1' stopColor='#003480' />
           </linearGradient>
+          <clipPath id='fi-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='fi-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#fi-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#fi-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#fi-b)' d='M0 9h6v6h3V9h12V6H9V0H6v6H0z' />
+        <g clipPath='url(#fi-a)'>
+          <path fill='url(#fi-b)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#fi-c)'
+            fillRule='evenodd'
+            d='M0 9h6v6h3V9h12V6H9V0H6v6H0z'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

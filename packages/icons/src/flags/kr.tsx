@@ -32,45 +32,81 @@ export const IconFlagKR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='kr-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='kr-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='kr-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e01b41' />
-            <stop offset='100%' stopColor='#c51335' />
+          <linearGradient
+            id='kr-c'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e01b41' />
+            <stop offset='1' stopColor='#c51335' />
           </linearGradient>
-          <linearGradient id='kr-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0e4b9c' />
-            <stop offset='100%' stopColor='#053677' />
+          <linearGradient
+            id='kr-e'
+            x1='10.39'
+            x2='10.39'
+            y1='6.88'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0e4b9c' />
+            <stop offset='1' stopColor='#053677' />
           </linearGradient>
-          <linearGradient id='kr-f' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='kr-f'
+            x1='10.5'
+            x2='10.5'
+            y1='2.54'
+            y2='12.46'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <circle id='kr-b' cx='3.5' cy='3.5' r='3.5' />
+          <clipPath id='kr-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='kr-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#kr-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#kr-a)' d='M0 0h21v15H0z' />
-          <g transform='translate(7 4)'>
-            <mask id='kr-e' fill='#fff'>
-              <use xlinkHref='#kr-b' />
-            </mask>
-            <use xlinkHref='#kr-b' fill='url(#kr-c)' />
+        <g clipPath='url(#kr-a)'>
+          <path fill='url(#kr-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#kr-c)' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
+          <mask
+            id='kr-d'
+            width='7'
+            height='7'
+            x='7'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
+          </mask>
+          <g mask='url(#kr-d)'>
             <path
-              fill='url(#kr-d)'
-              d='M0 4c1 .937 2.5 1.5 3.5 0s3-1.5 3.5 0 0 3 0 3H0s-1-3.937 0-3'
-              mask='url(#kr-e)'
+              fill='url(#kr-e)'
+              fillRule='evenodd'
+              d='M7 8c1 .94 2.5 1.5 3.5 0s3-1.5 3.5 0 0 3 0 3H7S6 7.06 7 8'
+              clipRule='evenodd'
             />
           </g>
           <path
             fill='url(#kr-f)'
-            d='M14.208 3.922a.25.25 0 0 1 .09-.347l.43-.248a.254.254 0 0 1 .346.095l1.244 2.156a.25.25 0 0 1-.09.347l-.43.248a.254.254 0 0 1-.346-.095zm1.3-.75a.25.25 0 0 1 .09-.347l.429-.248a.254.254 0 0 1 .346.095l1.244 2.156a.25.25 0 0 1-.09.347l-.43.248a.254.254 0 0 1-.346-.095zm-12.125 7a.25.25 0 0 1 .09-.347l.43-.248a.254.254 0 0 1 .346.095l1.244 2.156a.25.25 0 0 1-.09.347l-.43.248a.254.254 0 0 1-.346-.095zm1.299-.75a.25.25 0 0 1 .09-.347l.43-.248a.254.254 0 0 1 .346.095l1.244 2.156a.25.25 0 0 1-.09.347l-.43.248a.254.254 0 0 1-.346-.095zm10.77-.5a.25.25 0 0 1 .347-.095l.429.248c.12.07.161.225.09.347l-1.244 2.156a.25.25 0 0 1-.346.095l-.43-.248a.254.254 0 0 1-.09-.347zm1.3.75a.25.25 0 0 1 .346-.095l.429.248c.12.07.161.225.09.347l-1.244 2.156a.25.25 0 0 1-.346.095l-.43-.248a.254.254 0 0 1-.09-.347zm-12.125-7a.25.25 0 0 1 .346-.095l.43.248c.12.07.16.225.09.347L4.249 5.328a.25.25 0 0 1-.347.095l-.429-.248a.254.254 0 0 1-.09-.347zm1.299.75a.25.25 0 0 1 .346-.095l.43.248c.12.07.16.225.09.347L5.548 6.078a.25.25 0 0 1-.347.095l-.429-.248a.254.254 0 0 1-.09-.347z'
+            fillRule='evenodd'
+            d='M14.2 3.92a.25.25 0 0 1 .1-.35l.43-.24a.25.25 0 0 1 .34.1l1.25 2.15c.07.12.03.27-.1.35l-.42.24a.25.25 0 0 1-.35-.1zm1.3-.75a.25.25 0 0 1 .1-.35l.43-.24a.25.25 0 0 1 .34.1l1.25 2.15c.07.12.03.27-.1.35l-.42.24a.25.25 0 0 1-.35-.1zm-12.12 7a.25.25 0 0 1 .1-.35l.42-.24a.25.25 0 0 1 .35.1l1.24 2.15c.07.12.04.27-.09.35l-.43.24a.25.25 0 0 1-.34-.1zm1.3-.75a.25.25 0 0 1 .1-.35l.42-.24a.25.25 0 0 1 .35.1l1.24 2.15c.07.12.04.27-.09.35l-.43.24a.25.25 0 0 1-.34-.1zm10.77-.5a.25.25 0 0 1 .35-.1l.43.25c.12.07.16.23.09.35l-1.25 2.16a.25.25 0 0 1-.34.1l-.43-.25a.25.25 0 0 1-.1-.35zm1.3.75a.25.25 0 0 1 .35-.1l.43.25c.12.07.16.23.09.35l-1.25 2.16a.25.25 0 0 1-.34.1l-.43-.25a.25.25 0 0 1-.1-.35zm-12.12-7a.25.25 0 0 1 .34-.1l.43.25c.12.07.16.23.1.35L4.24 5.33a.25.25 0 0 1-.35.1l-.43-.25a.25.25 0 0 1-.09-.35zm1.3.75a.25.25 0 0 1 .34-.1l.43.25c.12.07.16.23.1.35L5.54 6.08a.25.25 0 0 1-.35.1l-.43-.25a.25.25 0 0 1-.09-.35z'
+            clipRule='evenodd'
             opacity='.75'
           />
         </g>

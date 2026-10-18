@@ -32,36 +32,69 @@ export const IconFlagSN: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='sn-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='sn-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='sn-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f13642' />
-            <stop offset='100%' stopColor='#e1202c' />
+          <linearGradient
+            id='sn-c'
+            x1='15.5'
+            x2='15.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f13642' />
+            <stop offset='1' stopColor='#e1202c' />
           </linearGradient>
-          <linearGradient id='sn-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#17a052' />
-            <stop offset='100%' stopColor='#108442' />
+          <linearGradient id='sn-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#17a052' />
+            <stop offset='1' stopColor='#108442' />
           </linearGradient>
-          <linearGradient id='sn-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff166' />
-            <stop offset='100%' stopColor='#fdee54' />
+          <linearGradient
+            id='sn-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff166' />
+            <stop offset='1' stopColor='#fdee54' />
           </linearGradient>
+          <linearGradient
+            id='sn-f'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='9.52'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#17a052' />
+            <stop offset='1' stopColor='#108442' />
+          </linearGradient>
+          <clipPath id='sn-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='sn-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#sn-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#sn-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#sn-b)' d='M10 0h11v15H10z' />
-          <path fill='url(#sn-c)' d='M0 0h7v15H0z' />
-          <path fill='url(#sn-d)' d='M7 0h7v15H7z' />
+        <g clipPath='url(#sn-a)'>
+          <path fill='url(#sn-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#sn-c)' d='M21 0H10v15h11z' />
+          <path fill='url(#sn-d)' d='M7 0H0v15h7z' />
+          <path fill='url(#sn-e)' d='M14 0H7v15h7z' />
           <path
-            fill='url(#sn-c)'
-            d='m10.5 8.525-1.47.998.495-1.706-1.403-1.09 1.776-.056L10.5 5l.602 1.67 1.776.057-1.403 1.09.494 1.706z'
+            fill='url(#sn-f)'
+            fillRule='evenodd'
+            d='m10.5 8.53-1.47 1 .5-1.71-1.4-1.1 1.77-.05.6-1.67.6 1.67 1.78.06-1.4 1.09.49 1.7z'
+            clipRule='evenodd'
           />
         </g>
       </g>

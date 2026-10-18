@@ -32,46 +32,81 @@ export const IconFlagGL: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='gl-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='gl-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e82245' />
-            <stop offset='100%' stopColor='#cc1838' />
-          </linearGradient>
-          <filter
+          <linearGradient
             id='gl-b'
-            width='107.1%'
-            height='118.8%'
-            x='-3.6%'
-            y='-9.4%'
-            filterUnits='objectBoundingBox'>
-            <feMorphology
-              in='SourceAlpha'
-              operator='dilate'
-              radius='.25'
-              result='shadowSpreadOuter1'
-            />
-            <feOffset in='shadowSpreadOuter1' result='shadowOffsetOuter1' />
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gl-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='8'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient
+            id='gl-e'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e82245' />
+            <stop offset='1' stopColor='#cc1838' />
+          </linearGradient>
+          <linearGradient id='gl-f' x1='7' x2='7' y1='8' y2='12' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='gl-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
+          <filter
+            id='gl-c'
+            width='21'
+            height='8'
+            x='0'
+            y='0'
+            colorInterpolationFilters='sRGB'
+            filterUnits='userSpaceOnUse'>
+            <feFlood floodOpacity='0' result='BackgroundImageFix' />
             <feColorMatrix
-              in='shadowOffsetOuter1'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0'
+              in='SourceAlpha'
+              result='hardAlpha'
+              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
             />
+            <feOffset />
+            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_927' />
+            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_927' result='shape' />
           </filter>
-          <path id='gl-c' d='M0 0h21v8H0z' />
         </defs>
         <clipPath id='gl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#gl-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#gl-a)' d='M0 0h21v15H0z' />
-          <use xlinkHref='#gl-c' fill='#000' filter='url(#gl-b)' />
-          <use xlinkHref='#gl-c' fill='url(#gl-a)' />
-          <path fill='url(#gl-d)' d='M3 8H0v7h21V8H11a4 4 0 1 0-8 0' />
-          <path fill='url(#gl-a)' d='M3 8a4 4 0 1 0 8 0z' />
+        <g clipPath='url(#gl-a)'>
+          <path fill='url(#gl-b)' d='M21 0H0v15h21z' />
+          <g filter='url(#gl-c)'>
+            <path fill='#000' d='M21 0H0v8h21z' />
+          </g>
+          <path fill='url(#gl-d)' d='M21 0H0v8h21z' />
+          <path
+            fill='url(#gl-e)'
+            fillRule='evenodd'
+            d='M3 8H0v7h21V8H11a4 4 0 1 0-8 0'
+            clipRule='evenodd'
+          />
+          <path fill='url(#gl-f)' fillRule='evenodd' d='M3 8a4 4 0 0 0 8 0z' clipRule='evenodd' />
         </g>
       </g>
     </svg>

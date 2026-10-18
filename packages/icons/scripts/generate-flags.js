@@ -42,10 +42,43 @@ function extractSvg(source) {
 }
 
 function svgAttrsToJsx(svg) {
-  return svg.replace(/\b([a-z]+[-:][a-z-]+)=/giu, (_match, attr) => {
+  const convertedAttrs = svg.replace(/\b([a-z]+[-:][a-z-]+)=/giu, (_match, attr) => {
     const camel = attr.replace(/[-:]([a-z])/gu, (_, c) => c.toUpperCase())
 
     return `${camel}=`
+  })
+
+  return convertedAttrs.replace(/\bstyle=(["'])(.*?)\1/giu, (_match, _quote, styleValue) => {
+    const declarations = styleValue
+      .split(';')
+      .map(decl => decl.trim())
+      .filter(Boolean)
+
+    if (declarations.length === 0) {
+      return ''
+    }
+
+    const styleEntries = declarations
+      .map(decl => {
+        const colonIndex = decl.indexOf(':')
+        if (colonIndex === -1) {
+          return null
+        }
+        const prop = decl.slice(0, colonIndex).trim()
+        const val = decl.slice(colonIndex + 1).trim()
+        if (!prop || !val) {
+          return null
+        }
+        const camelProp = prop.replace(/-([a-z])/giu, (_, c) => c.toUpperCase())
+        return `${camelProp}: '${val.replace(/'/g, "\\'")}'`
+      })
+      .filter(Boolean)
+
+    if (styleEntries.length === 0) {
+      return ''
+    }
+
+    return `style={{ ${styleEntries.join(', ')} }}`
   })
 }
 

@@ -32,29 +32,68 @@ export const IconFlagMV: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='mv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='mv-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='mv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#f32249' />
-            <stop offset='100%' stopColor='#d01739' />
+          <linearGradient
+            id='mv-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#f32249' />
+            <stop offset='1' stopColor='#d01739' />
           </linearGradient>
-          <linearGradient id='mv-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#15a04f' />
-            <stop offset='100%' stopColor='#0f7e3d' />
+          <linearGradient
+            id='mv-d'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#15a04f' />
+            <stop offset='1' stopColor='#0f7e3d' />
           </linearGradient>
+          <linearGradient
+            id='mv-e'
+            x1='10.13'
+            x2='10.13'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='mv-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='mv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#mv-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#mv-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#mv-b)' d='M0 0h21v15H0z' />
-          <rect width='15' height='9' x='3' y='3' fill='url(#mv-c)' rx='.5' />
-          <path fill='url(#mv-a)' d='M12.25 4.08a3.5 3.5 0 1 0 0 6.839 3.501 3.501 0 0 1 0-6.838' />
+        <g clipPath='url(#mv-a)'>
+          <path fill='url(#mv-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#mv-c)' d='M21 0H0v15h21z' />
+          <path
+            fill='url(#mv-d)'
+            d='M17.5 3h-14a.5.5 0 0 0-.5.5v8c0 .28.22.5.5.5h14a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5'
+          />
+          <path
+            fill='url(#mv-e)'
+            fillRule='evenodd'
+            d='M12.25 4.08A3.5 3.5 0 0 0 8 7.5a3.5 3.5 0 0 0 4.25 3.42 3.5 3.5 0 0 1 0-6.84'
+            clipRule='evenodd'
+          />
         </g>
       </g>
     </svg>

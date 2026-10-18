@@ -32,36 +32,90 @@ export const IconFlagPA: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='pa-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='pa-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='pa-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#e52448' />
-            <stop offset='100%' stopColor='#d01739' />
+          <linearGradient
+            id='pa-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='7'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e52448' />
+            <stop offset='1' stopColor='#d01739' />
           </linearGradient>
-          <linearGradient id='pa-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#1367ae' />
-            <stop offset='100%' stopColor='#0a5492' />
+          <linearGradient
+            id='pa-d'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1367ae' />
+            <stop offset='1' stopColor='#0a5492' />
           </linearGradient>
+          <linearGradient
+            id='pa-e'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <linearGradient id='pa-f' x1='5' x2='5' y1='1.5' y2='5.12' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#1367ae' />
+            <stop offset='1' stopColor='#0a5492' />
+          </linearGradient>
+          <linearGradient
+            id='pa-g'
+            x1='15.5'
+            x2='15.5'
+            y1='9'
+            y2='12.62'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#e52448' />
+            <stop offset='1' stopColor='#d01739' />
+          </linearGradient>
+          <clipPath id='pa-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='pa-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#pa-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#pa-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#pa-b)' d='M0 0h21v7H0z' />
-          <path fill='url(#pa-c)' d='M0 7h21v8H0z' />
-          <path fill='url(#pa-a)' d='M0 7V0h10v7zm10 8V7h11v8z' />
+        <g clipPath='url(#pa-a)'>
+          <path fill='url(#pa-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#pa-c)' d='M21 0H0v7h21z' />
+          <path fill='url(#pa-d)' d='M21 7H0v8h21z' />
           <path
-            fill='url(#pa-c)'
-            d='m5 4.32-1.176.798.396-1.365-1.122-.871 1.42-.045L5 1.5l.482 1.337 1.42.045-1.122.871.396 1.365z'
+            fill='url(#pa-e)'
+            fillRule='evenodd'
+            d='M0 7V0h10v7zm10 8V7h11v8z'
+            clipRule='evenodd'
           />
           <path
-            fill='url(#pa-b)'
-            d='m15.5 11.82-1.176.798.396-1.365-1.122-.871 1.42-.045L15.5 9l.482 1.337 1.42.045-1.122.871.396 1.365z'
+            fill='url(#pa-f)'
+            fillRule='evenodd'
+            d='m5 4.32-1.18.8.4-1.37-1.12-.87 1.42-.04L5 1.5l.48 1.34 1.42.04-1.12.87.4 1.37z'
+            clipRule='evenodd'
+          />
+          <path
+            fill='url(#pa-g)'
+            fillRule='evenodd'
+            d='m15.5 11.82-1.18.8.4-1.37-1.12-.87 1.42-.04L15.5 9l.48 1.34 1.42.04-1.12.87.4 1.37z'
+            clipRule='evenodd'
           />
         </g>
       </g>

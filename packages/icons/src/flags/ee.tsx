@@ -32,29 +32,60 @@ export const IconFlagEE: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ee-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ee-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ee-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#262626' />
-            <stop offset='100%' stopColor='#0d0d0d' />
+          <linearGradient
+            id='ee-c'
+            x1='10.5'
+            x2='10.5'
+            y1='5'
+            y2='10'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#262626' />
+            <stop offset='1' stopColor='#0d0d0d' />
           </linearGradient>
-          <linearGradient id='ee-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#5da8f1' />
-            <stop offset='100%' stopColor='#4892da' />
+          <linearGradient
+            id='ee-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='5'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#5da8f1' />
+            <stop offset='1' stopColor='#4892da' />
           </linearGradient>
+          <linearGradient
+            id='ee-e'
+            x1='10.5'
+            x2='10.5'
+            y1='10'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='ee-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ee-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ee-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ee-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ee-b)' d='M0 5h21v5H0z' />
-          <path fill='url(#ee-c)' d='M0 0h21v5H0z' />
-          <path fill='url(#ee-a)' d='M0 10h21v5H0z' />
+        <g clipPath='url(#ee-a)'>
+          <path fill='url(#ee-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ee-c)' d='M21 5H0v5h21z' />
+          <path fill='url(#ee-d)' d='M21 0H0v5h21z' />
+          <path fill='url(#ee-e)' d='M21 10H0v5h21z' />
         </g>
       </g>
     </svg>

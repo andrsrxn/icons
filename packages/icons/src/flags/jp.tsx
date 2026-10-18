@@ -32,23 +32,38 @@ export const IconFlagJP: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='jp-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='jp-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='jp-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#d81441' />
-            <stop offset='100%' stopColor='#bb0831' />
+          <linearGradient
+            id='jp-c'
+            x1='10.5'
+            x2='10.5'
+            y1='3'
+            y2='12'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#d81441' />
+            <stop offset='1' stopColor='#bb0831' />
           </linearGradient>
+          <clipPath id='jp-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='jp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#jp-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#jp-a)' d='M0 0h21v15H0z' />
-          <circle cx='10.5' cy='7.5' r='4.5' fill='url(#jp-b)' />
+        <g clipPath='url(#jp-a)'>
+          <path fill='url(#jp-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#jp-c)' d='M10.5 12a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9' />
         </g>
       </g>
     </svg>

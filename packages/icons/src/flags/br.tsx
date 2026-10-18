@@ -32,42 +32,69 @@ export const IconFlagBR: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='br-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='br-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='br-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#05ab41' />
-            <stop offset='100%' stopColor='#019c39' />
+          <linearGradient
+            id='br-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#05ab41' />
+            <stop offset='1' stopColor='#019c39' />
           </linearGradient>
-          <linearGradient id='br-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#053087' />
-            <stop offset='100%' stopColor='#012877' />
+          <linearGradient
+            id='br-d'
+            x1='10.5'
+            x2='10.5'
+            y1='4'
+            y2='11'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#053087' />
+            <stop offset='1' stopColor='#012877' />
           </linearGradient>
-          <circle id='br-c' cx='3.5' cy='3.5' r='3.5' />
+          <clipPath id='br-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='br-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#br-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#br-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#br-b)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#br-a)'>
+          <path fill='url(#br-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#br-c)' d='M21 0H0v15h21z' />
           <path
             fill='#fdd216'
-            d='M2.422 7.773c-.233-.15-.228-.398 0-.546l7.656-4.954a.85.85 0 0 1 .844 0l7.656 4.954c.233.15.228.398 0 .546l-7.656 4.954a.85.85 0 0 1-.844 0z'
+            fillRule='evenodd'
+            d='M2.42 7.77c-.23-.15-.23-.4 0-.54l7.66-4.96a.9.9 0 0 1 .84 0l7.66 4.96c.23.15.23.4 0 .54l-7.66 4.96a.9.9 0 0 1-.84 0z'
+            clipRule='evenodd'
           />
-          <g transform='translate(7 4)'>
-            <mask id='br-e' fill='#fff'>
-              <use xlinkHref='#br-c' />
-            </mask>
-            <use xlinkHref='#br-c' fill='url(#br-d)' />
+          <path fill='url(#br-d)' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
+          <mask
+            id='br-e'
+            width='7'
+            height='7'
+            x='7'
+            y='4'
+            maskUnits='userSpaceOnUse'
+            style={{ maskType: 'luminance' }}>
+            <path fill='#fff' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
+          </mask>
+          <g mask='url(#br-e)'>
             <path
               fill='#fff'
-              fillRule='nonzero'
-              d='M-.1 2.974c.265-.215 1.463-.04 3.534.512 1.474.394 3.173 1.262 3.562 1.742l.314.388.778-.629-.315-.388c-.55-.68-2.421-1.636-4.081-2.079-2.586-.69-3.758-.86-4.422-.323l-.388.314.629.777z'
-              mask='url(#br-e)'
+              d='M6.9 6.97q.4-.32 3.53.52c1.48.39 3.18 1.26 3.57 1.74l.31.39.78-.63-.32-.4c-.55-.67-2.42-1.63-4.08-2.07-2.58-.69-3.76-.86-4.42-.32l-.39.31.63.78z'
             />
           </g>
         </g>

@@ -32,25 +32,60 @@ export const IconFlagLV: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='lv-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='lv-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='lv-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#b9414b' />
-            <stop offset='100%' stopColor='#9d323b' />
+          <linearGradient
+            id='lv-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='6'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#b9414b' />
+            <stop offset='1' stopColor='#9d323b' />
           </linearGradient>
+          <linearGradient
+            id='lv-d'
+            x1='10.5'
+            x2='10.5'
+            y1='9'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#b9414b' />
+            <stop offset='1' stopColor='#9d323b' />
+          </linearGradient>
+          <linearGradient
+            id='lv-e'
+            x1='10.5'
+            x2='10.5'
+            y1='6'
+            y2='9'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='lv-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='lv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#lv-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#lv-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#lv-b)' d='M0 0h21v6H0z' />
-          <path fill='url(#lv-b)' d='M0 9h21v6H0z' />
-          <path fill='url(#lv-a)' d='M0 6h21v3H0z' />
+        <g clipPath='url(#lv-a)'>
+          <path fill='url(#lv-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#lv-c)' d='M21 0H0v6h21z' />
+          <path fill='url(#lv-d)' d='M21 9H0v6h21z' />
+          <path fill='url(#lv-e)' d='M21 6H0v3h21z' />
         </g>
       </g>
     </svg>

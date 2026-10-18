@@ -32,34 +32,57 @@ export const IconFlagUM: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='um-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='um-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='um-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#d02f44' />
-            <stop offset='100%' stopColor='#b12537' />
+          <linearGradient
+            id='um-c'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#d02f44' />
+            <stop offset='1' stopColor='#b12537' />
           </linearGradient>
-          <linearGradient id='um-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#46467f' />
-            <stop offset='100%' stopColor='#3c3c6d' />
+          <linearGradient id='um-d' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#46467f' />
+            <stop offset='1' stopColor='#3c3c6d' />
           </linearGradient>
+          <linearGradient id='um-e' x1='4.5' x2='4.5' y1='1' y2='6' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
+          </linearGradient>
+          <clipPath id='um-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='um-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#um-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#um-a)' d='M0 0h21v15H0z' />
+        <g clipPath='url(#um-a)'>
+          <path fill='url(#um-b)' d='M21 0H0v15h21z' />
           <path
-            fill='url(#um-b)'
+            fill='url(#um-c)'
+            fillRule='evenodd'
             d='M0 0h21v1H0zm0 2h21v1H0zm0 2h21v1H0zm0 2h21v1H0zm0 2h21v1H0zm0 2h21v1H0zm0 2h21v1H0zm0 2h21v1H0z'
+            clipRule='evenodd'
           />
-          <path fill='url(#um-c)' d='M0 0h9v7H0z' />
+          <path fill='url(#um-d)' d='M9 0H0v7h9z' />
           <path
-            fill='url(#um-a)'
+            fill='url(#um-e)'
+            fillRule='evenodd'
             d='M1.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-5 1a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 1a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 1a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1 1a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>

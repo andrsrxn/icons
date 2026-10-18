@@ -32,36 +32,63 @@ export const IconFlagPH: FlagIcon = ({
       {...props}>
       <defs>
         <defs>
-          <linearGradient id='ph-a' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fff' />
-            <stop offset='100%' stopColor='#f0f0f0' />
+          <linearGradient
+            id='ph-b'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
-          <linearGradient id='ph-b' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#dd1c34' />
-            <stop offset='100%' stopColor='#cc162c' />
+          <linearGradient
+            id='ph-c'
+            x1='10.5'
+            x2='10.5'
+            y1='7'
+            y2='15'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#dd1c34' />
+            <stop offset='1' stopColor='#cc162c' />
           </linearGradient>
-          <linearGradient id='ph-c' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#0d4bc3' />
-            <stop offset='100%' stopColor='#073da6' />
+          <linearGradient
+            id='ph-d'
+            x1='10.5'
+            x2='10.5'
+            y1='0'
+            y2='7'
+            gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#0d4bc3' />
+            <stop offset='1' stopColor='#073da6' />
           </linearGradient>
-          <linearGradient id='ph-d' x1='50%' x2='50%' y1='0%' y2='100%'>
-            <stop offset='0%' stopColor='#fdd64d' />
-            <stop offset='100%' stopColor='#fcd036' />
+          <linearGradient id='ph-e' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fff' />
+            <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
+          <linearGradient id='ph-f' x1='4.5' x2='4.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+            <stop stopColor='#fdd64d' />
+            <stop offset='1' stopColor='#fcd036' />
+          </linearGradient>
+          <clipPath id='ph-a'>
+            <path fill='#fff' d='M0 0h21v15H0z' />
+          </clipPath>
         </defs>
         <clipPath id='ph-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
       <g clipPath='url(#ph-clip)'>
-        <g fill='none' fillRule='evenodd'>
-          <path fill='url(#ph-a)' d='M0 0h21v15H0z' />
-          <path fill='url(#ph-b)' d='M0 7h21v8H0z' />
-          <path fill='url(#ph-c)' d='M0 0h21v7H0z' />
-          <path fill='url(#ph-a)' d='m0 0 10 7.5L0 15z' />
+        <g clipPath='url(#ph-a)'>
+          <path fill='url(#ph-b)' d='M21 0H0v15h21z' />
+          <path fill='url(#ph-c)' d='M21 7H0v8h21z' />
+          <path fill='url(#ph-d)' d='M21 0H0v7h21z' />
+          <path fill='url(#ph-e)' fillRule='evenodd' d='m0 0 10 7.5L0 15z' clipRule='evenodd' />
           <path
-            fill='url(#ph-d)'
-            d='M3.4 8.495 2.542 9.81l.325-1.535q-.078-.064-.143-.143l-1.535.325L2.505 7.6a1 1 0 0 1 0-.202L1.19 6.543l1.535.325q.064-.078.143-.143L2.543 5.19 3.4 6.505a1 1 0 0 1 .202 0l.856-1.315-.325 1.535q.078.064.143.143l1.535-.325-1.315.856a1 1 0 0 1 0 .202l1.315.856-1.535-.325q-.064.078-.143.143l.325 1.535L3.6 8.495a1 1 0 0 1-.202 0M7.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-6-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 10a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            fill='url(#ph-f)'
+            fillRule='evenodd'
+            d='m3.4 8.5-.86 1.3.33-1.54-.14-.14-1.54.33 1.32-.86v-.2l-1.32-.86 1.54.33.14-.14-.33-1.54.86 1.32h.2l.86-1.32-.33 1.54.14.14 1.54-.33-1.32.86v.2l1.32.86-1.54-.33-.14.14.33 1.54-.86-1.32zM7.5 8a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m-6-5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m0 10a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
+            clipRule='evenodd'
           />
         </g>
       </g>
