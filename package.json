@@ -28,7 +28,9 @@
     "release": "pnpm build:icons && changeset publish",
     "generate-icons": "turbo run generate-icons",
     "generate-flags": "turbo run generate-flags",
-    "generate-raw-metadata": "turbo run generate-raw-metadata"
+    "generate-raw-metadata": "turbo run generate-raw-metadata",
+    "attw": "turbo run attw",
+    "publint": "turbo run publint"
   },
   "engines": {
     "node": "^24",

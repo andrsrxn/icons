@@ -54,6 +54,14 @@
     "generate-raw-metadata": {
       "cache": false,
       "outputs": []
+    },
+    "attw": {
+      "cache": false,
+      "outputs": []
+    },
+    "publint": {
+      "cache": false,
+      "outputs": []
     }
   }
 }
