@@ -8,7 +8,6 @@
     "file",
     "folder",
     "package",
-    "bundle",
-    "compress"
+    "bundle"
   ]
 }

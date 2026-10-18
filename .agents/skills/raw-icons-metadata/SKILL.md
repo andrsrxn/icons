@@ -77,12 +77,25 @@ export const ICON_CATEGORIES = [
 - **No Filler:** Only include applicable tags; do not pad tags.
 
 ### Non-Redundancy Rules:
-1. **Never repeat the icon name or direct sub-words:**
+1. **Never repeat the icon name, direct sub-words, or suffix stems:**
    - E.g., for `plus.svg`: do **not** include `"plus"`.
    - E.g., for `plus-square.svg`: `"plus"` and `"square"` are in the file name, so do not add them to `tags`.
    - E.g., for `plus-circle.svg`: `"circle"` is in the name, but shape descriptor `"round"` is valid.
-2. **Never repeat assigned categories:**
-   - E.g., if category is `["finance"]`, do **not** include `"finance"` in tags (use `"money"`, `"currency"`, `"payment"`, etc.).
+   - E.g., for suffix `-off` (such as `cloud-off` or `agent-off`): do **not** add `"offline"`, because it repeats the `"off"` suffix and `"line"` adds no search value on its own.
+   - E.g., for suffix `-lock`: do **not** add `"locked"`. For `dices`: do **not** add `"dice"`. For `files`: do **not** add `"file"`. For `clock-hour-*`: do **not** add `"hours"`.
+2. **Never include intra-tag morphological duplicates (Keep only the larger/more specific term):**
+   - An icon must never contain two variants sharing the same root stem (e.g., `"attach"` vs `"attachment"`, `"cook"` vs `"cooking"`, `"sync"` vs `"synced"`, `"photo"` vs `"photography"`, `"down"` vs `"downvote"`, `"config"` vs `"configuration"`, `"record"` vs `"recording"`).
+   - **Resolution rule:** Always retain **only the larger / more specific / broader term** (e.g., keep `"attachment"` over `"attach"`, `"cryptocurrency"` over `"crypto"`, `"photography"` over `"photo"`, `"recording"` over `"record"`, `"randomize"` over `"random"`, `"thicker"` over `"thick"`). Larger forms are more specific and naturally match broader substring and prefix queries.
+3. **Never repeat assigned categories or their direct word stems (with synonym exceptions):**
+   - E.g., if category is `["finance"]`, do **not** include `"finance"`.
+   - E.g., if category is `["shopping"]`, do **not** include `"shop"` or `"shopping"`.
+   - E.g., if category is `["buildings"]`, do **not** include `"building"`.
+   - E.g., if category is `["security"]`, do **not** include `"secure"`.
+   - E.g., if category is `["medical"]`, do **not** include `"medicine"`.
+   - E.g., if category is `["gaming"]`, do **not** include `"game"`.
+   - E.g., if category is `["development"]`, do **not** include `"developer"`.
+   - E.g., if category is `["transport"]`, do **not** include `"transportation"`.
+   - **Synonym Exception:** True synonyms that do not share the same root stem or substring with the category **are fully allowed**. For example, when an icon has category `"people"`, the tag `"person"` is completely valid and encouraged because `"person"` is a distinct synonym, not a direct stem or substring repetition of `"people"`.
 
 ### Abbreviations & Numbers:
 - **Abbreviations:** Expand acronyms and abbreviations into full words (e.g., `3d` → `"three"`, `"dimension"`, `"spatial"`).
@@ -187,7 +200,9 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
    - Ensure `categories.length >= 1 && categories.length <= 5`.
 3. **Verify Tag Quality & Constraints:**
    - Ensure `tags.length >= 1 && tags.length <= 10`.
-   - Verify no tags duplicate category names or file name parts.
+   - **No Name or Suffix Redundancy:** Verify no tags repeat parts of the icon name or suffixes (e.g. no `"offline"` on `-off` icons, no `"locked"` on `-lock` icons, no `"hours"` on `clock-hour-*` icons).
+   - **No Intra-Tag Morphological Duplicates:** Check for word pairs sharing the same stem in the same icon (e.g. `"attach"` & `"attachment"`); ensure only the larger, more specific term is retained.
+   - **No Category Stem Duplications:** Ensure tags don't duplicate category names or their direct stems (e.g. no `"shop"` for `shopping`, no `"building"` for `buildings`), while respecting legitimate distinct synonyms (e.g. `"person"` is fully allowed for `people`).
    - Verify standard suffix tags are placed at the end.
 
 it could be a dry-run, when only should return the hyperlink to the metadata file with its file name, or it could be a fix run, when it should directly replace the .meta.json file with the fixes.
