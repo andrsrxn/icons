@@ -11,7 +11,7 @@ import { isUIIcon } from '@/lib/utils/icons'
 const catalog = rawCatalog as IconCatalog
 
 export const ButtonRandomIcon = () => {
-  const { setIconParam, setGroup } = useIconCatalog()
+  const { setIconParam, setGroup, setCategory, setPage, setQuery } = useIconCatalog()
 
   const getRandomIcon = () => {
     const max = catalog.length - 1
@@ -20,6 +20,9 @@ export const ButtonRandomIcon = () => {
     if (!randomIcon) {
       return
     }
+    setCategory(null)
+    setPage(1)
+    setQuery('')
 
     setIconParam(randomIcon.name)
     setGroup(isUIIcon(randomIcon) ? 'ui' : 'flags')
