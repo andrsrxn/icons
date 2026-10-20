@@ -10,6 +10,8 @@
     "stretch",
     "range",
     "change",
-    "filter"
+    "filter",
+    "mcp",
+    "connection"
   ]
 }

@@ -6,12 +6,8 @@
     "detect",
     "shape",
     "identify",
-    "analyze",
     "frame",
     "area",
-    "qr",
-    "find",
-    "lookup",
-    "explore"
+    "qr"
   ]
 }
