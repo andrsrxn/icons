@@ -58,7 +58,7 @@ export const IconVirusOff: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='m2.74 2.64 18.52 18.51' stroke='currentColor' />
+      <path d='m2.74 2.77 18.52 18.51' stroke='currentColor' />
     </svg>
   )
 }

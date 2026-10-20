@@ -27,15 +27,15 @@ export const IconTextUppercase: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='m1.69 20.02 3.25-11.4C5.73 5.87 6.12 4.5 6.87 4.5c.76 0 1.15 1.38 1.92 4.13L12 20.02'
+        d='m2.42 19.37 2.89-10.1c.78-2.75 1.17-4.12 1.93-4.12.75 0 1.14 1.38 1.92 4.12L12 19.37'
         stroke='currentColor'
       />
       <path
-        d='m12 20.02 3.25-11.4c.79-2.75 1.18-4.12 1.94-4.12.75 0 1.14 1.38 1.91 4.13l3.21 11.39'
+        d='m12 19.37 2.88-10.1c.79-2.75 1.18-4.12 1.94-4.12.75 0 1.14 1.38 1.91 4.12l2.85 10.1'
         stroke='currentColor'
       />
-      <path d='M10.12 13.79H3.57' stroke='currentColor' />
-      <path d='M20.43 13.79h-6.55' stroke='currentColor' />
+      <path d='M10.25 13.59H4.17' stroke='currentColor' />
+      <path d='M19.83 13.59h-6.08' stroke='currentColor' />
     </svg>
   )
 }

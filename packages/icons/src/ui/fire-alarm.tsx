@@ -39,7 +39,7 @@ export const IconFireAlarm: Icon = ({
       <rect
         width='4.14'
         height='19.21'
-        rx='1'
+        rx='1.5'
         transform='matrix(0 -1 -1 0 21.6 21.23)'
         stroke='currentColor'
       />

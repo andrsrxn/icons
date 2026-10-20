@@ -32,6 +32,16 @@ export const IconMagicHat: Icon = ({
         fill='currentColor'
       />
       <path
+        opacity='.2'
+        d='M8.33 5.45 7.56 4l-.78 1.46-1.5.83 1.5.77.78 1.7.77-1.7 1.63-.85z'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m16.72 3.97-.9-1.72-.93 1.72-1.75.96 1.75.9.92 2 .91-2 1.9-.98z'
+        fill='currentColor'
+      />
+      <path
         d='M18.9 14.5v3.36c0 1.51 0 2.27-.67 3.1-.68.83-1.23.94-2.34 1.16-1.02.2-2.31.36-3.89.36a20 20 0 0 1-3.89-.36c-1.1-.22-1.66-.33-2.34-1.16s-.68-1.59-.68-3.1v-3.37'
         stroke='currentColor'
       />
@@ -43,24 +53,14 @@ export const IconMagicHat: Icon = ({
         transform='rotate(90 12 13.08)'
         stroke='currentColor'
       />
-      <path
-        opacity='.2'
-        d='m8.42 5.6-.68-1.28-.69 1.28-1.31.72L7.05 7l.69 1.5.68-1.5 1.43-.74z'
-        fill='currentColor'
-      />
-      <path
-        opacity='.2'
-        d='m16.08 3.74-.81-1.52-.82 1.52-1.56.87 1.56.8.82 1.78.8-1.78 1.7-.88z'
-        fill='currentColor'
-      />
-      <path d='M5.26 6.26c1.22 0 2.53-1.32 2.53-2.54' stroke='currentColor' />
-      <path d='M12.32 4.53c1.46 0 3.01-1.57 3.01-3.01' stroke='currentColor' />
-      <path d='M10.33 6.26c-1.22 0-2.54-1.32-2.54-2.54' stroke='currentColor' />
-      <path d='M18.34 4.53c-1.44 0-3-1.57-3-3.01' stroke='currentColor' />
-      <path d='M5.26 6.26c1.21 0 2.53 1.34 2.53 2.53' stroke='currentColor' />
-      <path d='M12.32 4.53c1.45 0 3.01 1.59 3.01 3' stroke='currentColor' />
-      <path d='M10.33 6.26c-1.2 0-2.54 1.32-2.54 2.53' stroke='currentColor' />
-      <path d='M18.34 4.53c-1.42 0-3 1.57-3 3' stroke='currentColor' />
+      <path d='M7.62 3.32c0 1.38-1.5 2.88-2.89 2.88' stroke='currentColor' />
+      <path d='M15.88 1.46c0 1.62-1.74 3.39-3.38 3.39' stroke='currentColor' />
+      <path d='M7.62 3.32c0 1.38 1.5 2.88 2.89 2.88' stroke='currentColor' />
+      <path d='M15.88 1.46c0 1.63 1.76 3.39 3.39 3.39' stroke='currentColor' />
+      <path d='M7.62 9.09c0-1.36-1.5-2.89-2.89-2.89' stroke='currentColor' />
+      <path d='M15.88 8.23c0-1.6-1.76-3.38-3.38-3.38' stroke='currentColor' />
+      <path d='M7.62 9.09c0-1.38 1.52-2.89 2.89-2.89' stroke='currentColor' />
+      <path d='M15.88 8.23c0-1.62 1.78-3.38 3.39-3.38' stroke='currentColor' />
     </svg>
   )
 }
