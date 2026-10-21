@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconElevator: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-elevator'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.24 2.76c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.48c0 1.88 0 2.83-.59 3.41-.58.59-1.52.59-3.4.59H6.74c-1.88 0-2.82 0-3.4-.59-.6-.58-.6-1.53-.6-3.41V8.76c0-2.83 0-4.24.89-5.12.88-.88 2.3-.88 5.12-.88z'
+        fill='currentColor'
+      />
+      <path
+        d='M21.38 15.38V8.62c0-2.83 0-4.25-.88-5.13s-2.3-.87-5.12-.87H8.61c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v6.76c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h6.77c2.83 0 4.24 0 5.12-.87.88-.88.88-2.3.88-5.13'
+        stroke='currentColor'
+      />
+      <path
+        d='m8.31 14.7.86.86c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.86-.86'
+        stroke='currentColor'
+      />
+      <path d='m8.31 9.3.86-.86c1.33-1.34 2-2 2.83-2s1.5.66 2.83 2l.86.86' stroke='currentColor' />
+    </svg>
+  )
+}

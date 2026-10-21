@@ -1,0 +1,56 @@
+import type { Icon } from './types'
+
+export const IconDevicePhoneImageVertical: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-device-phone-image-vertical'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M11.39 1.75c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v3.16c0 1.29 0 1.93.23 2.2a1 1 0 0 0 .94.35c.36-.06.77-.55 1.6-1.54.42-.49.63-.74.87-.83a1 1 0 0 1 .75.02c.24.1.43.36.83.87l1.04 1.35c.41.53.62.8.88.9a1 1 0 0 0 .54.04c.28-.05.53-.28 1.02-.73l.07-.06c.32-.3.48-.44.66-.5a1 1 0 0 1 .6-.04c.2.05.36.18.71.44.76.56 1.14.84 1.45.85a1 1 0 0 0 .85-.43c.18-.26.18-.73.18-1.67V7.75c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <rect
+        x='5.39'
+        y='22.25'
+        width='20.5'
+        height='13.22'
+        rx='3'
+        transform='rotate(-90 5.39 22.25)'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.48 8.48a.46.46 0 1 1-.92 0 .46.46 0 0 1 .92 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m5.55 15.28 2.93-3.8c.5-.66.74-.98 1.08-.97s.57.35 1.02 1.02l1.3 1.93c.4.59.6.88.9.9.32.04.8-.47 1.32-.97.42-.41.76-.72 1.03-.72.26 0 .48.19.91.58l2.26 2.03'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

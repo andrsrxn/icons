@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconSoundWaveSquare: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-sound-wave-square'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M15.24 2.76c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.48c0 1.88 0 2.83-.59 3.41-.58.59-1.52.59-3.4.59H6.74c-1.88 0-2.82 0-3.4-.59-.6-.58-.6-1.53-.6-3.41V8.76c0-2.83 0-4.24.89-5.12.88-.88 2.3-.88 5.12-.88z'
+        fill='currentColor'
+      />
+      <path d='M18.12 13.9v-3.8' stroke='currentColor' />
+      <path d='M12 14.55v-5.1' stroke='currentColor' />
+      <path d='M9.02 16.26V7.74' stroke='currentColor' />
+      <path d='M14.98 16.26V7.74' stroke='currentColor' />
+      <path
+        d='M21.38 15.38V8.62c0-2.83 0-4.25-.88-5.13s-2.3-.87-5.12-.87H8.61c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v6.76c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h6.77c2.83 0 4.24 0 5.12-.87.88-.88.88-2.3.88-5.13'
+        stroke='currentColor'
+      />
+      <path d='M5.85 13.95v-3.9' stroke='currentColor' />
+    </svg>
+  )
+}

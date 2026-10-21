@@ -36,10 +36,8 @@ export const IconVote: Icon = ({
         stroke='currentColor'
       />
       <path d='M1.68 20.8h20.64' stroke='currentColor' />
-      <path
-        d='m8.82 12.17.59.73c.72.91 1.09 1.37 1.57 1.37s.84-.46 1.56-1.37l2.98-3.78'
-        stroke='currentColor'
-      />
+      <path d='M9.35 9.95h5.3' stroke='currentColor' />
+      <path d='M9.35 14.05h5.3' stroke='currentColor' />
     </svg>
   )
 }

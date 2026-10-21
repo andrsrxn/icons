@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconFilePsd: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-file-psd'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M3.8 13.1V5.79c0-1.87 0-2.8.57-3.39.58-.58 1.52-.6 3.38-.61l2.22-.03c1.3 0 1.94-.02 2.42.27a2 2 0 0 1 .7.69c.28.47.28 1.12.28 2.42 0 1.28 0 1.92.29 2.4a2 2 0 0 0 .69.69c.47.28 1.11.28 2.4.28s1.93 0 2.4.29a2 2 0 0 1 .7.68c.28.48.28 1.12.28 2.4v1.24z'
+        fill='currentColor'
+      />
+      <path
+        d='M3.8 13.04V7.82c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h1.87c1.23 0 1.84 0 2.4.23.54.22.98.66 1.84 1.52l1.23 1.23 1.17 1.14c.9.87 1.34 1.3 1.58 1.86s.24 1.19.24 2.44v2.8'
+        stroke='currentColor'
+      />
+      <path d='M13.18 2.33v2.44c0 1.88 0 2.83.58 3.41s1.53.59 3.41.59h2.44' stroke='currentColor' />
+      <path d='M2.62 15.89v6.56' stroke='currentColor' />
+      <path
+        d='M2.64 15.89h2.34c.98 0 1.78.84 1.78 1.88 0 1.03-.8 1.87-1.78 1.87H2.64'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.93 16.61a3.5 3.5 0 0 0-2.3-.87c-1.09 0-2.28.56-2.28 1.73 0 2.5 4.58.5 4.58 3.06 0 1.2-1.17 1.83-2.3 1.83-1.11 0-1.87-.32-2.38-1.01'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.78 20.62v-3.1c0-.83 0-1.25.33-1.55.34-.3.69-.26 1.4-.18 1.47.16 3.34.84 3.34 3.29 0 2.44-1.87 3.12-3.34 3.28-.71.08-1.06.12-1.4-.18s-.33-.72-.33-1.56'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

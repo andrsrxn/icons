@@ -32,7 +32,7 @@ export const IconFileHtml: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M3.73 13.09v-5.3c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.95c1.23 0 1.84 0 2.4.23.54.22.98.66 1.84 1.52l1.25 1.25 1.2 1.16c.89.87 1.33 1.3 1.57 1.86s.24 1.19.24 2.44v2.84'
+        d='M3.73 13.09v-5.3c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.95c1.23 0 1.84 0 2.4.23.54.22.98.66 1.84 1.52h0l1.25 1.25 1.2 1.16c.89.87 1.33 1.3 1.57 1.86s.24 1.19.24 2.44v2.84'
         stroke='currentColor'
       />
       <path
@@ -43,10 +43,10 @@ export const IconFileHtml: Icon = ({
       <path d='M1.6 16.64v5.03' stroke='currentColor' />
       <path d='M1.6 19.16h3.39' stroke='currentColor' />
       <path d='M9.12 16.64v5.03' stroke='currentColor' />
-      <path d='M13.1 16.64v5.03' stroke='currentColor' />
-      <path d='m13.17 16.6 2.09 2.5' stroke='currentColor' />
-      <path d='m17.27 16.6-2.01 2.5' stroke='currentColor' />
-      <path d='M17.27 16.64v5.03' stroke='currentColor' />
+      <path d='M13.3 16.64v5.03' stroke='currentColor' />
+      <path d='m13.3 16.6 2.09 2.5' stroke='currentColor' />
+      <path d='m17.4 16.6-2.01 2.5' stroke='currentColor' />
+      <path d='M17.4 16.64v5.03' stroke='currentColor' />
       <path d='M7.27 16.64h3.7' stroke='currentColor' />
       <path d='M19.95 16.54v5.13' stroke='currentColor' />
       <path d='M22.64 21.67h-2.69' stroke='currentColor' />

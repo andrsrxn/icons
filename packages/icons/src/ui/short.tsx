@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconShort: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-short'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m4.69 10.41.42-.13a3 3 0 0 0 1.77-1.72c.13-.28.2-.42.28-.54a3 3 0 0 1 2.27-1.43c.15-.02.3-.02.61-.02h4.03l.46.01a3 3 0 0 1 2.59 1.9l.16.33a3 3 0 0 0 2.18 1.51c.33.07.49.1.62.15a3 3 0 0 1 2.08 2.57c.02.15.02.3.02.63v3.7c0 .33 0 .5-.02.65a3 3 0 0 1-1.7 2.4 7 7 0 0 1-.91.35 3 3 0 0 1-1.6.03l-.32-.1-.58-.18a6 6 0 0 1-1.77-.71 3 3 0 0 1-.44-.38 6 6 0 0 1-.96-1.65l-.18-.38c-.76-1.57-1.15-2.35-1.76-2.36s-1.02.77-1.82 2.32l-.5.96c-.3.6-.45.9-.66 1.15a3 3 0 0 1-.79.67c-.28.17-.6.27-1.24.49l-.26.08-.42.13a3 3 0 0 1-1.28.04l-.42-.1c-.54-.15-.8-.22-1.03-.32a3 3 0 0 1-1.74-2.28 7 7 0 0 1-.03-1.07l.04-3.03c0-.58 0-.88.06-1.14a3 3 0 0 1 1.62-2.13c.24-.12.52-.2 1.08-.36z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path d='M1.93 6.64h20.14' stroke='currentColor' />
+      <path d='M1.82 10.5s2.24.74 4.03-.58c1.8-1.32 1.71-3.23 1.71-3.23' stroke='currentColor' />
+      <path d='M22.08 10.5s-2.24.74-4.03-.58c-1.8-1.32-1.71-3.23-1.71-3.23' stroke='currentColor' />
+      <path
+        d='M7.8 3.33h8.4c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v7.34c0 1.88 0 2.83-.59 3.41-.58.59-1.53.59-3.41.59H18c-1.3 0-1.96 0-2.46-.35-.51-.34-.76-.94-1.25-2.16l-.44-1.1c-.78-1.93-1.17-2.9-1.84-2.9s-1.07.97-1.86 2.9l-.46 1.13c-.5 1.2-.74 1.8-1.25 2.14-.5.34-1.16.34-2.45.34H5.8c-1.88 0-2.83 0-3.41-.59-.59-.58-.59-1.53-.59-3.41V9.33c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

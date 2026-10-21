@@ -1,0 +1,67 @@
+import type { Icon } from './types'
+
+export const IconCloudSunSnow: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cloud-sun-snow'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        d='M7.55 12.65a3.3 3.3 0 0 0-2.69-1.42 3.47 3.47 0 0 0-3.37 3.56c0 .97.37 1.84.97 2.49q.54.57 1.27.86'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.26 11.23a4.06 4.06 0 0 1 7.46-.94c.66 1.15.64 2.32.48 3.1'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.32 11.92a2.8 2.8 0 0 1 2.69.1 3.4 3.4 0 0 1 1.25 4.66 4 4 0 0 1-1.25 1.35'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M15.93 12.26c-1.58-.85-3.03-.37-3.2-2.29-.18-1.91.61-2.97 2.53-3.14a3.5 3.5 0 0 1 3.79 3.14c.17 1.92-1.3 3.11-3.12 2.3'
+        fill='currentColor'
+      />
+      <path d='M17.7 13.05a3.48 3.48 0 1 0-5.37-4.01' stroke='currentColor' />
+      <path d='M21.67 11.23h.8' stroke='currentColor' />
+      <path d='M13.72 4.35v-.81' stroke='currentColor' />
+      <path d='m19.67 5.7.64-.75' stroke='currentColor' />
+      <path
+        d='M8.07 16.88a.6.6 0 1 1-1.19 0 .6.6 0 0 1 1.19 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.71 21.04a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.97 17.9a.6.6 0 1 1-1.18 0 .6.6 0 0 1 1.18 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

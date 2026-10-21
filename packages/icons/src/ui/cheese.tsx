@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconCheese: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cheese'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M3.69 10.73c-.94 0-1.42 0-1.7.3-.3.29-.3.76-.3 1.7v2.06c0 2.83 0 4.25.88 5.13s2.29.87 5.12.87h2.2l.68-.01a3 3 0 0 0 1.03-.32c.15-.07.3-.17.58-.36.6-.4.9-.6 1.22-.72a3 3 0 0 1 2.13 0c.32.12.62.32 1.22.72l.17.12.24.15a3 3 0 0 0 1.4.42h.28c.44 0 .66 0 .84-.02a3 3 0 0 0 2.6-2.6c.03-.2.03-.4.03-.85v-4.59c0-.94 0-1.41-.3-1.7-.28-.3-.76-.3-1.7-.3zm4.56 6.83a1.91 1.91 0 1 0 0-3.82 1.91 1.91 0 0 0 0 3.82'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M1.69 12.06v5.73a3 3 0 0 0 3 3h6.22a2 2 0 0 0 1.61-.8l.36-.5a2 2 0 0 1 3.1-.13l.68.76a2 2 0 0 0 1.5.67h2.15a2 2 0 0 0 2-2v-7.44a3 3 0 0 0-.66-1.88l-4.2-5.2a3 3 0 0 0-3.7-.78l-.3.16a2 2 0 0 0-1.02 1.25l-.14.52a2 2 0 0 1-2.27 1.44l-.94-.16a2 2 0 0 0-1.31.22L3.23 9.44a3 3 0 0 0-1.54 2.62'
+        stroke='currentColor'
+      />
+      <path d='m2.37 10.92 19.27-.19' stroke='currentColor' />
+      <path
+        d='M18.72 14.76a.46.46 0 1 1-.91 0 .46.46 0 0 1 .91 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.96 7.45a.44.44 0 1 1-.87 0 .44.44 0 0 1 .87 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M6.2 15.62a2.02 2.02 0 1 1 4.04 0 2.02 2.02 0 0 1-4.04 0' stroke='currentColor' />
+    </svg>
+  )
+}

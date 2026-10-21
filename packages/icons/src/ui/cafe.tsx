@@ -1,0 +1,68 @@
+import type { Icon } from './types'
+
+export const IconCafe: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-cafe'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        width='5.99'
+        height='2.46'
+        rx='1'
+        transform='matrix(1 0 .02944 .99957 1.67 15.12)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        width='5.99'
+        height='2.46'
+        rx='1'
+        transform='matrix(1 0 .02944 .99957 16.34 14.93)'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M18.56 6.28H5.44c0-2.52 2.94-4.56 6.56-4.56s6.56 2.04 6.56 4.56'
+        fill='currentColor'
+      />
+      <path d='M1.74 8.49v12.17' stroke='currentColor' />
+      <path d='M22.23 8.3v12.17' stroke='currentColor' />
+      <path d='M1.74 17.72h5.72' stroke='currentColor' />
+      <path d='M22.23 17.53H16.5' stroke='currentColor' />
+      <path d='M12 20.66v-8.97' stroke='currentColor' />
+      <path d='M12 8.89V4.5' stroke='currentColor' />
+      <path
+        d='M1.74 14.78h2.72c1.41 0 2.12 0 2.56.44s.44 1.15.44 2.56v2.88'
+        stroke='currentColor'
+      />
+      <path
+        d='M22.23 14.6H19.5c-1.41 0-2.12 0-2.56.43-.44.44-.44 1.15-.44 2.56v2.88'
+        stroke='currentColor'
+      />
+      <path d='M6.4 11.69h11.2' stroke='currentColor' />
+      <path d='M5.38 6.06A7.3 7.3 0 0 1 12 1.62a7.3 7.3 0 0 1 6.62 4.44' stroke='currentColor' />
+    </svg>
+  )
+}

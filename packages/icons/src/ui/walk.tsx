@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconWalk: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-walk'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <circle opacity='.2' cx='12.05' cy='4.47' r='2.9' fill='currentColor' />
+      <circle cx='12.05' cy='4.47' r='2.9' stroke='currentColor' />
+      <path
+        d='M12.05 7.37v7.01c0 .36 0 .54.06.7.06.17.17.31.4.59l1.78 2.11c.14.17.21.26.26.36s.08.2.14.42l1.02 3.93'
+        stroke='currentColor'
+      />
+      <path
+        d='m12 14.74-.74 3.41c-.03.17-.05.25-.08.33q-.04.1-.16.29l-2.23 3.65'
+        stroke='currentColor'
+      />
+      <path d='m16.83 13-2.1-1.43-.26-.2-.21-.26-2.15-2.9' stroke='currentColor' />
+      <path
+        d='M12 8.18 10.06 9.9c-.15.14-.23.21-.3.3q-.07.1-.19.37l-1.33 2.94'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

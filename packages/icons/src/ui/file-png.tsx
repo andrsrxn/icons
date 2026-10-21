@@ -32,7 +32,7 @@ export const IconFilePng: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M3.86 12.93V7.77c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.82c1.23 0 1.84 0 2.4.23.54.23.98.66 1.84 1.52l1.22 1.22 1.15 1.12c.9.87 1.34 1.3 1.57 1.86.24.56.24 1.19.24 2.43v2.78'
+        d='M3.86 12.93V7.77c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.82c1.23 0 1.84 0 2.4.23.54.23.98.66 1.84 1.52l1.22 1.22 1.15 1.12h0c.9.87 1.34 1.3 1.57 1.86.24.56.24 1.19.24 2.43v2.78'
         stroke='currentColor'
       />
       <path
@@ -45,7 +45,7 @@ export const IconFilePng: Icon = ({
         stroke='currentColor'
       />
       <path d='M9.64 15.93v6.47' stroke='currentColor' />
-      <path d='m9.73 15.89 4.08 6.51' stroke='currentColor' />
+      <path d='m9.64 15.89 4.17 6.51' stroke='currentColor' />
       <path d='M13.8 15.93v6.47' stroke='currentColor' />
       <path
         d='M21.13 16.28a3.26 3.26 0 1 0-.32 5.95c.33-.12.5-.18.67-.44s.18-.5.18-1.01V19.4h-1.74'

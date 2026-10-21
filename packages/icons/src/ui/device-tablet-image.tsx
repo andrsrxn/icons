@@ -1,0 +1,56 @@
+import type { Icon } from './types'
+
+export const IconDeviceTabletImage: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-device-tablet-image'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        x='3.77'
+        y='22.31'
+        width='20.62'
+        height='16.45'
+        rx='3'
+        transform='rotate(-90 3.77 22.3)'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M9.94 1.75c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12V9.5c0 1.9 0 2.85.59 3.12.58.26 1.3-.36 2.73-1.62l.21-.19c.66-.57.98-.86 1.37-.85.4 0 .7.3 1.34.91l1.58 1.52c.55.53.83.8 1.19.83.35.03.67-.18 1.31-.62l.51-.34c.5-.34.74-.5 1.02-.52.29-.01.55.13 1.07.42l.24.13c1.32.73 1.98 1.09 2.47.8s.5-1.05.5-2.55v-2.8c0-2.82 0-4.23-.89-5.11-.88-.88-2.29-.88-5.12-.88z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M16.16 8.02a.46.46 0 1 1-.92 0 .46.46 0 0 1 .92 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m3.77 14.43 3.78-3.88c.65-.66.97-.99 1.4-.98.44.01.73.35 1.32 1.04l1.67 1.96c.51.6.77.9 1.17.93s1.03-.49 1.7-1c.53-.42.98-.73 1.32-.73.34-.01.62.19 1.18.59l2.92 2.07'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

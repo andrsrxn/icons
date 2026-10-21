@@ -32,7 +32,7 @@ export const IconFileRaw: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M3.82 13.02V7.78c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.9c1.22 0 1.83 0 2.39.23.55.23.98.66 1.85 1.52l1.23 1.24 1.17 1.14c.9.87 1.34 1.3 1.58 1.86s.24 1.19.24 2.44v2.81'
+        d='M3.82 13.02V7.78c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.9c1.22 0 1.83 0 2.39.23.55.23.98.66 1.85 1.52l1.23 1.24 1.17 1.14h0c.9.87 1.34 1.3 1.58 1.86s.24 1.19.24 2.44v2.81'
         stroke='currentColor'
       />
       <path
@@ -40,10 +40,7 @@ export const IconFileRaw: Icon = ({
         stroke='currentColor'
       />
       <path d='m3.6 19.7 2.6 2.65' stroke='currentColor' />
-      <path d='M9.73 20.5h3.1' stroke='currentColor' />
       <path d='M2.13 15.9v6.45' stroke='currentColor' />
-      <path d='m11.28 15.9-2.57 6.45' stroke='currentColor' />
-      <path d='m11.3 15.9 2.57 6.45' stroke='currentColor' />
       <path
         d='M2.15 15.9h2.3c.97 0 1.75.82 1.75 1.84a1.8 1.8 0 0 1-1.75 1.85h-2.3'
         stroke='currentColor'
@@ -52,6 +49,11 @@ export const IconFileRaw: Icon = ({
       <path d='m16.65 22.35 2.65-3.23' stroke='currentColor' />
       <path d='M21.87 22.35 19.3 19.1' stroke='currentColor' />
       <path d='M21.87 22.3v-6.4' stroke='currentColor' />
+      <path d='M9.58 20.1h3.4' stroke='currentColor' />
+      <path
+        d='m8.7 22.35.71-2.43c.82-2.77 1.22-4.15 1.98-4.14s1.13 1.4 1.87 4.2l.63 2.37'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

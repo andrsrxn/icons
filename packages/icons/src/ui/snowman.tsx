@@ -1,0 +1,57 @@
+import type { Icon } from './types'
+
+export const IconSnowman: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-snowman'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M19.05 15.16A7.02 7.02 0 1 1 9.2 8.72l2.95 1.22 2.6-1.26a7 7 0 0 1 4.29 6.48'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path d='M12 9.87a4.03 4.03 0 1 1 0-8.05 4.03 4.03 0 0 1 0 8.05' stroke='currentColor' />
+      <path d='M15 8.79a7.03 7.03 0 1 1-5.95 0' stroke='currentColor' />
+      <path
+        d='M12.64 18.22a.64.64 0 1 1-1.28 0 .64.64 0 0 1 1.28 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.64 13.57a.64.64 0 1 1-1.28 0 .64.64 0 0 1 1.28 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M4.44 22.18h15.12' stroke='currentColor' />
+      <path d='m4.06 8.7 3.5 3.5' stroke='currentColor' />
+      <path d='m20 8.7-3.51 3.5' stroke='currentColor' />
+      <path d='M4.06 6.42V8.7' stroke='currentColor' />
+      <path d='M20 6.42V8.7' stroke='currentColor' />
+      <path d='M4.06 8.7H1.78' stroke='currentColor' />
+      <path d='M20 8.7h2.27' stroke='currentColor' />
+    </svg>
+  )
+}

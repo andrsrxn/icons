@@ -1,6 +1,8 @@
 {
   "categories": [
-    "tools"
+    "tools",
+    "arrows",
+    "development"
   ],
   "tags": [
     "reload",

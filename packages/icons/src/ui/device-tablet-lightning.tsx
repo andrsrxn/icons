@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconDeviceTabletLightning: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-device-tablet-lightning'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M9.77 1.7c-2.82 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.12v8.62c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h4.46c2.82 0 4.24 0 5.12-.88s.88-2.3.88-5.12V7.69c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88zm2.99 6.89c-.05-1.26-.07-1.9-.42-2s-.7.43-1.41 1.48L8.54 11.6c-.34.51-.51.77-.43 1 .08.24.38.33.97.51l1.29.4c.34.1.5.16.6.29s.1.31.1.67v1.03c0 1.28 0 1.92.35 2.03s.72-.4 1.47-1.45l2.58-3.61c.35-.5.53-.74.45-.98-.07-.24-.36-.34-.93-.55l-1.54-.54c-.3-.11-.46-.17-.55-.3s-.1-.28-.1-.6z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <rect
+        x='3.77'
+        y='22.31'
+        width='20.62'
+        height='16.45'
+        rx='3'
+        transform='rotate(-90 3.77 22.3)'
+        stroke='currentColor'
+      />
+      <path
+        d='m10.56 8.33-1.72 2.65c-.46.7-.68 1.05-.63 1.36a1 1 0 0 0 .17.36c.2.25.61.3 1.44.42l.1.01c.48.07.73.1.9.23q.19.15.27.38c.07.2.02.44-.06.92-.34 1.86-.5 2.8-.28 3.08a.8.8 0 0 0 .72.29c.37-.05.89-.84 1.93-2.42h0l1.7-2.6c.52-.78.77-1.17.68-1.51l-.1-.24c-.2-.3-.65-.37-1.57-.52l-.2-.03c-.44-.07-.66-.1-.8-.22a1 1 0 0 1-.3-.42c-.06-.18-.02-.4.05-.83.31-1.74.47-2.61.27-2.89a.8.8 0 0 0-.8-.32c-.33.07-.81.81-1.77 2.3'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

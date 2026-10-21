@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconMicrowave: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-microwave'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M1.7 12.2c0 2.83 0 4.25.87 5.12.88.88 2.3.88 5.12.88h8.62c2.83 0 4.24 0 5.12-.88.88-.87.88-2.29.88-5.12V9.78c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.69c-2.83 0-4.24 0-5.12.88S1.7 6.95 1.7 9.78zm10.04-4.94c.61 0 .92 0 1.17.05a3 3 0 0 1 2.44 2.44c.05.25.05.56.05 1.17 0 .62 0 .93-.05 1.18a3 3 0 0 1-2.44 2.44c-.25.05-.56.05-1.17.05H8.9c-.61 0-.92 0-1.18-.05A3 3 0 0 1 5.3 12.1c-.04-.25-.04-.56-.04-1.18 0-.6 0-.92.04-1.17A3 3 0 0 1 7.73 7.3c.26-.05.57-.05 1.18-.05z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M7.7 18.2h8.6c2.84 0 4.25 0 5.13-.88.88-.87.88-2.29.88-5.12V9.78c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.69c-2.83 0-4.24 0-5.12.88S1.7 6.95 1.7 9.78v2.42c0 2.83 0 4.25.88 5.12s2.3.88 5.12.88'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.98 14.93h2.62c1.83 0 2.74 0 3.32-.55l.07-.07c.55-.58.55-1.49.55-3.32s0-2.74-.55-3.32l-.07-.07c-.58-.55-1.5-.55-3.32-.55H8.98c-1.83 0-2.74 0-3.32.55l-.07.07c-.55.58-.55 1.5-.55 3.32h0c0 1.83 0 2.74.55 3.32l.07.07c.58.55 1.5.55 3.32.55'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.55 19.8a.8.8 0 0 0 .23 1.06.7.7 0 0 0 1.01-.22l-.62-.42zm2.47-1.18a.8.8 0 0 0-.23-1.06.7.7 0 0 0-1.01.22l.62.42zm-1.85 1.6.62.42 1.23-2.02-.62-.42-.62-.42-1.23 2.02z'
+        fill='currentColor'
+      />
+      <path
+        d='M21.45 19.8a.8.8 0 0 1-.23 1.06.7.7 0 0 1-1.01-.22l.62-.42zm-2.47-1.18a.8.8 0 0 1 .23-1.06.7.7 0 0 1 1.01.22l-.62.42zm1.85 1.6-.62.42-1.23-2.02.62-.42.62-.42 1.23 2.02z'
+        fill='currentColor'
+      />
+      <path d='M18.96 13.41V8.57' stroke='currentColor' />
+    </svg>
+  )
+}

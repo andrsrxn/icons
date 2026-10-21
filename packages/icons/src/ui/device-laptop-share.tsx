@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconDeviceLaptopShare: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-device-laptop-share'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.81 16.13c.3-.41.44-.62.66-.74s.47-.11.98-.11H19.8c.54 0 .81 0 1.04.12.22.13.37.36.66.81l.43.69c.85 1.35 1.28 2.03 1 2.55-.3.52-1.1.52-2.7.52H3.99c-1.69 0-2.53 0-2.81-.54s.2-1.23 1.17-2.61z'
+        fill='currentColor'
+      />
+      <path d='M4 14.73v-4.7c0-2.82 0-4.24.88-5.12s2.3-.88 5.12-.88h2.67' stroke='currentColor' />
+      <path d='M20 10.83v3.9' stroke='currentColor' />
+      <path
+        d='m20.02 14.73.31.41c1.61 2.1 2.42 3.15 2 3.99-.4.84-1.73.84-4.38.84H6.1c-2.61 0-3.92 0-4.33-.83s.36-1.88 1.93-3.97l.32-.44'
+        stroke='currentColor'
+      />
+      <path d='M20 14.73H4' stroke='currentColor' />
+      <path
+        d='M16.25 2.86h.83c1.89 0 2.83 0 3.42.58.59.59.59 1.53.59 3.42v.83'
+        stroke='currentColor'
+      />
+      <path d='m15.2 8.74 4.95-4.95' stroke='currentColor' />
+    </svg>
+  )
+}

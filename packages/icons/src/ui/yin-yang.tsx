@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconYinYang: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-yin-yang'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='m13.53 22.1 2.17-3.3-.58-4.2-4.37-3.23-3.2-4.45L8.9 2.3s2.24-.53 3.1-.53a10.22 10.22 0 0 1 1.53 20.33'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
+      <path
+        d='M10.67 1.92A4.9 4.9 0 0 0 7.9 7.2c.8 4.25 5.53 4.28 7.28 8.01 1.45 3.1-.28 6.27-2.62 6.98'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.13 6.72a.78.78 0 1 1-1.57 0 .78.78 0 0 1 1.57 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M11.62 17.47a.78.78 0 1 1-1.57 0 .78.78 0 0 1 1.57 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}
