@@ -26,7 +26,7 @@ export const IconCrosshairLine: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M15.51 12.15h5.86' stroke='currentColor' />
+      <path d='M15.52 12.15h5.85' stroke='currentColor' />
       <path d='M2.63 12.15h5.86' stroke='currentColor' />
       <path d='M12 8.62V2.78' stroke='currentColor' />
       <path d='M12 21.22v-5.48' stroke='currentColor' />

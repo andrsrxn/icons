@@ -39,7 +39,7 @@ export const IconShower: Icon = ({
       <path d='m18.83 20.6-.55-1.84' stroke='currentColor' />
       <path d='M18.57 9.57 17 8.1' stroke='currentColor' />
       <path d='m21.4 15.35-.88-1.6' stroke='currentColor' />
-      <path d='m15.28 5.16-.32-.58a2.98 2.98 0 0 0-5.2 2.92l.33.58' stroke='currentColor' />
+      <path d='m15.28 5.16-.32-.58a2.98 2.98 0 1 0-5.2 2.92l.33.58' stroke='currentColor' />
     </svg>
   )
 }

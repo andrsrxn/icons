@@ -28,7 +28,7 @@ export const IconDisability: Icon = ({
       {...props}>
       <path
         opacity='.2'
-        d='M16.03 15.6a5.76 5.76 0 0 1-4.5 6.66 5.57 5.57 0 1 1-2.06-10.95 7 7 0 0 1 2.25 0v3.06h4z'
+        d='M16.03 15.6a5.76 5.76 0 0 1-4.5 6.66 5.57 5.57 0 0 1-2.06-10.95 7 7 0 0 1 2.25 0v3.06h4z'
         fillRule='evenodd'
         clipRule='evenodd'
         fill='currentColor'

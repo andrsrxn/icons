@@ -28,7 +28,7 @@ export const IconBeach: Icon = ({
       {...props}>
       <path d='M12.6 16.17s-.15-2.91.72-5.18 2.39-3.56 2.39-3.56' stroke='currentColor' />
       <path d='M15.73 7.07a4 4 0 0 0-1.97-.73 4.3 4.3 0 0 0-2.46.43' stroke='currentColor' />
-      <path d='M21.54 7.84a5 5 0 0 0-2.52-1.1 5 5 0 0 0-3.14.47' stroke='currentColor' />
+      <path d='M21.55 7.84a5 5 0 0 0-2.53-1.1 5 5 0 0 0-3.14.47' stroke='currentColor' />
       <path d='M18.23 11.06a4 4 0 0 0-.5-2.16 4.6 4.6 0 0 0-1.8-1.92' stroke='currentColor' />
       <path d='M15.84 6.98c.08-.54-.1-1.56-.57-2.47A5 5 0 0 0 13.2 2.3' stroke='currentColor' />
       <path
