@@ -444,6 +444,76 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>arrow-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-start-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-down-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-up-start-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-down-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-down-start-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrow-start-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-start-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-end-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-start-double-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-end-double-circle</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>border-end</code>
             </p>
           </li>
