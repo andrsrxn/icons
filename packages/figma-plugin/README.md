@@ -27,4 +27,4 @@ Visit [andrsrxn/icons on Figma Community](https://www.figma.com/community/plugin
 
 ## License
 
-[MIT License](../../LICENSE) - Copyright 2026 Andrés Raxón (andrsrxn)..
+[MIT License](../../LICENSE) - Copyright 2026 Andrés Raxón (andrsrxn).

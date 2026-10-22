@@ -37,7 +37,7 @@ Official documentation and icon catalog application for **[andrsrxn/icons](https
 
 ### Examples
 
-- A dedicated examples page showing icons in realistic component contexts: buttons, inputs, cards, navigation, dropdowns, and more — so you can see how icons actually look inside real UI, not just in isolation
+- A dedicated examples page showing icons in realistic component contexts: buttons, inputs, cards, navigation, dropdowns, and more, so you can see how icons actually look inside real UI, not just in isolation
 
 ### Dark mode
 
@@ -49,7 +49,6 @@ Official documentation and icon catalog application for **[andrsrxn/icons](https
 - [Tailwind CSS](https://tailwindcss.com/)
 - [shadcn/ui](https://ui.shadcn.com/) and [Base UI](https://base-ui.com/) primitives
 - [nuqs](https://nuqs.47ng.com/) for URL-synced search/filter state
-- [Shiki](https://shiki.style/) for syntax-highlighted code snippets
 - [andrsrxn/icons](https://www.npmjs.com/package/@andrsrxn/icons) and `andrsrxn/raw-icons` (internal, workspace-only) as catalog source
 
 ## Deployment

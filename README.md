@@ -23,13 +23,13 @@ Smooth, RTL-aware, and optimized SVGs.
 
 ## Overview
 
-`andrsrxn/icons` is an open-source icon library designed on Figma and built for modern React applications. The set is lightweight, visually consistent, and accessible.
+`andrsrxn/icons` is an open-source duotone icon library designed on Figma and built for modern React applications. The set is lightweight, visually consistent, and accessible.
 
 ### Why another icon library?
 
 The short answer: **there are no free duotone icon sets with the right style**.
 
-Most libraries offer only outline or solid variants. [Phosphor Icons](https://phosphoricons.com/) does include free duotone variants, but its implementation applies a duotone layer to every icon unconditionally, this results in unnecessary visual noise and icons that feel semantically inconsistent.
+Most libraries offer only outline or solid variants, some duotone implementations applies an extra layer to every icon unconditionally, this results in unnecessary visual noise and icons that feel semantically inconsistent.
 
 `andrsrxn/icons` takes a more deliberate approach:
 
@@ -39,8 +39,8 @@ Most libraries offer only outline or solid variants. [Phosphor Icons](https://ph
 
 ## Groups
 
-- **UI**: 2,500+ icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: 250+ simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `aria-label` included. (aspect ratio 3:2)
+- **UI**: Duotone icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Flags**: Simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `aria-label` included. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app), [theSVG](https://thesvg.org), or [Simple Icons](https://simpleicons.org).
 
