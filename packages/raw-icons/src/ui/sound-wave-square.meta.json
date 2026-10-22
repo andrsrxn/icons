@@ -1,14 +1,4 @@
 {
-  "categories": [
-    "media"
-  ],
-  "tags": [
-    "intercom",
-    "audio",
-    "music",
-    "frequency",
-    "voice",
-    "amplitude",
-    "oscillation"
-  ]
+  "categories": ["media"],
+  "tags": ["intercom", "audio", "music", "frequency", "voice", "amplitude", "oscillation"]
 }

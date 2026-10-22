@@ -9,7 +9,7 @@
     "switch",
     "reboot",
     "shutdown",
-    "round",
+    
     "button",
     "badge",
     "toggle"

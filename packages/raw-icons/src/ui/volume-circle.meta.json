@@ -9,7 +9,6 @@
     "audio",
     "loudness",
     "mute",
-    "level",
-    "round"
+    "level"
   ]
 }
