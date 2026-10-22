@@ -70,7 +70,7 @@ function svgAttrsToJsx(svg) {
           return null
         }
         const camelProp = prop.replace(/-([a-z])/giu, (_, c) => c.toUpperCase())
-        return `${camelProp}: '${val.replace(/'/g, "\\'")}'`
+        return `${camelProp}: '${val.replace(/\\/g, '\\\\').replace(/'/g, "\\'")}'`
       })
       .filter(Boolean)
 
