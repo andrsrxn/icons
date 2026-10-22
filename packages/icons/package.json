@@ -113,8 +113,8 @@
     "lightningcss-cli": "1.33.0",
     "react-dom": "19.3.0",
     "svgo": "4.1.0",
-    "tsdown": "0.23.0",
+    "tsdown": "0.23.1",
     "vite": "8.3.3",
-    "vitest": "4.1.11"
+    "vitest": "4.1.12"
   }
 }
