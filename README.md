@@ -29,7 +29,7 @@ Smooth, RTL-aware, and optimized SVGs.
 
 The short answer: **there are no free duotone icon sets with the right style**.
 
-Most libraries offer only outline or solid variants, some duotone implementations applies an extra layer to every icon unconditionally, this results in unnecessary visual noise and icons that feel semantically inconsistent.
+Most libraries only offer outline or solid variants, some duotone implementations applies an extra layer to every icon unconditionally, this results in unnecessary visual noise and icons that feel semantically inconsistent.
 
 `andrsrxn/icons` takes a more deliberate approach:
 
