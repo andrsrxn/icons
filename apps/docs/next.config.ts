@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   trailingSlash: false,
   poweredByHeader: false,
   output: 'export',
+  distDir: 'out',
   experimental: {
     staleTimes: {
       static: 30,
