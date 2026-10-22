@@ -76,6 +76,8 @@
 [dir='rtl'] [data-slot='icon-ui-flag-triangle-start'],
 [dir='rtl'] [data-slot='icon-ui-flag-triangle-end'],
 
+[dir='rtl'] [data-slot='icon-ui-menu-start'],
+[dir='rtl'] [data-slot='icon-ui-menu-end'],
 [dir='rtl'] [data-slot='icon-ui-timeline'],
 [dir='rtl'] [data-slot='icon-ui-playlist-first'],
 [dir='rtl'] [data-slot='icon-ui-playlist-last'],
@@ -179,6 +181,8 @@
 [dir='ltr'] [data-slot='icon-ui-relocate-end'],
 [dir='ltr'] [data-slot='icon-ui-flag-triangle-start'],
 [dir='ltr'] [data-slot='icon-ui-flag-triangle-end'],
+[dir='ltr'] [data-slot='icon-ui-menu-start'],
+[dir='ltr'] [data-slot='icon-ui-menu-end'],
 [dir='ltr'] [data-slot='icon-ui-timeline'],
 [dir='ltr'] [data-slot='icon-ui-playlist-first'],
 [dir='ltr'] [data-slot='icon-ui-playlist-last'],

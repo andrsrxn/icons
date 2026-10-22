@@ -719,6 +719,16 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>menu-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>menu-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>timeline</code>
             </p>
           </li>
