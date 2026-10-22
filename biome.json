@@ -11,6 +11,7 @@
       "!**/raw-icons/src/flags",
       "!**/raw-icons/src/ui",
       "!**/dist",
+      "!**/out",
       "!**/build",
       "!**/*.mjs",
       "!**/*.cjs",
