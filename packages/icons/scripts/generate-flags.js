@@ -66,7 +66,7 @@ function svgAttrsToJsx(svg) {
         }
         const prop = decl.slice(0, colonIndex).trim()
         const val = decl.slice(colonIndex + 1).trim()
-        if (!prop || !val) {
+        if (!(prop && val)) {
           return null
         }
         const camelProp = prop.replace(/-([a-z])/giu, (_, c) => c.toUpperCase())
