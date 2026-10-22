@@ -214,4 +214,5 @@ it could be a dry-run, when only should return the hyperlink to the metadata fil
 - **Strict Sandbox / Command Scope:**
   - DO NOT run build scripts, bundling, or icon generation commands (such as `npm run generate-icons`, `npm run build`, `turbo run build`, or type-checks).
   - ONLY inspect git status / files, read SVG contents, and write `.meta.json` files.
-  - Return the amount of files changed, and if its necessary a note about something important such as a bug, a wrong naming, a typo, etc. mention it. Is not necessary to return all the tags and categories added to each file.
+  - Return the result as a **short paragraph** stating how many files were created or updated. Do not include a table or list of files. Only add a `> [!NOTE]` or `> [!WARNING]` callout after the paragraph if there is something genuinely important to flag, such as a wrong file name, naming convention violation, typo, unexpected pattern, or if you had some doubt about any svg name or decision.
+  - Skip the callout entirely if there is nothing worth noting.
