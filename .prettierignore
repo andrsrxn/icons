@@ -1,11 +1,14 @@
 .editorconfig
 **/dist
+**/out
 pnpm-lock.yaml
 .agents
 .github
 CHANGELOG.md
-**/src/raw
 **/.next
 **/.turbo
+.turbo
+node_modules
+**/node_modules
 packages/raw-icons/src/flags
 packages/raw-icons/src/ui
