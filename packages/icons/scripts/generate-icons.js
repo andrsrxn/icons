@@ -9,9 +9,9 @@
  * Usage:
  *   node scripts/generate-icons.js
  */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/performance/noAwaitInLoops: allowed */
 /** biome-ignore-all lint/performance/useTopLevelRegex: no */
-/** biome-ignore-all lint/nursery/useNamedCaptureGroup: no */
 /** biome-ignore-all lint/style/noParameterAssign: no */
 /** biome-ignore-all lint/complexity/noForEach: no */
 /** biome-ignore-all lint/suspicious/noConsole: no */
