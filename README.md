@@ -3,14 +3,11 @@
 
 # andrsrxn/icons
 
-[![npm version](https://img.shields.io/npm/v/@andrsrxn/icons)](https://www.npmjs.com/package/@andrsrxn/icons)
-[![Dependency count](https://img.shields.io/badge/dependency%20count-0-blue)](https://www.npmjs.com/package/@andrsrxn/icons)
-[![npm downloads](https://img.shields.io/npm/dm/@andrsrxn/icons)](https://www.npmjs.com/package/@andrsrxn/icons)
-[![License](https://img.shields.io/github/license/andrsrxn/icons)](https://github.com/andrsrxn/icons)
+![Project statistics badge](https://shieldcn.dev/group/npm/@andrsrxn/icons+npm/dm/@andrsrxn/icons+github/license/andrsrxn/icons.svg?variant=secondary&size=xs)
 <br />
-[![CI](https://github.com/andrsrxn/icons/actions/workflows/ci.yml/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/ci.yml)
-[![CodeQL](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/andrsrxn/icons/actions/workflows/github-code-scanning/codeql)
-[![Linted with Biome](https://img.shields.io/badge/Linted_with-Biome-60a5fa?style=flat&logo=biome)](https://biomejs.dev)
+![Project country badge](https://shieldcn.dev/flag/gt.svg?size=xs)
+[![Project CI](https://shieldcn.dev/github/andrsrxn/icons/ci.svg?variant=secondary&size=xs)](https://github.com/andrsrxn/icons/actions)
+[![Dependency count](https://shieldcn.dev/badge/Dependency%20count-0.svg?variant=secondary&split=true&size=xs)](https://npmgraph.js.org/?q=%40andrsrxn%2Ficons)
 
 React icon library with 2,500+ duotone icons and 250+ flags.
 <br />
