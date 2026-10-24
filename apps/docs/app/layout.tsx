@@ -26,7 +26,7 @@ export const viewport = baseViewport
 
 export const dynamic = 'force-static'
 
-export default function RootLayout({ children, modal }: { children: ReactNode; modal: ReactNode }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   preconnect('https://res.cloudinary.com', {
     crossOrigin: 'anonymous',
   })
@@ -39,7 +39,7 @@ export default function RootLayout({ children, modal }: { children: ReactNode; m
       <body className='min-h-full relative'>
         <AppProviders>
           <Suspense fallback={<div className='min-h-dvh' />}>{children}</Suspense>
-          {modal}
+
           <Footer className='mt-8' />
 
           <DrawerIcon />
@@ -49,7 +49,7 @@ export default function RootLayout({ children, modal }: { children: ReactNode; m
           // biome-ignore lint/security/noDangerouslySetInnerHtml: jsonLd is safe
           dangerouslySetInnerHTML={{
             // biome-ignore lint/style/useNamingConvention: react api
-            __html: JSON.stringify(structuredData).replace(/</g, '\\u003c'),
+            __html: JSON.stringify(structuredData).replace(/</gu, '\\u003c'),
           }}
         />
         {env.NODE_ENV === 'production' ? <Analytics /> : null}
