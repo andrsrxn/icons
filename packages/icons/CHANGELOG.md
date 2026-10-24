@@ -1,5 +1,11 @@
 # @andrsrxn/icons
 
+## 7.7.1
+
+### Patch Changes
+
+- [`6f7d8a1`](https://github.com/andrsrxn/icons/commit/6f7d8a1180f3fbb1f510a942c506096dd39babfe) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Remove unnecessary inline style in Flag icons
+
 ## 7.7.0
 
 ### Minor Changes
