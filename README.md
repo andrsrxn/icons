@@ -3,7 +3,9 @@
 
 # andrsrxn/icons
 
-![Project statistics badge](https://shieldcn.dev/group/npm/@andrsrxn/icons+npm/dm/@andrsrxn/icons+github/license/andrsrxn/icons.svg?variant=secondary&size=xs)
+[![Project statistics badge](https://shieldcn.dev/npm/@andrsrxn/icons?variant=secondary&size=xs)](https://www.npmjs.com/package/@andrsrxn/icons)
+[![Project statistics badge](https://shieldcn.dev/npm/dm/@andrsrxn/icons?variant=secondary&size=xs)](https://www.npmjs.com/package/@andrsrxn/icons)
+[![Project statistics badge](https://shieldcn.dev/github/andrsrxn/icons/license/andrsrxn/icons?variant=secondary&size=xs)](https://github.com/andrsrxn/icons/blob/main/packages/icons/LICENSE)
 <br />
 ![Project country badge](https://shieldcn.dev/flag/gt.svg?size=xs)
 [![Project CI](https://shieldcn.dev/github/andrsrxn/icons/ci.svg?variant=secondary&size=xs)](https://github.com/andrsrxn/icons/actions)
