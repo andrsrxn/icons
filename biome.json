@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.5.15/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.6.2/schema.json",
   "vcs": { "enabled": false, "clientKind": "git", "useIgnoreFile": false },
   "files": {
     "ignoreUnknown": false,
@@ -99,6 +99,10 @@
         "noJsxLiterals": "off",
         "noImplicitBoolean": "off",
         "noExcessiveLinesPerFile": "off",
+        "noInlineStyles": {
+          "fix": "none",
+          "level": "warn"
+        },
         "useBlockStatements": {
           "level": "warn",
           "fix": "safe",
