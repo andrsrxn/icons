@@ -148,27 +148,13 @@ export const IconFlagAI: FlagIcon = ({
             fill='url(#ai-i)'
             d='M13 7.5V5l1 .5 1-.5 1 .5 1-.5v2.5C17 9 15 10 15 10s-2-1-2-2.5'
           />
-          <mask
-            id='ai-j'
-            width='4'
-            height='5'
-            x='13'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ai-j' width='4' height='5' x='13' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V5l1 .5 1-.5 1 .5 1-.5v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
           </mask>
           <g mask='url(#ai-j)'>
             <path fill='#9accff' d='M17 9h-4v1h4z' />
           </g>
-          <mask
-            id='ai-k'
-            width='4'
-            height='5'
-            x='13'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ai-k' width='4' height='5' x='13' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V5l1 .5 1-.5 1 .5 1-.5v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
           </mask>
           <g mask='url(#ai-k)'>

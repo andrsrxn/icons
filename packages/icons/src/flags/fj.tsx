@@ -108,14 +108,7 @@ export const IconFlagFJ: FlagIcon = ({
           <path fill='url(#fj-c)' d='M21 0H0v15h21z' />
           <path fill='url(#fj-d)' d='M9 0H0v7h9z' />
           <path fill='url(#fj-e)' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
-          <mask
-            id='fj-f'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fj-f' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
           </mask>
           <g mask='url(#fj-f)'>
@@ -126,14 +119,7 @@ export const IconFlagFJ: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='fj-g'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fj-g' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
           </mask>
           <g mask='url(#fj-g)'>

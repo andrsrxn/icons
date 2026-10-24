@@ -115,14 +115,7 @@ export const IconFlagGD: FlagIcon = ({
           <path fill='url(#gd-b)' d='M21 0H0v15h21z' />
           <path fill='url(#gd-c)' d='M21 0H0v15h21z' />
           <path fill='url(#gd-d)' d='M19 2H2v11h17z' />
-          <mask
-            id='gd-e'
-            width='17'
-            height='11'
-            x='2'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gd-e' width='17' height='11' x='2' y='2' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M19 2H2v11h17z' />
           </mask>
           <g mask='url(#gd-e)'>
@@ -133,14 +126,7 @@ export const IconFlagGD: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='gd-g'
-            width='17'
-            height='11'
-            x='2'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gd-g' width='17' height='11' x='2' y='2' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M19 2H2v11h17z' />
           </mask>
           <g mask='url(#gd-g)'>
@@ -151,27 +137,13 @@ export const IconFlagGD: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='gd-i'
-            width='17'
-            height='11'
-            x='2'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gd-i' width='17' height='11' x='2' y='2' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M19 2H2v11h17z' />
           </mask>
           <g mask='url(#gd-i)'>
             <path fill='url(#gd-j)' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </g>
-          <mask
-            id='gd-k'
-            width='17'
-            height='11'
-            x='2'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gd-k' width='17' height='11' x='2' y='2' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M19 2H2v11h17z' />
           </mask>
           <g mask='url(#gd-k)'>

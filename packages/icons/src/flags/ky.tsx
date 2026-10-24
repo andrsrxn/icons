@@ -139,27 +139,13 @@ export const IconFlagKY: FlagIcon = ({
             d='M15.5 5c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
           />
           <path fill='url(#ky-h)' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
-          <mask
-            id='ky-i'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ky-i' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
           </mask>
           <g mask='url(#ky-i)'>
             <path fill='#cf142c' fillRule='evenodd' d='M13 4h5v1h-5z' clipRule='evenodd' />
           </g>
-          <mask
-            id='ky-j'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ky-j' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V4h5v3.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5' />
           </mask>
           <g mask='url(#ky-j)'>

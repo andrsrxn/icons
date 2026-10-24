@@ -110,14 +110,7 @@ export const IconFlagAG: FlagIcon = ({
           />
           <path fill='url(#ag-c)' d='M21 0H0v15h21z' />
           <path fill='url(#ag-d)' d='M0 0h21L10.5 15z' />
-          <mask
-            id='ag-e'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ag-e' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M0 0h21L10.5 15z' />
           </mask>
           <g mask='url(#ag-e)'>
@@ -128,27 +121,13 @@ export const IconFlagAG: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='ag-g'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ag-g' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M0 0h21L10.5 15z' />
           </mask>
           <g mask='url(#ag-g)'>
             <path fill='url(#ag-h)' d='M21 6H0v4h21z' />
           </g>
-          <mask
-            id='ag-i'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ag-i' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M0 0h21L10.5 15z' />
           </mask>
           <g mask='url(#ag-i)'>

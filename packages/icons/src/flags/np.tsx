@@ -86,14 +86,7 @@ export const IconFlagNP: FlagIcon = ({
             fill='url(#np-b)'
             d='M0 0h1.5c.27 0 .69.13.91.28l10.77 7.17c.45.3.37.55-.18.55H6l7.25 6.34c.41.37.3.66-.26.66H0z'
           />
-          <mask
-            id='np-c'
-            width='14'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='np-c' width='14' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M0 0h1.5c.27 0 .69.13.91.28l10.77 7.17c.45.3.37.55-.18.55H6l7.25 6.34c.41.37.3.66-.26.66H0z'
@@ -106,14 +99,7 @@ export const IconFlagNP: FlagIcon = ({
             />
             <path stroke='url(#np-e)' d='M.5.5v14h12.17l-8-7h7.68L2.14.7A2 2 0 0 0 1.5.5z' />
           </g>
-          <mask
-            id='np-f'
-            width='14'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='np-f' width='14' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M0 0h1.5c.27 0 .69.13.91.28l10.77 7.17c.45.3.37.55-.18.55H6l7.25 6.34c.41.37.3.66-.26.66H0z'

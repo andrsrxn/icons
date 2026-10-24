@@ -42,14 +42,7 @@ export const IconFlagCSA: FlagIcon = ({
       </defs>
       <g clipPath='url(#csa-clip)'>
         <g clipPath='url(#csa-a)'>
-          <mask
-            id='csa-b'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='csa-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M21 0H0v15h21z' />
           </mask>
           <g mask='url(#csa-b)'>

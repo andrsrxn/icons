@@ -282,14 +282,7 @@ export const IconFlagGS: FlagIcon = ({
             fill='url(#gs-h)'
             d='M18.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
           />
-          <mask
-            id='gs-i'
-            width='3'
-            height='3'
-            x='17'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-i' width='3' height='3' x='17' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M18.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
@@ -305,14 +298,7 @@ export const IconFlagGS: FlagIcon = ({
             fill='url(#gs-k)'
             d='M14.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
           />
-          <mask
-            id='gs-l'
-            width='3'
-            height='3'
-            x='13'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-l' width='3' height='3' x='13' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M14.5 11c.55 0 1-.67 1-1.5s-.45-1.5-1-1.5-1 .67-1 1.5.45 1.5 1 1.5'
@@ -354,14 +340,7 @@ export const IconFlagGS: FlagIcon = ({
             fill='url(#gs-x)'
             d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
           />
-          <mask
-            id='gs-y'
-            width='4'
-            height='4'
-            x='15'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-y' width='4' height='4' x='15' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
@@ -370,14 +349,7 @@ export const IconFlagGS: FlagIcon = ({
           <g mask='url(#gs-y)'>
             <path fill='#225da4' d='M17.5 11.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='gs-z'
-            width='4'
-            height='4'
-            x='15'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-z' width='4' height='4' x='15' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
@@ -386,14 +358,7 @@ export const IconFlagGS: FlagIcon = ({
           <g mask='url(#gs-z)'>
             <path fill='#225da4' d='M15.5 10.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='gs-A'
-            width='4'
-            height='4'
-            x='15'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-A' width='4' height='4' x='15' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'
@@ -402,14 +367,7 @@ export const IconFlagGS: FlagIcon = ({
           <g mask='url(#gs-A)'>
             <path fill='url(#gs-B)' fillRule='evenodd' d='M15 8h3l-1.5 3z' clipRule='evenodd' />
           </g>
-          <mask
-            id='gs-C'
-            width='4'
-            height='4'
-            x='15'
-            y='8'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gs-C' width='4' height='4' x='15' y='8' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M15 8.5c0-.27.22-.5.5-.5h2c.28 0 .5.23.5.5l.03 1.75c0 .14-.1.32-.2.39l-1.1.72a.4.4 0 0 1-.42 0l-1.07-.72a.5.5 0 0 1-.21-.39z'

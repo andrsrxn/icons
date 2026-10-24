@@ -155,14 +155,7 @@ export const IconFlagYT: FlagIcon = ({
             fill='#d8d8d8'
             d='M8 4.5c0-.28.21-.5.5-.5h4c.28 0 .5.23.5.5v5c0 .28-.22.5-.5.53 0 0-1.5-.03-2 .91-.5-.94-2-.9-2-.9A.54.54 0 0 1 8 9.5z'
           />
-          <mask
-            id='yt-c'
-            width='5'
-            height='7'
-            x='8'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='yt-c' width='5' height='7' x='8' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M8 4.5c0-.28.21-.5.5-.5h4c.28 0 .5.23.5.5v5c0 .28-.22.5-.5.53 0 0-1.5-.03-2 .91-.5-.94-2-.9-2-.9A.54.54 0 0 1 8 9.5z'
@@ -174,14 +167,7 @@ export const IconFlagYT: FlagIcon = ({
             </g>
             <path fill='url(#yt-e)' d='M13 4H8v3h5z' />
           </g>
-          <mask
-            id='yt-f'
-            width='5'
-            height='7'
-            x='8'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='yt-f' width='5' height='7' x='8' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M8 4.5c0-.28.21-.5.5-.5h4c.28 0 .5.23.5.5v5c0 .28-.22.5-.5.53 0 0-1.5-.03-2 .91-.5-.94-2-.9-2-.9A.54.54 0 0 1 8 9.5z'

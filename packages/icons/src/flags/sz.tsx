@@ -115,14 +115,7 @@ export const IconFlagSZ: FlagIcon = ({
             fill='url(#sz-g)'
             d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
           />
-          <mask
-            id='sz-h'
-            width='9'
-            height='5'
-            x='6'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sz-h' width='9' height='5' x='6' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
@@ -131,14 +124,7 @@ export const IconFlagSZ: FlagIcon = ({
           <g mask='url(#sz-h)'>
             <path fill='url(#sz-i)' fillRule='evenodd' d='M11 5H6v5h4z' clipRule='evenodd' />
           </g>
-          <mask
-            id='sz-j'
-            width='9'
-            height='5'
-            x='6'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sz-j' width='9' height='5' x='6' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'
@@ -147,14 +133,7 @@ export const IconFlagSZ: FlagIcon = ({
           <g mask='url(#sz-j)'>
             <path fill='#1a1a1a' d='M11.5 8.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='sz-k'
-            width='9'
-            height='5'
-            x='6'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sz-k' width='9' height='5' x='6' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 10c2.49 0 4.5-1.12 4.5-2.5S12.99 5 10.5 5 6 6.12 6 7.5 8.01 10 10.5 10'

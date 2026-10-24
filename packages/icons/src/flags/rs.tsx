@@ -94,14 +94,7 @@ export const IconFlagRS: FlagIcon = ({
             fill='url(#rs-f)'
             d='M4.5 7.5c0-.67.37-2.02.37-2.02A.7.7 0 0 1 5.5 5h2c.28 0 .56.21.63.48 0 0 .37 1.33.37 2.02 0 .64-.38 2.02-.38 2.02a2 2 0 0 1-.45.85S7.25 11 6.5 11s-1.17-.63-1.17-.63c-.18-.2-.39-.59-.46-.86 0 0-.37-1.35-.37-2.01'
           />
-          <mask
-            id='rs-g'
-            width='5'
-            height='6'
-            x='4'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='rs-g' width='5' height='6' x='4' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.5 7.5c0-.67.37-2.02.37-2.02A.7.7 0 0 1 5.5 5h2c.28 0 .56.21.63.48 0 0 .37 1.33.37 2.02 0 .64-.38 2.02-.38 2.02a2 2 0 0 1-.45.85S7.25 11 6.5 11s-1.17-.63-1.17-.63c-.18-.2-.39-.59-.46-.86 0 0-.37-1.35-.37-2.01'
@@ -110,14 +103,7 @@ export const IconFlagRS: FlagIcon = ({
           <g mask='url(#rs-g)'>
             <path fill='#c43840' d='M8.42 4.8 3.8 10.58l.78.62L9.2 5.42z' />
           </g>
-          <mask
-            id='rs-h'
-            width='5'
-            height='6'
-            x='4'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='rs-h' width='5' height='6' x='4' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.5 7.5c0-.67.37-2.02.37-2.02A.7.7 0 0 1 5.5 5h2c.28 0 .56.21.63.48 0 0 .37 1.33.37 2.02 0 .64-.38 2.02-.38 2.02a2 2 0 0 1-.45.85S7.25 11 6.5 11s-1.17-.63-1.17-.63c-.18-.2-.39-.59-.46-.86 0 0-.37-1.35-.37-2.01'

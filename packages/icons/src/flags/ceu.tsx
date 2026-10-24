@@ -42,14 +42,7 @@ export const IconFlagCEU: FlagIcon = ({
       </defs>
       <g clipPath='url(#ceu-clip)'>
         <g clipPath='url(#ceu-a)'>
-          <mask
-            id='ceu-b'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ceu-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M21 0H0v15h21z' />
           </mask>
           <g mask='url(#ceu-b)'>

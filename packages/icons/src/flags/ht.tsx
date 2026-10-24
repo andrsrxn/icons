@@ -89,14 +89,7 @@ export const IconFlagHT: FlagIcon = ({
             fill='url(#ht-e)'
             d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
           />
-          <mask
-            id='ht-f'
-            width='7'
-            height='6'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ht-f' width='7' height='6' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
@@ -110,14 +103,7 @@ export const IconFlagHT: FlagIcon = ({
               d='M7.25 10.15v.6h6.5v-.6l-.97-.48A5 5 0 0 0 11 9.25h-1c-.52 0-1.32.2-1.78.42z'
             />
           </g>
-          <mask
-            id='ht-g'
-            width='7'
-            height='6'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ht-g' width='7' height='6' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
@@ -126,14 +112,7 @@ export const IconFlagHT: FlagIcon = ({
           <g mask='url(#ht-g)'>
             <path fill='#d4b872' d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3' />
           </g>
-          <mask
-            id='ht-h'
-            width='7'
-            height='6'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ht-h' width='7' height='6' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'
@@ -150,14 +129,7 @@ export const IconFlagHT: FlagIcon = ({
               d='M8.25 8.02v1.47c0 .14.11.26.25.26h4q.23-.02.25-.26V8.02l-1.7 1.36a.9.9 0 0 1-1.1 0z'
             />
           </g>
-          <mask
-            id='ht-i'
-            width='7'
-            height='6'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ht-i' width='7' height='6' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13.5 5h-6a.5.5 0 0 0-.5.5v5c0 .28.22.5.5.5h6a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5'

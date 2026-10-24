@@ -125,14 +125,7 @@ export const IconFlagKE: FlagIcon = ({
             fill='#bc0000'
             d='M10.5 12.5c1 0 2.5-1.96 2.5-5s-1.5-5-2.5-5S8 4.46 8 7.5s1.5 5 2.5 5'
           />
-          <mask
-            id='ke-g'
-            width='5'
-            height='11'
-            x='8'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ke-g' width='5' height='11' x='8' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 12.5c1 0 2.5-1.96 2.5-5s-1.5-5-2.5-5S8 4.46 8 7.5s1.5 5 2.5 5'
@@ -144,14 +137,7 @@ export const IconFlagKE: FlagIcon = ({
               d='M6.5 13C7.88 13 9 10.54 9 7.5S7.88 2 6.5 2 4 4.46 4 7.5 5.12 13 6.5 13'
             />
           </g>
-          <mask
-            id='ke-i'
-            width='5'
-            height='11'
-            x='8'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ke-i' width='5' height='11' x='8' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 12.5c1 0 2.5-1.96 2.5-5s-1.5-5-2.5-5S8 4.46 8 7.5s1.5 5 2.5 5'
@@ -163,14 +149,7 @@ export const IconFlagKE: FlagIcon = ({
               d='M14.5 13c1.38 0 2.5-2.46 2.5-5.5S15.88 2 14.5 2 12 4.46 12 7.5s1.12 5.5 2.5 5.5'
             />
           </g>
-          <mask
-            id='ke-k'
-            width='5'
-            height='11'
-            x='8'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ke-k' width='5' height='11' x='8' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M10.5 12.5c1 0 2.5-1.96 2.5-5s-1.5-5-2.5-5S8 4.46 8 7.5s1.5 5 2.5 5'

@@ -127,14 +127,7 @@ export const IconFlagVI: FlagIcon = ({
             fill='url(#vi-d)'
             d='M8 6.5V4s.5.49 1.16.49c.67 0 1.34-.49 1.34-.49s.63.49 1.25.49C12.38 4.49 13 4 13 4v2.5C13 9 10.5 10 10.5 10S8 9 8 6.5'
           />
-          <mask
-            id='vi-e'
-            width='5'
-            height='6'
-            x='8'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='vi-e' width='5' height='6' x='8' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M8 6.5V4s.5.49 1.16.49c.67 0 1.34-.49 1.34-.49s.63.49 1.25.49C12.38 4.49 13 4 13 4v2.5C13 9 10.5 10 10.5 10S8 9 8 6.5'
@@ -143,14 +136,7 @@ export const IconFlagVI: FlagIcon = ({
           <g mask='url(#vi-e)'>
             <path fill='url(#vi-f)' d='M13 4H8v2h5z' />
           </g>
-          <mask
-            id='vi-g'
-            width='5'
-            height='6'
-            x='8'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='vi-g' width='5' height='6' x='8' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M8 6.5V4s.5.49 1.16.49c.67 0 1.34-.49 1.34-.49s.63.49 1.25.49C12.38 4.49 13 4 13 4v2.5C13 9 10.5 10 10.5 10S8 9 8 6.5'

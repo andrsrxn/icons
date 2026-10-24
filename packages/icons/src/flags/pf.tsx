@@ -116,40 +116,19 @@ export const IconFlagPF: FlagIcon = ({
           <path fill='url(#pf-c)' d='M21 0H0v4h21z' />
           <path fill='url(#pf-d)' d='M21 11H0v4h21z' />
           <path fill='url(#pf-e)' d='M21 4H0v7h21z' />
-          <mask
-            id='pf-f'
-            width='5'
-            height='5'
-            x='8'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pf-f' width='5' height='5' x='8' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </mask>
           <g mask='url(#pf-f)'>
             <path fill='url(#pf-g)' d='M13 5H8v2.5h5z' />
           </g>
-          <mask
-            id='pf-h'
-            width='5'
-            height='5'
-            x='8'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pf-h' width='5' height='5' x='8' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </mask>
           <g mask='url(#pf-h)'>
             <path fill='#fff' fillRule='evenodd' d='M9 6.5h3l-.5 1h-2z' clipRule='evenodd' />
           </g>
-          <mask
-            id='pf-i'
-            width='5'
-            height='5'
-            x='8'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pf-i' width='5' height='5' x='8' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </mask>
           <g mask='url(#pf-i)'>
@@ -160,27 +139,13 @@ export const IconFlagPF: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='pf-k'
-            width='5'
-            height='5'
-            x='8'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pf-k' width='5' height='5' x='8' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </mask>
           <g mask='url(#pf-k)'>
             <path fill='url(#pf-l)' d='M13 8H8v2h5z' />
           </g>
-          <mask
-            id='pf-m'
-            width='5'
-            height='5'
-            x='8'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pf-m' width='5' height='5' x='8' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 10a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5' />
           </mask>
           <g mask='url(#pf-m)'>

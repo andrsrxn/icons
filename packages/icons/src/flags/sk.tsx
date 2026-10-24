@@ -118,14 +118,7 @@ export const IconFlagSK: FlagIcon = ({
             fill='url(#sk-g)'
             d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'
           />
-          <mask
-            id='sk-h'
-            width='7'
-            height='9'
-            x='4'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sk-h' width='7' height='9' x='4' y='3' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'
@@ -139,14 +132,7 @@ export const IconFlagSK: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='sk-j'
-            width='7'
-            height='9'
-            x='4'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sk-j' width='7' height='9' x='4' y='3' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.21 4c.02-.55.49-1 1.04-1h4.5c.55 0 1.02.45 1.04 1l.17 4.5c.02.55-.3 1.29-.72 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37a2.3 2.3 0 0 1-.71-1.65z'

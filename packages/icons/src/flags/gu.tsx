@@ -155,27 +155,13 @@ export const IconFlagGU: FlagIcon = ({
             clipRule='evenodd'
           />
           <path fill='url(#gu-f)' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
-          <mask
-            id='gu-g'
-            width='5'
-            height='9'
-            x='8'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gu-g' width='5' height='9' x='8' y='3' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
           </mask>
           <g mask='url(#gu-g)'>
             <path fill='url(#gu-h)' d='M13 3H8v5h5z' />
           </g>
-          <mask
-            id='gu-i'
-            width='5'
-            height='9'
-            x='8'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gu-i' width='5' height='9' x='8' y='3' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
           </mask>
           <g mask='url(#gu-i)'>
@@ -186,27 +172,13 @@ export const IconFlagGU: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='gu-k'
-            width='5'
-            height='9'
-            x='8'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gu-k' width='5' height='9' x='8' y='3' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
           </mask>
           <g mask='url(#gu-k)'>
             <path fill='url(#gu-l)' d='M13 8H8v4h5z' />
           </g>
-          <mask
-            id='gu-m'
-            width='5'
-            height='9'
-            x='8'
-            y='3'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gu-m' width='5' height='9' x='8' y='3' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11.5s2.5-2 2.5-4-2.5-4-2.5-4-2.5 2-2.5 4 2.5 4 2.5 4' />
           </mask>
           <g mask='url(#gu-m)'>

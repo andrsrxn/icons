@@ -156,14 +156,7 @@ export const IconFlagFK: FlagIcon = ({
             fill='url(#fk-d)'
             d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
           />
-          <mask
-            id='fk-e'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-e' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -175,14 +168,7 @@ export const IconFlagFK: FlagIcon = ({
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5m2.64 2.87q.4-.22.78-.55A3 3 0 0 0 17.5 7.5V4.51l-4-.01v3c0 .94.4 1.7 1.08 2.32a4 4 0 0 0 .92.63z'
             />
           </g>
-          <mask
-            id='fk-g'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-g' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -196,14 +182,7 @@ export const IconFlagFK: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='fk-i'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-i' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -217,14 +196,7 @@ export const IconFlagFK: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='fk-k'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-k' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -236,14 +208,7 @@ export const IconFlagFK: FlagIcon = ({
               d='m12.68 10.18.35-.35.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3.18.17.35-.35-.17-.18-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3-.35.35-.17.18.35.35z'
             />
           </g>
-          <mask
-            id='fk-m'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-m' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -255,14 +220,7 @@ export const IconFlagFK: FlagIcon = ({
               d='m12.68 8.68.35-.35.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3c.3.29.77.29 1.06 0l.3-.3c.1-.1.25-.1.34 0l.3.3.18.17.35-.35-.17-.18-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3c-.1.1-.25.1-.34 0l-.3-.3a.74.74 0 0 0-1.06 0l-.3.3-.35.35-.17.18.35.35z'
             />
           </g>
-          <mask
-            id='fk-o'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='fk-o' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V4.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V7.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'

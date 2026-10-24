@@ -146,14 +146,7 @@ export const IconFlagPM: FlagIcon = ({
             d='M15.78 12.95q.22.1.44 0l2-1a.5.5 0 1 0-.44-.9l-1.78.9-1.78-.9a.5.5 0 0 0-.44 0l-1.78.9-1.78-.9a.5.5 0 1 0-.44.9l2 1q.22.1.44 0l1.78-.9z'
           />
           <path fill='url(#pm-g)' d='M7 0H0v5h7z' />
-          <mask
-            id='pm-h'
-            width='7'
-            height='5'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pm-h' width='7' height='5' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M7 0H0v5h7z' />
           </mask>
           <g mask='url(#pm-h)'>
@@ -164,14 +157,7 @@ export const IconFlagPM: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='pm-j'
-            width='7'
-            height='5'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pm-j' width='7' height='5' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M7 0H0v5h7z' />
           </mask>
           <g mask='url(#pm-j)'>

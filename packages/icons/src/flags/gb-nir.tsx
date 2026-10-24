@@ -129,14 +129,7 @@ export const IconFlagGBNIR: FlagIcon = ({
             fill='url(#gb-nir-g)'
             d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
           />
-          <mask
-            id='gb-nir-h'
-            width='3'
-            height='3'
-            x='9'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gb-nir-h' width='3' height='3' x='9' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
@@ -145,14 +138,7 @@ export const IconFlagGBNIR: FlagIcon = ({
           <g mask='url(#gb-nir-h)'>
             <path fill='#5169e2' d='M10.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='gb-nir-i'
-            width='3'
-            height='3'
-            x='9'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gb-nir-i' width='3' height='3' x='9' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
@@ -161,14 +147,7 @@ export const IconFlagGBNIR: FlagIcon = ({
           <g mask='url(#gb-nir-i)'>
             <path fill='#d34d43' d='M11.5 5.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='gb-nir-j'
-            width='3'
-            height='3'
-            x='9'
-            y='2'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='gb-nir-j' width='3' height='3' x='9' y='2' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M9 3.75 10 4l.5-.5.5.5 1-.25-.4 1a.4.4 0 0 1-.35.25h-1.5a.4.4 0 0 1-.35-.24zM10.5 3a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'

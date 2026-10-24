@@ -126,14 +126,7 @@ export const IconFlagPN: FlagIcon = ({
             fill='url(#pn-d)'
             d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2.5-2.5 3.5-2.5 3.5S13 12 13 9.5'
           />
-          <mask
-            id='pn-e'
-            width='5'
-            height='7'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pn-e' width='5' height='7' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2.5-2.5 3.5-2.5 3.5S13 12 13 9.5'
@@ -142,14 +135,7 @@ export const IconFlagPN: FlagIcon = ({
           <g mask='url(#pn-e)'>
             <path fill='url(#pn-f)' d='m12.5 12 3-6 3 6v2h-6z' />
           </g>
-          <mask
-            id='pn-g'
-            width='5'
-            height='7'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='pn-g' width='5' height='7' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2.5-2.5 3.5-2.5 3.5S13 12 13 9.5'

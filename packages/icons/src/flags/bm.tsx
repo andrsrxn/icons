@@ -128,27 +128,13 @@ export const IconFlagBM: FlagIcon = ({
             clipRule='evenodd'
           />
           <path fill='url(#bm-i)' d='M13 7.5V5h4v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
-          <mask
-            id='bm-j'
-            width='4'
-            height='5'
-            x='13'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bm-j' width='4' height='5' x='13' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V5h4v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
           </mask>
           <g mask='url(#bm-j)'>
             <path fill='#65b5d2' d='M15 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='bm-k'
-            width='4'
-            height='5'
-            x='13'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bm-k' width='4' height='5' x='13' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V5h4v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
           </mask>
           <g mask='url(#bm-k)'>
@@ -159,14 +145,7 @@ export const IconFlagBM: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='bm-m'
-            width='4'
-            height='5'
-            x='13'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bm-m' width='4' height='5' x='13' y='5' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M13 7.5V5h4v2.5C17 9 15 10 15 10s-2-1-2-2.5' />
           </mask>
           <g mask='url(#bm-m)'>

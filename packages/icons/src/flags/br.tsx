@@ -81,14 +81,7 @@ export const IconFlagBR: FlagIcon = ({
             clipRule='evenodd'
           />
           <path fill='url(#br-d)' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
-          <mask
-            id='br-e'
-            width='7'
-            height='7'
-            x='7'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='br-e' width='7' height='7' x='7' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
           </mask>
           <g mask='url(#br-e)'>

@@ -42,14 +42,7 @@ export const IconFlagCNA: FlagIcon = ({
       </defs>
       <g clipPath='url(#cna-clip)'>
         <g clipPath='url(#cna-a)'>
-          <mask
-            id='cna-b'
-            width='21'
-            height='15'
-            x='0'
-            y='0'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='cna-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M21 0H0v15h21z' />
           </mask>
           <g mask='url(#cna-b)'>

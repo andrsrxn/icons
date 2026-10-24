@@ -84,14 +84,7 @@ export const IconFlagKR: FlagIcon = ({
         <g clipPath='url(#kr-a)'>
           <path fill='url(#kr-b)' d='M21 0H0v15h21z' />
           <path fill='url(#kr-c)' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
-          <mask
-            id='kr-d'
-            width='7'
-            height='7'
-            x='7'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='kr-d' width='7' height='7' x='7' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M10.5 11a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7' />
           </mask>
           <g mask='url(#kr-d)'>

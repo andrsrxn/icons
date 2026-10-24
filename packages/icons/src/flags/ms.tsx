@@ -138,14 +138,7 @@ export const IconFlagMS: FlagIcon = ({
             fill='url(#ms-h)'
             d='M13 7.5V5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v2.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
           />
-          <mask
-            id='ms-i'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ms-i' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v2.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'
@@ -154,14 +147,7 @@ export const IconFlagMS: FlagIcon = ({
           <g mask='url(#ms-i)'>
             <path fill='#a63d09' fillRule='evenodd' d='M13 9h5v2h-5z' clipRule='evenodd' />
           </g>
-          <mask
-            id='ms-j'
-            width='5'
-            height='7'
-            x='13'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='ms-j' width='5' height='7' x='13' y='4' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 7.5V5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v2.5c0 2.5-2.5 3.5-2.5 3.5S13 10 13 7.5'

@@ -126,14 +126,7 @@ export const IconFlagSH: FlagIcon = ({
             fill='url(#sh-d)'
             d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2-2.5 2.5-2.5 2.5S13 11.5 13 9.5'
           />
-          <mask
-            id='sh-e'
-            width='5'
-            height='6'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sh-e' width='5' height='6' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2-2.5 2.5-2.5 2.5S13 11.5 13 9.5'
@@ -147,14 +140,7 @@ export const IconFlagSH: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='sh-g'
-            width='5'
-            height='6'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sh-g' width='5' height='6' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2-2.5 2.5-2.5 2.5S13 11.5 13 9.5'
@@ -166,14 +152,7 @@ export const IconFlagSH: FlagIcon = ({
               d='M15.5 11.5c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
             />
           </g>
-          <mask
-            id='sh-h'
-            width='5'
-            height='6'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sh-h' width='5' height='6' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2-2.5 2.5-2.5 2.5S13 11.5 13 9.5'
@@ -182,14 +161,7 @@ export const IconFlagSH: FlagIcon = ({
           <g mask='url(#sh-h)'>
             <path fill='#fff' d='M15.5 10.5a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='sh-i'
-            width='5'
-            height='6'
-            x='13'
-            y='6'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='sh-i' width='5' height='6' x='13' y='6' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M13 9.5V6.51a.5.5 0 0 1 .5-.51h4c.28 0 .5.23.5.51V9.5c0 2-2.5 2.5-2.5 2.5S13 11.5 13 9.5'

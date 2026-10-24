@@ -107,14 +107,7 @@ export const IconFlagBL: FlagIcon = ({
             fill='url(#bl-c)'
             d='M7 5h7v4.5c0 .55-.34 1.29-.76 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37A2.5 2.5 0 0 1 7 9.5z'
           />
-          <mask
-            id='bl-d'
-            width='7'
-            height='8'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bl-d' width='7' height='8' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M7 5h7v4.5c0 .55-.34 1.29-.76 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37A2.5 2.5 0 0 1 7 9.5z'
@@ -128,14 +121,7 @@ export const IconFlagBL: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='bl-f'
-            width='7'
-            height='8'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bl-f' width='7' height='8' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M7 5h7v4.5c0 .55-.34 1.29-.76 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37A2.5 2.5 0 0 1 7 9.5z'
@@ -149,14 +135,7 @@ export const IconFlagBL: FlagIcon = ({
               clipRule='evenodd'
             />
           </g>
-          <mask
-            id='bl-h'
-            width='7'
-            height='8'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bl-h' width='7' height='8' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M7 5h7v4.5c0 .55-.34 1.29-.76 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37A2.5 2.5 0 0 1 7 9.5z'
@@ -165,14 +144,7 @@ export const IconFlagBL: FlagIcon = ({
           <g mask='url(#bl-h)'>
             <path fill='url(#bl-i)' d='M14 8H7v2h7z' />
           </g>
-          <mask
-            id='bl-j'
-            width='7'
-            height='8'
-            x='7'
-            y='5'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='bl-j' width='7' height='8' x='7' y='5' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M7 5h7v4.5c0 .55-.34 1.29-.76 1.65l-1.6 1.37c-.63.54-1.66.54-2.29 0l-1.6-1.37A2.5 2.5 0 0 1 7 9.5z'

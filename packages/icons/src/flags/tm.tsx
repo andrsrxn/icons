@@ -84,54 +84,26 @@ export const IconFlagTM: FlagIcon = ({
           <path fill='url(#tm-c)' d='M21 0H0v15h21z' />
           <path fill='url(#tm-d)' d='M6 0H3v15h3z' />
           <path fill='#fff' d='M4.5 3C5.33 3 6 2.55 6 2s-.67-1-1.5-1S3 1.45 3 2s.67 1 1.5 1' />
-          <mask
-            id='tm-e'
-            width='3'
-            height='2'
-            x='3'
-            y='1'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-e' width='3' height='2' x='3' y='1' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 3C5.33 3 6 2.55 6 2s-.67-1-1.5-1S3 1.45 3 2s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-e)'>
             <path fill='#dd404f' d='M4.5 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='tm-f'
-            width='3'
-            height='2'
-            x='3'
-            y='1'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-f' width='3' height='2' x='3' y='1' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 3C5.33 3 6 2.55 6 2s-.67-1-1.5-1S3 1.45 3 2s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-f)'>
             <path fill='#fbaf29' d='M4.5 1H3v1h1.5z' />
           </g>
-          <mask
-            id='tm-g'
-            width='3'
-            height='2'
-            x='3'
-            y='1'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-g' width='3' height='2' x='3' y='1' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 3C5.33 3 6 2.55 6 2s-.67-1-1.5-1S3 1.45 3 2s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-g)'>
             <path fill='#fbaf29' d='M6 2H4.5v1H6z' />
           </g>
           <path fill='#fff' d='M4.5 14c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1' />
-          <mask
-            id='tm-h'
-            width='3'
-            height='2'
-            x='3'
-            y='12'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-h' width='3' height='2' x='3' y='12' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.5 14c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
@@ -140,14 +112,7 @@ export const IconFlagTM: FlagIcon = ({
           <g mask='url(#tm-h)'>
             <path fill='#dd404f' d='M4.5 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='tm-i'
-            width='3'
-            height='2'
-            x='3'
-            y='12'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-i' width='3' height='2' x='3' y='12' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.5 14c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
@@ -156,14 +121,7 @@ export const IconFlagTM: FlagIcon = ({
           <g mask='url(#tm-i)'>
             <path fill='#fbaf29' d='M4.5 12H3v1h1.5z' />
           </g>
-          <mask
-            id='tm-j'
-            width='3'
-            height='2'
-            x='3'
-            y='12'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-j' width='3' height='2' x='3' y='12' maskUnits='userSpaceOnUse'>
             <path
               fill='#fff'
               d='M4.5 14c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
@@ -173,14 +131,7 @@ export const IconFlagTM: FlagIcon = ({
             <path fill='#fbaf29' d='M6 13H4.5v1H6z' />
           </g>
           <path fill='#28ae67' d='M4.5 9C5.33 9 6 8.55 6 8s-.67-1-1.5-1S3 7.45 3 8s.67 1 1.5 1' />
-          <mask
-            id='tm-k'
-            width='3'
-            height='2'
-            x='3'
-            y='7'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-k' width='3' height='2' x='3' y='7' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 9C5.33 9 6 8.55 6 8s-.67-1-1.5-1S3 7.45 3 8s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-k)'>
@@ -191,40 +142,19 @@ export const IconFlagTM: FlagIcon = ({
             d='M4.5 11.5c.83 0 1.5-.45 1.5-1s-.67-1-1.5-1-1.5.45-1.5 1 .67 1 1.5 1'
           />
           <path fill='#fbaf29' d='M4.5 6C5.33 6 6 5.55 6 5s-.67-1-1.5-1S3 4.45 3 5s.67 1 1.5 1' />
-          <mask
-            id='tm-l'
-            width='3'
-            height='2'
-            x='3'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-l' width='3' height='2' x='3' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 6C5.33 6 6 5.55 6 5s-.67-1-1.5-1S3 4.45 3 5s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-l)'>
             <path fill='#dd404f' d='M4.5 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
           </g>
-          <mask
-            id='tm-m'
-            width='3'
-            height='2'
-            x='3'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-m' width='3' height='2' x='3' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 6C5.33 6 6 5.55 6 5s-.67-1-1.5-1S3 4.45 3 5s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-m)'>
             <path fill='#28ae67' d='M4 4H3v2h1z' />
           </g>
-          <mask
-            id='tm-n'
-            width='3'
-            height='2'
-            x='3'
-            y='4'
-            maskUnits='userSpaceOnUse'
-            style={{ maskType: 'luminance' }}>
+          <mask id='tm-n' width='3' height='2' x='3' y='4' maskUnits='userSpaceOnUse'>
             <path fill='#fff' d='M4.5 6C5.33 6 6 5.55 6 5s-.67-1-1.5-1S3 4.45 3 5s.67 1 1.5 1' />
           </mask>
           <g mask='url(#tm-n)'>
