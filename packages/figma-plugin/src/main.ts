@@ -11,7 +11,7 @@ export default function () {
     // createNodeFromSvg turns the raw SVG markup directly into real,
     // editable Figma vector layers - not an embedded image.
     const node = figma.createNodeFromSvg(icon.svg)
-    node.name = icon.name
+    node.name = icon.n
 
     if (node.width > 0 && Math.abs(node.width - TARGET_WIDTH) > 0.01) {
       node.rescale(TARGET_WIDTH / node.width)

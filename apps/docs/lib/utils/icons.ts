@@ -29,7 +29,7 @@ export const getPaginationRange = (page: number, totalPages: number): number[] =
 }
 
 export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
-  return 'categories' in icon
+  return 'c' in icon
 }
 
 export const getIconComponentName = (iconName: string, group: IconCatalogGroup) => {

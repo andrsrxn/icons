@@ -124,7 +124,7 @@ export const IconGridSidebar = ({
         cat: cat.title,
         icon: cat.icon,
         count: catalog.filter(
-          (icon: IconCatalogEntry) => isUIIcon(icon) && icon.categories.includes(cat.title)
+          (icon: IconCatalogEntry) => isUIIcon(icon) && icon.c.includes(cat.title)
         ).length,
       })),
     [catalog]

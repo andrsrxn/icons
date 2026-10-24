@@ -24,7 +24,7 @@ export const ButtonRandomIcon = () => {
     setPage(1)
     setQuery('')
 
-    setIconParam(randomIcon.name)
+    setIconParam(randomIcon.n)
     setGroup(isUIIcon(randomIcon) ? 'ui' : 'flags')
   }
 

@@ -10,8 +10,8 @@
  * Usage:
  *   node scripts/generate-flags.js
  */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/performance/useTopLevelRegex: no */
-/** biome-ignore-all lint/nursery/useNamedCaptureGroup: no */
 /** biome-ignore-all lint/style/noParameterAssign: no */
 /** biome-ignore-all lint/complexity/noForEach: no */
 /** biome-ignore-all lint/suspicious/noConsole: no */
@@ -52,7 +52,7 @@ function svgAttrsToJsx(svg) {
     const declarations = styleValue
       .split(';')
       .map(decl => decl.trim())
-      .filter(Boolean)
+      .filter(decl => Boolean(decl) && !decl.startsWith('mask-type:'))
 
     if (declarations.length === 0) {
       return ''
@@ -70,7 +70,7 @@ function svgAttrsToJsx(svg) {
           return null
         }
         const camelProp = prop.replace(/-([a-z])/giu, (_, c) => c.toUpperCase())
-        return `${camelProp}: '${val.replace(/'/g, "\\'")}'`
+        return `${camelProp}: '${val.replace(/'/gu, "\\'")}'`
       })
       .filter(Boolean)
 

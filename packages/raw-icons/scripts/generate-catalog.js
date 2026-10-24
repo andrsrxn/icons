@@ -6,6 +6,7 @@
  * Usage:
  *   node scripts/generate-catalog.js
  */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/performance/useTopLevelRegex: not necessary */
 /** biome-ignore-all lint/suspicious/noConsole: no */
 
@@ -26,7 +27,7 @@ const OUT_FILE = path.resolve(__dirname, '../dist/catalog.json')
 const OUT_FULL_JSON_FILE = path.resolve(__dirname, '../dist/catalog-with-svgs.json')
 
 // SVG elements that can represent graphical shapes.
-const SVG_GRAPHICAL_ELEMENTS = /<(path|rect|circle|ellipse|line|polyline|polygon)\b([^>]*)>/gi
+const SVG_GRAPHICAL_ELEMENTS = /<(path|rect|circle|ellipse|line|polyline|polygon)\b([^>]*)>/giu
 
 // Helpers
 export function findSvgFiles(files) {
@@ -48,13 +49,13 @@ export function buildCatalogEntry(group, iconName, meta) {
 }
 
 function getAttribute(attrs, name) {
-  const match = attrs.match(new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, 'i'))
+  const match = attrs.match(new RegExp(`\\b${name}\\s*=\\s*(["'])(.*?)\\1`, 'iu'))
 
   return match?.[2] ?? null
 }
 
 function hasAttribute(attrs, name) {
-  return new RegExp(`\\b${name}\\s*=`, 'i').test(attrs)
+  return new RegExp(`\\b${name}\\s*=`, 'iu').test(attrs)
 }
 
 function hasVisibleAttribute(attrs, name) {
@@ -92,9 +93,9 @@ function addUiElementIds(svg) {
 
 function namespaceFlagIds(svg, iconName) {
   return svg
-    .replace(/\bid="([^"]+)"/g, `id="${iconName}-$1"`)
-    .replace(/\burl\(#([^)]+)\)/g, `url(#${iconName}-$1)`)
-    .replace(/\bhref="#([^"]+)"/g, `href="#${iconName}-$1"`)
+    .replace(/\bid="([^"]+)"/gu, `id="${iconName}-$1"`)
+    .replace(/\burl\(#([^)]+)\)/gu, `url(#${iconName}-$1)`)
+    .replace(/\bhref="#([^"]+)"/gu, `href="#${iconName}-$1"`)
 }
 
 // Main transform
@@ -129,11 +130,12 @@ function main() {
       const meta = JSON.parse(fs.readFileSync(metaPath, 'utf-8'))
 
       // Strip categories from flags entries; neither output includes `group`
-      const { categories: _categories, ...flagsMeta } = meta
-      const strippedMeta = group === 'flags' ? flagsMeta : meta
+      const { c: _categories, ...flagsMeta } = meta
+      const strippedMeta =
+        group === 'flags' ? { t: flagsMeta.tags } : { c: meta.categories, t: meta.tags }
 
       // 1. Light JSON Entry (no svg)
-      catalog.push({ name: iconName, ...strippedMeta })
+      catalog.push({ n: iconName, ...strippedMeta })
 
       // 2. Full JSON Entry with raw inline SVG code
       let rawSvg = fs.readFileSync(svgPath, 'utf-8').trim()
@@ -145,7 +147,7 @@ function main() {
       }
 
       // 2. Full JSON Entry with raw inline SVG code
-      catalogWithSvgs.push({ name: iconName, ...strippedMeta, svg: rawSvg })
+      catalogWithSvgs.push({ n: iconName, ...strippedMeta, svg: rawSvg })
     }
   }
 

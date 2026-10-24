@@ -61,7 +61,7 @@ export const IconGridList = ({
         </div>
       ) : null}
       {icons.map(icon => (
-        <IconCard queryString={queryString} icon={icon} key={icon.name} />
+        <IconCard queryString={queryString} icon={icon} key={icon.n} />
       ))}
     </div>
   )

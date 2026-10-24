@@ -1,4 +1,5 @@
 /** biome-ignore-all lint/performance/noJsxPropsBind: ok */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/style/noMagicNumbers: score numbers */
 
 import catalog from '@andrsrxn/raw-icons/catalog-with-svgs.json'
@@ -20,13 +21,13 @@ import { useMemo, useState } from 'preact/hooks'
 import type { CatalogIcon, InsertIconHandler } from './types'
 import styles from './ui.css'
 
-const SVG_WIDTH_REGEX = /\bwidth="([\d.]+)(?:px)?"/
-const SVG_HEIGHT_REGEX = /\bheight="([\d.]+)(?:px)?"/
-const SVG_REPLACE_WIDTH_REGEX = /\bwidth="[\d.]+(?:px)?"/
-const SVG_REPLACE_HEIGHT_REGEX = /\bheight="[\d.]+(?:px)?"/
+const SVG_WIDTH_REGEX = /\bwidth="([\d.]+)(?:px)?"/u
+const SVG_HEIGHT_REGEX = /\bheight="([\d.]+)(?:px)?"/u
+const SVG_REPLACE_WIDTH_REGEX = /\bwidth="[\d.]+(?:px)?"/u
+const SVG_REPLACE_HEIGHT_REGEX = /\bheight="[\d.]+(?:px)?"/u
 
 export const isUIIcon = (icon: IconCatalogEntry): icon is IconCatalogUIEntry => {
-  return 'categories' in icon
+  return 'c' in icon
 }
 
 function normalizeSvgTo24(svg: string): string {
@@ -58,7 +59,7 @@ const TABS_OPTIONS: TabsOption[] = [
 const normalizeSearchText = (value: string) =>
   value
     .toLowerCase()
-    .replace(/[-\s]+/g, ' ')
+    .replace(/[-\s]+/gu, ' ')
     .trim()
 
 /**
@@ -75,7 +76,7 @@ const normalizeSearchText = (value: string) =>
  * 0 — no match
  */
 function scoreIcon(icon: CatalogIcon, query: string): number {
-  const name = normalizeSearchText(icon.name)
+  const name = normalizeSearchText(icon.n)
   const normalizedQuery = normalizeSearchText(query)
   const queryWords = normalizedQuery.split(' ').filter(Boolean)
 
@@ -100,10 +101,10 @@ function scoreIcon(icon: CatalogIcon, query: string): number {
   }
 
   const nameWords = name.split(' ')
-  const tagWords = icon.tags.flatMap(tag => normalizeSearchText(tag).split(' '))
+  const tagWords = icon.t.flatMap(tag => normalizeSearchText(tag).split(' '))
 
   const categoryWords = isUIIcon(icon)
-    ? icon.categories.flatMap(category => normalizeSearchText(category).split(' '))
+    ? icon.c.flatMap(category => normalizeSearchText(category).split(' '))
     : []
 
   const allWordsMatch = (words: string[]) =>
@@ -164,8 +165,8 @@ function Plugin() {
           return b.score - a.score
         }
 
-        const aIsBase = !a.icon.name.includes('-')
-        const bIsBase = !b.icon.name.includes('-')
+        const aIsBase = !a.icon.n.includes('-')
+        const bIsBase = !b.icon.n.includes('-')
 
         if (aIsBase !== bIsBase) {
           return aIsBase ? -1 : 1
@@ -177,7 +178,7 @@ function Plugin() {
   }, [group, deferredQuery])
 
   function handleInsert(icon: CatalogIcon) {
-    emit<InsertIconHandler>('INSERT_ICON', { name: icon.name, svg: icon.svg })
+    emit<InsertIconHandler>('INSERT_ICON', { n: icon.n, svg: icon.svg })
   }
 
   return (
@@ -218,10 +219,10 @@ function Plugin() {
           ) : (
             filtered.map(icon => (
               <button
-                key={icon.name}
+                key={icon.n}
                 type='button'
                 className={styles.iconButton}
-                title={icon.name}
+                title={icon.n}
                 onClick={() => handleInsert(icon)}>
                 <span
                   className={styles.iconPreview}

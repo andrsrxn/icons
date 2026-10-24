@@ -20,8 +20,8 @@ const ICONS_BY_GROUP: Record<IconCatalogGroup, IconCatalogEntry[]> = {
   flags: FLAGS_ICONS,
 }
 
-const UI_ICON_MAP = new Map<string, IconCatalogEntry>(UI_ICONS.map(icon => [icon.name, icon]))
-const FLAGS_ICON_MAP = new Map<string, IconCatalogEntry>(FLAGS_ICONS.map(icon => [icon.name, icon]))
+const UI_ICON_MAP = new Map<string, IconCatalogEntry>(UI_ICONS.map(icon => [icon.n, icon]))
+const FLAGS_ICON_MAP = new Map<string, IconCatalogEntry>(FLAGS_ICONS.map(icon => [icon.n, icon]))
 
 const ICON_MAPS_BY_GROUP: Record<IconCatalogGroup, Map<string, IconCatalogEntry>> = {
   ui: UI_ICON_MAP,
@@ -36,7 +36,7 @@ const ICON_MAPS_BY_GROUP: Record<IconCatalogGroup, Map<string, IconCatalogEntry>
 const normalizeSearchText = (value: string) =>
   value
     .toLowerCase()
-    .replace(/[-\s]+/g, ' ')
+    .replace(/[-\s]+/gu, ' ')
     .trim()
 
 /**
@@ -45,7 +45,7 @@ const normalizeSearchText = (value: string) =>
  * Partial-word matches are supported.
  */
 function scoreIcon(icon: IconCatalogEntry, query: string): number {
-  const name = normalizeSearchText(icon.name)
+  const name = normalizeSearchText(icon.n)
   const normalizedQuery = normalizeSearchText(query)
   const queryWords = normalizedQuery.split(' ').filter(Boolean)
 
@@ -72,10 +72,10 @@ function scoreIcon(icon: IconCatalogEntry, query: string): number {
 
   const nameWords = name.split(' ')
 
-  const tagWords = icon.tags.flatMap(tag => normalizeSearchText(tag).split(' '))
+  const tagWords = icon.t.flatMap(tag => normalizeSearchText(tag).split(' '))
 
   const categoryWords = isUIIcon(icon)
-    ? icon.categories.flatMap(category => normalizeSearchText(category).split(' '))
+    ? icon.c.flatMap(category => normalizeSearchText(category).split(' '))
     : []
 
   // Every query word must match at least one word in the icon metadata.
@@ -110,8 +110,8 @@ function compareScoredIcons(a: ScoredIcon, b: ScoredIcon): number {
   }
 
   // When prefix-matching (e.g. typing "fil"), prioritize base root icons without hyphens
-  const aIsBase = !a.icon.name.includes('-')
-  const bIsBase = !b.icon.name.includes('-')
+  const aIsBase = !a.icon.n.includes('-')
+  const bIsBase = !b.icon.n.includes('-')
   if (aIsBase !== bIsBase) {
     return aIsBase ? -1 : 1
   }
@@ -139,7 +139,7 @@ function filterByCategory(icons: IconCatalogEntry[], category: string | null): I
     return icons
   }
   const normalizedCategory = category.toLowerCase()
-  return icons.filter(icon => isUIIcon(icon) && icon.categories.includes(normalizedCategory))
+  return icons.filter(icon => isUIIcon(icon) && icon.c.includes(normalizedCategory))
 }
 
 /**
@@ -152,10 +152,16 @@ export const useIconCatalog = () => {
   const [iconParam, setIconParam] = useQueryState('icon', {
     history: 'push',
   })
-  const [page, setPage] = useQueryState('page', parseAsInteger.withDefault(1))
-  const [category, setCategoryState] = useQueryState('category')
+  const [page, setPage] = useQueryState('page', {
+    ...parseAsInteger.withDefault(1),
+    history: 'push',
+  })
+  const [category, setCategoryState] = useQueryState('category', {
+    history: 'push',
+  })
   const [group, setGroupState] = useQueryState<'ui' | 'flags'>('group', {
     defaultValue: 'ui',
+    history: 'push',
     parse: (value: string) => (value === 'ui' || value === 'flags' ? value : 'ui'),
   })
   const [query, setQueryState] = useQueryState('q')

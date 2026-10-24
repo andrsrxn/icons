@@ -1,13 +1,13 @@
 interface IconCatalogUIEntry {
-  name: string
-  categories: string[]
-  tags: string[]
+  n: string
+  c: string[]
+  t: string[]
   rtl?: boolean
 }
 
 interface IconCatalogFlagsEntry {
-  name: string
-  tags: string[]
+  n: string
+  t: string[]
 }
 
 export type IconCatalogGroup = 'ui' | 'flags'

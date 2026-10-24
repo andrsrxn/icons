@@ -41,7 +41,7 @@ export const IconKeylineContainer = ({
 
   const { resolvedTheme } = useTheme()
   const keylineURL = 'url(/assets/keyline.svg)'
-  const componentName = getIconComponentName(icon.name, isUIIcon(icon) ? 'ui' : 'flags')
+  const componentName = getIconComponentName(icon.n, isUIIcon(icon) ? 'ui' : 'flags')
   const IconComponent = ICON_LOOKUP[componentName as keyof typeof ICON_LOOKUP]
 
   function reset() {
@@ -66,6 +66,7 @@ export const IconKeylineContainer = ({
           'flex size-64 md:size-72 items-center justify-center bg-card bg-contain border border-transparent! bg-center bg-no-repeat',
           shouldShowKeyline && isUI ? null : 'rounded-lg border-border! shadow-sm'
         )}
+        // biome-ignore lint/style/noInlineStyles: necessary
         style={{
           backgroundImage: isUI && shouldShowKeyline ? keylineURL : 'none',
         }}>

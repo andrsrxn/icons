@@ -30,13 +30,11 @@ import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 const catalog = rawCatalog as IconCatalog
 
 function matchesRelatedUI(targetCategories: Set<string>, candidate: IconCatalogEntry): boolean {
-  return (
-    isUIIcon(candidate) && candidate.categories.some(category => targetCategories.has(category))
-  )
+  return isUIIcon(candidate) && candidate.c.some(category => targetCategories.has(category))
 }
 
 function matchesRelatedFlag(targetTags: Set<string>, candidate: IconCatalogEntry): boolean {
-  return !isUIIcon(candidate) && candidate.tags.some(tag => targetTags.has(tag))
+  return !isUIIcon(candidate) && candidate.t.some(tag => targetTags.has(tag))
 }
 
 function isSameGroup(isUI: boolean, candidate: IconCatalogEntry): boolean {
@@ -45,22 +43,22 @@ function isSameGroup(isUI: boolean, candidate: IconCatalogEntry): boolean {
 
 function getRelatedIcons(icon: IconCatalogEntry): IconCatalogEntry[] {
   const isUI = isUIIcon(icon)
-  const lookupSet = new Set(isUI ? icon.categories : icon.tags)
+  const lookupSet = new Set(isUI ? icon.c : icon.t)
   const isMatch = isUI ? matchesRelatedUI : matchesRelatedFlag
-  const [baseName] = icon.name.split('-')
+  const [baseName] = icon.n.split('-')
 
   const baseMatch: IconCatalogEntry[] = []
   const nameMatches: IconCatalogEntry[] = []
   const categoryMatches: IconCatalogEntry[] = []
 
   for (const candidate of catalog) {
-    if (candidate.name === icon.name || !isSameGroup(isUI, candidate)) {
+    if (candidate.n === icon.n || !isSameGroup(isUI, candidate)) {
       continue
     }
 
-    if (candidate.name === baseName) {
+    if (candidate.n === baseName) {
       baseMatch.push(candidate) // Exact base icon (e.g. "file" for "file-binary")
-    } else if (candidate.name.startsWith(`${baseName}-`)) {
+    } else if (candidate.n.startsWith(`${baseName}-`)) {
       nameMatches.push(candidate) // Sibling variants (e.g. "file-check", "file-code")
     } else if (isMatch(lookupSet, candidate)) {
       categoryMatches.push(candidate) // Category/tag matches
@@ -95,8 +93,8 @@ export const IconSection = ({
   const isUI = isUIIcon(icon)
 
   const componentName = useMemo(
-    () => getIconComponentName(icon.name, isUI ? 'ui' : 'flags'),
-    [icon.name, isUI]
+    () => getIconComponentName(icon.n, isUI ? 'ui' : 'flags'),
+    [icon.n, isUI]
   )
 
   const copyCodeExample = useMemo(
@@ -137,7 +135,7 @@ export const IconSection = ({
             <div className='grid gap-3'>
               <div className='flex items-center gap-2'>
                 {isUI
-                  ? icon.categories.map(cat => (
+                  ? icon.c.map(cat => (
                       <Badge
                         variant='default'
                         key={cat}
@@ -162,11 +160,11 @@ export const IconSection = ({
                   <TooltipTrigger className='w-fit'>
                     {showFullData ? (
                       <h1 className='font-heading truncate text-3xl md:text-4xl leading-none font-bold'>
-                        {icon.name}
+                        {icon.n}
                       </h1>
                     ) : (
                       <h3 className='font-heading truncate text-3xl md:text-4xl leading-none font-bold'>
-                        {icon.name}
+                        {icon.n}
                       </h3>
                     )}
                   </TooltipTrigger>
@@ -175,7 +173,7 @@ export const IconSection = ({
                 <ButtonCopy
                   aria-label='Copy icon name'
                   title='Copy'
-                  value={icon.name}
+                  value={icon.n}
                   size='icon-xs'
                   variant='outline'
                 />
@@ -200,7 +198,7 @@ export const IconSection = ({
 
               <div className='flex flex-wrap items-center gap-2 mt-2 w-fit'>
                 <span className='sr-only'>Tags</span>
-                {icon.tags.map(tag => (
+                {icon.t.map(tag => (
                   <Badge
                     key={tag}
                     variant='outline'
