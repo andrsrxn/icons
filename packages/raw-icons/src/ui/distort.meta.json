@@ -7,6 +7,7 @@
     "deform",
     "transform",
     "bend",
+    "mesh",
     "twist",
     "stretch",
     "manipulation",

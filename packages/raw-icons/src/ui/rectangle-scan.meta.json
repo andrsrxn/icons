@@ -8,10 +8,10 @@
     "identify",
     "analyze",
     "frame",
-    "area",
     "region",
     "find",
     "lookup",
-    "explore"
+    "explore",
+    "capture"
   ]
 }

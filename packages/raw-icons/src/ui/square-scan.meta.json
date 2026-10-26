@@ -8,6 +8,7 @@
     "identify",
     "frame",
     "area",
-    "qr"
+    "qr",
+    "capture"
   ]
 }

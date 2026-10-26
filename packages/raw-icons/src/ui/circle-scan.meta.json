@@ -8,6 +8,7 @@
     "shape",
     "identify",
     "target",
-    "focus"
+    "focus",
+    "capture"
   ]
 }
