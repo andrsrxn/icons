@@ -35,8 +35,8 @@ export const IconXCircle: Icon = ({
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.27' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='m7.88 7.88 8.24 8.24' stroke='currentColor' />
-      <path d='m7.88 16.12 8.24-8.24' stroke='currentColor' />
+      <path d='m8.15 8.15 7.7 7.7' stroke='currentColor' />
+      <path d='m8.15 15.85 7.7-7.7' stroke='currentColor' />
     </svg>
   )
 }

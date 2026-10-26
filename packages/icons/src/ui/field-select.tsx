@@ -31,18 +31,18 @@ export const IconFieldSelect: Icon = ({
         width='12.42'
         height='20.61'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.73 18.5)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         fill='currentColor'
       />
       <path
-        d='m18.23 11.29-.88.87c-1 1-1.5 1.5-2.12 1.5s-1.12-.5-2.12-1.5l-.88-.87'
+        d='m18.8 11-.87.87c-1 1-1.5 1.5-2.13 1.5s-1.12-.5-2.12-1.5L12.8 11'
         stroke='currentColor'
       />
       <rect
         width='12.42'
         height='20.61'
         rx='3'
-        transform='matrix(0 -1 -1 0 21.73 18.5)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         stroke='currentColor'
       />
     </svg>

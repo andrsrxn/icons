@@ -26,8 +26,6 @@ export const IconSfx: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
       <path d='M10.11 8.31v7.46' stroke='currentColor' />
       <path d='M10.11 8.27h4.11' stroke='currentColor' />
       <path d='M10.11 12.27h3.09' stroke='currentColor' />
@@ -37,6 +35,8 @@ export const IconSfx: Icon = ({
       />
       <path d='m16.62 15.72 5.13-7.4' stroke='currentColor' />
       <path d='m21.75 15.72-5.13-7.4' stroke='currentColor' />
+      <path d='M22.26 20.17H1.74' stroke='currentColor' />
+      <path d='M22.26 3.86H1.74' stroke='currentColor' />
     </svg>
   )
 }

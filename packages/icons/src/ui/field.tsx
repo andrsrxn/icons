@@ -31,15 +31,15 @@ export const IconField: Icon = ({
         width='12.42'
         height='20.61'
         rx='3'
-        transform='scale(1 -1)rotate(90 20 1.8)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         fill='currentColor'
       />
-      <path d='M5.45 13.93H12' stroke='currentColor' />
+      <path d='M5.95 13.93h6.55' stroke='currentColor' />
       <rect
         width='12.42'
         height='20.61'
         rx='3'
-        transform='scale(1 -1)rotate(90 20 1.8)'
+        transform='matrix(0 -1 -1 0 22.3 18.21)'
         stroke='currentColor'
       />
     </svg>

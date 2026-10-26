@@ -47,10 +47,10 @@ export const IconSparkleScan: Icon = ({
         d='M13.54 9.77 11.75 6.4l-1.8 3.37-3.45 1.9 3.45 1.78 1.8 3.94 1.8-3.94 3.74-1.95z'
         fill='currentColor'
       />
-      <path d='M5.68 12C8.73 12 12 8.7 12 5.68' stroke='currentColor' />
-      <path d='M18.32 12C15.28 12 12 8.72 12 5.68' stroke='currentColor' />
-      <path d='M5.68 12C8.71 12 12 15.34 12 18.32' stroke='currentColor' />
-      <path d='M18.32 12c-3 0-6.32 3.3-6.32 6.32' stroke='currentColor' />
+      <path d='M12 5.68C12 8.71 8.73 12 5.68 12' stroke='currentColor' />
+      <path d='M12 5.68C12 8.72 15.28 12 18.32 12' stroke='currentColor' />
+      <path d='M12 18.32C12 15.34 8.71 12 5.68 12' stroke='currentColor' />
+      <path d='M12 18.32C12 15.3 15.32 12 18.32 12' stroke='currentColor' />
     </svg>
   )
 }

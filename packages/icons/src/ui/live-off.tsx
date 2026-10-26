@@ -35,9 +35,9 @@ export const IconLiveOff: Icon = ({
       <path d='M17.99 15.44h3.42' stroke='currentColor' />
       <path d='M17.99 8.56h3.42' stroke='currentColor' />
       <path d='M17.99 12h2.55' stroke='currentColor' />
-      <path d='M22.32 19.42H1.68' stroke='currentColor' />
-      <path d='M22.32 4.57H1.68' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
+      <path d='M22.26 20.17H1.74' stroke='currentColor' />
+      <path d='M22.26 3.86H1.74' stroke='currentColor' />
     </svg>
   )
 }

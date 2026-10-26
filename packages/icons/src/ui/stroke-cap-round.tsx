@@ -28,14 +28,14 @@ export const IconStrokeCapRound: Icon = ({
       {...props}>
       <path
         opacity='.2'
+        d='M15.22 5.22a6.78 6.78 0 1 1 0 13.56H1.44l-.02-.02V5.24l.02-.02zm-.52 9.54a2.76 2.76 0 1 1 0-5.52 2.76 2.76 0 0 1 0 5.52'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M16.3 6.32a5.68 5.68 0 1 1 0 11.36H1.72l-.02-.02V6.34l.02-.02zm-.43 7.99a2.3 2.3 0 1 1 0-4.62 2.3 2.3 0 0 1 0 4.62'
         fill='currentColor'
       />
-      <path d='M1.7 12h11.86' stroke='currentColor' />
-      <path d='M18.18 12a2.3 2.3 0 0 1-2.3 2.3 2.3 2.3 0 1 1 2.3-2.3' stroke='currentColor' />
-      <path d='M1.7 17.68h14.92a5.68 5.68 0 0 0 0-11.36H1.7' stroke='currentColor' />
+      <path d='M1.65 12h10.3' stroke='currentColor' />
+      <path d='M17.46 12a2.76 2.76 0 1 0-5.52 0 2.76 2.76 0 0 0 5.52 0' stroke='currentColor' />
+      <path d='M1.65 18.78h13.94a6.78 6.78 0 1 0 0-13.56H1.65' stroke='currentColor' />
     </svg>
   )
 }

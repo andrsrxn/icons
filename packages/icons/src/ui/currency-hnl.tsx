@@ -26,8 +26,10 @@ export const IconCurrencyHnl: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M7.27 3.34v17.58' stroke='currentColor' />
-      <path d='M7.27 20.92h10.47' stroke='currentColor' />
+      <path
+        d='M7.27 3.34v13.58c0 1.88 0 2.83.59 3.41.58.59 1.53.59 3.41.59h6.47'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

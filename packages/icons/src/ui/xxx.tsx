@@ -26,14 +26,14 @@ export const IconXxx: Icon = ({
       focusable={isLabelled ? undefined : false}
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
       <path d='m17.17 15.49 4.84-6.98' stroke='currentColor' />
       <path d='m9.58 15.49 4.84-6.98' stroke='currentColor' />
       <path d='M2 15.49 6.82 8.5' stroke='currentColor' />
       <path d='M22 15.49 17.18 8.5' stroke='currentColor' />
       <path d='M14.42 15.49 9.58 8.5' stroke='currentColor' />
       <path d='M6.83 15.49 1.99 8.5' stroke='currentColor' />
+      <path d='M22.26 20.17H1.74' stroke='currentColor' />
+      <path d='M22.26 3.86H1.74' stroke='currentColor' />
     </svg>
   )
 }

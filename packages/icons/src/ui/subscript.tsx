@@ -27,11 +27,11 @@ export const IconSubscript: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M16.98 13.38c.47-.5.92-.9 1.87-.9 1.7 0 1.97 1.77 1.12 2.65-.47.5-1.5 1.23-2.34 1.94-.44.38-.66.57-.54.9.12.32.44.32 1.08.32h2.27'
+        d='M17.59 14.47c.5-.54.97-.96 2-.96 1.8 0 2.1 1.88 1.19 2.82-.53.55-1.68 1.37-2.58 2.14-.45.39-.67.58-.55.9s.44.33 1.09.33h2.54'
         stroke='currentColor'
       />
-      <path d='M3.56 16.34 13.95 5.95' stroke='currentColor' />
-      <path d='M13.95 16.35 3.55 5.96' stroke='currentColor' />
+      <path d='m3.28 4.3 11.07 11.08' stroke='currentColor' />
+      <path d='M14.35 4.3 3.28 15.37' stroke='currentColor' />
     </svg>
   )
 }

@@ -27,11 +27,11 @@ export const IconSuperscript: Icon = ({
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}>
       <path
-        d='M16.98 5.64c.47-.5.92-.89 1.87-.89 1.7 0 1.97 1.76 1.12 2.64-.47.5-1.5 1.24-2.34 1.95-.44.37-.66.56-.54.89s.44.33 1.08.33h2.27'
+        d='M17.62 5.25c.5-.54.98-.95 2-.95 1.8 0 2.1 1.88 1.2 2.82-.53.54-1.68 1.36-2.59 2.14-.45.39-.67.58-.55.9s.45.33 1.1.33h2.53'
         stroke='currentColor'
       />
-      <path d='M3.56 18.04 13.95 7.65' stroke='currentColor' />
-      <path d='M13.95 18.05 3.55 7.65' stroke='currentColor' />
+      <path d='M3.31 19.7 14.38 8.61' stroke='currentColor' />
+      <path d='M14.38 19.7 3.31 8.63' stroke='currentColor' />
     </svg>
   )
 }
