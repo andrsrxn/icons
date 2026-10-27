@@ -24,6 +24,8 @@ Smooth, RTL-aware, and optimized SVGs.
 
 `andrsrxn/icons` is an open-source duotone icon library designed on Figma and built for modern React applications. The set is lightweight, visually consistent, and accessible.
 
+> **Note**: It will be available on more frameworks soon.
+
 ### Why another icon library?
 
 The short answer: **there are no free duotone icon sets with the right style**.
