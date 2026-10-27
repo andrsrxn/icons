@@ -964,6 +964,16 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>seek-backward-sixty-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>seek-forward-sixty-rtl</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>list-todo-rtl</code>
             </p>
           </li>
