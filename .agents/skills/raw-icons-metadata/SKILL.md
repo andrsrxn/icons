@@ -80,7 +80,6 @@ export const ICON_CATEGORIES = [
 1. **Never repeat the icon name, direct sub-words, or suffix stems:**
    - E.g., for `plus.svg`: do **not** include `"plus"`.
    - E.g., for `plus-square.svg`: `"plus"` and `"square"` are in the file name, so do not add them to `tags`.
-   - E.g., for `plus-circle.svg`: `"circle"` is in the name, but shape descriptor `"round"` is valid.
    - E.g., for suffix `-off` (such as `cloud-off` or `agent-off`): do **not** add `"offline"`, because it repeats the `"off"` suffix and `"line"` adds no search value on its own.
    - E.g., for suffix `-lock`: do **not** add `"locked"`. For `dices`: do **not** add `"dice"`. For `files`: do **not** add `"file"`. For `clock-hour-*`: do **not** add `"hours"`.
 2. **Never include intra-tag morphological duplicates (Keep only the larger/more specific term):**
