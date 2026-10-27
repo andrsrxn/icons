@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconBlind: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-blind'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <circle opacity='.2' cx='8.88' cy='4.56' r='2.86' fill='currentColor' />
+      <circle cx='8.88' cy='4.56' r='2.86' stroke='currentColor' />
+      <path
+        d='M8.88 7.42v6.9c0 .36 0 .54.06.7.06.17.17.3.4.58l1.76 2.1c.13.16.2.24.25.33s.08.19.14.39l1.13 3.88'
+        stroke='currentColor'
+      />
+      <path d='m8.84 14.68-.61 3.1h0l-.11.44q-.06.13-.26.37l-2.8 3.71' stroke='currentColor' />
+      <path d='m13.35 12.83-4.46-4.5' stroke='currentColor' />
+      <path
+        d='M8.83 8.46 6.55 10c-.25.17-.38.26-.47.37-.1.12-.16.26-.27.54L4.7 13.63'
+        stroke='currentColor'
+      />
+      <path d='m15.68 15.49 5.13 5.3' stroke='currentColor' />
+    </svg>
+  )
+}

@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconChairRocking: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-chair-rocking'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M8.11 14.03c-.77 0-1.15 0-1.42-.22-.28-.22-.36-.59-.53-1.34L5.8 10.9c-.26-1.12-.38-1.69-.08-2.06s.87-.38 2.03-.38l9.37-.02v5.6z'
+        fill='currentColor'
+      />
+      <path d='M22.27 17.86s-3.73 2.6-10.27 2.6-10.27-2.6-10.27-2.6' stroke='currentColor' />
+      <path
+        d='m3.56 2.82 1.93 8.14c.36 1.47.53 2.21 1.08 2.64.54.43 1.3.43 2.82.43h9.4'
+        stroke='currentColor'
+      />
+      <path d='m8.03 14.16-2.2 5' stroke='currentColor' />
+      <path d='m15.66 14.16 2.34 5' stroke='currentColor' />
+      <path d='M9.3 8.43v5.6' stroke='currentColor' />
+      <path d='M13.1 8.43v5.6' stroke='currentColor' />
+      <path d='M16.92 8.43v5.6' stroke='currentColor' />
+      <path d='M5.18 8.43h13.55' stroke='currentColor' />
+    </svg>
+  )
+}

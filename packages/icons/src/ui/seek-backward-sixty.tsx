@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconSeekBackwardSixty: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-seek-backward-sixty'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M2.14 12a9.57 9.57 0 1 0 19.14 0 9.57 9.57 0 0 0-19.14 0'
+        fill='currentColor'
+      />
+      <path
+        d='M3.67 6.13a11.1 11.1 0 0 1 9.56-3.67 9.6 9.6 0 1 1-9.18 15.2'
+        stroke='currentColor'
+      />
+      <rect x='13.22' y='9.29' width='3.88' height='6.75' rx='1.94' stroke='currentColor' />
+      <path
+        d='M6.85 7.22H5.7c-1.41 0-2.12 0-2.56-.44S2.7 5.63 2.7 4.22V3.07'
+        stroke='currentColor'
+      />
+      <circle
+        cx='8.91'
+        cy='14.24'
+        r='1.8'
+        transform='rotate(90 8.91 14.24)'
+        stroke='currentColor'
+      />
+      <path d='M7.11 14.14c0-1.2 0-4.2 2.78-5' stroke='currentColor' />
+    </svg>
+  )
+}

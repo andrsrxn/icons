@@ -1,0 +1,40 @@
+import type { Icon } from './types'
+
+export const IconLabelImportant: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-label-important'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M3.33 9.92C2.45 7.48 2 6.26 2.6 5.41s1.9-.85 4.5-.85h7.76c1.69 0 2.53 0 3.22.4s1.12 1.12 1.97 2.58l.84 1.44c.86 1.48 1.28 2.21 1.28 3.02 0 .8-.42 1.55-1.28 3.02l-.84 1.44c-.85 1.46-1.27 2.19-1.97 2.58-.69.4-1.53.4-3.22.4H7.14c-2.62 0-3.93 0-4.52-.85-.6-.86-.14-2.09.77-4.54l.22-.59c.25-.68.38-1.02.38-1.38s-.13-.7-.37-1.38z'
+        fill='currentColor'
+      />
+      <path
+        d='M3.54 13.9c.5-.82.74-1.24.78-1.69v-.36c-.04-.45-.28-.87-.78-1.7-1.34-2.27-2.01-3.4-1.68-4.3a2 2 0 0 1 .32-.55c.6-.74 1.91-.74 4.54-.74h7.95c1.5 0 2.24 0 2.87.32.64.32 1.08.92 1.97 2.12l1.06 1.44c1.25 1.72 1.88 2.57 1.88 3.56 0 .98-.62 1.84-1.88 3.55L19.5 17c-.89 1.2-1.33 1.8-1.97 2.12s-1.38.32-2.87.32H6.68c-2.58 0-3.87 0-4.47-.72a2 2 0 0 1-.34-.61c-.32-.89.35-2 1.67-4.2'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

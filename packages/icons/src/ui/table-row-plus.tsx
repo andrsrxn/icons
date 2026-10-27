@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconTableRowPlus: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-table-row-plus'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M21.24 6.37c0 1.3 0 1.95-.29 2.43a2 2 0 0 1-.67.67c-.48.29-1.13.29-2.43.29H6.48c-1.3 0-1.95 0-2.43-.29a2 2 0 0 1-.67-.67c-.3-.48-.3-1.13-.3-2.43s0-1.94.3-2.42a2 2 0 0 1 .67-.67c.48-.3 1.13-.3 2.43-.3h11.37c1.3 0 1.95 0 2.43.3q.41.25.67.67c.3.48.3 1.13.3 2.42'
+        fill='currentColor'
+      />
+      <path d='M15.8 17.22H8.2' stroke='currentColor' />
+      <path d='M12 13.41v7.6' stroke='currentColor' />
+      <rect
+        width='18.48'
+        height='6.77'
+        rx='2'
+        transform='matrix(1 0 0 -1 2.76 9.76)'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

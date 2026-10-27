@@ -1,14 +1,15 @@
 {
   "categories": [
     "design",
-    "editor"
+    "editor",
+    "arrows"
   ],
   "tags": [
-    "weight",
-    "balance",
-    "measure",
-    "justice",
-    "law",
-    "fairness"
+    "up",
+    "border",
+    "resize",
+    "transform",
+    "zoom",
+    "expand"
   ]
 }

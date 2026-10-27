@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "development",
+    "business"
+  ],
+  "tags": [
+    "package",
+    "box",
+    "deploy",
+    "service",
+    "instance",
+    "runtime",
+    "pod",
+    "disabled",
+    "inactive",
+    "hidden"
+  ]
+}

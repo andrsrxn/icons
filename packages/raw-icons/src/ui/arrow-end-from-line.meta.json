@@ -7,8 +7,7 @@
     "exit",
     "pointer",
     "next",
-    "rtl",
-    "ltr"
+    "right"
   ],
   "rtl": true
 }

@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconAlt: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-alt'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M22.4 8.65c0-1.88 0-2.83-.6-3.41-.58-.59-1.52-.59-3.4-.59H5.6c-1.89 0-2.83 0-3.41.59-.6.58-.6 1.53-.6 3.41v6.7c0 1.88 0 2.83.6 3.41.58.59 1.52.59 3.4.59h12.8c1.88 0 2.82 0 3.4-.59.6-.58.6-1.53.6-3.41z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <rect x='1.61' y='4.65' width='20.78' height='14.69' rx='3' stroke='currentColor' />
+      <path
+        d='m4.38 14.97.73-2.57c.62-2.22.94-3.33 1.54-3.33s.92 1.11 1.54 3.34l.71 2.56'
+        stroke='currentColor'
+      />
+      <path d='M8.3 12.92H5.07' stroke='currentColor' />
+      <path d='M15.51 9.14h3.86' stroke='currentColor' />
+      <path d='M11.64 14.97h2.4' stroke='currentColor' />
+      <path d='M17.44 9.14v5.83' stroke='currentColor' />
+      <path d='M11.64 9.14v5.83' stroke='currentColor' />
+    </svg>
+  )
+}

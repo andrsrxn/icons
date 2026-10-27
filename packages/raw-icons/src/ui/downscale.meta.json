@@ -1,14 +1,15 @@
 {
   "categories": [
     "editor",
-    "tools"
+    "tools",
+    "arrows"
   ],
   "tags": [
     "shrink",
     "compress",
     "minimize",
-    "scale",
-    "reduce",
-    "size"
+    "contract",
+    "transform",
+    "resize"
   ]
 }

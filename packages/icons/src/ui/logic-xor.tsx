@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconLogicXor: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-logic-xor'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path
+        opacity='.2'
+        d='M11.4 19.08a5.93 5.93 0 0 0 5.94-5.93v-2.3a5.93 5.93 0 0 0-5.93-5.93c-.98 0-1.69.92-1.44 1.86l1.18 4.45c.1.38.16.57.16.77s-.05.39-.16.77l-1.18 4.45c-.25.94.46 1.86 1.44 1.86'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path d='M17.34 12h4.99' stroke='currentColor' />
+      <path d='M1.67 8.46h5.6' stroke='currentColor' />
+      <path d='M1.67 15.54h5.6' stroke='currentColor' />
+      <path
+        d='M11.2 12a15 15 0 0 1-1.48 6c-.25.55.15 1.23.76 1.23a6.86 6.86 0 0 0 6.86-6.86v-.73a6.86 6.86 0 0 0-6.86-6.87c-.61 0-1.01.68-.76 1.23a15 15 0 0 1 1.47 6'
+        stroke='currentColor'
+      />
+      <path d='M6.08 18.41s1.9-3.1 1.9-6.41-1.9-6.41-1.9-6.41' stroke='currentColor' />
+    </svg>
+  )
+}

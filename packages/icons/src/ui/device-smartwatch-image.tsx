@@ -1,0 +1,82 @@
+import type { Icon } from './types'
+
+export const IconDeviceSmartwatchImage: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-device-smartwatch-image'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <rect
+        opacity='.2'
+        x='7.23'
+        y='5.29'
+        width='3.52'
+        height='9.54'
+        rx='1.76'
+        transform='rotate(-90 7.23 5.29)'
+        fill='currentColor'
+      />
+      <rect
+        opacity='.2'
+        x='7.23'
+        y='22.2'
+        width='3.52'
+        height='9.54'
+        rx='1.76'
+        transform='rotate(-90 7.23 22.2)'
+        fill='currentColor'
+      />
+      <rect
+        x='4.83'
+        y='18.71'
+        width='13.42'
+        height='14.34'
+        rx='3'
+        transform='rotate(-90 4.83 18.71)'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.77 5.29c0-1.42 0-2.13-.34-2.64a2 2 0 0 0-.53-.54c-.51-.34-1.22-.34-2.65-.34h-2.5c-1.43 0-2.14 0-2.65.34a2 2 0 0 0-.53.54c-.34.5-.34 1.22-.34 2.64'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.77 18.68c0 1.42 0 2.13-.34 2.64a2 2 0 0 1-.53.53c-.51.35-1.22.35-2.65.35h-2.5c-1.43 0-2.14 0-2.65-.35a2 2 0 0 1-.53-.53c-.34-.51-.34-1.22-.34-2.64'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M19.17 10.9c0-2.45 0-3.68-.67-4.5a3 3 0 0 0-.43-.44c-.83-.67-2.06-.67-4.51-.67H9.88c-1.92 0-2.88 0-3.59.42a3 3 0 0 0-1.04 1.04c-.42.71-.42 1.67-.42 3.6 0 1.4 0 2.1.3 2.4a1 1 0 0 0 .68.27c.43 0 .92-.5 1.9-1.5l.26-.26c.59-.6.88-.89 1.23-.93l.27.01c.35.06.63.37 1.18.99l1.05 1.17c.56.63.85.94 1.22.99.38.04.73-.2 1.42-.69l.23-.16c.38-.27.57-.4.79-.45a1 1 0 0 1 .36 0c.21.04.4.17.79.44.95.65 1.42.98 1.82.91a1 1 0 0 0 .57-.3c.27-.28.27-.86.27-2.01z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.32 8.35a.44.44 0 1 1-.87 0 .44.44 0 0 1 .87 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m5.07 14.65 3.18-3.53c.54-.6.8-.9 1.18-.89.36.01.61.32 1.1.95l1.41 1.78c.43.55.65.82.99.85.33.02.86-.45 1.42-.92.45-.37.83-.66 1.12-.66.28 0 .52.17 1 .54l2.45 1.88'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

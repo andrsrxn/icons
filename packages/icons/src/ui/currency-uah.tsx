@@ -1,0 +1,37 @@
+import type { Icon } from './types'
+
+export const IconCurrencyUah: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel)
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeWidth={strokeWidth}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      data-slot='icon-ui-currency-uah'
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={ariaLabel}
+      focusable={isLabelled ? undefined : false}
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}>
+      <path d='M3.95 9.22h16.1' stroke='currentColor' />
+      <path d='M3.95 14.78h16.1' stroke='currentColor' />
+      <path
+        d='M6.4 5.27c.5-2 2.84-3.55 5.6-3.55 2.77 0 6.15 1.78 5.8 5.09-.76 6.9-10.36 3.56-11.58 9.77-.66 3.4 2.96 5.7 5.79 5.7a6.1 6.1 0 0 0 5.78-3.6'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

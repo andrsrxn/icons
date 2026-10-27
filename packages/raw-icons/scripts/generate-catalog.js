@@ -132,7 +132,9 @@ function main() {
       // Strip categories from flags entries; neither output includes `group`
       const { c: _categories, ...flagsMeta } = meta
       const strippedMeta =
-        group === 'flags' ? { t: flagsMeta.tags } : { c: meta.categories, t: meta.tags }
+        group === 'flags'
+          ? { t: flagsMeta.tags }
+          : { c: meta.categories, t: meta.tags, rtl: meta.rtl }
 
       // 1. Light JSON Entry (no svg)
       catalog.push({ n: iconName, ...strippedMeta })
