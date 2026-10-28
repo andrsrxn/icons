@@ -6,7 +6,7 @@
   "exports": {
     "./base": "./src/base.json",
     "./nextjs": "./src/nextjs.json",
-    "./react": "./src/nextjs.json"
+    "./react": "./src/react.json"
   },
   "peerDependencies": {
     "typescript": "^7"
