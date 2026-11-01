@@ -23,6 +23,7 @@ import {
   IconRocket,
   IconSettings,
   IconStar,
+  IconStarFilled,
   IconTrafficCone,
   IconTrophy,
   IconUsers,
@@ -108,8 +109,10 @@ export const HeroSection = () => {
               />
             }
             variant='outline'
-            className='dark dark:bg-white dark:text-black dark:hover:bg-white/80 dark:hover:text-black/80'>
-            <IconStar className='text-amber-300 dark:text-amber-500' /> Star on Github
+            className='dark group [a]:hover:text-white dark:bg-white dark:hover:bg-white dark:[a]:hover:text-black dark:[a]:text-black'>
+            <IconStar className='group-hover:hidden text-amber-300 dark:text-amber-500' />
+            <IconStarFilled className='group-hover:inline-block hidden text-amber-300 dark:text-amber-500' />{' '}
+            Star on Github
           </Badge>
         </div>
         <div
