@@ -1,29 +1,24 @@
 'use client'
 
-import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import type { IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import { memo } from 'react'
 import { Button } from '@/components/ui/button'
 import { ICON_LOOKUP } from '@/lib/constants/icon-lookup'
-import { useIconCatalog } from '@/lib/hooks/use-icon-catalog'
 import { getIconComponentName, isUIIcon } from '@/lib/utils/icons'
 
 interface IconCardProps {
   icon: IconCatalogEntry
-  queryString?: string
+  onSelect?: (iconName: string, group: IconCatalogGroup) => void
 }
 
-export const IconCard = memo(function IconCard({ icon }: IconCardProps) {
-  const { setIconParam, setGroup } = useIconCatalog()
-
+export const IconCard = memo(function IconCard({ icon, onSelect }: IconCardProps) {
   const group = isUIIcon(icon) ? 'ui' : 'flags'
   const componentName = getIconComponentName(icon.n, group)
-  // open on #id
 
   const IconComponent = ICON_LOOKUP[componentName as keyof typeof ICON_LOOKUP]
 
   const handleOpen = () => {
-    setIconParam(icon.n)
-    setGroup(group)
+    onSelect?.(icon.n, group)
   }
 
   return (

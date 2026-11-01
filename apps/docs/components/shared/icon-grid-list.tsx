@@ -1,11 +1,12 @@
 'use client'
 
 import { IconHelp, IconInfo } from '@andrsrxn/icons'
-import type { IconCatalogEntry } from '@andrsrxn/raw-icons/types'
+import type { IconCatalogEntry, IconCatalogGroup } from '@andrsrxn/raw-icons/types'
 import { useSearchParams } from 'next/navigation'
 import { IconCard } from '@/components/shared/icon-card'
 import { Empty, EmptyDescription, EmptyHeader, EmptyMedia, EmptyTitle } from '@/components/ui/empty'
 import { COMPANY } from '@/lib/constants/company'
+import { useSelectIcon } from '@/lib/hooks/use-icon-catalog'
 import { cn } from '@/lib/utils'
 
 export interface IconGridListProps {
@@ -13,6 +14,7 @@ export interface IconGridListProps {
   emptyTitle?: string
   showCount?: boolean
   className?: string
+  onSelectIcon?: (name: string, group: IconCatalogGroup) => void
 }
 
 /**
@@ -26,9 +28,12 @@ export const IconGridList = ({
   emptyTitle = 'No result found',
   showCount = true,
   className,
+  onSelectIcon,
 }: IconGridListProps) => {
   const searchParams = useSearchParams()
   const queryString = searchParams.toString()
+  const defaultSelectIcon = useSelectIcon()
+  const handleSelect = onSelectIcon ?? defaultSelectIcon
 
   if (icons.length === 0) {
     return (
@@ -61,7 +66,7 @@ export const IconGridList = ({
         </div>
       ) : null}
       {icons.map(icon => (
-        <IconCard queryString={queryString} icon={icon} key={icon.n} />
+        <IconCard onSelect={handleSelect} icon={icon} key={icon.n} />
       ))}
     </div>
   )

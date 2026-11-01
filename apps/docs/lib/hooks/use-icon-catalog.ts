@@ -245,6 +245,25 @@ export const useIconCatalog = () => {
   }
 }
 
+export const useSelectIcon = () => {
+  const [, setIconParam] = useQueryState('icon', {
+    history: 'push',
+  })
+  const [, setGroupState] = useQueryState<'ui' | 'flags'>('group', {
+    defaultValue: 'ui',
+    history: 'push',
+    parse: (value: string) => (value === 'ui' || value === 'flags' ? value : 'ui'),
+  })
+
+  return useCallback(
+    (iconName: string, group: IconCatalogGroup) => {
+      setIconParam(iconName)
+      setGroupState(group)
+    },
+    [setIconParam, setGroupState]
+  )
+}
+
 export const useIcon = (
   iconName: string,
   group: IconCatalogGroup

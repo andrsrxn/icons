@@ -8,7 +8,6 @@ import {
   InputGroupButton,
   InputGroupInput,
 } from '@/components/ui/input-group'
-import { useIconCatalog } from '@/lib/hooks/use-icon-catalog'
 
 interface InputIconSearchProps {
   value: string
@@ -17,11 +16,9 @@ interface InputIconSearchProps {
 }
 
 export const InputIconSearch = ({ value, onChange, containerRef }: InputIconSearchProps) => {
-  const { query } = useIconCatalog()
-
   // biome-ignore lint/correctness/useExhaustiveDependencies: only on mount
   useEffect(() => {
-    if (query && containerRef.current) {
+    if (value && containerRef.current) {
       containerRef.current?.scrollIntoView({
         behavior: 'smooth',
         block: 'start',
@@ -36,7 +33,7 @@ export const InputIconSearch = ({ value, onChange, containerRef }: InputIconSear
       </InputGroupAddon>
       <InputGroupInput
         aria-label='Search icon'
-        placeholder='Search icon...'
+        placeholder='Dashboard, home, user, settings...'
         value={value}
         // biome-ignore lint/performance/noJsxPropsBind: unnecessary
         onChange={e => onChange(e.target.value)}

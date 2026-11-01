@@ -1,6 +1,7 @@
 'use client'
 
-import { useMemo, useRef } from 'react'
+import type { IconCatalogGroup } from '@andrsrxn/raw-icons/types'
+import { useCallback, useMemo, useRef } from 'react'
 import { ButtonRandomIcon } from '@/components/shared/button-random-icon'
 import { IconGridList } from '@/components/shared/icon-grid-list'
 import { IconGridPagination } from '@/components/shared/icon-grid-pagination'
@@ -27,7 +28,16 @@ export const IconGrid = () => {
     totalPages,
     pagesToShow,
     catalog,
+    setIconParam,
   } = useIconCatalog()
+
+  const handleSelectIcon = useCallback(
+    (name: string, iconGroup: IconCatalogGroup) => {
+      setIconParam(name)
+      setGroup(iconGroup)
+    },
+    [setIconParam, setGroup]
+  )
 
   const UIIconsCount = useMemo(() => catalog.filter(icon => isUIIcon(icon)).length, [catalog])
   const flagsIconsCount = useMemo(() => catalog.filter(icon => !isUIIcon(icon)).length, [catalog])
@@ -63,13 +73,18 @@ export const IconGrid = () => {
               className='lg:col-span-4 xl:col-span-6'
               icons={pageItems}
               emptyTitle='No Icons Found'
+              onSelectIcon={handleSelectIcon}
             />
           </div>
         </TabsContent>
 
         <TabsContent value='flags'>
           <div className='grid gap-8 max-w-6xl mx-auto'>
-            <IconGridList icons={pageItems} emptyTitle='No Flags Found' />
+            <IconGridList
+              icons={pageItems}
+              emptyTitle='No Flags Found'
+              onSelectIcon={handleSelectIcon}
+            />
           </div>
         </TabsContent>
       </Tabs>
