@@ -8,6 +8,6 @@
     "source.fixAll.biome": "explicit"
   },
   "files.insertFinalNewline": true,
-  "files.eol": "\r\n",
+  "files.eol": "\n",
   "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
