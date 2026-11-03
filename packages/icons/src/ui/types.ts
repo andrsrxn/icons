@@ -1,6 +1,6 @@
 import type { ComponentProps, JSX } from 'react'
 
-/** SVG props with optional `size` and `title` prop */
+/** SVG props with optional `size` prop */
 export interface IconProps extends Omit<
   ComponentProps<'svg'>,
   'role' | 'aria-hidden' | 'focusable' | 'aria-labelledby'
