@@ -16,16 +16,16 @@ export const IconPepper: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pepper'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m7.9 21.98 7-4q.28-.16.38-.25c.08-.08.14-.17.27-.36l3.63-5.26c.44-.63.66-.95.63-1.3s-.29-.64-.82-1.2l-.03-.03c-.32-.35-.48-.52-.7-.6-.2-.08-.44-.07-.91-.03l-.9.07c-.56.04-.84.06-1.09-.06-.24-.11-.4-.35-.72-.82l-.41-.62-.12-.17-.1-.11-.17-.12c-.52-.37-.78-.56-1.03-.59a1 1 0 0 0-.74.2c-.2.17-.32.46-.57 1.05L9.06 13.5q-.1.26-.18.36c-.05.08-.13.15-.27.3l-6.1 5.87.8 2.3z'

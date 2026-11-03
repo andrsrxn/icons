@@ -16,16 +16,16 @@ export const IconClever: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-clever'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.87 6.2c-.3 1.14-1.5 2.16-2.69 3.08 1.36-.54 2.8-1.04 3.92-.74 1.93.51 2.9 2.46 2.1 3.85a3.2 3.2 0 0 1-2.5 1.45c.27.5.64 1.78 0 2.88-.8 1.39-2.98 1.52-4.38.1-.84-.83-1.12-2.36-1.33-3.84-.21 1.48-.5 3.01-1.33 3.85-1.4 1.4-3.58 1.28-4.38-.1a3.2 3.2 0 0 1 0-2.9 3.2 3.2 0 0 1-2.5-1.44c-.8-1.39.17-3.34 2.1-3.85 1.23-.33 2.84.3 4.32.9C9.96 8.47 8.63 7.4 8.3 6.2c-.5-1.93.7-3.75 2.28-3.75 1.28 0 2.2.95 2.5 1.43a3.2 3.2 0 0 1 2.5-1.43c1.6 0 2.8 1.82 2.3 3.74'

@@ -16,16 +16,16 @@ export const IconCalendarStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-calendar-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.93 14.95c.39-.76.58-1.14.89-1.14.3 0 .5.38.89 1.14l.38.74q.14.33.26.4c.1.08.22.1.47.14l.82.13c.85.13 1.27.2 1.37.5.09.28-.21.59-.82 1.2l-.59.58c-.17.18-.26.27-.3.38s-.02.24.02.48l.13.83c.14.84.2 1.27-.04 1.45s-.63-.02-1.4-.4l-.74-.38c-.22-.12-.33-.17-.45-.17s-.23.05-.46.17l-.74.37c-.76.4-1.14.59-1.4.4-.24-.17-.17-.6-.04-1.44l.13-.83c.04-.24.06-.37.02-.48s-.12-.2-.3-.38l-.59-.59c-.6-.6-.9-.9-.81-1.2.1-.29.52-.36 1.36-.5l.82-.12c.25-.04.37-.06.47-.13s.15-.18.27-.4z'

@@ -16,16 +16,16 @@ export const IconRepeatOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-repeat-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M20.6 5.82H7.4c-1.6 0-2.4 0-3.02.3a3 3 0 0 0-1.4 1.4c-.3.62-.3 1.42-.3 3.02'
         stroke='currentColor'

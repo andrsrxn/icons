@@ -16,16 +16,16 @@ export const IconMicVocal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mic-vocal'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m14.08 12.83-6.33 4.86c-.6.46-.9.69-1.23.69l-.14-.01c-.34-.05-.6-.31-1.14-.85s-.8-.8-.85-1.15v-.12c0-.34.22-.64.69-1.25l4.74-6.17c.68-.88 1.02-1.32 1.41-1.38a1 1 0 0 1 .54.07c.37.15.6.66 1.03 1.68l.02.06c.1.22.14.33.21.42a1 1 0 0 0 .24.24c.1.06.2.1.43.2.82.32 1.24.48 1.4.74a1 1 0 0 1 .13.86c-.1.3-.45.57-1.15 1.1'

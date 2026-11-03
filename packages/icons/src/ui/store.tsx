@@ -16,16 +16,16 @@ export const IconStore: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-store'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.04 13.14c0-1 .93-1.76 1.92-1.55.44.1.9 0 1.26-.26l.51-.37a5 5 0 0 1 1.07-.66 2 2 0 0 1 1.13-.04c.3.07.57.24 1.12.57l.22.14c.7.42 1.04.63 1.42.7a2 2 0 0 0 .63 0c.38-.06.73-.26 1.43-.67l.42-.24c.51-.3.77-.44 1.03-.51a2 2 0 0 1 1.21.07c.26.1.5.27.97.62l.55.4c.34.25.77.34 1.2.25.9-.2 1.78.49 1.78 1.43v5.34c0 1.04 0 1.55-.18 1.95a2 2 0 0 1-.97.98c-.4.18-.92.18-1.95.18h-.12c-.92 0-1.38 0-1.75-.15a2 2 0 0 1-1.1-1.1c-.14-.36-.14-.82-.14-1.74v-.3c0-.64 0-.96-.07-1.22a2 2 0 0 0-1.4-1.4A5 5 0 0 0 12 15.5a5 5 0 0 0-1.65.13 2 2 0 0 0-1.15 1.15c-.13.35-.13.79-.13 1.67 0 .94 0 1.41-.15 1.78a2 2 0 0 1-1.1 1.1c-.36.14-.82.14-1.75.14-.95 0-1.43 0-1.8-.16a2 2 0 0 1-1.07-1.06c-.16-.38-.16-.85-.16-1.8z'

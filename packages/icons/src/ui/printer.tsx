@@ -16,16 +16,16 @@ export const IconPrinter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-printer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.08 12.04c0-2.83 0-4.25.88-5.13.87-.87 2.29-.87 5.12-.87h7.84c2.83 0 4.25 0 5.12.87.88.88.88 2.3.88 5.13v4.03a2.7 2.7 0 0 1-2.7 2.7h-.12c-1.24 0-2.3-.87-2.53-2.09a2.6 2.6 0 0 0-2.53-2.1H9.95c-1.23 0-2.3.89-2.52 2.1a2.6 2.6 0 0 1-2.52 2.1h-.12a2.7 2.7 0 0 1-2.71-2.71z'

@@ -16,16 +16,16 @@ export const IconCurrencyPab: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-pab'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='m14.47 19.55 4.39-15.1' stroke='currentColor' />
       <path d='M2.8 19.55V4.45' stroke='currentColor' />
       <path d='M2.9 4.45h3.15a3.66 3.66 0 1 1 0 7.33H2.9' stroke='currentColor' />

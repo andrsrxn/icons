@@ -16,16 +16,16 @@ export const IconResend: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-resend'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m14.07 4.63.03 3.45c-7.77 0-10.02 3.85-12.07 8.69-.18.44.3.86.72.63 6.64-3.64 7.86-2.55 11.35-2.55l-.03 3.22a1 1 0 0 0 1.7.71l5.93-5.88a2 2 0 0 0 .03-2.8l-5.94-6.17a1 1 0 0 0-1.72.7'

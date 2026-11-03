@@ -16,16 +16,16 @@ export const IconShoeSport: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shoe-sport'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m1.9 10.67 3.28-6.65a.5.5 0 0 1 .76-.17l2.5 2.02q.13.1.28.11l4.6.3a.5.5 0 0 1 .41.25L15.1 9.1q.04.08.1.13l7.2 6.72a.5.5 0 0 1 .05.68l-1.3 1.68a.5.5 0 0 1-.45.19l-7.5-.78-.2-.07-10.9-6.32a.5.5 0 0 1-.2-.66'

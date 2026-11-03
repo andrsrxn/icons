@@ -16,16 +16,16 @@ export const IconCurrencySolCircle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-sol-circle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.78 11.98a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0m15.1-5.43-1.9 3.7 2.18 3.2-1.76 3.63H6.74l2.23-3.63-1.9-3.2 1.9-3.7z'

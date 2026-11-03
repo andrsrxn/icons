@@ -16,16 +16,16 @@ export const IconCannabisOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cannabis-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.5 12.82c.27-.23.4-.35.5-.48a1 1 0 0 0 .11-.74c-.03-.15-.12-.3-.3-.61L3.72 7.42l-.07-.13a1 1 0 0 1 .39-1.31l.1-.07a1 1 0 0 1 1.13.05l1.67 1.1c1.22.8 1.82 1.21 2.33.98.5-.24.6-.96.77-2.4l.06-.58c.03-.2.04-.3.07-.4v-.02c.04-.1.1-.18.2-.36.74-1.22 1.1-1.83 1.64-1.86h.1c.54.03.9.64 1.62 1.85.1.18.16.27.19.37v.02c.04.1.05.2.07.41l.03.3c.16 1.59.24 2.38.75 2.62l.12.05c.54.17 1.14-.35 2.34-1.4l.03-.03c.17-.14.26-.22.36-.27l.1-.05c.1-.04.22-.06.45-.1l.27-.04c.78-.12 1.17-.18 1.45-.05a1 1 0 0 1 .51.56c.1.28.02.66-.16 1.44q-.04.18-.07.25l-.07.16-.15.2-1.62 2.1c-.23.3-.35.45-.4.6a1 1 0 0 0 .07.82c.08.14.22.27.5.53.5.45.76.68.85.9a1 1 0 0 1-.25 1.1c-.17.16-.5.25-1.15.45l-.54.16c-.23.07-.35.1-.45.16a1 1 0 0 0-.48.65c-.03.1-.03.23-.03.48 0 .52 0 .78-.06.96a1 1 0 0 1-1.1.63c-.18-.03-.4-.16-.86-.43l-1.4-.81c-.5-.3-.75-.44-1.02-.44s-.52.16-1.02.45l-1.58.95c-.35.22-.52.32-.65.36a1 1 0 0 1-1.25-.77c-.03-.13-.01-.34.02-.75q.02-.25.01-.35a1 1 0 0 0-.52-.8l-.33-.12-.71-.24c-.65-.23-.98-.34-1.14-.51a1 1 0 0 1-.21-1.07c.09-.23.35-.45.87-.9'

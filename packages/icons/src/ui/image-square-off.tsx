@@ -16,16 +16,16 @@ export const IconImageSquareOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-image-square-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.37 8.67c0-2.83 0-4.25-.88-5.13s-2.3-.87-5.12-.87H8.63c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v1.87c0 2.58 0 3.87.7 4.09s1.44-.83 2.93-2.94l.54-.76c.77-1.07 1.15-1.61 1.67-1.6.53 0 .9.55 1.63 1.65l1.75 2.64c.61.92.92 1.39 1.38 1.44s.87-.33 1.67-1.1l.46-.45c.63-.6.94-.9 1.32-.9h.1c.37.02.68.32 1.29.93 1.35 1.34 2.03 2.02 2.62 1.82l.13-.05c.55-.28.55-1.24.55-3.15z'

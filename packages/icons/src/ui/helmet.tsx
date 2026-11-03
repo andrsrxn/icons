@@ -16,16 +16,16 @@ export const IconHelmet: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-helmet'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.03 13.52c0 2.8 2.4 5.37 3.96 7.31h13.97c.86-.95 1.22-3.29 1.7-4.5l-3.43-.23-5.87-2L10 10.34l1.7-1.97h8.9c-1.84-3.29-4.6-5.5-8.63-5.5-5.94 0-9.95 4.7-9.95 10.65'

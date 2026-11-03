@@ -16,16 +16,16 @@ export const IconChessRook: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chess-rook'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.77 4.25c1.33 0 2 0 2.29.44.3.43.06 1.05-.43 2.29l-.6 1.52c-.09.25-.14.37-.15.5s0 .26.04.53L17 16.7c.16 1.07.24 1.6-.06 1.95s-.84.35-1.92.35H9.17c-1.05 0-1.58 0-1.88-.34s-.23-.86-.1-1.9l.88-7.28c.03-.24.04-.36.03-.48a2 2 0 0 0-.14-.46l-.6-1.6c-.45-1.22-.68-1.83-.38-2.26s.95-.43 2.26-.43z'

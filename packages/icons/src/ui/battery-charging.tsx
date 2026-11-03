@@ -16,16 +16,16 @@ export const IconBatteryCharging: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-battery-charging'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.74 12c0-2.83 0-4.24.88-5.12S4.92 6 7.74 6h2.92l-3.32 4.85c-.57.83-.2 1.97.75 2.3.6.23 1.02.8 1.02 1.45V18H7.74c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12'

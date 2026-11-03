@@ -16,16 +16,16 @@ export const IconWhisk: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-whisk'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M22.24 1.74 3.56 20.42' stroke='currentColor' />
       <path
         d='M3.95 13.2c-2.34 2.35-2.71 5.78-.82 7.67 1.89 1.9 5.32 1.52 7.67-.82C13.15 17.7 14.78 9.3 14.78 9.3S6.3 10.85 3.95 13.2'

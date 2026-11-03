@@ -11,8 +11,9 @@ export const IconFlagCA: FlagIcon = ({
   cover,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel)
-  const isHidden = ariaHidden === true
+  const isLabelled = Boolean(ariaLabel?.trim())
+  const isHidden = ariaHidden === true || ariaHidden === 'true'
+  const isAccessible = isLabelled && !isHidden
 
   return (
     <svg
@@ -23,12 +24,12 @@ export const IconFlagCA: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='icon-flag-ca'
-      role={isHidden || !isLabelled ? undefined : 'img'}
-      aria-hidden={isHidden || !isLabelled ? true : undefined}
-      aria-label={isHidden ? undefined : ariaLabel}
-      focusable={isHidden || !isLabelled ? false : undefined}
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
+      role={isAccessible ? 'img' : undefined}
+      aria-hidden={!isAccessible}
+      aria-label={isAccessible ? ariaLabel : undefined}
+      focusable={false}
       {...props}>
       <defs>
         <defs>

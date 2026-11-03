@@ -16,16 +16,16 @@ export const IconIceCream: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ice-cream'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m4.88 22.66 9.7-5.9c.58-.36.87-.54 1-.79a1 1 0 0 0 .1-.62c-.05-.28-.27-.54-.71-1.05-.22-.25-.33-.38-.46-.46a1 1 0 0 0-.34-.13c-.15-.03-.31 0-.64.03l-1.17.14c-1.02.13-1.53.2-1.87-.1-.34-.29-.35-.8-.37-1.84l-.02-.83c0-.32 0-.47-.05-.61a1 1 0 0 0-.26-.42c-.11-.1-.25-.17-.53-.31a3 3 0 0 0-.83-.34 1 1 0 0 0-.66.2c-.17.11-.29.32-.53.73l-1.67 2.83-3.3 7.17z'

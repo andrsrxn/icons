@@ -16,16 +16,16 @@ export const IconHexagon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hexagon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.1 2.54c.93-.5 1.4-.76 1.9-.76s.97.26 1.9.76l2.72 1.47 2.62 1.61c.9.56 1.35.83 1.6 1.27.26.44.27.97.3 2.03l.09 3.08-.09 3.08c-.03 1.06-.04 1.59-.3 2.03-.25.44-.7.71-1.6 1.27l-2.62 1.61-2.72 1.47c-.93.5-1.4.76-1.9.76s-.97-.26-1.9-.76l-2.72-1.47-2.62-1.61c-.9-.56-1.35-.83-1.6-1.27-.26-.44-.27-.97-.3-2.03L2.77 12l.09-3.08c.03-1.06.04-1.59.3-2.03.25-.44.7-.71 1.6-1.27l2.62-1.61z'

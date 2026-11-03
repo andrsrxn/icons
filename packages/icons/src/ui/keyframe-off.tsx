@@ -16,16 +16,16 @@ export const IconKeyframeOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-keyframe-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.14 3.68C10.5 2.31 11.16 1.62 12 1.62s1.51.69 2.86 2.06l2.7 2.76 2.76 2.7c1.37 1.35 2.06 2.02 2.06 2.86s-.69 1.51-2.06 2.86l-2.76 2.7-2.7 2.76c-1.35 1.37-2.02 2.06-2.86 2.06s-1.51-.69-2.86-2.06l-2.7-2.76-2.76-2.7C2.31 13.5 1.62 12.84 1.62 12s.69-1.51 2.06-2.86l2.76-2.7z'

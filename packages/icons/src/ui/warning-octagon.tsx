@@ -16,16 +16,16 @@ export const IconWarningOctagon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-warning-octagon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.2 2.44c.88-.44 1.32-.66 1.8-.66s.92.22 1.8.66l2.96 1.5 2.74 1.72c.87.54 1.3.81 1.55 1.24s.27.93.32 1.95l.16 3.15-.16 3.15c-.05 1.02-.07 1.53-.32 1.95-.25.43-.68.7-1.55 1.24l-2.74 1.72-2.96 1.5c-.88.44-1.32.66-1.8.66s-.92-.22-1.8-.66l-2.96-1.5-2.74-1.72c-.87-.54-1.3-.81-1.55-1.24s-.27-.93-.32-1.95L2.47 12l.16-3.15c.05-1.02.07-1.53.32-1.95.25-.43.68-.7 1.55-1.24l2.74-1.72z'

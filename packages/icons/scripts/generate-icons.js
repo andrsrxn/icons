@@ -87,31 +87,26 @@ function hasAttr(svg, attrName) {
 
 function injectReactProps(svg, iconName, injectStrokeLinecapLinejoin, injectStrokeWidth) {
   return svg.replace(/<svg([^>]*)>/u, (_match, attrs) => {
-    const strokeProps = `${
-      injectStrokeWidth
-        ? `
-      strokeWidth={strokeWidth}`
-        : ''
-    }${
-      injectStrokeLinecapLinejoin
-        ? `
-      strokeLinecap='round'
-      strokeLinejoin='round'`
-        : ''
-    }`
-
-    const showLabel = 'isLabelled'
+    const strokeProps = [
+      // biome-ignore lint/security/noSecrets: false positive
+      injectStrokeLinecapLinejoin ? "strokeLinecap='round'" : '',
+      injectStrokeLinecapLinejoin ? "strokeLinejoin='round'" : '',
+      injectStrokeWidth ? 'strokeWidth={strokeWidth}' : '',
+    ]
+      .filter(Boolean)
+      .join('\n      ')
 
     return `<svg${attrs}
       width={size}
-      height={size}${strokeProps}
+      height={size}
+      ${strokeProps}
       data-slot='${CLASSNAME}-${iconName}'
-      role={${showLabel} ? 'img' : undefined}
-      aria-hidden={${showLabel} ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={${showLabel} ? undefined : false}
       className={\`${CLASSNAME} \${className ?? ''}\`.trim()}
-      {...props}>`
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>`
   })
 }
 

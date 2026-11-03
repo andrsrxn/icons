@@ -16,16 +16,16 @@ export const IconPerfumeMen: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-perfume-men'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.57 7.92c-1.87.02-2.81.03-3.4.61-.57.59-.57 1.52-.57 3.4v6.31c0 1.89 0 2.83.59 3.42.58.58 1.52.58 3.4.58h6.81c1.89 0 2.83 0 3.41-.58.6-.59.6-1.53.6-3.42v-6.33c0-1.87 0-2.8-.59-3.38-.57-.59-1.5-.6-3.37-.62l-2.17-.02zm6.05 7.18a2.62 2.62 0 1 1-5.24 0 2.62 2.62 0 0 1 5.24 0'

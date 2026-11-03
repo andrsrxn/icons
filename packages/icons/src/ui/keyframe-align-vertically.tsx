@@ -16,16 +16,16 @@ export const IconKeyframeAlignVertically: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-keyframe-align-vertically'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.96 14.15c-1.03-1-1.54-1.5-1.54-2.14 0-.63.51-1.13 1.54-2.14l.46-.45.45-.46c1-1.03 1.51-1.54 2.14-1.54s1.14.51 2.14 1.54l.45.46.46.45c1.03 1 1.54 1.51 1.54 2.14s-.51 1.14-1.54 2.14l-.46.45-.45.46c-1 1.03-1.5 1.54-2.14 1.54-.63 0-1.13-.51-2.14-1.54l-.45-.46z'

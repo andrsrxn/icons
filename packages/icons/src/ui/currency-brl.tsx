@@ -16,16 +16,16 @@ export const IconCurrencyBrl: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-brl'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M22.34 7.4c-.4-1.36-2.26-2.4-4.46-2.4s-4.6.9-4.6 3.64c0 5.38 8.8 1.2 9.2 6.48.19 2.52-2.36 3.89-4.6 3.89-2.25 0-3.88-1.06-4.6-2.46'
         stroke='currentColor'

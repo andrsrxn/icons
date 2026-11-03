@@ -16,16 +16,16 @@ export const IconEggFried: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-egg-fried'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.62 4.2a5 5 0 0 0 .9-.16l2.95-.77a5 5 0 0 1 4.33.88l1.36 1.06a5 5 0 0 1 1.85 3.01l.4 2.12a5 5 0 0 1 .1 1.15l-.15 3.32a5 5 0 0 1-.77 2.47l-.85 1.35a5 5 0 0 1-5.64 2.12l-1.85-.55a5 5 0 0 0-2-.17l-2.33.27a5 5 0 0 1-4.97-2.58L2.3 14.7a5 5 0 0 1-.18-4.38L3.4 7.4a5 5 0 0 1 4.21-2.98zm2.24 12.32a4.3 4.3 0 1 0 0-8.6 4.3 4.3 0 0 0 0 8.6'

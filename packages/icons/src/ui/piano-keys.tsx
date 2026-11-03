@@ -16,16 +16,16 @@ export const IconPianoKeys: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-piano-keys'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.91 13.22c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h8.17c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V8.35c0-.52 0-.78-.03-1a3 3 0 0 0-2.53-2.53c-.22-.03-.48-.03-1-.03h-.33a1 1 0 0 0-.85.85v5.74c0 .56 0 .83-.12 1.05a1 1 0 0 1-.44.44c-.21.1-.49.1-1.04.1-.56 0-.84 0-1.05-.1a1 1 0 0 1-.44-.44c-.1-.22-.1-.5-.1-1.05v-4.6c0-.93 0-1.4-.3-1.7s-.77-.3-1.7-.3h-.5c-.94 0-1.41 0-1.7.3s-.3.77-.3 1.7v4.62c0 .54 0 .8-.1 1.02a1 1 0 0 1-.46.46c-.2.1-.48.1-1.02.1s-.8 0-1.02-.1a1 1 0 0 1-.46-.46c-.1-.21-.1-.48-.1-1.02V5.68a1 1 0 0 0-.88-.88l-.26-.01c-.4 0-.6 0-.78.02a3 3 0 0 0-2.64 2.64c-.02.17-.02.37-.02.77z'

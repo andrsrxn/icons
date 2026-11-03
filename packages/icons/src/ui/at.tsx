@@ -16,16 +16,16 @@ export const IconAt: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-at'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle cx='11.62' cy='12' r='4.84' stroke='currentColor' />
       <path
         d='M15.74 21.4c-.98.48-2.17.87-3.74.87A10.27 10.27 0 1 1 22.27 12c0 2.5-.96 5.77-2.38 6.57s-3.4 0-3.4-2.15V7.14'

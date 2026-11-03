@@ -16,16 +16,16 @@ export const IconArrowUUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-arrow-u-up'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M7.58 4.6v9.9a5.71 5.71 0 0 0 11.42 0V7.17' stroke='currentColor' />
       <path
         d='m3 7.98 1.74-1.75c1.34-1.33 2-2 2.83-2s1.5.67 2.83 2l1.75 1.75'

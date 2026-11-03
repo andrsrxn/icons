@@ -16,16 +16,16 @@ export const IconLighthouse: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lighthouse'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' fill='currentColor' d='M9.1 13.29h5.81v4.61H9.1z' />
       <path opacity='.2' fill='currentColor' d='M9.28 2.3h5.45v5.38H9.28z' />
       <path d='M7.24 8.33h9.52' stroke='currentColor' />

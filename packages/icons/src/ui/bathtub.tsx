@@ -16,16 +16,16 @@ export const IconBathtub: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bathtub'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.79 19.08c2.8 0 4.21 0 5.26-.77 1.06-.76 1.49-2.1 2.35-4.77l.08-.24c.39-1.2.58-1.8.28-2.2-.3-.42-.93-.42-2.18-.42H4.33c-1.22 0-1.82 0-2.12.4s-.13.99.2 2.17c.82 2.81 1.22 4.22 2.29 5.02s2.52.8 5.41.8z'

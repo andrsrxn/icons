@@ -16,16 +16,16 @@ export const IconLogicBuffer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logic-buffer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.04 13.46c.73-.69 1.1-1.03 1.1-1.46s-.37-.77-1.1-1.46l-4.26-4C9.33 5.18 8.6 4.5 8 4.77S7.4 6.02 7.4 8v8c0 1.98 0 2.97.6 3.23s1.32-.41 2.77-1.77z'

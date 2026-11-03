@@ -16,16 +16,16 @@ export const IconTaxes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-taxes'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.15 20.43c1.36.87 2.04 1.31 2.56 1.03s.52-1.1.52-2.71V8.52c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H9.77c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v10.21c0 1.61 0 2.42.52 2.7l.02.02c.52.27 1.2-.17 2.54-1.06.47-.3.7-.46.97-.47h.02c.26-.02.51.11 1.01.37l2.22 1.15c.46.23.68.35.93.35.24 0 .47-.12.92-.36l2.15-1.13c.5-.26.76-.4 1.03-.39s.5.17.99.48zm-2.25-4.78a1.57 1.57 0 1 0 0-3.14 1.57 1.57 0 0 0 0 3.14m-4.23-7.37a1.57 1.57 0 1 1-3.14 0 1.57 1.57 0 0 1 3.14 0'

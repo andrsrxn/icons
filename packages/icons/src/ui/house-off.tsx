@@ -16,16 +16,16 @@ export const IconHouseOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-house-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.26 18.7c-.02.75-.04 1.12.17 1.4.2.28.56.38 1.28.59l1.18.34c1.15.32 1.72.49 2.12.2.4-.3.4-.89.43-2.08l.07-2.91c.02-.93.03-1.39.32-1.67s.75-.29 1.68-.29h1.52l1.43.03c.93.01 1.4.02 1.68.31.28.3.28.76.28 1.69v2.8c0 1.21 0 1.81.4 2.11s.97.14 2.13-.17l1.35-.37c.73-.2 1.1-.3 1.3-.58s.2-.66.17-1.42l-.3-8.95a2 2 0 0 0-.11-.86c-.1-.2-.27-.34-.61-.62L13.3 2.94c-.61-.5-.92-.76-1.28-.76s-.66.25-1.27.76L4.31 8.25c-.34.28-.5.43-.6.62s-.1.41-.12.85z'

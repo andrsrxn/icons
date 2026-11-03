@@ -16,16 +16,16 @@ export const IconLogs: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logs'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M14.01 5.76h7.29M14 12h7.29M14 18.24h7.29' stroke='currentColor' />
       <path d='M2.7 5.76h1.26M2.7 12h1.26M2.7 18.24h1.26' stroke='currentColor' />
       <path d='M7.54 5.76h2.9M7.54 12h2.9m-2.9 6.24h2.9' stroke='currentColor' />

@@ -16,16 +16,16 @@ export const IconSock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.8 20.86a4.84 4.84 0 0 0 6.84 0l1.65-1.56c.23-.22.35-.33.43-.44a2 2 0 0 0 .2-2.2c-.07-.12-.17-.25-.36-.5l-.26-.38a2 2 0 0 1-.13-1.75l.2-.41.81-1.54c.14-.25.2-.37.28-.48a2 2 0 0 1 1.17-.79c.13-.03.27-.04.55-.07.46-.04.7-.07.88-.13a2 2 0 0 0 1.38-1.51c.04-.2.04-.43.04-.89v-.09c0-.6 0-.9-.07-1.14a2 2 0 0 0-1.43-1.44c-.25-.06-.55-.06-1.15-.06h-3.97c-1.46 0-2.2 0-2.71.36a2 2 0 0 0-.48.49c-.37.51-.37 1.25-.37 2.71 0 .64 0 .96-.1 1.25l-.12.32c-.15.27-.37.5-.82.95L5.8 14.02a4.84 4.84 0 0 0 0 6.84'

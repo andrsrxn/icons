@@ -16,16 +16,16 @@ export const IconHouseSmile: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-house-smile'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.26 18.7c-.02.75-.04 1.12.17 1.4.2.28.56.38 1.28.59l3.4.97.28.07.28.01h6.75l.26-.07 3.62-1c.73-.2 1.1-.3 1.3-.57.2-.28.2-.66.17-1.42l-.3-8.95a2 2 0 0 0-.11-.86c-.1-.2-.27-.34-.61-.62L13.3 2.94c-.61-.5-.92-.76-1.28-.76s-.66.25-1.27.76L4.31 8.25c-.34.28-.5.43-.6.62s-.1.41-.12.85z'

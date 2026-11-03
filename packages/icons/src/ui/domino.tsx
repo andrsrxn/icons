@@ -16,16 +16,16 @@ export const IconDomino: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-domino'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.95 22.24c-1.88 0-2.82 0-3.41-.59s-.59-1.53-.59-3.41v-2.4c0-1.9 0-2.84.59-3.42s1.53-.59 3.41-.59h5.84c1.89 0 2.83 0 3.42.59.58.58.58 1.53.58 3.41v.4c0 2.83 0 4.25-.87 5.13-.88.88-2.3.88-5.13.88z'

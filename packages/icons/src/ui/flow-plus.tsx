@@ -16,16 +16,16 @@ export const IconFlowPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flow-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M4.54 8.18c-1.18 0-1.77 0-2.18-.31L2.1 7.6c-.32-.4-.32-1-.32-2.18s0-1.76.31-2.17q.12-.15.27-.26c.4-.32.98-.32 2.16-.33h.5l.36.02c.45.03.68.04.87.11.4.14.73.44.9.84.07.18.1.4.16.86v.93c0 1.18 0 1.78-.32 2.18q-.1.15-.26.26c-.4.32-1 .32-2.19.32'

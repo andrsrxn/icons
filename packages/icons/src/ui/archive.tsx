@@ -16,16 +16,16 @@ export const IconArchive: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-archive'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='4.57' y='8.28' width='14.87' height='12' rx='2' fill='currentColor' />
       <path
         d='M4.57 8.28v6c0 2.82 0 4.24.87 5.12.88.88 2.3.88 5.13.88h2.86c2.83 0 4.25 0 5.13-.88s.87-2.3.87-5.12v-6'

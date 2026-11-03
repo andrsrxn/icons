@@ -16,16 +16,16 @@ export const IconSignalHigh: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-signal-high'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.78 18.55c-.53-.7-.8-1.06-.76-1.44l.02-.12c.08-.38.44-.63 1.15-1.15l10.9-7.9c1.38-1 2.08-1.5 2.62-1.22.55.28.55 1.13.55 2.85v7.75c0 .94 0 1.42-.3 1.7-.29.3-.76.3-1.7.3H4.32c-.46 0-.68 0-.88-.09l-.06-.03c-.2-.1-.33-.29-.6-.65'

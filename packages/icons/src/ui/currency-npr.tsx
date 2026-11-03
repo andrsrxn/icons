@@ -16,16 +16,16 @@ export const IconCurrencyNpr: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-npr'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M21.37 13.17c-.24-.84-1.39-1.48-2.73-1.48s-2.81.56-2.81 2.23c0 3.29 5.38.73 5.62 3.96.12 1.55-1.44 2.38-2.81 2.38s-2.37-.65-2.81-1.5'
         stroke='currentColor'

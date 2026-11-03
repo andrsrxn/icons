@@ -16,16 +16,16 @@ export const IconMilk: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-milk'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='M8.15 5h9.02l2 3.78v12.8l-8.22.78-.48-13.58z' fill='currentColor' />
       <path
         d='M4.73 10.79c0-1.02 0-1.53.16-2 .17-.48.48-.88 1.1-1.69l1.74-2.2 1.76 2.2c.65.8.98 1.21 1.15 1.7.17.48.17 1 .17 2.04v9.5c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-.07c-1.89 0-2.83 0-3.41-.59-.59-.58-.59-1.52-.59-3.41z'

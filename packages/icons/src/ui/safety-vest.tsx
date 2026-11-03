@@ -16,16 +16,16 @@ export const IconSafetyVest: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-safety-vest'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.21 3.71 9.64 2.08a1 1 0 0 0-1.25-.15l-1.53.95a1 1 0 0 0-.48.85V6.6a1 1 0 0 1-.16.55l-2.28 3.5a1 1 0 0 0-.16.54v1a1 1 0 0 0 .9 1l2.53.26a1 1 0 0 1 .89.93l.15 2.32a1 1 0 0 1-.9 1.06l-2.67.26a1 1 0 0 0-.9 1v1.94a1 1 0 0 0 1 1h14.18a1 1 0 0 0 1-.97l.06-1.95a1 1 0 0 0-.9-1.02l-2.42-.26a1 1 0 0 1-.9-1v-2.03a1 1 0 0 1 .82-.98l2.82-.52a1 1 0 0 0 .82-.94l.06-1.35a1 1 0 0 0-.2-.63L17.8 7.16a1 1 0 0 1-.2-.6V3.79a1 1 0 0 0-.53-.89l-1.81-.95a1 1 0 0 0-1.21.22l-1.37 1.52a1 1 0 0 1-1.47.03'

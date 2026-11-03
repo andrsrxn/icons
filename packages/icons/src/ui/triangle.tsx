@@ -16,16 +16,16 @@ export const IconTriangle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-triangle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.46 6.82 3.62 15.8c-1.42 2.63-2.13 3.95-1.55 4.93s2.07.97 5.07.97h9.7c3 0 4.5 0 5.08-.98.59-.97-.13-2.3-1.56-4.93l-4.87-8.97c-1.55-2.86-2.33-4.3-3.52-4.29-1.2 0-1.97 1.44-3.51 4.3'

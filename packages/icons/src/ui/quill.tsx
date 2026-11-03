@@ -16,16 +16,16 @@ export const IconQuill: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-quill'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.22 6.62c.13-.12.19-.18.24-.26q.07-.09.16-.31l.38-.82c.61-1.33.92-1.99.6-2.46-.3-.46-1.04-.43-2.5-.37l-5.48.23a2 2 0 0 0-.65.07 2 2 0 0 0-.54.38L7.4 7.25a2 2 0 0 0-.41.4 2 2 0 0 0-.21.53l-1.76 5.45c-.1.3-.15.45-.15.61s.05.31.15.62l.43 1.33c.26.8.4 1.2.72 1.4.33.2.74.11 1.57-.05l6.65-1.3c.23-.05.35-.08.46-.13.1-.05.2-.12.4-.27l4.45-3.52c.5-.4.75-.6.85-.82a1 1 0 0 0-.05-.91c-.12-.21-.39-.38-.93-.72-.49-.3-.73-.46-.85-.65a1 1 0 0 1-.1-.86c.08-.22.28-.42.69-.83z'

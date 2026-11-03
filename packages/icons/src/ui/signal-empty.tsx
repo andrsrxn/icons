@@ -16,16 +16,16 @@ export const IconSignalEmpty: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-signal-empty'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m15.97 6.62-8.04 5.43c-4.42 2.99-6.63 4.48-6.2 5.9.43 1.41 3.1 1.41 8.44 1.41h8.04c1.88 0 2.82 0 3.41-.58.59-.59.59-1.53.59-3.42V9.93c0-3.31 0-4.97-1.07-5.53-1.06-.57-2.43.36-5.18 2.22'
         stroke='currentColor'

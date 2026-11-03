@@ -16,16 +16,16 @@ export const IconTextReadAloud: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-read-aloud'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M15.9 13.66s.8-1.55.23-3.69c-.52-1.93-2-2.96-2-2.96' stroke='currentColor' />
       <path d='M19.62 14.57s1.3-2.4.38-5.88c-.8-2.95-3.15-4.46-3.15-4.46' stroke='currentColor' />
       <path

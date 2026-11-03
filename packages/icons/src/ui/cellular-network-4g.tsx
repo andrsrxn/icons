@@ -16,16 +16,16 @@ export const IconCellularNetwork4g: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cellular-network-4g'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M8.26 22.32v-8.54c0-1.35 0-2.02-.35-2.13-.36-.1-.73.45-1.48 1.57l-2.62 3.92c-.46.68-.7 1.02-.55 1.29.14.26.55.26 1.38.26h5.33'
         stroke='currentColor'

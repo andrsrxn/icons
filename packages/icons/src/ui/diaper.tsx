@@ -16,16 +16,16 @@ export const IconDiaper: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-diaper'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.8 18.28c.27-.19.4-.28.5-.4.1-.14.15-.3.25-.6l.6-1.83c.54-1.63.81-2.44.38-2.88s-1.25-.17-2.89.35l-1.33.43c-.63.2-.95.3-1.14.55-.2.25-.21.58-.24 1.25l-.1 1.98c-.1 1.8-.14 2.69.4 2.99.56.3 1.29-.22 2.75-1.25z'

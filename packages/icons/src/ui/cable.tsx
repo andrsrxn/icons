@@ -16,16 +16,16 @@ export const IconCable: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cable'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.13 21.5c-.22.1-.33.14-.42.15a1 1 0 0 1-1.17-.8c-.02-.09-.02-.2-.02-.45v-3.49c0-.22 0-.33.02-.42a1 1 0 0 1 1.15-.81q.12.02.4.12c.23.08.34.12.44.17a2 2 0 0 1 1.11 1.58c.02.11.02.23.02.47v1.27c0 .25 0 .37-.02.48a2 2 0 0 1-1.06 1.55z'

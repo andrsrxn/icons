@@ -16,16 +16,16 @@ export const IconSos: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sos'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M6.84 11.85c-.5-.4-1.35-.98-2.58-.98s-2.57.63-2.57 1.94c0 2.82 5.15.57 5.15 3.44 0 1.34-1.32 2.06-2.58 2.06s-2.1-.36-2.68-1.14'
         stroke='currentColor'

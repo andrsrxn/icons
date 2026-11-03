@@ -16,16 +16,16 @@ export const IconBiohazard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-biohazard'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='11.91' cy='11.28' r='2.69' fill='currentColor' />
       <circle cx='11.91' cy='11.28' r='2.69' stroke='currentColor' />
       <path d='M10.45 5.68h2.91' stroke='currentColor' />

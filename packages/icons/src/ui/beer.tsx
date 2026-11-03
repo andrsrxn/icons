@@ -16,16 +16,16 @@ export const IconBeer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-beer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.27 22.35c2.83 0 4.25 0 5.13-.88s.87-2.29.87-5.12V9.82a2.74 2.74 0 0 0-5.3-.95L11.9 9q-.24.64-.73 1.1l-.41.4c-.31.3-.47.44-.61.5a1 1 0 0 1-1.27-.34c-.09-.13-.15-.34-.27-.75L8.2 8.39a1.8 1.8 0 0 0-3.52.49v7.47c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88z'

@@ -16,16 +16,16 @@ export const IconMoonStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-moon-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.44 21.6a9.96 9.96 0 0 1-9.96-9.95c0-5.5 3.57-8.3 6.12-8.93 0 0-1.56 5.29 2.43 10.2 4.79 4.8 10.48.75 10.7 1.68.22.94-3.8 7-9.3 7'

@@ -16,16 +16,16 @@ export const IconStrokeEndPointRound: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stroke-end-point-round'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.97 16.96c.65 0 .98 0 1.24-.17.25-.17.37-.48.61-1.1L22 12.75c.15-.37.22-.55.22-.74 0-.2-.07-.37-.22-.74L20.82 8.3c-.24-.61-.36-.92-.61-1.09-.26-.17-.59-.17-1.24-.17H1.7v9.92z'

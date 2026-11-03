@@ -16,16 +16,16 @@ export const IconChartLineDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chart-line-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m6.34 8.14 2.36 3.34c.69.97 1.03 1.45 1.52 1.48.49.02.87-.43 1.64-1.33l1.27-1.5c.79-.91 1.18-1.37 1.67-1.34.5.02.84.52 1.51 1.52l3.72 5.5'
         stroke='currentColor'

@@ -16,16 +16,16 @@ export const IconHandReceivingHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hand-receiving-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.25 1.84c-1.4 0-2.4 1.05-2.72 1.57a3.5 3.5 0 0 0-2.73-1.57c-1.74 0-3.05 1.99-2.48 4.08.56 2.1 3.88 3.8 5.2 5.3 1.33-1.5 4.65-3.2 5.22-5.3s-.75-4.08-2.49-4.08'

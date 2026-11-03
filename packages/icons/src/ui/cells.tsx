@@ -16,16 +16,16 @@ export const IconCells: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cells'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M21.61 10.78c.25.46.37.7.37.95s-.12.48-.37.94l-.65 1.22-.63 1.13c-.28.5-.41.75-.65.89-.23.13-.51.14-1.08.14l-1.19.01h-1.19c-.57-.01-.85-.02-1.08-.15-.23-.14-.37-.39-.65-.89l-.62-1.13-.66-1.22c-.25-.46-.37-.7-.37-.94 0-.25.12-.49.37-.95l.66-1.22.62-1.13c.28-.5.42-.75.65-.88.23-.14.51-.14 1.08-.15h2.38c.57 0 .85 0 1.08.15.24.13.37.38.65.88l.63 1.13z'
         stroke='currentColor'

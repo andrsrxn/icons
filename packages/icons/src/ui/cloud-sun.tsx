@@ -16,16 +16,16 @@ export const IconCloudSun: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cloud-sun'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M4.86 19.16c-.91 0-1.8-.4-2.4-1.07a3.7 3.7 0 0 1-.97-2.49 3.47 3.47 0 0 1 3.37-3.56c1.1 0 2.08.56 2.7 1.43'
         stroke='currentColor'

@@ -16,16 +16,16 @@ export const IconFileJsx: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-jsx'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.85 13.1V5.8c0-1.87 0-2.8.58-3.38s1.51-.6 3.38-.62l2.2-.02c1.29-.01 1.93-.02 2.41.26a2 2 0 0 1 .7.7c.3.47.3 1.12.3 2.4s0 1.92.27 2.4a2 2 0 0 0 .7.7c.47.27 1.11.27 2.39.27s1.92 0 2.4.29a2 2 0 0 1 .69.69c.28.47.28 1.11.28 2.4v1.22z'

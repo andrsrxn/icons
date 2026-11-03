@@ -16,16 +16,16 @@ export const IconAxe: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-axe'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m9.1 9.56 3.4 2.47-6.61 9.06c-.56.77-.84 1.15-1.25 1.21-.4.07-.79-.21-1.55-.77l-.16-.11c-.76-.56-1.14-.84-1.2-1.25-.07-.4.21-.79.77-1.55z'

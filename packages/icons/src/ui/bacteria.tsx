@@ -16,16 +16,16 @@ export const IconBacteria: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bacteria'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.9 6.2c-1.35-3.23-5.36-4.62-8.18-2.54a4.4 4.4 0 0 0-1.66 5.07 27 27 0 0 0 3.38 6.33 27 27 0 0 0 5.04 5.09 4.4 4.4 0 0 0 5.34-.09c2.82-2.08 2.69-6.32 0-8.56a16 16 0 0 1-2.4-2.35 15 15 0 0 1-1.53-2.95m2.85 9.76a1.9 1.9 0 1 1-3.77-.57 1.9 1.9 0 0 1 3.77.57'

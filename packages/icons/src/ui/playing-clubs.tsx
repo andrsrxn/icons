@@ -16,16 +16,16 @@ export const IconPlayingClubs: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-playing-clubs'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.74 5.91c0 3.62 7.19 5.3 3.56 9.7-1.76 2.14-4.13 1.86-5.95 1.39-.56-.15 1.18 3.11.7 4.61-.4 1.23-3.25.74-3.25.74s-3 .62-3.32-.6c-.4-1.51 1.68-4.93 1.05-4.78-2.41.56-5.67.94-6.4-2.13C1 10.96 7.1 8.98 7.1 5.9c0-2.38 2.16-4.3 4.82-4.3s4.82 1.92 4.82 4.3'

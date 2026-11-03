@@ -16,16 +16,16 @@ export const IconLogicXor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logic-xor'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.4 19.08a5.93 5.93 0 0 0 5.94-5.93v-2.3a5.93 5.93 0 0 0-5.93-5.93c-.98 0-1.69.92-1.44 1.86l1.18 4.45c.1.38.16.57.16.77s-.05.39-.16.77l-1.18 4.45c-.25.94.46 1.86 1.44 1.86'

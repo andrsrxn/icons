@@ -16,16 +16,16 @@ export const IconLampDesk: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lamp-desk'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m16.66 7.42 1.78-3.07c.48-.85.73-1.27.5-1.74-.22-.48-.6-.54-1.37-.67a5.6 5.6 0 0 0-4.19.98.5.5 0 0 1-.32 0q-.07-.01-.22-.11l-.61-.35-.13-.07a2 2 0 0 0-2.64.7l-.08.13-.07.13a2 2 0 0 0 .7 2.64l.13.08.61.35.21.13q.14.12.16.29v.28a5.6 5.6 0 0 0 1.25 3.83c.5.6.74.9 1.26.86s.77-.46 1.25-1.3z'

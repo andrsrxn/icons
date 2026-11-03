@@ -16,16 +16,16 @@ export const IconFlagRacing: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flag-racing'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.12 6.2v1.18c0 1.13 0 1.7.37 2 .36.3.91.19 2.02-.03l1.57-.31c.77-.16 1.15-.23 1.38-.51s.23-.67.23-1.46V5.8c0-1.18 0-1.78-.39-2.08s-.96-.15-2.1.15l-1.58.4c-.72.18-1.08.28-1.29.55s-.21.64-.21 1.39'

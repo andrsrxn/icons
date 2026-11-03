@@ -16,16 +16,16 @@ export const IconCar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-car'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.1 9.37H3.6c-.8 0-1.2 0-1.48.22l-.16.16c-.22.27-.22.67-.22 1.48v3.74a1.82 1.82 0 0 0 2.76 1.55l1.33-.8c.9-.54 2.05-.39 2.78.37.42.45 1.01.7 1.62.7h2.96a3 3 0 0 0 1.8-.7l.18-.15q.1-.11.17-.15a3 3 0 0 1 1.8-.7h1.15l.08.22a1.89 1.89 0 0 0 3.67-.73l-.14-2.9c-.03-.58-.04-.87-.18-1.09a1 1 0 0 0-.28-.3c-.22-.14-.5-.17-1.09-.22z'

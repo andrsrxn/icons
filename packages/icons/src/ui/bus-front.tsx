@@ -16,16 +16,16 @@ export const IconBusFront: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bus-front'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.39 14.53c0-.38 0-.57-.05-.72a1 1 0 0 0-.64-.64c-.15-.05-.34-.05-.72-.05H4.02c-.38 0-.57 0-.72.05a1 1 0 0 0-.64.64c-.05.15-.05.34-.05.72 0 1.13 0 1.7.16 2.15a3 3 0 0 0 1.9 1.91 8 8 0 0 0 2.16.15h10.34c1.13 0 1.7 0 2.15-.15a3 3 0 0 0 1.91-1.91c.16-.46.16-1.02.16-2.15'

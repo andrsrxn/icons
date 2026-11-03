@@ -16,16 +16,16 @@ export const IconTeaPod: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tea-pod'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M9.22 9.06c-1.2.56-1.8.85-2.16.83-.36 0-.76-.23-1.56-.67l-1.63-.9a1.45 1.45 0 0 0-1.9 2.08l2.24 3.32c.34.5.51.75.57 1 .07.26.03.65-.04 1.42q-.07.64-.05 1.26c.01.75.02 1.12.3 1.5.28.39.63.5 1.34.74a22.6 22.6 0 0 0 14.38-.12c.75-.27 1.12-.4 1.4-.85s.22-.86.13-1.7c-.55-5-2.63-8.75-8.83-8.75a10 10 0 0 0-4.19.84'
         stroke='currentColor'

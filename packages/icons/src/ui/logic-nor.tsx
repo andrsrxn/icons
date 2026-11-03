@@ -16,16 +16,16 @@ export const IconLogicNor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logic-nor'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.16 19.08h.06a6 6 0 0 0 5.97-5.97v-2.22a6 6 0 0 0-5.97-5.97h-.07c-.98 0-1.7.93-1.45 1.88v.02l1.2 4.4c.1.39.16.58.16.78s-.06.4-.16.78l-1.2 4.4v.02a1.5 1.5 0 0 0 1.45 1.88z'

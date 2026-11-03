@@ -16,16 +16,16 @@ export const IconPuzzle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-puzzle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m18.73 20.32.04-.19A1.74 1.74 0 0 0 17.08 18a2.3 2.3 0 0 1-2.31-2.32v-1.11a2.4 2.4 0 0 1 2.42-2.42c1.1 0 1.95-.98 1.8-2.07l-.12-.89a2.6 2.6 0 0 0-2.37-2.23l-.84-.06h0-.04a1 1 0 0 1-.9-.9v-.04h0l-.08-.97a3.04 3.04 0 0 0-6.07-.01L8.5 6.03l-.01.07a1 1 0 0 1-.8.86l-.07.02h-.06l-.58.11a3 3 0 0 0-2.23 2.56l-.03.59-.14 5.5c-.08 2.94-.12 4.41.78 5.32s2.38.89 5.33.83l6.25-.12c.86-.01 1.6-.61 1.8-1.45'

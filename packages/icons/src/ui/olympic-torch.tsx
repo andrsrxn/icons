@@ -16,16 +16,16 @@ export const IconOlympicTorch: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-olympic-torch'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.58 6.69a7.4 7.4 0 0 1 1.43-4.35c.2-.27.09-.62-.25-.62a6 6 0 0 0-2.54.61 9 9 0 0 0-2.88 2.54c-.18.24-.54.3-.71.05-.45-.66-.3-1.42-.2-1.93.05-.26-.15-.45-.4-.36a5.6 5.6 0 0 0-2.55 2.23c-1.78 2.72-.89 5.18.6 6.4 1.2.98 3.4 2.15 5.73.12 1.13-.97 1.81-2.36 1.77-4.7'

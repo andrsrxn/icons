@@ -16,16 +16,16 @@ export const IconLogicNot: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logic-not'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.43 13.46c.73-.69 1.1-1.03 1.1-1.46s-.37-.77-1.1-1.46l-4.26-4C7.73 5.18 7.01 4.5 6.4 4.77S5.8 6.02 5.8 8v8c0 1.98 0 2.97.6 3.23s1.33-.41 2.77-1.77z'

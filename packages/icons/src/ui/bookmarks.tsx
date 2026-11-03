@@ -16,16 +16,16 @@ export const IconBookmarks: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bookmarks'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.47 3.59a1.9 1.9 0 0 1 1.88-1.85h7.58c1.88 0 2.82 0 3.41.59.59.58.59 1.53.59 3.41v10.34c0 1.59 0 2.38-.52 2.67-.51.28-1.19-.14-2.54-.97l-1.76-1.1c-.93-.56-1.39-.85-1.64-1.3-.26-.46-.26-1-.26-2.1v-4.6c0-.45 0-.67-.09-.87s-.26-.35-.6-.65l-1.1-.94c-.28-.23-.42-.35-.57-.43a2 2 0 0 0-.67-.25c-.17-.03-.35-.03-.7-.03h-1.13c-1.06 0-1.9-.87-1.88-1.92'

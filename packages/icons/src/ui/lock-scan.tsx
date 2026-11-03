@@ -16,16 +16,16 @@ export const IconLockScan: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lock-scan'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.6 17.42c1.4 0 2.11 0 2.55-.44s.44-1.14.44-2.56v-.85c0-1.41 0-2.12-.44-2.56s-1.14-.44-2.56-.44h-3.18c-1.42 0-2.12 0-2.56.44s-.44 1.15-.44 2.56v.85c0 1.42 0 2.12.44 2.56s1.14.44 2.56.44z'

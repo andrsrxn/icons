@@ -16,16 +16,16 @@ export const IconFunctionOfX: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-function-of-x'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M1.86 16.8c-.15 1.04.11 2.1 1.12 2.43 1.33.44 2.33-.98 2.78-2.42 1.5-4.73 1.87-5.65 2.95-10.08.27-1.1.85-1.92 1.88-2.03s2.1.8 1.84 2.03'
         stroke='currentColor'

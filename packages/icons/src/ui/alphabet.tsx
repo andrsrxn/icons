@@ -16,16 +16,16 @@ export const IconAlphabet: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-alphabet'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M6.46 13.65H7.6a2 2 0 0 1 0 4.01h-.52' stroke='currentColor' />
       <path
         d='M6.64 13.65c-.57 0-.85 0-1.09.07-.44.15-.8.5-.94.95-.08.23-.08.52-.08 1.1v4.45c0 .58 0 .86.08 1.1.14.44.5.8.94.94.24.08.52.08 1.1.08'

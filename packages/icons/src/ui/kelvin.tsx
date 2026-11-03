@@ -16,16 +16,16 @@ export const IconKelvin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-kelvin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='5.75' cy='5.97' r='2.51' fill='currentColor' />
       <circle cx='5.75' cy='5.97' r='2.51' stroke='currentColor' />
       <path d='M12.37 3.61V20.4' stroke='currentColor' />

@@ -16,16 +16,16 @@ export const IconCarFrontClock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-car-front-clock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.77 13.31a7 7 0 0 0-.48-1.87 3 3 0 0 0-1.79-1.48c-.42-.13-.93-.13-1.93-.13H6.64c-.97 0-1.45 0-1.86.12A3 3 0 0 0 3 11.36c-.22.38-.32.85-.54 1.79-.32 1.42-.49 2.13-.4 2.7a3 3 0 0 0 1.85 2.31c.54.22 1.26.22 2.72.22h10.93c1.4 0 2.1 0 2.64-.2a3 3 0 0 0 1.85-2.24c.1-.56-.03-1.25-.29-2.63'

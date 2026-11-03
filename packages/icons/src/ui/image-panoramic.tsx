@@ -16,16 +16,16 @@ export const IconImagePanoramic: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-image-panoramic'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.3 6.25c0-1.06 0-1.6-.34-1.9s-.87-.22-1.93-.08l-7.76 1.07-.27.03-.28-.03-7.75-1.07c-1.06-.14-1.59-.22-1.93.08s-.34.84-.34 1.9v5.53c0 2.37 0 3.56.66 3.8.67.23 1.41-.7 2.9-2.55l.93-1.17c.63-.79.94-1.18 1.38-1.21s.8.3 1.54 1l2.98 2.75c.5.46.74.68 1.05.73.3.04.6-.11 1.2-.41l1.6-.8c.56-.29.84-.43 1.13-.4.3.03.54.23 1.02.61l.97.77c1.4 1.12 2.11 1.68 2.68 1.41.56-.27.56-1.17.56-2.97z'

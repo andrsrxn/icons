@@ -16,16 +16,16 @@ export const IconHistory: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-history'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='11.67' cy='11.59' r='9.55' fill='currentColor' />
       <path
         d='m15.47 15.8-2.4-1.6c-.88-.58-1.31-.87-1.55-1.32-.24-.44-.24-.96-.24-2v-3.5'

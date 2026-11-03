@@ -16,16 +16,16 @@ export const IconCookie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cookie'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.99 22.29a10.29 10.29 0 1 1 1.97-20.4c0 3.33 1.88 4.7 4.18 5.26.75 1.38.94 2.1 1.32 3.55.23.85 2.82.38 2.82 1.3 0 5.68-4.6 10.29-10.3 10.29m-5.23-10.9c.87.74 2.48.26 3.6-1.07s1.33-3 .46-3.73c-.86-.73-2.47-.25-3.6 1.08a4 4 0 0 0-.97 2.05c-.09.69.07 1.3.51 1.67m5.73 6.82a1.85 1.85 0 1 0 2.6-2.61 1.85 1.85 0 0 0-2.6 2.6'

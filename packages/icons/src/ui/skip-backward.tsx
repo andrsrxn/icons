@@ -16,16 +16,16 @@ export const IconSkipBackward: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-skip-backward'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.22 11.9c0-4.75 0-7.12-1.53-7.98s-3.55.38-7.6 2.85l-.17.11C8.17 9.18 6.3 10.32 6.3 12s1.87 2.83 5.62 5.12l.17.1c4.05 2.48 6.07 3.72 7.6 2.86s1.53-3.23 1.53-7.97z'

@@ -16,16 +16,16 @@ export const IconStamp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stamp'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.7 16.86c0-1.02 0-1.54.18-1.94a2 2 0 0 1 .97-.97c.4-.19.92-.19 1.95-.19h12.4c1.03 0 1.55 0 1.95.19a2 2 0 0 1 .97.97c.19.4.19.92.19 1.94 0 .52 0 .78-.1.97a1 1 0 0 1-.48.5c-.2.09-.46.09-.97.09H4.24c-.51 0-.77 0-.97-.1a1 1 0 0 1-.48-.49c-.1-.2-.1-.45-.1-.97'

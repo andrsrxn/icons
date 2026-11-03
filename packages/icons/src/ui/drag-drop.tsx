@@ -16,16 +16,16 @@ export const IconDragDrop: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-drag-drop'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M22.2 16.24v-2.4c0-2.82 0-4.24-.88-5.11s-2.3-.88-5.13-.88H13.8c-2.83 0-4.24 0-5.12.88-.88.87-.88 2.29-.88 5.12v2.4c0 2.82 0 4.23.88 5.11s2.3.88 5.12.88h2.4c2.82 0 4.24 0 5.12-.88s.87-2.29.87-5.12'
         stroke='currentColor'

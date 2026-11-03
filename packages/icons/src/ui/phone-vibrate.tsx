@@ -16,16 +16,16 @@ export const IconPhoneVibrate: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-phone-vibrate'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.77 14.2 9.7 13.15c-.78-.78-1.17-1.17-1.32-1.65a2 2 0 0 1-.08-.67c.02-.5.3-.97.86-1.92.43-.73.65-1.1.7-1.5a2 2 0 0 0 0-.53c-.05-.4-.26-.77-.69-1.5L7.8 3c-.47-.8-.7-1.2-1.1-1.32-.4-.1-.8.13-1.61.59l-1.14.64c-.46.26-.7.39-.93.68s-.3.47-.4.83c-.64 1.97-1.23 6.7 4.47 12.4s10.43 5.12 12.4 4.5c.36-.12.54-.17.84-.41.3-.25.43-.48.69-.95l.64-1.13c.45-.81.68-1.22.57-1.61-.1-.4-.5-.63-1.31-1.1l-2.4-1.4a4 4 0 0 0-1.48-.68 2 2 0 0 0-.57 0c-.39.06-.75.27-1.47.7-.93.56-1.4.84-1.9.87a2 2 0 0 1-.7-.09c-.47-.15-.85-.53-1.62-1.3'

@@ -16,16 +16,16 @@ export const IconMoneyBag: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-money-bag'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.97 22c3.05 0 4.57 0 5.64-.55A5 5 0 0 0 20.24 18c.24-1.17-.17-2.64-.98-5.58l-.18-.64c-.46-1.67-.69-2.5-1.12-3.16a5 5 0 0 0-2.65-2.02c-.75-.24-1.61-.24-3.34-.24-1.75 0-2.63 0-3.38.24a5 5 0 0 0-2.67 2.06c-.42.66-.65 1.5-1.1 3.2l-.16.65c-.77 2.91-1.16 4.37-.9 5.54a5 5 0 0 0 2.62 3.41c1.07.54 2.58.54 5.59.54'

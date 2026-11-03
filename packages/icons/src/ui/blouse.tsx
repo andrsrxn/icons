@@ -16,16 +16,16 @@ export const IconBlouse: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-blouse'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.48 5.5c-1.52 0-2.13-1.02-2.37-1.83-.16-.53-.6-.98-1.16-.98H7.39a1 1 0 0 0-.64.23L2.03 6.9a1 1 0 0 0-.33 1l.6 2.55a1 1 0 0 0 1.56.58l2.56-1.84a.5.5 0 0 1 .79.41v4.93a1 1 0 0 1-.05.31l-1.42 4.35a1 1 0 0 0 .83 1.3l5.32.62h.22l5.45-.62a1 1 0 0 0 .84-1.3l-1.37-4.33a1 1 0 0 1-.05-.3V9.62a.5.5 0 0 1 .8-.4l2.35 1.76a1 1 0 0 0 1.57-.57l.62-2.6a1 1 0 0 0-.25-.92l-3.72-3.88a1 1 0 0 0-.74-.31l-1.63.03c-.54.02-.98.47-1.14.99-.24.79-.85 1.77-2.36 1.77'

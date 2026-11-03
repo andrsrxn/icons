@@ -16,16 +16,16 @@ export const IconFireKindling: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-fire-kindling'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.17 6.1a6.3 6.3 0 0 1-1.41-3.56c-.03-.33-.32-.53-.58-.31-.4.34-.9.92-1.28 1.73a7 7 0 0 0-.53 3.16c0 .3-.24.58-.52.48-.57-.2-.87-.71-1.07-1.09-.13-.23-.4-.26-.53-.02-.29.53-.58 1.5-.44 2.8.3 2.78 2.23 3.92 3.88 3.92 1.32 0 3.42-.43 3.86-3.03.21-1.26-.09-2.55-1.38-4.08'

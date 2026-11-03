@@ -16,16 +16,16 @@ export const IconGraduationHat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-graduation-hat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m10.96 19.78-5.6-1.71a1 1 0 0 1-.71-1l.21-6a1 1 0 0 1 1.33-.9l4.77 1.68a3 3 0 0 0 2.02-.01l4.6-1.67a1 1 0 0 1 1.33.86l.4 5.23a1 1 0 0 1-.62 1L13 19.66a3 3 0 0 1-2.04.12'

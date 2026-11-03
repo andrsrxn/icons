@@ -16,16 +16,16 @@ export const IconLassoCursor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lasso-cursor'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m16.47 17.67-.35-2.14c-.29-1.7-.43-2.55.06-2.91.5-.37 1.27.02 2.8.79l1.95.97c.65.33.98.5 1.11.65a1 1 0 0 1-.18 1.47c-.16.11-.52.2-1.24.35-.27.06-.4.1-.52.14a2 2 0 0 0-.9.66c-.08.1-.15.22-.29.46h0c-.36.62-.54.94-.7 1.06a1 1 0 0 1-1.46-.27c-.1-.17-.16-.52-.28-1.23'
         stroke='currentColor'

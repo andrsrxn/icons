@@ -16,16 +16,16 @@ export const IconSpatula: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-spatula'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m9.68 8.06 6.38-6.34a1 1 0 0 1 1.4 0l5.62 5.6a1 1 0 0 1-.01 1.43l-6.51 6.33a1 1 0 0 1-.82.28l-2.5-.3a1 1 0 0 0-.81.28l-7.17 7a1 1 0 0 1-1.02.23l-.97-.33a1 1 0 0 1-.63-.65l-.28-.9a1 1 0 0 1 .23-.97l7.05-7.46a1 1 0 0 0 .26-.89l-.5-2.4a1 1 0 0 1 .28-.91'

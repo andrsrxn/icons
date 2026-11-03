@@ -16,16 +16,16 @@ export const IconLandPlot: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-land-plot'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.13 10.67c.43-.2.64-.31.87-.31s.44.1.87.3l4.77 2.3 1.83.85c1.7.79 2.54 1.18 2.54 1.82s-.85 1.03-2.54 1.81l-1.83.85-4.77 2.3c-.43.2-.64.3-.87.3s-.44-.1-.87-.3l-4.77-2.3-1.83-.85c-1.7-.78-2.54-1.17-2.54-1.81s.84-1.03 2.54-1.82l1.83-.84z'

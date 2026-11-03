@@ -16,16 +16,16 @@ export const IconGoldBars: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gold-bars'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.7 20.82c2.43 0 3.65 0 4.25-.8s.26-1.97-.41-4.31l-.1-.32c-.4-1.39-.6-2.09-1.13-2.49-.54-.4-1.26-.4-2.71-.4h-.21c-1.47 0-2.2 0-2.74.4-.53.42-.73 1.13-1.12 2.54l-.09.32c-.63 2.32-.95 3.48-.35 4.27s1.8.79 4.21.79z'

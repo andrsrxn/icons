@@ -16,16 +16,16 @@ export const IconOwl: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-owl'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.07 7.98C4 7.54 6.3 6.77 8.06 7.2c1.77.44 3.4 2.73 4 3.82.57-1.27 2.34-3.82 4.76-3.82s3.74.4 4.1.61a10.6 10.6 0 0 0-8.87-4.63c-3.83 0-7.17 1.93-8.98 4.8'

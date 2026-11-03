@@ -16,16 +16,16 @@ export const IconDam: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-dam'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.3 21.58c1.45 0 2.17 0 2.7-.2a3 3 0 0 0 1.88-2.41c.07-.57-.1-1.27-.46-2.67L7.44 4.54a2.73 2.73 0 0 0-5.38.67v12.13c0 1.16 0 1.74.16 2.2a3 3 0 0 0 1.88 1.89 8 8 0 0 0 2.2.15'

@@ -16,16 +16,16 @@ export const IconRouter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-router'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='1.76' y='13.1' width='20.48' height='7.66' rx='2' fill='currentColor' />
       <rect x='1.76' y='13.1' width='20.48' height='7.66' rx='3' stroke='currentColor' />
       <path d='m9.67 13.1-4.9-5.57' stroke='currentColor' />

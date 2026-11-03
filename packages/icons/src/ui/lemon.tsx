@@ -16,16 +16,16 @@ export const IconLemon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lemon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.4 3.58c.74.73.74 1.92 0 2.66a2.2 2.2 0 0 0-.38 2.36q.7 1.7.72 3.67a9.7 9.7 0 0 1-9.71 9.71 10 10 0 0 1-3.33-.67 2.1 2.1 0 0 0-2.22.41c-.74.74-1.94.74-2.67 0L2.52 20.4a2 2 0 0 1-.06-2.74 2.3 2.3 0 0 0 .36-2.3A9.71 9.71 0 0 1 14.8 2.96c.87.25 1.83.1 2.47-.53a2.13 2.13 0 0 1 3 0z'

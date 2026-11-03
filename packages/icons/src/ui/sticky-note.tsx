@@ -16,16 +16,16 @@ export const IconStickyNote: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sticky-note'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.7 2.68c-1.9 0-2.84 0-3.42.59-.59.58-.59 1.53-.59 3.41V17.7c0 1.88 0 2.81.58 3.4s1.52.59 3.39.6l3.31.03c1.73.02 2.6.02 3.17-.5.58-.5.67-1.37.84-3.09l.08-.75c.14-1.39.21-2.08.61-2.55a2 2 0 0 1 .4-.36c.51-.35 1.2-.35 2.6-.35 1.54 0 2.3 0 2.84-.4a2 2 0 0 0 .4-.4c.4-.54.4-1.3.4-2.84V6.7c0-1.9 0-2.84-.59-3.42-.58-.59-1.53-.59-3.41-.59z'

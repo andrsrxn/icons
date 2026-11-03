@@ -16,16 +16,16 @@ export const IconToilet: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-toilet'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.7 12.22c.88 0 1.6-.72 1.6-1.61v-3.6c0-2.08 0-3.11-.49-3.86a3 3 0 0 0-.87-.87c-.74-.49-1.78-.49-3.85-.49h-4.06c-2.08 0-3.11 0-3.86.49a3 3 0 0 0-.87.87c-.49.75-.49 1.78-.49 3.85v3.67a1.55 1.55 0 0 0 3.1.09l.13-2.21c.03-.47.05-.7.1-.92A3 3 0 0 1 9.2 5.89c.17-.14.38-.26.8-.5.45-.26.68-.39.9-.47a3 3 0 0 1 2.16.01c.22.1.45.23.9.5.4.23.59.35.76.49a3 3 0 0 1 1.02 1.61c.05.21.07.44.12.9l.22 2.33a1.6 1.6 0 0 0 1.6 1.46'

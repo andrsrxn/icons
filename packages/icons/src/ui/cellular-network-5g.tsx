@@ -16,16 +16,16 @@ export const IconCellularNetwork5g: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cellular-network-5g'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M7.63 7.53A7.3 7.3 0 0 1 12 6.08c1.94 0 3.56.66 4.36 1.45' stroke='currentColor' />
       <path
         d='M4.92 4.25a11.6 11.6 0 0 1 7.06-2.48c3.13 0 5.32 1.1 7.06 2.48'

@@ -16,16 +16,16 @@ export const IconStock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m1.76 16.35.93-4c.3-1.27.45-1.91.82-1.94s.6.58 1.09 1.8l.43 1.11c.34.86.51 1.3.83 1.32.32.01.54-.4.98-1.2l.16-.3c.45-.82.67-1.23.99-1.21s.49.46.82 1.33l.42 1.1c.52 1.35.78 2.03 1.16 2 .38-.04.5-.76.76-2.19l.65-3.66c.32-1.8.48-2.7.88-2.72s.63.87 1.07 2.65l.57 2.28c.26 1.03.39 1.55.72 1.6.34.04.6-.43 1.12-1.36l.65-1.15c.35-.62.52-.93.8-.95s.48.28.9.87l.4.58c.44.64.66.96.95.94s.45-.38.77-1.09l1.73-3.74'
         stroke='currentColor'

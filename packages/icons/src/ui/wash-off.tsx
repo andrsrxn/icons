@@ -16,16 +16,16 @@ export const IconWashOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wash-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m21.62 8.53-3.87.78c-.49.1-.73.15-.98.14a4 4 0 0 1-.96-.23L9.02 7.18a4 4 0 0 0-1.2-.26c-.3 0-.59.1-1.18.28L2.53 8.53l1.75 7.08c.36 1.46.54 2.19 1.08 2.61.54.43 1.3.43 2.8.43h7.7c1.47 0 2.2 0 2.75-.42.54-.4.73-1.12 1.1-2.55z'

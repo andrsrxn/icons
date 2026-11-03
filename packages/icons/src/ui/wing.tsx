@@ -16,16 +16,16 @@ export const IconWing: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wing'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m2.92 14.04 2.43-3.75.17-.17 14.33-8.1a.5.5 0 0 1 .75.46l-.24 4.8-.02.1-1.46 5.5-1.68 5.87a.5.5 0 0 1-.26.31l-7.29 3.62a.5.5 0 0 1-.47-.02l-4.25-2.48a.5.5 0 0 1-.22-.27l-1.85-5.44a.5.5 0 0 1 .06-.43'

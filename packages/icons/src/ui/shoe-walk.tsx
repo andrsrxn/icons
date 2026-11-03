@@ -16,16 +16,16 @@ export const IconShoeWalk: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shoe-walk'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m2.4 9.82 2.53-5.69a.5.5 0 0 1 .73-.21l2.81 1.83q.15.1.32.08l4.55-.43a.5.5 0 0 1 .5.3l1.03 2.4.11.17 6.72 6.47a.5.5 0 0 1-.35.86h-6.79l-.2-.04-11.7-5.08a.5.5 0 0 1-.26-.66'

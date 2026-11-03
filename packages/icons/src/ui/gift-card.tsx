@@ -16,16 +16,16 @@ export const IconGiftCard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gift-card'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.06 12.38c.94 0 1.41 0 1.7-.29.3-.3.3-.76.3-1.7v-3.8c0-.95 0-1.42-.3-1.72-.29-.29-.76-.29-1.7-.29H5.55c-1.8 0-2.69 0-3.26.53l-.11.11c-.54.58-.54 1.47-.54 3.26 0 1.8 0 2.69.54 3.26l.1.11c.58.53 1.48.53 3.27.53z'

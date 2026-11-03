@@ -16,16 +16,16 @@ export const IconMailLetterHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mail-letter-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.9 13.58c-.07-1.46-.1-2.19.36-2.5.47-.31 1.13-.01 2.46.6l4.06 1.84c.2.1.3.14.4.16s.21.02.43.02h5.24c.23 0 .34 0 .45-.02s.22-.08.42-.18l3.53-1.72c1.34-.65 2-.98 2.48-.67s.45 1.05.4 2.54l-.22 5.79c-.03.9-.05 1.36-.34 1.64s-.74.28-1.65.28H4.15c-.9 0-1.36 0-1.65-.27-.29-.28-.31-.73-.35-1.64z'

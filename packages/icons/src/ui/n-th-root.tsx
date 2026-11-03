@@ -16,16 +16,16 @@ export const IconNThRoot: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-n-th-root'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M2.62 12.3h1.9c.65 0 .98 0 1.23.17.26.17.38.47.63 1.08l1.8 4.48c.85 2.08 1.27 3.13 1.97 3.1.7-.01 1.06-1.08 1.78-3.2l4.3-12.6c.23-.66.34-.98.6-1.17s.6-.19 1.3-.19h3.25'
         stroke='currentColor'

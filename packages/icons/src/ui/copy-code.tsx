@@ -16,16 +16,16 @@ export const IconCopyCode: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-copy-code'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.24 7.92c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-5.45a3 3 0 0 0-2.86 2.9v.62a3 3 0 0 0 2.8 2.83h.31l.82.02c.87.02 1.3.03 1.67.13a3 3 0 0 1 2.02 1.9c.13.35.17.78.24 1.64l.13 1.42.03.27a3 3 0 0 0 3.12 2.61h.3a3 3 0 0 0 2.86-2.87z'

@@ -16,16 +16,16 @@ export const IconSave: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-save'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M4.71 20.95c-.93 0-1.4 0-1.69-.28l-.01-.02c-.29-.29-.29-.75-.29-1.69V4.9c0-.94 0-1.4.3-1.7.29-.3.77-.3 1.72-.3.77 0 1.15 0 1.42.22.28.22.36.59.54 1.33l.23.98c.17.74.26 1.11.53 1.33s.65.21 1.41.21h2.45c.84 0 1.26 0 1.54-.25.28-.24.34-.66.44-1.5l.3-2.4 4.05 2.82 2.95 2.6c.33.29.5.44.59.63.09.2.09.42.09.87V19c0 .89 0 1.33-.26 1.62l-.07.06c-.29.26-.73.26-1.61.26-.78 0-1.17 0-1.44-.22l-.07-.05c-.25-.24-.3-.63-.42-1.4l-.5-3.55c-.11-.77-.16-1.15-.42-1.4-.26-.23-.65-.26-1.43-.31l-3.06-.2-3.06.2c-.79.05-1.18.08-1.45.33-.26.25-.3.64-.4 1.43l-.4 3.42c-.1.83-.15 1.24-.43 1.5h-.01c-.28.25-.7.25-1.54.25'

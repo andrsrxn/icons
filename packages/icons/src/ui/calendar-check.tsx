@@ -16,16 +16,16 @@ export const IconCalendarCheck: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-calendar-check'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='2.98' y='3.43' width='18.01' height='5.26' rx='1' fill='currentColor' />
       <path
         d='m14.38 19.17.97 1.2c.72.87 1.08 1.31 1.56 1.31.47 0 .83-.44 1.55-1.32l3.8-4.69'

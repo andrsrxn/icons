@@ -16,16 +16,16 @@ export const IconLifeBuoy: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-life-buoy'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.98 15.83 5.27 18.6a1 1 0 0 1-1.56-.16l-1.7-2.68a1 1 0 0 1-.16-.46l-.37-4.6a1 1 0 0 1 .13-.58l2.38-4.21a1 1 0 0 1 1.51-.28l2.53 2.1a1 1 0 0 1 .3 1.1l-.98 2.83a1 1 0 0 0 0 .66l.86 2.47a1 1 0 0 1-.23 1.03'

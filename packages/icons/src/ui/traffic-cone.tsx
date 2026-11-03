@@ -16,16 +16,16 @@ export const IconTrafficCone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-traffic-cone'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m8.31 10.37.18-.41a2 2 0 0 1 2.27-1.18l.84.18a2 2 0 0 0 .8.01l1.06-.2a2 2 0 0 1 2.28 1.31l.12.38A2 2 0 0 1 14.61 13l-1.97.67a2 2 0 0 1-1.28 0l-1.84-.62a2 2 0 0 1-1.2-2.68'

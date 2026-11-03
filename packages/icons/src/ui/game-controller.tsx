@@ -16,16 +16,16 @@ export const IconGameController: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-game-controller'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.28 16.68q.1-.26.1-.54v-.67c0-4.1 0-6.15-.96-7.63a6 6 0 0 0-1.79-1.8C18.15 5.1 16.1 5.1 12 5.1s-6.15 0-7.63.96a6 6 0 0 0-1.79 1.79c-.96 1.48-.96 3.53-.96 7.63v.46q0 .49.24.92l.23.43a3.1 3.1 0 0 0 4.8.83l.47-.42c.29-.26.43-.39.59-.5a4 4 0 0 1 1.98-.75c.19-.02.38-.02.77-.02h1.9c.81 0 1.22 0 1.6.08a4 4 0 0 1 .8.25c.37.16.7.39 1.37.85l.83.58c.57.4 1.25.6 1.94.6h.15a3.2 3.2 0 0 0 3-2.1'

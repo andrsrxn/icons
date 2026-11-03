@@ -16,16 +16,16 @@ export const IconArrowUpStart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-arrow-up-start'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M5.78 16.79v-7c0-1.9 0-2.84.58-3.42s1.53-.59 3.41-.59h7.02' stroke='currentColor' />
       <path d='M18.22 18.22 6.6 6.6' stroke='currentColor' />
     </svg>

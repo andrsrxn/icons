@@ -16,16 +16,16 @@ export const IconFingerprint: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-fingerprint'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M3.7 21.11C3 18.02 2.2 11.63 5.35 7.94a8.73 8.73 0 0 1 13.73.74c3.48 5 3.86 9.47 2.29 11.27-1.23 1.4-4.37 1.73-5.36-1.2s-1.47-7.37-4.85-6.7c-4 .8-1.28 8.55-.29 10.04'
         stroke='currentColor'

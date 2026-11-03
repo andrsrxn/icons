@@ -16,16 +16,16 @@ export const IconDislikeFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-dislike-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M19.57 2.95c.6 0 .9 0 1.14.06a2 2 0 0 1 1.44 1.44c.06.25.06.55.06 1.14v5.6c0 .6 0 .9-.06 1.14a2 2 0 0 1-1.44 1.43c-.25.07-.55.07-1.14.07q-.21 0-.29-.02a.5.5 0 0 1-.36-.36l-.01-.28V3.6l.01-.28a.5.5 0 0 1 .36-.36q.08-.02.29-.02'
         fill='currentColor'

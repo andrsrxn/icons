@@ -16,16 +16,16 @@ export const IconFlagTriangleEnd: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flag-triangle-end'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M7.33 21.61v-6.26m0 0V7.17c0-2.15 0-3.22.7-3.66s1.67.02 3.6.96l3.53 1.7c2.43 1.17 3.64 1.76 3.64 2.7s-1.21 1.53-3.64 2.7z'
         stroke='currentColor'

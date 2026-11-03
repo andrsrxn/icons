@@ -16,16 +16,16 @@ export const IconPadding: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-padding'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.38 2.62c1.41 0 2.12 0 2.56.44s.44 1.15.44 2.56v12.76c0 1.41 0 2.12-.44 2.56s-1.15.44-2.56.44H5.62c-1.41 0-2.12 0-2.56-.44s-.44-1.15-.44-2.56V5.62c0-1.41 0-2.12.44-2.56s1.15-.44 2.56-.44zm-3.44 15.21c1.41 0 2.12 0 2.56-.44s.44-1.14.44-2.56V9.16c0-1.41 0-2.12-.44-2.56s-1.15-.44-2.56-.44H9.1c-1.42 0-2.12 0-2.56.44S6.1 7.75 6.1 9.16v5.67c0 1.42 0 2.12.44 2.56s1.14.44 2.56.44z'

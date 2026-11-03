@@ -16,16 +16,16 @@ export const IconFileBinary: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-binary'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.8 13.08V5.72c0-1.87 0-2.8.58-3.4.58-.58 1.52-.59 3.38-.6L10 1.69c1.3-.01 1.96-.02 2.44.27a2 2 0 0 1 .68.68c.3.48.3 1.13.3 2.44 0 1.3 0 1.94.29 2.42q.25.41.67.67c.48.3 1.13.3 2.42.3 1.3 0 1.95 0 2.43.28q.41.26.67.68c.29.47.29 1.12.29 2.42v1.23z'

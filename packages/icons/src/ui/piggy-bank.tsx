@@ -16,16 +16,16 @@ export const IconPiggyBank: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-piggy-bank'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.32 12.06v1.81a3.7 3.7 0 0 0 3.71 3.71v1.93c0 .53.44.97.97.97h.87c.8 0 1.45-.65 1.45-1.45s.64-1.44 1.44-1.44h1.57c.8 0 1.44.64 1.44 1.44s.65 1.45 1.45 1.45h.44c.8 0 1.44-.65 1.44-1.45s.67-1.4 1.41-1.7a4.5 4.5 0 0 0 2.38-2.7c.18-.5.63-.9 1.17-.9.6 0 1.1-.49 1.1-1.1V10.9c0-.56-.46-1.02-1.02-1.02s-1-.47-1.17-1c-.59-1.75-2.7-2.3-3.85-2.33l-.02-.02v-.99c0-1.86-1.7-3.02-2.64-1.4-.78 1.35-2.06 2.4-3.63 2.4h-3a5.5 5.5 0 0 0-5.5 5.52'

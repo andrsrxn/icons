@@ -16,16 +16,16 @@ export const IconWaveSawtooth: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wave-sawtooth'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M2.67 7.73 5.8 5.68C8.53 3.89 9.9 3 10.94 3.57 12 4.13 12 5.77 12 9.02v5.36c0 3.49 0 5.23 1.1 5.79 1.11.55 2.5-.5 5.3-2.58l2.94-2.2'
         stroke='currentColor'

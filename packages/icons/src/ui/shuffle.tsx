@@ -16,16 +16,16 @@ export const IconShuffle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shuffle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M21.22 17.52H21c-2.7 0-4.04 0-5.23-.54-1.18-.54-2.07-1.55-3.83-3.59l-2.83-3.26h0c-.88-1-1.31-1.5-1.82-1.88a6 6 0 0 0-2.34-1.07c-.62-.13-1.29-.13-2.62-.13'
         stroke='currentColor'

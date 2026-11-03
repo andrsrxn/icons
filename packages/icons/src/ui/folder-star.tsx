@@ -16,16 +16,16 @@ export const IconFolderStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-folder-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.5 14.42a2 2 0 0 1-.6.44l-.06.02a2 2 0 0 0-1.1 2.47l.97 2.83H7.58c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12v-6.8c0-.69 0-1.03.05-1.3A3 3 0 0 1 4.01 3.7c.28-.06.62-.06 1.3-.06h1.08c1.1 0 1.64 0 2.14.19.5.18.92.54 1.75 1.24l.42.36c.83.71 1.25 1.06 1.75 1.25s1.05.18 2.14.18h1.64c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12v2.02l-1.35-.12a1.5 1.5 0 0 1-.99-.5 1.5 1.5 0 0 0-2.24 0z'

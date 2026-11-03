@@ -16,16 +16,16 @@ export const IconMilestone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-milestone'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.78 8.94c0-1.57 0-2.36.41-2.9a2 2 0 0 1 .37-.36c.54-.41 1.32-.41 2.9-.41h11.4c.58 0 .87 0 1.14.08.28.07.52.23 1 .53l.83.52c1.8 1.14 2.7 1.71 2.7 2.54s-.9 1.4-2.7 2.54L19 12c-.5.3-.73.46-1 .54-.28.08-.57.08-1.14.08H5.45c-1.57 0-2.35 0-2.9-.42a2 2 0 0 1-.36-.36c-.41-.54-.41-1.33-.41-2.9'

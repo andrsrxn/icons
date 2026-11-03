@@ -16,16 +16,16 @@ export const IconAnnotationsPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-annotations-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.32 17.43c.9 0 1.36 0 1.73-.1a3 3 0 0 0 2.15-2.14c.1-.37.1-.82.1-1.73V9.72c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.7c-2.82 0-4.24 0-5.12.88S1.7 6.9 1.7 9.72v3.74c0 .9 0 1.36.1 1.73a3 3 0 0 0 2.15 2.15c.37.1.82.1 1.73.1h.56a3 3 0 0 1 1.12.34c.12.06.24.14.48.3l1.98 1.28c1.06.68 1.59 1.03 2.18 1.03s1.12-.35 2.18-1.03l1.98-1.29.48-.3a3 3 0 0 1 1.12-.32c.13-.02.28-.02.56-.02'

@@ -16,16 +16,16 @@ export const IconChessPawn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chess-pawn'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.87 9.79c.91 0 1.37 0 1.66.28s.3.73.34 1.65l.07 2.12c0 .18 0 .26.03.35.01.08.05.16.11.33l.7 1.74c.5 1.24.74 1.86.45 2.3-.3.44-.97.44-2.31.44H9.96c-1.27 0-1.9 0-2.2-.42-.3-.41-.1-1.01.3-2.22l.68-1.98.05-.19q.02-.06.03-.2l.31-2.45c.11-.84.16-1.25.45-1.5.28-.25.7-.25 1.54-.25z'

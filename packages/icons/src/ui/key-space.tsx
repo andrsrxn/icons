@@ -16,16 +16,16 @@ export const IconKeySpace: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-key-space'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M21.38 8.73c0 2.37 0 3.55-.49 4.45a4 4 0 0 1-1.6 1.6c-.9.49-2.08.49-4.44.49h-5.7c-2.36 0-3.54 0-4.44-.49a4 4 0 0 1-1.6-1.6c-.49-.9-.49-2.08-.49-4.45'
         stroke='currentColor'

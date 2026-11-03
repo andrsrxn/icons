@@ -16,16 +16,16 @@ export const IconAirportTower: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-airport-tower'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' fill='currentColor' d='M9.08 13.71h5.2v8.71h-5.2z' />
       <path opacity='.2' d='m15.72 5.4 5.11.85-1.4 6.95h-3.71z' fill='currentColor' />
       <path opacity='.2' d='m2.76 6.51 5.33-.8v7.8H4.34z' fill='currentColor' />

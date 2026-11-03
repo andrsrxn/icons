@@ -16,16 +16,16 @@ export const IconGlobeStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-globe-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.7 11.92c0 5.65 4.57 10.23 10.22 10.23 2.12 0 2.82-.55 3.15-.72v-1.7l-1.5-2.44 2.7-.68 1.46-2.23 1.3 2.23 1.57.68a10.23 10.23 0 1 0-18.9-5.37'

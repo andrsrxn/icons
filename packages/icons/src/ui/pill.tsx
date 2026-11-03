@@ -16,16 +16,16 @@ export const IconPill: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pill'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.2 11.02C7.53 9.67 8.19 9 9 8.98c.84-.01 1.52.64 2.87 1.95l1.33 1.28c1.36 1.31 2.04 1.96 2.05 2.8.02.82-.64 1.5-1.96 2.85l-2.33 2.4c-.6.6-.9.92-1.2 1.13a4 4 0 0 1-4.55.07c-.3-.2-.6-.5-1.22-1.1-.62-.59-.93-.88-1.14-1.18a4 4 0 0 1-.08-4.53c.2-.3.5-.61 1.1-1.23z'

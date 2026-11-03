@@ -16,16 +16,16 @@ export const IconTrash: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-trash'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.54 22.02c1.58 0 2.37 0 2.93-.46.55-.46.7-1.24 1-2.8l1.61-8.49c.42-2.2.63-3.3.03-4.02-.6-.73-1.72-.73-3.96-.73H9.2c-2.14 0-3.22 0-3.81.7-.6.68-.45 1.74-.15 3.87l1.21 8.5c.23 1.63.35 2.45.91 2.94.57.5 1.4.5 3.05.5z'

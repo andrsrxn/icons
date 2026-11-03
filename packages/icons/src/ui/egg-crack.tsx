@@ -16,16 +16,16 @@ export const IconEggCrack: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-egg-crack'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.27 12.93c0 2.63-.5 9.32-8.27 9.32-7.78 0-8.48-6.69-8.48-9.32.57-2.22 1.56 1.2 4 1.34 1.31.07 2.9-1.78 4.66-2.67 1.6.74 2.95 2.6 4.02 2.67 1.84 0 3.53-3.3 4.07-1.34'

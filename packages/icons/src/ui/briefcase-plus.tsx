@@ -16,16 +16,16 @@ export const IconBriefcasePlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-briefcase-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.76 14.78c0-1.88 0-2.83.59-3.41.58-.59 1.53-.59 3.41-.59h12.48c1.88 0 2.83 0 3.41.59.59.58.59 1.53.59 3.41v3.8h-2.52v2.61H5.76c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42z'

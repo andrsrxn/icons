@@ -16,16 +16,16 @@ export const IconHeartHandshake: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-heart-handshake'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.25 3.35c-2.68 0-4.62 2-5.25 3.01L10.48 8.2c-.26.31-.4.47-.4.65.01.19.15.34.42.65l.86.99c.3.34.46.5.66.52s.37-.12.73-.41l1.45-1.18c.33-.27.5-.4.68-.4.2.01.34.16.65.46l4.03 3.94c.36.36.54.54.77.52s.37-.22.65-.6q.75-1.04 1.06-2.13c1.08-4.04-1.44-7.86-4.79-7.86'

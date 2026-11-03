@@ -16,16 +16,16 @@ export const IconDrama: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-drama'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.2 17.02c4.55.67 7.68-6 8.21-9.57.35-2.37-.97-2.23-2.93-2.03-1 .11-2.16.23-3.36.06s-2.28-.64-3.2-1.03c-1.82-.77-3.04-1.28-3.4 1.09-.12.86-.17 1.95-.1 3.1 0 0 4.04-2.3 4.78-.72 1.18 1.98 0 9.1 0 9.1'

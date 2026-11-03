@@ -16,16 +16,16 @@ export const IconIntersect: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-intersect'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.77 7.73c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h4.97c.34 0 .51 0 .65.02a3 3 0 0 1 2.7 2.7c.02.14.02.3.02.65 0 .34 0 .51-.02.65a3 3 0 0 1-2.7 2.7c-.14.02-.31.02-.65.02h-.46c-.68 0-1.01 0-1.3.05a3 3 0 0 0-2.26 1.97c-.1.28-.14.62-.23 1.3l-.19 1.44-.07.44a3 3 0 0 1-2.73 2.4h-.95a3 3 0 0 1-2.78-2.78z'

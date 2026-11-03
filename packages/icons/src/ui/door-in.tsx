@@ -16,16 +16,16 @@ export const IconDoorIn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-door-in'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' fill='currentColor' d='M5.11 2.68h13.77v18.7H5.11z' />
       <path
         d='M5.11 21.12V6.68c0-1.88 0-2.83.59-3.41.58-.59 1.53-.59 3.41-.59h5.93c1.74 0 2.6 0 3.17.5l.17.18c.5.56.5 1.43.5 3.17'

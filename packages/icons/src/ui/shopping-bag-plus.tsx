@@ -16,16 +16,16 @@ export const IconShoppingBagPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shopping-bag-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.91 18.95h2.65l-1.48-6.6-1.19-5.4c-.5-2.26-.74-3.39-1.57-4.05-.82-.66-1.98-.66-4.29-.66h-2.17c-2.39 0-3.58 0-4.41.69S5.4 4.79 4.96 7.13l-1.54 8.24c-.62 3.3-.93 4.94-.03 6.02s2.58 1.08 5.92 1.08h9.6z'

@@ -16,16 +16,16 @@ export const Icon4k: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-4k'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M13.84 6.93v10.14' stroke='currentColor' />
       <path
         d='M9.3 17.22V8.77c0-1.29 0-1.94-.35-2.05s-.72.42-1.47 1.47l-2.76 3.9c-.49.7-.73 1.04-.59 1.3.14.28.56.28 1.41.28h5.52'

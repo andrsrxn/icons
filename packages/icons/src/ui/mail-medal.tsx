@@ -16,16 +16,16 @@ export const IconMailMedal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mail-medal'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m16.63 20.82.35-1.17c.12-.41.18-.62.35-.72s.38-.06.8.03l.53.1.2.04.2-.03.6-.12c.42-.08.64-.12.8-.02s.23.32.35.74l.32 1.18c.23.83.34 1.24.12 1.45s-.63.05-1.43-.24l-.61-.23a1 1 0 0 0-.35-.1 1 1 0 0 0-.35.1l-.57.2c-.82.31-1.23.47-1.46.26-.22-.22-.1-.64.15-1.47'

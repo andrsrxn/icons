@@ -16,16 +16,16 @@ export const IconLogicNand: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-logic-nand'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.48 19.2c.66 0 1 0 1.27-.02a6 6 0 0 0 5.42-5.41c.02-.28.02-.61.02-1.27v-1c0-.66 0-.99-.02-1.27a6 6 0 0 0-5.42-5.41c-.28-.03-.6-.03-1.27-.03h-.32a1.5 1.5 0 0 0-1.35 1.36v11.7a1.5 1.5 0 0 0 1.35 1.35z'

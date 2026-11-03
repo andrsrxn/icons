@@ -16,16 +16,16 @@ export const IconCarGarage: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-car-garage'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.39 15.61c-.1-.51-.15-.77-.23-.99a3 3 0 0 0-2.36-1.96c-.23-.04-.5-.04-1.02-.04H7.4c-.5 0-.76 0-.98.04a3 3 0 0 0-2.34 1.86c-.09.21-.14.46-.25.95-.17.74-.26 1.11-.27 1.42a3 3 0 0 0 2.4 3.01c.3.06.68.06 1.44.06h9.38c.73 0 1.1 0 1.39-.06a3 3 0 0 0 2.42-2.9c0-.3-.07-.66-.2-1.38'

@@ -16,16 +16,16 @@ export const IconDeskDevicePc: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-desk-device-pc'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.62 14.08c.55 0 .83 0 1.04-.1a1 1 0 0 0 .44-.45c.11-.21.11-.49.11-1.04s0-.83-.1-1.04a1 1 0 0 0-.45-.45c-.21-.1-.49-.1-1.04-.1H5.38c-.55 0-.83 0-1.04.1a1 1 0 0 0-.44.45c-.11.21-.11.49-.11 1.04s0 .83.1 1.04q.16.3.45.44c.21.11.49.11 1.04.11z'

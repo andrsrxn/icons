@@ -16,16 +16,16 @@ export const IconNumbers: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-numbers'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M14.48 3.05c.67-.73 1.32-1.29 2.7-1.29 2.44 0 2.84 2.54 1.61 3.82-.8.83-2.67 2.13-3.93 3.3-.46.41-.69.62-.56.94s.46.32 1.14.32h4.03'
         stroke='currentColor'

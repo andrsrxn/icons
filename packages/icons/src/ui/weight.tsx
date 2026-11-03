@@ -16,16 +16,16 @@ export const IconWeight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-weight'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.02 11.9c.44-1.32.66-1.98 1.18-2.36.53-.38 1.22-.38 2.62-.38h6.63c1.43 0 2.14 0 2.67.4.53.39.74 1.07 1.15 2.43l1.55 5.07c.72 2.37 1.09 3.55.49 4.36s-1.84.81-4.31.81H7.14c-2.53 0-3.8 0-4.4-.83s-.2-2.03.6-4.43z'

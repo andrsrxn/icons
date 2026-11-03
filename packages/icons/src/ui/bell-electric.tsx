@@ -16,16 +16,16 @@ export const IconBellElectric: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bell-electric'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='19.72' cy='15.86' r='1.83' fill='currentColor' />
       <rect opacity='.2' x='6.27' y='15.51' width='8.28' height='6.76' rx='2' fill='currentColor' />
       <circle cx='10.41' cy='8.62' r='6.89' stroke='currentColor' />

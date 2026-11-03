@@ -16,16 +16,16 @@ export const IconGridPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-grid-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17 3c1.89 0 2.83 0 3.41.59C21 4.17 21 5.1 21 7v1c0 1.89 0 2.83-.59 3.41-.58.59-1.52.59-3.41.59h-1c-1.89 0-2.83 0-3.41.59C12 13.17 12 14.1 12 16v1c0 1.89 0 2.83-.59 3.41C10.83 21 9.9 21 8 21H7c-1.89 0-2.83 0-3.41-.59C3 19.83 3 18.9 3 17V7c0-1.89 0-2.83.59-3.41C4.17 3 5.1 3 7 3z'

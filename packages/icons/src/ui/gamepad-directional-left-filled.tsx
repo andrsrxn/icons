@@ -16,16 +16,16 @@ export const IconGamepadDirectionalLeftFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gamepad-directional-left-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M6.15 14.68c.47 0 .7 0 .93-.07l.23-.1c.2-.1.37-.26.7-.59.82-.79 1.23-1.18 1.31-1.66a2 2 0 0 0 0-.52c-.08-.48-.49-.87-1.3-1.66-.34-.33-.51-.5-.71-.6l-.23-.09c-.22-.07-.46-.07-.93-.07h-.77c-1.1 0-1.66 0-2.05.28q-.2.15-.35.36c-.28.38-.28.94-.28 2.04s0 1.66.28 2.04q.15.21.35.36c.4.28.94.28 2.05.28z'
         fill='currentColor'

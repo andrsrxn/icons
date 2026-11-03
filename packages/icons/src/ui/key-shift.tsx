@@ -16,16 +16,16 @@ export const IconKeyShift: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-key-shift'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.2 4.57 5.4 8.31c-.84.83-1.27 1.25-1.3 1.6a1 1 0 0 0 .36.88c.27.23.87.23 2.05.23.55 0 .82 0 1.03.1q.3.15.45.46c.1.2.1.48.1 1.02v4.7c0 1.82 0 2.73.55 3.3l.08.09c.58.55 1.49.55 3.3.55 1.82 0 2.72 0 3.3-.55l.08-.08c.55-.58.55-1.49.55-3.3v-4.73c0-.52 0-.79.1-1a1 1 0 0 1 .47-.46c.2-.1.47-.1 1-.1 1.14 0 1.72 0 1.99-.22a1 1 0 0 0 .37-.9c-.04-.35-.45-.75-1.27-1.56l-3.8-3.76c-1.33-1.32-2-1.97-2.82-1.97s-1.48.65-2.8 1.96'

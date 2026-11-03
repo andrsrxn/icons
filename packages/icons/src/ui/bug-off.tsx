@@ -16,16 +16,16 @@ export const IconBugOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bug-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.2 12.58c0-1.87 0-2.81.3-3.55a4 4 0 0 1 2.15-2.15c.74-.31 1.68-.31 3.56-.31h1.58c1.88 0 2.82 0 3.56.3a4 4 0 0 1 2.15 2.16c.3.74.3 1.68.3 3.55v2.22c0 .75 0 1.12-.02 1.44a6 6 0 0 1-5.34 5.33c-.31.04-.69.04-1.44.04s-1.13 0-1.44-.04a6 6 0 0 1-5.34-5.33c-.03-.32-.03-.7-.03-1.44z'

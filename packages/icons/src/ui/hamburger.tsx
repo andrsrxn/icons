@@ -16,16 +16,16 @@ export const IconHamburger: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hamburger'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.68 8.02c.64 1.33.96 2 .38 2.93-.6.94-1.56.94-3.5.94H6.44c-1.93 0-2.9 0-3.49-.94-.58-.94-.26-1.6.38-2.93A9.6 9.6 0 0 1 12 2.67a9.6 9.6 0 0 1 8.68 5.35'

@@ -16,16 +16,16 @@ export const IconSoilMoistureGlobal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-soil-moisture-global'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M21.47 8s-3.92.78-6.7 3.7a16.5 16.5 0 0 0-3.58 6.1' stroke='currentColor' />
       <path d='M21.47 8s-3.92.78-6.7 3.7a16.5 16.5 0 0 0-3.58 6.1' stroke='currentColor' />
       <path d='M21.47 11.9s-1.47.25-2.85 1.41' stroke='currentColor' />

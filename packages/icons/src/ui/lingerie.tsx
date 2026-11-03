@@ -16,16 +16,16 @@ export const IconLingerie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lingerie'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m7.39 10.15-1.23-.12c-1.26-.13-1.89-.19-2.31-.54a2 2 0 0 1-.44-.54c-.26-.48-.2-1.11-.07-2.37.1-1.06.15-1.6.57-2.04.15-.15.45-.36.65-.43.57-.23.96-.12 1.74.1.8.23 1.65.6 2.36 1.2.9.77 1.34 1.62 1.53 2.4.17.75.26 1.13-.35 1.82s-1.22.64-2.45.52'

@@ -16,16 +16,16 @@ export const IconRadiation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-radiation'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m15.33 19.1-1.48-3.57a1 1 0 0 0-.95-.61l-2.1.04a1 1 0 0 0-.89.57l-1.63 3.4a1 1 0 0 0 0 .85l.35.78a1 1 0 0 0 .95.59l4.72-.2a1 1 0 0 0 .91-.7l.15-.46a1 1 0 0 0-.03-.69'

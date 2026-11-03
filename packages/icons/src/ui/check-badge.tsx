@@ -16,16 +16,16 @@ export const IconCheckBadge: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-check-badge'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.76 3.2c.7-.76 1.03-1.15 1.42-1.32a2 2 0 0 1 1.64 0c.39.17.73.56 1.42 1.33.31.35.47.52.65.65a2 2 0 0 0 .82.34c.22.04.46.03.93 0a5 5 0 0 1 1.94.07 2 2 0 0 1 1.15 1.15c.15.4.13.91.07 1.94-.03.47-.04.7 0 .93a2 2 0 0 0 .34.82c.13.18.3.34.65.65.77.7 1.16 1.03 1.33 1.42a2 2 0 0 1 0 1.64c-.18.39-.56.73-1.33 1.42-.35.31-.52.47-.65.65a2 2 0 0 0-.34.82c-.04.22-.03.46 0 .93a5 5 0 0 1-.07 1.94 2 2 0 0 1-1.15 1.15c-.4.15-.91.13-1.94.07-.47-.03-.7-.04-.93 0a2 2 0 0 0-.82.34c-.18.13-.34.3-.65.65-.7.77-1.03 1.16-1.42 1.33a2 2 0 0 1-1.64 0c-.39-.18-.73-.56-1.42-1.33a4 4 0 0 0-.65-.65 2 2 0 0 0-.82-.34 4 4 0 0 0-.93 0 5 5 0 0 1-1.94-.07 2 2 0 0 1-1.15-1.15c-.15-.4-.13-.91-.07-1.94.03-.47.04-.7 0-.93a2 2 0 0 0-.34-.82c-.13-.18-.3-.34-.65-.65-.77-.7-1.16-1.03-1.33-1.42a2 2 0 0 1 0-1.64c.17-.39.56-.73 1.33-1.42.35-.31.52-.47.65-.65a2 2 0 0 0 .34-.82c.04-.22.03-.46 0-.93a5 5 0 0 1 .07-1.94 2 2 0 0 1 1.15-1.15c.4-.15.91-.13 1.94-.07.47.03.7.04.93 0a2 2 0 0 0 .82-.34c.18-.13.34-.3.65-.65'

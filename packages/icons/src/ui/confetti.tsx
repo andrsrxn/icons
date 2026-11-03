@@ -16,16 +16,16 @@ export const IconConfetti: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-confetti'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.95 16c-.55.48-.82.73-1.16.75s-.64-.17-1.26-.57l-3.68-2.4-.26-.19q-.07-.06-.21-.24L7.2 10.62c-.45-.57-.67-.85-.68-1.18-.01-.34.2-.63.62-1.22l.84-1.2c.6-.85.91-1.28 1.36-1.32.44-.05.83.3 1.61 1l6.02 5.4c.78.7 1.17 1.06 1.17 1.5 0 .45-.4.8-1.17 1.5z'

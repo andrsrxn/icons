@@ -16,16 +16,16 @@ export const IconFlame: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flame'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.29 9.33a11 11 0 0 1-2.47-6.66c-.02-.33-.32-.55-.6-.36a8.4 8.4 0 0 0-2.6 3.3c-1 2.19-.97 4.77-.9 5.89.02.3-.22.57-.51.51-1.45-.27-2.03-1.57-2.42-2.29-.12-.23-.41-.25-.56-.03-.56.83-1.22 2.65-.95 5.15.5 4.8 3.85 6.78 6.72 6.78 2.28 0 5.9-.74 6.68-5.25.37-2.17-.16-4.41-2.4-7.04'

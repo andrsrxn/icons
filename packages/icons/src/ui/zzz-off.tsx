@@ -16,16 +16,16 @@ export const IconZzzOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-zzz-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M9.19 11.17H4.75c-1.07 0-1.61 0-1.74-.32-.12-.31.27-.68 1.06-1.41l4.07-3.8h0c.79-.74 1.18-1.1 1.06-1.42-.13-.32-.66-.32-1.74-.32H3.93'
         stroke='currentColor'

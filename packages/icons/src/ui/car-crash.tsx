@@ -16,16 +16,16 @@ export const IconCarCrash: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-car-crash'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M4.1 15.3H1.46V9.7h2.76l5.13.51c.24.02.37.04.47.07a1 1 0 0 1 .65.69c.03.1.04.23.05.48l.1 2.27a1.35 1.35 0 0 1-2.62.5l-.07-.2H7.3c-.6 0-1.18.23-1.61.64s-1 .65-1.6.65'

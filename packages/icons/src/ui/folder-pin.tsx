@@ -16,16 +16,16 @@ export const IconFolderPin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-folder-pin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.75 13.24c-.82.08-1.33.93-1.02 1.7q.16.4.04.82l-1.28 4.37H7.66c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V7.36c0-.66 0-1 .05-1.27a3 3 0 0 1 2.4-2.4c.27-.04.6-.04 1.27-.04h1.07c1.09 0 1.63 0 2.14.18.5.19.91.54 1.75 1.25l.4.34c.83.71 1.25 1.07 1.75 1.25.5.19 1.05.19 2.14.19h1.61c2.83 0 4.24 0 5.12.88.88.87.88 2.29.88 5.12v1.23l-2.28-.82a2 2 0 0 0-.72-.08z'

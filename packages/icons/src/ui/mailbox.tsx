@@ -16,16 +16,16 @@ export const IconMailbox: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mailbox'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.2 18.89c-1.96.07-2.93.1-3.55-.48-.6-.6-.6-1.57-.6-3.52v-2.7l-.24-1.94c-.07-.57-.1-.86-.21-1.12s-.3-.48-.65-.92L7.94 6.96h6.2c3.64 0 5.45 0 6.6 1.1l.17.16C22 9.37 22 11.19 22 14.82c0 1.75 0 2.62-.52 3.2l-.08.08c-.55.54-1.43.57-3.18.64z'

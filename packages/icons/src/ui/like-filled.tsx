@@ -16,16 +16,16 @@ export const IconLikeFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-like-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M4.46 21.08c-.6 0-.9 0-1.16-.07a2 2 0 0 1-1.43-1.43c-.06-.24-.06-.55-.06-1.15v-5.55c0-.6 0-.91.06-1.16a2 2 0 0 1 1.43-1.43c.25-.06.55-.06 1.16-.06l.29.01a.5.5 0 0 1 .35.36q.02.08.02.29v9.53q0 .2-.02.29a.5.5 0 0 1-.35.35c-.07.02-.14.02-.3.02'
         fill='currentColor'

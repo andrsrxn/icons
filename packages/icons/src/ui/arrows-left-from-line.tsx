@@ -16,16 +16,16 @@ export const IconArrowsLeftFromLine: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-arrows-left-from-line'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='m4.74 4.25-.2.2c-1.34 1.34-2 2-2 2.84s.66 1.5 2 2.83l.2.2' stroke='currentColor' />
       <path d='m4.74 13.03-.2.2c-1.34 1.34-2 2-2 2.84s.66 1.5 2 2.83l.2.2' stroke='currentColor' />
       <path d='M17.86 7.29H3.01' stroke='currentColor' />

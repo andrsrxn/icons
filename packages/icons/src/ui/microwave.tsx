@@ -16,16 +16,16 @@ export const IconMicrowave: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-microwave'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.7 12.2c0 2.83 0 4.25.87 5.12.88.88 2.3.88 5.12.88h8.62c2.83 0 4.24 0 5.12-.88.88-.87.88-2.29.88-5.12V9.78c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.69c-2.83 0-4.24 0-5.12.88S1.7 6.95 1.7 9.78zm10.04-4.94c.61 0 .92 0 1.17.05a3 3 0 0 1 2.44 2.44c.05.25.05.56.05 1.17 0 .62 0 .93-.05 1.18a3 3 0 0 1-2.44 2.44c-.25.05-.56.05-1.17.05H8.9c-.61 0-.92 0-1.18-.05A3 3 0 0 1 5.3 12.1c-.04-.25-.04-.56-.04-1.18 0-.6 0-.92.04-1.17A3 3 0 0 1 7.73 7.3c.26-.05.57-.05 1.18-.05z'

@@ -16,16 +16,16 @@ export const IconHeartBreak: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-heart-break'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.76 3.38c2.55 0 4.42 1.81 5.14 2.85l.09.15.05.19.47 2.4q.05.2.04.31c-.01.08-.05.15-.12.3l-1.22 2.6c-.1.23-.15.34-.15.46s.06.22.17.44l1.46 2.78c.07.14.11.21.12.3q.02.09-.02.32l-.46 2.85c-.14.91-.21 1.37-.49 1.47-.27.1-.64-.21-1.37-.83-2.98-2.53-7.6-5.38-8.5-8.74C.9 7.19 3.42 3.38 6.77 3.38'

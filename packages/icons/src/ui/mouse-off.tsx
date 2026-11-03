@@ -16,16 +16,16 @@ export const IconMouseOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mouse-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='M5.66 12.32h12.68v3.58a6.34 6.34 0 1 1-12.68 0z' fill='currentColor' />
       <rect x='5.66' y='1.76' width='12.67' height='20.48' rx='6.34' stroke='currentColor' />
       <path d='M5.66 12.48h12.68' stroke='currentColor' />

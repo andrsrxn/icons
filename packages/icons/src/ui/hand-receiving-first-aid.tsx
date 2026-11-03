@@ -16,16 +16,16 @@ export const IconHandReceivingFirstAid: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hand-receiving-first-aid'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.18 9.31v-.1c0-.38 0-.57.05-.72a1 1 0 0 1 .63-.63c.16-.06.35-.06.73-.06.39 0 .58 0 .74-.05a1 1 0 0 0 .63-.63c.05-.15.05-.34.05-.73v-.56c0-.39 0-.58-.06-.73a1 1 0 0 0-.62-.63c-.16-.05-.35-.05-.74-.05-.38 0-.57 0-.73-.06a1 1 0 0 1-.63-.63c-.05-.15-.05-.34-.05-.73s0-.57-.05-.73a1 1 0 0 0-.63-.63c-.15-.05-.35-.05-.73-.05h-.56c-.39 0-.58 0-.74.05a1 1 0 0 0-.63.63c-.05.16-.05.35-.05.73 0 .39 0 .58-.05.73a1 1 0 0 1-.63.63c-.15.06-.35.06-.73.06s-.57 0-.73.05a1 1 0 0 0-.63.63c-.05.15-.05.34-.05.73v.56c0 .39 0 .58.05.73q.16.46.63.63c.16.05.35.05.73.05s.58 0 .73.06q.46.16.63.63c.05.15.05.34.05.73v.1c0 .47 0 .7.08.9q.17.36.53.53c.19.07.43.07.9.07h.37c.48 0 .72 0 .9-.07a1 1 0 0 0 .53-.54c.08-.18.08-.42.08-.9'

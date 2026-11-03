@@ -16,16 +16,16 @@ export const IconGrass: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-grass'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.1 3.84c.8 4.8 1.46 12.08 1.46 12.08l.6 4.33c.05.45.08.68.25.82s.4.13.86.13h3.37c.34 0 .51 0 .64-.09.12-.08.16-.24.25-.55l2.85-10.42 1.47-4.56c.12-.36.18-.54.1-.71s-.25-.27-.62-.48l-.1-.07c-.35-.2-.53-.3-.7-.28-.18.02-.3.15-.55.4l-2.9 3c-.42.43-.63.65-.88.61-.26-.03-.45-.31-.84-.88a13 13 0 0 0-2.01-2.35c-1.73-1.44-2.6-1.58-3.01-1.5-.06 0-.08.01-.18.16s-.1.21-.07.36'

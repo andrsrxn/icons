@@ -16,16 +16,16 @@ export const IconCarrot: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-carrot'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m6.99 21.04 4.38-3 .15-.11.13-.13 5.69-5.69c.66-.66 1-1 1-1.41 0-.42-.34-.75-1-1.42l-2.62-2.62c-.67-.67-1-1-1.42-1s-.75.33-1.41 1L6.2 12.35l-.13.13-.1.15-2.8 4.08-1.49 5.35z'

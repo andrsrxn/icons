@@ -16,16 +16,16 @@ export const IconTubeLotion: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tube-lotion'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M14.9 18.22v1.31c0 .83 0 1.25-.13 1.58a2 2 0 0 1-1.19 1.2c-.33.12-.75.12-1.58.12s-1.25 0-1.59-.13a2 2 0 0 1-1.18-1.19c-.13-.33-.13-.75-.13-1.58v-1.3'
         stroke='currentColor'

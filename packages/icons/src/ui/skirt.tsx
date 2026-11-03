@@ -16,16 +16,16 @@ export const IconSkirt: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-skirt'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.22 6.81c-1.89 0-2.83 0-3.54.43a3 3 0 0 0-.91.84c-.48.68-.55 1.62-.7 3.5a6 6 0 0 1-.16 1.07c-.06.2-.15.37-.32.73l-1.26 2.67a2.5 2.5 0 0 0 2.44 3.58l1.13-.08c.58-.04.87-.06 1.16-.02s.57.12 1.12.3l1.52.5c.87.29 1.3.43 1.75.44.45 0 .89-.12 1.77-.37l2.3-.65c.49-.14.73-.2.98-.24.25-.02.5-.01 1 .02l1.93.1a2.35 2.35 0 0 0 2.3-3.22l-1.43-3.56-.13-.9c-.35-2.45-.53-3.67-1.37-4.4s-2.09-.74-4.56-.74z'

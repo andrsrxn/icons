@@ -16,16 +16,16 @@ export const IconCarFrontSignal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-car-front-signal'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.11 15.5c-.1-.56-.16-.84-.24-1.07a3 3 0 0 0-2.32-1.93c-.25-.04-.53-.04-1.1-.04H5.93c-.55 0-.82 0-1.06.04a3 3 0 0 0-2.3 1.83c-.09.23-.15.5-.27 1.03-.18.8-.27 1.2-.28 1.53a3 3 0 0 0 2.36 2.95c.32.07.73.07 1.55.07h9.52c.8 0 1.2 0 1.5-.07A3 3 0 0 0 19.33 17c.01-.32-.06-.71-.2-1.5'

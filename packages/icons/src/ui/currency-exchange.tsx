@@ -16,16 +16,16 @@ export const IconCurrencyExchange: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-exchange'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M15.12 9.11c-.27-.85-1.5-1.51-2.95-1.51s-3.04.57-3.04 2.3c0 3.37 5.81.74 6.07 4.06.13 1.59-1.55 2.44-3.03 2.44s-2.56-.66-3.04-1.54'
         stroke='currentColor'

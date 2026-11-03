@@ -16,16 +16,16 @@ export const IconCandyCane: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-candy-cane'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.45 9.05c.13.6.94.73 1.25.2q.13-.2.34-.3l1.73-.67c.21-.09.32-.13.42-.15a1 1 0 0 1 .99.4l.2.4.1.24a1 1 0 0 1-.04.68q-.02.07-.12.22l-.76 1.32c-.24.43-.36.64-.38.85a1 1 0 0 0 .13.6c.1.18.3.33.7.61.37.28.56.41.76.46q.3.06.59-.05c.2-.07.36-.24.69-.57l1.54-1.54c.3-.3.44-.44.52-.63.08-.2.07-.4.06-.82l-.03-1.75c0-.4 0-.6-.08-.78a2 2 0 0 0-.5-.6l-2.52-2.51c-.32-.33-.49-.5-.7-.57-.21-.08-.44-.05-.9 0l-2.02.2c-.35.03-.52.05-.68.12s-.28.2-.53.45l-.79.78c-.18.18-.27.27-.33.38a1 1 0 0 0-.14.48c0 .13.02.25.07.5z'

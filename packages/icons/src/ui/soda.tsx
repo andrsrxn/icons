@@ -16,16 +16,16 @@ export const IconSoda: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-soda'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12 8.3c-2.65 0-3.98 0-4.82.73a3 3 0 0 0-.5.56c-.64.92-.5 2.24-.2 4.87l.37 3.41c.2 1.82.3 2.74.79 3.39a3 3 0 0 0 .9.8c.7.41 1.62.41 3.45.41s2.75 0 3.45-.4a3 3 0 0 0 .9-.8c.48-.66.58-1.57.79-3.39l.38-3.41c.3-2.64.45-3.95-.2-4.88a3 3 0 0 0-.5-.56c-.84-.73-2.16-.73-4.82-.73'

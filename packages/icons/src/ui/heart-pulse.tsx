@@ -16,16 +16,16 @@ export const IconHeartPulse: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-heart-pulse'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12 21.38c.23 0 .47-.22.95-.64 2.73-2.4 6.69-4.46 8.43-8.2h-6.5l-1.93 2.4-3.5-5.1-2.18 2.7H2.62c1.74 3.74 5.7 5.8 8.43 8.2.48.42.72.64.95.64'

@@ -16,16 +16,16 @@ export const IconShovel: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shovel'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M4.09 12.28c.54-.7.8-1.05 1.26-1.08.45-.02.8.32 1.48 1l2.53 2.54 2.54 2.53c.68.68 1.02 1.03 1 1.48-.04.45-.39.72-1.09 1.26-4.06 3.13-7.53 2.16-8.73 1.67a1 1 0 0 1-.41-.25c-.14-.14-.18-.23-.26-.41-.5-1.2-1.5-4.64 1.68-8.74'

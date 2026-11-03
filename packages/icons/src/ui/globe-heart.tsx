@@ -16,16 +16,16 @@ export const IconGlobeHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-globe-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.7 11.92c0 5.65 4.57 10.23 10.22 10.23 2.12 0 3.34-.57 4.08-1.02l-1.83-1.49-.78-2.67 1.87-1.76 2.39 1.23 2.4-1.23 1.09 1.07a8 8 0 0 0 1.01-4.36 10.23 10.23 0 1 0-20.46 0'

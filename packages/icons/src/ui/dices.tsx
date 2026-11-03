@@ -16,16 +16,16 @@ export const IconDices: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-dices'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.91 16.36c1.5.54 3.14-.31 3.56-1.85l.98-3.67c.73-2.73 1.1-4.1.47-5.17-.62-1.08-1.98-1.44-4.72-2.18l-3.85-1.03c-1.47-.4-3 .48-3.39 1.96L9.7 5.43a1.97 1.97 0 0 0 1.9 2.48c.85 0 1.6.54 1.87 1.35l1.8 5.4c.25.8.87 1.42 1.65 1.7'

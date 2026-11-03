@@ -16,16 +16,16 @@ export const IconPopcorn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-popcorn'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.79 21.47a1.92 1.92 0 0 0 1.9-2.15l-.9-7.4a1.94 1.94 0 0 0-2.7-1.53l-.16.07a2.5 2.5 0 0 0-1.45 2.84l1.43 6.65c.19.89.97 1.52 1.88 1.52'

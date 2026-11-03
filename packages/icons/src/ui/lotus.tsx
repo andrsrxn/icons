@@ -16,16 +16,16 @@ export const IconLotus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lotus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m15.13 13.11-1.26 2.66q-.14.28-.16.37a1 1 0 0 0 .9 1.29l.4-.03.07-.01a1 1 0 0 0 .47-.2l4.19-2.9c.23-.15.35-.23.44-.34q.1-.13.25-.5l2.04-4.63c.1-.23.15-.35.17-.46a1 1 0 0 0-.06-.56q-.06-.13-.26-.41a2 2 0 0 0-.38-.46 1 1 0 0 0-.63-.22c-.14 0-.29.05-.58.13l-3.87 1.14c-.66.2-.99.3-1.19.55s-.2.6-.24 1.29l-.1 2.52-.04.4q-.03.13-.16.37'

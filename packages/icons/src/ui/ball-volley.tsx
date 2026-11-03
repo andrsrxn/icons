@@ -16,16 +16,16 @@ export const IconBallVolley: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ball-volley'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m16.5 17.37-3.13 4.65a1 1 0 0 1-1.07.41l-3.77-.92a1 1 0 0 1-.5-1.65l2.36-2.51a1 1 0 0 0 .24-.45l1.04-4.31a1 1 0 0 1 .72-.73l3.52-.9a1 1 0 0 1 1.24 1.06l-.5 4.89a1 1 0 0 1-.16.46'

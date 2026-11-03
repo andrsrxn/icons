@@ -16,16 +16,16 @@ export const IconFileStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.67 22.2c-1.88 0-2.82 0-3.4-.6-.6-.58-.6-1.52-.6-3.4V5.76c0-1.87 0-2.8.58-3.39.58-.58 1.52-.59 3.38-.6l2.22-.03c1.3-.02 1.96-.02 2.44.26a2 2 0 0 1 .69.69c.29.47.29 1.13.29 2.43 0 1.29 0 1.93.28 2.4a2 2 0 0 0 .69.69c.47.29 1.12.29 2.42.29s1.96 0 2.44.29a2 2 0 0 1 .65.64c.3.47.31 1.12.33 2.42l.07 3.93-.57-.44a1.9 1.9 0 0 0-2.75.43l-.05.07q-.36.53-.97.69a1.68 1.68 0 0 0-1 2.53l.24.38a2 2 0 0 1 .28 1.47l-.25 1.27H7.67'

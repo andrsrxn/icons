@@ -16,16 +16,16 @@ export const IconCandlestick: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-candlestick'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.6 13.66c1.42 0 2.13 0 2.57.44s.44 1.15.44 2.56v2.8c0 1.41 0 2.12-.44 2.56s-1.15.44-2.56.44H11.4c-1.42 0-2.12 0-2.56-.44s-.44-1.15-.44-2.56v-2.8c0-1.41 0-2.12.44-2.56s1.14-.44 2.56-.44z'

@@ -16,16 +16,16 @@ export const IconDnaOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-dna-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m11.31 17.75-1.98 3.32-6.32-6.34 3.57-2.1c.2-.13.31-.19.42-.22.12-.04.23-.05.47-.06l2.2-.15c1.08-.07 1.62-.1 1.94.22.32.33.28.87.19 1.95l-.21 2.52c-.02.23-.03.34-.07.45-.03.11-.09.2-.2.4'

@@ -16,16 +16,16 @@ export const IconBetweenHorizontalRight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-between-horizontal-right'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='14' y='2.69' width='7.26' height='13.85' rx='2' fill='currentColor' />
       <rect opacity='.2' x='2.74' y='2.69' width='7.26' height='13.85' rx='2' fill='currentColor' />
       <rect x='14' y='2.69' width='7.26' height='13.85' rx='2' stroke='currentColor' />

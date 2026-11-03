@@ -16,16 +16,16 @@ export const IconTreePalm: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tree-palm'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.79 3.75c-2.12-.17-4.3.23-5.13 3.37-.14.5-.2.76-.05.96s.44.18 1 .16l8.05-.32c.73-.02 1.09-.04 1.22-.3.13-.27-.06-.55-.46-1.1a6 6 0 0 0-4.63-2.77'

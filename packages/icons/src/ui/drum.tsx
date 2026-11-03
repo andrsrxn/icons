@@ -16,16 +16,16 @@ export const IconDrum: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-drum'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.73 14.4c0-2.85 0-3.69 3.21-2 1.65.38 4.84.94 7.06.94 1.91 0 6.23-.88 7.76-1.11 2.51-1.4 2.51-.16 2.51 2.17 0 2.56-4.6 4.64-10.27 4.64S1.73 16.96 1.73 14.4'

@@ -16,16 +16,16 @@ export const IconSquigglesSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-squiggles-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M2.3 5.5s.84-1.1 1.96-1.55a5.4 5.4 0 0 1 4.44 0c1.34.67 1.6 2.5.64 3.27-1.98 1.59-5.06.27-6.72 2-1.6 1.68-.81 3.78 1.33 4.05 4.75.58 5.98-2.8 9.4-3.4 1.77-.32 3.44.6 3.44 2.6 0 2.2-3.6 5.7-8.34 8.15-3 1.55-5.79.23-5.1-2.22.47-1.7 2.58-3.01 5.35-2.87 1.5.08 2.95.93 4.01 1.8a18 18 0 0 1 2.17 2.13'
         stroke='currentColor'

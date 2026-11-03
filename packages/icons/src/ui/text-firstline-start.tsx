@@ -16,16 +16,16 @@ export const IconTextFirstlineStart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-firstline-start'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='3.28' y='4.17' width='6.82' height='6.82' rx='2' fill='currentColor' />
       <rect x='3.28' y='4.17' width='6.82' height='6.82' rx='2' stroke='currentColor' />
       <path d='M21.26 5.27h-8.21' stroke='currentColor' />

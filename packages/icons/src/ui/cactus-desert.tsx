@@ -16,16 +16,16 @@ export const IconCactusDesert: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cactus-desert'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.78 22.21h.42c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7v-5.42c0-.56 0-.84.13-1.07s.37-.37.85-.65l3.84-2.28c.48-.29.72-.43.85-.66s.13-.5.13-1.06V4.95c0-.56 0-.84-.1-1.05a1 1 0 0 0-.45-.44c-.21-.1-.49-.1-1.05-.1s-.84 0-1.05.1a1 1 0 0 0-.44.44c-.11.21-.11.5-.11 1.05v2.2l-.01.33a1 1 0 0 1-.2.44q-.05.09-.23.24c-.53.5-.79.75-1 .82a1 1 0 0 1-1.17-.46c-.12-.2-.14-.56-.2-1.28l-.24-3.68c-.03-.51-.05-.77-.16-.97a1 1 0 0 0-.44-.42c-.2-.1-.46-.1-.98-.1s-.77 0-.98.1a1 1 0 0 0-.44.43c-.11.2-.13.45-.16.97l-.41 6.54c-.05.77-.08 1.16-.23 1.38a1 1 0 0 1-.94.44c-.26-.03-.57-.26-1.2-.71-.2-.15-.3-.22-.37-.3a1 1 0 0 1-.21-.43c-.03-.11-.03-.23-.03-.48v-1.5c0-.56 0-.84-.1-1.06a1 1 0 0 0-.45-.44c-.21-.1-.49-.1-1.05-.1s-.84 0-1.05.1a1 1 0 0 0-.44.44C4 7.67 4 7.95 4 8.51v3.66c0 .53 0 .79.12 1 .12.23.33.37.77.67l4 2.67c.44.3.65.44.77.66s.12.48.12 1v2.04c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3'

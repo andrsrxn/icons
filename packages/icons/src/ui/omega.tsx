@@ -16,16 +16,16 @@ export const IconOmega: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-omega'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M21.18 17.91c0 .52 0 .78-.05 1a2 2 0 0 1-1.52 1.51c-.21.05-.47.05-.99.05h-4.26c2.6-.84 5.07-4.97 5.07-8.35 0-4.89-3.33-8.85-7.43-8.85s-7.43 3.96-7.43 8.85c0 3.38 2.26 7.55 4.95 8.35H5.38c-.52 0-.78 0-1-.05a2 2 0 0 1-1.51-1.52c-.05-.21-.05-.47-.05-.99'
         stroke='currentColor'

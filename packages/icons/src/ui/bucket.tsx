@@ -16,16 +16,16 @@ export const IconBucket: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bucket'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.51 3.67c1.72.42 2.58.62 2.71 1.23.14.6-.55 1.16-1.93 2.27l-.65.52c-.27.22-.4.33-.57.39s-.33.05-.68.05H7.61c-.34 0-.5 0-.67-.05a3 3 0 0 1-.56-.37l-.72-.57c-1.4-1.1-2.1-1.64-1.97-2.25s.99-.83 2.7-1.26l4.88-1.24c.24-.06.36-.09.48-.09.13 0 .24.03.48.09z'

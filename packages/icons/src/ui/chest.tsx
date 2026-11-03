@@ -16,16 +16,16 @@ export const IconChest: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chest'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.22 20.06c-1.96.09-2.94.13-3.56-.46s-.62-1.57-.62-3.53v-4.03l-.27-2.71c-.05-.5-.07-.75-.16-.98a4 4 0 0 0-.5-.86L7.94 5.76H14c3.77 0 5.66 0 6.83 1.17S22 9.99 22 13.76v2.13c0 1.81 0 2.72-.55 3.3-.56.58-1.46.62-3.27.7z'

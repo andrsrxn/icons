@@ -16,16 +16,16 @@ export const IconRose: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-rose'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.26 19.38a5.4 5.4 0 0 1 4.5-3.82c.35-.06.53-.1.72.04.18.13.2.3.21.64.05.85-.05 2.24-1.01 3.25-.98 1.03-2.69 1-3.72.87-.4-.06-.6-.08-.73-.26s-.08-.36.03-.72'

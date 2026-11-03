@@ -16,16 +16,16 @@ export const IconStrokeCapNone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stroke-cap-none'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.07 9.54c1.04-.72 1.57-1.08 1.68-1.3s.11-.55.11-1.2v-.1c0-.95 0-1.42-.29-1.72-.3-.29-.76-.29-1.7-.29H3.41c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7v9.56c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3h14.44c.95 0 1.42 0 1.71-.3.3-.29.3-.76.3-1.7v-.24c0-.65 0-.97-.12-1.19s-.53-.5-1.37-1.08a2.9 2.9 0 0 1-1.34-2.42c0-.98.45-1.62 1.03-2.02'

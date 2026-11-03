@@ -16,16 +16,16 @@ export const IconFilmSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-film-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.72 21.23c.3 0 .44 0 .57-.03a1 1 0 0 0 .72-.73c.03-.12.03-.27.03-.56V4.09c0-.3 0-.44-.03-.56a1 1 0 0 0-.72-.73c-.13-.03-.27-.03-.57-.03-.89 0-1.33 0-1.7.1a3 3 0 0 0-2.16 2.16c-.1.37-.1.81-.1 1.7v10.54c0 .89 0 1.33.1 1.7a3 3 0 0 0 2.17 2.16c.36.1.8.1 1.7.1'

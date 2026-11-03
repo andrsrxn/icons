@@ -16,16 +16,16 @@ export const IconTextBold: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-bold'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M9.37 3.57h3.46a3.9 3.9 0 0 1 0 7.79h-2.02' stroke='currentColor' />
       <path d='M10.81 11.36h2.71a4.54 4.54 0 1 1 0 9.09H9.61' stroke='currentColor' />
       <path

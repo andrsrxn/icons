@@ -16,16 +16,16 @@ export const IconMonies: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-monies'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m20.03 11.44 2.24-1.04V7.28L19.78 6l-1.6-2.62h-8.16L8.53 6.45l-2.6.78v2.3l5.9.04c0-1.12 1.21-2.65 2.28-2.65s2.24 1.53 2.24 2.65l1.49 1.37.35 3.6z'

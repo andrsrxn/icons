@@ -16,16 +16,16 @@ export const IconMouseLeftClick: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mouse-left-click'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.66 17.1v-1.6c0-.95-.43-1.85-1.17-2.44q-.75-.61-1.03-1.52l-.17-.55a4 4 0 0 1 .03-2.35l.14-.4a2.6 2.6 0 0 1 1.03-1.35 2.6 2.6 0 0 0 1.17-2.17V2.18a8.46 8.46 0 0 0-8.47 8.46v6.47z'

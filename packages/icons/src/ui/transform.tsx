@@ -16,16 +16,16 @@ export const IconTransform: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-transform'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='2.68' y='2.65' width='8.32' height='8.32' rx='2' fill='currentColor' />
       <circle opacity='.2' cx='17.16' cy='17.19' r='4.11' fill='currentColor' />
       <rect x='2.68' y='2.65' width='8.32' height='8.32' rx='2' stroke='currentColor' />

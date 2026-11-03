@@ -16,16 +16,16 @@ export const IconSailboat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sailboat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.96 17.9c-.4-1.2-.62-1.8-.32-2.22s.94-.42 2.22-.42h12.2c1.28 0 1.92 0 2.22.42s.09 1.02-.32 2.23l-1.05 3.05c-.22.66-.34.98-.6 1.17s-.6.19-1.3.19H6.9c-.7 0-1.04 0-1.3-.2-.26-.18-.37-.5-.6-1.16z'

@@ -16,16 +16,16 @@ export const IconCrane: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-crane'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='6.57' y='3.13' width='5.38' height='15.48' rx='2' fill='currentColor' />
       <path
         d='M11.95 18.2V5.84c0-.65 0-.97-.07-1.23a2 2 0 0 0-1.4-1.4c-.26-.07-.58-.07-1.22-.07-.65 0-.97 0-1.23.08A2 2 0 0 0 6.64 4.6c-.07.26-.07.58-.07 1.23V18.2'

@@ -16,16 +16,16 @@ export const IconPlayingSpades: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-playing-spades'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.74 5.54c3.01 3.1 7.19 5.67 3.56 10.08-1.76 2.13-4.13 1.85-5.95 1.38-.56-.15 1.18 3.11.7 4.61-.4 1.23-3.25.74-3.25.74s-3 .62-3.32-.6c-.4-1.51 1.68-4.93 1.05-4.78-2.41.56-5.67.94-6.4-2.13C1 10.96 4.78 8.49 7.06 5.54c1.46-1.88 4.86-3.94 4.86-3.94s3.16 2.24 4.82 3.94'

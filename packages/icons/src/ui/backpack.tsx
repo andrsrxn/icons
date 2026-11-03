@@ -16,16 +16,16 @@ export const IconBackpack: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-backpack'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.1 9.92c0-2.71 0-4.06.64-5.05a4 4 0 0 1 1.22-1.22c.98-.63 2.33-.63 5.04-.63s4.06 0 5.05.63a4 4 0 0 1 1.22 1.22c.62.99.62 2.34.62 5.05v.37c0 1.9 0 2.87-.52 3.44a2 2 0 0 1-.53.41c-.68.37-1.61.13-3.47-.33l-1.4-.36c-.48-.12-.72-.18-.97-.18s-.5.06-.98.18l-1.4.36c-1.85.46-2.78.7-3.46.33a2 2 0 0 1-.53-.41c-.52-.57-.52-1.53-.52-3.44z'

@@ -16,16 +16,16 @@ export const IconFishSymbol: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-fish-symbol'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <ellipse opacity='.2' cx='13.55' cy='12' rx='8.55' ry='4.41' fill='currentColor' />
       <path d='M1.68 7.84s3.43 8.66 12.25 8.66c5.39 0 8.64-4.47 8.64-4.47' stroke='currentColor' />
       <path d='M1.68 16.16s3.43-8.58 12.25-8.58c5.39 0 8.64 4.4 8.64 4.4' stroke='currentColor' />

@@ -16,16 +16,16 @@ export const IconBluetoothOn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bluetooth-on'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m1.67 17.27 12.8-9.3c1.03-.74 1.55-1.1 1.54-1.62 0-.51-.51-.88-1.54-1.62l-2.5-1.78c-1.38-.99-2.07-1.48-2.62-1.2-.54.28-.54 1.13-.54 2.83v14.84c0 1.7 0 2.55.54 2.83.55.28 1.24-.21 2.62-1.2l2.49-1.78c1.03-.74 1.55-1.1 1.55-1.62 0-.51-.51-.88-1.54-1.63L1.67 6.8'
         stroke='currentColor'

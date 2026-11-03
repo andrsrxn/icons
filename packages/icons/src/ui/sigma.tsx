@@ -16,16 +16,16 @@ export const IconSigma: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sigma'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M16.64 6.81V6.7c0-1.42 0-2.12-.44-2.56s-1.14-.44-2.56-.44h-2.88c-2.5 0-3.74 0-4.16.8-.43.8.28 1.83 1.68 3.89L9.6 10.3c.56.82.84 1.23.84 1.69s-.28.87-.84 1.69L8.3 15.6c-1.41 2.06-2.12 3.1-1.7 3.9s1.68.8 4.17.8h2.88c1.42 0 2.12 0 2.56-.45.44-.44.44-1.14.44-2.56v-.11'
         stroke='currentColor'

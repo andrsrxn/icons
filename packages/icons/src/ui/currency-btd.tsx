@@ -16,16 +16,16 @@ export const IconCurrencyBtd: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-btd'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M18 8.51H5.6' stroke='currentColor' />
       <path
         d='M6 4.87c0-1.21.98-2.2 2.2-2.2h.13A2.33 2.33 0 0 1 10.65 5v12.65a3.67 3.67 0 0 0 3.68 3.68h.46A3.2 3.2 0 0 0 18 18.12v-1.45a1.77 1.77 0 0 0-3.54 0v.3'

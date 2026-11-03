@@ -16,16 +16,16 @@ export const IconFileGif: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-gif'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.8 13.12v-7.4c0-1.86 0-2.8.57-3.38.58-.58 1.51-.6 3.38-.61l2.24-.02c1.32-.02 1.97-.02 2.46.26q.4.26.68.68c.3.48.3 1.13.3 2.45 0 1.3 0 1.95.28 2.43q.26.41.67.67c.48.29 1.13.29 2.43.29s1.96 0 2.44.29q.41.26.66.67c.3.48.3 1.13.3 2.43v1.24z'

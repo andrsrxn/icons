@@ -16,16 +16,16 @@ export const IconArrowsDiagonalRight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-arrows-diagonal-right'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M20.54 3.56 3.8 20.29' stroke='currentColor' />
       <path
         d='M10.08 21.28H6.73c-1.9 0-2.84 0-3.42-.58-.59-.59-.59-1.53-.59-3.42v-3.36'

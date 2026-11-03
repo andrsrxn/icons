@@ -16,16 +16,16 @@ export const IconRedo: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-redo'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M19.9 8.63h-9.85a5.69 5.69 0 0 0 0 11.37h.3' stroke='currentColor' />
       <path
         d='M16.48 4.07 18.2 5.8c1.34 1.34 2 2 2 2.83s-.66 1.5-2 2.83l-1.72 1.73'

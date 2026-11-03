@@ -16,16 +16,16 @@ export const IconPineTree: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pine-tree'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.73 6.1a.91.91 0 0 0 .41 1.55.9.9 0 0 1 .6 1.29l-1.43 2.93-.03.07a1 1 0 0 0 .56 1.34l.07.03.1.03a1 1 0 0 1 .42 1.56l-.5.7c-.67.93-1 1.39-.95 1.77a1 1 0 0 0 .32.62c.28.26.85.26 1.99.26h7.54c1.17 0 1.75 0 2.04-.29a1 1 0 0 0 .27-.48c.1-.4-.22-.9-.84-1.89l-.95-1.52a.75.75 0 0 1 .63-1.14c.56 0 .92-.59.66-1.08l-1.52-2.98a.86.86 0 0 1 .55-1.22c.66-.17.87-1 .37-1.46l-3.88-3.6c-.66-.61-.98-.91-1.38-.9-.4 0-.72.3-1.36.9z'

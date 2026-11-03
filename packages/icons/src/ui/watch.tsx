@@ -16,16 +16,16 @@ export const IconWatch: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-watch'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.28 5.26c-.8.14-1.21.21-1.51.06a1 1 0 0 1-.34-.28c-.2-.27-.2-.68-.2-1.5 0-.7 0-1.06.17-1.31a1 1 0 0 1 .27-.28c.25-.16.6-.16 1.3-.16h6.06c.7 0 1.04 0 1.3.16a1 1 0 0 1 .28.29c.16.25.16.6.16 1.29 0 .82 0 1.23-.2 1.5a1 1 0 0 1-.35.28c-.3.15-.7.08-1.5-.07l-2.26-.42-.35-.05c-.1 0-.18.02-.36.05z'

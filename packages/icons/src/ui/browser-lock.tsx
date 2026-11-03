@@ -16,16 +16,16 @@ export const IconBrowserLock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-browser-lock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.97 5.69c0-1.08 0-1.61.2-2.03a2 2 0 0 1 .92-.92c.42-.2.95-.2 2.03-.2h13.74c1.07 0 1.6 0 2.02.2q.62.31.93.92c.2.42.2.95.2 2.03 0 .53 0 .8-.1 1a1 1 0 0 1-.47.47c-.2.1-.47.1-1 .1H3.53c-.54 0-.8 0-1.01-.1a1 1 0 0 1-.46-.46c-.1-.21-.1-.48-.1-1.01'

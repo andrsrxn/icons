@@ -16,16 +16,16 @@ export const IconPhoneMissed: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-phone-missed'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.36 14.9h1.3c.74 0 1.1 0 1.41.1a2 2 0 0 1 1.04.81c.18.28.27.63.45 1.34.14.54.21.82.34 1.05a2 2 0 0 0 .75.75c.22.13.5.2 1.04.34l2.01.54c.9.24 1.35.36 1.7.15.37-.2.49-.65.74-1.55l.18-.66c.14-.51.21-.76.17-1.15-.04-.4-.13-.55-.3-.86-.89-1.62-3.45-4.67-10.17-4.67-6.7 0-9.28 3.04-10.17 4.66-.18.32-.26.47-.3.87-.05.39.02.64.16 1.16l.19.66c.25.9.37 1.34.73 1.54s.8.09 1.7-.15l2.03-.54c.54-.14.8-.21 1.03-.34a2 2 0 0 0 .77-.77c.12-.23.19-.5.33-1.03.17-.7.26-1.05.43-1.32A2 2 0 0 1 9.98 15c.3-.1.67-.1 1.38-.1'

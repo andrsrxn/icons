@@ -16,16 +16,16 @@ export const IconTerminalSquareSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-terminal-square-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.3 21.3c2.83 0 4.25 0 5.13-.87.87-.88.87-2.3.87-5.13V5.53l-2.57 2.23-2.44-2.23 2.16-2.83H8.7c-2.83 0-4.25 0-5.13.87-.87.88-.87 2.3-.87 5.13v6.6c0 2.83 0 4.25.87 5.13.88.87 2.3.87 5.13.87z'

@@ -16,16 +16,16 @@ export const IconEarth: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-earth'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.58 2.7a10.27 10.27 0 0 1 13.76 5.17l-2.87.86L17.16 12l-2.94.76-1.18 4.69 2.47 4.18q-1.68.63-3.58.64c-5.1 0-9.42-4.36-10.23-9.23h3.82l1.83-4.3 3.01-.67.46-2.89z'

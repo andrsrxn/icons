@@ -16,16 +16,16 @@ export const IconGift: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gift'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='4.5' y='11.29' width='15' height='10.11' rx='2' fill='currentColor' />
       <path
         d='M4.5 11.29v4.11c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h3c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12v-4.1'

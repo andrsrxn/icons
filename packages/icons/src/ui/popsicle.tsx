@@ -16,16 +16,16 @@ export const IconPopsicle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-popsicle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.96 17.63c1.57 1.57 2.35 2.35 3.3 2.5a3 3 0 0 0 1 0c.94-.15 1.72-.93 3.28-2.5l6.02-6.01a5.78 5.78 0 0 0-8.18-8.18L6.37 9.46c-1.57 1.56-2.35 2.34-2.5 3.28a3 3 0 0 0 0 1c.15.95.93 1.73 2.5 3.3z'

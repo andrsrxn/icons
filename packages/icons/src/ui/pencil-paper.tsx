@@ -16,16 +16,16 @@ export const IconPencilPaper: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pencil-paper'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.05 14.95V9.6c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h7.48l-8.95 9.1v3.56h3.23L20.4 7.3v7.65c0 2.83 0 4.25-.88 5.13s-2.3.87-5.12.87H9.05c-2.83 0-4.25 0-5.13-.87-.87-.88-.87-2.3-.87-5.13'

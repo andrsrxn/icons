@@ -16,16 +16,16 @@ export const IconLassoPolygon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lasso-polygon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m5.88 15.99 3.86 1.5c.52.21.79.31 1.06.34.28.03.56-.02 1.12-.13l6.07-1.12c1.35-.24 2.02-.37 2.47-.82.44-.46.55-1.14.76-2.5l.49-3.1c.41-2.65.62-3.98-.16-4.7s-2.08-.42-4.69.17l-1.1.26c-.58.13-.86.2-1.15.18a4 4 0 0 1-1.1-.32L9.4 4.28c-1.11-.4-1.67-.6-2.21-.49-.55.11-.99.5-1.85 1.3L3.96 6.37c-.83.76-1.25 1.15-1.4 1.66-.17.51-.04 1.06.2 2.16l.67 2.96c.23 1.02.35 1.53.67 1.9.33.38.81.57 1.78.95'

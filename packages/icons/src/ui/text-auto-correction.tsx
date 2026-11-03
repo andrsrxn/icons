@@ -16,16 +16,16 @@ export const IconTextAutoCorrection: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-auto-correction'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M16.06 4.68h1.33a2.34 2.34 0 0 1 0 4.68h-.6' stroke='currentColor' />
       <path
         d='M16.27 4.68c-.9 0-1.35 0-1.7.18a1.5 1.5 0 0 0-.58.59c-.19.34-.19.79-.19 1.7v5.2c0 .9 0 1.36.2 1.7q.2.38.58.58c.34.2.79.2 1.7.2'

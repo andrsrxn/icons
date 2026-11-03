@@ -16,16 +16,16 @@ export const IconBoxLocation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-box-location'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.4 8.31v7.49a.5.5 0 0 1-.83.38l-2.07-1.8a.5.5 0 0 0-.6-.03l-2.2 1.46a.5.5 0 0 0-.21.5l.57 3.03a.5.5 0 0 1-.25.52l-3.86 2.17.44-9.6a.5.5 0 0 1 .27-.42l8-4.14a.5.5 0 0 1 .74.44'

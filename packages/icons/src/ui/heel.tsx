@@ -18,12 +18,12 @@ export const IconHeel: Icon = ({
       height={size}
       strokeWidth={strokeWidth}
       data-slot='icon-ui-heel'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.25 15.15v3.42c0 .48 0 .71.14.86.15.14.39.14.86.14h.46c.47 0 .7 0 .85-.14s.15-.38.15-.86v-4.11c0-.59 0-.88.27-1.02s.47 0 .88.29c2.18 1.54 3.87 5.3 5.54 5.58 1.47.23 6.36.26 8.72.27.6 0 .9 0 1.04-.3.13-.29-.03-.47-.35-.84-.88-1.02-2.59-1.59-5.16-2.13-2.84-.6-4.78-3.54-6.85-6-2.31-2.74-3.28-3.95-4.47-5.14-.39-.38-.58-.57-.9-.61-.34-.05-.53.05-.9.26C1.52 5.92 1.17 8.4 2 10.49c.8 2 1.22 3.82 1.24 4.66'

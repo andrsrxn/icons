@@ -16,16 +16,16 @@ export const IconSubtract: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-subtract'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.24 16.09c0 2.83 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88h-5.53a3 3 0 0 1-2.78-2.82v-.93a3 3 0 0 1 3.01-2.78l.91-.07c.85-.06 1.28-.1 1.63-.22a3 3 0 0 0 1.93-2.01c.1-.36.12-.79.14-1.64l.03-.66c0-.3.01-.45.03-.58a3 3 0 0 1 2.72-2.63c.13-.02.28-.02.58-.02.31 0 .47 0 .6.02a3 3 0 0 1 2.72 2.72l.01.6z'

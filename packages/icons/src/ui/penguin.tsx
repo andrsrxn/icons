@@ -16,16 +16,16 @@ export const IconPenguin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-penguin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.5 8.57c.98-.47 3.4-1.31 5.28-.84 1.87.48 3.6 2.96 4.22 4.14.61-1.38 2.48-4.14 5.03-4.14s3.97.44 4.35.66A11.1 11.1 0 0 0 12 3.37a11.1 11.1 0 0 0-9.5 5.2'

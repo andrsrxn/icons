@@ -16,16 +16,16 @@ export const IconBasketball: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-basketball'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.25 16.3c2.83 0 4.24 0 5.12-.89.88-.88.88-2.3.88-5.12s0-4.24-.88-5.12-2.3-.88-5.12-.88h-8.5c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12 0 4.24.88 5.12 2.3.88 5.12.88h.29l-.76-5.77h9.48L16 16.29z'

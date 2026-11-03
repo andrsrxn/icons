@@ -16,16 +16,16 @@ export const IconBounceEnd: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bounce-end'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='19.13' cy='6.89' r='3.19' fill='currentColor' />
       <path
         d='M1.68 14.6c1.24.36 2.15.78 3.44 2.3 1.29 1.53 1.75 3.4 1.75 3.4s.43-4.29 1.68-6.37a10 10 0 0 1 4.7-4.32'

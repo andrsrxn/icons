@@ -16,16 +16,16 @@ export const IconTruckFront: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-truck-front'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.43 14.39c0-.39 0-.58-.05-.73a1 1 0 0 0-.63-.63c-.15-.05-.35-.05-.73-.05H3.98c-.38 0-.58 0-.73.05a1 1 0 0 0-.63.63c-.05.15-.05.34-.05.73 0 1.15 0 1.72.15 2.19a3 3 0 0 0 1.9 1.89 8 8 0 0 0 2.18.15h10.4c1.15 0 1.72 0 2.19-.15a3 3 0 0 0 1.89-1.9c.15-.46.15-1.03.15-2.18'

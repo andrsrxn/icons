@@ -16,16 +16,16 @@ export const IconHdmiPort: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hdmi-port'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.77 9.74c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58h12.46c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42v2.57c0 .94 0 1.41-.18 1.8a2 2 0 0 1-.41.6c-.31.3-.75.47-1.64.8l-.4.14-.28.1a2 2 0 0 0-.93.87l-.13.27-.2.4a2 2 0 0 1-1.5.96l-.45.01H7.53a2 2 0 0 1-1.86-1.3v-.02l-.01-.02a2 2 0 0 0-1.3-1.21h-.02l-.45-.14a5 5 0 0 1-1.24-.46 2 2 0 0 1-.8-1.06c-.08-.29-.08-.63-.08-1.31z'

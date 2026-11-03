@@ -16,16 +16,16 @@ export const IconLayerDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-layer-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m2.3 11.34 8.58 3.38a3 3 0 0 0 2.2 0l8.6-3.38a1 1 0 0 0 .03-1.85l-8.57-3.6a3 3 0 0 0-2.33 0L2.28 9.5a1 1 0 0 0 .02 1.85'

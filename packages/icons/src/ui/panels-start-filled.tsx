@@ -16,16 +16,16 @@ export const IconPanelsStartFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-panels-start-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect x='2.96' y='2.74' width='9.35' height='18.52' rx='2' fill='currentColor' />
       <rect x='2.74' y='2.74' width='18.53' height='18.52' rx='3' stroke='currentColor' />
       <path d='M12 20.87V3.13' stroke='currentColor' />

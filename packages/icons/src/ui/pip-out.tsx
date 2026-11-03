@@ -16,16 +16,16 @@ export const IconPipOut: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pip-out'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.75 6c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h16.5c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v4.94c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-5.3c-.95 0-1.42 0-1.71.3-.3.29-.3.76-.3 1.7V18c0 .94 0 1.41-.29 1.7-.3.3-.76.3-1.7.3h-7.2c-.94 0-1.41 0-1.7-.3-.3-.29-.3-.76-.3-1.7z'

@@ -16,16 +16,16 @@ export const IconCloudDrop: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cloud-drop'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m1.62 12.94 3.84 3.8H9.3l2.7-3.18 2.7 3.16h4.38l2.96-2.14V10.3l-3.3-2.35-1.73 1.21-.93-3.5-3.95-2.27-3.3 1.42-1.66 3.14-3.85 1.21z'

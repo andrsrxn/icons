@@ -16,16 +16,16 @@ export const IconGridHorizontal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-grid-horizontal'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.62 2.76c1.51 0 2.27 0 2.86.27a3 3 0 0 1 1.5 1.5c.26.58.26 1.34.26 2.85s0 2.27-.27 2.85a3 3 0 0 1-1.5 1.5c-.58.27-1.34.27-2.85.27H7.38c-1.51 0-2.27 0-2.86-.27a3 3 0 0 1-1.5-1.5c-.26-.58-.26-1.34-.26-2.85s0-2.27.27-2.86a3 3 0 0 1 1.5-1.5c.58-.26 1.34-.26 2.85-.26z'

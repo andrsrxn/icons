@@ -16,16 +16,16 @@ export const IconLightningFast: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lightning-fast'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.32 10.82 13.69 6c1.93-2.76 2.9-4.15 3.6-3.92l.17.07c.65.34.34 2-.29 5.32-.2 1.02-.29 1.53-.03 1.88l.07.1c.3.31.82.31 1.86.31h.33c1.68 0 2.52 0 2.8.54.28.53-.2 1.22-1.15 2.6l-3.38 4.86c-2 2.88-3 4.32-3.71 4.06l-.11-.04c-.69-.34-.36-2.06.3-5.5.2-1.05.3-1.58.02-1.93l-.05-.06c-.3-.34-.83-.34-1.9-.34h-.27c-1.68 0-2.52 0-2.8-.53-.29-.54.2-1.23 1.17-2.61'

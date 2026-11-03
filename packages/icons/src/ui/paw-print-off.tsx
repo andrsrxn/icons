@@ -16,16 +16,16 @@ export const IconPawPrintOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-paw-print-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m6.26 14.47 1.46-1.1c1.82-1.36 2.73-2.05 3.76-2.19a4 4 0 0 1 1.08 0c1.03.14 1.94.83 3.77 2.2l1.45 1.1a3.52 3.52 0 0 1-3.3 6.12l-1.03-.37-.2-.07a4 4 0 0 0-2.67.07l-1.03.37a3.52 3.52 0 0 1-3.3-6.13'

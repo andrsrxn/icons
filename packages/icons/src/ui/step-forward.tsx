@@ -16,16 +16,16 @@ export const IconStepForward: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-step-forward'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.57 11.9c0-4.75 0-7.12 1.53-7.98s3.55.38 7.6 2.85l.17.11c3.75 2.3 5.62 3.44 5.62 5.12s-1.87 2.83-5.62 5.12l-.17.1c-4.05 2.48-6.07 3.72-7.6 2.86s-1.53-3.23-1.53-7.97z'

@@ -16,16 +16,16 @@ export const IconPilcrow: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pilcrow'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.55 21.33c.94 0 1.41 0 1.7-.3.3-.29.3-.76.3-1.7V4.6c0-.95 0-1.42-.3-1.71-.29-.3-.76-.3-1.7-.3h-.81c-.94 0-1.42 0-1.7.3-.3.3-.3.76-.3 1.7v14.73c0 .94 0 1.41.3 1.7.28.3.76.3 1.7.3z'

@@ -16,16 +16,16 @@ export const IconShootingStar: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shooting-star'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.89 4.1c.78-1.52 1.17-2.28 1.78-2.28s1 .76 1.78 2.29l.18.35c.23.45.34.67.54.81s.44.18.93.26l.4.06c1.69.27 2.54.4 2.73.99.18.58-.42 1.19-1.63 2.4l-.29.29c-.35.35-.52.53-.6.75-.07.23-.03.48.04.97l.07.4c.26 1.7.4 2.54-.1 2.9s-1.26-.03-2.79-.8l-.35-.2c-.45-.22-.67-.33-.91-.33s-.46.11-.9.34l-.37.18c-1.52.78-2.29 1.17-2.78.8-.5-.35-.36-1.2-.1-2.9l.06-.39c.08-.5.12-.74.05-.97-.08-.22-.25-.4-.6-.75l-.29-.29c-1.21-1.21-1.82-1.82-1.63-2.4s1.04-.72 2.73-.99l.4-.06c.5-.08.74-.12.93-.26s.3-.36.54-.8z'

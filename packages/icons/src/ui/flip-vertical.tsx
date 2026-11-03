@@ -16,16 +16,16 @@ export const IconFlipVertical: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flip-vertical'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.62 13.44c4.07 0 6.11 0 6.27.82s-1.75 1.56-5.54 3.05l-8.76 3.43c-1.24.49-1.86.73-2.3.43s-.43-.96-.43-2.29v-3.44c0-.94 0-1.41.3-1.7.28-.3.76-.3 1.7-.3z'

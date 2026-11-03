@@ -16,16 +16,16 @@ export const IconRazorBlade: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-razor-blade'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.9 8.32c-.67 0-1.23.56-1.23 1.24v5c0 .67.54 1.2 1.2 1.2s1.2.54 1.2 1.2v.09c0 .7.57 1.28 1.28 1.28h13.33c.71 0 1.28-.58 1.28-1.28v-.1c0-.66.53-1.18 1.19-1.18s1.18-.53 1.18-1.19V9.5c0-.65-.53-1.18-1.18-1.18-.66 0-1.19-.53-1.19-1.18V7c0-.73-.59-1.33-1.32-1.33H5.47c-.74 0-1.33.6-1.33 1.33v.09c0 .68-.55 1.23-1.23 1.23m9.1 5.7c1.2 0 2.16-.9 2.16-2.02 0-1.11-.97-2.01-2.16-2.01s-2.16.9-2.16 2.01c0 .55.23 1.04.61 1.4q.62.59 1.55.61'

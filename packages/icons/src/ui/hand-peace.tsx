@@ -16,16 +16,16 @@ export const IconHandPeace: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hand-peace'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m6.14 1.4 1.9.86 2.18 7.65 2.3-7.9L15 1.4l1.37 1.98-1.37 6 1.9 1.54h3.07l.68 2.53-.99 3.44v2.79l-.99 2.89H7.58l-3.23-4.12-.91-4.76 2.6-3.1-2.08-7.21z'

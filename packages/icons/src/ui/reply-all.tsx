@@ -16,16 +16,16 @@ export const IconReplyAll: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-reply-all'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M6.75 11.4h9.5c3.3 0 5.97 2.68 5.97 5.98' stroke='currentColor' />
       <path
         d='M10.24 6.62 8.28 8.57c-1.33 1.34-2 2-2 2.83s.67 1.5 2 2.83l1.96 1.97'

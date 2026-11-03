@@ -16,16 +16,16 @@ export const IconCurrencyAfn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-afn'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M7.65 14.99h8.13m0 0h.17m0 0h-.17c-.52-.02-2.21-.24-3.96-2.09-3.25-3.43-.83-7.3 2.08-6.59 3.1.77 2.57 5.79 2.05 8.68'
         stroke='currentColor'

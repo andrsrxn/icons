@@ -16,16 +16,16 @@ export const IconTableRowPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-table-row-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.24 6.37c0 1.3 0 1.95-.29 2.43a2 2 0 0 1-.67.67c-.48.29-1.13.29-2.43.29H6.48c-1.3 0-1.95 0-2.43-.29a2 2 0 0 1-.67-.67c-.3-.48-.3-1.13-.3-2.43s0-1.94.3-2.42a2 2 0 0 1 .67-.67c.48-.3 1.13-.3 2.43-.3h11.37c1.3 0 1.95 0 2.43.3q.41.25.67.67c.3.48.3 1.13.3 2.42'

@@ -16,16 +16,16 @@ export const IconFirstAidSquare: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-first-aid-square'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.24 21.24c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V8.76c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H8.76c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v6.48c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88zM12.28 6.08c1.03 0 1.89.82 1.94 1.85.05 1 .85 1.8 1.85 1.84 1.03.04 1.85.9 1.85 1.93v.35a2 2 0 0 1-1.85 2c-1 .08-1.8.9-1.85 1.91a2.06 2.06 0 0 1-2.04 1.96h-.22a2.2 2.2 0 0 1-2.19-1.94l-.02-.19a2 2 0 0 0-1.8-1.73A1.97 1.97 0 0 1 6.15 12l.01-.41c.05-1 .81-1.83 1.81-1.94.94-.1 1.68-.84 1.8-1.77.13-1.03 1-1.8 2.04-1.8z'

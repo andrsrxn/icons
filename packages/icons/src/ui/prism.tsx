@@ -16,16 +16,16 @@ export const IconPrism: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-prism'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.09 21.6c-.53.35-.8.52-1.09.52s-.56-.17-1.09-.51l-2.95-1.92c-2.3-1.5-3.46-2.24-3.25-2.96s1.59-.71 4.34-.71h5.9c2.75 0 4.13 0 4.34.71.21.72-.94 1.47-3.25 2.96z'

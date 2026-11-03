@@ -16,16 +16,16 @@ export const IconTreeViewFolders: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tree-view-folders'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.52 7.73c0 1.26 0 1.88-.35 2.3l-.18.19c-.42.35-1.05.35-2.3.35h-2.93c-1.42 0-2.12 0-2.56-.44s-.44-1.15-.44-2.56V4.7c0-.6.49-1.1 1.1-1.1h.93c.36 0 .54 0 .7.04q.22.05.4.16c.16.08.29.2.55.45.26.24.4.37.55.45q.19.11.4.16c.17.04.34.04.7.04h.6c1.25 0 1.88 0 2.3.35l.18.18c.35.42.35 1.05.35 2.3'

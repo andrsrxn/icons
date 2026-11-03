@@ -16,16 +16,16 @@ export const IconStarHalf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-star-half'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.8 7.03c1.02-2.01 1.54-3.02 2.03-3.1a1 1 0 0 1 .77.18c.4.3.4 1.43.4 3.7v9.84c0 .6 0 .9-.15 1.13-.14.24-.41.38-.94.65l-2.47 1.25c-1.53.78-2.3 1.17-2.79.81s-.36-1.2-.1-2.9l.47-2.94c.08-.5.12-.74.04-.97s-.25-.4-.6-.76l-2.1-2.1C2.15 10.6 1.54 10 1.73 9.42c.19-.59 1.03-.72 2.73-.99l3.1-.5c.33-.05.5-.07.65-.15a1 1 0 0 0 .23-.17c.12-.11.2-.27.35-.58'

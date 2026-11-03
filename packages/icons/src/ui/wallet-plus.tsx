@@ -16,16 +16,16 @@ export const IconWalletPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wallet-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='m4.23 3.16-3 4.39h18.6l-3.1-4.22z' fill='currentColor' />
       <path
         d='M1.9 12.37c0-1.7 0-2.55.33-3.2a3 3 0 0 1 1.3-1.29c.64-.33 1.49-.33 3.19-.33h9.57c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v.66c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-6.11'

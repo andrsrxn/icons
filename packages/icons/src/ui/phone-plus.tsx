@@ -16,16 +16,16 @@ export const IconPhonePlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-phone-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.77 14.2 9.7 13.14c-.77-.78-1.16-1.16-1.3-1.64a2 2 0 0 1-.1-.68c.03-.5.31-.97.87-1.9.42-.73.64-1.09.7-1.48a2 2 0 0 0 0-.56 5 5 0 0 0-.7-1.48L7.82 3.04c-.47-.8-.7-1.21-1.1-1.32-.4-.1-.8.12-1.62.58l-1.12.63c-.46.27-.7.4-.93.7s-.3.46-.4.82C2 6.4 1.42 11.13 7.1 16.8s10.37 5.1 12.35 4.47c.36-.1.54-.16.83-.4.3-.25.43-.48.7-.95l.62-1.12c.46-.81.69-1.22.58-1.61s-.51-.63-1.32-1.1l-2.38-1.38c-.72-.42-1.08-.63-1.46-.69a2 2 0 0 0-.59 0c-.38.07-.74.28-1.45.7-.93.56-1.4.84-1.88.87a2 2 0 0 1-.72-.1c-.47-.14-.85-.52-1.61-1.29'

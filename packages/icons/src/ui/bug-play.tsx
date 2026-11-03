@@ -16,16 +16,16 @@ export const IconBugPlay: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bug-play'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M13.91 18.55c0-2.17 0-3.26.66-3.7q.1-.08.21-.13c.73-.33 1.66.24 3.52 1.37 1.73 1.05 2.6 1.58 2.66 2.34v.24c-.06.76-.93 1.3-2.66 2.35-1.86 1.13-2.79 1.7-3.52 1.36l-.2-.12c-.67-.44-.67-1.53-.67-3.7'
         stroke='currentColor'

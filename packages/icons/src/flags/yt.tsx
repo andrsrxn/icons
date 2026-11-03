@@ -11,8 +11,9 @@ export const IconFlagYT: FlagIcon = ({
   cover,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel)
-  const isHidden = ariaHidden === true
+  const isLabelled = Boolean(ariaLabel?.trim())
+  const isHidden = ariaHidden === true || ariaHidden === 'true'
+  const isAccessible = isLabelled && !isHidden
 
   return (
     <svg
@@ -23,12 +24,12 @@ export const IconFlagYT: FlagIcon = ({
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
       data-slot='icon-flag-yt'
-      role={isHidden || !isLabelled ? undefined : 'img'}
-      aria-hidden={isHidden || !isLabelled ? true : undefined}
-      aria-label={isHidden ? undefined : ariaLabel}
-      focusable={isHidden || !isLabelled ? false : undefined}
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
+      role={isAccessible ? 'img' : undefined}
+      aria-hidden={!isAccessible}
+      aria-label={isAccessible ? ariaLabel : undefined}
+      focusable={false}
       {...props}>
       <defs>
         <defs>
@@ -64,26 +65,6 @@ export const IconFlagYT: FlagIcon = ({
           </linearGradient>
           <linearGradient
             id='yt-i'
-            x1='16'
-            x2='16'
-            y1='3.44'
-            y2='10.72'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#d0d0d0' />
-            <stop offset='1' stopColor='#c4c4c4' />
-          </linearGradient>
-          <linearGradient
-            id='yt-j'
-            x1='5'
-            x2='5'
-            y1='3.44'
-            y2='10.72'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#d0d0d0' />
-            <stop offset='1' stopColor='#c4c4c4' />
-          </linearGradient>
-          <linearGradient
-            id='yt-k'
             x1='10.5'
             x2='10.5'
             y1='5'
@@ -93,7 +74,7 @@ export const IconFlagYT: FlagIcon = ({
             <stop offset='1' stopColor='#f0f0f0' />
           </linearGradient>
           <linearGradient
-            id='yt-l'
+            id='yt-j'
             x1='10.5'
             x2='10.5'
             y1='8'
@@ -180,25 +161,19 @@ export const IconFlagYT: FlagIcon = ({
             <path fill='url(#yt-h)' d='M13 7H8v4h5z' />
           </g>
           <path
+            fill='#b2b2b2'
+            fillRule='evenodd'
+            d='M15.04 4.73v-.47L15.5 4s-.46-.56-.23-.56c.27 0 1.43.37 1.73.56s.45.42.5.85-.32.98-.32.98l-.18.42.79-.18s.13.83-.45 1.43-1.4.49-1.4.49l-.16-.49s-.53.2-.85.67c-.3.47-.4 1.28.1 1.78.52.5 1.35.46 1.75-.25 0 0 .16-.62-.21-.9-.37-.3-.62.3-.63.27-.07-.21-.16-.57.43-.57.6 0 .9.64.81 1.13s-.26.95-1.4 1.08c-1.15.13-1.44-1.32-1.44-1.32s-.3-1.36 0-2.34c.29-.98.72-1 1.6-1.54s-.53-.18-.53-.18-.67.5-.88.32c-.21-.19.5-.92.5-.92m-9.07 0v-.47L5.5 4s.46-.56.23-.56c-.27 0-1.43.37-1.73.56s-.45.42-.5.85.32.98.32.98l.18.42-.79-.18s-.13.83.45 1.43 1.4.49 1.4.49l.16-.49s.53.2.85.67c.3.47.4 1.28-.1 1.78-.52.5-1.35.46-1.75-.25 0 0-.16-.62.21-.9.37-.3.62.3.63.27.07-.21.16-.57-.43-.57-.6 0-.9.64-.81 1.13s.26.95 1.4 1.08c1.15.13 1.44-1.32 1.44-1.32s.3-1.36 0-2.34c-.29-.98-.72-1-1.6-1.54s.53-.18.53-.18.67.5.88.32c.21-.19-.5-.92-.5-.92'
+            clipRule='evenodd'
+          />
+          <path
             fill='url(#yt-i)'
-            fillRule='evenodd'
-            d='M15.04 4.73v-.47L15.5 4s-.46-.56-.23-.56c.27 0 1.43.37 1.73.56s.45.42.5.85-.32.98-.32.98l-.18.42.79-.18s.13.83-.45 1.43-1.4.49-1.4.49l-.16-.49s-.53.2-.85.67c-.3.47-.4 1.28.1 1.78.52.5 1.35.46 1.75-.25 0 0 .16-.62-.21-.9-.37-.3-.62.3-.63.27-.07-.21-.16-.57.43-.57.6 0 .9.64.81 1.13s-.26.95-1.4 1.08c-1.15.13-1.44-1.32-1.44-1.32s-.3-1.36 0-2.34c.29-.98.72-1 1.6-1.54s-.53-.18-.53-.18-.67.5-.88.32c-.21-.19.5-.92.5-.92'
-            clipRule='evenodd'
-          />
-          <path
-            fill='url(#yt-j)'
-            fillRule='evenodd'
-            d='M5.96 4.73v-.47L5.5 4s.46-.56.23-.56c-.27 0-1.43.37-1.73.56s-.45.42-.5.85.32.98.32.98l.18.42-.79-.18s-.13.83.45 1.43 1.4.49 1.4.49l.16-.49s.53.2.85.67c.3.47.4 1.28-.1 1.78-.52.5-1.35.46-1.75-.25 0 0-.16-.62.21-.9.37-.3.62.3.63.27.07-.21.16-.57-.43-.57-.6 0-.9.64-.81 1.13s.26.95 1.4 1.08c1.15.13 1.44-1.32 1.44-1.32s.3-1.36 0-2.34c-.29-.98-.72-1-1.6-1.54s.53-.18.53-.18.67.5.88.32c.21-.19-.5-.92-.5-.92'
-            clipRule='evenodd'
-          />
-          <path
-            fill='url(#yt-k)'
             fillRule='evenodd'
             d='M9.63 5a1 1 0 1 0 1.73 0 1 1 0 0 1-1.73 0'
             clipRule='evenodd'
           />
           <path
-            fill='url(#yt-l)'
+            fill='url(#yt-j)'
             fillRule='evenodd'
             d='M9.5 9a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m2 0a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1'
             clipRule='evenodd'

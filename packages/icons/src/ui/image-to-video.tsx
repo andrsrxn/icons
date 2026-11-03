@@ -16,16 +16,16 @@ export const IconImageToVideo: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-image-to-video'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.35 7.23c0-2.36 0-3.53-.62-4.34a3 3 0 0 0-.54-.55c-.81-.62-2-.62-4.35-.62H6.37c-1.66 0-2.49 0-3.13.32a3 3 0 0 0-1.33 1.33c-.32.64-.32 1.47-.32 3.13 0 1.47 0 2.2.27 2.5a1 1 0 0 0 .92.3c.39-.08.82-.67 1.7-1.86l.25-.35c.56-.77.84-1.15 1.2-1.24a1 1 0 0 1 .5.01c.36.1.63.5 1.15 1.3l1.05 1.6c.51.77.77 1.16 1.15 1.26l.2.02c.39.02.74-.29 1.45-.9l.21-.18c.37-.3.55-.46.75-.53a1 1 0 0 1 .6.01c.2.07.38.23.73.55.81.73 1.22 1.1 1.56 1.12a1 1 0 0 0 .86-.38c.21-.27.21-.82.21-1.9z'

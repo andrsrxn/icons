@@ -16,16 +16,16 @@ export const IconHighlighter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-highlighter'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m13.02 1.76 10.24 10.23-3.98 3.98a4 4 0 0 1-.51.43l-1.66 1.18c-.34.24-.51.36-.7.45-.19.08-.4.12-.8.2l-1.95.38c-.95.18-1.43.27-1.88.14s-.8-.47-1.51-1.15l-2.45-2.32c-.76-.74-1.15-1.1-1.3-1.59-.17-.49-.08-1.02.09-2.08l.1-.6c.04-.26.06-.4.1-.52.04-.13.1-.26.2-.5L8.5 6.66c.15-.34.23-.51.33-.66s.24-.29.5-.55z'

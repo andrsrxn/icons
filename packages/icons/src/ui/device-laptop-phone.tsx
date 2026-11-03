@@ -16,16 +16,16 @@ export const IconDeviceLaptopPhone: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-device-laptop-phone'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.81 16.13c.3-.41.44-.62.66-.74s.47-.11.98-.11h9.22c.9 0 1.34 0 1.63.27s.31.72.37 1.6l.04.69c.07 1 .1 1.5-.2 1.81s-.8.32-1.8.32H3.99c-1.69 0-2.53 0-2.81-.54s.2-1.23 1.17-2.61z'

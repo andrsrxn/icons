@@ -16,16 +16,16 @@ export const IconUserFemalePlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-user-female-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.13 7.46c.01 1.41-.6 3.25-1.19 4.64-.3.7.2 1.5.96 1.5h2.8a1 1 0 0 1 1 1v.72c0 .47-.32.88-.77 1.01-1.1.35-3.13 1.11-4.04 2.35-.46.62-.8 1.6-1.01 2.36-.17.6.3 1.17.92 1.17h14.42a.93.93 0 0 0 .92-1.16 8 8 0 0 0-1-2.37c-.92-1.28-3.03-2.03-4.18-2.36a1.1 1.1 0 0 1-.79-1.02v-.7a1 1 0 0 1 1-1h2.9c.77 0 1.27-.82.98-1.52a14 14 0 0 1-1.08-3.8c-.22-2.08.51-4.52-1.4-5.1-1.18-.36-2.07-.34-2.9.1a.6.6 0 0 1-.76-.18c-.44-.6-1.21-1.3-2.98-1.3-2.81 0-3.81 3.13-3.8 5.66'

@@ -16,16 +16,16 @@ export const IconTextReplace: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-replace'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M16.64 13.53h1.13a2 2 0 1 1 0 4.02h-.52' stroke='currentColor' />
       <path
         d='M16.81 13.53c-.57 0-.85 0-1.08.08-.45.15-.8.5-.95.95-.08.23-.08.52-.08 1.09v4.46c0 .57 0 .86.08 1.09.15.45.5.8.95.95.23.08.51.08 1.08.08'

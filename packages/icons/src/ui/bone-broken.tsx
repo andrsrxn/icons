@@ -16,16 +16,16 @@ export const IconBoneBroken: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bone-broken'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.28 14.53h1.86a1 1 0 0 0 .61-.21l2.63-2.03a1 1 0 0 1 1.31.08l1.98 1.96a1 1 0 0 1 .02 1.39l-2.07 2.24a1 1 0 0 0-.27.73l.1 1.93a1 1 0 0 1-.84 1.04l-1.57.24a1 1 0 0 1-1.03-.5l-1.15-2.13a1 1 0 0 0-.32-.35l-2-1.33a1 1 0 0 1-.43-.98l.18-1.23a1 1 0 0 1 .99-.85'

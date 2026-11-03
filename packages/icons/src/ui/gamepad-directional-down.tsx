@@ -16,16 +16,16 @@ export const IconGamepadDirectionalDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gamepad-directional-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.68 17.85c0-.47 0-.7-.07-.93l-.1-.23c-.1-.2-.26-.37-.59-.7-.79-.82-1.18-1.23-1.66-1.31a2 2 0 0 0-.52 0c-.48.08-.87.49-1.66 1.3-.33.34-.5.51-.6.71l-.09.23c-.07.22-.07.46-.07.93v.77c0 1.1 0 1.66.28 2.05q.15.2.36.35c.38.28.94.28 2.04.28s1.66 0 2.04-.28q.21-.15.36-.35c.28-.4.28-.94.28-2.05z'

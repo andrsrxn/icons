@@ -16,16 +16,16 @@ export const IconBroccoli: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-broccoli'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m17.72 17.9-2.38.33a1.8 1.8 0 0 1-1.58-.55 1.82 1.82 0 0 0-2.94.4l-1.77 3.43a1 1 0 0 1-1.5.34l-4.42-3.43a1 1 0 0 1-.07-1.52l2.85-2.64a2 2 0 0 0-.3-3.16l-.26-.17a2 2 0 0 1-.9-2.01L4.74 7a2 2 0 0 1 1.4-1.6l3.23-1a2 2 0 0 0 .76-.44L11.6 2.6a2 2 0 0 1 2.34-.27l1.58.89a2 2 0 0 0 .9.26l1.23.05a2 2 0 0 1 1.72 1.12l.81 1.66 1.19 1.98a2 2 0 0 1-.03 2.1l-1.11 1.75a2 2 0 0 0-.3.77l-.51 3.32a2 2 0 0 1-1.7 1.67'

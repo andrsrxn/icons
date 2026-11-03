@@ -16,16 +16,16 @@ export const IconTeeth: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-teeth'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.6 2.56c-1.42.25-3.06 2.1-3.06 2.1s-2.22-2.1-4.56-2.1c-2.23 0-3.77 1.14-4.78 3.16-1.44 2.86-.78 6.03.14 9.1 1.04 3.44 2.16 6.9 4.5 6.9h.14c1.03 0 1.85-.82 2.03-1.84a5 5 0 0 1 .7-2.01c.54-.74 1.85-.71 2.44 0 .3.34.53.97.7 1.62.33 1.16 1.05 2.21 2.26 2.2h.04c1.87-.02 3.2-3.11 4.21-6.35.93-2.94 1.86-6.47.33-9.62-1.03-2.12-2.8-3.56-5.08-3.16'

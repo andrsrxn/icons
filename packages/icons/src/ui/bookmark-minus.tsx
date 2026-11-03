@@ -16,16 +16,16 @@ export const IconBookmarkMinus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bookmark-minus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M4.75 6.6c0-1.88 0-2.82.58-3.4.59-.6 1.53-.6 3.42-.6h6.5c1.89 0 2.83 0 3.42.6.58.58.58 1.52.58 3.4v12.04c0 1.6 0 2.4-.51 2.69-.52.28-1.2-.14-2.55-1l-2.06-1.29c-1.04-.65-1.55-.97-2.13-.97s-1.1.32-2.13.97l-2.06 1.3c-1.35.85-2.03 1.27-2.55.99-.51-.29-.51-1.09-.51-2.69z'

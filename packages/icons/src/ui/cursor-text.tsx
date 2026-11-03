@@ -16,16 +16,16 @@ export const IconCursorText: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cursor-text'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M8.6 21.28c1.3 0 1.97 0 2.45-.3a2 2 0 0 0 .65-.65c.3-.48.3-1.14.3-2.46V6.13c0-1.32 0-1.97-.3-2.46a2 2 0 0 0-.65-.65c-.48-.3-1.14-.3-2.45-.3'
         stroke='currentColor'

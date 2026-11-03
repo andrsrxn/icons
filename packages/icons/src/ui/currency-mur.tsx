@@ -16,16 +16,16 @@ export const IconCurrencyMur: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-mur'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M3.95 20.02V3.98' stroke='currentColor' />
       <path d='M11.9 20.02 7.36 12.8' stroke='currentColor' />
       <path d='M4.07 3.98h4.1a4.41 4.41 0 1 1 0 8.82h-4.1' stroke='currentColor' />

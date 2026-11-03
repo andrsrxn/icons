@@ -16,16 +16,16 @@ export const IconMirrorScreen: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mirror-screen'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.24 14.74h.08a3 3 0 0 0 2.96-2.97V9.5c0-2.1 0-3.16-.5-3.91a3 3 0 0 0-.83-.84c-.76-.5-1.81-.5-3.91-.5h-6.98A2.54 2.54 0 0 0 10 9.32l4.3.12a1.9 1.9 0 0 1 1.8 1.63l.12 1.01.01.07a3 3 0 0 0 2.94 2.59z'

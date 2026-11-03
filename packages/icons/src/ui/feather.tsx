@@ -16,16 +16,16 @@ export const IconFeather: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-feather'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.7 11.74c1.19-1.75 1.78-2.62 1.75-3.6-.03-.97-.68-1.8-1.98-3.47l-.07-.1a6 6 0 0 0-.59-.7 6 6 0 0 0-.73-.54l-.1-.06c-1.82-1.27-2.73-1.9-3.75-1.85-1.02.06-1.87.78-3.56 2.22l-2.8 2.4c-.54.46-.8.68-1 .96-.21.28-.35.6-.62 1.25l-2.06 4.82c-.18.41-.27.62-.33.83a3 3 0 0 0-.09.97c.02.22.07.44.16.88.23 1.05.35 1.58.6 2a3 3 0 0 0 1.61 1.31c.46.16 1 .16 2.09.17h.97a6 6 0 0 0 1.44-.1c.3-.08.6-.22 1.16-.51l3.56-1.82a6 6 0 0 0 1.3-.77c.28-.25.5-.56.93-1.2z'

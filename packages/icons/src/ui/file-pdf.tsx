@@ -16,16 +16,16 @@ export const IconFilePdf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-pdf'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M9.76 17.67v2.94c0 .84 0 1.26.33 1.56.34.3.69.26 1.4.17 1.42-.16 3.21-.84 3.21-3.2s-1.8-3.04-3.22-3.2c-.7-.08-1.05-.13-1.39.17s-.33.72-.33 1.56'
         stroke='currentColor'

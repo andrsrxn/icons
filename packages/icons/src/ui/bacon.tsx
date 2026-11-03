@@ -16,16 +16,16 @@ export const IconBacon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bacon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.67 18c-.78-.42-1.16-.63-1.28-1-.13-.35.06-.75.42-1.53l1.03-2.25q.09-.2.15-.28t.2-.25L6.73 10q.22-.22.29-.34c.07-.12.09-.2.16-.42l1.42-4.5.13-.34q.06-.1.22-.3l1.16-1.44c.51-.64.77-.96 1.14-1.04.37-.07.73.12 1.45.5l.16.1c.93.5 1.39.74 1.48 1.18s-.22.85-.85 1.7l-.87 1.16-.17.26q-.05.08-.11.28l-1.51 4.4c-.08.2-.11.3-.17.4s-.14.18-.3.34l-2.71 2.8c-.14.14-.2.21-.26.3q-.06.09-.16.34l-.66 1.6c-.4 1-.6 1.48-1.03 1.64s-.91-.1-1.86-.61'

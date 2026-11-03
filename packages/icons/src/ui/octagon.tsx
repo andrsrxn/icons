@@ -16,16 +16,16 @@ export const IconOctagon: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-octagon'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.53 2.13A4 4 0 0 1 12 1.7c.38 0 .74.14 1.47.43l2.25.89 2.22.96c.72.31 1.08.47 1.35.73.26.27.42.63.73 1.35l.96 2.22.9 2.25c.28.73.42 1.09.42 1.47s-.14.74-.43 1.47l-.89 2.25-.96 2.22a5 5 0 0 1-.73 1.35c-.27.26-.63.42-1.35.73l-2.22.96-2.25.9c-.73.28-1.09.42-1.47.42s-.74-.14-1.47-.43l-2.25-.89-2.22-.96a5 5 0 0 1-1.35-.73 5 5 0 0 1-.73-1.35l-.96-2.22-.9-2.25A4 4 0 0 1 1.7 12c0-.38.14-.74.43-1.47l.89-2.25.96-2.22c.31-.72.47-1.08.73-1.35.27-.26.63-.42 1.35-.73l2.22-.96z'

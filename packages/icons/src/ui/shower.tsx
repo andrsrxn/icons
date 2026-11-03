@@ -16,16 +16,16 @@ export const IconShower: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shower'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.9 3.68a5 5 0 0 1 1.22-.64 2 2 0 0 1 1.8.44c.23.2.41.52.79 1.14l.11.18-4.76 2.88-.11-.18a5 5 0 0 1-.64-1.23 2 2 0 0 1 .44-1.8 5 5 0 0 1 1.14-.79'

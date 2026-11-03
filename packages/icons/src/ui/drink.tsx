@@ -16,16 +16,16 @@ export const IconDrink: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-drink'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m4.55 10.11 1.06 7.24c.36 2.44.54 3.66 1.39 4.4.84.72 2.08.72 4.55.72h.4c2.46 0 3.69 0 4.53-.73.85-.72 1.03-1.94 1.4-4.38l1.08-7.25-3 .42c-.5.07-.77.1-1.03.1-.26-.01-.51-.07-1.02-.18L10 9.63a6 6 0 0 0-1.1-.18c-.29-.01-.57.04-1.12.13z'

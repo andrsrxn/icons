@@ -16,16 +16,16 @@ export const IconWavesWhale: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-waves-whale'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.27 6.53c.2-.85.3-1.28.1-1.62s-.62-.47-1.46-.73l-1.81-.55c-.43-.14-.64-.2-.86-.17-.2.02-.4.14-.78.37l-1.28.79c-.43.26-.64.4-.88.41-.24.02-.47-.08-.94-.27L8.88 3.72c-.42-.18-.63-.27-.85-.26-.22 0-.42.11-.83.32l-.59.3c-.78.4-1.18.6-1.31.96-.14.37.03.78.37 1.59L6.24 8c.12.28.17.42.27.53.09.11.21.2.46.36l1.8 1.22c.28.18.42.28.52.41s.16.3.26.61l.32.96c.15.44.22.66.37.82.16.16.37.24.8.41l1.22.48c1.07.42 1.61.64 2.03.4s.5-.82.68-1.96l.13-.87c.06-.44.1-.65.21-.83.12-.18.3-.3.67-.54l2.28-1.5c.33-.23.5-.34.6-.5.12-.16.16-.35.25-.74z'

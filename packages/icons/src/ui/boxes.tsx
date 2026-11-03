@@ -16,16 +16,16 @@ export const IconBoxes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-boxes'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='7.36' y='2.72' width='9.28' height='9.28' rx='2' fill='currentColor' />
       <rect opacity='.2' x='2.72' y='12' width='9.28' height='9.28' rx='2' fill='currentColor' />
       <rect opacity='.2' x='12' y='12' width='9.28' height='9.28' rx='2' fill='currentColor' />

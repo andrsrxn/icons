@@ -16,16 +16,16 @@ export const IconTextHeadingTwo: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-text-heading-two'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M17.54 15.26c.5-.54.99-.96 2.02-.96 1.82 0 2.11 1.9 1.2 2.84-.53.56-1.7 1.39-2.61 2.18-.45.38-.67.58-.55.9s.44.33 1.09.33h2.58'
         stroke='currentColor'

@@ -16,16 +16,16 @@ export const IconFolderMinus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-folder-minus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.2 14.17c0 2.83 0 4.25-.87 5.12-.88.88-2.3.88-5.12.88H7.79c-2.82 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V7.51c0-.63 0-.95.05-1.22a3 3 0 0 1 2.42-2.41c.26-.05.58-.05 1.22-.05h1.04c1.1 0 1.64 0 2.14.18.5.19.92.54 1.75 1.25l.38.32c.83.7 1.25 1.06 1.75 1.25s1.04.18 2.14.18h1.53c2.82 0 4.24 0 5.12.88s.88 2.3.88 5.12z'

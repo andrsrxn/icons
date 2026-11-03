@@ -16,16 +16,16 @@ export const IconStraightenHorizontal: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-straighten-horizontal'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.82 10.78c0-2.38 0-3.57.7-4.4.69-.84 1.86-1.06 4.2-1.5l4.3-.8c3.3-.62 4.94-.93 6.03-.03s1.08 2.57 1.08 5.92v4.04c0 3.34 0 5-1.08 5.9s-2.72.6-6 0l-4.31-.8c-2.35-.43-3.53-.64-4.22-1.48-.7-.83-.7-2.03-.7-4.42z'

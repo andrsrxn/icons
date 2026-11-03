@@ -16,16 +16,16 @@ export const IconMapPinArea: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-map-pin-area'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.17 22.01c-5.1 0-9.25-1.57-9.25-3.5 0-1.57 2.68-2.89 6.38-3.35.9-.1 1.7 2.58 2.7 2.58.85 0 1.84-2.7 2.63-2.62 3.92.4 6.8 1.77 6.8 3.38 0 1.94-4.14 3.51-9.26 3.51'

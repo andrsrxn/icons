@@ -16,16 +16,16 @@ export const IconBomb: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bomb'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='9.35' cy='13.7' r='7.61' fill='currentColor' />
       <circle cx='9.35' cy='13.7' r='7.61' stroke='currentColor' />
       <path d='M5.29 13.02c.2-.82.43-1.27.97-1.92a4 4 0 0 1 2.02-1.42' stroke='currentColor' />

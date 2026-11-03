@@ -16,16 +16,16 @@ export const IconIgloo: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-igloo'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M15.31 19.77H6c-1.16 0-1.73 0-2.2-.16a3 3 0 0 1-1.89-1.88c-.15-.47-.15-1.04-.15-2.2v-3.31a8 8 0 0 1 7.99-8h.77c3.3 0 6.15 2.28 6.89 5.5'
         stroke='currentColor'

@@ -16,16 +16,16 @@ export const IconProjector: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-projector'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.28 14.96c0 1.88 0 2.82-.59 3.41s-1.53.59-3.41.59H5.74c-1.85 0-2.77 0-3.36-.57-.58-.58-.6-1.5-.64-3.35l-.02-.83c.04-1.31.06-1.97.38-2.44a2 2 0 0 1 .6-.6c.5-.3 1.15-.3 2.47-.3h3.95c.77 0 1.16 0 1.5.13a2 2 0 0 1 .47.26c.3.21.5.53.93 1.18.42.64.63.96.93 1.18q.22.15.46.25c.35.13.73.13 1.5.13h.53c.43 0 .65 0 .85-.04a2 2 0 0 0 1.2-.77c.12-.16.22-.36.4-.75l.13-.28.12-.25a2 2 0 0 1 1.62-1.03h.7a2 2 0 0 1 1.8 1.81c.02.1.02.2.02.42z'

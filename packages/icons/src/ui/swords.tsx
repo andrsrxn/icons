@@ -16,16 +16,16 @@ export const IconSwords: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-swords'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m5.33 15.4 7.23-9.8c.4-.53.59-.8.85-.98a4 4 0 0 1 1.22-.47l1.91-.57c1.58-.47 2.37-.71 2.8-.28s.17 1.21-.32 2.79L18.43 8a4 4 0 0 1-.46 1.17c-.18.26-.44.45-.95.84l-9.76 7.38'
         stroke='currentColor'

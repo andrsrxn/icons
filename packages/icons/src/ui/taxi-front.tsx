@@ -16,16 +16,16 @@ export const IconTaxiFront: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-taxi-front'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.12 13.21c-.18-1-.26-1.51-.47-1.92a3 3 0 0 0-1.78-1.5c-.44-.13-.95-.13-1.98-.13H7.3c-1 0-1.49 0-1.91.13a3 3 0 0 0-1.76 1.43c-.22.38-.32.87-.53 1.84-.3 1.42-.45 2.13-.35 2.7a3 3 0 0 0 1.83 2.26c.54.22 1.27.22 2.72.22h9.6c1.4 0 2.1 0 2.63-.2a3 3 0 0 0 1.84-2.2c.11-.55 0-1.25-.25-2.63'

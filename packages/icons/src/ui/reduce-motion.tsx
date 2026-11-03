@@ -16,16 +16,16 @@ export const IconReduceMotion: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-reduce-motion'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='15.28' cy='12' r='7.06' fill='currentColor' />
       <circle cx='15.28' cy='12' r='7.06' stroke='currentColor' />
       <path d='M9.5 18.7c-.44.1-.7.12-1.16.1a5 5 0 0 1-1.03-.1' stroke='currentColor' />

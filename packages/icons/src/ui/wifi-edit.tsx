@@ -16,16 +16,16 @@ export const IconWifiEdit: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wifi-edit'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M7.28 15.12a8 8 0 0 1 3.2-1.5' stroke='currentColor' />
       <path d='M4.1 11.95a13 13 0 0 1 10.27-2.58' stroke='currentColor' />
       <path d='M1.66 8.33A17 17 0 0 1 12 4.7c4.6 0 7.8 1.6 10.34 3.64' stroke='currentColor' />

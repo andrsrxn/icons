@@ -16,16 +16,16 @@ export const IconEarbudsLeft: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-earbuds-left'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='M8.48 12.07a4.8 4.8 0 1 0-4.79-4.8v13.55h4.8z' fill='currentColor' />
       <path d='M8.48 12.07a4.8 4.8 0 0 0 4.8-4.8 4.8 4.8 0 0 0-9.6 0' stroke='currentColor' />
       <path

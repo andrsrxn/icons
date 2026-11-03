@@ -16,16 +16,16 @@ export const IconLicenseCheck: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-license-check'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.8 22.28c-1.9 0-2.83 0-3.42-.59s-.59-1.53-.59-3.41V5.78c0-1.87 0-2.8.58-3.38s1.51-.6 3.38-.62l5.67-.06 2.83.24c1.58.14 2.36.2 2.88.7.51.51.6 1.3.76 2.87l.32 3.01v7.74c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88z'

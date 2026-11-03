@@ -16,16 +16,16 @@ export const IconBoxer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-boxer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.82 6.57h20.36v10.77c0 .36 0 .54-.02.7a3 3 0 0 1-1.67 2.37c-.15.08-.32.14-.66.26l-.32.11a3 3 0 0 1-1.53.04c-.09-.01-.17-.04-.33-.09l-.69-.2a7 7 0 0 1-1.95-.75 3 3 0 0 1-.45-.4 7 7 0 0 1-.98-1.83c-.6-1.39-.9-2.08-1.37-2.2a1 1 0 0 0-.52 0c-.46.12-.76.81-1.37 2.2l-.12.28a6 6 0 0 1-.87 1.66 3 3 0 0 1-.63.55c-.38.25-.84.38-1.75.64l-.32.09c-.22.06-.33.1-.44.11a3 3 0 0 1-1.15.01l-.44-.1a8 8 0 0 1-1.13-.35 3 3 0 0 1-1.68-2.2 7 7 0 0 1-.04-1.2l.07-5.8z'

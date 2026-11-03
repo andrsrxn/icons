@@ -16,16 +16,16 @@ export const IconCocktail: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cocktail'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.25 4.36c-.05-.7-.07-1.04-.27-1.29s-.54-.33-1.22-.51l-2.3-.6c-.48-.13-.72-.2-.94-.15l-.26.09c-.2.1-.35.3-.65.7l-.21.26c-.5.66-.75 1-.78 1.29-.02.3.1.6.33.81.22.2.64.27 1.47.4.5.08.76.11.93.23a1 1 0 0 1 .43.6c.05.2.01.44-.07.94-.14.82-.21 1.23-.1 1.5a1 1 0 0 0 .75.6c.29.05.67-.11 1.44-.44l.5-.2c.52-.22.79-.33.95-.54l.11-.18c.11-.24.1-.52.06-1.1z'

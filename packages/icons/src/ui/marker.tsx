@@ -16,16 +16,16 @@ export const IconMarker: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-marker'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m12.64 1.4 9.8 9.8-3.85 4.2-.37.4c-.1.08-.21.15-.44.29l-3.05 1.93c-.36.23-.54.34-.74.42s-.41.1-.84.15l-.57.07c-.9.11-1.34.17-1.75.03-.41-.13-.74-.45-1.4-1.07l-2.63-2.5c-.64-.6-.96-.9-1.13-1.3s-.16-.85-.14-1.75v-.78c.02-.62.02-.93.12-1.22.09-.3.27-.55.62-1.06L8.2 6.2l.17-.25.2-.22z'

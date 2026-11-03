@@ -16,16 +16,16 @@ export const IconCakeSlice: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cake-slice'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m2.23 12.28.97 3.25c.62 2.06.93 3.09 1.73 3.68s1.87.6 4.02.6h7.3c2.48 0 3.73 0 4.56-.7a3 3 0 0 0 .39-.38c.7-.84.7-2.08.7-4.57 0-.83 0-1.25-.24-1.52l-.13-.13c-.28-.23-.7-.23-1.52-.23H17c-.63 0-.95 0-1.2.16-.24.16-.37.45-.63 1.02l-.32.73-.16.33a1 1 0 0 1-.66.43l-.37.01c-.23 0-.34 0-.44-.02a1 1 0 0 1-.72-.59c-.04-.1-.06-.2-.1-.43l-.07-.3c-.1-.51-.15-.77-.3-.96a1 1 0 0 0-.34-.28c-.21-.1-.47-.1-1-.1z'

@@ -16,16 +16,16 @@ export const IconCheese: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cheese'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.69 10.73c-.94 0-1.42 0-1.7.3-.3.29-.3.76-.3 1.7v2.06c0 2.83 0 4.25.88 5.13s2.29.87 5.12.87h2.2l.68-.01a3 3 0 0 0 1.03-.32c.15-.07.3-.17.58-.36.6-.4.9-.6 1.22-.72a3 3 0 0 1 2.13 0c.32.12.62.32 1.22.72l.17.12.24.15a3 3 0 0 0 1.4.42h.28c.44 0 .66 0 .84-.02a3 3 0 0 0 2.6-2.6c.03-.2.03-.4.03-.85v-4.59c0-.94 0-1.41-.3-1.7-.28-.3-.76-.3-1.7-.3zm4.56 6.83a1.91 1.91 0 1 0 0-3.82 1.91 1.91 0 0 0 0 3.82'

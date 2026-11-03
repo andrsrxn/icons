@@ -16,16 +16,16 @@ export const IconBread: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bread'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m8.7 21.15 7.57-5.8q.13-.09.18-.15l.16-.18 5.02-6.22c.3-.37.45-.55.5-.77s0-.45-.1-.91l-.5-2.33c-.13-.56-.19-.84-.38-1.04-.18-.2-.46-.28-1-.45l-2-.6a2 2 0 0 0-.84-.16c-.2.02-.39.13-.76.35l-3.2 1.9-3.3 1.53c-.42.2-.63.3-.77.46-.14.18-.2.4-.32.85l-.14.56c-.1.39-.15.58-.27.74s-.29.26-.63.47l-1.84 1.12c-.29.18-.43.27-.54.4-.1.12-.17.28-.29.6l-.86 2.3-.1.27-.18.24-1.8 2.36c-.38.5-.57.76-.6 1.05-.01.3.14.58.45 1.13L3.5 21.3z'

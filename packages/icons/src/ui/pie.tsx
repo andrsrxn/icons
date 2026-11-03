@@ -16,16 +16,16 @@ export const IconPie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pie'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.94 17.67c-.54-.05-.8-.07-1.02-.21-.2-.15-.33-.39-.56-.87l-.74-1.51c-.53-1.1-.8-1.66-.57-2.1.24-.46.85-.57 2.08-.79l.5-.09c.22-.04.33-.06.44-.05s.21.03.42.08l.83.22c.59.16.88.23 1.07.44s.24.5.34 1.1l.25 1.46c.21 1.2.31 1.79-.03 2.16s-.95.33-2.16.23z'

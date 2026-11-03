@@ -16,16 +16,16 @@ export const IconBrushSparkles: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-brush-sparkles'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m6.53 22.13-3.3.1c-.74.01-1.11.02-1.26-.2-.16-.2-.03-.57.24-1.3.26-.73.5-1.58.49-2.22a3.73 3.73 0 1 1 3.83 3.62'
         stroke='currentColor'

@@ -16,16 +16,16 @@ export const IconMusicNoteZzz: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-music-note-zzz'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M5.34 9.06H3.36c-.95 0-1.42 0-1.55-.29-.14-.3.17-.65.8-1.36l1.78-2.07c.62-.71.93-1.07.8-1.36-.14-.3-.61-.3-1.55-.3H1.58'
         stroke='currentColor'

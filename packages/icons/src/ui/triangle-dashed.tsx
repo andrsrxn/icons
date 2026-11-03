@@ -16,16 +16,16 @@ export const IconTriangleDashed: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-triangle-dashed'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m8.24 6.2-5.12 9.3c-1.45 2.65-2.17 3.97-1.6 4.95.59.98 2.1.98 5.11.98H16.9c3.02 0 4.53 0 5.11-.98s-.15-2.3-1.61-4.95l-5.15-9.31c-1.55-2.81-2.33-4.21-3.5-4.21-1.19 0-1.96 1.4-3.5 4.21'

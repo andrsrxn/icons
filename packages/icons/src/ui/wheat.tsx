@@ -16,16 +16,16 @@ export const IconWheat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-wheat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.78 2.83a6.7 6.7 0 0 1 3.69-1.03c.94 0 1.42-.01 2.02.78s.48 1.23.24 2.1c-.3 1.08-.9 2.3-2.1 3.3-1.9 1.56-4.03.9-4.96-.24-.86-1.03-1.04-3.5 1.1-4.9'

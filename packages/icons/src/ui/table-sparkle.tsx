@@ -16,16 +16,16 @@ export const IconTableSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-table-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.56 2.76c1.57 0 2.35 0 2.96.29a3 3 0 0 1 1.43 1.43c.3.6.3 1.4.3 2.96 0 .52 0 .78-.1.99a1 1 0 0 1-.48.47c-.2.1-.47.1-.99.1H4.32c-.52 0-.78 0-.99-.1a1 1 0 0 1-.48-.47c-.1-.2-.1-.47-.1-.99 0-1.57 0-2.35.3-2.96a3 3 0 0 1 1.43-1.43c.6-.3 1.4-.3 2.96-.3z'

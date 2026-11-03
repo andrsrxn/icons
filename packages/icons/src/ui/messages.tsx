@@ -16,16 +16,16 @@ export const IconMessages: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-messages'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.06 14.95c-.58-3.3-2.05-5-4.18-5.74-2.2-.75-3.29-1.13-3.6-2.07-.3-.95.01-1.41.65-2.34a7.02 7.02 0 0 1 12.82 3.98q-.01.88-.1 1.44c-.07.44-.1.66-.1.75-.02.25-.02.28.03.52l.13.47c.32 1.07.48 1.6.44 2a2 2 0 0 1-1.54 1.74c-.4.09-.94 0-2.04-.2l-.43-.05h-.27c-.6.02-1.73-.01-1.81-.5'

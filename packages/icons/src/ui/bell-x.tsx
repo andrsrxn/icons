@@ -16,16 +16,16 @@ export const IconBellX: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bell-x'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.5 14.38c.12.15.19.22.24.3a2 2 0 0 1 .38 1.36c0 .5 0 .74-.04.94a2 2 0 0 1-1.55 1.55c-.2.04-.45.04-.93.04H4.39c-.47 0-.71 0-.9-.04a2 2 0 0 1-1.57-1.56c-.04-.2-.04-.44-.04-.91v-.39a2 2 0 0 1 .64-1.3l1.34-1.47V9.91c0-4.5 3.64-8.14 8.14-8.14a8.2 8.2 0 0 1 8.2 8.2v2.93z'

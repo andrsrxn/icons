@@ -16,16 +16,16 @@ export const IconFolderX: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-folder-x'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m20.07 17.98-.36.38c-.88.91-1.31 1.37-1.88 1.6-.56.25-1.2.25-2.46.25H7.7c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V7.47c0-.66 0-.98.05-1.26a3 3 0 0 1 2.4-2.4c.27-.05.6-.05 1.25-.05h1.07c1.09 0 1.63 0 2.14.19.5.18.91.54 1.75 1.25l.4.34c.83.7 1.24 1.06 1.74 1.24.5.19 1.05.19 2.14.19h1.6c2.82 0 4.24 0 5.11.88.88.87.88 2.29.88 5.12v.38c0 1.28 0 1.92-.24 2.49-.25.57-.72 1-1.65 1.88z'

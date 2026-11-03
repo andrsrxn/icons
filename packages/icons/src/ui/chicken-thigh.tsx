@@ -16,16 +16,16 @@ export const IconChickenThigh: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chicken-thigh'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.7 3.03c-3.55-3.55-8.37-.21-10.72 3.05a14 14 0 0 0-2.22 6.19c-.16 1.3-.23 1.94.87 2.98 1.1 1.03 1.7.93 2.91.7 2.39-.42 5-1.44 6.6-2.48-.6-1.05-1.07-2.95.21-4.33 1.29-1.38 2.68-.94 3.74-.6.8-1.87.29-3.83-1.4-5.51'

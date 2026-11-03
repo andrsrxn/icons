@@ -16,16 +16,16 @@ export const IconBinary: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-binary'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect x='2.78' y='3.33' width='4.26' height='7.36' rx='2' stroke='currentColor' />
       <rect x='17.01' y='3.33' width='4.26' height='7.36' rx='2' stroke='currentColor' />
       <rect x='9.95' y='13.64' width='4.26' height='7.36' rx='2' stroke='currentColor' />

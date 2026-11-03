@@ -16,16 +16,16 @@ export const IconHotdog: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hotdog'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.74 20.82c-.34.34-.51.5-.68.62a2 2 0 0 1-2.2-.01 5 5 0 0 1-.68-.63c-.34-.34-.5-.51-.62-.69a2 2 0 0 1 .01-2.2c.12-.16.29-.33.63-.67l5.5-5.47 3.82-3.63h.01a2 2 0 0 1 2.08-.42h.02q.4.16.7.46a2.95 2.95 0 0 1-.02 4.18z'

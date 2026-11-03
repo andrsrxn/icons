@@ -16,16 +16,16 @@ export const IconChampagne: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-champagne'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.74 8.54c.36-.36.53-.54.61-.74a1 1 0 0 0 0-.7c-.08-.2-.25-.38-.6-.74l-1.2-1.19a3 3 0 0 0-.75-.62 1 1 0 0 0-.69 0c-.2.08-.39.26-.75.62l-.15.14a1 1 0 0 1-.3.18l-3.4 1.56c-1.05.48-1.57.72-1.69 1.19s.24.93.95 1.84l.52.68c.5.66.76 1 .74 1.37s-.32.67-.91 1.26l-2.36 2.36c-.58.58-.87.88-1.25.9-.37.03-.7-.22-1.36-.72l-1.33-1c-.66-.49-1-.74-1.37-.71s-.66.32-1.24.9l-.21.21c-.67.67-1 1-1 1.42s.33.74 1 1.41l3.86 3.87c.67.66 1 1 1.42 1s.74-.34 1.41-1l6.97-6.97q.19-.18.25-.28.08-.1.17-.34l2.34-5.42.08-.19.1-.14z'

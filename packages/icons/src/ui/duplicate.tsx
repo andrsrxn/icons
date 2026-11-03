@@ -16,16 +16,16 @@ export const IconDuplicate: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-duplicate'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.24 7.92c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-5.52a3 3 0 0 0-2.8 3.3l.02.44a3 3 0 0 0 3 2.78l.91.07c.85.07 1.28.1 1.63.22a3 3 0 0 1 1.93 2.02c.1.36.11.78.14 1.63l.02.66.03.57a3 3 0 0 0 2.73 2.64l.57.01h.6a3 3 0 0 0 2.72-2.74c.02-.13.02-.28.02-.59z'

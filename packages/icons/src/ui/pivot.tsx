@@ -16,16 +16,16 @@ export const IconPivot: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pivot'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.02 5.53c0-1.43 0-2.15.35-2.66a2 2 0 0 1 .52-.52C3.39 2 4.12 2 5.55 2c.72 0 1.08 0 1.34.18a1 1 0 0 1 .25.25c.18.26.18.62.18 1.34v16.46c0 .72 0 1.08-.18 1.34a1 1 0 0 1-.25.25c-.26.18-.62.18-1.34.18-1.43 0-2.15 0-2.66-.35a2 2 0 0 1-.52-.52c-.35-.5-.35-1.23-.35-2.66z'

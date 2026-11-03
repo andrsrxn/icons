@@ -16,16 +16,16 @@ export const IconSendFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-send-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M3.21 15.26c-1.14 2.43-1.7 3.65-1.47 4.4a2 2 0 0 0 1.22 1.26c.74.27 1.98-.25 4.46-1.3l9.31-3.94c3.71-1.58 5.57-2.36 5.57-3.69 0-1.32-1.86-2.1-5.57-3.68L7.55 4.4c-2.6-1.09-3.89-1.64-4.66-1.33a2 2 0 0 0-1.13 1.18c-.28.77.32 2.05 1.5 4.6.35.72.52 1.09.79 1.35a2 2 0 0 0 .66.42c.35.13.75.13 1.55.13h4.47c.51 0 1.96.42 1.96 1.23s-1.49 1.4-2 1.4H6.15c-.77 0-1.15 0-1.48.12a2 2 0 0 0-.72.46c-.25.25-.42.6-.74 1.29'
         fillRule='evenodd'

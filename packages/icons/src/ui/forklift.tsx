@@ -16,16 +16,16 @@ export const IconForklift: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-forklift'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.38 6.28c-.72.07-1.09.1-1.33.34-.25.22-.31.58-.44 1.3l-.55 3.13-1.04 1.24c-.57.7-.86 1.05-1.03 1.45a3 3 0 0 0-.21.72c-.07.44 0 .88.12 1.78l.14 1.05.03.17a1 1 0 0 0 1.51.64l.14-.1.22-.16a3 3 0 0 1 3.7.3l.12.1c.14.11.2.17.28.22a3 3 0 0 0 2.54.5l.14-.03.3-.06a3 3 0 0 0 1.2-.6l.2-.16c.5-.36.73-.54 1-.67a3 3 0 0 1 .7-.23c.3-.06.6-.06 1.2-.06h.91l.42-1.55c.1-.38.15-.57.18-.76s.02-.4.02-.79v-.8c0-1.31 0-1.96-.26-2.54-.25-.58-.74-1.02-1.7-1.9l-2.7-2.45c-.32-.3-.48-.44-.68-.5-.2-.07-.42-.05-.85 0z'

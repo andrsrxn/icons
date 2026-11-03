@@ -16,16 +16,16 @@ export const IconReplay: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-replay'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.53 12c0-2.23 0-3.34.54-3.92a2 2 0 0 1 1.05-.58c.77-.17 1.72.42 3.62 1.58 1.76 1.07 2.64 1.61 2.86 2.34a2 2 0 0 1 0 1.16c-.22.73-1.1 1.27-2.86 2.34-1.9 1.16-2.85 1.75-3.62 1.58a2 2 0 0 1-1.05-.58c-.54-.58-.54-1.7-.54-3.92'

@@ -16,16 +16,16 @@ export const IconHandMinimize: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hand-minimize'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m13.18 5.74 1.73-.26 1.17.77-.18 4.97 2.62-.08.94 1.94 2.6.45-.95 7.67-1.42 1.39-3.76-.66-4.77-.73-3.22-4.06-1.53-3.76 2.23-1.36 2.73 2.13z'

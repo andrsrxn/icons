@@ -16,16 +16,16 @@ export const IconPaintBoard: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-paint-board'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.77 12.02c0 5.68 4.6 10.29 10.29 10.29 2.05 0 1.7-2.14 1.34-4.34-.28-1.7 1.56-2.49 1.56-2.49s6.9.08 7.24-3.78c.49-5.67-4.46-9.97-10.14-9.97a10.3 10.3 0 0 0-10.3 10.29'

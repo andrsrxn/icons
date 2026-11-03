@@ -16,16 +16,16 @@ export const IconDeviceTabletLightning: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-device-tablet-lightning'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.77 1.7c-2.82 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.12v8.62c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h4.46c2.82 0 4.24 0 5.12-.88s.88-2.3.88-5.12V7.69c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88zm2.99 6.89c-.05-1.26-.07-1.9-.42-2s-.7.43-1.41 1.48L8.54 11.6c-.34.51-.51.77-.43 1 .08.24.38.33.97.51l1.29.4c.34.1.5.16.6.29s.1.31.1.67v1.03c0 1.28 0 1.92.35 2.03s.72-.4 1.47-1.45l2.58-3.61c.35-.5.53-.74.45-.98-.07-.24-.36-.34-.93-.55l-1.54-.54c-.3-.11-.46-.17-.55-.3s-.1-.28-.1-.6z'

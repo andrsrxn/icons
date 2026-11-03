@@ -16,16 +16,16 @@ export const IconBubbles: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bubbles'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='7.94' cy='7.9' r='6.16' fill='currentColor' />
       <circle opacity='.2' cx='15.49' cy='18.74' r='3.52' fill='currentColor' />
       <circle opacity='.2' cx='20.16' cy='10.83' r='2.05' fill='currentColor' />

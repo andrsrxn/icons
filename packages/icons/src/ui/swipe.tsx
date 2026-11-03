@@ -16,16 +16,16 @@ export const IconSwipe: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-swipe'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.74 15.84c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h5.54a2.53 2.53 0 0 0 .73-4.96l-5.1-1.53-.32-.1a3 3 0 0 1-1.9-3.62l.16-.75a2.58 2.58 0 1 0-5.11-.53z'

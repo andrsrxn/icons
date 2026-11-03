@@ -16,16 +16,16 @@ export const IconMouseDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mouse-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='M5.2 14.06h13.6v3.5H5.2z' fill='currentColor' />
       <path d='M5.2 17.34V8.56a6.8 6.8 0 1 1 13.6 0v8.78' stroke='currentColor' />
       <path d='M18.8 14.25H5.2' stroke='currentColor' />

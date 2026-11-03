@@ -16,16 +16,16 @@ export const IconFlashlight: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-flashlight'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.16 3.84a.9.9 0 0 1 .75.25l7.1 7.1a.73.73 0 0 1-.17 1.17l-5.2 2.81c-.25.14-.38.21-.5.3s-.21.19-.42.4l-4.76 4.75c-1.25 1.25-1.87 1.88-2.64 1.91h-.2c-.77-.03-1.4-.66-2.64-1.9-1.25-1.25-1.87-1.88-1.91-2.65v-.2c.04-.76.66-1.39 1.9-2.64l4.72-4.71c.23-.23.35-.34.44-.47.1-.14.17-.28.31-.57l2.53-5.06a.9.9 0 0 1 .69-.5'

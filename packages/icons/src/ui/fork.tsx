@@ -16,16 +16,16 @@ export const IconFork: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-fork'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m10.35 7.23.93-1.07a1 1 0 0 1 1.46-.06l5.16 5.16a1 1 0 0 1 0 1.41l-1 1a1 1 0 0 1-.7.29h-2.15a1 1 0 0 0-.67.25l-8.45 7.62a1 1 0 0 1-1 .2l-.87-.3a1 1 0 0 1-.64-.64l-.25-.81a1 1 0 0 1 .2-.95l7.3-8.37a1 1 0 0 0 .24-.58l.2-2.57a1 1 0 0 1 .24-.58'

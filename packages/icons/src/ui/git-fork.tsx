@@ -16,16 +16,16 @@ export const IconGitFork: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-git-fork'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M18 9a2.75 2.75 0 0 1-2.74 2.75H8.95A2.75 2.75 0 0 1 6.2 9' stroke='currentColor' />
       <path d='M12 15.14V12' stroke='currentColor' />
       <circle opacity='.2' cx='12' cy='18.37' r='3.07' fill='currentColor' />

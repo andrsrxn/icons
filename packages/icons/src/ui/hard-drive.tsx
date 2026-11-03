@@ -16,16 +16,16 @@ export const IconHardDrive: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hard-drive'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.6 20.44c.7 0 1.05 0 1.34-.06a3 3 0 0 0 2.36-2.35c.05-.3.05-.64.05-1.34s0-1.05-.05-1.34A3 3 0 0 0 19.94 13c-.29-.06-.64-.06-1.34-.06H5.4c-.7 0-1.05 0-1.34.06a3 3 0 0 0-2.36 2.35c-.05.3-.05.64-.05 1.34s0 1.05.05 1.34a3 3 0 0 0 2.36 2.35c.29.06.64.06 1.34.06z'

@@ -16,16 +16,16 @@ export const IconDoveLeaf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-dove-leaf'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.98 8.9c-.98-1.35-3.69-1.75-4.66.22-.21.3-.6.43-.89.2-.94-.75-2-2.72-2.96-4.31 0 0-1.74 3.36-2.13 4.71-1.3.55-3.88-2.1-4.34-2.5-.47 1-.65 3.73.62 6.14 1.27 2.42 2.77 3.57 4.2 4.18a8 8 0 0 0-5.18 1.8c-.44.4-.24 1.06.3 1.3l3.61 1.65a1 1 0 0 0 1-.1l2.2-1.57c.26-.19.6-.23.9-.16a7.5 7.5 0 0 0 5.27-.72c2.74-1.51 2.76-4.52 2.76-6.15 0-1.15 1.13-2.28 1.89-3.08.26-.27.1-.68-.27-.74l-1.43-.22c-.37-.06-.67-.34-.89-.64'

@@ -16,16 +16,16 @@ export const IconFilterPlus: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-filter-plus'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.22 11.8 2.88 7.45c-.37-.38-.56-.57-.7-.8a2 2 0 0 1-.2-.49c-.07-.25-.07-.52-.07-1.05 0-1.23 0-1.84.26-2.3a2 2 0 0 1 .76-.75C3.39 1.8 4 1.8 5.23 1.8h13.62c1.23 0 1.84 0 2.3.26a2 2 0 0 1 .76.75c.25.46.25 1.07.25 2.3 0 .53 0 .8-.06 1.05a2 2 0 0 1-.2.5c-.14.22-.33.41-.7.79l-4.34 4.33c-.58.58-.86.87-1.02 1.24-.15.36-.15.77-.15 1.6v2.13c0 .76 0 1.13-.13 1.47l-.12.28a4 4 0 0 1-1.05 1.04c-2.32 1.97-3.49 2.95-4.47 2.71a2 2 0 0 1-.72-.33c-.81-.6-.81-2.12-.81-5.17v-2.14c0-.82 0-1.23-.15-1.6-.16-.36-.45-.65-1.02-1.23'

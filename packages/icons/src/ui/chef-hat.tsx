@@ -16,16 +16,16 @@ export const IconChefHat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chef-hat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' fill='currentColor' d='M5.94 17.44h11.82v3.41H5.94z' />
       <path
         d='M17.76 12.67v6.23c0 1.17 0 1.75-.34 2.05s-.97.22-2.24.06c-.95-.11-1.96-.16-3.19-.16-1.22 0-2.24.05-3.18.16-1.27.16-1.9.24-2.25-.06-.33-.3-.33-.88-.33-2.05v-6.23'

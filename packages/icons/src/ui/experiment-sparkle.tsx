@@ -16,16 +16,16 @@ export const IconExperimentSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-experiment-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m3.88 16.5 1.58-2.08a2 2 0 0 1 1.72-.78l1.78.11a2 2 0 0 1 .43.08l4.64 1.36a2 2 0 0 0 1.26-.04l3-1.12.65 1.2a2 2 0 0 1-.18 2.19l-.64.82a2 2 0 0 0-.16 2.22l1.02 1.8H6.64a2 2 0 0 1-1.81-1.16l-1.18-2.55a2 2 0 0 1 .23-2.05'

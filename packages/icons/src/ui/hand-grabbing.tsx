@@ -16,16 +16,16 @@ export const IconHandGrabbing: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hand-grabbing'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.63 6.88v3.14c-.74-1.13-1.86-1.25-3.13-.6-1.87.96-1.88 3.36-1.18 4.7.7 1.33 1.03 2.85 2.47 4.1 2.75 2.4 6.6 2.8 9.43 2.8 2.81 0 7.86-1.58 7.78-6.46v-6.2c0-1.31-.63-2.85-2.1-2.85-1.46 0-2.65 1.06-2.65 2.36 0-1.3-.65-4.63-2.66-4.63-2.25 0-2.65 2.34-2.65 3.64 0-1.3-1.2-2.36-2.66-2.36S6.63 5.58 6.63 6.88'

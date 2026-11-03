@@ -16,16 +16,16 @@ export const IconArrowUDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-arrow-u-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M15.42 19.49v-9.9A5.71 5.71 0 0 0 4 9.59v7.33' stroke='currentColor' />
       <path
         d='m20 16.11-1.74 1.75c-1.34 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-1.75-1.75'

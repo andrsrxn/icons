@@ -16,16 +16,16 @@ export const IconBoxingBox: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-boxing-box'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.28 8.28c1.06.1 1.6.14 1.91-.13a1 1 0 0 0 .23-.27c.2-.36.06-.88-.23-1.9-.15-.52-.22-.79-.4-.97l-.16-.14c-.21-.13-.48-.16-1.02-.21l-3.47-.33h-.39l-3.31.33c-.5.05-.75.08-.95.2L7.32 5c-.17.17-.25.4-.41.88-.37 1.06-.55 1.58-.36 1.96a1 1 0 0 0 .23.3c.33.28.88.23 2 .14l3-.27h.34z'

@@ -16,16 +16,16 @@ export const IconEscalatorDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-escalator-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.5 10.97c.28-.3.43-.44.5-.62.08-.19.08-.4.08-.8v-4.7c0-.99 0-1.48-.31-1.78-.32-.3-.81-.27-1.8-.2l-.63.03c-.9.05-1.34.08-1.62.36-.27.3-.27.74-.27 1.63v.25c0 .94 0 1.41-.3 1.7-.28.3-.76.3-1.7.3h-.44c-.84 0-1.27 0-1.55.25s-.34.67-.43 1.52l-.13 1.05c-.09.77-.14 1.16-.4 1.4-.25.25-.63.29-1.41.36l-.9.07c-.75.07-1.13.1-1.39.34-.25.24-.3.61-.41 1.37l-.14.9c-.12.82-.18 1.23-.46 1.47-.28.25-.7.25-1.52.25H4.7c-.94 0-1.42 0-1.7.29-.3.3-.3.76-.3 1.7v1.15c0 .95 0 1.42.3 1.71.28.3.76.3 1.7.3h4.6c.4 0 .6 0 .8-.08.18-.08.32-.22.6-.5z'

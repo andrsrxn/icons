@@ -16,16 +16,16 @@ export const IconBeach: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-beach'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M12.6 16.17s-.15-2.91.72-5.18 2.39-3.56 2.39-3.56' stroke='currentColor' />
       <path d='M15.73 7.07a4 4 0 0 0-1.97-.73 4.3 4.3 0 0 0-2.46.43' stroke='currentColor' />
       <path d='M21.55 7.84a5 5 0 0 0-2.53-1.1 5 5 0 0 0-3.14.47' stroke='currentColor' />

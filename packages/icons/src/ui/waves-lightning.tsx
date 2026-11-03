@@ -16,16 +16,16 @@ export const IconWavesLightning: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-waves-lightning'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m15.47 14.43 1.84-2.4c.8-1.03 1.2-1.54 1.46-1.61a.8.8 0 0 1 .93.43c.12.24-.02.88-.29 2.16-.08.38-.12.56-.1.72a.8.8 0 0 0 .39.54c.14.08.33.11.7.16l.19.03c.83.1 1.25.17 1.44.4q.18.2.2.47c.01.3-.25.63-.76 1.3l-1.85 2.35c-.87 1.11-1.3 1.67-1.6 1.72a.8.8 0 0 1-.86-.4c-.14-.26.01-.95.3-2.33.1-.42.14-.63.1-.8a.8.8 0 0 0-.36-.5c-.15-.1-.36-.12-.79-.17h-.07c-.75-.1-1.13-.14-1.32-.32a.8.8 0 0 1-.25-.6c0-.26.24-.56.7-1.15'

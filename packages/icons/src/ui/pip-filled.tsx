@@ -16,16 +16,16 @@ export const IconPipFilled: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pip-filled'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M1.71 8c0-1.89 0-2.83.59-3.41S3.83 4 5.71 4H18.3c1.88 0 2.82 0 3.41.59.59.58.59 1.52.59 3.41v.94c0 1.88 0 2.83-.59 3.41s-1.53.59-3.41.59h-1.81c-1.44 0-2.15 0-2.66.35a2 2 0 0 0-.52.52c-.35.5-.35 1.23-.35 2.66s0 2.15-.35 2.66a2 2 0 0 1-.52.52c-.51.35-1.23.35-2.66.35h-3.7c-1.9 0-2.83 0-3.42-.59-.59-.58-.59-1.52-.59-3.41z'
         fill='currentColor'

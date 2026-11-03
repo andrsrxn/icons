@@ -16,16 +16,16 @@ export const IconSoilMoistureGlobalThermometer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-soil-moisture-global-thermometer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.48 19.07v-3.92c0-.42.37-.76.83-.76s.82.34.82.76v3.92s.72.72.72 1.34c0 .8-.69 1.43-1.54 1.43s-1.54-.64-1.54-1.43c0-.62.71-1.34.71-1.34'

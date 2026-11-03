@@ -16,16 +16,16 @@ export const IconSendClock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-send-clock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m18.87 13.91.15.09a2 2 0 0 0 1.67.1l.16-.08.54-.25a2 2 0 0 0-.03-3.49l-.54-.24L9 5.04c-3.9-1.67-5.85-2.5-6.8-1.57l-.09.08c-.9.98 0 2.91 1.76 6.78.36.78.54 1.16.55 1.58V12c-.01.42-.19.8-.54 1.58-1.74 3.82-2.6 5.73-1.76 6.7l.17.17c.97.86 2.88.01 6.72-1.69l.17-.08c.84-.37 1.26-.56 1.56-.9l.01-.01c.3-.34.41-.8.65-1.7.25-.92.38-1.39.68-1.73s.74-.54 1.62-.91l.67-.28c.9-.39 1.36-.58 1.83-.55s.9.28 1.75.77z'

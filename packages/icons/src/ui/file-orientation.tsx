@@ -16,16 +16,16 @@ export const IconFileOrientation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-orientation'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.67 17.19c-1.88 0-2.82 0-3.41-.59-.59-.58-.59-1.53-.59-3.41V5.3c0-1.53 0-2.3.4-2.83a2 2 0 0 1 .39-.39c.53-.4 1.3-.41 2.82-.43h1.1c.53-.01.8-.02 1.02.03a2 2 0 0 1 1.52 1.5c.05.23.05.5.05 1.03s0 .8.05 1.01a2 2 0 0 0 1.5 1.51c.23.05.5.05 1.02.05.53 0 .8 0 1.02.05a2 2 0 0 1 1.5 1.5c.05.23.05.5.05 1.02v1.24H9.16l-2.49 2.1v4.5z'

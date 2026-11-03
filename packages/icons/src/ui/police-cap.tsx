@@ -16,16 +16,16 @@ export const IconPoliceCap: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-police-cap'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.5 6.5c.22-.45.33-.67.5-.67s.28.22.5.68l.4.81q.08.2.15.24.08.06.27.08l.89.13c.49.07.73.1.79.28.05.16-.13.34-.48.7l-.64.63q-.15.13-.18.22t.02.29l.15.9c.08.5.12.74-.02.84s-.36 0-.8-.24l-.79-.43q-.18-.1-.26-.1t-.26.1l-.8.43c-.43.23-.65.35-.8.24-.13-.1-.1-.35 0-.85l.14-.9q.05-.2.02-.28-.02-.09-.18-.22l-.64-.64c-.35-.35-.53-.53-.48-.7s.3-.2.8-.27l.88-.13q.2-.02.27-.08.07-.04.15-.24z'

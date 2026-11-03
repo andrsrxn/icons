@@ -16,16 +16,16 @@ export const IconInvoice: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-invoice'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.15 20.7c1.36.88 2.04 1.32 2.56 1.03.52-.28.52-1.09.52-2.7V8.52c0-2.84 0-4.25-.88-5.13s-2.3-.88-5.12-.88H9.77c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12V19c0 1.6 0 2.41.52 2.7l.02.01c.52.28 1.2-.17 2.54-1.05.47-.3.7-.46.97-.48h.02c.26 0 .51.12 1.01.38l2.22 1.15c.46.23.68.35.93.35.24 0 .47-.12.92-.36l2.15-1.13c.5-.27.76-.4 1.03-.39s.5.17.99.48z'

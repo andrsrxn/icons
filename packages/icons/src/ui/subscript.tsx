@@ -16,16 +16,16 @@ export const IconSubscript: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-subscript'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M17.59 14.47c.5-.54.97-.96 2-.96 1.8 0 2.1 1.88 1.19 2.82-.53.55-1.68 1.37-2.58 2.14-.45.39-.67.58-.55.9s.44.33 1.09.33h2.54'
         stroke='currentColor'

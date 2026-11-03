@@ -16,16 +16,16 @@ export const IconHardHat: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hard-hat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m14.54 5.78.17.16.18.13 3.32 2.13c.28.18.43.27.53.4s.16.29.27.6l1.14 3.16c.43 1.2.65 1.8.35 2.23-.29.42-.93.43-2.2.45l-12.6.18c-1.3.02-1.95.03-2.26-.4-.3-.42-.09-1.03.34-2.26l1.15-3.31c.12-.34.18-.51.3-.65.1-.13.25-.22.56-.4l3.36-2.03a2 2 0 0 0 .4-.3c.06-.06.1-.14.2-.3.21-.35.31-.52.47-.64l.23-.13c.18-.07.38-.07.8-.07h1.42c.42 0 .63 0 .81.08s.33.22.62.52z'

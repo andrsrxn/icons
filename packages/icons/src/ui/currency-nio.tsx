@@ -16,16 +16,16 @@ export const IconCurrencyNio: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-nio'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M22.1 7.84c-.37-1.24-2.06-2.2-4.06-2.2s-4.17.83-4.17 3.32c0 4.87 7.98 1.08 8.34 5.87.18 2.29-2.13 3.52-4.17 3.52-2.03 0-3.52-.96-4.17-2.22'
         stroke='currentColor'

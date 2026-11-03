@@ -16,16 +16,16 @@ export const IconGem: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-gem'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m1.62 10.35 4.1-7.2c.14-.24.22-.37.33-.43.12-.07.26-.07.54-.07h2.28c.57 0 .85 0 1 .18.15.19.1.46-.02 1.02l-1.5 7.25-.03.2.04.2 1.23 5.82c.31 1.45.47 2.17.13 2.34-.34.18-.84-.36-1.84-1.45l-6.13-6.7c-.24-.25-.36-.38-.37-.54s.07-.32.24-.62'

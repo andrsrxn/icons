@@ -16,16 +16,16 @@ export const IconHeartHalf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-heart-half'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12 18.74V6.7q0-.2-.02-.3l-.14-.22c-.76-1.05-2.6-2.77-5.06-2.77-3.33 0-5.84 3.8-4.76 7.82.86 3.2 5.08 5.93 8.05 8.36.9.75 1.36 1.12 1.64.98.29-.13.29-.7.29-1.83'

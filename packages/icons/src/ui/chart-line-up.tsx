@@ -16,16 +16,16 @@ export const IconChartLineUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chart-line-up'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m6.34 15.37 2.36-3.35c.69-.97 1.03-1.45 1.52-1.47s.87.43 1.64 1.33l1.27 1.49c.79.92 1.18 1.38 1.67 1.35.5-.03.84-.53 1.51-1.53l3.72-5.49'
         stroke='currentColor'

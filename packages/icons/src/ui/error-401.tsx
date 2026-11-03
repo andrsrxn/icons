@@ -16,16 +16,16 @@ export const IconError401: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-error-401'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M6.36 16.61V9.5c0-1.34 0-2.02-.35-2.12-.36-.11-.73.45-1.48 1.56l-1.96 2.93c-.46.69-.7 1.03-.55 1.3.14.26.55.26 1.38.26h4.46'
         stroke='currentColor'

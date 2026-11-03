@@ -16,16 +16,16 @@ export const IconBookOpen: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-book-open'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.13 3.44c2.04 0 3.43.4 4.25.73.36.16.54.23.7.48.18.25.18.5.18.99v12.13c0 1.26 0 1.9-.35 2.2s-1.03.2-2.4-.01a16 16 0 0 0-4.77 0c-1.36.2-2.05.3-2.4 0-.34-.3-.34-.93-.34-2.19V5.64c0-.5 0-.74.17-.99s.35-.32.71-.48c.82-.33 2.2-.73 4.25-.73'

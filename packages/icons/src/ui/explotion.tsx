@@ -16,16 +16,16 @@ export const IconExplotion: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-explotion'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.18 14.83c-2.45 0-4.51 3.39-3.89 5.6-2.1-1.22-5.57-.45-6.8 1.66-1.43-2.49-5.33-3.66-8.74-2.8 1.94-2.13 2.61-7.62 0-9.12 2.78-.75 4.94-3.48 4.2-6.26 3.07 1.26 6.7.65 8.29-2 0 2.58 4.61 4.4 7.57 4.16-2.1 2.03-2.87 7.29-.63 8.76'

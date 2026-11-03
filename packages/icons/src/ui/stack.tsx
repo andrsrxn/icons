@@ -16,16 +16,16 @@ export const IconStack: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stack'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.42 17.12c.65 0 .97 0 1.23-.08a2 2 0 0 0 1.4-1.39c.07-.26.07-.58.07-1.23 0-.58 0-.87-.07-1.12a2 2 0 0 0-1.23-1.37c-.24-.1-.53-.12-1.11-.18h-.06c-.54-.07-.8-.1-1.04-.18a2 2 0 0 1-1.2-1.21 5 5 0 0 1-.17-1.05 5 5 0 0 0-.17-1.12 2 2 0 0 0-1.38-1.24c-.25-.07-.54-.07-1.12-.07-.64 0-.96 0-1.22.08a2 2 0 0 0-1.4 1.4c-.07.25-.07.57-.07 1.2v3.56c0 1.88 0 2.82.59 3.41s1.53.59 3.41.59z'

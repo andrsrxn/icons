@@ -16,16 +16,16 @@ export const IconRockingHorse: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-rocking-horse'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.6 5.47c-.14-.54-.2-.81-.36-.99a1 1 0 0 0-.68-.35c-.23-.02-.49.08-1 .28l-.39.15c-.28.1-.42.16-.54.25l-.05.04c-.11.1-.2.23-.35.49L14.6 8c-.26.42-.39.63-.59.76-.2.12-.44.15-.93.2l-5.71.53c-.38.04-.57.05-.74.14-.16.08-.3.22-.55.5l-.52.57a2 2 0 0 0-.38.49c-.07.14-.09.3-.13.6l-.22 1.65-.04.28-.1.26-1.12 2.56c-.17.38-.25.57-.26.75q-.02.47.32.8c.13.11.32.2.7.35.3.13.46.2.6.21a1 1 0 0 0 .7-.2c.13-.08.23-.21.42-.48l1.9-2.6c.3-.4.45-.6.66-.7s.46-.1.96-.1h4.38c.54 0 .82 0 1.04.12s.37.35.66.81l1.69 2.7c.16.26.24.39.34.48a1 1 0 0 0 .75.26c.13-.01.28-.06.56-.17.38-.13.57-.2.7-.3a1 1 0 0 0 .37-.89c-.02-.16-.1-.34-.27-.7l-1.6-3.47c-.13-.28-.2-.42-.21-.56-.02-.15 0-.3.05-.6l.2-1.16c.12-.73.18-1.1.43-1.33.25-.24.62-.27 1.36-.34l1.21-.1.08-.01a1 1 0 0 0 .72-.47l.09-.12a1 1 0 0 0-.27-1.31l-.13-.09-1.47-.95a2 2 0 0 1-.33-.24 1 1 0 0 1-.2-.28c-.05-.1-.08-.2-.13-.4'

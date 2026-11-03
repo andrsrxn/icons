@@ -16,16 +16,16 @@ export const IconParachute: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-parachute'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12 1.7a9.4 9.4 0 0 0-9.23 7.6c-.13.7-.2 1.06.03 1.25.22.19.6.04 1.39-.24A24 24 0 0 1 12 9.02c3.45 0 6.02.58 7.86 1.3.74.28 1.11.43 1.34.24s.16-.53.04-1.21A9.4 9.4 0 0 0 12 1.69'

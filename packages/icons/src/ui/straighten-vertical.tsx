@@ -16,16 +16,16 @@ export const IconStraightenVertical: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-straighten-vertical'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.2 3.85c2.38 0 3.57 0 4.4.7.83.68 1.05 1.85 1.5 4.2l.8 4.3c.62 3.3.93 4.94.03 6.03s-2.58 1.08-5.93 1.08H9.96c-3.34 0-5 0-5.9-1.08s-.6-2.72 0-6l.8-4.32c.43-2.35.65-3.52 1.48-4.22.84-.69 2.03-.69 4.42-.69z'

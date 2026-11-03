@@ -16,16 +16,16 @@ export const IconAirplaneLanding: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-airplane-landing'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m4.8 12.57 11.33 3.03 1.95.53c1.59.42 2.38.63 3-.06.6-.7.37-1.29-.11-2.47a4.6 4.6 0 0 0-3.36-2.9 5 5 0 0 1-1.57-.59c-.23-.19-.65-.98-1.48-2.56a11 11 0 0 0-3.03-3.5c-.78-.52-1.16-.78-1.44-.61-.27.17-.17.88.02 2.3l.05.35c.11.99.17 1.48-.2 1.83-.36.34-1.2.2-2.86-.08-.06 0-.1-.01-.3-.17s-.3-.43-.53-.95l-.45-1.07c-.1-.23-.14-.34-.21-.44a1 1 0 0 0-.33-.28c-.1-.06-.22-.1-.47-.16-.69-.18-1.04-.28-1.3-.2a1 1 0 0 0-.67.61c-.1.25-.04.6.08 1.31l.46 2.8.55 2.38c.1.44.44.78.88.9'

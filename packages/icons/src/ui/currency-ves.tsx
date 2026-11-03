@@ -16,16 +16,16 @@ export const IconCurrencyVes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-ves'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M2.8 20.33V3.67' stroke='currentColor' />
       <path d='M2.91 3.67H6.4a4.04 4.04 0 1 1 0 8.09H2.91' stroke='currentColor' />
       <path d='M2.91 11.76h4.66a4.29 4.29 0 0 1 0 8.57H2.9' stroke='currentColor' />

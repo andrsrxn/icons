@@ -16,16 +16,16 @@ export const IconListPin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-list-pin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M17.75 17.33c-1.47 0-2.21 0-2.5-.48-.3-.49.05-1.14.73-2.45l.72-1.39a.8.8 0 0 0-.23-1.04.83.83 0 0 1 .5-1.48h3c.8 0 1.15 1 .53 1.5-.3.24-.4.66-.23 1l.7 1.48c.61 1.28.92 1.92.62 2.4-.29.46-1 .46-2.42.46z'

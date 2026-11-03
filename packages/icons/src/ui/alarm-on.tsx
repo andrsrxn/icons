@@ -16,16 +16,16 @@ export const IconAlarmOn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-alarm-on'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='12' cy='13.2' r='9.34' fill='currentColor' />
       <circle cx='12' cy='13.2' r='9.34' stroke='currentColor' />
       <path d='M1.46 6.54s.95-1.5 2.53-2.82a11 11 0 0 1 3.05-1.84' stroke='currentColor' />

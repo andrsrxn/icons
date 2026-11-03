@@ -16,16 +16,16 @@ export const IconShirt: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shirt'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.38 5.6c-1.65 0-2.3-1.1-2.54-1.94-.16-.53-.6-.99-1.16-.99H7a1 1 0 0 0-.76.35L1.52 8.55a1 1 0 0 0 .42 1.6l3.47 1.25a1 1 0 0 0 1.34-.94v10.1a1 1 0 0 0 1 1l8.45.03a1 1 0 0 0 1-1V10.25a1 1 0 0 0 1.3.96l3.6-1.14a1 1 0 0 0 .5-1.54L18.65 3.1a1 1 0 0 0-.83-.41l-1.76.04c-.54 0-.98.46-1.14.98-.25.83-.89 1.9-2.54 1.9'

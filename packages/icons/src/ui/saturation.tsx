@@ -16,16 +16,16 @@ export const IconSaturation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-saturation'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M21.23 15.24c0 2.83 0 4.25-.88 5.13-.87.87-2.29.87-5.12.87H7.6c-2.06 0-3.09 0-3.34-.61-.26-.62.47-1.35 1.92-2.8L17.82 6.18C19.27 4.73 20 4 20.62 4.25s.61 1.29.61 3.34z'

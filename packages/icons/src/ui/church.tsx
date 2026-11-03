@@ -16,16 +16,16 @@ export const IconChurch: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-church'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.37 11.25c0-.91 0-1.37.18-1.77.19-.4.54-.7 1.23-1.29l1.63-1.37c1.24-1.05 1.85-1.57 2.59-1.57s1.35.52 2.58 1.57l1.63 1.37c.7.6 1.04.89 1.23 1.29s.18.86.18 1.77v8.28a1.96 1.96 0 0 1-3.91 0v-1.72a1.7 1.7 0 0 0-2.45-1.53c-.58.28-.94.87-.94 1.52v1.71a1.97 1.97 0 1 1-3.95 0z'

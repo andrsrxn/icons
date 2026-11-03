@@ -16,16 +16,16 @@ export const IconEngine: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-engine'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.84 16.4a6 6 0 0 1 .96-.95c.25-.17.52-.29 1.07-.52l1.05-.44c.54-.23.8-.34 1.04-.49a3 3 0 0 0 1.3-1.98c.05-.26.05-.55.05-1.14 0-.86 0-1.28-.08-1.64a3 3 0 0 0-2.2-2.2c-.35-.08-.78-.08-1.63-.08h-7.42c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v1.06c0 2.8 0 4.21.86 5.09l.03.03c.88.86 2.28.86 5.08.86 1.32 0 1.98 0 2.57-.26h.02c.58-.27 1.02-.77 1.9-1.76z'

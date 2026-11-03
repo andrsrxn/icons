@@ -16,16 +16,16 @@ export const IconLayersHalf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-layers-half'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m4.57 7.72 5.21-2.05a6 6 0 0 1 2.2-.64c.56 0 1.1.2 2.19.63l5.24 2.06c1.95.76 2.92 1.14 2.93 1.82 0 .67-.96 1.07-2.88 1.88L14.3 13.6h0c-1.15.48-1.72.72-2.33.72-.6 0-1.17-.24-2.32-.73l-5.13-2.16c-1.92-.8-2.88-1.21-2.87-1.88 0-.68.98-1.06 2.92-1.82'
         stroke='currentColor'

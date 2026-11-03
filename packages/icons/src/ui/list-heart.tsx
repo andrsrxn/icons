@@ -16,16 +16,16 @@ export const IconListHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-list-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.28 11.37a2.7 2.7 0 0 0-2.14 1.23A2.7 2.7 0 0 0 16 11.37c-1.37 0-2.4 1.56-1.95 3.2.44 1.66 3.05 3 4.09 4.17 1.04-1.17 3.65-2.51 4.09-4.16s-.59-3.2-1.95-3.2'

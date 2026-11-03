@@ -16,16 +16,16 @@ export const IconGhost: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ghost'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.87 9.48a7.87 7.87 0 0 0-15.74 0v7.72l-.73 2.45c-.29.98 0 2.04.73 2.74l2.15-.81c.8-.3 1.19-.45 1.6-.49a3 3 0 0 1 .6 0c.4.05.8.2 1.58.52.81.33 1.21.5 1.63.53q.3.03.61 0c.43-.04.83-.2 1.64-.53.78-.31 1.18-.47 1.59-.51a3 3 0 0 1 .6-.01c.4.04.8.19 1.59.49l2.15.81c.24-.33.36-.5.45-.67a3 3 0 0 0 .31-1.89c-.03-.19-.09-.39-.2-.78l-.56-1.85z'

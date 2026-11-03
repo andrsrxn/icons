@@ -16,16 +16,16 @@ export const IconTrainSpeedFront: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-train-speed-front'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M19.98 13.37c0-.94 0-1.42-.22-1.69a1 1 0 0 0-.55-.35c-.34-.08-.77.13-1.62.54l-.06.03c-.44.21-.66.32-.89.39l-.38.08c-.24.04-.48.04-.97.04H8.7c-.47 0-.7 0-.93-.03l-.44-.1a6 6 0 0 1-.85-.39c-.85-.42-1.28-.62-1.62-.55a1 1 0 0 0-.57.35c-.22.28-.22.75-.22 1.7 0 1.86 0 2.79.4 3.49a3 3 0 0 0 1.1 1.1c.7.4 1.63.4 3.5.4h5.9c1.88 0 2.82 0 3.52-.4a3 3 0 0 0 1.09-1.1c.4-.7.4-1.63.4-3.5'

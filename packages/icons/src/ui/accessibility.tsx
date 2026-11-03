@@ -16,16 +16,16 @@ export const IconAccessibility: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-accessibility'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='m5.75 8.55 3.72 1.48c1.23.48 1.84.72 2.18 1.23s.35 1.17.35 2.49v1.89c0 .69 0 1.03-.11 1.35s-.33.59-.75 1.13l-3.3 4.18'
         stroke='currentColor'

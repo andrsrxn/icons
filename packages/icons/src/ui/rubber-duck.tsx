@@ -16,16 +16,16 @@ export const IconRubberDuck: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-rubber-duck'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='M11.88 11.93c.58-.5.88-.89 1.08-1.2a4.5 4.5 0 1 0-8.14-3.07' stroke='currentColor' />
       <path d='M6.9 11.93q-.88-.61-1.4-1.44' stroke='currentColor' />
       <path

@@ -16,16 +16,16 @@ export const IconTractor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tractor'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20 11.72a2 2 0 0 0-.3-.5 1 1 0 0 0-.38-.25c-.13-.05-.28-.06-.57-.09l-6.21-.53q-.29-.03-.37-.02a1 1 0 0 0-.8 1.54l.23.29.13.15c.55.67.78 1.56.6 2.41l-.16.83a2.2 2.2 0 0 0 3.78 1.9l1.65-1.8 2.18.99a1.37 1.37 0 0 0 1.78-1.87z'

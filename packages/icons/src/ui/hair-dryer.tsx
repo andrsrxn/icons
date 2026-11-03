@@ -16,16 +16,16 @@ export const IconHairDryer: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-hair-dryer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.09 18.66c-1.07.2-1.6.3-1.96.01s-.35-.83-.35-1.92V13.2c0-.95 0-1.42.3-1.72.29-.3.76-.32 1.7-.34h.08c.65-.03.98-.03 1.23.13.26.16.38.46.62 1.06l.8 1.97c.14.33.21.5.22.67 0 .18-.06.35-.17.7l-.5 1.53c-.19.57-.28.86-.5 1.05-.2.18-.5.24-1.09.35z'

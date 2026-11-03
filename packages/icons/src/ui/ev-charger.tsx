@@ -16,16 +16,16 @@ export const IconEvCharger: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ev-charger'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m17.9 10.25-.04-.04a1 1 0 0 1 .16-1.59l.05-.03 2.15-1.24.03-.02a1 1 0 0 1 1.46.64v.04l.01.04a2 2 0 0 1-.93 2.14l-.04.02-.47.27-.05.03a2 2 0 0 1-2.33-.26'

@@ -16,16 +16,16 @@ export const IconTruckLightning: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-truck-lightning'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.9 9.88c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H6.6c0 .66.42 1.24 1.04 1.46l1.34.47-2.81 4.92-1.57.23.18-3.42-3.05-1.13v9a1.37 1.37 0 0 0 2.29 1.03l.5-.44a2.34 2.34 0 0 1 3.21.1c.44.44 1.04.69 1.67.69h2.35c.3 0 .46 0 .61-.02a3 3 0 0 0 1.32-.46c.13-.08.25-.18.5-.37.24-.2.36-.29.49-.37a3 3 0 0 1 1.31-.46c.15-.02.3-.02.62-.02h.3z'

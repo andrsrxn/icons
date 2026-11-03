@@ -16,16 +16,16 @@ export const IconRamMemory: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ram-memory'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.03 16.06a2.38 2.38 0 0 0 2.26-3.13l-.19-.54a6 6 0 0 1-.46-1.92c.01-.46.16-.9.46-1.8l.19-.54A2.38 2.38 0 0 0 20.03 5H3.93a2.35 2.35 0 0 0-2.2 3.16l.2.5c.3.82.44 1.22.48 1.65v.45c-.04.42-.19.82-.49 1.63l-.18.51a2.34 2.34 0 0 0 2.2 3.16z'

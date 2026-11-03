@@ -16,16 +16,16 @@ export const IconFarm: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-farm'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.74 12.77c-.04.97-.06 1.46.24 1.77.29.3.78.3 1.75.3h.16c.95 0 1.42 0 1.71-.29.3-.3.3-.76.3-1.7v-1.06c0-.33 0-.5.04-.64a1 1 0 0 1 .19-.34c.1-.12.24-.2.52-.38.3-.2.46-.3.63-.34a1 1 0 0 1 .43 0c.17.04.33.13.64.33l.06.03c.32.2.48.3.6.44l.13.23c.07.16.08.35.1.73l.04 1.09c.05.9.07 1.35.36 1.63s.74.27 1.64.27h.12c.98 0 1.46 0 1.76-.3s.28-.8.24-1.77l-.15-4.1c-.02-.48-.03-.72-.13-.92s-.3-.35-.7-.63l-3.67-2.66c-.57-.4-.85-.61-1.18-.61s-.6.2-1.17.61L9.72 7.12c-.39.28-.58.42-.69.63-.1.2-.12.44-.13.92z'

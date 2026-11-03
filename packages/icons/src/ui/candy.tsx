@@ -16,16 +16,16 @@ export const IconCandy: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-candy'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m5 12.36 5.35 5.35c.67.67 1 1 1.42 1s.74-.33 1.41-1l4.86-4.86c.67-.67 1-1 1-1.42s-.33-.74-1-1.41l-3.93-3.94c-.67-.66-1-1-1.42-1s-.75.34-1.41 1z'

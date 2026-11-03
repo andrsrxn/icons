@@ -16,16 +16,16 @@ export const IconVegan: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-vegan'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.85 4.7a7 7 0 0 1 3.94-1.08c.96 0 1.44 0 2.04.78s.48 1.23.24 2.12a6.7 6.7 0 0 1-2.21 3.53c-1.98 1.62-4.2.94-5.17-.24-.9-1.08-1.08-3.65 1.16-5.12'

@@ -16,16 +16,16 @@ export const IconChessBishop: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chess-bishop'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.57 9.85C3.74 14.3 7.06 19 10.53 19h4.08q.16 0 .25-.02c.07-.02.11-.05.2-.1 1-.62 5.17-3.58 2.65-9.07-1.34-2.9-4.01-5.99-5.25-7.34-.3-.33-.45-.5-.66-.5s-.37.15-.69.46c-1.36 1.34-4.34 4.5-5.54 7.42'

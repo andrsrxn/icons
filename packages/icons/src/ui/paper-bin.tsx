@@ -16,16 +16,16 @@ export const IconPaperBin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-paper-bin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.01 5.98c.69 0 1.03 0 1.29-.17l.2-.17c.2-.24.24-.58.32-1.26.1-.85.15-1.28-.04-1.58a1 1 0 0 0-.2-.23c-.28-.23-.71-.23-1.57-.23H6.17c-.87 0-1.3 0-1.59.24a1 1 0 0 0-.2.23c-.2.31-.13.74 0 1.6.09.68.13 1.01.33 1.24l.2.16c.25.17.59.17 1.26.17z'

@@ -16,16 +16,16 @@ export const IconTouchpad: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-touchpad'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='1.74' y='12' width='20.52' height='7.69' rx='2' fill='currentColor' />
       <rect x='1.74' y='4.31' width='20.52' height='15.39' rx='3' stroke='currentColor' />
       <path d='M1.74 12h20.52' stroke='currentColor' />

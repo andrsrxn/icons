@@ -16,16 +16,16 @@ export const IconPaste: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-paste'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.62 22.28c-1.88 0-2.83 0-3.41-.59-.59-.58-.59-1.53-.59-3.41V5.52c0-1.03.84-1.87 1.87-1.87h.37c.5 0 .95.3 1.16.74.17.36.49.62.87.7l2.72.65c.35.09.52.13.7.14.18 0 .35-.01.7-.06l2.28-.27c.52-.07.96-.44 1.1-.94.18-.57.7-.96 1.28-.96h.43c1.05 0 1.9.85 1.9 1.9v12.73c0 1.88 0 2.83-.59 3.41s-1.53.59-3.41.59z'

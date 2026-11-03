@@ -16,16 +16,16 @@ export const IconCurrencyUyu: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-currency-uyu'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M10.14 7.68c-.38-1.28-2.13-2.27-4.2-2.27s-4.33.86-4.33 3.43c0 5.06 8.28 1.12 8.66 6.1.18 2.37-2.22 3.65-4.33 3.65s-3.65-1-4.33-2.31'
         stroke='currentColor'

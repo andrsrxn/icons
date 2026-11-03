@@ -16,16 +16,16 @@ export const IconHelicopter: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-helicopter'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.17 15.94c-2.39 0-4.55-1.16-4.7-2.82-.04-.52-.06-.79.42-1.11.5-.33.88-.14 1.66.26l.68.34c.5.26.76.38 1.02.37.27-.02.5-.17.98-.48l1.14-.74c.48-.31.72-.47.84-.72l.01-.02c.12-.25.1-.53.04-1.1-.1-1-.15-1.5.2-1.84l.03-.03c.35-.32.81-.24 1.73-.1.77.14 1.44.29 1.75.37.74.2 2.95.98 5.37.79 1.86-.15 2.71-1.37 3.62-1.94.32-.2.64-.14.91-.01.2.09.3.14.46.4.16.25.15.44.14.81a9 9 0 0 1-.2 1.75c-.56 2.21-1.93 1.74-5.32 1.74-3.03 0-3.32.74-4.28 1.97-1.5 1.93-3.35 2.11-6.5 2.11'

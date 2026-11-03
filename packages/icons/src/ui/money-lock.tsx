@@ -16,16 +16,16 @@ export const IconMoneyLock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-money-lock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M22.24 17.17v-4.86c0-.56 0-.84-.04-1.1a3 3 0 0 0-1.14-1.87c-.2-.16-.46-.29-.95-.54l-.47-.26a3 3 0 0 1-.81-.76c-.08-.1-.15-.21-.28-.44l-.1-.15a7 7 0 0 0-.96-1.37 3 3 0 0 0-1.26-.71C15.83 5 15.4 5 14.55 5H9.4c-.62 0-.93 0-1.2.05a3 3 0 0 0-1.84 1.16c-.18.23-.31.5-.58 1.06l-.22.46a3 3 0 0 1-1.76 1.5 2.9 2.9 0 0 0-2.04 2.74v.28c0 1.23.8 2.32 1.98 2.68.7.21 1.3.7 1.65 1.34l.28.52c.34.63.52.94.74 1.2a3 3 0 0 0 1.59.94c.32.07.68.07 1.4.07h6.59v-2.1zM12 14.55A2.5 2.5 0 0 0 14.41 12c0-1.4-1.08-2.55-2.41-2.55A2.5 2.5 0 0 0 9.59 12c0 1.4 1.08 2.55 2.41 2.55'

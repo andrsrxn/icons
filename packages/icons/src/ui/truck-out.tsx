@@ -16,16 +16,16 @@ export const IconTruckOut: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-truck-out'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.58 3.88q.53 0 .92-.36l.2-.18c.78-.7 1.96-.71 2.75-.03l.05.05c.39.33.89.52 1.4.52h2.4c2.44 0 3.66 0 4.49.67a3 3 0 0 1 .44.44c.67.82.67 2.05.67 4.5v4.4c0 .66-.54 1.2-1.21 1.2q-.42.01-.75.26l-.75.59-.54.4a3 3 0 0 1-1.25.43c-.16.02-.33.02-.67.02H9.4c-.62 0-1.22-.24-1.68-.67a2.44 2.44 0 0 0-3.33-.03l-.36.34a1.36 1.36 0 0 1-2.29-1v-9.7c0-1.03.83-1.85 1.85-1.85'

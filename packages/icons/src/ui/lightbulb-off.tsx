@@ -16,16 +16,16 @@ export const IconLightbulbOff: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-lightbulb-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='8.81' y='17.05' width='6.11' height='5.25' rx='1' fill='currentColor' />
       <path
         d='m15.33 17.16.01-.55c.06-.59.15-.8.57-1.21.06-.07.28-.24.7-.6a7.6 7.6 0 0 0 2.57-5.88 7.32 7.32 0 0 0-14.63 0 7.5 7.5 0 0 0 3.08 6.27c.59.46.76.8.77 1.56v.14'

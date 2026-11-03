@@ -16,16 +16,16 @@ export const IconGolf: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-golf'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path d='m16.73 7.78-5.32 13.85' stroke='currentColor' />
       <path
         d='M8 17.05c2 1.3 3.12 2.2 3.35 3.53.13.75.2 1.12-.2 1.5-.41.36-.9.23-1.9-.04l-2.3-.62-2.32-.62c-.95-.25-1.43-.38-1.62-.82-.2-.45 0-.82.4-1.56.93-1.71 2.45-2.75 4.6-1.37'

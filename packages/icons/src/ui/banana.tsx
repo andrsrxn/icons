@@ -16,16 +16,16 @@ export const IconBanana: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-banana'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m4.11 10.93.05.11a1 1 0 0 0 .52.48l.12.04 4.03 1.33c.6.2.9.3 1.2.22.28-.08.5-.32.92-.8l.21-.24c.93-1.03 1.39-1.55 1.24-2.07s-.8-.74-2.12-1.16L9 8.43c-.3-.1-.46-.15-.61-.15-.16 0-.31.05-.62.15l-2.96.96q-.18.06-.25.1A1 1 0 0 0 4 10.67z'

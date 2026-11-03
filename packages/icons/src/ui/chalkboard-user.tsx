@@ -16,16 +16,16 @@ export const IconChalkboardUser: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-chalkboard-user'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.8 4.75c1.88 0 2.82 0 3.41.58.59.59.59 1.53.59 3.42v3.62c0 1.43 0 2.14-.36 2.65a2 2 0 0 1-.48.5c-.5.36-1.22.37-2.64.4l-1.38.03c-.94.02-1.73.72-1.87 1.65a1.9 1.9 0 0 1-1.9 1.65h-3.3l-.95-1.47-1.84-.98c.6-.3 1.78-1.38 1.65-3.21-.13-1.84-1.77-2.16-2.57-2.1l-1.94.57V8.75c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58z'

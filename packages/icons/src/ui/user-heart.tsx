@@ -16,16 +16,16 @@ export const IconUserHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-user-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M20.59 15.7c-.94 0-1.61.7-1.83 1.05a2.3 2.3 0 0 0-1.83-1.05c-1.17 0-2.05 1.33-1.67 2.74.37 1.4 2.6 2.55 3.5 3.56.88-1 3.12-2.15 3.5-3.56s-.5-2.74-1.67-2.74'
         stroke='currentColor'

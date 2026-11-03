@@ -16,16 +16,16 @@ export const IconDevicePhoneImageVertical: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-device-phone-image-vertical'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M11.39 1.75c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v3.16c0 1.29 0 1.93.23 2.2a1 1 0 0 0 .94.35c.36-.06.77-.55 1.6-1.54.42-.49.63-.74.87-.83a1 1 0 0 1 .75.02c.24.1.43.36.83.87l1.04 1.35c.41.53.62.8.88.9a1 1 0 0 0 .54.04c.28-.05.53-.28 1.02-.73l.07-.06c.32-.3.48-.44.66-.5a1 1 0 0 1 .6-.04c.2.05.36.18.71.44.76.56 1.14.84 1.45.85a1 1 0 0 0 .85-.43c.18-.26.18-.73.18-1.67V7.75c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88z'

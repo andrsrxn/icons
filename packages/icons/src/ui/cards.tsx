@@ -16,16 +16,16 @@ export const IconCards: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-cards'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.55 15.58a2.4 2.4 0 0 1-4.6.13L11.5 8.48c-.18-.54-.27-.8-.31-1.09a3 3 0 0 1-.03-.63c.02-.28.1-.55.24-1.1l.03-.12c.43-1.64.64-2.45 1.12-2.99a3 3 0 0 1 1.62-.94c.7-.15 1.51.07 3.14.5 1.64.45 2.46.67 3 1.15a3 3 0 0 1 .93 1.63c.14.71-.1 1.53-.55 3.16z'

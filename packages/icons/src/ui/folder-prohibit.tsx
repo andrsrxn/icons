@@ -16,16 +16,16 @@ export const IconFolderProhibit: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-folder-prohibit'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18 14.16a2.87 2.87 0 0 0-1.62 4l1.03 2.05H7.7c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V7.47c0-.66 0-.99.05-1.26a3 3 0 0 1 2.4-2.4c.27-.05.6-.05 1.25-.05h1.07c1.09 0 1.63 0 2.14.19.5.18.91.54 1.75 1.24l.4.34c.83.71 1.24 1.07 1.74 1.25s1.05.18 2.14.18h1.6c2.82 0 4.24 0 5.11.88s.88 2.3.88 5.12v1.23l-1.47-.34-.6-.12a3 3 0 0 0-1.08.06c-.14.03-.29.08-.57.19z'

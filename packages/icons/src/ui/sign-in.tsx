@@ -16,16 +16,16 @@ export const IconSignIn: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-sign-in'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M8.18 7.47c0-1.53 0-2.3.43-2.84.44-.55 1.19-.72 2.68-1.06l2.82-.65c2.25-.52 3.38-.77 4.14-.17S19 4.5 19 6.82v10.62c0 2.21 0 3.31-.71 3.91-.72.6-1.8.41-3.97.04l-2.83-.5c-1.58-.27-2.37-.4-2.84-.97-.47-.55-.47-1.36-.47-2.97z'

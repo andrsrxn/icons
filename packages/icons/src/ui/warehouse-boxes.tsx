@@ -16,16 +16,16 @@ export const IconWarehouseBoxes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-warehouse-boxes'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M18.84 21.55v-6.77c0-1.88 0-2.82-.58-3.41-.59-.59-1.53-.59-3.42-.59H9.15c-1.89 0-2.83 0-3.41.59s-.59 1.53-.59 3.41v6.77'
         stroke='currentColor'

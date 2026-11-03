@@ -16,16 +16,16 @@ export const IconShieldX: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shield-x'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.47 4.47 13.02 2.4c-.5-.3-.75-.45-1.02-.45-.28 0-.53.15-1.03.45L6.9 4.84 4.04 6.27c-.73.37-1.1.55-1.24.89s-.02.72.22 1.5l2.46 7.9c.09.28.13.42.21.54s.2.22.42.4l4.64 3.88c.6.5.9.74 1.25.75.35 0 .66-.24 1.27-.72l4.92-3.88c.26-.2.39-.3.48-.43.09-.14.13-.3.22-.6l2.17-7.9c.2-.75.31-1.12.17-1.45-.15-.33-.5-.5-1.19-.86z'

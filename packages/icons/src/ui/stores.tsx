@@ -16,16 +16,16 @@ export const IconStores: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-stores'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.52 15.23c0-.75.7-1.32 1.44-1.16q.51.1.94-.2l.39-.27.27-.2a2 2 0 0 1 1.94-.07l.28.17.17.1c.27.17.4.25.54.3a2 2 0 0 0 1.51.02c.14-.05.28-.13.55-.3l.32-.17.22-.13a2 2 0 0 1 2.19.26l.4.3c.26.19.6.26.9.19a1.1 1.1 0 0 1 1.35 1.07v4c0 .32 0 .47-.02.6a2 2 0 0 1-1.72 1.72c-.13.02-.28.02-.6.02h-.51a2 2 0 0 1-1.8-1.81l-.01-.43v-.26a2 2 0 0 0-2-1.98H8.9a2 2 0 0 0-1.84 1.84v.38c0 .24 0 .36-.02.45a2 2 0 0 1-1.8 1.8l-.44.01-.47-.01a2 2 0 0 1-1.79-1.78l-.01-.47z'

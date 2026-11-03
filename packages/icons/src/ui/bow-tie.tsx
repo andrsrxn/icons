@@ -16,16 +16,16 @@ export const IconBowTie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bow-tie'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.93 8.45c0-.85 0-1.28.26-1.56s.68-.33 1.53-.43l1.09-.11c.4-.04.6-.07.79-.01.19.05.34.18.66.43l2.29 1.81c.37.3.56.44.66.65.1.2.1.44.1.92v3.5c0 .45 0 .68-.1.88-.09.2-.26.35-.6.64l-2.32 1.98c-.42.36-.63.54-.9.6-.25.04-.52-.04-1.04-.22l-1.06-.36c-.65-.22-.98-.33-1.17-.6s-.19-.6-.19-1.3z'

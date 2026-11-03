@@ -16,16 +16,16 @@ export const IconShoppingCart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-shopping-cart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.99 13.6c1.21-3.26 1.82-4.88 1.17-6.09a3 3 0 0 0-.37-.53c-.9-1.03-2.64-1.03-6.1-1.03h-5.5c-3.1 0-4.65 0-5.53.91a3 3 0 0 0-.37.48c-.69 1.07-.33 2.57.38 5.58.47 1.96.7 2.94 1.38 3.57q.15.15.35.27c.76.52 1.77.52 3.78.52h5.5c1.79 0 2.68 0 3.4-.43l.33-.23c.64-.52.95-1.35 1.58-3.03'

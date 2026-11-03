@@ -16,16 +16,16 @@ export const IconPause: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pause'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='4.08' y='2.83' width='6.11' height='18.34' rx='2' fill='currentColor' />
       <rect opacity='.2' x='13.8' y='2.83' width='6.11' height='18.34' rx='2' fill='currentColor' />
       <rect x='4.08' y='2.83' width='6.11' height='18.34' rx='2' stroke='currentColor' />

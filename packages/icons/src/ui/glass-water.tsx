@@ -16,16 +16,16 @@ export const IconGlassWater: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-glass-water'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m18.48 10.73-2.56.37c-.8.11-1.2.17-1.6.12s-.77-.2-1.53-.51l-1.29-.54c-1.18-.48-1.77-.73-2.4-.71-.61 0-1.2.27-2.36.8l-1.04.47 1.12 7.1c.3 1.86.45 2.8 1 3.44a3 3 0 0 0 .7.61c.73.44 1.68.44 3.57.44 1.9 0 2.85 0 3.57-.44a3 3 0 0 0 .71-.6c.55-.65.7-1.59 1-3.46z'

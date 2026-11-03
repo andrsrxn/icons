@@ -16,16 +16,16 @@ export const IconLayersUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-layers-up'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m10.81 21.27-8.55-3.6a1 1 0 0 1 .02-1.86l3.34-1.31a1 1 0 0 1 .73 0l4.53 1.78a3 3 0 0 0 2.2 0l4.54-1.78a1 1 0 0 1 .73 0l3.36 1.31a1 1 0 0 1 .02 1.86l-8.6 3.6a3 3 0 0 1-2.32 0'

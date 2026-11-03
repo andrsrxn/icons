@@ -16,16 +16,16 @@ export const IconFishingRod: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-fishing-rod'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <circle opacity='.2' cx='5.06' cy='9.87' r='1.83' fill='currentColor' />
       <path
         d='M5.06 7.91v-2.6c0-1.62 0-2.44.7-3.03.7-.6 1.37-.5 2.68-.28 2.59.42 6.13 1.8 8.7 5.91 3.93 6.25 3.45 14.33 3.45 14.33'

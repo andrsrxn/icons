@@ -16,16 +16,16 @@ export const IconError504: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-error-504'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect x='9.29' y='7.22' width='5.04' height='9.56' rx='2.52' stroke='currentColor' />
       <path
         d='M2.12 16.53h2.2a2.43 2.43 0 1 0 0-4.86H1.8v-2.2c0-.94 0-1.41.29-1.7.3-.3.76-.3 1.7-.3h2.44'

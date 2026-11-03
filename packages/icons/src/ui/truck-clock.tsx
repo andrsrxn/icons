@@ -16,16 +16,16 @@ export const IconTruckClock: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-truck-clock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M16.9 9.88c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.7l.72 3.33-3.05 2.5-3.64-2.13v7.86a1.35 1.35 0 0 0 2.3.97l.3-.3a2.4 2.4 0 0 1 3.32-.04l.05.05a2.5 2.5 0 0 0 1.7.67h2.37c.27 0 .4 0 .53-.02a3 3 0 0 0 1.42-.5c.11-.07.22-.16.43-.33s.3-.26.42-.33a3 3 0 0 1 1.42-.5c.13-.02.27-.02.54-.02h.37z'

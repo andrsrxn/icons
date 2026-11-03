@@ -16,16 +16,16 @@ export const IconBird: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-bird'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.2 3.9c-.93-2.25-4.94-3.44-6.64-.7L9.71 6.14l1.85 3.71-.37 5.05-2.71 2.3c-.56.48-.42 1.35.3 1.45 1.3.19 3.14.06 5.54-.97 4-1.7 3.78-5.31 4.01-7.57.18-1.74 1.36-2.96 2.23-3.88a.5.5 0 0 0-.12-.76l-1.7-.91a1.3 1.3 0 0 1-.54-.66'

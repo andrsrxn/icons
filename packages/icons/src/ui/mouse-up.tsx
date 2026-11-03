@@ -16,16 +16,16 @@ export const IconMouseUp: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mouse-up'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path opacity='.2' d='M5.03 19.16h13.94v3.59H5.03z' fill='currentColor' />
       <path d='M5.03 22.52v-9.01a6.97 6.97 0 1 1 13.94 0v9.01' stroke='currentColor' />
       <path d='M18.97 19.35H5.03' stroke='currentColor' />

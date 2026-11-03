@@ -16,16 +16,16 @@ export const IconWorkflowCheck: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-workflow-check'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M12.29 18.52H7.52l-.55-.01a3 3 0 0 1-2.75-2.75v-1.09a3 3 0 0 1 2.75-2.75l.55-.01h8.63c.32 0 .49 0 .63-.02a3 3 0 0 0 2.7-2.7c.02-.14.02-.3.02-.64l-.01-.63a3 3 0 0 0-2.71-2.7c-.14-.02-.3-.02-.63-.02H7.73'
         stroke='currentColor'

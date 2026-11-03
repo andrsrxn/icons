@@ -16,16 +16,16 @@ export const IconTie: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tie'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M15.12 18.97c.29-.35.43-.53.48-.74.06-.2.02-.43-.06-.87l-1.48-8.32c-.06-.32-.09-.49-.06-.65s.1-.31.25-.6l1.01-1.99c.35-.68.52-1.02.46-1.36-.07-.34-.36-.59-.95-1.08l-1.43-1.21c-.6-.5-.89-.75-1.24-.76-.36 0-.66.23-1.27.7L9.18 3.36c-.63.5-.95.74-1.03 1.1-.08.35.1.7.48 1.41l1 1.92c.15.3.23.44.25.6.03.16 0 .32-.05.65l-1.38 8.33c-.07.44-.1.66-.05.86.05.21.19.38.47.73l1.57 1.95c.72.89 1.07 1.33 1.55 1.33s.84-.44 1.56-1.33z'

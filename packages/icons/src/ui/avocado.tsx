@@ -16,16 +16,16 @@ export const IconAvocado: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-avocado'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m17.8 14.25 4.09-4.02.42-4.85-3.35-3.39H14.3L9.75 6.2a8.06 8.06 0 1 0 8.05 8.06M9.75 18.3a4.04 4.04 0 1 0 0-8.08 4.04 4.04 0 0 0 0 8.08'

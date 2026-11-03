@@ -16,16 +16,16 @@ export const IconTulip: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-tulip'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.42 18.77c.9-3.26 3.7-4.13 5.12-4.36.36-.05.54-.08.73.05s.2.3.22.64c.06.94-.02 2.54-1.13 3.7-1.12 1.2-3.1 1.12-4.24.96-.4-.06-.6-.1-.73-.27-.12-.17-.07-.35.03-.72'

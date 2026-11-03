@@ -16,16 +16,16 @@ export const IconFileHeart: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-file-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.7 22.24c-1.89 0-2.83 0-3.42-.59-.58-.58-.58-1.53-.58-3.41V5.78c0-1.87 0-2.8.58-3.39.58-.58 1.51-.6 3.38-.61l2.23-.03c1.3 0 1.96-.02 2.44.27a2 2 0 0 1 .69.68c.3.48.3 1.13.3 2.44 0 1.3 0 1.94.28 2.42q.26.42.68.68c.47.29 1.13.29 2.43.29s1.97 0 2.45.29a2 2 0 0 1 .64.63c.3.48.32 1.13.34 2.43l.06 3.95-1.37.18c-.4.05-.6.08-.8.06-.2 0-.4-.06-.78-.17l-1.15-.31a1.62 1.62 0 0 0-2.02 1.82l.2 1.23c.1.66.16.99.3 1.27l.14.22c.19.27.46.47 1 .86l1.67 1.25z'

@@ -16,16 +16,16 @@ export const IconPancakes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-pancakes'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M5.78 6.07c-.75 0-1.13 0-1.42.13q-.51.24-.76.76c-.13.3-.13.67-.13 1.42v9.27c0 1.41 0 2.12.44 2.56s1.15.44 2.56.44H17.3c1.42 0 2.12 0 2.56-.44s.44-1.15.44-2.56V8.02c0-.42 0-.63-.04-.8a1.5 1.5 0 0 0-1.1-1.1c-.18-.05-.39-.05-.81-.05h-.83c-.32 0-.6.2-.71.5a.8.8 0 0 1-.5.46l-.39.13-.13.04c-.57.2-.97.74-1 1.35v5.11l-.01.5a1.5 1.5 0 0 1-.47.87c-.09.08-.2.15-.41.3-.26.16-.39.25-.52.3a1.5 1.5 0 0 1-1.12.01 3 3 0 0 1-.52-.3l-.05-.02c-.25-.16-.38-.24-.48-.34a1.5 1.5 0 0 1-.44-.76 3 3 0 0 1-.05-.58l-.15-3.7c-.03-.82-.04-1.22-.23-1.54a2 2 0 0 0-.27-.34c-.27-.26-.66-.36-1.44-.58l-.1-.03-.42-.13-.34-.2-.31-.32c-.23-.24-.34-.37-.48-.46a2 2 0 0 0-.53-.23c-.16-.04-.33-.04-.67-.04'

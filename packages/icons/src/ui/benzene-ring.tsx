@@ -16,16 +16,16 @@ export const IconBenzeneRing: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-benzene-ring'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M10.1 4.22c.93-.5 1.4-.76 1.9-.76s.97.25 1.9.76l1.98 1.06 1.9 1.18c.91.56 1.36.83 1.61 1.27.26.44.27.97.3 2.03l.06 2.24-.06 2.24c-.03 1.06-.04 1.6-.3 2.03-.25.44-.7.71-1.6 1.27l-1.91 1.18-1.98 1.06c-.93.5-1.4.76-1.9.76s-.97-.25-1.9-.76l-1.98-1.06-1.9-1.18c-.91-.56-1.36-.83-1.61-1.27-.26-.44-.27-.97-.3-2.03L4.25 12l.06-2.24c.03-1.06.04-1.6.3-2.03.25-.44.7-.71 1.6-1.27l1.91-1.18z'

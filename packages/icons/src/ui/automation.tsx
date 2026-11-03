@@ -16,16 +16,16 @@ export const IconAutomation: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-automation'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.48 12.67c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3h1.45c.27 0 .4 0 .52.03a1 1 0 0 1 .47.27c.09.09.16.2.29.43s.2.35.23.47a1 1 0 0 1 0 .54c-.03.12-.1.24-.23.47l-.67 1.15c-.47.82-.7 1.23-.6 1.63.11.4.52.63 1.34 1.1l.95.55c.81.47 1.22.7 1.62.6s.64-.51 1.1-1.33l.36-.62c.29-.48.43-.73.66-.86.23-.14.51-.14 1.08-.14h3.7V15.2l1.43-.48h5.1v-3.15c0-.94 0-1.41-.29-1.7-.3-.3-.76-.3-1.7-.3h-.83c-.32 0-.47 0-.62-.04l-.17-.08a2 2 0 0 1-.46-.4c-.4-.4-.6-.6-.67-.84a1 1 0 0 1-.04-.3c0-.26.15-.5.43-.99l.41-.71c.47-.82.7-1.23.6-1.63s-.51-.64-1.33-1.1l-.95-.55c-.82-.48-1.23-.71-1.63-.6s-.63.51-1.1 1.33l-.41.7c-.23.4-.35.6-.52.73l-.17.1c-.2.08-.43.08-.89.08s-.7 0-.89-.09l-.16-.1c-.18-.12-.3-.32-.53-.72l-.4-.7c-.47-.82-.71-1.23-1.11-1.33s-.8.12-1.62.6l-.95.54c-.82.47-1.23.71-1.34 1.11-.1.4.13.8.6 1.63l.67 1.15c.13.23.2.34.23.46a1 1 0 0 1 0 .55c-.03.12-.1.23-.23.46s-.2.35-.29.44a1 1 0 0 1-.47.27c-.12.03-.25.03-.52.03H3.48c-.94 0-1.41 0-1.7.3-.3.29-.3.76-.3 1.7zm7.8-.55a2.87 2.87 0 1 0 5.75 0 2.87 2.87 0 0 0-5.75 0'

@@ -16,16 +16,16 @@ export const IconTrendUpDown: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-trend-up-down'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         d='M1.52 14.97 6.94 9.4c.65-.67.98-1 1.4-1.01.4 0 .74.32 1.42.96l2.1 2c.7.68 1.05 1.01 1.47 1s.75-.38 1.4-1.1l6.33-7.07'
         stroke='currentColor'

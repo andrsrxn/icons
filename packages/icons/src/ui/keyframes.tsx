@@ -16,16 +16,16 @@ export const IconKeyframes: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-keyframes'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M13.44 4.66a1.87 1.87 0 0 1 2.59.02l2.9 2.84 1.67 1.57c1.45 1.36 2.17 2.05 2.17 2.91s-.72 1.55-2.17 2.91l-1.67 1.57-3.07 2.96a1.76 1.76 0 0 1-2.57-2.4l2.1-2.48c1.1-1.31 1.66-1.97 1.63-2.74s-.62-1.38-1.82-2.62l-1.82-1.88c-.73-.75-.7-1.94.05-2.66'

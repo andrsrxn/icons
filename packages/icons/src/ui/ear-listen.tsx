@@ -16,16 +16,16 @@ export const IconEarListen: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-ear-listen'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.84 5.5 1.67 8.37v6.9l2.16 2.16a2 2 0 0 1 .52.9l.45 1.72a2 2 0 0 0 1.18 1.35l1.19.48a2 2 0 0 0 1.6-.05l1.37-.64a2 2 0 0 0 1.1-1.42l.74-3.63a2 2 0 0 1 .24-.62l2.35-4a2 2 0 0 0 .23-1.43l-.7-3.37a2 2 0 0 0-1.06-1.37l-2.96-1.5a2 2 0 0 0-1.45-.15L4.9 4.76a2 2 0 0 0-1.06.73'

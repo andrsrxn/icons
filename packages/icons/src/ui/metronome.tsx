@@ -16,16 +16,16 @@ export const IconMetronome: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-metronome'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.85 7.4c1.57-3.56 2.36-5.34 3.66-5.34s2.09 1.78 3.66 5.34l4.07 9.22c1.11 2.53 1.67 3.8 1.08 4.7-.6.92-1.97.92-4.74.92H7.44c-2.76 0-4.15 0-4.74-.91-.6-.91-.03-2.18 1.08-4.7z'

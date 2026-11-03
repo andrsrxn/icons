@@ -16,16 +16,16 @@ export const IconAtm: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-atm'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M6.55 21.97a5 5 0 0 1-.94-.53 2 2 0 0 1-.7-1.38c0-.25.04-.52.14-1.07l2.03-11.1a2 2 0 0 1 1.96-1.64h.01a1 1 0 0 1 1 1.08v.01L8.83 21.38a1 1 0 0 1-.8.88c-.42.08-.86.02-1.24-.17z'

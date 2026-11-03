@@ -16,16 +16,16 @@ export const IconVan: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-van'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M14.92 9.55c-.86-.08-1.3-.12-1.55-.41-.26-.29-.26-.72-.26-1.58V6c0-.9 0-1.34-.27-1.63-.28-.29-.72-.31-1.61-.37l-1.91-.12H7.73c-2.82 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v5.1a1.82 1.82 0 0 0 2.76 1.55l1.33-.8c.9-.55 2.05-.4 2.78.37.42.44 1.01.69 1.62.69h2.96a3 3 0 0 0 1.8-.7l.18-.15.17-.15a3 3 0 0 1 1.8-.7h1.15l.08.23a1.89 1.89 0 0 0 3.67-.73l-.14-2.9c-.03-.58-.04-.87-.18-1.1a1 1 0 0 0-.28-.3c-.22-.14-.5-.17-1.09-.22z'

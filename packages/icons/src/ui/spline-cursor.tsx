@@ -16,16 +16,16 @@ export const IconSplineCursor: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-spline-cursor'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='m13.98 18.5-.99-3c-.54-1.64-.8-2.45-.37-2.89s1.25-.17 2.88.36l3.02.97c1.18.38 1.77.57 1.96.85a1 1 0 0 1 .03 1.07c-.17.3-.75.52-1.9.98-.43.16-.64.25-.82.37a2 2 0 0 0-.55.54c-.12.19-.2.4-.37.83-.44 1.14-.66 1.7-.95 1.88a1 1 0 0 1-1.08-.03c-.28-.19-.47-.77-.86-1.92'

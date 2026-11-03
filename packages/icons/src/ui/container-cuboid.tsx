@@ -16,16 +16,16 @@ export const IconContainerCuboid: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-container-cuboid'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M20.75 16.77c.64-.24.96-.35 1.14-.61s.18-.6.18-1.27v-5.4c0-1.26 0-1.9-.42-2.2-.41-.3-1.02-.1-2.22.31L9.6 10.9c-.43.16-.65.23-.87.2s-.42-.14-.81-.38L4.84 8.83c-1.27-.78-1.91-1.17-2.42-.9-.5.26-.54 1-.62 2.5l-.25 4.72c-.03.56-.05.83.07 1.07s.34.39.8.7l5.44 3.67c.42.28.62.42.86.45s.48-.06.95-.23z'

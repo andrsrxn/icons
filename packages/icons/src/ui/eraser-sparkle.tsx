@@ -16,16 +16,16 @@ export const IconEraserSparkle: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-eraser-sparkle'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M18.53 4.1c-.97-.96-1.46-1.45-2-1.68a3 3 0 0 0-2.33 0c-.54.23-1.03.72-2 1.69-.33.32-.49.49-.56.67a1 1 0 0 0 0 .77c.07.18.23.35.56.67l6.12 6.12c.32.32.48.49.66.56q.39.15.78 0c.18-.07.34-.24.67-.56.97-.98 1.46-1.46 1.69-2a3 3 0 0 0 0-2.33c-.23-.54-.72-1.03-1.7-2z'

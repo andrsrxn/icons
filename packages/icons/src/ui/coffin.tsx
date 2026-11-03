@@ -16,16 +16,16 @@ export const IconCoffin: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-coffin'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.8 1.78c2.17 0 3.26 0 4.06.6s1.1 1.64 1.7 3.73l.6 2.09c.24.81.36 1.22.36 1.63 0 .42-.11.83-.34 1.64l-2.1 7.56c-.4 1.4-.59 2.11-1.13 2.52-.53.4-1.26.4-2.72.4h-2.35c-1.44 0-2.17 0-2.7-.4s-.74-1.09-1.14-2.48l-2.2-7.57c-.23-.83-.35-1.24-.35-1.67s.11-.84.35-1.67l.6-2.05c.6-2.09.9-3.13 1.7-3.73s1.89-.6 4.06-.6z'

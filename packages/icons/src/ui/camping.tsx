@@ -16,16 +16,16 @@ export const IconCamping: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-camping'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M7.97 13.45c-.58-1.27-.87-1.9-.58-2.37.3-.46 1-.46 2.4-.46h7.54c.73 0 1.09 0 1.35.2.27.2.37.55.57 1.24l1.89 6.41c.33 1.13.5 1.69.21 2.08-.28.4-.86.43-2.03.49l-6.35.32c-.66.03-.99.05-1.25-.11s-.4-.46-.67-1.06z'

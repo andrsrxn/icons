@@ -16,16 +16,16 @@ export const IconUserMale: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-user-male'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M9.82 15.56v-.9c0-.41-.25-.78-.6-.99a6.3 6.3 0 0 1-3-5.48c-.1-2.15.9-6.44 5.78-6.44 6.09 0 5.94 4.83 5.94 6.44 0 1.5-.34 4.38-3.16 5.54-.42.18-.73.56-.73 1.02v.8c0 .47.34.88.8 1.01 1.1.32 3.05 1.02 3.91 2.22.42.58.73 1.47.92 2.18.17.6-.3 1.16-.92 1.16H5.26c-.63 0-1.1-.57-.93-1.17.2-.71.52-1.6.94-2.17.85-1.15 2.73-1.88 3.79-2.2.44-.15.76-.55.76-1.02Z'

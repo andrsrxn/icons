@@ -16,16 +16,16 @@ export const IconBackgroundSolid: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-background-solid'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M12.24 5.9c2.83 0 4.25 0 5.12.89.88.87.88 2.29.88 5.12v2.18c0 1.89 0 2.83-.58 3.42-.59.58-1.53.58-3.42.58h-4.4c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42v-2.18c0-2.83 0-4.25.87-5.12.88-.88 2.3-.88 5.13-.88z'

@@ -16,16 +16,16 @@ export const IconBrowsers: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-browsers'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <rect opacity='.2' x='1.76' y='7.5' width='16.07' height='3.9' rx='1' fill='currentColor' />
       <rect opacity='.2' x='6.17' y='3.6' width='16.07' height='3.9' rx='1' fill='currentColor' />
       <rect x='1.76' y='7.5' width='16.07' height='12.9' rx='2' stroke='currentColor' />

@@ -16,16 +16,16 @@ export const IconRotate: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-rotate'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M3.11 16.93V8.88c0-1.89 0-2.83.59-3.42.58-.58 1.53-.58 3.41-.58H17.2c1.88 0 2.83 0 3.41.58.59.59.59 1.53.59 3.42v8.05c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H7.1c-1.88 0-2.83 0-3.41-.58-.59-.59-.59-1.53-.59-3.42'

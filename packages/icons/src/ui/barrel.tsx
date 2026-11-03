@@ -16,16 +16,16 @@ export const IconBarrel: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-barrel'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M2.77 12c0-3.5.64-5.2 1.84-7.33.53-.95.8-1.42 1.27-1.7.46-.27 1.03-.27 2.17-.27h7.9c1.14 0 1.7 0 2.17.27.47.28.74.75 1.27 1.7 1.2 2.14 1.84 3.85 1.84 7.33s-.64 5.19-1.84 7.33c-.53.95-.8 1.42-1.27 1.7-.46.27-1.03.27-2.17.27h-7.9c-1.14 0-1.7 0-2.17-.27-.47-.28-.74-.75-1.27-1.7C3.4 17.2 2.77 15.5 2.77 12'

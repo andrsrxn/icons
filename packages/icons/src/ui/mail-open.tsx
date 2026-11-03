@@ -16,16 +16,16 @@ export const IconMailOpen: Icon = ({
       xmlns='http://www.w3.org/2000/svg'
       width={size}
       height={size}
-      strokeWidth={strokeWidth}
       strokeLinecap='round'
       strokeLinejoin='round'
+      strokeWidth={strokeWidth}
       data-slot='icon-ui-mail-open'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
       role={isLabelled ? 'img' : undefined}
       aria-hidden={isLabelled ? undefined : true}
-      aria-label={ariaLabel}
-      focusable={isLabelled ? undefined : false}
-      className={`icon-ui ${className ?? ''}`.trim()}
-      {...props}>
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
       <path
         opacity='.2'
         d='M1.9 12.99c-.07-1.46-.1-2.2.36-2.5.47-.32 1.13-.02 2.46.59l4.06 1.85c.2.08.3.13.4.15.1.03.21.03.43.03h5.24c.23 0 .34 0 .45-.03s.21-.08.42-.18l3.53-1.71c1.34-.65 2-.98 2.48-.67s.45 1.05.4 2.54l-.22 5.76c-.03.91-.05 1.37-.34 1.65s-.74.28-1.65.28H4.15c-.9 0-1.36 0-1.65-.28s-.31-.73-.35-1.63z'
