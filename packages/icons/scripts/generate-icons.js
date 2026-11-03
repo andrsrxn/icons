@@ -212,7 +212,7 @@ async function main() {
       fs.writeFileSync(outputFilePath, formattedContent)
       generatedCount++
 
-      console.log(` Generated: ${file.replace('.svg', '.tsx')}`)
+      // console.log(` Generated: ${file.replace('.svg', '.tsx')}`)
     } else {
       console.warn(` No SVG found in ${file}`)
     }
