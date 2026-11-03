@@ -20,6 +20,7 @@ import { createRequire } from 'node:module'
 import path from 'node:path'
 import process from 'node:process'
 import { fileURLToPath } from 'node:url'
+import prettier from 'prettier'
 import { optimize } from 'svgo'
 
 // Config
@@ -195,7 +196,7 @@ export const ${componentName}: FlagIcon = ({
 
 // Main
 
-function main() {
+async function main() {
   if (!fs.existsSync(FLAGS_DIR)) {
     console.error(`Directory not found: ${FLAGS_DIR}`)
     process.exit(1)
@@ -209,8 +210,9 @@ function main() {
   const svgFiles = files.filter(file => file.endsWith('.svg'))
 
   let processedCount = 0
+  const prettierConfig = await prettier.resolveConfig(FLAGS_OUT)
 
-  svgFiles.forEach(file => {
+  svgFiles.forEach(async file => {
     const filePath = path.join(FLAGS_DIR, file)
     const svgContent = fs.readFileSync(filePath, 'utf-8')
 
@@ -220,10 +222,15 @@ function main() {
       const outputFileName = `${file.replace('.svg', '').toLowerCase()}.tsx`
       const outputFilePath = path.join(FLAGS_OUT, outputFileName)
 
-      fs.writeFileSync(outputFilePath, componentContent)
+      const formattedContent = await prettier.format(componentContent, {
+        ...prettierConfig,
+        filepath: outputFilePath,
+      })
+
+      fs.writeFileSync(outputFilePath, formattedContent)
       processedCount++
 
-      console.log(` Generated: ${outputFileName}`)
+      // console.log(` Generated: ${outputFileName}`)
     } else {
       console.warn(` No SVG found in ${file}`)
     }
