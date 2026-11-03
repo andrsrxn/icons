@@ -1,4 +1,5 @@
 /** biome-ignore-all lint/style/noNonNullAssertion: it exists */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: unnecessary */
 /** biome-ignore-all lint/style/noMagicNumbers: to not take the literal 'Icon' */
 /** biome-ignore-all lint/performance/noNamespaceImport: to automate all icons importing */
 
@@ -11,8 +12,8 @@ import * as icons from '../src/ui/index'
 const getFileName = (name: string) =>
   name
     // biome-ignore lint/performance/useTopLevelRegex: unnecessary
-    .replace(/^Icon(Flag)?/, '')
-    .replace(/([a-z0-9])([A-Z])/g, '$1-$2')
+    .replace(/^Icon(Flag)?/u, '')
+    .replace(/([a-z0-9])([A-Z])/gu, '$1-$2')
     .toLowerCase()
 
 const flagIcons = Object.entries(fIcons)
@@ -72,4 +73,4 @@ const App = () => {
   )
 }
 
-createRoot(document.getElementById('root')!).render(<App />)
+createRoot(document.querySelector('#root')!).render(<App />)
