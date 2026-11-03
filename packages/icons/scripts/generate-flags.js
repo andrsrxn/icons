@@ -177,11 +177,11 @@ export const ${componentName}: FlagIcon = ({
       data-slot='${CLASSNAME}-${countryCodeLower}'
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={\`${CLASSNAME} \${className ?? ''}\`.trim()}
-       role={isAccessible ? 'img' : undefined}
+      {...props}
+      role={isAccessible ? 'img' : undefined}
       aria-hidden={!isAccessible}
       aria-label={isAccessible ? ariaLabel : undefined}
-      focusable={false}
-      {...props}>
+      focusable={false}>
       <defs>${jsxDefs}
       </defs>
       <g clipPath='url(#${clipId})'>

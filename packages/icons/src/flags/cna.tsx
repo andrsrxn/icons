@@ -26,11 +26,11 @@ export const IconFlagCNA: FlagIcon = ({
       data-slot='icon-flag-cna'
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
+      {...props}
       role={isAccessible ? 'img' : undefined}
       aria-hidden={!isAccessible}
       aria-label={isAccessible ? ariaLabel : undefined}
-      focusable={false}
-      {...props}>
+      focusable={false}>
       <defs>
         <defs>
           <clipPath id='cna-a'>
