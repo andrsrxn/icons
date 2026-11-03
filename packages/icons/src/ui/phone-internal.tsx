@@ -7,7 +7,7 @@ export const IconPhoneInternal: Icon = ({
   'aria-label': ariaLabel,
   ...props
 }) => {
-  const isLabelled = Boolean(ariaLabel)
+  const isLabelled = Boolean(ariaLabel?.trim())
 
   return (
     <svg
