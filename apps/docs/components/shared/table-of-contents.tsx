@@ -22,7 +22,7 @@ function getTocTargets(): TocTarget[] {
       continue
     }
 
-    const el = document.getElementById(id)
+    const el = document.querySelector<HTMLElement>(`#${id}`)
     if (el) {
       targets.push({ id, el })
     }

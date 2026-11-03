@@ -31,6 +31,7 @@ export const DrawerIcon = () => {
     <Drawer
       open={open}
       showSwipeHandle
+      // biome-ignore lint/performance/noJsxPropsBind: unnecessary
       onOpenChange={value => {
         if (value) {
           setOpen(value)

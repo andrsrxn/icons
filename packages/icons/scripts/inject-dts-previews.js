@@ -11,7 +11,7 @@
  * Usage:
  *   node scripts/inject-dts-previews.js
  */
-/** biome-ignore-all lint/nursery/useNamedCaptureGroup: not necessary */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: not necessary */
 /** biome-ignore-all lint/performance/useTopLevelRegex: not necessary */
 
 /** biome-ignore-all lint/suspicious/noConsole: utility script */

@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/useBaseline: unnecessary */
 @import 'tailwindcss';
 @import 'tw-animate-css';
 @import 'shadcn/tailwind.css';

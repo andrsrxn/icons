@@ -1,5 +1,6 @@
-/** biome-ignore-all lint/style/noMagicNumbers: not necessary */
-/** biome-ignore-all lint/performance/noDynamicNamespaceImportAccess: not necessary */
+/** biome-ignore-all lint/style/noMagicNumbers: unnecessary */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: unnecessary */
+/** biome-ignore-all lint/performance/noDynamicNamespaceImportAccess: unnecessary */
 
 import fs from 'node:fs'
 import path from 'node:path'

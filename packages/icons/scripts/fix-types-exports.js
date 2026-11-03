@@ -12,7 +12,8 @@
  *
  * Only runs on dist/ui/types.d.ts and dist/flags/types.d.ts.
  */
-/** biome-ignore-all lint/performance/useTopLevelRegex: not necessary */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: unnecessary */
+/** biome-ignore-all lint/performance/useTopLevelRegex: unnecessary */
 
 /* eslint-disable no-console */
 
