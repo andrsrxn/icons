@@ -6,7 +6,6 @@ export interface IconProps extends Omit<
   'role' | 'aria-hidden' | 'focusable' | 'aria-labelledby'
 > {
   size?: number | string
-  title?: string
 }
 
 export type Icon = (props: IconProps) => JSX.Element
