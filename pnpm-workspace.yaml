@@ -12,3 +12,5 @@ allowBuilds:
   '@swc/core': true
 overrides:
   'zod@>=4.2.0 <5.0.0-0': '4.6.7'
+  glob: '^14.0.2'
+  minimatch: '>=11.0.1'
