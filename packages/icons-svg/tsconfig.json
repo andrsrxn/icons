@@ -1,0 +1,8 @@
+{
+  "extends": "@andrsrxn/ts-config/react",
+  "compilerOptions": {
+    "types": ["node"]
+  },
+  "include": ["src", "__tests__", "vitest.setup.ts"],
+  "exclude": ["node_modules", ".turbo"]
+}
