@@ -2,22 +2,27 @@ import { describe, expect, it } from 'vitest'
 import {
   generateComponent as generateFlagComponent,
   optimizeSvg,
-} from '../../scripts/generate-flags.js'
+  svgAttrsToJsx as flagSvgAttrsToJsx,
+} from '../scripts/generate-flags.js'
 import {
   generateComponent as generateIconComponent,
+  hasAttr,
   normalizeSvg,
+  stripAllAttr,
+  stripRootAttrs,
   svgAttrsToJsx,
   toPascalCase,
-} from '../../scripts/generate-icons.js'
-import { generateExportLines } from '../../scripts/generate-icons-index.js'
+} from '../scripts/generate-icons.js'
+import { generateExportLines } from '../scripts/generate-icons-index.js'
 import {
   createPreviewJSDoc,
   extractSvg,
   injectWhiteBackground,
   svgToBase64,
-} from '../../scripts/inject-dts-previews.js'
+} from '../scripts/inject-dts-previews.js'
 
 // Tests for generate-icons.js
+
 describe('Generator: toPascalCase', () => {
   it('converts file names correctly', () => {
     expect(toPascalCase('arrow-right')).toBe('ArrowRight')
@@ -44,6 +49,51 @@ describe('Generator: svgAttrsToJsx', () => {
   })
 })
 
+describe('Generator: hasAttr', () => {
+  it('detects an attribute regardless of quote style', () => {
+    expect(hasAttr('<path stroke-width="2"/>', 'stroke-width')).toBe(true)
+    expect(hasAttr("<path stroke-width='2'/>", 'stroke-width')).toBe(true)
+  })
+
+  it('returns false when the attribute is absent', () => {
+    expect(hasAttr('<path d="M0 0"/>', 'stroke-width')).toBe(false)
+  })
+})
+
+describe('Generator: stripAllAttr', () => {
+  it('removes every occurrence of the attribute, anywhere in the markup', () => {
+    const svg = '<svg stroke-width="2"><path stroke-width="2"/><path stroke-width="2"/></svg>'
+    const result = stripAllAttr(svg, 'stroke-width')
+
+    expect(result).not.toContain('stroke-width')
+  })
+
+  it('leaves other attributes untouched', () => {
+    const svg = '<path d="M0 0" stroke-width="2" fill="none"/>'
+    const result = stripAllAttr(svg, 'stroke-width')
+
+    expect(result).toContain('d="M0 0"')
+    expect(result).toContain('fill="none"')
+  })
+})
+
+describe('Generator: stripRootAttrs', () => {
+  it('removes attributes only from the root <svg> tag, not from children', () => {
+    const svg = '<svg width="24" height="24"><rect width="10" height="10"/></svg>'
+    const result = stripRootAttrs(svg, ['width', 'height'])
+
+    expect(result).toContain('<svg>')
+    expect(result).toContain('<rect width="10" height="10"/>')
+  })
+
+  it('accepts multiple attribute names in a single pass', () => {
+    const svg = '<svg width="24" height="24" fill="red">'
+    const result = stripRootAttrs(svg, ['width', 'height', 'fill'])
+
+    expect(result).toBe('<svg>')
+  })
+})
+
 describe('Generator: normalizeSvg', () => {
   it('cleans original width/height and injects React props', () => {
     // Simulate a malicious raw SVG (with hardcoded width and invalid attributes)
@@ -63,6 +113,31 @@ describe('Generator: normalizeSvg', () => {
 
     // 3. Must have camelCased the internal attributes
     expect(result).toContain('strokeWidth=')
+  })
+
+  it('injects strokeLinecap/strokeLinejoin only when the source actually uses them', () => {
+    const rawSvg = '<svg stroke-linecap="round" stroke-linejoin="round"><path/></svg>'
+    const result = normalizeSvg(rawSvg, 'test')
+
+    expect(result).toContain("strokeLinecap='round'")
+    expect(result).toContain("strokeLinejoin='round'")
+  })
+
+  it('omits stroke props entirely for a pure-fill (duotone background) shape', () => {
+    const rawSvg = '<svg fill="currentColor"><path opacity=".2"/></svg>'
+    const result = normalizeSvg(rawSvg, 'test')
+
+    expect(result).not.toContain('strokeWidth=')
+    expect(result).not.toContain('strokeLinecap=')
+  })
+
+  it('always injects the accessibility props, regardless of stroke usage', () => {
+    const rawSvg = '<svg><path/></svg>'
+    const result = normalizeSvg(rawSvg, 'test')
+
+    expect(result).toContain('role={isLabelled ? ')
+    expect(result).toContain('aria-hidden={isLabelled ? undefined : true}')
+    expect(result).toContain('focusable={false}')
   })
 })
 
@@ -85,6 +160,10 @@ describe('Generator: generateComponent', () => {
 })
 
 // Tests for inject-dts-previews.js
+//
+// extractSvg is identical across generate-icons.js, generate-flags.js and
+// this file — tested once here rather than once per copy.
+
 describe('DTS Injector: extractSvg', () => {
   it('extracts the exact SVG node from a raw XML string', () => {
     const rawContent =
@@ -168,27 +247,12 @@ describe('Index Generator: generateExportLines', () => {
 
 // Tests for generate-flags.js
 
-describe('Flags Generator: extractSvg', () => {
-  it('extracts the exact SVG node from raw content', () => {
-    const rawContent =
-      '<?xml version="1.0"?><svg viewBox="0 0 21 15"><path d="M0 0h21v15H0z"/></svg>'
-    const result = extractSvg(rawContent)
-
-    expect(result).toBe('<svg viewBox="0 0 21 15"><path d="M0 0h21v15H0z"/></svg>')
-  })
-
-  it('returns null if no SVG tag is found in source', () => {
-    const result = extractSvg('<div>Not an SVG</div>')
-    expect(result).toBeNull()
-  })
-})
-
 describe('Flags Generator: svgAttrsToJsx', () => {
-  it('converts kebab-case attributes to camelCase', () => {
+  it('converts kebab-case attributes to camelCase, same as the base conversion', () => {
     const raw =
       '<stop stop-color="#fff" stop-opacity="0.5" fill-rule="evenodd" clip-path="url(#clip)"/>'
 
-    const result = svgAttrsToJsx(raw)
+    const result = flagSvgAttrsToJsx(raw)
 
     expect(result).toContain('stopColor=')
     expect(result).toContain('stopOpacity=')
@@ -200,7 +264,7 @@ describe('Flags Generator: svgAttrsToJsx', () => {
     const raw =
       '<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#path-1" xml:space="preserve"/>'
 
-    const result = svgAttrsToJsx(raw)
+    const result = flagSvgAttrsToJsx(raw)
 
     expect(result).toContain('xmlnsXlink=')
     expect(result).toContain('xlinkHref=')
@@ -209,10 +273,56 @@ describe('Flags Generator: svgAttrsToJsx', () => {
 
   it('ignores JSX exceptions (viewBox, xmlns)', () => {
     const raw = '<svg viewBox="0 0 21 15" xmlns="http://www.w3.org/2000/svg">'
-    const result = svgAttrsToJsx(raw)
+    const result = flagSvgAttrsToJsx(raw)
 
     expect(result).toContain('viewBox="0 0 21 15"')
     expect(result).toContain('xmlns=')
+  })
+
+  it('converts an inline style attribute into a JSX style object', () => {
+    const raw = '<rect style="fill:red; stroke-width:2"/>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).toContain("style={{ fill: 'red', strokeWidth: '2' }}")
+    expect(result).not.toContain('style="')
+  })
+
+  it('drops mask-type declarations specifically', () => {
+    const raw = '<mask style="mask-type:alpha"><rect/></mask>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).not.toContain('mask-type')
+    expect(result).not.toContain('style=')
+  })
+
+  it('removes the style attribute entirely when every declaration is filtered out', () => {
+    const raw = '<mask style="mask-type:alpha;  "><rect/></mask>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).toBe('<mask ><rect/></mask>')
+  })
+
+  it('keeps the remaining declarations when only some are filtered out', () => {
+    const raw = '<mask style="mask-type:alpha; fill:blue"><rect/></mask>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).toContain("style={{ fill: 'blue' }}")
+    expect(result).not.toContain('mask-type')
+  })
+
+  it('ignores a malformed declaration with no colon', () => {
+    const raw = '<rect style="fill:red; invalid-no-colon; stroke:blue"/>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).toContain("style={{ fill: 'red', stroke: 'blue' }}")
+  })
+
+  it('still converts other attributes alongside a filtered style attribute', () => {
+    const raw = '<stop stop-color="#fff" style="mask-type:alpha"/>'
+    const result = flagSvgAttrsToJsx(raw)
+
+    expect(result).toContain('stopColor="#fff"')
+    expect(result).not.toContain('style=')
   })
 })
 

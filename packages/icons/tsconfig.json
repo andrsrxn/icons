@@ -3,6 +3,6 @@
   "compilerOptions": {
     "types": ["node"]
   },
-  "include": ["src", "tsdown.config.ts", "demo", "__tests__"],
+  "include": ["src", "tsdown.config.ts", "vitest.setup.ts", "demo", "__tests__"],
   "exclude": ["node_modules", "dist", ".turbo"]
 }
