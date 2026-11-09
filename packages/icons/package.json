@@ -52,7 +52,7 @@
     "node": "^24",
     "pnpm": "^11"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@12.15.0",
   "exports": {
     ".": {
       "types": "./dist/ui/index.d.ts",

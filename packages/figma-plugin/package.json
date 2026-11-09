@@ -35,7 +35,7 @@
       "reasoning": "This plugin does not require network access."
     }
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@12.15.0",
   "scripts": {
     "build": "build-figma-plugin --typecheck --minify",
     "dev": "build-figma-plugin --typecheck --watch",
