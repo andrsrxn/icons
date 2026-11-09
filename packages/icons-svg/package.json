@@ -1,0 +1,89 @@
+{
+  "name": "@andrsrxn/icons-svg",
+  "version": "0.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "Framework-agnostic icon library with 2,500+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.",
+  "type": "module",
+  "license": "MIT",
+  "author": {
+    "name": "Andrés Raxón",
+    "email": "info@andrsrxn.com",
+    "url": "https://andrsrxn.com"
+  },
+  "keywords": [
+    "icons",
+    "duotone",
+    "flags",
+    "svg",
+    "framework-agnostic",
+    "tree-shakeable",
+    "typescript",
+    "icons-library",
+    "design-system"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrsrxn/icons.git",
+    "directory": "packages/icons-svg"
+  },
+  "homepage": "https://icons.andrsrxn.com",
+  "bugs": {
+    "url": "https://github.com/andrsrxn/icons/issues"
+  },
+  "funding": {
+    "type": "GitHub Sponsors",
+    "url": "https://github.com/sponsors/andrsrxn"
+  },
+  "sideEffects": [
+    "dist/**/*.css"
+  ],
+  "files": [
+    "assets",
+    "dist",
+    "LICENSE",
+    "README.md",
+    "CHANGELOG.md",
+    "THIRD-PARTY-LICENSES.md"
+  ],
+  "engines": {
+    "node": "^24",
+    "pnpm": "^11"
+  },
+  "packageManager": "pnpm@12.15.0",
+  "exports": {
+    "./flags/*": {
+      "types": "./dist/flags/*.d.ts",
+      "default": "./dist/flags/*.js"
+    },
+    "./*": {
+      "types": "./dist/ui/*.d.ts",
+      "default": "./dist/ui/*.js"
+    },
+    "./rtl.css": "./dist/rtl.css"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "node ./scripts/build.js && pnpm build:css && echo Build finished.",
+    "build:css": "lightningcss src/rtl.css --minify -o dist/rtl.css",
+    "attw": "pnpm dlx --yes @arethetypeswrong/cli --pack . --profile esm-only",
+    "publint": "pnpm dlx publint .",
+    "lint": "biome check && echo Lint finished.",
+    "lint:check": "biome ci && echo Lint finished.",
+    "type:check": "tsc --noEmit && echo Type check finished.",
+    "test": "vitest",
+    "test:check": "vitest run",
+    "dep:check": "pnpm dlx knip && echo Dep check finished."
+  },
+  "devDependencies": {
+    "@andrsrxn/raw-icons": "workspace:*",
+    "@andrsrxn/ts-config": "workspace:*",
+    "@testing-library/dom": "10.4.2",
+    "@testing-library/jest-dom": "7.0.1",
+    "@types/node": "24.19.2",
+    "lightningcss-cli": "1.33.0",
+    "svgo": "4.1.0",
+    "vitest": "4.1.12"
+  }
+}
