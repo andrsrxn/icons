@@ -1,3 +1,4 @@
+/** biome-ignore-all lint/suspicious/noConditionalExpect: only check if it has it */
 import { render } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
 import { IconActivity } from '../src/ui/activity'

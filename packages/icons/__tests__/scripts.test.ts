@@ -1,8 +1,8 @@
 import { describe, expect, it } from 'vitest'
 import {
+  svgAttrsToJsx as flagSvgAttrsToJsx,
   generateComponent as generateFlagComponent,
   optimizeSvg,
-  svgAttrsToJsx as flagSvgAttrsToJsx,
 } from '../scripts/generate-flags.js'
 import {
   generateComponent as generateIconComponent,

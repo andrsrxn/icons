@@ -236,7 +236,7 @@
       }
     },
     {
-      "includes": ["**/__tests__/**"],
+      "includes": ["**/__tests__/**", "**/*.test.ts", "**/*.test.tsx"],
       "linter": {
         "rules": {
           "security": {
@@ -247,6 +247,9 @@
             "noBarrelFile": "off",
             "noNamespaceImport": "off",
             "useTopLevelRegex": "off"
+          },
+          "complexity": {
+            "noExcessiveLinesPerFunction": "off"
           }
         }
       }
