@@ -12,9 +12,7 @@
     "./catalog-with-svgs.json": "./dist/catalog-with-svgs.json"
   },
   "scripts": {
-    "generate-raw-metadata": "node scripts/generate-raw-metadata.js",
-    "build": "node scripts/generate-catalog.js",
-    "migrate-meta": "node scripts/migrate-meta.js"
+    "build": "node scripts/generate-catalog.js"
   },
   "files": [
     "src"
