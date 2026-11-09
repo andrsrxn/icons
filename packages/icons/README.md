@@ -45,7 +45,7 @@ You only need to be using `react` 19 or higher.
 
 ## Documentation
 
-[See full documentation](https://icons.andrsrxn.com)
+[See full documentation](https://icons.andrsrxn.com/docs/react)
 
 ## Contributing
 
