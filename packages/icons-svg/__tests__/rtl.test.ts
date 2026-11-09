@@ -19,6 +19,9 @@
  * This tests both the CSS authorship and the generated SVG strings in a single,
  * deterministic pass — no browser or CSS engine needed.
  */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: the regex is simple enough */
+/** biome-ignore-all lint/style/noNonNullAssertion: we are confident the regex will match */
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { describe, expect, it } from 'vitest'
@@ -35,17 +38,22 @@ const rtlCss = fs.readFileSync(path.resolve(import.meta.dirname, '../src/rtl.css
 /** Extract all data-slot values whose selector starts with [dir='<dir>'] */
 function extractSlots(css: string, dir: 'rtl' | 'ltr'): Set<string> {
   // Strip CSS block comments before parsing so they don't interfere with matching.
-  const stripped = css.replace(/\/\*[\s\S]*?\*\//g, '')
+  const stripped = css.replace(/\/\*[\s\S]*?\*\//gu, '')
   const slots = new Set<string>()
-  const ruleBlockRe = /([^{]+)\{[^}]*\}/g
+  const ruleBlockRe = /([^{]+)\{[^}]*\}/gu
   let m: RegExpExecArray | null
+  // biome-ignore lint/suspicious/noAssignInExpressions: needed for RegExp exec in a while loop
   while ((m = ruleBlockRe.exec(stripped)) !== null) {
     const selectorList = m[1]!
     for (const selector of selectorList.split(',')) {
       const trimmed = selector.trim()
-      if (!trimmed.startsWith(`[dir='${dir}']`)) continue
-      const slotMatch = /\[data-slot='([^']+)'\]/.exec(trimmed)
-      if (slotMatch) slots.add(slotMatch[1]!)
+      if (!trimmed.startsWith(`[dir='${dir}']`)) {
+        continue
+      }
+      const slotMatch = /\[data-slot='([^']+)'\]/u.exec(trimmed)
+      if (slotMatch) {
+        slots.add(slotMatch[1]!)
+      }
     }
   }
   return slots
@@ -55,8 +63,10 @@ const rtlSlots = extractSlots(rtlCss, 'rtl')
 const ltrSlots = extractSlots(rtlCss, 'ltr')
 
 function getSlotFromSvgString(svgString: string): string {
-  const m = /data-slot='([^']+)'/.exec(svgString)
-  if (!m) throw new Error(`No data-slot attribute found in SVG string: ${svgString.slice(0, 120)}`)
+  const m = /data-slot='([^']+)'/u.exec(svgString)
+  if (!m) {
+    throw new Error(`No data-slot attribute found in SVG string: ${svgString.slice(0, 120)}`)
+  }
   return m[1]!
 }
 

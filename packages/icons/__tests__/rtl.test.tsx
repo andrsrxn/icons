@@ -19,6 +19,9 @@
  * This tests both the CSS authorship and the component rendering in a single,
  * deterministic pass — no browser or CSS engine needed.
  */
+/** biome-ignore-all lint/style/useNamedCaptureGroup: the regex is simple enough */
+/** biome-ignore-all lint/style/noNonNullAssertion: we are confident the regex will match */
+
 import fs from 'node:fs'
 import path from 'node:path'
 import { render } from '@testing-library/react'
@@ -36,19 +39,24 @@ const rtlCss = fs.readFileSync(path.resolve(import.meta.dirname, '../src/rtl.css
 /** Extract all data-slot values whose selector starts with [dir='<dir>'] */
 function extractSlots(css: string, dir: 'rtl' | 'ltr'): Set<string> {
   // Strip CSS block comments before parsing so they don't interfere with matching.
-  const stripped = css.replace(/\/\*[\s\S]*?\*\//g, '')
+  const stripped = css.replace(/\/\*[\s\S]*?\*\//gu, '')
   const slots = new Set<string>()
   // Match rule blocks: <selectors> { <declarations> }
-  const ruleBlockRe = /([^{]+)\{[^}]*\}/g
+  const ruleBlockRe = /([^{]+)\{[^}]*\}/gu
   let m: RegExpExecArray | null
+  // biome-ignore lint/suspicious/noAssignInExpressions: needed for RegExp exec in a while loop
   while ((m = ruleBlockRe.exec(stripped)) !== null) {
     const selectorList = m[1]!
     // Split on comma to get individual selectors
     for (const selector of selectorList.split(',')) {
       const trimmed = selector.trim()
-      if (!trimmed.startsWith(`[dir='${dir}']`)) continue
-      const slotMatch = /\[data-slot='([^']+)'\]/.exec(trimmed)
-      if (slotMatch) slots.add(slotMatch[1]!)
+      if (!trimmed.startsWith(`[dir='${dir}']`)) {
+        continue
+      }
+      const slotMatch = /\[data-slot='([^']+)'\]/u.exec(trimmed)
+      if (slotMatch) {
+        slots.add(slotMatch[1]!)
+      }
     }
   }
   return slots
@@ -59,9 +67,13 @@ const ltrSlots = extractSlots(rtlCss, 'ltr')
 
 function getSlot(container: HTMLElement): string {
   const svg = container.querySelector('svg')
-  if (!svg) throw new Error('No <svg> found in rendered output')
+  if (!svg) {
+    throw new Error('No <svg> found in rendered output')
+  }
   const slot = svg.getAttribute('data-slot')
-  if (!slot) throw new Error('<svg> has no data-slot attribute')
+  if (!slot) {
+    throw new Error('<svg> has no data-slot attribute')
+  }
   return slot
 }
 
