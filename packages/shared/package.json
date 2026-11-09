@@ -1,0 +1,14 @@
+{
+  "name": "@andrsrxn/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "exports": {
+    "./inject-dts-previews": "./src/inject-dts-previews.js",
+    "./fix-types-exports": "./src/fix-types-exports.js"
+  },
+  "scripts": {
+    "copy-files": "node ./scripts/copy-files.js"
+  }
+}

@@ -51,15 +51,16 @@
       "cache": false,
       "outputs": []
     },
-    "generate-raw-metadata": {
-      "cache": false,
-      "outputs": []
-    },
     "attw": {
       "cache": false,
+      "dependsOn": ["^build"],
       "outputs": []
     },
     "publint": {
+      "cache": false,
+      "outputs": []
+    },
+    "copy-files": {
       "cache": false,
       "outputs": []
     }
