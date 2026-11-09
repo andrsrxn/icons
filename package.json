@@ -9,6 +9,7 @@
     "dev:docs": "turbo run dev --filter=docs",
     "build": "turbo run build",
     "build:icons": "turbo run build --filter=@andrsrxn/icons",
+    "build:icons-svg": "turbo run build --filter=@andrsrxn/icons-svg",
     "build:raw-icons": "turbo run build --filter=@andrsrxn/raw-icons",
     "build:docs": "turbo run build --filter=docs",
     "lint": "turbo run lint",
@@ -28,15 +29,15 @@
     "release": "pnpm build:icons && changeset publish",
     "generate-icons": "turbo run generate-icons",
     "generate-flags": "turbo run generate-flags",
-    "generate-raw-metadata": "turbo run generate-raw-metadata",
     "attw": "turbo run attw",
-    "publint": "turbo run publint"
+    "publint": "turbo run publint",
+    "copy-files": "turbo run copy-files"
   },
   "engines": {
     "node": "^24",
     "pnpm": "^11"
   },
-  "packageManager": "pnpm@11.20.0",
+  "packageManager": "pnpm@12.15.0",
   "devDependencies": {
     "turbo": "2.11.10",
     "prettier": "3.9.10",
