@@ -26,23 +26,13 @@ export const IconBandage: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='12.17'
-        y='4.08'
-        width='10.96'
-        height='11.43'
-        rx='2'
-        transform='rotate(45 12.17 4.08)'
+        d='M9.34 6.91c1.33-1.33 2-2 2.83-2 .82 0 1.49.67 2.82 2l2.1 2.1c1.33 1.33 2 2 2 2.82 0 .83-.67 1.5-2 2.83l-2.43 2.43c-1.33 1.33-2 2-2.83 2-.82 0-1.49-.67-2.82-2l-2.1-2.1c-1.33-1.33-2-2-2-2.82 0-.83.67-1.5 2-2.83z'
         fill='currentColor'
       />
-      <rect
-        x='15.64'
-        y='.61'
-        width='10.96'
-        height='21.27'
-        rx='3'
-        transform='rotate(45 15.64 .6)'
+      <path
+        d='M4.48 19.52c1.3 1.3 1.96 1.96 2.7 2.22a3.5 3.5 0 0 0 2.35 0c.74-.26 1.4-.91 2.7-2.22l7.29-7.29c1.3-1.3 1.96-1.96 2.22-2.7a3.5 3.5 0 0 0 0-2.34c-.26-.75-.91-1.4-2.22-2.7v0c-1.3-1.32-1.96-1.97-2.7-2.23a3.5 3.5 0 0 0-2.35 0c-.74.26-1.4.91-2.7 2.22l-7.29 7.29c-1.3 1.3-1.96 1.96-2.22 2.7a3.5 3.5 0 0 0 0 2.34c.26.75.91 1.4 2.22 2.7'
         stroke='currentColor'
       />
       <path d='M19.75 12 12 4.25' stroke='currentColor' />

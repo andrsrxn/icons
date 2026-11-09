@@ -32,14 +32,13 @@ export const IconTransmissionAutomatic: Icon = ({
       />
       <circle opacity='.2' cx='8.16' cy='4.08' r='2.39' fill='currentColor' />
       <circle cx='8.16' cy='4.08' r='2.39' stroke='currentColor' />
-      <path d='M15.01 9.28v4.62' stroke='currentColor' />
-      <path
-        d='M15.03 9.28h1.65c.69 0 1.25.6 1.25 1.32s-.56 1.33-1.25 1.33h-1.65'
-        stroke='currentColor'
-      />
       <path d='M8.16 11.59h3.78' stroke='currentColor' />
       <path
-        d='M15.03 21.42v-2.84c0-.41 0-.62.16-.77.15-.15.33-.13.69-.11.95.06 2.36.46 2.36 2.3s-1.41 2.24-2.36 2.3c-.36.02-.54.03-.7-.11s-.15-.36-.15-.77'
+        d='M15.01 14.08V10.1c0-.48 0-.71.15-.86.14-.14.38-.14.85-.14h.8c.75 0 1.35.64 1.35 1.42 0 .8-.6 1.43-1.35 1.43h-1.78'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.66 21.36v-3.3c0-.41 0-.62.16-.76.15-.15.33-.14.69-.13 1.04.05 2.65.46 2.65 2.54s-1.61 2.49-2.65 2.53c-.36.02-.54.03-.7-.12s-.15-.35-.15-.76'
         stroke='currentColor'
       />
     </svg>

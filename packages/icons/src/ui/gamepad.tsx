@@ -26,14 +26,7 @@ export const IconGamepad: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
-        opacity='.2'
-        width='11.33'
-        height='20.75'
-        rx='5.67'
-        transform='matrix(0 -1 -1 0 22.38 17.67)'
-        fill='currentColor'
-      />
+      <path opacity='.2' d='M16.37 18a6 6 0 1 0 0-12H7.63a6 6 0 0 0 0 12z' fill='currentColor' />
       <path d='M5.36 12h5.01' stroke='currentColor' />
       <path d='M7.86 14.5v-5' stroke='currentColor' />
       <path
@@ -46,11 +39,8 @@ export const IconGamepad: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <rect
-        width='11.33'
-        height='20.75'
-        rx='5.67'
-        transform='matrix(0 -1 -1 0 22.38 17.67)'
+      <path
+        d='M1.62 12a6 6 0 0 1 6-6h8.75a6 6 0 0 1 6 6v0a6 6 0 0 1-6 6H7.63a6 6 0 0 1-6-6'
         stroke='currentColor'
       />
     </svg>

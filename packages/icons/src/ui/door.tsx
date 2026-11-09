@@ -26,9 +26,13 @@ export const IconDoor: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path opacity='.2' fill='currentColor' d='M5.11 2.68h13.77v18.7H5.11z' />
       <path
-        d='M18.89 21.12V6.68c0-1.88 0-2.83-.59-3.41-.58-.59-1.53-.59-3.41-.59H9.1c-1.88 0-2.83 0-3.41.59-.59.58-.59 1.53-.59 3.41v14.44'
+        opacity='.2'
+        d='M5.11 8.68c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.78c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v12.7H5.1z'
+        fill='currentColor'
+      />
+      <path
+        d='M18.89 21.12V8.68c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H11.1c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v12.44'
         stroke='currentColor'
       />
       <path d='M21.18 21.39H2.82' stroke='currentColor' />

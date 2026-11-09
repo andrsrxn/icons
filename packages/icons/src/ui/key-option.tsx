@@ -27,7 +27,7 @@ export const IconKeyOption: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M2.74 7.33h4.21c1.13 0 1.7 0 2.16.26.46.27.74.76 1.3 1.74l3.55 6.13c.56.97.84 1.46 1.3 1.73s1.03.27 2.16.27h3.84'
+        d='M2.74 7.33H5.8c1.69 0 2.53 0 3.23.4s1.12 1.13 1.96 2.6l2.39 4.13c.84 1.46 1.27 2.2 1.96 2.6.7.4 1.54.4 3.23.4h2.7'
         stroke='currentColor'
       />
       <path d='M15.26 7.33h6' stroke='currentColor' />

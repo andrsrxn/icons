@@ -27,28 +27,18 @@ export const IconPanelLeftOpenFilled: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m16.8 15.9-1.08-1.07c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l1.07-1.07'
+        d='m16.8 15.9-1.08-1.07h0c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l1.07-1.07'
         stroke='currentColor'
       />
-      <rect
-        x='9.35'
-        y='21.21'
-        width='6.62'
-        height='18.42'
-        rx='2'
-        transform='rotate(-180 9.35 21.21)'
+      <path
+        d='M9.35 21.28c-2.44 0-3.67 0-4.58-.52a4 4 0 0 1-1.52-1.52c-.51-.91-.51-2.13-.51-4.58V9.34c0-2.45 0-3.67.51-4.58a4 4 0 0 1 1.52-1.52c.91-.52 2.14-.52 4.58-.52z'
         fill='currentColor'
       />
-      <rect
-        x='21.27'
-        y='21.21'
-        width='18.53'
-        height='18.42'
-        rx='3'
-        transform='rotate(-180 21.27 21.21)'
+      <path
+        d='M13.27 2.72h-2.53c-3.78 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.56c0 3.77 0 5.66 1.17 6.83s3.05 1.17 6.82 1.17h2.54c3.77 0 5.65 0 6.82-1.17 1.18-1.17 1.18-3.06 1.18-6.83v-2.56c0-3.77 0-5.66-1.18-6.83-1.17-1.17-3.05-1.17-6.82-1.17'
         stroke='currentColor'
       />
-      <path d='M9.35 3.18v17.64' stroke='currentColor' />
+      <path d='M9.35 3.12v17.76' stroke='currentColor' />
     </svg>
   )
 }

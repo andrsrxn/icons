@@ -26,18 +26,14 @@ export const Icon3d: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M21.52 20.53H2.48' stroke='currentColor' />
-      <path d='M21.52 3.5H2.48' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
       <path
-        d='M13.45 8.8v6.4c0 .82 0 1.23.31 1.52s.67.28 1.38.24c2-.1 5.03-.93 5.03-4.96s-3.04-4.86-5.03-4.96c-.71-.04-1.07-.06-1.38.23s-.31.71-.31 1.53'
+        d='M13.05 16.06V7.94c0-.4 0-.6.14-.75s.33-.16.7-.17c1.84-.07 6.03.29 6.03 4.98s-4.19 5.05-6.02 4.98c-.38-.01-.57-.02-.71-.17-.14-.14-.14-.35-.14-.75'
         stroke='currentColor'
       />
       <path
-        d='M4.52 8.13a3.6 3.6 0 0 1 2.83-1.2c2.56 0 3.31 2.94 2.03 4.13-1.28 1.18-3.16.91-3.16.91'
-        stroke='currentColor'
-      />
-      <path
-        d='M4.52 15.87a3.6 3.6 0 0 0 2.83 1.2c2.56 0 3.31-2.94 2.03-4.13-1.28-1.18-3.16-.91-3.16-.91'
+        d='M4.54 15.72c1.12 1.83 5.2 1.96 5.2-1.51 0-1.75-1.35-2.26-2.8-2.29 1.28-.03 2.49-.65 2.49-2.3 0-3.26-3.84-3.14-4.9-1.41'
         stroke='currentColor'
       />
     </svg>

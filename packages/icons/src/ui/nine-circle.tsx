@@ -26,21 +26,10 @@ export const IconNineCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M14.86 9.78c0 1.76 0 6.17-4.1 7.37' stroke='currentColor' />
-      <circle
-        cx='12.21'
-        cy='9.62'
-        r='2.65'
-        transform='rotate(-90 12.21 9.62)'
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
+      <path
+        d='M14.7 9.49c-.2-1.35-1.27-2.73-2.77-2.73A2.73 2.73 0 0 0 9.2 9.49c0 1.5 1.03 2.7 2.54 2.7a2.9 2.9 0 0 0 2.96-2.7m0 0a7.7 7.7 0 0 1-.78 4.96 5.6 5.6 0 0 1-3.32 2.8'
         stroke='currentColor'
       />
     </svg>

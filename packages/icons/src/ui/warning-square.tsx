@@ -26,12 +26,9 @@ export const IconWarningSquare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+        d='M13.58 21.58c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-3.16c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-3.16c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v3.16c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
       <path d='M12 6.57v6' stroke='currentColor' />
@@ -40,11 +37,8 @@ export const IconWarningSquare: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <rect
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+      <path
+        d='M2.42 13.58v-3.16c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h3.16c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v3.16c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-3.16c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
     </svg>

@@ -26,23 +26,13 @@ export const IconDeviceTablet: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='3.77'
-        y='22.31'
-        width='20.62'
-        height='16.45'
-        rx='3'
-        transform='rotate(-90 3.77 22.3)'
+        d='M11.77 22.3c-3.77 0-5.65 0-6.82-1.16-1.18-1.18-1.18-3.06-1.18-6.83V9.69c0-3.77 0-5.65 1.18-6.83C6.12 1.7 8 1.7 11.77 1.7h.46c3.77 0 5.65 0 6.82 1.17 1.18 1.18 1.18 3.06 1.18 6.83v4.62c0 3.77 0 5.65-1.18 6.83-1.17 1.17-3.05 1.17-6.82 1.17z'
         fill='currentColor'
       />
-      <rect
-        x='3.77'
-        y='22.31'
-        width='20.62'
-        height='16.45'
-        rx='3'
-        transform='rotate(-90 3.77 22.3)'
+      <path
+        d='M20.23 14.3V9.7c0-3.78 0-5.66-1.18-6.84C17.88 1.7 16 1.7 12.23 1.7h-.46c-3.77 0-5.65 0-6.82 1.17C3.77 4.04 3.77 5.92 3.77 9.7v4.62c0 3.77 0 5.65 1.18 6.83C6.12 22.3 8 22.3 11.77 22.3h.46c3.77 0 5.65 0 6.82-1.17 1.18-1.18 1.18-3.06 1.18-6.83'
         stroke='currentColor'
       />
       <path

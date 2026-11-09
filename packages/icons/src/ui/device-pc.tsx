@@ -26,16 +26,15 @@ export const IconDevicePc: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.74'
-        y='3.34'
-        width='20.52'
-        height='13.75'
-        rx='3'
+        d='M1.74 10.21c0-2.69 0-4.03.62-5.01A4 4 0 0 1 3.6 3.96c.98-.63 2.32-.63 5.01-.63h6.78c2.69 0 4.03 0 5.01.63a4 4 0 0 1 1.24 1.24c.62.98.62 2.32.62 5.01s0 4.03-.62 5.01a4 4 0 0 1-1.24 1.24c-.98.62-2.32.62-5.01.62H8.6c-2.69 0-4.03 0-5.01-.62a4 4 0 0 1-1.24-1.24c-.62-.98-.62-2.32-.62-5.01'
         fill='currentColor'
       />
-      <rect x='1.74' y='3.34' width='20.52' height='13.75' rx='3' stroke='currentColor' />
+      <path
+        d='M8.61 17.08h6.78c2.69 0 4.03 0 5.01-.62a4 4 0 0 0 1.24-1.24c.62-.98.62-2.32.62-5.01v0c0-2.69 0-4.03-.62-5.01a4 4 0 0 0-1.24-1.24c-.98-.63-2.32-.63-5.01-.63H8.6c-2.69 0-4.03 0-5.01.63A4 4 0 0 0 2.36 5.2c-.62.98-.62 2.32-.62 5.01v0c0 2.69 0 4.03.62 5.01a4 4 0 0 0 1.24 1.24c.98.62 2.32.62 5.01.62'
+        stroke='currentColor'
+      />
       <path d='M7.64 21.2h8.7' stroke='currentColor' />
       <path d='M12 21.2v-3.99' stroke='currentColor' />
     </svg>

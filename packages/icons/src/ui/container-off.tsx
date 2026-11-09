@@ -26,13 +26,25 @@ export const IconContainerOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='1.37' y='5' width='21.26' height='14.04' rx='3' fill='currentColor' />
-      <rect x='1.74' y='5' width='20.52' height='14.04' rx='3' stroke='currentColor' />
-      <path d='M5.6 14.74V9.3' stroke='currentColor' />
-      <path d='M9.87 14.74V9.3' stroke='currentColor' />
-      <path d='M14.13 14.74V9.3' stroke='currentColor' />
-      <path d='M18.4 14.74V9.3' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M1.74 11.6c0-3.3 0-4.96 1.02-5.98C3.8 4.59 5.44 4.59 8.74 4.59h6.52c3.3 0 4.95 0 5.98 1.03 1.02 1.02 1.02 2.67 1.02 5.97v.82c0 3.3 0 4.95-1.02 5.97-1.03 1.03-2.68 1.03-5.98 1.03H8.74c-3.3 0-4.95 0-5.98-1.03-1.02-1.02-1.02-2.67-1.02-5.97z'
+        fill='currentColor'
+      />
+      <path
+        d='M19.26 19.4H8.74c-3.3 0-4.95 0-5.98-1.02-1.02-1.02-1.02-2.67-1.02-5.97V7.16A2.57 2.57 0 0 1 4.3 4.59'
+        stroke='currentColor'
+      />
+      <path d='M5.6 14.72V9.28' stroke='currentColor' />
+      <path d='M9.87 14.72V9.97' stroke='currentColor' />
+      <path d='M14.13 14.72v-.5' stroke='currentColor' />
+      <path d='M14.13 10.6V9.28' stroke='currentColor' />
+      <path d='M18.4 14.72V9.28' stroke='currentColor' />
+      <path
+        d='M8.44 4.6h6.82c3.3 0 4.95 0 5.98 1.02 1.02 1.02 1.02 2.67 1.02 5.97v4.28c0 1.1-.4 2.05-.4 2.05'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

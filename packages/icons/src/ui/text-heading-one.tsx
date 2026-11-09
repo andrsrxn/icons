@@ -35,7 +35,7 @@ export const IconTextHeadingOne: Icon = ({
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 18.77h2.9' stroke='currentColor' />
       <path
-        d='m17.7 16.12 1.3-1.15c.72-.65 1.08-.97 1.37-.84s.3.61.3 1.58v5'
+        d='m18.4 15.27.56-.36c.68-.43 1.02-.65 1.28-.5.26.14.26.54.26 1.34v4.95'
         stroke='currentColor'
       />
     </svg>

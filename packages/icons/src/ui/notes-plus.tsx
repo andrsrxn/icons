@@ -26,19 +26,13 @@ export const IconNotesPlus: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='17.81'
-        height='17.81'
-        rx='3'
-        transform='matrix(0 -1 -1 0 20.9 21.46)'
+        d='M12.9 21.46c3.78 0 5.66 0 6.83-1.17 1.18-1.18 1.18-3.06 1.18-6.83v-1.81c0-3.77 0-5.66-1.18-6.83-1.17-1.17-3.05-1.17-6.82-1.17h-1.82c-3.77 0-5.65 0-6.82 1.17-1.18 1.17-1.18 3.06-1.18 6.83v1.8c0 3.78 0 5.66 1.18 6.84 1.17 1.17 3.05 1.17 6.82 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='17.81'
-        height='17.81'
-        rx='3'
-        transform='matrix(0 -1 -1 0 20.9 21.46)'
+      <path
+        d='M3.1 13.46v-1.81c0-3.77 0-5.66 1.17-6.83s3.05-1.17 6.82-1.17h1.82c3.77 0 5.65 0 6.82 1.17 1.18 1.17 1.18 3.06 1.18 6.83v1.8c0 3.78 0 5.66-1.18 6.84-1.17 1.17-3.05 1.17-6.82 1.17h-1.82c-3.77 0-5.65 0-6.82-1.17-1.18-1.18-1.18-3.06-1.18-6.83'
         stroke='currentColor'
       />
       <path d='M8.23 13.39h7.54' stroke='currentColor' />

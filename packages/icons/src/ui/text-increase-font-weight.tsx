@@ -31,10 +31,8 @@ export const IconTextIncreaseFontWeight: Icon = ({
         stroke='currentColor'
       />
       <path d='M17.82 10.5v8.29' stroke='currentColor' />
-      <path d='M4.8 5.81h2.05a3 3 0 0 1 0 6H5.79' stroke='currentColor' />
-      <path d='M5.8 11.8h1.46a3.5 3.5 0 0 1 0 6.99H4.97' stroke='currentColor' />
       <path
-        d='M5.02 5.81c-.34 0-.51 0-.65.03a2 2 0 0 0-1.7 1.7c-.02.13-.02.3-.02.64v8.24c0 .34 0 .5.02.65a2 2 0 0 0 1.7 1.7l.65.01'
+        d='M4.8 5.81h2.05a3 3 0 0 1 2.99 3c0 1.65-1.01 3-3.7 3h1.12a3.5 3.5 0 0 1 0 6.98H4.97m.04 0c-.96 0-1.45 0-1.8-.25q-.18-.14-.32-.32c-.24-.35-.24-.83-.24-1.8V8.18c0-.97 0-1.46.24-1.8q.14-.2.33-.32c.34-.25.83-.25 1.8-.25'
         stroke='currentColor'
       />
     </svg>

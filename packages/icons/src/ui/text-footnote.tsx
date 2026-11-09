@@ -29,11 +29,11 @@ export const IconTextFootnote: Icon = ({
       <path d='M9.6 7.51v13.87' stroke='currentColor' />
       <path d='M11.9 21.38H7.3' stroke='currentColor' />
       <path
-        d='M15.2 9.13c0-.9-.72-1.62-1.61-1.62h-8c-.89 0-1.61.73-1.61 1.62'
+        d='M3.98 9.13c0-.9.72-1.62 1.62-1.62h7.99c.9 0 1.62.73 1.62 1.62'
         stroke='currentColor'
       />
       <path
-        d='m17.1 4.6 1.25-1.15c.72-.65 1.07-.98 1.37-.85s.3.62.3 1.59v4.23'
+        d='m17.77 3.46.49-.3c.68-.44 1.01-.65 1.27-.51s.26.54.26 1.35v4.68'
         stroke='currentColor'
       />
     </svg>

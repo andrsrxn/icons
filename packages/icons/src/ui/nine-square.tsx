@@ -26,27 +26,17 @@ export const IconNineSquare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+        d='M13.58 21.58c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-3.16c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-3.16c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v3.16c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+      <path
+        d='M2.42 13.58v-3.16c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h3.16c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v3.16c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-3.16c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
-      <path d='M14.9 9.52c0 1.77 0 6.18-4.1 7.38' stroke='currentColor' />
-      <circle
-        cx='12.25'
-        cy='9.36'
-        r='2.65'
-        transform='rotate(-90 12.25 9.36)'
+      <path
+        d='M14.7 9.49c-.2-1.35-1.27-2.73-2.77-2.73A2.73 2.73 0 0 0 9.2 9.49c0 1.5 1.03 2.7 2.54 2.7a2.9 2.9 0 0 0 2.96-2.7m0 0a7.7 7.7 0 0 1-.78 4.96 5.6 5.6 0 0 1-3.32 2.8'
         stroke='currentColor'
       />
     </svg>

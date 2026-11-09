@@ -26,20 +26,14 @@ export const IconField: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='12.42'
-        height='20.61'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.3 18.21)'
+        d='M15.83 18.48c2.31 0 3.47 0 4.35-.47a4 4 0 0 0 1.66-1.66c.47-.88.47-2.04.47-4.35s0-3.47-.47-4.35A4 4 0 0 0 20.18 6c-.88-.47-2.04-.47-4.35-.47H8.17c-2.31 0-3.47 0-4.35.47a4 4 0 0 0-1.66 1.66c-.47.88-.47 2.04-.47 4.35s0 3.47.47 4.35A4 4 0 0 0 3.82 18c.88.47 2.04.47 4.35.47z'
         fill='currentColor'
       />
       <path d='M5.95 13.93h6.55' stroke='currentColor' />
-      <rect
-        width='12.42'
-        height='20.61'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.3 18.21)'
+      <path
+        d='M1.7 12c0-2.31 0-3.47.46-4.35A4 4 0 0 1 3.82 6c.88-.47 2.04-.47 4.35-.47h7.66c2.31 0 3.47 0 4.35.47a4 4 0 0 1 1.66 1.66c.47.88.47 2.04.47 4.35v0c0 2.31 0 3.47-.47 4.35A4 4 0 0 1 20.18 18c-.88.47-2.04.47-4.35.47H8.17c-2.31 0-3.47 0-4.35-.47a4 4 0 0 1-1.66-1.66c-.47-.88-.47-2.04-.47-4.35'
         stroke='currentColor'
       />
     </svg>

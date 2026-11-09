@@ -27,12 +27,12 @@ export const IconChartCombined: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M6 9.45 8.51 7.6c.84-.62 1.26-.93 1.74-1.01a2 2 0 0 1 .67 0c.47.08.89.4 1.73 1.02.94.71 1.42 1.06 1.94 1.13a2 2 0 0 0 .74-.05c.51-.12.94-.53 1.8-1.35l2-1.91'
+        d='m6.45 9.37 2.32-1.85c.87-.7 1.31-1.04 1.82-1.05s.96.32 1.85.99l.52.39c.98.73 1.46 1.1 2.01 1.06s.99-.46 1.87-1.3l2.28-2.18'
         stroke='currentColor'
       />
-      <path d='M6.5 13.29v4.18' stroke='currentColor' />
-      <path d='M14.83 13.29v4.18' stroke='currentColor' />
-      <path d='M10.66 11.47v6' stroke='currentColor' />
+      <path d='M6.91 13.29v4.18' stroke='currentColor' />
+      <path d='M14.97 13.29v4.18' stroke='currentColor' />
+      <path d='M10.94 11.47v6' stroke='currentColor' />
       <path d='M19 11.47v6' stroke='currentColor' />
       <path
         d='M21.24 21.33H10.76c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83V2.63'

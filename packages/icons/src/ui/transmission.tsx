@@ -27,7 +27,7 @@ export const IconTransmission: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M20.18 6.67V8c0 1.89 0 2.83-.58 3.41-.59.59-1.53.59-3.42.59H3.74'
+        d='M3.74 12h12.44c1.89 0 2.83 0 3.42-.59.58-.58.58-1.52.58-3.41V6.67'
         stroke='currentColor'
       />
       <circle opacity='.2' cx='3.74' cy='4.67' r='2.01' fill='currentColor' />
@@ -42,10 +42,9 @@ export const IconTransmission: Icon = ({
       <circle cx='11.99' cy='19.33' r='2.01' stroke='currentColor' />
       <path d='M3.74 6.67v10.66' stroke='currentColor' />
       <path d='M12 6.67v10.66' stroke='currentColor' />
-      <path d='m19.58 18.8 1.85 2.54' stroke='currentColor' />
-      <path d='M18 15.38v5.96' stroke='currentColor' />
+      <path d='m19.61 19 2.05 2.34' stroke='currentColor' />
       <path
-        d='M18.02 15.38h2.13c.89 0 1.6.77 1.6 1.7 0 .95-.71 1.71-1.6 1.71h-2.13'
+        d='M18.39 21.34v-4.69c0-.47 0-.7.15-.85s.38-.15.85-.15h1.05c.85 0 1.54.73 1.54 1.63s-.7 1.63-1.54 1.63H18.4'
         stroke='currentColor'
       />
     </svg>

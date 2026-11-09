@@ -26,18 +26,18 @@ export const IconTranslate: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M2.7 5.48h11.88' stroke='currentColor' />
-      <path d='M8.64 5.48V2.86' stroke='currentColor' />
-      <path d='m5.77 8.82 7.54 7.53' stroke='currentColor' />
+      <path d='M3.02 5.23h12.54' stroke='currentColor' />
+      <path d='M9.18 5.23V2.52' stroke='currentColor' />
+      <path d='m6.2 8.7 7.82 7.82' stroke='currentColor' />
       <path
-        d='M4.78 15.24c2.04-1.12 3.42-1.98 4.86-3.8 1.6-2 1.97-3.43 2.57-5.92'
+        d='M5.18 15.36c2.11-1.16 3.54-2.05 5.04-3.94 1.66-2.07 2.04-3.56 2.67-6.14'
         stroke='currentColor'
       />
       <path
-        d='m11.86 21.14 2.86-7.9c.79-2.2 1.18-3.3 1.88-3.29s1.1 1.1 1.88 3.29l2.82 7.9'
+        d='m12.77 21.48 1.95-6.6h0c.95-3.25 1.43-4.87 2.32-4.86s1.32 1.65 2.2 4.92l1.74 6.54'
         stroke='currentColor'
       />
-      <path d='M19.37 16.56H13.9' stroke='currentColor' />
+      <path d='M14.31 17.08h5.29' stroke='currentColor' />
     </svg>
   )
 }

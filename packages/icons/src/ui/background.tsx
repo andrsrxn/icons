@@ -26,18 +26,17 @@ export const IconBackground: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='2.68'
-        y='2.68'
-        width='18.64'
-        height='18.64'
-        rx='3'
+        d='M2.68 10.68c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h2.64c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.64c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.64c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83z'
         fill='currentColor'
       />
-      <rect x='2.68' y='2.68' width='18.64' height='18.64' rx='3' stroke='currentColor' />
+      <path
+        d='M10.68 21.32h2.64c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-2.64c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.64c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.64c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17'
+        stroke='currentColor'
+      />
       <path d='m3.04 11.92 9.23 9.24' stroke='currentColor' />
-      <path d='m3.88 3.78 16.57 16.57' stroke='currentColor' />
+      <path d='m3.9 3.8 16.28 16.28' stroke='currentColor' />
       <path d='m11.75 2.86 9.2 9.2' stroke='currentColor' />
     </svg>
   )

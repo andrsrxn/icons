@@ -32,12 +32,15 @@ export const IconParkingOff: Icon = ({
         fill='currentColor'
       />
       <path d='m2.68 2.68 18.64 18.64' stroke='currentColor' />
-      <path d='M1.6 12A10.4 10.4 0 0 0 12 22.41 10.41 10.41 0 1 0 1.6 12' stroke='currentColor' />
-      <path d='M9.13 6.44v11.94' stroke='currentColor' />
       <path
-        d='M9.18 6.44h4.26a3.33 3.33 0 0 1 3.23 3.42 3.33 3.33 0 0 1-3.23 3.42H9.18'
+        d='M4.56 4.72a10.4 10.4 0 0 0 0 14.56 10.4 10.4 0 0 0 14.73.16M7.16 2.78a10.41 10.41 0 0 1 14.06 14.06'
         stroke='currentColor'
       />
+      <path
+        d='M10.16 6.62h3.29a3.3 3.3 0 0 1 3.22 3.4c0 .9-.34 1.73-.88 2.34'
+        stroke='currentColor'
+      />
+      <path d='M9.16 9.4v9.1m4.02-5.07H9.2' stroke='currentColor' />
     </svg>
   )
 }

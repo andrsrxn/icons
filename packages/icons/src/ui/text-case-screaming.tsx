@@ -26,17 +26,17 @@ export const IconTextCaseScreaming: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <path d='M13.25 16.82H10.7' stroke='currentColor' />
       <path
-        d='m1.6 16.63 1.5-5.22c.78-2.75 1.18-4.12 1.93-4.12.76 0 1.14 1.37 1.92 4.12l1.47 5.22'
+        d='m15.42 16.82 1.63-5.55h0c.8-2.74 1.2-4.1 1.95-4.1.75.02 1.12 1.4 1.85 4.15l1.47 5.5'
         stroke='currentColor'
       />
       <path
-        d='m15.58 16.63 1.5-5.22c.78-2.75 1.17-4.12 1.92-4.12.76 0 1.15 1.37 1.92 4.12l1.47 5.22'
+        d='m1.68 16.82 1.63-5.55h0c.8-2.74 1.21-4.1 1.96-4.1.75.02 1.12 1.4 1.85 4.15l1.46 5.5'
         stroke='currentColor'
       />
-      <path d='M7.18 12.26H2.85' stroke='currentColor' />
-      <path d='M21.15 12.26h-4.33' stroke='currentColor' />
-      <path d='M13.24 16.63h-2.57' stroke='currentColor' />
+      <path d='M16.71 13.12h4.45' stroke='currentColor' />
+      <path d='M2.98 13.12h4.44' stroke='currentColor' />
     </svg>
   )
 }

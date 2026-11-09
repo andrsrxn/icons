@@ -27,14 +27,14 @@ export const IconClockTime: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <circle opacity='.2' cx='12' cy='12' r='10.25' fill='currentColor' />
-      <path d='M5.68 3.93A10.25 10.25 0 1 0 20.1 18.26' stroke='currentColor' />
+      <path d='M7.71 2.76A10.25 10.25 0 1 0 18.5 20' stroke='currentColor' />
       <path
-        d='m16.04 15.78-2.93-1.95c-.87-.58-1.3-.87-1.54-1.32-.24-.44-.24-.96-.24-2.01V6.31'
+        d='M11.33 6.31v4.19c0 1.05 0 1.57.24 2.01.24.45.67.74 1.54 1.32l2.93 1.95'
         stroke='currentColor'
       />
-      <path d='M13.9 1.94a11 11 0 0 0-4.01 0' stroke='currentColor' />
-      <path d='M22 10.03a11 11 0 0 1 0 4.01' stroke='currentColor' />
-      <path d='M17.62 3.48a11 11 0 0 1 2.84 2.84' stroke='currentColor' />
+      <path d='M16.18 2.7a11 11 0 0 0-3.9-.91' stroke='currentColor' />
+      <path d='M22.21 12.41a11 11 0 0 1-.92 3.9' stroke='currentColor' />
+      <path d='M19.44 5.04a11 11 0 0 1 2.11 3.41' stroke='currentColor' />
     </svg>
   )
 }

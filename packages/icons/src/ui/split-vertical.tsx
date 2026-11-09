@@ -26,23 +26,13 @@ export const IconSplitVertical: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='4.59'
-        y='22.2'
-        width='20.39'
-        height='14.83'
-        rx='3'
-        transform='rotate(-90 4.59 22.2)'
+        d='M11.59 22.2c-3.3 0-4.95 0-5.98-1.03C4.6 20.15 4.6 18.5 4.6 15.2V8.8c0-3.3 0-4.95 1.02-5.97C6.64 1.8 8.3 1.8 11.6 1.8h.82c3.3 0 4.95 0 5.98 1.03 1 1.02 1 2.67 1 5.97v6.4c0 3.3 0 4.95-1.02 5.97-1.03 1.03-2.68 1.03-5.98 1.03z'
         fill='currentColor'
       />
-      <rect
-        x='4.59'
-        y='22.2'
-        width='20.39'
-        height='14.83'
-        rx='3'
-        transform='rotate(-90 4.59 22.2)'
+      <path
+        d='M19.41 15.2V8.8c0-3.3 0-4.95-1.02-5.97C17.36 1.8 15.7 1.8 12.4 1.8h-.82c-3.3 0-4.95 0-5.98 1.03-1 1.02-1 2.67-1 5.97v6.4c0 3.3 0 4.95 1.02 5.97C6.64 22.2 8.3 22.2 11.6 22.2h.82c3.3 0 4.95 0 5.98-1.03 1.02-1.02 1.02-2.67 1.02-5.97'
         stroke='currentColor'
       />
       <path d='M2.12 12h19.76' stroke='currentColor' />

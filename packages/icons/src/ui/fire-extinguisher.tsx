@@ -26,9 +26,12 @@ export const IconFireExtinguisher: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path opacity='.2' fill='currentColor' d='M8.58 13.15h8.02v8.46H8.58z' />
-      <path opacity='.2' fill='currentColor' d='M10.83 2.08h3.52v3.71h-3.52z' />
-      <rect x='8.27' y='6.25' width='8.64' height='16.01' rx='2' stroke='currentColor' />
+      <path opacity='.2' d='M8.58 13.15h8.02v8.46H8.58z' fill='currentColor' />
+      <path opacity='.2' d='M10.83 2.08h3.52v3.7h-3.52z' fill='currentColor' />
+      <path
+        d='M12.6 22.26c1.22 0 1.84 0 2.33-.17a3 3 0 0 0 1.8-1.81c.18-.5.18-1.1.18-2.34v-7.37c0-1.23 0-1.85-.18-2.34a3 3 0 0 0-1.8-1.8c-.5-.18-1.1-.18-2.34-.18v0c-1.23 0-1.84 0-2.33.18a3 3 0 0 0-1.81 1.8c-.18.5-.18 1.1-.18 2.34v7.37c0 1.23 0 1.85.18 2.34a3 3 0 0 0 1.8 1.8c.5.18 1.11.18 2.34.18'
+        stroke='currentColor'
+      />
       <path d='M16.91 13.15H8.58' stroke='currentColor' />
       <path
         d='M14.85 6.25V3.74c0-.95 0-1.42-.3-1.71-.29-.3-.76-.3-1.7-.3h-.51c-.95 0-1.42 0-1.71.3s-.3.76-.3 1.7v2.52'

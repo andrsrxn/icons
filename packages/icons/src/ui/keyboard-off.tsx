@@ -26,22 +26,20 @@ export const IconKeyboardOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.48)'
+        d='M16.32 19.48c2.83 0 4.24 0 5.12-.87.88-.88.88-2.3.88-5.13v-2.96c0-2.83 0-4.25-.88-5.13s-2.3-.87-5.12-.87H7.75c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v2.96c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87z'
         fill='currentColor'
       />
-      <rect
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.48)'
+      <path
+        d='M4.67 4.68c-.82.14-1.42.4-1.9.86-1.02 1.03-1.02 2.68-1.02 5.98v.96c0 3.3 0 4.95 1.03 5.98 1.02 1.02 2.67 1.02 5.97 1.02h6.57c1.75 0 3.03 0 4-.15'
         stroke='currentColor'
       />
-      <path d='m2.74 2.64 18.52 18.51' stroke='currentColor' />
+      <path
+        d='M21.9 17.56c.34-1.04.42-2.79.42-5.08v-.96c0-3.3 0-4.95-1.03-5.98-1.02-1.02-2.67-1.02-5.97-1.02H8.65'
+        stroke='currentColor'
+      />
+      <path d='m2.78 2.74 18.51 18.52' stroke='currentColor' />
       <path
         d='M6.13 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
@@ -54,16 +52,6 @@ export const IconKeyboardOff: Icon = ({
       />
       <path
         d='M6.13 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
-        fill='currentColor'
-        stroke='currentColor'
-      />
-      <path
-        d='M10.32 8.19a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
-        fill='currentColor'
-        stroke='currentColor'
-      />
-      <path
-        d='M14.5 12.46a.37.37 0 1 1-.75 0 .37.37 0 0 1 .75 0'
         fill='currentColor'
         stroke='currentColor'
       />

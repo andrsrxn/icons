@@ -26,17 +26,10 @@ export const IconOneCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
       <path
-        d='m8.65 11.05 3.09-2.8c.72-.66 1.07-.99 1.37-.86s.3.62.3 1.6v8.3'
+        d='m9.44 8.78 1.75-1.1c.67-.44 1.01-.65 1.27-.51s.26.54.26 1.35v8.74'
         stroke='currentColor'
       />
     </svg>

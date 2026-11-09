@@ -36,10 +36,10 @@ export const IconTextLineHeight: Icon = ({
       />
       <path d='M5.35 4.03v15.94' stroke='currentColor' />
       <path
-        d='m12.37 17.56 2.56-8.18c.8-2.52 1.18-3.77 1.92-3.77s1.13 1.26 1.9 3.77l2.53 8.18'
+        d='m12.65 17.56 1.97-6.72h0c.98-3.31 1.46-4.97 2.37-4.96.9.02 1.35 1.68 2.24 5.02L21 17.56'
         stroke='currentColor'
       />
-      <path d='M19.66 12.99h-5.67' stroke='currentColor' />
+      <path d='M14.21 13.08h5.4' stroke='currentColor' />
     </svg>
   )
 }

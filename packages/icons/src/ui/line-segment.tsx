@@ -26,18 +26,16 @@ export const IconLineSegment: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <path d='M3.32 4.38h17.74' stroke='currentColor' />
       <path
-        d='m2.4 19.58 2.11-7.4C5.3 9.43 5.7 8.06 6.44 8.06c.76 0 1.15 1.38 1.92 4.12l2.09 7.4'
+        d='m2.63 19.62 2-6.8h0c1-3.36 1.49-5.03 2.4-5.02.92.01 1.37 1.7 2.27 5.07l1.8 6.75'
         stroke='currentColor'
       />
-      <path d='M8.98 14.42H3.87' stroke='currentColor' />
-      <path d='M15.63 8h2.38a2.67 2.67 0 1 1 0 5.35h-1.39' stroke='currentColor' />
-      <path d='M16.62 13.35h1.86a3.12 3.12 0 1 1 0 6.23H15.8' stroke='currentColor' />
+      <path d='M4.22 15.08h5.46' stroke='currentColor' />
       <path
-        d='M15.82 8h-.2a2 2 0 0 0-1.9 1.92l-.01.2v7.55a2 2 0 0 0 1.91 1.9h.2'
+        d='M15.94 7.8h1.86c1.5 0 2.73 1.22 2.73 2.73 0 1.5-.92 2.72-3.37 2.72h1.02a3.18 3.18 0 0 1 0 6.37H16.1m.04 0c-.88 0-1.32 0-1.64-.22a1 1 0 0 1-.3-.3c-.21-.31-.21-.75-.21-1.64v-7.5c0-.9 0-1.33.22-1.65q.12-.16.3-.3c.3-.21.75-.21 1.63-.21'
         stroke='currentColor'
       />
-      <path d='M20.87 4.42H3.13' stroke='currentColor' />
     </svg>
   )
 }

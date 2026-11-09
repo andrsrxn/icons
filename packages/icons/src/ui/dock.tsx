@@ -26,19 +26,13 @@ export const IconDock: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.5'
-        height='20.65'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.25)'
+        d='M15.07 19.25c3.05 0 4.58 0 5.64-.79a4 4 0 0 0 .83-.83c.78-1.06.78-2.58.78-5.63s0-4.57-.78-5.63a4 4 0 0 0-.83-.83c-1.06-.79-2.59-.79-5.64-.79H8.93c-3.05 0-4.58 0-5.64.79a4 4 0 0 0-.83.83c-.78 1.06-.78 2.58-.78 5.63s0 4.57.78 5.63a4 4 0 0 0 .83.83c1.06.79 2.59.79 5.64.79z'
         fill='currentColor'
       />
-      <rect
-        width='14.5'
-        height='20.65'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.25)'
+      <path
+        d='M1.68 12c0-3.05 0-4.57.78-5.63a4 4 0 0 1 .83-.83c1.06-.79 2.59-.79 5.64-.79h6.14c3.05 0 4.58 0 5.64.79a4 4 0 0 1 .83.83c.78 1.06.78 2.58.78 5.63v0c0 3.05 0 4.57-.78 5.63a4 4 0 0 1-.83.83c-1.06.79-2.59.79-5.64.79H8.93c-3.05 0-4.58 0-5.64-.79a4 4 0 0 1-.83-.83c-.78-1.06-.78-2.58-.78-5.63'
         stroke='currentColor'
       />
       <path d='M5.96 15.51h12.08' stroke='currentColor' />

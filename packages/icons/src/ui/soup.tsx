@@ -32,13 +32,22 @@ export const IconSoup: Icon = ({
         fill='currentColor'
       />
       <path
-        d='m2.27 12.66-.04-.2a2 2 0 0 1 1.89-2.34h15.75a2 2 0 0 1 1.87 2.34l-.04.23-.17.71a9 9 0 0 1-8.37 6.7l-.73.01h-1.58a9 9 0 0 1-8.58-7.45'
+        d='M11.5 20.11h1.66a9 9 0 0 0 8.37-6.7l.17-.72.04-.23a2 2 0 0 0-1.87-2.34H4.12a2 2 0 0 0-1.89 2.34l.04.2.14.62a9 9 0 0 0 9.08 6.83'
         stroke='currentColor'
       />
-      <path d='M7.36 3.89v2.9' stroke='currentColor' />
-      <path d='M12 3.89v2.9' stroke='currentColor' />
-      <path d='M16.64 3.89v2.9' stroke='currentColor' />
       <path d='M1.73 20.11h20.54' stroke='currentColor' />
+      <path
+        d='m7.05 3.1.37.49a1.1 1.1 0 0 1-.09 1.4c-.4.4-.4 1.06 0 1.48l.3.33'
+        stroke='currentColor'
+      />
+      <path
+        d='m11.81 3.1.37.49a1.1 1.1 0 0 1-.08 1.4c-.4.4-.4 1.06 0 1.48l.3.33'
+        stroke='currentColor'
+      />
+      <path
+        d='m16.45 3.1.38.49a1.1 1.1 0 0 1-.09 1.4c-.4.4-.4 1.06 0 1.48l.3.33'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

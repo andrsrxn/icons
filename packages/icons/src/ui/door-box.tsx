@@ -33,7 +33,10 @@ export const IconDoorBox: Icon = ({
       />
       <path d='M21.18 21.39H2.82' stroke='currentColor' />
       <path d='M13.02 12h3.01' stroke='currentColor' />
-      <rect x='14.08' y='14.97' width='6.41' height='6.41' rx='1.5' stroke='currentColor' />
+      <path
+        d='M17.08 21.39h.41c1.42 0 2.12 0 2.56-.44s.44-1.15.44-2.56v-.42c0-1.41 0-2.12-.44-2.56s-1.14-.44-2.56-.44h-.41c-1.42 0-2.12 0-2.56.44s-.44 1.15-.44 2.56v.42c0 1.41 0 2.12.44 2.56s1.14.44 2.56.44'
+        stroke='currentColor'
+      />
       <path d='M17.28 14.97v2.52' stroke='currentColor' />
     </svg>
   )

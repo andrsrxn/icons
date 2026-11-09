@@ -26,22 +26,16 @@ export const IconPanelsTop: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='9.35'
-        height='18.43'
-        rx='2'
-        transform='matrix(0 -1 -1 0 21.21 12.09)'
+        d='M13.26 2.96c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83V12H2.74v-1.04c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17z'
         fill='currentColor'
       />
-      <rect
-        width='18.53'
-        height='18.43'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.21 21.26)'
+      <path
+        d='M2.74 10.73v2.53c0 3.78 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h2.52c3.77 0 5.66 0 6.83-1.17s1.17-3.05 1.17-6.83v-2.53c0-3.77 0-5.65-1.17-6.82-1.17-1.18-3.06-1.18-6.83-1.18h-2.52c-3.77 0-5.66 0-6.83 1.18-1.17 1.17-1.17 3.05-1.17 6.82'
         stroke='currentColor'
       />
-      <path d='M3.18 12h17.64' stroke='currentColor' />
+      <path d='M3.13 12h17.74' stroke='currentColor' />
     </svg>
   )
 }

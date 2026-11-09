@@ -26,24 +26,19 @@ export const IconRefreshPlus: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M12.19 7.66v8.68' stroke='currentColor' />
-      <path d='M7.84 12h8.68' stroke='currentColor' />
+      <path d='M12.19 8v8' stroke='currentColor' />
+      <path d='M8.18 12h8' stroke='currentColor' />
+      <circle opacity='.2' cx='11.95' cy='12.07' r='9.41' fill='currentColor' />
+      <path d='M3.5 15.96c1.91 3.4 4.63 5.49 8.92 5.49s7.13-3.06 8.3-5.49' stroke='currentColor' />
       <path
-        d='M21.38 8.17c-2.02-3.67-4.98-5.93-9.2-5.93s-8.21 2.18-9.5 5.58'
+        d='M20.65 8.17c-1.92-3.4-5.1-5.48-8.93-5.48-4.15 0-6.86 2.76-8.55 5.48'
         stroke='currentColor'
       />
       <path
-        d='M3.05 15.62c1.68 3.19 4.88 6.12 9.1 6.12 4.2 0 8-2 9.54-5.75'
+        d='M17.39 9h1.33c1.24 0 1.86 0 2.24-.38.39-.39.39-1 .39-2.25V5.04'
         stroke='currentColor'
       />
-      <path
-        d='m22.83 5.86-.08.51c-.22 1.4-.33 2.1-.83 2.46-.5.37-1.2.26-2.6.04l-.51-.08'
-        stroke='currentColor'
-      />
-      <path
-        d='m1.72 18.12.06-.61c.12-1.41.18-2.12.66-2.52s1.18-.33 2.6-.2l.6.05'
-        stroke='currentColor'
-      />
+      <path d='M2.55 18.93V17.6c0-1.23 0-1.85.38-2.23s1-.38 2.22-.38h1.33' stroke='currentColor' />
     </svg>
   )
 }

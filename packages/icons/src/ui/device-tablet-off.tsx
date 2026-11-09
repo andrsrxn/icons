@@ -26,23 +26,13 @@ export const IconDeviceTabletOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='3.77'
-        y='22.31'
-        width='20.62'
-        height='16.45'
-        rx='3'
-        transform='rotate(-90 3.77 22.3)'
+        d='M11.77 22.3c-3.77 0-5.65 0-6.82-1.16-1.18-1.18-1.18-3.06-1.18-6.83V9.69c0-3.77 0-5.65 1.18-6.83C6.12 1.7 8 1.7 11.77 1.7h.46c3.77 0 5.65 0 6.82 1.17 1.18 1.18 1.18 3.06 1.18 6.83v4.62c0 3.77 0 5.65-1.18 6.83-1.17 1.17-3.05 1.17-6.82 1.17z'
         fill='currentColor'
       />
-      <rect
-        x='3.77'
-        y='22.31'
-        width='20.62'
-        height='16.45'
-        rx='3'
-        transform='rotate(-90 3.77 22.3)'
+      <path
+        d='M4.17 4.15c-.4 1.2-.4 2.9-.4 5.54v4.62c0 3.77 0 5.65 1.18 6.83C6.12 22.3 8 22.3 11.77 22.3h.46c3.77 0 5.65 0 6.82-1.17q.53-.53.78-1.3'
         stroke='currentColor'
       />
       <path
@@ -51,6 +41,10 @@ export const IconDeviceTabletOff: Icon = ({
         stroke='currentColor'
       />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
+      <path
+        d='M6.36 2.06c1.07-.37 2.64-.37 5.41-.37h.46c3.77 0 5.65 0 6.82 1.17 1.18 1.18 1.18 3.06 1.18 6.83v4.62c0 1.11-.03 1.72-.03 1.72'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

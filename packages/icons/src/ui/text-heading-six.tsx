@@ -34,14 +34,10 @@ export const IconTextHeadingSix: Icon = ({
       <path d='M2.73 18.77h2.9' stroke='currentColor' />
       <path d='M11.83 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
-      <circle
-        cx='19.24'
-        cy='19.34'
-        r='1.87'
-        transform='rotate(90 19.24 19.34)'
+      <path
+        d='M17.56 19.34c.14.92.87 1.86 1.9 1.86s1.86-.83 1.86-1.86-.7-1.84-1.74-1.85c-.7 0-1.85.39-2.02 1.85m0 0a5.3 5.3 0 0 1 .53-3.39 3.8 3.8 0 0 1 2.27-1.91'
         stroke='currentColor'
       />
-      <path d='M17.38 19.23c0-1.24 0-4.35 2.88-5.2' stroke='currentColor' />
     </svg>
   )
 }

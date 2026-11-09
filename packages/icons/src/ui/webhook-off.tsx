@@ -42,17 +42,16 @@ export const IconWebhookOff: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M17.66 21.39a3.61 3.61 0 1 0 1.2-7.1c-1.19-.08-1.78-.13-1.99-.26s-.37-.42-.7-1l-3.92-6.77'
+        d='m12.25 6.26 3.91 6.78c.34.57.5.86.71.99s.8.18 1.99.26h0a3.63 3.63 0 0 1 3.32 4.06'
         stroke='currentColor'
       />
+      <path d='M20.56 20.93a3.6 3.6 0 0 1-2.9.46' stroke='currentColor' />
       <path
         d='M2.81 15.06a3.61 3.61 0 1 0 5.55 4.59c.66-.98 1-1.47 1.22-1.59.22-.11.55-.11 1.21-.11h7.1'
         stroke='currentColor'
       />
-      <path
-        d='M15.76 5.37a3.61 3.61 0 1 0-6.74 2.51c.52 1.07.77 1.6.76 1.85 0 .25-.17.54-.5 1.11l-3.91 6.78'
-        stroke='currentColor'
-      />
+      <path d='m9.84 9.87-4.47 7.75' stroke='currentColor' />
+      <path d='M15.76 5.37a3.61 3.61 0 0 0-6.93-.14' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
     </svg>
   )

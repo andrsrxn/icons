@@ -26,15 +26,17 @@ export const Icon4k: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M13.84 6.93v10.14' stroke='currentColor' />
-      <path
-        d='M9.3 17.22V8.77c0-1.29 0-1.94-.35-2.05s-.72.42-1.47 1.47l-2.76 3.9c-.49.7-.73 1.04-.59 1.3.14.28.56.28 1.41.28h5.52'
-        stroke='currentColor'
-      />
-      <path d='m13.84 12.11 5.18-5.18' stroke='currentColor' />
-      <path d='m13.84 12.11 5.18 4.96' stroke='currentColor' />
       <path d='M21.53 20.54H2.47' stroke='currentColor' />
       <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='M14.02 7.06v9.88' stroke='currentColor' />
+      <path
+        d='m18.9 7.09-2.98 3.65c-.5.6-.74.9-.74 1.26s.24.66.74 1.27l2.98 3.66'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.35 14.37v-5.2c0-1.4 0-2.1-.36-2.2s-.74.48-1.48 1.66h0l-2.67 4.2c-.43.69-.65 1.03-.5 1.29.14.25.54.25 1.34.25zm0 0v2.64m0-2.64h1.4'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

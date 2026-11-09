@@ -27,22 +27,16 @@ export const IconPanelEndOpen: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m7.2 15.9 1.08-1.07c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.2 8.1'
+        d='m7.2 15.9 1.08-1.07h0c1.33-1.33 2-2 2-2.83s-.67-1.5-2-2.83L7.21 8.1'
         stroke='currentColor'
       />
-      <rect
+      <path
         opacity='.2'
-        width='6.62'
-        height='18.36'
-        rx='2'
-        transform='matrix(1 0 0 -1 14.65 21.18)'
+        d='M14.65 21.18h.62c2.82 0 4.24 0 5.12-.88s.88-2.3.88-5.12V8.82c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-.62z'
         fill='currentColor'
       />
-      <rect
-        width='18.53'
-        height='18.36'
-        rx='3'
-        transform='matrix(1 0 0 -1 2.74 21.18)'
+      <path
+        d='M10.74 2.82h2.52c3.78 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.36c0 3.77 0 5.66-1.17 6.83s-3.05 1.17-6.83 1.17h-2.53c-3.77 0-5.65 0-6.82-1.17-1.18-1.17-1.18-3.06-1.18-6.83v-2.36c0-3.77 0-5.66 1.18-6.83 1.17-1.17 3.05-1.17 6.82-1.17'
         stroke='currentColor'
       />
       <path d='M14.65 3.21V20.8' stroke='currentColor' />

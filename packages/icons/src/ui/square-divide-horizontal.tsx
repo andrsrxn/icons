@@ -26,19 +26,13 @@ export const IconSquareDivideHorizontal: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='17.59'
-        height='17.59'
-        rx='3'
-        transform='matrix(0 1 1 0 3.06 3.2)'
+        d='M11.06 3.2c-3.77 0-5.66 0-6.83 1.18-1.17 1.17-1.17 3.06-1.17 6.83v1.58c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h1.59c3.77 0 5.65 0 6.83-1.17s1.17-3.06 1.17-6.83v-1.58c0-3.77 0-5.66-1.17-6.83C18.3 3.2 16.42 3.2 12.65 3.2z'
         fill='currentColor'
       />
-      <rect
-        width='17.59'
-        height='17.59'
-        rx='3'
-        transform='matrix(0 1 1 0 3.06 3.2)'
+      <path
+        d='M20.65 11.2v1.6c0 3.76 0 5.65-1.17 6.82-1.18 1.17-3.06 1.17-6.83 1.17h-1.59c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-1.58c0-3.77 0-5.66 1.17-6.83S7.3 3.2 11.06 3.2h1.59c3.77 0 5.65 0 6.83 1.17s1.17 3.06 1.17 6.83'
         stroke='currentColor'
       />
       <path d='M22.27 12.17H1.58' stroke='currentColor' />

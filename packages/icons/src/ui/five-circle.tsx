@@ -26,17 +26,10 @@ export const IconFiveCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
       <path
-        d='M9.85 16.86h2.36a2.6 2.6 0 0 0 0-5.21H9.52q0 0 0 0V9.13c0-.94 0-1.42.3-1.7.28-.3.76-.3 1.7-.3h2.76'
+        d='M14.71 6.98H9.94a.5.5 0 0 0-.5.44l-.35 3.26c-.04.42.44.73.84.6 2.02-.7 5.09-.4 5.09 2.51 0 4.04-4.73 3.89-6.04 1.76'
         stroke='currentColor'
       />
     </svg>

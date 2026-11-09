@@ -26,14 +26,13 @@ export const IconGif: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
-      <path d='M16.43 8.14v7.76' stroke='currentColor' />
-      <path d='M16.43 8.14h5.37' stroke='currentColor' />
-      <path d='M16.43 12.25h4.03' stroke='currentColor' />
-      <path d='M12.14 15.9V8.13' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='M16.91 16.03V8.94c0-.47 0-.7.15-.85s.38-.15.85-.15h3.46' stroke='currentColor' />
+      <path d='M16.91 11.99h3.36' stroke='currentColor' />
+      <path d='M12.88 16.04V8' stroke='currentColor' />
       <path
-        d='M7.78 8.55a3.84 3.84 0 1 0-.22 6.94c.34-.14.51-.21.67-.46s.17-.5.17-1v-1.8H6.35'
+        d='M8.54 8.38a4.07 4.07 0 1 0-.18 7.33c.34-.15.51-.23.67-.48s.16-.5.16-1v-.95c0-.47 0-.7-.14-.85s-.39-.15-.86-.15H7.02'
         stroke='currentColor'
       />
     </svg>

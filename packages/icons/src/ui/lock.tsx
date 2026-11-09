@@ -26,17 +26,16 @@ export const IconLock: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='3.32'
-        y='9.25'
-        width='17.36'
-        height='12.95'
-        rx='3'
+        d='M3.32 15.25c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h5.36c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v.95c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H9.32c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
         fill='currentColor'
       />
-      <rect x='3.32' y='9.25' width='17.36' height='12.95' rx='3' stroke='currentColor' />
-      <path d='m16.4 9.25-.42-4A3.96 3.96 0 0 0 8.1 5.2l-.47 4.04' stroke='currentColor' />
+      <path
+        d='M9.8 22.2h4.4c2.8 0 4.2 0 5.15-.75q.31-.26.58-.58c.75-.96.75-2.35.75-5.15v0c0-2.79 0-4.18-.75-5.14a4 4 0 0 0-.58-.58c-.96-.75-2.35-.75-5.14-.75H9.79c-2.79 0-4.18 0-5.14.75a4 4 0 0 0-.58.58c-.75.96-.75 2.35-.75 5.14v0c0 2.8 0 4.2.75 5.15q.26.31.58.58c.96.75 2.35.75 5.14.75'
+        stroke='currentColor'
+      />
+      <path d='m7.63 9.25.47-4.04a3.96 3.96 0 0 1 7.88.04l.43 4' stroke='currentColor' />
       <path
         d='M13.11 15.44a1.11 1.11 0 1 1-2.22 0 1.11 1.11 0 0 1 2.22 0'
         fill='currentColor'

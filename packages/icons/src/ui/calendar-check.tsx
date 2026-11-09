@@ -26,13 +26,17 @@ export const IconCalendarCheck: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='2.98' y='3.43' width='18.01' height='5.26' rx='1' fill='currentColor' />
       <path
-        d='m14.38 19.17.97 1.2c.72.87 1.08 1.31 1.56 1.31.47 0 .83-.44 1.55-1.32l3.8-4.69'
+        opacity='.2'
+        d='M2.98 7.64v-.37a4 4 0 0 1 3.84-3.83h10.33A4 4 0 0 1 21 7.27v.47a1 1 0 0 1-.96.95H3.93a1 1 0 0 1-.95-.96z'
+        fill='currentColor'
+      />
+      <path
+        d='m14.38 19.16.97 1.2c.72.88 1.08 1.32 1.56 1.32.47 0 .83-.44 1.55-1.32l3.8-4.69'
         stroke='currentColor'
       />
       <path
-        d='M20.99 12.1V9.42c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H8.98c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v6.01c0 2.83 0 4.25.88 5.12s2.29.88 5.12.88h2.98'
+        d='M20.99 12.1v-.67c0-3.77 0-5.65-1.17-6.83s-3.06-1.17-6.83-1.17h-2.01c-3.77 0-5.66 0-6.83 1.17-1.17 1.18-1.17 3.06-1.17 6.83v2.01c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h.98'
         stroke='currentColor'
       />
       <path d='M7.67 1.73v3.4' stroke='currentColor' />

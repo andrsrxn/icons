@@ -26,40 +26,14 @@ export const IconRouteOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='2.71'
-        cy='2.71'
-        r='2.71'
-        transform='matrix(1 0 0 -1 16.07 8.36)'
-        fill='currentColor'
-      />
-      <circle
-        opacity='.2'
-        cx='2.71'
-        cy='2.71'
-        r='2.71'
-        transform='matrix(1 0 0 -1 2.51 21.06)'
-        fill='currentColor'
-      />
-      <circle
-        cx='2.71'
-        cy='2.71'
-        r='2.71'
-        transform='matrix(1 0 0 -1 16.07 8.36)'
-        stroke='currentColor'
-      />
-      <circle
-        cx='2.71'
-        cy='2.71'
-        r='2.71'
-        transform='matrix(1 0 0 -1 2.51 21.06)'
-        stroke='currentColor'
-      />
-      <path
-        d='M8.09 18.64h9.37a2.68 2.68 0 0 0 .5-5.31L5.88 11.02a2.7 2.7 0 0 1 .51-5.37h9.58'
-        stroke='currentColor'
-      />
+      <circle opacity='.2' cx='18.78' cy='5.65' r='2.71' fill='currentColor' />
+      <circle opacity='.2' cx='5.22' cy='18.35' r='2.71' fill='currentColor' />
+      <circle cx='18.78' cy='5.65' r='2.71' stroke='currentColor' />
+      <circle cx='5.22' cy='18.35' r='2.71' stroke='currentColor' />
+      <path d='M8.09 18.64h9.37q.5 0 .95-.17' stroke='currentColor' />
+      <path d='M5.67 5.75a2.71 2.71 0 0 0 .21 5.27l6.2 1.19' stroke='currentColor' />
+      <path d='M9.03 5.65h6.94' stroke='currentColor' />
+      <path d='m16.17 12.98.28.06 1.5.29a2.7 2.7 0 0 1 2.15 3.08' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
     </svg>
   )

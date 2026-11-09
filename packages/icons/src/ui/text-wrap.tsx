@@ -28,7 +28,7 @@ export const IconTextWrap: Icon = ({
       focusable={false}>
       <path d='M21.19 6H2.8' stroke='currentColor' />
       <path d='M2.81 12H18.2a3 3 0 1 1 0 6h-3.62' stroke='currentColor' />
-      <path d='M10.7 18H2.8' stroke='currentColor' />
+      <path d='M10.44 18H2.8' stroke='currentColor' />
       <path
         d='m15.76 20.19-.07-.07c-1-1-1.5-1.5-1.5-2.12s.5-1.12 1.5-2.12l.07-.07'
         stroke='currentColor'

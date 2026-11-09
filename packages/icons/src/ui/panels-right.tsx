@@ -26,9 +26,16 @@ export const IconPanelsRight: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='11.91' y='2.75' width='9.35' height='18.5' rx='2' fill='currentColor' />
-      <rect x='2.74' y='2.75' width='18.53' height='18.5' rx='3' stroke='currentColor' />
-      <path d='M12 20.85V3.15' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M21.04 10.74c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17H12v18.52h1.04c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83z'
+        fill='currentColor'
+      />
+      <path
+        d='M13.27 21.26h-2.53c-3.78 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-2.52c0-3.77 0-5.66 1.17-6.83s3.05-1.17 6.83-1.17h2.53c3.77 0 5.65 0 6.82 1.17 1.18 1.17 1.18 3.06 1.18 6.83v2.52c0 3.77 0 5.66-1.18 6.83-1.17 1.17-3.05 1.17-6.82 1.17'
+        stroke='currentColor'
+      />
+      <path d='M12 20.87V3.13' stroke='currentColor' />
     </svg>
   )
 }

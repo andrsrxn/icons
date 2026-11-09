@@ -26,16 +26,15 @@ export const IconCigarette: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.85'
-        y='11.3'
-        width='5.39'
-        height='5.48'
-        rx='1.5'
+        d='M1.85 14.04c0-1.17 0-1.75.3-2.15q.13-.15.3-.29c.4-.3.98-.3 2.14-.3h2.65v5.48H4.59c-1.16 0-1.75 0-2.15-.3a2 2 0 0 1-.28-.3c-.31-.4-.31-.98-.31-2.14'
         fill='currentColor'
       />
-      <rect x='1.74' y='11.3' width='20.51' height='5.48' rx='1.5' stroke='currentColor' />
+      <path
+        d='M4.48 16.78h15.04c.68 0 1.03 0 1.31-.09a2 2 0 0 0 1.34-1.34c.09-.28.09-.62.09-1.31v0c0-.7 0-1.04-.09-1.32a2 2 0 0 0-1.34-1.34c-.28-.08-.62-.08-1.31-.08H4.48a5 5 0 0 0-1.31.08 2 2 0 0 0-1.34 1.34c-.09.28-.09.63-.09 1.32v0a5 5 0 0 0 .09 1.31 2 2 0 0 0 1.34 1.34c.28.09.62.09 1.31.09'
+        stroke='currentColor'
+      />
       <path d='M7.24 16.78V11.3' stroke='currentColor' />
       <path
         d='m16.78 3.14.56.66c.48.56.42 1.4-.12 1.9a1.4 1.4 0 0 0 0 2.03l.47.44'

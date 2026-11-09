@@ -26,8 +26,11 @@ export const IconTextUnderline: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M17.17 3.76v7.61a5.18 5.18 0 0 1-10.35 0v-7.6' stroke='currentColor' />
       <path d='M19.77 20.28H4.23' stroke='currentColor' />
+      <path
+        d='M7.22 3.52v6.32c0 1.68 0 6.7 4.72 6.7 4.84 0 4.84-4.9 4.84-6.7V3.52'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

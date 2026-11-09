@@ -28,54 +28,25 @@ export const IconCopyControls: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M22.24 7.92c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H10.8A3 3 0 0 0 7.93 5.1v.26a3 3 0 0 0 3.14 2.85h.79c.79 0 1.18 0 1.52.08a3 3 0 0 1 2.15 1.92c.11.33.16.72.24 1.5l.2 1.75.02.24a3 3 0 0 0 3.1 2.56h.26a3 3 0 0 0 2.88-2.88z'
+        d='M22.24 7.92c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H10.8a3 3 0 0 0-2.88 2.92v.52a3 3 0 0 0 3.14 2.85h.79c.79 0 1.18 0 1.52.08a3 3 0 0 1 2.15 1.92c.11.33.16.72.24 1.5l.2 1.75.02.24a3 3 0 0 0 3.1 2.56h.26a3 3 0 0 0 2.88-2.88V7.92'
         fill='currentColor'
       />
-      <rect
-        width='14.34'
-        height='14.34'
-        rx='3'
-        transform='matrix(1 0 0 -1 1.76 22.27)'
+      <path
+        d='M8.76 7.93h.35c3.3 0 4.95 0 5.97 1.02 1.03 1.03 1.03 2.68 1.03 5.98v.34c0 3.3 0 4.95-1.03 5.97-1.02 1.03-2.67 1.03-5.97 1.03h-.35c-3.3 0-4.95 0-5.97-1.03-1.03-1.02-1.03-2.67-1.03-5.97v-.34c0-3.3 0-4.95 1.03-5.98 1.02-1.02 2.67-1.02 5.97-1.02'
         stroke='currentColor'
       />
       <path
-        d='M7.9 7.59c0-2.7 0-4.04.8-4.9l.15-.16c.87-.8 2.21-.8 4.9-.8h2.49c2.82 0 4.24 0 5.12.88s.88 2.3.88 5.12v2.45c0 2.72 0 4.09-.82 4.95l-.12.12c-.87.82-2.23.82-4.96.82'
+        d='M7.9 7.59c0-2.2 0-3.3.47-4.13q.47-.79 1.26-1.25c.81-.48 1.92-.48 4.12-.48h1.49c3.3 0 4.95 0 5.97 1.03 1.03 1.02 1.03 2.67 1.03 5.97v1.45c0 2.24 0 3.36-.5 4.18q-.46.76-1.21 1.22c-.83.5-1.95.5-4.19.5'
         stroke='currentColor'
       />
-      <circle
-        opacity='.2'
-        cx='7.49'
-        cy='12.62'
-        r='1.44'
-        transform='rotate(90 7.49 12.62)'
-        fill='currentColor'
-      />
-      <circle
-        opacity='.2'
-        cx='1.44'
-        cy='1.44'
-        r='1.44'
-        transform='matrix(0 1 1 0 9.17 16.13)'
-        fill='currentColor'
-      />
+      <circle opacity='.2' cx='7.49' cy='12.62' r='1.44' fill='currentColor' />
+      <circle opacity='.2' cx='10.61' cy='17.57' r='1.44' fill='currentColor' />
       <path d='M13 12.62H8.91' stroke='currentColor' />
       <path d='M4.88 17.57h4.29' stroke='currentColor' />
       <path d='M6.05 12.62H4.88' stroke='currentColor' />
       <path d='M12.04 17.57H13' stroke='currentColor' />
-      <circle
-        cx='7.49'
-        cy='12.62'
-        r='1.44'
-        transform='rotate(90 7.49 12.62)'
-        stroke='currentColor'
-      />
-      <circle
-        cx='1.44'
-        cy='1.44'
-        r='1.44'
-        transform='matrix(0 1 1 0 9.17 16.13)'
-        stroke='currentColor'
-      />
+      <circle cx='7.49' cy='12.62' r='1.44' stroke='currentColor' />
+      <circle cx='10.61' cy='17.57' r='1.44' stroke='currentColor' />
     </svg>
   )
 }

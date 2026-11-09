@@ -27,15 +27,15 @@ export const IconTextUppercase: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m2.42 19.37 2.89-10.1c.78-2.75 1.17-4.12 1.93-4.12.75 0 1.14 1.38 1.92 4.12L12 19.37'
+        d='m2.4 18.7 2.27-7.72h0C5.8 7.18 6.35 5.28 7.4 5.3c1.04.02 1.55 1.93 2.57 5.76L12 18.71'
         stroke='currentColor'
       />
       <path
-        d='m12 19.37 2.88-10.1c.79-2.75 1.18-4.12 1.94-4.12.75 0 1.14 1.38 1.91 4.12l2.85 10.1'
+        d='m12 18.7 2.27-7.72h0c1.12-3.8 1.68-5.7 2.72-5.69 1.04.02 1.55 1.93 2.57 5.76l2.04 7.66'
         stroke='currentColor'
       />
-      <path d='M10.25 13.59H4.17' stroke='currentColor' />
-      <path d='M19.83 13.59h-6.08' stroke='currentColor' />
+      <path d='M4.2 13.55h6.19' stroke='currentColor' />
+      <path d='M13.8 13.55h6.19' stroke='currentColor' />
     </svg>
   )
 }

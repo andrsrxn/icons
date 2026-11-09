@@ -28,21 +28,21 @@ export const IconBackgroundSparkle: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M2.68 8.68c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h10.24L17.1 4.72 19 6.85l2.31-1.5v9.97c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H8.68c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
+        d='M18.2 2.68h-7.52c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.64c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h2.64c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83V5.84l-3.11 2.52-2.8-2.77z'
+        fillRule='evenodd'
+        clipRule='evenodd'
         fill='currentColor'
       />
+      <path d='M18.15 1.64c0 2-2.14 4.15-4.15 4.15' stroke='currentColor' />
+      <path d='M18.15 1.64c0 2 2.16 4.15 4.16 4.15' stroke='currentColor' />
+      <path d='M18.15 9.95C18.15 7.99 16 5.8 14 5.8' stroke='currentColor' />
+      <path d='M18.15 9.95c0-1.99 2.19-4.15 4.16-4.15' stroke='currentColor' />
       <path
-        d='M21.32 10.99v4.33c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H8.68c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V8.68c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h4.28'
+        d='M21.32 11.38v1.94c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.64c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-2.64c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h1.89'
         stroke='currentColor'
       />
-      <path d='m3 15.04 6.05 6.05' stroke='currentColor' />
-      <path d='m2.88 8.94 12.27 12.28' stroke='currentColor' />
-      <path d='m3.55 3.64 16.9 16.9' stroke='currentColor' />
-      <path d='m8.73 2.85 12.51 12.52' stroke='currentColor' />
-      <path d='M15.8 4.8c1.6 0 3.33-1.74 3.33-3.34' stroke='currentColor' />
-      <path d='M22.47 4.8c-1.6 0-3.34-1.74-3.34-3.34' stroke='currentColor' />
-      <path d='M15.8 4.8c1.6 0 3.33 1.76 3.33 3.33' stroke='currentColor' />
-      <path d='M22.47 4.8c-1.58 0-3.34 1.74-3.34 3.33' stroke='currentColor' />
+      <path d='m3.04 11.92 9.23 9.24' stroke='currentColor' />
+      <path d='m3.9 3.8 16.28 16.28' stroke='currentColor' />
     </svg>
   )
 }

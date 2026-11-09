@@ -32,13 +32,10 @@ export const IconBuildings: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M3.76 22.22V5.78c0-1.89 0-2.83.58-3.42.59-.58 1.53-.58 3.42-.58H9.9c1.88 0 2.82 0 3.41.58.59.59.59 1.53.59 3.42v16.44'
+        d='M3.76 22.22V6.85c0-1.94 0-2.9.43-3.62A3 3 0 0 1 5.21 2.2c.71-.43 1.68-.43 3.62-.43s2.91 0 3.63.43a3 3 0 0 1 1.01 1.02c.44.71.44 1.68.44 3.62v15.37'
         stroke='currentColor'
       />
-      <path
-        d='M13.9 7.92h2.75c1.89 0 2.83 0 3.41.59.59.58.59 1.52.59 3.4v10.31'
-        stroke='currentColor'
-      />
+      <path d='M13.9 7.92h.75c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.3' stroke='currentColor' />
       <path d='M22.33 22.22H1.67' stroke='currentColor' />
       <path d='M10.6 7.44H7.07' stroke='currentColor' />
       <path d='M10.6 12H7.07' stroke='currentColor' />

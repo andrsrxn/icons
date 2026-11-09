@@ -27,14 +27,14 @@ export const IconTextSpellCheck: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M4.39 20.36 8.8 7.2c.8-2.35 1.19-3.52 1.9-3.52.73 0 1.12 1.18 1.9 3.53l1.24 3.73 1.53 4.83'
-        stroke='currentColor'
-      />
-      <path d='M14.68 13.52h-8' stroke='currentColor' />
-      <path
         d='m13.58 19.32.51.65c.73.9 1.09 1.36 1.57 1.36.49 0 .85-.46 1.57-1.37l2.84-3.6'
         stroke='currentColor'
       />
+      <path
+        d='m4.7 20.37 2.83-9.64h0C8.92 6 9.62 3.62 10.92 3.63s1.93 2.4 3.2 7.19h0l1.52 5.68'
+        stroke='currentColor'
+      />
+      <path d='M6.94 13.94h7.72' stroke='currentColor' />
     </svg>
   )
 }

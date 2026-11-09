@@ -26,19 +26,13 @@ export const IconSlidesEnd: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='16.86'
-        height='13.2'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.23 20.43)'
+        d='M16.23 20.43c2.83 0 4.24 0 5.12-.88s.88-2.29.88-5.12V9.57c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88h-1.2c-2.83 0-4.25 0-5.13.88s-.87 2.29-.87 5.12v4.86c0 2.83 0 4.24.87 5.12.88.88 2.3.88 5.13.88z'
         fill='currentColor'
       />
-      <rect
-        width='16.86'
-        height='13.2'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.23 20.43)'
+      <path
+        d='M9.03 14.43V9.57c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h1.2c2.83 0 4.24 0 5.12.88s.88 2.29.88 5.12v4.86c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88h-1.2c-2.83 0-4.25 0-5.13-.88s-.87-2.29-.87-5.12'
         stroke='currentColor'
       />
       <path d='M1.72 18.66V5.34' stroke='currentColor' />

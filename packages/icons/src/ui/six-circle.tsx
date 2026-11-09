@@ -26,17 +26,12 @@ export const IconSixCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
+      <path
+        d='M9.35 14.47c.2 1.32 1.24 2.68 2.72 2.68s2.68-1.2 2.68-2.68-1.01-2.65-2.5-2.66c-1 0-2.65.56-2.9 2.66m0 0a7.6 7.6 0 0 1 .76-4.87 5.5 5.5 0 0 1 3.27-2.75'
+        stroke='currentColor'
       />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
-      <path d='M9.35 14.28c0-1.76 0-6.17 4.1-7.37' stroke='currentColor' />
-      <circle cx='12' cy='14.44' r='2.65' transform='rotate(90 12 14.44)' stroke='currentColor' />
     </svg>
   )
 }

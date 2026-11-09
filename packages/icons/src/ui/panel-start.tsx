@@ -26,23 +26,13 @@ export const IconPanelStart: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='9.35'
-        y='21.28'
-        width='6.62'
-        height='18.56'
-        rx='2'
-        transform='rotate(-180 9.35 21.28)'
+        d='M9.35 21.28h-.61c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V8.72c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h.61z'
         fill='currentColor'
       />
-      <rect
-        x='21.27'
-        y='21.28'
-        width='18.53'
-        height='18.56'
-        rx='3'
-        transform='rotate(-180 21.27 21.28)'
+      <path
+        d='M13.27 2.72h-2.53c-3.78 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.56c0 3.77 0 5.66 1.17 6.83s3.05 1.17 6.82 1.17h2.54c3.77 0 5.65 0 6.82-1.17 1.18-1.17 1.18-3.06 1.18-6.83v-2.56c0-3.77 0-5.66-1.18-6.83-1.17-1.17-3.05-1.17-6.82-1.17'
         stroke='currentColor'
       />
       <path d='M9.35 3.12v17.76' stroke='currentColor' />

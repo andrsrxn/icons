@@ -26,19 +26,13 @@ export const IconFieldTextarea: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='16.37'
-        height='20.61'
-        rx='2'
-        transform='matrix(0 -1 -1 0 22.3 20.18)'
+        d='M14.3 20.18c3.78 0 5.66 0 6.83-1.17 1.18-1.17 1.18-3.05 1.18-6.83v-.36c0-3.78 0-5.66-1.18-6.83-1.17-1.17-3.05-1.17-6.82-1.17H9.69c-3.77 0-5.65 0-6.82 1.17-1.18 1.17-1.18 3.05-1.18 6.83v.36c0 3.78 0 5.66 1.18 6.83 1.17 1.17 3.05 1.17 6.82 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='16.37'
-        height='20.61'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.3 20.18)'
+      <path
+        d='M1.7 12.18v-.36c0-3.78 0-5.66 1.17-6.83s3.05-1.17 6.82-1.17h4.62c3.77 0 5.65 0 6.82 1.17 1.18 1.17 1.18 3.05 1.18 6.83v.36c0 3.78 0 5.66-1.18 6.83-1.17 1.17-3.05 1.17-6.82 1.17H9.69c-3.77 0-5.65 0-6.82-1.17-1.18-1.17-1.18-3.05-1.18-6.83'
         stroke='currentColor'
       />
       <path d='m16.07 17.31 3.12-3.12' stroke='currentColor' />

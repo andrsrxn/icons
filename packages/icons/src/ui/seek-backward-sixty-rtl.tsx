@@ -26,25 +26,23 @@ export const IconSeekBackwardSixtyRtl: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <ellipse opacity='.2' cx='12.3' cy='12' rx='10.24' ry='10.15' fill='currentColor' />
       <path
-        opacity='.2'
-        d='M2.69 12a9.57 9.57 0 1 0 19.14 0A9.57 9.57 0 0 0 2.7 12'
-        fill='currentColor'
-      />
-      <path d='M20.3 6.18a11 11 0 0 0-9.49-3.63 9.51 9.51 0 1 0 9.1 15.07' stroke='currentColor' />
-      <path
-        d='M17.14 7.26h1.1c1.42 0 2.13 0 2.57-.44s.44-1.14.44-2.56V3.15'
+        d='m20.86 3.07.25 1.17c.24 1.09.35 1.63.09 2.04-.27.41-.82.53-1.9.76l-1.18.25'
         stroke='currentColor'
       />
-      <rect x='13.41' y='9.32' width='3.88' height='6.75' rx='1.94' stroke='currentColor' />
-      <circle
-        cx='9.14'
-        cy='14.24'
-        r='1.8'
-        transform='rotate(90 9.14 14.24)'
+      <path
+        d='M21.23 16.68A10.15 10.15 0 1 1 10.1 2.1c5.48-1.17 8.94 2.66 10.4 3.96'
         stroke='currentColor'
       />
-      <path d='M7.34 14.14c0-1.2 0-4.2 2.79-5' stroke='currentColor' />
+      <path
+        d='M6.71 14c.14.92.87 1.87 1.9 1.87 1.04 0 1.87-.84 1.87-1.87s-.7-1.85-1.74-1.86A2 2 0 0 0 6.71 14m0 0a5.3 5.3 0 0 1 .53-3.4 3.8 3.8 0 0 1 2.28-1.92'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.38 12.33c0 1.95-.51 3.54-2.28 3.54s-2.28-1.59-2.28-3.54c0-1.96.59-3.54 2.28-3.54s2.28 1.58 2.28 3.54'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

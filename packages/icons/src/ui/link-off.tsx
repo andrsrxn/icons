@@ -26,17 +26,13 @@ export const IconLinkOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='16.88'
-        y='-.35'
-        width='10.57'
-        height='24.37'
-        rx='5.29'
-        transform='rotate(45 16.88 -.35)'
+        d='M13.14 3.38a5.29 5.29 0 0 1 7.47 7.47l-9.75 9.77a5.29 5.29 0 0 1-7.47-7.47z'
         fill='currentColor'
       />
-      <path d='M9.11 14.89 15.5 8.5' stroke='currentColor' />
+      <path d='M9.11 14.89 12 12' stroke='currentColor' />
+      <path d='m13.85 10.15 1.64-1.64' stroke='currentColor' />
       <path d='m6.38 10.14-3.09 3.1a5.29 5.29 0 0 0 7.47 7.47l3.02-3.02' stroke='currentColor' />
       <path d='m10.15 6.37 3.09-3.08a5.29 5.29 0 0 1 7.47 7.47l-3.08 3.09' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />

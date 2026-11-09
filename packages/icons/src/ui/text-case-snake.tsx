@@ -27,19 +27,19 @@ export const IconTextCaseSnake: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m1.72 17.42 1.94-6.8C4.45 7.87 4.84 6.5 5.6 6.5s1.15 1.38 1.92 4.13l1.91 6.79'
-        stroke='currentColor'
-      />
-      <path d='M8.02 12.48h-4.9' stroke='currentColor' />
-      <path d='M14.87 17.42h-2.9' stroke='currentColor' />
-      <path
-        d='M19.3 17.3c-1.32 0-2.38-.96-2.38-2.14 0-1.56 1.06-2.14 2.37-2.14h2.37v2.14c0 1.18-1.06 2.14-2.37 2.14'
+        d='M19.49 17.41c-1.3 0-2.35-.95-2.35-2.12 0-1.55 1.05-2.12 2.35-2.12h2.35v2.12c0 1.17-1.05 2.12-2.35 2.12'
         stroke='currentColor'
       />
       <path
-        d='M17.52 10.1c.6-.78 1.4-1.22 2.41-1.04 1.58.3 1.97 1.32 1.97 3.02v4.3c0 .78.32 1.04.32 1.04'
+        d='M17.73 10.26c.6-.77 1.38-1.21 2.4-1.02 1.56.29 1.94 1.3 1.94 2.99v4.27c0 .78.32 1.03.32 1.03'
         stroke='currentColor'
       />
+      <path d='M14.92 17.19H12.1' stroke='currentColor' />
+      <path
+        d='m1.6 17.19 1.82-6.17h0c.9-3.04 1.34-4.56 2.17-4.55.84.01 1.24 1.54 2.06 4.6l1.63 6.12'
+        stroke='currentColor'
+      />
+      <path d='M3.04 13.07H8' stroke='currentColor' />
     </svg>
   )
 }

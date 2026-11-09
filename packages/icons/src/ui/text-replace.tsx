@@ -26,22 +26,20 @@ export const IconTextReplace: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M16.64 13.53h1.13a2 2 0 1 1 0 4.02h-.52' stroke='currentColor' />
-      <path
-        d='M16.81 13.53c-.57 0-.85 0-1.08.08-.45.15-.8.5-.95.95-.08.23-.08.52-.08 1.09v4.46c0 .57 0 .86.08 1.09.15.45.5.8.95.95.23.08.51.08 1.08.08'
-        stroke='currentColor'
-      />
-      <path d='M17.37 17.55h1.03a2.34 2.34 0 0 1 0 4.68h-1.59' stroke='currentColor' />
-      <path
-        d='m9.45 10.63 1.38-4.83c.78-2.75 1.17-4.12 1.93-4.12s1.14 1.38 1.92 4.13l1.35 4.82'
-        stroke='currentColor'
-      />
-      <path d='M14.81 7.26h-4.13' stroke='currentColor' />
       <path d='M10.67 18.46H8.3a5.06 5.06 0 0 1-3-9.12L5.76 9' stroke='currentColor' />
       <path
         d='m9.46 20.65.07-.06c1-1 1.5-1.5 1.5-2.12s-.5-1.13-1.5-2.13l-.07-.07'
         stroke='currentColor'
       />
+      <path
+        d='M16.25 13.75h1.34c1.09 0 1.97.88 1.97 1.97 0 1.1-.66 1.97-2.43 1.97h.74a2.3 2.3 0 1 1 0 4.6h-1.51m.03 0c-.64 0-.96 0-1.19-.16a1 1 0 0 1-.21-.21c-.16-.23-.16-.55-.16-1.19v-5.42c0-.64 0-.96.16-1.18a1 1 0 0 1 .21-.22c.23-.16.55-.16 1.19-.16'
+        stroke='currentColor'
+      />
+      <path
+        d='m9.55 10.63 1.51-5.15h0c.74-2.53 1.12-3.8 1.81-3.79.7.01 1.03 1.29 1.71 3.84l1.36 5.1'
+        stroke='currentColor'
+      />
+      <path d='M10.75 7.2h4.12' stroke='currentColor' />
     </svg>
   )
 }

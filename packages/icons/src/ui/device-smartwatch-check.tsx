@@ -26,37 +26,22 @@ export const IconDeviceSmartwatchCheck: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='7.23'
-        y='5.29'
-        width='3.52'
-        height='9.54'
-        rx='1.76'
-        transform='rotate(-90 7.23 5.29)'
+        d='M8.99 5.29a1.76 1.76 0 1 1 0-3.52H15a1.76 1.76 0 1 1 0 3.52z'
         fill='currentColor'
       />
-      <rect
+      <path
         opacity='.2'
-        x='7.23'
-        y='22.2'
-        width='3.52'
-        height='9.54'
-        rx='1.76'
-        transform='rotate(-90 7.23 22.2)'
+        d='M8.99 22.2a1.76 1.76 0 1 1 0-3.52H15a1.76 1.76 0 1 1 0 3.52z'
         fill='currentColor'
       />
-      <rect
-        x='4.83'
-        y='18.71'
-        width='13.42'
-        height='14.34'
-        rx='3'
-        transform='rotate(-90 4.83 18.71)'
+      <path
+        d='M19.17 12c0-2.54 0-3.8-.55-4.74a4 4 0 0 0-1.42-1.42c-.94-.55-2.2-.55-4.74-.55h-.92c-2.54 0-3.8 0-4.74.55a4 4 0 0 0-1.42 1.42c-.55.94-.55 2.2-.55 4.74v0c0 2.54 0 3.8.55 4.74a4 4 0 0 0 1.42 1.42c.94.55 2.2.55 4.74.55h.92c2.54 0 3.8 0 4.74-.55a4 4 0 0 0 1.42-1.42c.55-.94.55-2.2.55-4.74'
         stroke='currentColor'
       />
       <path
-        d='M16.77 5.29c0-1.42 0-2.13-.34-2.64a2 2 0 0 0-.53-.54c-.51-.34-1.22-.34-2.65-.34h-2.5c-1.43 0-2.14 0-2.65.34a2 2 0 0 0-.53.54c-.34.5-.34 1.22-.34 2.64'
+        d='M16.77 5.29c0-1.42 0-2.13-.34-2.64a2 2 0 0 0-.53-.53c-.51-.35-1.22-.35-2.65-.35h-2.5c-1.43 0-2.14 0-2.65.35a2 2 0 0 0-.53.53c-.34.5-.34 1.22-.34 2.64'
         stroke='currentColor'
       />
       <path
@@ -64,7 +49,7 @@ export const IconDeviceSmartwatchCheck: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='m8.87 12.5.44.56h0c.73.9 1.09 1.36 1.57 1.36.49 0 .85-.45 1.57-1.37h0l2.68-3.4'
+        d='m8.87 12.5.44.56h0c.73.9 1.09 1.36 1.57 1.36.49 0 .85-.45 1.57-1.37h0l2.68-3.39'
         stroke='currentColor'
       />
     </svg>

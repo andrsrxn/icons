@@ -26,22 +26,21 @@ export const IconBricks: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='2.68'
-        y='2.68'
-        width='18.64'
-        height='18.64'
-        rx='2'
+        d='M2.68 10.68c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h2.64c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.64c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.64c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83z'
         fill='currentColor'
       />
-      <rect x='2.68' y='2.68' width='18.64' height='18.64' rx='3' stroke='currentColor' />
+      <path
+        d='M10.68 21.32h2.64c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-2.64c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.64c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.64c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17'
+        stroke='currentColor'
+      />
       <path d='M2.68 8.5h18.64' stroke='currentColor' />
       <path d='M12 15.5v-7' stroke='currentColor' />
-      <path d='M7.39 8.5V2.68' stroke='currentColor' />
-      <path d='M7.39 21.32V15.5' stroke='currentColor' />
-      <path d='M16.61 8.5V2.68' stroke='currentColor' />
-      <path d='M16.61 21.32V15.5' stroke='currentColor' />
+      <path d='M7.39 8.5V2.94' stroke='currentColor' />
+      <path d='M7.39 21.06V15.5' stroke='currentColor' />
+      <path d='M16.61 8.5V2.94' stroke='currentColor' />
+      <path d='M16.61 21.06V15.5' stroke='currentColor' />
       <path d='M2.68 15.5h18.64' stroke='currentColor' />
     </svg>
   )

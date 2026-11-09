@@ -26,19 +26,13 @@ export const IconKeyboard: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.48)'
+        d='M16.32 19.48c2.83 0 4.24 0 5.12-.87.88-.88.88-2.3.88-5.13v-2.96c0-2.83 0-4.25-.88-5.13s-2.3-.87-5.12-.87H7.75c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v2.96c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87z'
         fill='currentColor'
       />
-      <rect
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.32 19.48)'
+      <path
+        d='M1.75 12.48v-.96c0-3.3 0-4.95 1.03-5.98C3.8 4.52 5.45 4.52 8.75 4.52h6.57c3.3 0 4.95 0 5.97 1.02 1.03 1.03 1.03 2.68 1.03 5.98v.96c0 3.3 0 4.95-1.03 5.98-1.02 1.02-2.67 1.02-5.97 1.02H8.75c-3.3 0-4.95 0-5.97-1.02-1.03-1.03-1.03-2.68-1.03-5.98'
         stroke='currentColor'
       />
       <path

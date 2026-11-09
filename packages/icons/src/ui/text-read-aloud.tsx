@@ -29,10 +29,10 @@ export const IconTextReadAloud: Icon = ({
       <path d='M15.9 13.66s.8-1.55.23-3.69c-.52-1.93-2-2.96-2-2.96' stroke='currentColor' />
       <path d='M19.62 14.57s1.3-2.4.38-5.88c-.8-2.95-3.15-4.46-3.15-4.46' stroke='currentColor' />
       <path
-        d='m3.51 19 2.52-8.8C6.8 7.45 7.2 6.08 7.96 6.08c.75 0 1.14 1.38 1.92 4.12l2.47 8.8'
+        d='m3.2 19 2.2-7.49h0C6.48 7.83 7.03 6 8.04 6c1 .01 1.5 1.87 2.49 5.58L12.5 19'
         stroke='currentColor'
       />
-      <path d='M10.74 13.77H5.13' stroke='currentColor' />
+      <path d='M4.94 14h6' stroke='currentColor' />
     </svg>
   )
 }

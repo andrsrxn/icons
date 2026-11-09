@@ -26,27 +26,18 @@ export const IconDronBox: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='4.96'
-        height='6.97'
-        rx='2.48'
-        transform='matrix(0 -1 -1 0 15.48 10.43)'
+        d='M13 10.43a2.48 2.48 0 1 0 0-4.96h-2a2.48 2.48 0 0 0 0 4.96z'
         fill='currentColor'
       />
-      <rect
+      <path
         opacity='.2'
-        width='6.85'
-        height='6.97'
-        rx='2'
-        transform='matrix(0 -1 -1 0 15.48 21.79)'
+        d='M12.06 21.79c1.33 0 2 0 2.49-.3a2 2 0 0 0 .63-.64c.3-.49.3-1.15.3-2.49 0-1.33 0-2-.3-2.49a2 2 0 0 0-.63-.63c-.49-.3-1.16-.3-2.5-.3h-.1c-1.34 0-2.01 0-2.5.3a2 2 0 0 0-.63.63c-.3.49-.3 1.16-.3 2.5 0 1.33 0 2 .3 2.48a2 2 0 0 0 .63.63c.49.3 1.16.3 2.5.3z'
         fill='currentColor'
       />
-      <rect
-        width='4.96'
-        height='6.97'
-        rx='2.48'
-        transform='matrix(0 -1 -1 0 15.48 10.43)'
+      <path
+        d='M8.51 7.95a2.5 2.5 0 0 1 2.48-2.48h2.02a2.47 2.47 0 0 1 2.47 2.48v0c0 1.37-1.1 2.48-2.47 2.48h-2.02a2.5 2.5 0 0 1-2.48-2.48'
         stroke='currentColor'
       />
       <path d='M4.53 2.21v1.52c0 1.95 0 2.92.57 3.53s1.47.6 3.29.6h.04' stroke='currentColor' />
@@ -58,7 +49,10 @@ export const IconDronBox: Icon = ({
       <path d='M13.07 10.42c1 0 2.05.38 2.6.93.59.57.84 1.04.98 1.85' stroke='currentColor' />
       <path d='M1.64 3.39H7.4' stroke='currentColor' />
       <path d='M16.57 3.39h5.79' stroke='currentColor' />
-      <rect x='8.64' y='15.07' width='6.72' height='6.72' rx='1.5' stroke='currentColor' />
+      <path
+        d='M12 21.79c1.27 0 1.9 0 2.38-.28a2 2 0 0 0 .7-.7c.28-.47.28-1.11.28-2.38v0c0-1.27 0-1.9-.28-2.38a2 2 0 0 0-.7-.7c-.47-.28-1.11-.28-2.38-.28v0c-1.27 0-1.9 0-2.38.28a2 2 0 0 0-.7.7c-.28.47-.28 1.1-.28 2.38v0c0 1.27 0 1.9.28 2.38a2 2 0 0 0 .7.7c.47.28 1.1.28 2.38.28'
+        stroke='currentColor'
+      />
       <path d='M12 15.07v2.64' stroke='currentColor' />
     </svg>
   )

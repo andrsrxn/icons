@@ -28,24 +28,20 @@ export const IconLinkConnectOff: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M10.48 4.83a4.95 4.95 0 0 1 4.92 4.4h1.91a4.97 4.97 0 1 1 0 9.94h-3.77a4.97 4.97 0 0 1-4.94-4.44H6.67a4.95 4.95 0 1 1 0-9.9z'
+        d='M10.48 4.83a4.95 4.95 0 0 1 4.92 4.4h1.91a4.97 4.97 0 1 1 0 9.94h-3.77a4.97 4.97 0 0 1-4.94-4.44H6.67a4.95 4.95 0 0 1 0-9.9z'
         fill='currentColor'
       />
-      <rect
-        width='9.94'
-        height='13.71'
-        rx='4.97'
-        transform='matrix(0 -1 -1 0 22.28 19.17)'
-        stroke='currentColor'
-      />
-      <rect
-        width='9.9'
-        height='13.71'
-        rx='4.95'
-        transform='matrix(0 -1 -1 0 15.43 14.73)'
+      <path d='M10.34 10.39a4.97 4.97 0 0 0 3.2 8.78h3.77q.85-.02 1.55-.21' stroke='currentColor' />
+      <path
+        d='M5.02 5.13a4.95 4.95 0 0 0 1.65 9.6h3.8c1.2 0 2.16-.4 3.01-1.1'
         stroke='currentColor'
       />
       <path d='m2.63 2.63 18.74 18.74' stroke='currentColor' />
+      <path
+        d='M13.54 9.23h3.77a4.97 4.97 0 0 1 4.97 4.97c0 1.32-.51 2.47-1.17 3.26'
+        stroke='currentColor'
+      />
+      <path d='M8.29 4.83h2.19a4.95 4.95 0 0 1 4.62 6.7' stroke='currentColor' />
     </svg>
   )
 }

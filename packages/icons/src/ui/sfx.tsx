@@ -26,17 +26,16 @@ export const IconSfx: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M10.11 8.31v7.46' stroke='currentColor' />
-      <path d='M10.11 8.27h4.11' stroke='currentColor' />
-      <path d='M10.11 12.27h3.09' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='m16.48 15.52 4.87-7.04' stroke='currentColor' />
+      <path d='m21.35 15.52-4.87-7.04' stroke='currentColor' />
       <path
-        d='M7.06 9.23a3.5 3.5 0 0 0-2.35-.96c-1.13 0-2.36.62-2.36 1.92 0 2.8 4.71.57 4.71 3.4 0 1.34-1.2 2.05-2.35 2.05s-1.93-.35-2.46-1.13'
+        d='M7.34 9.3c-.44-.4-1.2-.95-2.3-.95s-2.3.61-2.3 1.9c0 2.77 4.6.56 4.6 3.38 0 1.31-1.18 2.02-2.3 2.02s-1.87-.35-2.4-1.12'
         stroke='currentColor'
       />
-      <path d='m16.62 15.72 5.13-7.4' stroke='currentColor' />
-      <path d='m21.75 15.72-5.13-7.4' stroke='currentColor' />
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
+      <path d='M10.18 15.52V9.48c0-.47 0-.7.15-.85s.38-.15.85-.15h2.88' stroke='currentColor' />
+      <path d='M10.18 12h2.92' stroke='currentColor' />
     </svg>
   )
 }

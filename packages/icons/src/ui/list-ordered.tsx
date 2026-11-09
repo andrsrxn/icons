@@ -26,15 +26,15 @@ export const IconListOrdered: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M21.38 6H9.26' stroke='currentColor' />
-      <path d='M21.38 12H9.26' stroke='currentColor' />
-      <path d='M21.38 18H9.26' stroke='currentColor' />
+      <path d='M21.38 6H8.82' stroke='currentColor' />
+      <path d='M21.38 12H8.82' stroke='currentColor' />
+      <path d='M21.38 18H8.82' stroke='currentColor' />
       <path
-        d='m2.59 6.52.84-.77c.72-.65 1.08-.98 1.38-.85s.3.62.3 1.6v4.01'
+        d='m2.67 5.66.38-.24c.68-.43 1.02-.65 1.28-.5.26.13.26.54.26 1.34v4.34'
         stroke='currentColor'
       />
       <path
-        d='M2.56 14.34c.45-.48.87-.85 1.78-.85 1.6 0 1.87 1.67 1.06 2.5-.43.46-1.29 1.12-2.02 1.77-.44.4-.66.6-.54.92s.45.32 1.1.32h2.1'
+        d='M2.86 14.1c.6-.98 2.8-1.05 2.8.82 0 1.29-1.61 1.94-2.62 3.46-.2.3.04.68.4.68h2.3'
         stroke='currentColor'
       />
     </svg>

@@ -29,7 +29,10 @@ export const IconReorderUp: Icon = ({
       <path d='M9.78 6h-7.1' stroke='currentColor' />
       <path d='M13.08 12H2.68' stroke='currentColor' />
       <path d='M15.75 18H2.68' stroke='currentColor' />
-      <path d='M14.23 6.01h1.03c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v6.7' stroke='currentColor' />
+      <path
+        d='M21.26 18.72v-5.68c0-2.84 0-4.25-.69-5.27A4 4 0 0 0 19.5 6.7c-1-.7-2.43-.7-5.27-.7'
+        stroke='currentColor'
+      />
       <path
         d='M15.75 3.34c-1.18 1.18-1.77 1.77-1.84 2.5v.34c.07.73.66 1.32 1.84 2.5'
         stroke='currentColor'

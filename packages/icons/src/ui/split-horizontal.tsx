@@ -26,16 +26,15 @@ export const IconSplitHorizontal: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.73'
-        y='4.54'
-        width='20.53'
-        height='14.93'
-        rx='3'
+        d='M1.73 11.54c0-3.3 0-4.95 1.03-5.98 1.02-1.02 2.67-1.02 5.97-1.02h6.54c3.3 0 4.95 0 5.97 1.02 1.03 1.03 1.03 2.68 1.03 5.98v.92c0 3.3 0 4.95-1.03 5.98-1.02 1.02-2.67 1.02-5.97 1.02H8.73c-3.3 0-4.95 0-5.97-1.02-1.03-1.03-1.03-2.68-1.03-5.98z'
         fill='currentColor'
       />
-      <rect x='1.73' y='4.54' width='20.53' height='14.93' rx='3' stroke='currentColor' />
+      <path
+        d='M8.73 19.46h6.54c3.3 0 4.95 0 5.97-1.02 1.03-1.03 1.03-2.68 1.03-5.98v-.92c0-3.3 0-4.95-1.03-5.98-1.02-1.02-2.67-1.02-5.97-1.02H8.73c-3.3 0-4.95 0-5.97 1.02-1.03 1.03-1.03 2.68-1.03 5.98v.92c0 3.3 0 4.95 1.03 5.98 1.02 1.02 2.67 1.02 5.97 1.02'
+        stroke='currentColor'
+      />
       <path d='M12 2.05v19.9' stroke='currentColor' />
     </svg>
   )

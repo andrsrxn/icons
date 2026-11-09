@@ -26,26 +26,21 @@ export const IconSeekBackwardThirty: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <ellipse opacity='.2' cx='11.66' cy='12' rx='10.24' ry='10.15' fill='currentColor' />
       <path
-        opacity='.2'
-        d='M2.14 12a9.57 9.57 0 1 0 19.14 0 9.57 9.57 0 0 0-19.14 0'
-        fill='currentColor'
-      />
-      <path
-        d='M3.67 6.13a11.1 11.1 0 0 1 9.56-3.67 9.6 9.6 0 1 1-9.18 15.2'
-        stroke='currentColor'
-      />
-      <rect x='13.2' y='9.29' width='3.88' height='6.75' rx='1.94' stroke='currentColor' />
-      <path
-        d='M6.85 7.22H5.7c-1.41 0-2.12 0-2.56-.44S2.7 5.63 2.7 4.22V3.07'
+        d='m3.1 3.07-.25 1.17c-.23 1.09-.35 1.63-.08 2.04s.8.53 1.9.76l1.17.25'
         stroke='currentColor'
       />
       <path
-        d='M7.12 10.1c.48-.46.93-.8 1.9-.8 1.7 0 2.2 1.95 1.35 2.74s-2.1.61-2.1.61'
+        d='M2.73 16.68A10.15 10.15 0 1 0 13.87 2.1C8.4.93 4.92 4.76 3.46 6.06'
         stroke='currentColor'
       />
       <path
-        d='M7.12 15.24c.48.45.93.8 1.9.8 1.7 0 2.2-1.95 1.35-2.74s-2.1-.61-2.1-.61'
+        d='M17.59 12.33c0 1.95-.5 3.54-2.28 3.54s-2.28-1.59-2.28-3.54c0-1.96.59-3.54 2.28-3.54s2.28 1.58 2.28 3.54'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.05 14.97c.8 1.3 3.7 1.4 3.7-1.07 0-1.25-.96-1.6-2-1.63.92-.02 1.78-.46 1.78-1.63 0-2.32-2.73-2.23-3.48-1'
         stroke='currentColor'
       />
     </svg>

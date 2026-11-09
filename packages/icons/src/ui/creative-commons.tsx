@@ -32,11 +32,11 @@ export const IconCreativeCommons: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M1.72 12A10.25 10.25 0 0 0 12 22.28 10.28 10.28 0 1 0 1.72 12'
+        d='M1.72 12a10.28 10.28 0 1 1 20.56 0 10.28 10.28 0 0 1-20.56 0'
         stroke='currentColor'
       />
-      <path d='M10.47 9.06a3.3 3.3 0 1 0 0 5.87' stroke='currentColor' />
-      <path d='M17.96 9.06a3.3 3.3 0 1 0 0 5.87' stroke='currentColor' />
+      <path d='M10.62 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
+      <path d='M18.19 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
     </svg>
   )
 }

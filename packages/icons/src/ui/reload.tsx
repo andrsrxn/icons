@@ -27,13 +27,14 @@ export const IconReload: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M20.62 7.9c-3.12-4.09-6.2-4.86-8.67-4.86a9.08 9.08 0 1 0 6.36 15.55'
+        d='M21.25 3.03v1.98c0 1.85 0 2.77-.57 3.34-.57.58-1.5.58-3.34.58h-1.98'
         stroke='currentColor'
       />
       <path
-        d='M21.4 2.77v2.02c0 1.89 0 2.83-.58 3.42s-1.53.59-3.41.59h-2.03'
+        d='M19.02 17.8a9.17 9.17 0 1 1-7.1-14.97c5.06 0 7.4 4.03 8.45 5.46'
         stroke='currentColor'
       />
+      <circle opacity='.2' cx='12' cy='12' r='9.25' fill='currentColor' />
     </svg>
   )
 }

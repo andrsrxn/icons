@@ -33,12 +33,13 @@ export const IconLocateLineOff: Icon = ({
         clipRule='evenodd'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='8.32' transform='rotate(90 12 12)' stroke='currentColor' />
       <path d='M18.28 12h4.09' stroke='currentColor' />
       <path d='M1.65 12H5.7' stroke='currentColor' />
       <path d='M12 5.71V1.64' stroke='currentColor' />
       <path d='M12 22.36v-4.07' stroke='currentColor' />
       <path d='m2.76 2.74 18.5 18.52' stroke='currentColor' />
+      <path d='M6.06 6.16A8.32 8.32 0 0 0 17.87 17.9' stroke='currentColor' />
+      <path d='M8.97 4.08a8.71 8.71 0 0 1 10.95 10.95' stroke='currentColor' />
     </svg>
   )
 }

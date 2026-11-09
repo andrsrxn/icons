@@ -27,14 +27,19 @@ export const IconSunUv: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path d='M22.2 11.69H1.8' stroke='currentColor' />
-      <path d='M9.85 15.64v4.47a2.22 2.22 0 1 1-4.43 0v-4.47' stroke='currentColor' />
-      <path opacity='.2' d='M11.97 11.69h-4.6a4.6 4.6 0 1 1 9.2 0z' fill='currentColor' />
-      <path d='M7.36 11.69a4.6 4.6 0 1 1 9.21 0' stroke='currentColor' />
+      <path opacity='.2' d='M11.97 11.69h-4.6a4.6 4.6 0 0 1 9.2 0z' fill='currentColor' />
+      <path d='M7.36 11.69a4.6 4.6 0 0 1 9.21 0' stroke='currentColor' />
       <path d='M11.96 4.24v-2.6' stroke='currentColor' />
       <path d='m17.84 5.73 1.96-1.96' stroke='currentColor' />
       <path d='M5.98 5.64 4.11 3.77' stroke='currentColor' />
-      <path d='m13.46 15.64 2.55 6.73' stroke='currentColor' />
-      <path d='m18.56 15.64-2.55 6.73' stroke='currentColor' />
+      <path
+        d='m13.45 15.46 2.07 5.85c.24.67.36 1 .57 1s.33-.33.56-1l2.07-5.85'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.28 15.46v3.34c0 .89 0 3.54 2.28 3.54 2.33 0 2.33-2.59 2.33-3.54v-3.34'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

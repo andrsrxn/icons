@@ -26,23 +26,13 @@ export const IconDevicePhone: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='5.39'
-        y='22.25'
-        width='20.5'
-        height='13.22'
-        rx='3'
-        transform='rotate(-90 5.39 22.25)'
+        d='M12 22.25c-2.92 0-4.38 0-5.36-.82a4 4 0 0 1-.43-.43c-.82-.98-.82-2.44-.82-5.36V8.36c0-2.92 0-4.38.82-5.36q.2-.24.43-.43c.98-.82 2.44-.82 5.36-.82s4.38 0 5.36.82q.24.2.43.43c.82.98.82 2.44.82 5.36v7.28c0 2.92 0 4.38-.82 5.36q-.2.24-.43.43c-.98.82-2.44.82-5.36.82'
         fill='currentColor'
       />
-      <rect
-        x='5.39'
-        y='22.25'
-        width='20.5'
-        height='13.22'
-        rx='3'
-        transform='rotate(-90 5.39 22.25)'
+      <path
+        d='M18.61 15.64V8.36c0-2.92 0-4.38-.82-5.36a4 4 0 0 0-.43-.43c-.98-.82-2.44-.82-5.36-.82v0c-2.92 0-4.38 0-5.36.82q-.24.2-.43.43c-.82.98-.82 2.44-.82 5.36v7.28c0 2.92 0 4.38.82 5.36q.2.24.43.43c.98.82 2.44.82 5.36.82v0c2.92 0 4.38 0 5.36-.82q.24-.2.43-.43c.82-.98.82-2.44.82-5.36'
         stroke='currentColor'
       />
       <path d='M14.56 5.16H9.44' stroke='currentColor' />

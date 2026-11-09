@@ -32,7 +32,7 @@ export const IconDoorStairs: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M18.89 21.12V6.68c0-1.88 0-2.83-.59-3.41-.58-.59-1.53-.59-3.41-.59H9.1c-1.88 0-2.83 0-3.41.59-.59.58-.59 1.53-.59 3.41v14.44'
+        d='M18.89 21.12V8.68c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H11.1c-2.83 0-4.24 0-5.12.88s-.88 2.3-.88 5.12v12.44'
         stroke='currentColor'
       />
       <path d='M21.18 21.39H2.82' stroke='currentColor' />
@@ -45,7 +45,7 @@ export const IconDoorStairs: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M14.38 11.54v-.92c0-1.88 0-2.83.59-3.41s1.53-.59 3.41-.59h.5'
+        d='M14.38 11.54v-.92c0-1.88 0-2.82.59-3.41s1.53-.59 3.41-.59h.5'
         stroke='currentColor'
       />
     </svg>

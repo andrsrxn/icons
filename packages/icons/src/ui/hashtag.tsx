@@ -26,10 +26,10 @@ export const IconHashtag: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M4.01 7.97H22' stroke='currentColor' />
-      <path d='M2 15.42h17.99' stroke='currentColor' />
-      <path d='m13.82 21 4.66-18' stroke='currentColor' />
-      <path d='m5.62 21 4.65-18' stroke='currentColor' />
+      <path d='M4.44 8.19h17.02' stroke='currentColor' />
+      <path d='M2.54 15.24h17.02' stroke='currentColor' />
+      <path d='m13.72 20.52 4.4-17.04' stroke='currentColor' />
+      <path d='m5.96 20.52 4.4-17.04' stroke='currentColor' />
     </svg>
   )
 }

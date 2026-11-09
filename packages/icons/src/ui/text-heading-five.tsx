@@ -35,7 +35,7 @@ export const IconTextHeadingFive: Icon = ({
       <path d='M11.83 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
       <path
-        d='M17.78 21h1.6a1.76 1.76 0 1 0 0-3.53h-1.82q0 0 0 0v-1.52c0-.5 0-.74.08-.93a1 1 0 0 1 .51-.51c.2-.09.44-.09.93-.09h1.7'
+        d='M21.29 14.42h-2.97a.5.5 0 0 0-.5.45l-.17 1.62c-.05.42.44.75.85.65 1.3-.31 2.99 0 2.99 1.75 0 2.64-3.1 2.54-3.96 1.15'
         stroke='currentColor'
       />
     </svg>

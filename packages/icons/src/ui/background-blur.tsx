@@ -28,20 +28,17 @@ export const IconBackgroundBlur: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M12.12 2.92v18.16H6.76c-1.89 0-2.83 0-3.41-.59-.6-.59-.6-1.53-.6-3.41V8.92c0-2.82 0-4.24.89-5.12.88-.88 2.3-.88 5.12-.88z'
+        d='M12.12 2.92v18.16h-1.36c-3.77 0-5.66 0-6.83-1.18-1.17-1.17-1.17-3.05-1.17-6.82v-2.16c0-3.77 0-5.65 1.17-6.82C5.1 2.92 7 2.92 10.76 2.92z'
         fill='currentColor'
       />
-      <rect
-        width='18.48'
-        height='18.48'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.24 0)'
+      <path
+        d='M2.76 13.24v-2.48c0-3.77 0-5.66 1.17-6.83S7 2.76 10.76 2.76h2.48c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.48c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.48c-3.77 0-5.66 0-6.83-1.17S2.76 17 2.76 13.24'
         stroke='currentColor'
       />
       <path d='M12 2.76v18.48' stroke='currentColor' />
       <path d='m14.1 2.82 3.57 3.57 3.57 3.58' stroke='currentColor' />
-      <path d='m12.12 7.73 4.56 4.57 4.56 4.56' stroke='currentColor' />
-      <path d='m12.12 14.6 3.23 3.24 3.24 3.24' stroke='currentColor' />
+      <path d='m12.12 7.73 4.45 4.46 4.46 4.45' stroke='currentColor' />
+      <path d='m12.12 14.6 3.1 3.11 3.1 3.11' stroke='currentColor' />
     </svg>
   )
 }

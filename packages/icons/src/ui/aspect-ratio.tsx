@@ -26,19 +26,13 @@ export const IconAspectRatio: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='18.68'
-        height='18.68'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.34 0)'
+        d='M13.34 21.34c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-2.68c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.68c-3.77 0-5.66 0-6.83 1.17S2.66 6.9 2.66 10.66v2.68c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='18.68'
-        height='18.68'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.34 0)'
+      <path
+        d='M2.66 13.34v-2.68c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h2.68c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.68c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.68c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
       <path
@@ -46,7 +40,7 @@ export const IconAspectRatio: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M12.25 17.32h1.16c1.89 0 2.83 0 3.42-.58s.59-1.53.59-3.42v-1.16'
+        d='M12.25 17.32h1.16c1.89 0 2.83 0 3.42-.58s.59-1.53.59-3.41v-1.17'
         stroke='currentColor'
       />
     </svg>

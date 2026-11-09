@@ -26,21 +26,9 @@ export const IconTableCellsMerge: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
-        opacity='.2'
-        x='21.24'
-        y='9.14'
-        width='5.96'
-        height='18.48'
-        rx='1.5'
-        transform='rotate(90 21.24 9.14)'
-        fill='currentColor'
-      />
-      <rect
-        width='18.48'
-        height='18.48'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.24 0)'
+      <path opacity='.2' d='M21.24 9.14v5.96H2.76V9.14z' fill='currentColor' />
+      <path
+        d='M2.76 13.24v-2.48c0-3.77 0-5.66 1.17-6.83S7 2.76 10.76 2.76h2.48c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.48c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.48c-3.77 0-5.66 0-6.83-1.17S2.76 17 2.76 13.24'
         stroke='currentColor'
       />
       <path d='M21 9.14H3' stroke='currentColor' />

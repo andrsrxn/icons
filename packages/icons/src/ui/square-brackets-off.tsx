@@ -27,13 +27,15 @@ export const IconSquareBracketsOff: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M8.11 21.29c-1.2 0-1.8 0-2.3-.18A3 3 0 0 1 4 19.28c-.18-.48-.18-1.08-.18-2.3V7.02c0-1.2 0-1.8.18-2.3A3 3 0 0 1 5.82 2.9c.48-.18 1.08-.18 2.3-.18'
+        d='M8.11 21.29c-1.2 0-1.8 0-2.3-.18A3 3 0 0 1 4 19.28c-.18-.48-.18-1.08-.18-2.3V7.02c0-1.2 0-1.8.18-2.3'
         stroke='currentColor'
       />
+      <path d='M8.11 2.71c-.7 0-1.2 0-1.6.04' stroke='currentColor' />
       <path
-        d='M15.89 21.29c1.2 0 1.8 0 2.3-.18A3 3 0 0 0 20 19.28c.18-.48.18-1.08.18-2.3V7.02c0-1.2 0-1.8-.18-2.3a3 3 0 0 0-1.83-1.82c-.48-.18-1.08-.18-2.3-.18'
+        d='M15.89 2.71c1.2 0 1.8 0 2.3.18A3 3 0 0 1 20 4.72c.18.48.18 1.08.18 2.3v9.32'
         stroke='currentColor'
       />
+      <path d='M15.89 21.29c1.2 0 1.8 0 2.3-.18a3 3 0 0 0 1.55-1.25' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
     </svg>
   )

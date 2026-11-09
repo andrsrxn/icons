@@ -26,25 +26,21 @@ export const IconCompare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.98'
-        y='4.73'
-        width='20.29'
-        height='14.55'
-        rx='3'
+        d='M1.73 11.73c0-3.3 0-4.95 1.02-5.98 1.03-1.02 2.68-1.02 5.98-1.02h6.54c3.3 0 4.95 0 5.98 1.02 1.02 1.03 1.02 2.68 1.02 5.98v.54c0 3.3 0 4.95-1.02 5.98-1.03 1.02-2.68 1.02-5.98 1.02H8.73c-3.3 0-4.95 0-5.98-1.02-1.02-1.03-1.02-2.68-1.02-5.98z'
         fill='currentColor'
       />
       <path
-        d='M11.51 4.73H7.98c-2.83 0-4.24 0-5.12.87-.88.88-.88 2.3-.88 5.13v2.54c0 2.83 0 4.25.88 5.13s2.3.87 5.12.87h3.53'
+        d='M11.38 4.73H9c-3.07 0-4.6 0-5.67.8a4 4 0 0 0-.8.8c-.8 1.06-.8 2.6-.8 5.67s0 4.6.8 5.67q.34.46.8.8c1.07.8 2.6.8 5.67.8h2.38'
         stroke='currentColor'
       />
       <path d='M11.51 2.3v19.4' stroke='currentColor' />
-      <path d='M19.39 4.76h.06A2.74 2.74 0 0 1 22.2 7.5' stroke='currentColor' />
-      <path d='M19.57 19.26h.06c1.48 0 2.68-1.2 2.68-2.68' stroke='currentColor' />
+      <path d='M19.8 4.76h.05a2.33 2.33 0 0 1 2.33 2.33' stroke='currentColor' />
+      <path d='M19.93 19.27h.05a2.33 2.33 0 0 0 2.33-2.33' stroke='currentColor' />
       <path d='M22.28 10.7v2.67' stroke='currentColor' />
-      <path d='M14.43 19.25h1.94' stroke='currentColor' />
-      <path d='M14.43 4.75h1.94' stroke='currentColor' />
+      <path d='M14.69 19.25h1.94' stroke='currentColor' />
+      <path d='M14.69 4.75h1.94' stroke='currentColor' />
     </svg>
   )
 }

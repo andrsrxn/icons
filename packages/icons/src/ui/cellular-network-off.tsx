@@ -27,15 +27,11 @@ export const IconCellularNetworkOff: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path d='M12 21.32V12.2' stroke='currentColor' />
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='9.09'
-        r='3.1'
-        transform='rotate(90 12 9.1)'
-        fill='currentColor'
+      <circle opacity='.2' cx='12' cy='9.09' r='3.1' fill='currentColor' />
+      <path
+        d='M12 12.19a3.1 3.1 0 0 1-3.1-3.1m1.54-2.68q.7-.4 1.56-.42a3.1 3.1 0 0 1 2.68 4.66'
+        stroke='currentColor'
       />
-      <circle cx='12' cy='9.09' r='3.1' transform='rotate(90 12 9.1)' stroke='currentColor' />
       <path d='M6.63 12.4a6.6 6.6 0 0 1-.7-6.37' stroke='currentColor' />
       <path
         d='M17.37 12.4a6.3 6.3 0 0 0 1.23-3.72c0-1.65-.56-3.04-1.23-3.72'

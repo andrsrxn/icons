@@ -26,8 +26,15 @@ export const IconCalendarDays: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='3.01' y='3.46' width='17.98' height='5.25' rx='1' fill='currentColor' />
-      <rect x='3.01' y='3.46' width='17.98' height='17.98' rx='3' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M3.01 7.66V7.3a4 4 0 0 1 3.84-3.84h10.3a4 4 0 0 1 3.84 4.2v.09a1 1 0 0 1-.96.96H3.97a1 1 0 0 1-.96-.96z'
+        fill='currentColor'
+      />
+      <path
+        d='M11.01 21.44H13c3.77 0 5.66 0 6.83-1.18C21 19.09 21 17.21 21 13.44v-1.98c0-3.77 0-5.66-1.17-6.83S16.77 3.46 13 3.46h-2c-3.77 0-5.66 0-6.83 1.17S3 7.69 3 11.46v1.98c0 3.77 0 5.65 1.17 6.82 1.17 1.18 3.06 1.18 6.83 1.18'
+        stroke='currentColor'
+      />
       <path d='M7.69 1.76v3.4' stroke='currentColor' />
       <path d='M16.37 1.76v3.4' stroke='currentColor' />
       <path d='M20.57 8.7H3.83' stroke='currentColor' />

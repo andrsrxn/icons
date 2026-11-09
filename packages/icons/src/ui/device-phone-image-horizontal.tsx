@@ -26,13 +26,8 @@ export const IconDevicePhoneImageHorizontal: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
-        x='22.25'
-        y='18.61'
-        width='20.5'
-        height='13.22'
-        rx='3'
-        transform='rotate(180 22.25 18.61)'
+      <path
+        d='M15.64 5.39H8.36c-2.92 0-4.38 0-5.36.82q-.24.2-.43.43c-.82.98-.82 2.44-.82 5.36v0c0 2.92 0 4.38.82 5.36q.2.24.43.43c.98.82 2.44.82 5.36.82h7.28c2.92 0 4.38 0 5.36-.82q.24-.2.43-.43c.82-.98.82-2.44.82-5.36v0c0-2.92 0-4.38-.82-5.36a4 4 0 0 0-.43-.43c-.98-.82-2.44-.82-5.36-.82'
         stroke='currentColor'
       />
       <path

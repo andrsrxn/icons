@@ -26,16 +26,12 @@ export const IconZeroCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
+      <path
+        d='M15.28 12c0 2.81-.73 5.1-3.28 5.1S8.72 14.8 8.72 12 9.57 6.9 12 6.9s3.28 2.29 3.28 5.1'
+        stroke='currentColor'
       />
-      <rect x='9.06' y='6.91' width='5.89' height='10.18' rx='2.94' stroke='currentColor' />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
     </svg>
   )
 }

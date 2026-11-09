@@ -28,26 +28,24 @@ export const IconFileTiff: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M3.83 13.04V5.72c0-1.87 0-2.8.58-3.4.58-.58 1.51-.58 3.38-.6L10 1.69c1.3-.01 1.95-.02 2.43.27a2 2 0 0 1 .7.68c.28.48.28 1.13.28 2.43 0 1.28 0 1.92.28 2.4a2 2 0 0 0 .7.69c.47.28 1.11.28 2.4.28s1.92 0 2.4.29a2 2 0 0 1 .69.68c.28.48.28 1.12.28 2.4v1.23z'
+        d='M3.8 13.02V9.5c0-3.46 0-5.19 1.01-6.32l.32-.32c1.12-1.02 2.85-1.04 6.31-1.07.88-.01 1.32-.02 1.6.24l.09.08c.26.28.26.72.26 1.6v.84c0 1.89 0 2.83.58 3.41.59.59 1.53.59 3.42.59h.75c.94 0 1.41 0 1.7.3.3.29.3.76.3 1.7v2.48z'
         fill='currentColor'
       />
       <path
-        d='M3.83 12.98V7.76c0-2.83 0-4.25.88-5.12s2.3-.88 5.12-.88h1.88c1.22 0 1.84 0 2.39.22.55.23.98.67 1.85 1.53l1.23 1.23 1.17 1.14c.9.87 1.34 1.3 1.57 1.86.24.56.24 1.19.24 2.43v2.81'
+        d='M3.8 12.71V9.1c0-3.13 0-4.69.83-5.77a4 4 0 0 1 .75-.74c1.07-.82 2.63-.82 5.76-.82 1.35 0 2.03 0 2.66.2l.48.2c.6.3 1.07.78 2.04 1.74l.84.84.56.55h0c1.2 1.16 1.79 1.74 2.1 2.49.32.74.32 1.57.32 3.24v1.7'
         stroke='currentColor'
       />
       <path
-        d='M13.21 2.27V4.7c0 1.9 0 2.84.58 3.42.59.59 1.53.59 3.42.59h2.44'
+        d='M13.19 2.27V4.7h0c0 1.9 0 2.84.58 3.42.59.59 1.53.59 3.42.59h2.44'
         stroke='currentColor'
       />
-      <path d='M1.74 15.94h4.02' stroke='currentColor' />
-      <path d='M3.75 15.94v6.17' stroke='currentColor' />
-      <path d='M11.79 15.94v6.35' stroke='currentColor' />
-      <path d='M18.35 15.94v6.35' stroke='currentColor' />
-      <path d='M11.79 19.3h3.3' stroke='currentColor' />
-      <path d='M18.35 19.3h3.3' stroke='currentColor' />
-      <path d='M8.6 22.2v-6.35' stroke='currentColor' />
-      <path d='M11.79 15.94h3.91' stroke='currentColor' />
-      <path d='M18.35 15.94h3.91' stroke='currentColor' />
+      <path d='M3.8 15.8v6.57' stroke='currentColor' />
+      <path d='M1.74 15.8h4.14' stroke='currentColor' />
+      <path d='M18.06 22.37v-5.6c0-.48 0-.71.15-.86s.38-.15.85-.15h2.65' stroke='currentColor' />
+      <path d='M11.97 22.37v-5.6c0-.48 0-.71.15-.86s.38-.15.85-.15h2.65' stroke='currentColor' />
+      <path d='M18.06 19.06h2.74' stroke='currentColor' />
+      <path d='M11.97 19.06h2.74' stroke='currentColor' />
+      <path d='M8.8 22.37V15.8' stroke='currentColor' />
     </svg>
   )
 }

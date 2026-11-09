@@ -28,9 +28,11 @@ export const IconKelvin: Icon = ({
       focusable={false}>
       <circle opacity='.2' cx='5.75' cy='5.97' r='2.51' fill='currentColor' />
       <circle cx='5.75' cy='5.97' r='2.51' stroke='currentColor' />
-      <path d='M12.37 3.61V20.4' stroke='currentColor' />
-      <path d='m12.37 12 8.34-8.39' stroke='currentColor' />
-      <path d='m12.37 12 8.32 8.32' stroke='currentColor' />
+      <path d='M13.04 3.56v17.1' stroke='currentColor' />
+      <path
+        d='m20 3.6-5.93 7.24c-.49.6-.74.9-.74 1.26s.25.66.74 1.27L20 20.63'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

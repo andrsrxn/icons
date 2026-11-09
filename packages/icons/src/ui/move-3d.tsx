@@ -34,9 +34,11 @@ export const IconMove3d: Icon = ({
         d='m9.31 5.4-.73-.73c-1.34-1.34-2-2-2.83-2s-1.5.66-2.83 2l-.74.74'
         stroke='currentColor'
       />
-      <path d='M5.74 18.25h15.38' stroke='currentColor' />
-      <path d='M5.74 18.25V2.86' stroke='currentColor' />
-      <path d='M5.74 18.25 12 12' stroke='currentColor' />
+      <path
+        d='M21.12 18.25H9.74c-1.88 0-2.82 0-3.41-.58-.59-.59-.59-1.53-.59-3.42V2.86'
+        stroke='currentColor'
+      />
+      <path d='M6.45 17.55 11.99 12' stroke='currentColor' />
     </svg>
   )
 }

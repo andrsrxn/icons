@@ -26,14 +26,14 @@ export const IconXxx: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='m17.17 15.49 4.84-6.98' stroke='currentColor' />
-      <path d='m9.58 15.49 4.84-6.98' stroke='currentColor' />
-      <path d='M2 15.49 6.82 8.5' stroke='currentColor' />
-      <path d='M22 15.49 17.18 8.5' stroke='currentColor' />
-      <path d='M14.42 15.49 9.58 8.5' stroke='currentColor' />
-      <path d='M6.83 15.49 1.99 8.5' stroke='currentColor' />
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='m2.47 15.33 4.61-6.66' stroke='currentColor' />
+      <path d='m9.7 15.33 4.6-6.66' stroke='currentColor' />
+      <path d='m16.92 15.33 4.6-6.66' stroke='currentColor' />
+      <path d='m7.08 15.33-4.6-6.66' stroke='currentColor' />
+      <path d='M14.3 15.33 9.7 8.67' stroke='currentColor' />
+      <path d='m21.53 15.33-4.61-6.66' stroke='currentColor' />
     </svg>
   )
 }

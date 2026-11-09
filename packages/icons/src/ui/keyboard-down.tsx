@@ -26,19 +26,13 @@ export const IconKeyboardDown: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.28 16.74)'
+        d='M16.28 16.74c2.83 0 4.25 0 5.12-.88s.88-2.29.88-5.12V7.77c0-2.82 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88H7.72c-2.83 0-4.25 0-5.12.88s-.88 2.3-.88 5.12v2.97c0 2.83 0 4.24.88 5.12.87.88 2.29.88 5.12.88z'
         fill='currentColor'
       />
-      <rect
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.28 16.74)'
+      <path
+        d='M1.72 9.74v-.97c0-3.3 0-4.95 1.02-5.97 1.03-1.03 2.68-1.03 5.98-1.03h6.56c3.3 0 4.95 0 5.98 1.03 1.02 1.02 1.02 2.67 1.02 5.97v.97c0 3.3 0 4.95-1.02 5.98-1.03 1.02-2.68 1.02-5.98 1.02H8.72c-3.3 0-4.95 0-5.98-1.02-1.02-1.03-1.02-2.68-1.02-5.98'
         stroke='currentColor'
       />
       <path
@@ -81,7 +75,7 @@ export const IconKeyboardDown: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='M15.6 13.57H8.4' stroke='currentColor' />
+      <path d='M15.6 13.56H8.4' stroke='currentColor' />
       <path
         d='m8.58 20.01 1.59 1.22c.88.68 1.32 1.02 1.83 1.02.5 0 .95-.34 1.83-1.02l1.59-1.22'
         stroke='currentColor'

@@ -26,21 +26,15 @@ export const IconScreenShareX: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.24'
-        height='20.53'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.27 19.12)'
+        d='M15.15 19.12c2.92 0 4.38 0 5.42-.73a4 4 0 0 0 .97-.97c.73-1.04.73-2.5.73-5.42s0-4.38-.73-5.42a4 4 0 0 0-.97-.97c-1.04-.73-2.5-.73-5.42-.73h-6.3c-2.92 0-4.38 0-5.41.73a4 4 0 0 0-.98.97c-.73 1.04-.73 2.5-.73 5.42s0 4.38.73 5.42q.4.57.98.97c1.03.73 2.49.73 5.41.73z'
         fill='currentColor'
       />
       <path d='M9 14.99 15 9' stroke='currentColor' />
       <path d='M15 15 9 9' stroke='currentColor' />
-      <rect
-        width='14.24'
-        height='20.53'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.27 19.12)'
+      <path
+        d='M1.73 12c0-2.92 0-4.38.73-5.42a4 4 0 0 1 .98-.97c1.03-.73 2.49-.73 5.41-.73h6.3c2.92 0 4.38 0 5.42.73q.56.4.97.97c.73 1.04.73 2.5.73 5.42v0c0 2.92 0 4.38-.73 5.42a4 4 0 0 1-.97.97c-1.04.73-2.5.73-5.42.73h-6.3c-2.92 0-4.38 0-5.41-.73a4 4 0 0 1-.98-.97c-.73-1.04-.73-2.5-.73-5.42'
         stroke='currentColor'
       />
     </svg>

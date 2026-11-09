@@ -26,16 +26,15 @@ export const IconHeater: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.74'
-        y='9.65'
-        width='20.51'
-        height='10.67'
-        rx='2'
+        d='M1.74 14.99c0-2.19 0-3.28.55-4.06a3 3 0 0 1 .73-.73c.78-.55 1.87-.55 4.06-.55h9.84c2.19 0 3.28 0 4.06.55a3 3 0 0 1 .73.73c.55.78.55 1.87.55 4.06s0 3.28-.55 4.05a3 3 0 0 1-.73.74c-.78.54-1.87.54-4.06.54H7.08c-2.19 0-3.28 0-4.06-.54a3 3 0 0 1-.73-.74c-.55-.77-.55-1.87-.55-4.05'
         fill='currentColor'
       />
-      <rect x='1.74' y='9.65' width='20.51' height='10.67' rx='3' stroke='currentColor' />
+      <path
+        d='M7.08 20.32h9.84c2.19 0 3.28 0 4.06-.54a3 3 0 0 0 .73-.74c.55-.77.55-1.87.55-4.05v0c0-2.19 0-3.28-.55-4.06a3 3 0 0 0-.73-.73c-.78-.55-1.87-.55-4.06-.55H7.08c-2.19 0-3.28 0-4.06.55a3 3 0 0 0-.73.73c-.55.78-.55 1.87-.55 4.06v0c0 2.18 0 3.28.55 4.05a3 3 0 0 0 .73.74c.78.54 1.87.54 4.06.54'
+        stroke='currentColor'
+      />
       <path d='M5.79 20.32v1.83' stroke='currentColor' />
       <path d='M18.21 20.32v1.83' stroke='currentColor' />
       <path d='M7.03 12.7v4.48' stroke='currentColor' />

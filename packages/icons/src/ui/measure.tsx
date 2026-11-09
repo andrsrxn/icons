@@ -26,27 +26,21 @@ export const IconMeasure: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='20.46'
-        height='9.75'
-        rx='2'
-        transform='matrix(1 0 0 -1 1.77 20.15)'
+        d='M1.77 15.28c0 1.75 0 2.63.35 3.29a3 3 0 0 0 1.24 1.23c.66.35 1.53.35 3.28.35h10.72c1.75 0 2.62 0 3.28-.35a3 3 0 0 0 1.24-1.23c.35-.66.35-1.54.35-3.29s0-2.62-.35-3.29a3 3 0 0 0-1.24-1.23c-.66-.35-1.53-.35-3.28-.35H6.64c-1.75 0-2.62 0-3.28.35A3 3 0 0 0 2.12 12c-.35.67-.35 1.54-.35 3.3'
         fill='currentColor'
       />
       <path d='M2.16 5.63h19.68' stroke='currentColor' />
       <path d='M2.16 7.53V3.85' stroke='currentColor' />
       <path d='M21.84 7.53V3.85' stroke='currentColor' />
-      <rect
-        width='20.46'
-        height='9.75'
-        rx='2'
-        transform='matrix(1 0 0 -1 1.77 20.15)'
+      <path
+        d='M6.64 10.4h10.72c1.75 0 2.62 0 3.28.36A3 3 0 0 1 21.88 12c.35.67.35 1.54.35 3.3v0c0 1.74 0 2.62-.35 3.28a3 3 0 0 1-1.24 1.23c-.66.35-1.53.35-3.28.35H6.64c-1.75 0-2.62 0-3.28-.35a3 3 0 0 1-1.24-1.23c-.35-.66-.35-1.54-.35-3.29v0c0-1.75 0-2.62.35-3.29a3 3 0 0 1 1.24-1.23c.66-.35 1.53-.35 3.28-.35'
         stroke='currentColor'
       />
-      <path d='M12.32 10.48v3.87' stroke='currentColor' />
-      <path d='M7.56 10.4v3.95' stroke='currentColor' />
-      <path d='M17.08 10.4v3.95' stroke='currentColor' />
+      <path d='M12 10.48v3.87' stroke='currentColor' />
+      <path d='M7.24 10.4v3.95' stroke='currentColor' />
+      <path d='M16.76 10.4v3.95' stroke='currentColor' />
     </svg>
   )
 }

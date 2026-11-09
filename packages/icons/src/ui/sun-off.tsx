@@ -26,21 +26,12 @@ export const IconSunOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='11.97'
-        cy='11.99'
-        r='4.73'
-        transform='rotate(90 11.97 11.99)'
-        fill='currentColor'
-      />
-      <circle
-        cx='11.97'
-        cy='11.99'
-        r='4.73'
-        transform='rotate(90 11.97 11.99)'
+      <circle opacity='.2' cx='11.97' cy='11.99' r='4.73' fill='currentColor' />
+      <path
+        d='M11.97 16.72a4.73 4.73 0 0 1-3.35-8.07l6.69 6.69a4.7 4.7 0 0 1-3.34 1.38'
         stroke='currentColor'
       />
+      <path d='M11.97 7.26a4.73 4.73 0 0 1 4.73 4.73' stroke='currentColor' />
       <path d='M1.56 11.99H4.3' stroke='currentColor' />
       <path d='M19.75 12h2.7' stroke='currentColor' />
       <path d='M11.95 22.34v-2.62' stroke='currentColor' />

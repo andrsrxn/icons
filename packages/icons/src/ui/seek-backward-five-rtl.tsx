@@ -26,18 +26,17 @@ export const IconSeekBackwardFiveRtl: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <ellipse opacity='.2' cx='12.33' cy='12' rx='10.24' ry='10.15' fill='currentColor' />
       <path
-        opacity='.2'
-        d='M2.69 12a9.57 9.57 0 1 0 19.14 0A9.57 9.57 0 0 0 2.7 12'
-        fill='currentColor'
-      />
-      <path d='M20.3 6.18a11 11 0 0 0-9.49-3.63 9.51 9.51 0 1 0 9.1 15.07' stroke='currentColor' />
-      <path
-        d='M17.14 7.26h1.1c1.42 0 2.13 0 2.57-.44s.44-1.14.44-2.56V3.15'
+        d='m20.89 3.07.25 1.17c.23 1.09.35 1.63.08 2.04s-.81.53-1.9.76l-1.18.25'
         stroke='currentColor'
       />
       <path
-        d='M10.5 16.48h1.91a2.1 2.1 0 0 0 0-4.22h-2.17q0 0 0 0v-1.82c0-.77 0-1.16.2-1.42a1 1 0 0 1 .2-.2c.26-.2.65-.2 1.42-.2h2.02'
+        d='M21.26 16.68A10.15 10.15 0 1 1 10.12 2.1c5.48-1.17 8.94 2.66 10.4 3.96'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.3 8.36h-3.97a.5.5 0 0 0-.5.44l-.34 3.16c-.02.17.17.28.32.21 1.67-.8 4.75-.73 4.75 1.95 0 3.42-4.01 3.29-5.12 1.49'
         stroke='currentColor'
       />
     </svg>

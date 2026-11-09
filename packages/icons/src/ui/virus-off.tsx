@@ -32,17 +32,8 @@ export const IconVirusOff: Icon = ({
       <path d='M12 2.5v-.96' stroke='currentColor' />
       <path d='m18.62 5.32 1.1-1.1' stroke='currentColor' />
       <path d='m4.1 19.84 1.3-1.3' stroke='currentColor' />
-      <path d='M5.38 5.3 3.84 3.78' stroke='currentColor' />
-      <path d='m20.37 20.3-1.76-1.77' stroke='currentColor' />
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='11.96'
-        r='8.77'
-        transform='rotate(90 12 11.96)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='11.96' r='8.77' transform='rotate(90 12 11.96)' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='11.96' r='8.77' fill='currentColor' />
+      <path d='M5.63 5.93a8.77 8.77 0 0 0 12.4 12.4' stroke='currentColor' />
       <path
         d='M12 16.23a.77.77 0 1 1-1.55 0 .77.77 0 0 1 1.55 0'
         fill='currentColor'
@@ -59,6 +50,7 @@ export const IconVirusOff: Icon = ({
         stroke='currentColor'
       />
       <path d='m2.74 2.77 18.52 18.51' stroke='currentColor' />
+      <path d='M19.94 15.7q.81-1.72.83-3.74a8.77 8.77 0 0 0-12.5-7.93' stroke='currentColor' />
     </svg>
   )
 }

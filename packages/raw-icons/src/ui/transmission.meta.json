@@ -9,6 +9,7 @@
     "drive",
     "stick",
     "clutch",
-    "automotive"
+    "automotive",
+    "transmission"
   ]
 }

@@ -28,14 +28,14 @@ export const IconCellularNetworkLte: Icon = ({
       focusable={false}>
       <path d='M8.05 7.94a6.7 6.7 0 0 1 3.97-1.3c1.76 0 3.23.59 3.96 1.3' stroke='currentColor' />
       <path d='M5.6 4.97A10.5 10.5 0 0 1 12 2.72c2.85 0 4.83 1 6.4 2.25' stroke='currentColor' />
-      <path d='M10.28 11.8v8.9' stroke='currentColor' />
-      <path d='M16.66 11.8v8.9' stroke='currentColor' />
-      <path d='M7 11.8h6.56' stroke='currentColor' />
-      <path d='M16.66 11.8h5.7' stroke='currentColor' />
-      <path d='M16.66 20.7h5.7' stroke='currentColor' />
-      <path d='M16.66 16.42h4.09' stroke='currentColor' />
-      <path d='M1.68 11.61v9.09' stroke='currentColor' />
-      <path d='M6.06 20.7H1.68' stroke='currentColor' />
+      <path d='M11.08 12.87v9.3' stroke='currentColor' />
+      <path d='M8.13 12.87h5.9' stroke='currentColor' />
+      <path
+        d='M21.94 22.25h-3.68c-.47 0-.7 0-.85-.14s-.15-.38-.15-.86v-7.38c0-.48 0-.71.15-.86.14-.14.38-.14.85-.14h3.68'
+        stroke='currentColor'
+      />
+      <path d='M17.26 17.56h3.49' stroke='currentColor' />
+      <path d='M3.02 12.87v8.3c0 .47 0 .7.15.85s.38.15.85.15h2.96' stroke='currentColor' />
     </svg>
   )
 }

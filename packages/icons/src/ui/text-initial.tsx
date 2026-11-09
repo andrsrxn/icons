@@ -26,15 +26,15 @@ export const IconTextInitial: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M21.3 5.35h-8.25' stroke='currentColor' />
+      <path d='M21.3 5.35h-9.92' stroke='currentColor' />
       <path d='M21.3 15.1H2.7' stroke='currentColor' />
-      <path d='M21.3 10.06h-8.25' stroke='currentColor' />
+      <path d='M21.3 10.06h-8.9' stroke='currentColor' />
       <path d='M21.3 19.96H2.7' stroke='currentColor' />
       <path
-        d='m3.56 11.42 1.21-3.87c.79-2.51 1.18-3.77 1.92-3.77s1.12 1.26 1.9 3.77l1.2 3.87'
+        d='m3 11.51 1.35-4.6h0c.67-2.27 1-3.4 1.62-3.4.63.02.93 1.16 1.54 3.44l1.21 4.56'
         stroke='currentColor'
       />
-      <path d='M8.79 8.34H5.1' stroke='currentColor' />
+      <path d='M4.07 8.44h3.7' stroke='currentColor' />
     </svg>
   )
 }

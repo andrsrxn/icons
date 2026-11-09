@@ -33,13 +33,8 @@ export const IconDevicePhoneImageVertical: Icon = ({
         clipRule='evenodd'
         fill='currentColor'
       />
-      <rect
-        x='5.39'
-        y='22.25'
-        width='20.5'
-        height='13.22'
-        rx='3'
-        transform='rotate(-90 5.39 22.25)'
+      <path
+        d='M18.61 15.64V8.36c0-2.92 0-4.38-.82-5.36a4 4 0 0 0-.43-.43c-.98-.82-2.44-.82-5.36-.82v0c-2.92 0-4.38 0-5.36.82q-.24.2-.43.43c-.82.98-.82 2.44-.82 5.36v7.28c0 2.92 0 4.38.82 5.36q.2.24.43.43c.98.82 2.44.82 5.36.82v0c2.92 0 4.38 0 5.36-.82q.24-.2.43-.43c.82-.98.82-2.44.82-5.36'
         stroke='currentColor'
       />
       <path

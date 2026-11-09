@@ -26,19 +26,13 @@ export const IconScreenshotHorizontal: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.5'
-        height='20.4'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.25)'
+        d='M14.67 19.53c3.32 0 4.98 0 6.09-.92a4 4 0 0 0 .52-.52c.92-1.1.92-2.77.92-6.09s0-4.98-.92-6.1a4 4 0 0 0-.52-.5c-1.11-.93-2.77-.93-6.1-.93H9.34c-3.32 0-4.98 0-6.09.92a4 4 0 0 0-.52.52C1.8 7 1.8 8.68 1.8 12s0 4.98.92 6.1a4 4 0 0 0 .52.5c1.11.93 2.77.93 6.1.93z'
         fill='currentColor'
       />
-      <rect
-        width='14.5'
-        height='20.4'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.25)'
+      <path
+        d='M1.8 12c0-3.32 0-4.98.92-6.1a4 4 0 0 1 .52-.5c1.11-.93 2.77-.93 6.1-.93h5.33c3.32 0 4.98 0 6.09.92a4 4 0 0 1 .52.52c.92 1.1.92 2.77.92 6.09v0c0 3.32 0 4.98-.92 6.1a4 4 0 0 1-.52.5c-1.11.93-2.77.93-6.1.93H9.34c-3.32 0-4.98 0-6.09-.92a4 4 0 0 1-.52-.52C1.8 17 1.8 15.32 1.8 12'
         stroke='currentColor'
       />
       <path

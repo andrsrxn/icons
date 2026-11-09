@@ -26,23 +26,13 @@ export const IconRatio: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
-        opacity='.2'
-        x='6.32'
-        y='6.32'
-        width='11.36'
-        height='11.36'
-        rx='3'
-        fill='currentColor'
+      <path opacity='.2' d='M6.32 6.32h11.36v11.36H6.32z' fill='currentColor' />
+      <path
+        d='M8.3 17.68h7.4c2.52 0 3.78 0 4.62-.7a3 3 0 0 0 .35-.36c.7-.84.7-2.1.7-4.62v0c0-2.52 0-3.78-.7-4.62a3 3 0 0 0-.35-.35c-.84-.71-2.1-.71-4.62-.71H8.3c-2.52 0-3.78 0-4.62.7a3 3 0 0 0-.35.36c-.7.84-.7 2.1-.7 4.62v0c0 2.52 0 3.78.7 4.62a3 3 0 0 0 .35.35c.84.71 2.1.71 4.62.71'
+        stroke='currentColor'
       />
-      <rect x='2.62' y='6.32' width='18.76' height='11.36' rx='3' stroke='currentColor' />
-      <rect
-        x='6.32'
-        y='21.38'
-        width='18.76'
-        height='11.36'
-        rx='3'
-        transform='rotate(-90 6.32 21.38)'
+      <path
+        d='M17.68 15.7V8.3c0-2.52 0-3.78-.7-4.62a3 3 0 0 0-.36-.35c-.84-.7-2.1-.7-4.62-.7v0c-2.52 0-3.78 0-4.62.7a3 3 0 0 0-.35.35c-.71.84-.71 2.1-.71 4.62v7.4c0 2.52 0 3.78.7 4.62a3 3 0 0 0 .36.35c.84.7 2.1.7 4.62.7v0c2.52 0 3.78 0 4.62-.7a3 3 0 0 0 .35-.35c.71-.84.71-2.1.71-4.62'
         stroke='currentColor'
       />
     </svg>

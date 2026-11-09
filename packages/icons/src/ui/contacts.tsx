@@ -26,35 +26,24 @@ export const IconContacts: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='16.27'
-        y='2.74'
-        width='5.04'
-        height='18.52'
-        rx='2'
+        d='M16.65 2.74c.6 0 .9 0 1.16.03a4 4 0 0 1 3.46 3.46c.03.25.03.56.03 1.16v9.22c0 .6 0 .9-.03 1.16a4 4 0 0 1-3.46 3.46c-.25.03-.55.03-1.16.03z'
         fill='currentColor'
       />
-      <circle
-        opacity='.2'
-        cx='3.1'
-        cy='3.1'
-        r='3.1'
-        transform='matrix(0 1 1 0 6.82 7.72)'
-        fill='currentColor'
+      <circle opacity='.2' cx='9.92' cy='10.83' r='3.1' fill='currentColor' />
+      <path
+        d='M10.7 21.26h2.6c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-2.52c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.6c-3.77 0-5.66 0-6.83 1.17S2.7 6.97 2.7 10.74v2.52c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17'
+        stroke='currentColor'
       />
-      <rect x='2.7' y='2.74' width='18.61' height='18.52' rx='3' stroke='currentColor' />
       <path
         d='M9.92 13.85a3 3 0 1 0 0-6 3 3 0 0 0 0 6m0 0c-1.34 0-2.63.62-3.51 1.62m3.51-1.62c1.35 0 2.64.62 3.52 1.62'
         stroke='currentColor'
       />
-      <path
-        d='M12.9 10.83a2.97 2.97 0 0 1-2.98 2.98 2.98 2.98 0 1 1 2.99-2.98'
-        stroke='currentColor'
-      />
-      <path d='M16.82 7.7h4.48' stroke='currentColor' />
-      <path d='M16.82 12h4.48' stroke='currentColor' />
-      <path d='M16.82 16.3h4.48' stroke='currentColor' />
+      <path d='M12.9 10.83a2.98 2.98 0 1 0-5.96 0 2.98 2.98 0 0 0 5.97 0' stroke='currentColor' />
+      <path d='M16.82 7.7h4.25' stroke='currentColor' />
+      <path d='M16.82 12h4.25' stroke='currentColor' />
+      <path d='M16.82 16.3h4.25' stroke='currentColor' />
       <path d='M16.65 21V3' stroke='currentColor' />
     </svg>
   )

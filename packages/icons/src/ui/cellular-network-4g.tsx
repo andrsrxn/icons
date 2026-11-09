@@ -26,17 +26,17 @@ export const IconCellularNetwork4g: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        d='M8.26 22.32v-8.54c0-1.35 0-2.02-.35-2.13-.36-.1-.73.45-1.48 1.57l-2.62 3.92c-.46.68-.7 1.02-.55 1.29.14.26.55.26 1.38.26h5.33'
-        stroke='currentColor'
-      />
       <path d='M7.69 7.52a7.3 7.3 0 0 1 4.37-1.45c1.94 0 3.57.66 4.37 1.45' stroke='currentColor' />
       <path
-        d='M4.97 4.25a11.6 11.6 0 0 1 7.07-2.5c3.14 0 5.33 1.1 7.07 2.5'
+        d='M4.97 4.24a11.6 11.6 0 0 1 7.07-2.49c3.14 0 5.33 1.1 7.07 2.5'
         stroke='currentColor'
       />
       <path
-        d='M19.63 12.83a5.02 5.02 0 1 0-.02 8.95c.35-.17.53-.26.68-.5s.15-.5.15-1v-2.63h-2.68'
+        d='M19.18 13.14a4.8 4.8 0 1 0-.05 8.59c.35-.17.52-.26.67-.5s.15-.5.15-1v-1.48c0-.47 0-.7-.14-.85s-.38-.15-.86-.15H17.4'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.23 19.74v-5.25c0-1.4 0-2.1-.36-2.2s-.73.49-1.48 1.67L3.7 18.2c-.43.68-.64 1.02-.5 1.28s.54.26 1.35.26zm0 0v2.64m0-2.64h1.41'
         stroke='currentColor'
       />
     </svg>

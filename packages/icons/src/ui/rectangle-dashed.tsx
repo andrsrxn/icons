@@ -26,12 +26,9 @@ export const IconRectangleDashed: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.43'
-        height='20.4'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.22)'
+        d='M15.2 19.22c3.3 0 4.95 0 5.98-1.03 1.02-1.02 1.02-2.67 1.02-5.97v-.44c0-3.3 0-4.94-1.02-5.97-1.03-1.02-2.68-1.02-5.98-1.02H8.8c-3.3 0-4.95 0-5.98 1.02C1.8 6.84 1.8 8.49 1.8 11.79v.43c0 3.3 0 4.95 1.02 5.97 1.03 1.03 2.68 1.03 5.98 1.03z'
         fill='currentColor'
       />
       <path d='M4.47 4.78H4.4A2.7 2.7 0 0 0 1.76 7.5' stroke='currentColor' />

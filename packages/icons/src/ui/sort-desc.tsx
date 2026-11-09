@@ -27,10 +27,10 @@ export const IconSortDesc: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m14.56 16.16.56.55c1.33 1.34 2 2 2.82 2 .83 0 1.5-.66 2.84-2l.56-.55'
+        d='m14.56 16.67.56.56c1.33 1.34 2 2 2.82 2 .83 0 1.5-.66 2.84-2l.56-.56'
         stroke='currentColor'
       />
-      <path d='M17.95 9.77v8.69' stroke='currentColor' />
+      <path d='M17.95 10.29v8.68' stroke='currentColor' />
       <path d='M2.74 17.85h7.13' stroke='currentColor' />
       <path d='M2.74 11.98h10.22' stroke='currentColor' />
       <path d='M2.74 6.1h15.2' stroke='currentColor' />

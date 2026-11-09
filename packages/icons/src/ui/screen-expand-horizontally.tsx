@@ -26,16 +26,13 @@ export const IconScreenExpandHorizontally: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.24'
-        height='20.53'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.27 19.12)'
+        d='M15.27 19.12c3.3 0 4.95 0 5.97-1.03 1.03-1.02 1.03-2.67 1.03-5.97v-.24c0-3.3 0-4.95-1.03-5.97-1.02-1.03-2.67-1.03-5.97-1.03H8.73c-3.3 0-4.95 0-5.97 1.03-1.03 1.02-1.03 2.67-1.03 5.97v.24c0 3.3 0 4.95 1.03 5.97 1.02 1.03 2.67 1.03 5.97 1.03z'
         fill='currentColor'
       />
       <path
-        d='M1.73 16.02v.17a3 3 0 0 0 3.1 2.93h14.51a3 3 0 0 0 2.93-2.93v-.17'
+        d='M1.73 16.02a3.1 3.1 0 0 0 3.1 3.1h14.34a3.1 3.1 0 0 0 3.1-3.1'
         stroke='currentColor'
       />
       <path d='M1.73 7.98V7.8a3 3 0 0 1 2.93-2.93h14.68a3 3 0 0 1 2.93 3.1' stroke='currentColor' />

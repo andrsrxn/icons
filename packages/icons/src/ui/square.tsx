@@ -26,19 +26,13 @@ export const IconSquare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='18.78'
-        height='18.78'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.4 21.4)'
+        d='M13.4 21.4c3.76 0 5.65 0 6.82-1.18 1.17-1.17 1.17-3.06 1.17-6.83v-2.78c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.78c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.78c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='18.78'
-        height='18.78'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.4 21.4)'
+      <path
+        d='M2.6 13.4v-2.8c0-3.76 0-5.65 1.18-6.82 1.17-1.17 3.06-1.17 6.83-1.17h2.78c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.78c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.78c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
     </svg>

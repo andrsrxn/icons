@@ -26,16 +26,15 @@ export const IconActualSize: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.72'
-        y='4.66'
-        width='20.55'
-        height='14.67'
-        rx='3'
+        d='M1.72 12c0-3.33 0-5 .93-6.11a4 4 0 0 1 .5-.5c1.12-.93 2.79-.93 6.12-.93h5.46c3.33 0 5 0 6.11.93a4 4 0 0 1 .5.5c.94 1.11.94 2.78.94 6.11s0 5-.93 6.11a4 4 0 0 1-.5.5c-1.12.93-2.79.93-6.12.93H9.27c-3.33 0-5 0-6.11-.93a4 4 0 0 1-.5-.5C1.71 17 1.71 15.33 1.71 12'
         fill='currentColor'
       />
-      <rect x='1.72' y='4.66' width='20.55' height='14.67' rx='3' stroke='currentColor' />
+      <path
+        d='M9.27 19.54h5.46c3.33 0 5 0 6.11-.93a4 4 0 0 0 .5-.5c.94-1.11.94-2.78.94-6.11v0c0-3.33 0-5-.93-6.11a4 4 0 0 0-.5-.5c-1.12-.93-2.79-.93-6.12-.93H9.27c-3.33 0-5 0-6.11.93a4 4 0 0 0-.5.5C1.71 7 1.71 8.67 1.71 12v0c0 3.33 0 5 .93 6.11a4 4 0 0 0 .5.5c1.12.93 2.79.93 6.12.93'
+        stroke='currentColor'
+      />
       <path
         d='m8.14 9.44.45.44c1 1 1.5 1.5 1.5 2.12s-.5 1.12-1.5 2.12l-.45.44'
         stroke='currentColor'

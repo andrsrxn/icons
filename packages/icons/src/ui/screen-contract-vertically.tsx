@@ -26,12 +26,9 @@ export const IconScreenContractVertically: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='7.56'
-        height='20.53'
-        rx='2'
-        transform='matrix(-1 0 0 1 15.78 1.73)'
+        d='M15.78 5.51c0-1.2 0-1.79-.2-2.26a2.5 2.5 0 0 0-1.32-1.32c-.47-.2-1.06-.2-2.26-.2s-1.79 0-2.26.2a2.5 2.5 0 0 0-1.32 1.32c-.2.47-.2 1.07-.2 2.26v12.97c0 1.2 0 1.8.2 2.26.25.6.73 1.07 1.32 1.32.47.2 1.07.2 2.26.2 1.2 0 1.8 0 2.26-.2a2.5 2.5 0 0 0 1.32-1.32c.2-.47.2-1.06.2-2.26z'
         fill='currentColor'
       />
       <path
@@ -39,7 +36,7 @@ export const IconScreenContractVertically: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M15.78 6.86V5.51c0-1.67 0-2.5-.47-3.07l-.24-.24c-.56-.47-1.4-.47-3.07-.47s-2.5 0-3.07.47l-.24.24c-.47.56-.47 1.4-.47 3.07v1.35'
+        d='M15.78 6.86V5.51c0-1.2 0-1.79-.2-2.26a2.5 2.5 0 0 0-1.32-1.32c-.47-.2-1.06-.2-2.26-.2s-1.79 0-2.26.2a2.5 2.5 0 0 0-1.32 1.32c-.2.47-.2 1.07-.2 2.26v1.35'
         stroke='currentColor'
       />
       <path d='M7.76 12H2.35' stroke='currentColor' />

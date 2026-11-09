@@ -27,17 +27,25 @@ export const IconFingerprintOff: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M3.7 21.11C3 18.02 2.2 11.63 5.35 7.94a8.73 8.73 0 0 1 13.73.74c3.48 5 3.86 9.47 2.29 11.27-1.23 1.4-4.37 1.73-5.36-1.2s-1.47-7.37-4.85-6.7c-4 .8-1.28 8.55-.29 10.04'
+        d='M22.15 18.21c.43-2.25-.43-5.73-3.07-9.53a8.7 8.7 0 0 0-9.5-3.42'
         stroke='currentColor'
       />
+      <path d='M3.7 21.11C3 18.03 2.2 11.63 5.35 7.94q.58-.66 1.23-1.18' stroke='currentColor' />
+      <path
+        d='M14.9 15.09c.43 1.2.73 2.54 1.11 3.66.82 2.43 3.1 2.64 4.56 1.83'
+        stroke='currentColor'
+      />
+      <path d='M10.88 22.09c-1-1.5-3.73-9.23.28-10.03q.34-.07.64-.07' stroke='currentColor' />
       <path d='M11.98 15.68c.26 1.47 1.47 5.16 2.56 6.43' stroke='currentColor' />
       <path d='M6.3 14.24c-.15 1.48-.22 4.95.63 7' stroke='currentColor' />
       <path d='M20.18 4.98a8.7 8.7 0 0 0-5.02-2.88' stroke='currentColor' />
-      <path d='M11.35 1.66c-3.99 0-7.98 2.85-9.64 5.9' stroke='currentColor' />
+      <path d='M4.36 4.42A11 11 0 0 0 1.7 7.55' stroke='currentColor' />
+      <path d='M11.35 1.66c-1.49 0-2.98.4-4.34 1.05' stroke='currentColor' />
       <path
-        d='M19.1 17.85c-.24-1.82-1.17-5.63-3.15-7.73-2.47-2.63-6.68-2.3-8.84.9'
+        d='M18.5 15.1c-.5-1.73-1.32-3.68-2.55-4.98a5.5 5.5 0 0 0-3.78-1.76'
         stroke='currentColor'
       />
+      <path d='M9.11 9.14a6 6 0 0 0-2 1.87' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
     </svg>
   )

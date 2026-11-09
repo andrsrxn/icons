@@ -28,7 +28,7 @@ export const IconTextCaseKebab: Icon = ({
       focusable={false}>
       <path d='M14.52 12.55h-3.16' stroke='currentColor' />
       <path
-        d='m1.72 17.42 1.94-6.8C4.45 7.87 4.84 6.5 5.6 6.5s1.15 1.38 1.92 4.13l1.92 6.79'
+        d='m1.72 17.42 1.94-6.8C4.45 7.87 4.84 6.5 5.6 6.5s1.15 1.38 1.92 4.13l1.91 6.79'
         stroke='currentColor'
       />
       <path d='M8.02 12.48h-4.9' stroke='currentColor' />

@@ -27,7 +27,7 @@ export const IconChartLineDown: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m6.34 8.14 2.36 3.34c.69.97 1.03 1.45 1.52 1.48.49.02.87-.43 1.64-1.33l1.27-1.5c.79-.91 1.18-1.37 1.67-1.34.5.02.84.52 1.51 1.52l3.72 5.5'
+        d='m6.67 8.45 2.04 2.98c.68 1 1.02 1.49 1.51 1.51.5.03.88-.43 1.66-1.34l1.25-1.47c.79-.91 1.18-1.37 1.67-1.34.5.02.84.52 1.51 1.52l3.72 5.5'
         stroke='currentColor'
       />
       <path

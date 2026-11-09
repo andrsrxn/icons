@@ -32,17 +32,20 @@ export const IconTrashOff: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M19.47 6.13 17.8 17.25c-.34 2.3-.5 3.44-1.27 4.15l-.2.17c-.81.65-1.97.65-4.28.65-2.3 0-3.46 0-4.27-.64l-.2-.17c-.76-.71-.93-1.85-1.28-4.13L4.59 6.13'
+        d='m4.6 6.13 1.7 11.16c.35 2.27.52 3.4 1.28 4.11l.2.18c.82.64 1.97.64 4.26.64h.6c1.74 0 2.6 0 3.28-.38a3 3 0 0 0 .94-.8c.47-.62.6-1.48.85-3.2'
         stroke='currentColor'
       />
-      <path d='M3.53 5.7h16.94' stroke='currentColor' />
+      <path d='m18.27 14.17 1.2-8.04' stroke='currentColor' />
+      <path d='M3.53 5.7h2.14' stroke='currentColor' />
+      <path d='M10.06 5.7h10.4' stroke='currentColor' />
       <path
-        d='m17 5.51-.27-.63c-.53-1.23-.8-1.85-1.25-2.28a3 3 0 0 0-.86-.57c-.57-.25-1.24-.25-2.59-.25-1.32 0-1.98 0-2.55.25a3 3 0 0 0-.86.55C8.17 3 7.9 3.61 7.37 4.82l-.31.7'
+        d='m17 5.51-.27-.63c-.53-1.23-.8-1.85-1.25-2.28a3 3 0 0 0-.86-.57c-.57-.25-1.24-.25-2.59-.25h-.9c-.45 0-.68 0-.89.03A3 3 0 0 0 8.12 3.2c-.11.18-.2.39-.4.8'
         stroke='currentColor'
       />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
       <path d='M10.06 15.72v-5.3' stroke='currentColor' />
-      <path d='M13.94 15.72v-5.3' stroke='currentColor' />
+      <path d='M13.94 15.72v-1.7' stroke='currentColor' />
+      <path d='M13.94 10.8v-.37' stroke='currentColor' />
     </svg>
   )
 }

@@ -26,16 +26,19 @@ export const IconUhd: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M14.25 8.69v6.65' stroke='currentColor' />
-      <path d='M9.75 8.69v6.65' stroke='currentColor' />
-      <path d='M9.75 12.02h4.5' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
       <path
-        d='M17.2 13.68v-3.33c0-.83 0-1.25.33-1.55.34-.3.69-.26 1.39-.18 1.46.17 3.34.87 3.34 3.4s-1.88 3.23-3.34 3.4c-.7.07-1.05.11-1.39-.19s-.33-.71-.33-1.55'
+        d='M16.8 14.62V9.38c0-.41 0-.62.14-.76s.34-.15.7-.15c1.4 0 4.02.4 4.02 3.53s-2.62 3.53-4.01 3.53c-.37 0-.56 0-.7-.15-.15-.14-.15-.35-.15-.76'
         stroke='currentColor'
       />
-      <path d='M22.26 20.17H1.74' stroke='currentColor' />
-      <path d='M22.26 3.86H1.74' stroke='currentColor' />
-      <path d='M6.69 8.69v4.6a2.31 2.31 0 0 1-4.63 0v-4.6' stroke='currentColor' />
+      <path d='M14.09 8.47v7.06' stroke='currentColor' />
+      <path d='M9.92 8.47v7.06' stroke='currentColor' />
+      <path d='M9.92 12h4.17' stroke='currentColor' />
+      <path
+        d='M2.47 8.47v3.42c0 .92 0 3.64 2.34 3.64 2.4 0 2.4-2.66 2.4-3.64V8.47'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

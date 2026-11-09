@@ -26,13 +26,12 @@ export const IconFx: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M4.79 7.62v9.24' stroke='currentColor' />
-      <path d='M4.79 7.56h5.09' stroke='currentColor' />
-      <path d='M4.79 12.52H8.6' stroke='currentColor' />
-      <path d='m12.85 16.8 6.36-9.18' stroke='currentColor' />
-      <path d='m19.21 16.8-6.36-9.18' stroke='currentColor' />
-      <path d='M21.54 20.55H2.46' stroke='currentColor' />
-      <path d='M21.54 3.48H2.46' stroke='currentColor' />
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='m12.77 17.02 6.96-10.04' stroke='currentColor' />
+      <path d='M19.73 17.02 12.77 6.98' stroke='currentColor' />
+      <path d='M4.27 17.02V7.98c0-.47 0-.7.15-.85s.38-.15.85-.15h4.54' stroke='currentColor' />
+      <path d='M4.27 12h4.16' stroke='currentColor' />
     </svg>
   )
 }

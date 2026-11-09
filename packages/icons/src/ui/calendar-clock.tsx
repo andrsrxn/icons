@@ -27,14 +27,15 @@ export const IconCalendarClock: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <circle opacity='.2' cx='18.29' cy='18.27' r='3.98' fill='currentColor' />
-      <rect opacity='.2' x='3.01' y='3.46' width='17.97' height='5.25' rx='1' fill='currentColor' />
-      <circle cx='18.29' cy='18.27' r='3.98' stroke='currentColor' />
       <path
-        d='m19.32 19.15-.66-.44c-.22-.15-.33-.22-.39-.33s-.06-.24-.06-.5v-.97'
-        stroke='currentColor'
+        opacity='.2'
+        d='m3 7.66.01-.36a4 4 0 0 1 3.84-3.84h10.28a4 4 0 0 1 3.85 4.2v.09a1 1 0 0 1-.96.96H3.96a1 1 0 0 1-.95-.96z'
+        fill='currentColor'
       />
+      <circle cx='18.29' cy='18.27' r='3.98' stroke='currentColor' />
+      <path d='M18.21 16.91v.96c0 .27 0 .4.06.5.06.12.17.2.39.34l.66.44' stroke='currentColor' />
       <path
-        d='M21 11.85v-2.4c-.01-2.83-.02-4.24-.9-5.11-.87-.88-2.28-.88-5.1-.88H9c-2.82 0-4.24 0-5.11.88S3 6.64 3 9.46v5.97c0 2.83 0 4.24.88 5.12.87.88 2.29.88 5.12.88h2.68'
+        d='M21 11.85v-.41c-.01-3.76-.02-5.64-1.19-6.81S16.76 3.46 13 3.46h-2c-3.76 0-5.65 0-6.82 1.17S3 7.7 3 11.46v1.97c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h.68'
         stroke='currentColor'
       />
       <path d='M7.68 1.76v3.4' stroke='currentColor' />

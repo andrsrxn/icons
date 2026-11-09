@@ -26,25 +26,20 @@ export const IconGlobeOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.23'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.23' transform='rotate(90 12 12)' stroke='currentColor' />
-      <ellipse
-        cx='12'
-        cy='12'
-        rx='10.23'
-        ry='4.34'
-        transform='rotate(90 12 12)'
+      <circle opacity='.2' cx='12' cy='12' r='10.23' fill='currentColor' />
+      <path d='M19.21 19.25A10.23 10.23 0 0 1 4.74 4.78' stroke='currentColor' />
+      <path
+        d='M8.01 8.02A22 22 0 0 0 7.66 12c0 5.65 1.94 10.23 4.34 10.23 1.8 0 3.34-2.54 4-6.23'
         stroke='currentColor'
       />
-      <path d='M1.77 12h20.46' stroke='currentColor' />
+      <path
+        d='m16.33 12.74.01-.74c0-5.65-1.94-10.23-4.34-10.23-1.22 0-2.32 1.19-3.11 3.1'
+        stroke='currentColor'
+      />
+      <path d='M16 12h6.23' stroke='currentColor' />
+      <path d='M1.77 12H12' stroke='currentColor' />
       <path d='M2.71 2.71 21.3 21.3' stroke='currentColor' />
+      <path d='M6.96 3.1A10.23 10.23 0 0 1 20.9 17.05' stroke='currentColor' />
     </svg>
   )
 }

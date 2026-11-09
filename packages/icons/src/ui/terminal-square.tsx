@@ -26,19 +26,13 @@ export const IconTerminalSquare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='18.61'
-        height='18.61'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.3 21.3)'
+        d='M13.3 21.3c3.78 0 5.66 0 6.83-1.17s1.17-3.05 1.17-6.83v-2.6c0-3.78 0-5.66-1.17-6.83S17.08 2.7 13.3 2.7h-2.6c-3.78 0-5.66 0-6.83 1.17S2.7 6.92 2.7 10.7v2.6c0 3.78 0 5.66 1.17 6.83s3.05 1.17 6.83 1.17z'
         fill='currentColor'
       />
-      <rect
-        width='18.61'
-        height='18.61'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.3 21.3)'
+      <path
+        d='M2.7 13.3v-2.6c0-3.78 0-5.66 1.17-6.83S6.92 2.7 10.7 2.7h2.6c3.78 0 5.66 0 6.83 1.17s1.17 3.05 1.17 6.83v2.6c0 3.78 0 5.66-1.17 6.83s-3.05 1.17-6.83 1.17h-2.6c-3.78 0-5.66 0-6.83-1.17S2.7 17.08 2.7 13.3'
         stroke='currentColor'
       />
       <path

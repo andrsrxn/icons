@@ -26,16 +26,15 @@ export const IconStandAnalytics: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.76'
-        y='4.16'
-        width='20.48'
-        height='13.12'
-        rx='3'
+        d='M1.76 10.72c0-2.87 0-4.31.8-5.28q.21-.26.48-.48c.97-.8 2.4-.8 5.28-.8h7.36c2.88 0 4.31 0 5.28.8q.27.21.49.48c.8.97.8 2.4.8 5.28s0 4.32-.8 5.29q-.22.26-.49.48c-.97.8-2.4.8-5.28.8H8.32c-2.88 0-4.31 0-5.28-.8a4 4 0 0 1-.49-.48c-.8-.97-.8-2.4-.8-5.29'
         fill='currentColor'
       />
-      <rect x='1.76' y='4.16' width='20.48' height='13.12' rx='3' stroke='currentColor' />
+      <path
+        d='M8.32 17.29h7.36c2.88 0 4.31 0 5.28-.8q.27-.21.49-.48c.8-.97.8-2.4.8-5.29v0c0-2.87 0-4.31-.8-5.28a4 4 0 0 0-.49-.48c-.97-.8-2.4-.8-5.28-.8H8.32c-2.88 0-4.31 0-5.28.8q-.27.21-.49.48c-.8.97-.8 2.4-.8 5.28v0c0 2.88 0 4.32.8 5.29q.22.26.49.48c.97.8 2.4.8 5.28.8'
+        stroke='currentColor'
+      />
       <path d='M12 1.73v2.43' stroke='currentColor' />
       <path d='M12 17.29v5.1' stroke='currentColor' />
       <path d='M12 17.29 6.98 22.3' stroke='currentColor' />

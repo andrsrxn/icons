@@ -27,15 +27,15 @@ export const IconTextDecreaseSize: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m2.65 18.79 2.52-8.8c.78-2.75 1.17-4.12 1.93-4.12.75 0 1.14 1.38 1.91 4.12l2.48 8.8'
+        d='m21.35 15.47-.7.7c-1.33 1.33-2 2-2.83 2s-1.5-.67-2.83-2l-.7-.7'
         stroke='currentColor'
       />
-      <path d='M9.88 13.56H4.26' stroke='currentColor' />
+      <path d='M17.82 17.77V9.4' stroke='currentColor' />
       <path
-        d='m21.35 16.05-.7.7c-1.33 1.34-2 2-2.83 2s-1.5-.66-2.83-2l-.7-.7'
+        d='m2.7 18.23 2.1-7.17h0c1.04-3.53 1.56-5.3 2.53-5.29.97.02 1.44 1.8 2.39 5.35l1.89 7.1'
         stroke='currentColor'
       />
-      <path d='M17.82 18.35V10' stroke='currentColor' />
+      <path d='M4.37 13.44h5.74' stroke='currentColor' />
     </svg>
   )
 }

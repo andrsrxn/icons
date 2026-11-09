@@ -27,25 +27,19 @@ export const IconTextHighlight: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m7.76 14.62 2.33-8.19c.79-2.74 1.18-4.11 1.93-4.11.76 0 1.15 1.37 1.92 4.12l2.3 8.18'
-        stroke='currentColor'
-      />
-      <path d='M14.7 9.6H9.3' stroke='currentColor' />
-      <rect
         opacity='.2'
-        width='3.51'
-        height='18.26'
-        rx='1'
-        transform='matrix(0 -1 -1 0 21.13 21.35)'
+        d='M19.37 21.35c.24 0 .36 0 .46-.02a1.5 1.5 0 0 0 1.29-1.28v-.92a1.5 1.5 0 0 0-1.29-1.28c-.1-.02-.22-.02-.46-.02H4.63c-.24 0-.36 0-.46.02a1.5 1.5 0 0 0-1.29 1.28v.92c.1.67.62 1.2 1.29 1.28.1.02.22.02.46.02z'
         fill='currentColor'
       />
-      <rect
-        width='3.51'
-        height='18.26'
-        rx='1'
-        transform='matrix(0 -1 -1 0 21.13 21.35)'
+      <path
+        d='m2.87 19.59.01-.46a1.5 1.5 0 0 1 1.29-1.28c.1-.02.22-.02.46-.02h14.74c.24 0 .36 0 .46.02.67.09 1.2.61 1.29 1.28v.92a1.5 1.5 0 0 1-1.29 1.28c-.1.02-.22.02-.46.02H4.63c-.24 0-.36 0-.46-.02a1.5 1.5 0 0 1-1.29-1.28z'
         stroke='currentColor'
       />
+      <path
+        d='m7.66 14.51 2.06-6.98h0c1-3.43 1.51-5.15 2.45-5.14s1.4 1.74 2.33 5.2h0l1.84 6.92'
+        stroke='currentColor'
+      />
+      <path d='M9.29 9.86h5.6' stroke='currentColor' />
     </svg>
   )
 }

@@ -26,17 +26,18 @@ export const IconRefresh: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <circle opacity='.2' cx='12' cy='12.07' r='9.41' fill='currentColor' />
+      <path d='M3.54 15.96c1.92 3.4 4.63 5.49 8.93 5.49s7.13-3.06 8.3-5.49' stroke='currentColor' />
       <path
-        d='M20.38 8.6c-2.24-3.19-4.95-5.38-8.8-5.38-3.84 0-6.74 1.37-8.43 5'
-        stroke='currentColor'
-      />
-      <path d='M3.65 15.4c2.24 3.14 4.92 5.38 8.77 5.38s6.93-1.55 8.43-5' stroke='currentColor' />
-      <path
-        d='M21.34 4.23v1.3c0 1.9 0 2.84-.58 3.43-.59.58-1.53.58-3.42.58h-1.31'
+        d='M20.7 8.17c-1.92-3.4-5.1-5.48-8.93-5.48-4.15 0-6.87 2.76-8.56 5.48'
         stroke='currentColor'
       />
       <path
-        d='M2.66 19.77v-1.3c0-1.9 0-2.84.58-3.43.59-.58 1.53-.58 3.42-.58h1.31'
+        d='M15.87 9h1.85c1.73 0 2.6 0 3.13-.53.54-.54.54-1.4.54-3.14V3.47'
+        stroke='currentColor'
+      />
+      <path
+        d='M2.6 20.45v-1.83c0-1.7 0-2.56.52-3.09C3.65 15 4.5 15 6.22 15h1.83'
         stroke='currentColor'
       />
     </svg>

@@ -27,18 +27,18 @@ export const IconTextCaseCamel: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m11.98 18.97 2.83-9.9c.78-2.75 1.17-4.12 1.93-4.12.75 0 1.14 1.38 1.92 4.13l2.78 9.89'
-        stroke='currentColor'
-      />
-      <path d='M19.72 12.9H13.7' stroke='currentColor' />
-      <path
-        d='M5.47 18.82c-1.61 0-2.91-1.18-2.91-2.62 0-1.93 1.3-2.63 2.9-2.63h2.92v2.63c0 1.44-1.3 2.62-2.91 2.62'
+        d='M5.56 18.83c-1.61 0-2.92-1.17-2.92-2.63 0-1.92 1.3-2.62 2.92-2.62h2.91v2.62c0 1.46-1.3 2.63-2.91 2.63'
         stroke='currentColor'
       />
       <path
-        d='M3.29 9.98C4.03 9.03 5 8.48 6.26 8.7c1.94.36 2.4 1.6 2.4 3.7v5.28c0 .97.4 1.28.4 1.28'
+        d='M3.38 9.98c.74-.96 1.71-1.5 2.97-1.27 1.94.36 2.41 1.6 2.41 3.7v5.29c0 .97.4 1.28.4 1.28'
         stroke='currentColor'
       />
+      <path
+        d='m11.94 19 2.28-7.75h0c1.12-3.82 1.68-5.72 2.73-5.71 1.04.01 1.55 1.93 2.58 5.78L21.57 19'
+        stroke='currentColor'
+      />
+      <path d='M13.75 13.83h6.2' stroke='currentColor' />
     </svg>
   )
 }

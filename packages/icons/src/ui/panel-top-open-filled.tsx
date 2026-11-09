@@ -27,24 +27,18 @@ export const IconPanelTopOpenFilled: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m15.9 16.8-1.07-1.08c-1.33-1.33-2-2-2.83-2s-1.5.67-2.83 2L8.1 16.79'
+        d='m15.9 16.8-1.07-1.08h0c-1.33-1.33-2-2-2.83-2s-1.5.67-2.83 2L8.1 16.79'
         stroke='currentColor'
       />
-      <rect
-        width='6.62'
-        height='18.46'
-        rx='2'
-        transform='matrix(0 -1 -1 0 21.23 9.35)'
+      <path
+        d='M2.72 9.35c0-2.44 0-3.67.52-4.58a4 4 0 0 1 1.52-1.52c.91-.52 2.13-.52 4.58-.52h5.32c2.45 0 3.67 0 4.58.52a4 4 0 0 1 1.52 1.52c.52.91.52 2.14.52 4.58z'
         fill='currentColor'
       />
-      <rect
-        width='18.53'
-        height='18.46'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.23 21.27)'
+      <path
+        d='M21.28 13.26v-2.53c0-3.77 0-5.65-1.17-6.82-1.17-1.18-3.06-1.18-6.83-1.18h-2.56c-3.77 0-5.66 0-6.83 1.18-1.17 1.17-1.17 3.05-1.17 6.82v2.53c0 3.78 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17h2.56c3.77 0 5.66 0 6.83-1.17s1.17-3.05 1.17-6.83'
         stroke='currentColor'
       />
-      <path d='M3.16 9.35h17.68' stroke='currentColor' />
+      <path d='M20.88 9.35H3.12' stroke='currentColor' />
     </svg>
   )
 }

@@ -26,48 +26,35 @@ export const IconAppWindowGlobe: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <circle cx='16.55' cy='16.53' r='5.73' stroke='currentColor' />
+      <ellipse cx='16.55' cy='16.53' rx='2.03' ry='5.73' stroke='currentColor' />
+      <path d='M10.82 16.53h11.45' stroke='currentColor' />
       <path
         opacity='.2'
+        d='M22.15 11.03c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17H9.17c-3.24 0-4.86 0-5.96.88a4 4 0 0 0-.62.63c-.88 1.1-.87 2.72-.86 5.96.01 3.22.02 4.83.9 5.92a4 4 0 0 0 .62.62c1.1.87 2.7.87 5.92.87h1.85v-3.45l3.12-3.11.86-.17a9 9 0 0 1 1.92-.27 4 4 0 0 1 .95.16 8 8 0 0 1 1.73.87c.5.28.74.42.96.6q.23.17.43.38c.2.2.36.43.69.89l.47.65z'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M21.79 9.03c0-2.83 0-4.24-.88-5.12s-2.3-.88-5.12-.88H7.7c-2.82 0-4.24 0-5.12.88S1.7 6.2 1.7 9.03v2.68c0 2.83 0 4.24.88 5.12s2.3.88 5.12.88h3.21l.33-3.3 2.3-2.91 3.85-.62 4.4 2.5z'
         fill='currentColor'
       />
       <path
-        d='M7.41 17.7c-2.54 0-3.82 0-4.66-.71l-.32-.33c-.73-.84-.73-2.11-.73-4.66V9.03c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h9c1.95 0 2.93 0 3.65.44a3 3 0 0 1 1 1c.44.72.44 1.7.44 3.65'
+        d='M7.44 17.96c-1.56 0-2.34 0-2.97-.21a4 4 0 0 1-2.5-2.5c-.2-.62-.2-1.4-.2-2.97V10.5c0-3.26 0-4.89.88-5.99a4 4 0 0 1 .6-.59c1.1-.89 2.72-.89 5.98-.89h6.8c2.02 0 3.03 0 3.81.36a4 4 0 0 1 2 1.99c.35.79.35 1.8.35 3.82'
         stroke='currentColor'
       />
       <path
-        d='M6.45 6.97a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
-        fill='currentColor'
-        stroke='currentColor'
-      />
-      <path
-        d='M10.46 6.97a.53.53 0 1 1-1.06 0 .53.53 0 0 1 1.06 0'
+        d='M6.62 7.28a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M14.46 6.97a.53.53 0 1 1-1.05 0 .53.53 0 0 1 1.05 0'
+        d='M10.7 7.28a.54.54 0 1 1-1.08 0 .54.54 0 0 1 1.08 0'
         fill='currentColor'
         stroke='currentColor'
       />
-      <circle
-        cx='16.55'
-        cy='16.53'
-        r='5.73'
-        transform='rotate(90 16.55 16.53)'
+      <path
+        d='M14.77 7.28a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
+        fill='currentColor'
         stroke='currentColor'
       />
-      <ellipse
-        cx='16.55'
-        cy='16.53'
-        rx='5.73'
-        ry='2.03'
-        transform='rotate(90 16.55 16.53)'
-        stroke='currentColor'
-      />
-      <path d='M10.82 16.53h11.45' stroke='currentColor' />
     </svg>
   )
 }

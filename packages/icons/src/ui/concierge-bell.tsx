@@ -26,20 +26,14 @@ export const IconConciergeBell: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='4.44'
-        height='19.85'
-        rx='1.5'
-        transform='matrix(0 -1 -1 0 21.7 20.02)'
+        d='M19.49 20.02h.39a2 2 0 0 0 1.82-1.82v-.78a2 2 0 0 0-1.82-1.82l-.4-.01H3.69a2 2 0 0 0-1.82 1.83v.78a2 2 0 0 0 1.82 1.82z'
         fill='currentColor'
       />
       <path d='M3.5 15.17c0-2.8 2.82-7.63 8.5-7.63s8.5 4.72 8.5 7.63' stroke='currentColor' />
-      <rect
-        width='4.44'
-        height='20.57'
-        rx='1.5'
-        transform='matrix(0 -1 -1 0 22.29 20.02)'
+      <path
+        d='m1.71 17.8.01-.38a2 2 0 0 1 1.82-1.82l.4-.01h16.52a2 2 0 0 1 1.82 1.83v.78a2 2 0 0 1-1.82 1.82H3.54a2 2 0 0 1-1.82-1.82z'
         stroke='currentColor'
       />
       <path d='M12 7.54V3.98' stroke='currentColor' />

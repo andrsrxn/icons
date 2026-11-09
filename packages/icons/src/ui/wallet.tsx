@@ -27,11 +27,8 @@ export const IconWallet: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path opacity='.2' d='m4.23 3.16-3 4.39h18.6l-3.1-4.22z' fill='currentColor' />
-      <rect
-        width='12.66'
-        height='20.39'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.29 20.21)'
+      <path
+        d='M1.9 13.88c0-2.65 0-3.98.68-4.9q.32-.43.74-.75c.93-.68 2.26-.68 4.91-.68h7.73c2.65 0 3.98 0 4.9.68q.43.32.75.74c.68.93.68 2.26.68 4.91v0c0 2.65 0 3.98-.68 4.9q-.32.43-.75.75c-.92.68-2.25.68-4.9.68H8.23c-2.65 0-3.98 0-4.9-.68a4 4 0 0 1-.75-.74c-.68-.93-.68-2.26-.68-4.91'
         stroke='currentColor'
       />
       <path

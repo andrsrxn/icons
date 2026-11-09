@@ -26,15 +26,15 @@ export const IconScreenExpandVertically: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.24'
-        height='20.53'
-        rx='3'
-        transform='matrix(1 0 0 -1 4.88 22.27)'
+        d='M4.88 15.27c0 3.3 0 4.95 1.03 5.97 1.02 1.03 2.67 1.03 5.97 1.03h.24c3.3 0 4.95 0 5.97-1.03 1.03-1.02 1.03-2.67 1.03-5.97V8.73c0-3.3 0-4.95-1.03-5.97-1.02-1.03-2.67-1.03-5.97-1.03h-.24c-3.3 0-4.95 0-5.97 1.03-1.03 1.02-1.03 2.67-1.03 5.97z'
         fill='currentColor'
       />
-      <path d='M7.98 1.73H7.8a3 3 0 0 0-2.93 2.93v14.68a3 3 0 0 0 3.1 2.93' stroke='currentColor' />
+      <path
+        d='M7.98 1.73a3.1 3.1 0 0 0-3.1 3.1v14.34a3.1 3.1 0 0 0 3.1 3.1'
+        stroke='currentColor'
+      />
       <path
         d='M16.02 1.73h.17a3 3 0 0 1 2.93 2.93v14.68a3 3 0 0 1-2.93 2.93h-.17'
         stroke='currentColor'

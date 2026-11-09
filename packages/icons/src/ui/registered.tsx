@@ -31,11 +31,13 @@ export const IconRegistered: Icon = ({
         d='M1.78 12a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0'
         fill='currentColor'
       />
-      <path d='M1.78 12A10.2 10.2 0 0 0 12 22.22 10.22 10.22 0 1 0 1.78 12' stroke='currentColor' />
-      <path d='m12.26 12.83 2.72 4.7' stroke='currentColor' />
-      <path d='M9.39 6.58v10.95' stroke='currentColor' />
       <path
-        d='M9.43 6.58h3.63c1.52 0 2.75 1.35 2.75 3.01 0 1.67-1.23 3.02-2.75 3.02H9.43'
+        d='M1.78 12a10.22 10.22 0 1 1 20.44 0 10.22 10.22 0 0 1-20.44 0'
+        stroke='currentColor'
+      />
+      <path d='m11.41 13 4.03 4.6' stroke='currentColor' />
+      <path
+        d='M9 17.6V7.4c0-.46 0-.7.15-.85.15-.14.38-.14.85-.14h3.04a3.1 3.1 0 0 1 3.03 3.2c0 1.77-1.36 3.2-3.03 3.2h-4'
         stroke='currentColor'
       />
     </svg>

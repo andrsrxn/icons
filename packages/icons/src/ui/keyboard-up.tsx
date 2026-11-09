@@ -26,19 +26,13 @@ export const IconKeyboardUp: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.28 22.26)'
+        d='M16.28 22.26c2.83 0 4.25 0 5.12-.88s.88-2.3.88-5.12v-2.97c0-2.83 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88H7.72c-2.83 0-4.25 0-5.12.88s-.88 2.29-.88 5.12v2.97c0 2.83 0 4.24.88 5.12.87.88 2.29.88 5.12.88z'
         fill='currentColor'
       />
-      <rect
-        width='14.97'
-        height='20.57'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.28 22.26)'
+      <path
+        d='M1.72 15.26v-.97c0-3.3 0-4.95 1.02-5.98C3.77 7.3 5.42 7.3 8.72 7.3h6.56c3.3 0 4.95 0 5.98 1.02 1.02 1.03 1.02 2.68 1.02 5.98v.97c0 3.3 0 4.95-1.02 5.97-1.03 1.03-2.68 1.03-5.98 1.03H8.72c-3.3 0-4.95 0-5.98-1.03-1.02-1.02-1.02-2.67-1.02-5.97'
         stroke='currentColor'
       />
       <path
@@ -83,7 +77,7 @@ export const IconKeyboardUp: Icon = ({
       />
       <path d='M15.6 19.06H8.4' stroke='currentColor' />
       <path
-        d='m8.59 4 1.58-1.21c.88-.68 1.32-1.02 1.83-1.02.5 0 .95.34 1.83 1.01L15.4 4'
+        d='m8.59 4 1.58-1.21h0c.88-.68 1.32-1.02 1.83-1.02.5 0 .95.34 1.83 1.01L15.4 4'
         stroke='currentColor'
       />
     </svg>

@@ -26,10 +26,6 @@ export const IconTextHeadingFour: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        d='M20.44 21.18v-4.9c0-1.33 0-2-.36-2.11-.35-.11-.72.45-1.47 1.56l-.93 1.39c-.46.68-.69 1.02-.55 1.29.14.26.56.26 1.38.26h3.1'
-        stroke='currentColor'
-      />
       <path d='M4.18 4.03v14.74' stroke='currentColor' />
       <path d='M13.28 4.03v14.74' stroke='currentColor' />
       <path d='M4.18 11.3h9.1' stroke='currentColor' />
@@ -38,6 +34,10 @@ export const IconTextHeadingFour: Icon = ({
       <path d='M2.73 18.77h2.9' stroke='currentColor' />
       <path d='M11.83 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
+      <path
+        d='M20.87 18.78v-2.33c0-1.4 0-2.1-.36-2.2s-.74.48-1.49 1.66l-.84 1.34c-.43.68-.65 1.02-.5 1.28.14.25.54.25 1.34.25zm0 0v1.77m0-1.77h.94'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

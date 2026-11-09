@@ -27,25 +27,15 @@ export const IconPanelStartOpenFilled: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m16.8 15.9-1.08-1.07c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l1.07-1.07'
+        d='m16.8 15.9-1.08-1.07h0c-1.33-1.33-2-2-2-2.83s.67-1.5 2-2.83l1.07-1.07'
         stroke='currentColor'
       />
-      <rect
-        x='9.35'
-        y='21.21'
-        width='6.62'
-        height='18.42'
-        rx='2'
-        transform='rotate(-180 9.35 21.21)'
+      <path
+        d='M9.35 21.21h-.61c-2.83 0-4.25 0-5.13-.88s-.87-2.3-.87-5.12V8.79c0-2.83 0-4.24.87-5.12.88-.88 2.3-.88 5.13-.88h.61z'
         fill='currentColor'
       />
-      <rect
-        x='21.27'
-        y='21.21'
-        width='18.53'
-        height='18.42'
-        rx='3'
-        transform='rotate(-180 21.27 21.21)'
+      <path
+        d='M13.26 2.79h-2.53c-3.77 0-5.65 0-6.82 1.17-1.18 1.17-1.18 3.06-1.18 6.83v2.42c0 3.77 0 5.66 1.18 6.83 1.17 1.17 3.05 1.17 6.82 1.17h2.53c3.78 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-2.42c0-3.77 0-5.66-1.17-6.83S17.04 2.8 13.26 2.8'
         stroke='currentColor'
       />
       <path d='M9.35 3.18v17.64' stroke='currentColor' />

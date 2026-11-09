@@ -33,11 +33,8 @@ export const IconTableColumns: Icon = ({
       />
       <path d='M8.78 3v18' stroke='currentColor' />
       <path d='M15.22 3v18' stroke='currentColor' />
-      <rect
-        width='18.48'
-        height='18.48'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.24 0)'
+      <path
+        d='M2.76 13.24v-2.48c0-3.77 0-5.66 1.17-6.83S7 2.76 10.76 2.76h2.48c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.48c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.48c-3.77 0-5.66 0-6.83-1.17S2.76 17 2.76 13.24'
         stroke='currentColor'
       />
     </svg>

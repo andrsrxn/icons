@@ -26,10 +26,6 @@ export const IconTextHeadingTwo: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        d='M17.54 15.26c.5-.54.99-.96 2.02-.96 1.82 0 2.11 1.9 1.2 2.84-.53.56-1.7 1.39-2.61 2.18-.45.38-.67.58-.55.9s.44.33 1.09.33h2.58'
-        stroke='currentColor'
-      />
       <path d='M4.18 4.03v14.74' stroke='currentColor' />
       <path d='M13.28 4.03v14.74' stroke='currentColor' />
       <path d='M4.18 11.3h9.1' stroke='currentColor' />
@@ -38,6 +34,10 @@ export const IconTextHeadingTwo: Icon = ({
       <path d='M11.83 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 4.03h2.9' stroke='currentColor' />
       <path d='M2.73 18.77h2.9' stroke='currentColor' />
+      <path
+        d='M17.99 14.95c.7-1.15 3.25-1.23 3.25.94 0 1.52-1.94 2.27-3.1 4.12-.2.3.04.67.4.67h2.78'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

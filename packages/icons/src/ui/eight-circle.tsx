@@ -26,17 +26,10 @@ export const IconEightCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.22'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
       <path
-        d='M11.99 11.88s-2.45 1.54-2.45 3.03c0 1.21 1.07 2.05 2.3 2.13 1.32.07 2.62-.87 2.62-2.17 0-2.2-4.9-3.74-4.9-6.01 0-1.27 1.14-2.15 2.43-2.15s2.45.92 2.45 2.19c0 1.55-2.45 2.98-2.45 2.98'
+        d='M11.98 12.1c1.32.85 2.65 1.65 2.65 3s-1.35 2.33-2.72 2.25c-1.28-.07-2.4-.95-2.4-2.2 0-2 2.4-3.02 2.4-3.02zm0 0c-1.31-.83-2.61-1.71-2.61-3.21 0-1.32 1.2-2.25 2.54-2.25 1.35 0 2.7.93 2.7 2.25 0 1.96-2.23 3.03-2.63 3.21'
         stroke='currentColor'
       />
     </svg>

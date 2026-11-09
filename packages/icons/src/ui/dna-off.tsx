@@ -36,14 +36,10 @@ export const IconDnaOff: Icon = ({
         d='m13.1 6.33 2.09-3.4 6.05 6.08-3.64 2.23c-.2.12-.3.18-.4.21-.1.04-.22.05-.45.07l-2.03.2c-1.14.12-1.71.17-2.05-.17s-.27-.9-.13-2.05l.27-2.36c.03-.22.04-.32.08-.43q.04-.13.2-.38'
         fill='currentColor'
       />
-      <path
-        d='M1.6 15.73c1.21-1.15 4.2-3.29 10.2-3.56 6.01-.28 9.49-2.78 10.6-3.9'
-        stroke='currentColor'
-      />
-      <path
-        d='M15.73 1.6c-1.15 1.21-3.29 4.2-3.57 10.2-.27 6.01-2.77 9.49-3.89 10.6'
-        stroke='currentColor'
-      />
+      <path d='M1.6 15.73c1.21-1.15 4.2-3.28 10.2-3.56' stroke='currentColor' />
+      <path d='M15.38 11.7c3.84-.84 6.15-2.55 7.02-3.43' stroke='currentColor' />
+      <path d='M12.15 12.17c-.36 5.78-2.78 9.14-3.88 10.24' stroke='currentColor' />
+      <path d='M15.73 1.6c-.91.97-2.45 3.05-3.19 6.9' stroke='currentColor' />
       <path d='m3.13 14.69 6.18 6.18' stroke='currentColor' />
       <path d='m15.11 2.7 6.19 6.2' stroke='currentColor' />
       <path d='m6.73 13 4.26 4.27' stroke='currentColor' />

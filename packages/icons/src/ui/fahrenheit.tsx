@@ -27,12 +27,12 @@ export const IconFahrenheit: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <circle opacity='.2' cx='5.4' cy='6.03' r='2.48' fill='currentColor' />
+      <circle cx='5.4' cy='6.03' r='2.48' stroke='currentColor' />
       <path
-        d='M11.8 20.65V9.55c0-2.82 0-4.24.88-5.12s2.3-.87 5.12-.87h3.28'
+        d='M11.8 20.65V7.55c0-1.88 0-2.82.59-3.4.58-.6 1.52-.6 3.4-.6h5.44'
         stroke='currentColor'
       />
-      <path d='M18.71 12.13H11.8' stroke='currentColor' />
-      <circle cx='5.4' cy='6.03' r='2.48' stroke='currentColor' />
+      <path d='M11.8 12.1h7.09' stroke='currentColor' />
     </svg>
   )
 }

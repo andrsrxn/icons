@@ -26,19 +26,13 @@ export const IconScaleDashed: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='8.16'
-        height='8.16'
-        rx='2'
-        transform='matrix(0 -1 -1 0 10.96 21.14)'
+        d='M6.96 21.15c1.89 0 2.83 0 3.42-.6.58-.58.58-1.52.58-3.4v-.17c0-1.88 0-2.82-.58-3.41-.59-.59-1.53-.59-3.42-.59H6.8c-1.88 0-2.83 0-3.41.59s-.59 1.53-.59 3.41v.16c0 1.9 0 2.83.59 3.42.58.59 1.53.59 3.41.59z'
         fill='currentColor'
       />
-      <rect
-        width='8.16'
-        height='8.16'
-        rx='2'
-        transform='matrix(0 -1 -1 0 10.96 21.14)'
+      <path
+        d='M2.8 17.15v-.17c0-1.88 0-2.82.59-3.41.58-.59 1.53-.59 3.41-.59h.16c1.89 0 2.83 0 3.42.59s.58 1.53.58 3.41v.16c0 1.9 0 2.83-.58 3.42-.59.59-1.53.59-3.42.59H6.8c-1.88 0-2.83 0-3.41-.6-.59-.58-.59-1.52-.59-3.4'
         stroke='currentColor'
       />
       <path d='m10.6 13.56 4.37-4.36' stroke='currentColor' />

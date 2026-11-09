@@ -31,9 +31,9 @@ export const IconChartPie: Icon = ({
         d='M12 22.26c-2.38 0-4.58-.81-6.32-2.17L12 12V1.74a10.26 10.26 0 0 1 0 20.52'
         fill='currentColor'
       />
-      <circle cx='12' cy='12' r='10.26' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.26' stroke='currentColor' />
       <path
-        d='m5.72 19.71 5.33-6.26c.47-.56.7-.84.83-1.17.12-.33.12-.7.12-1.43V1.74'
+        d='m5.72 19.71 4.37-5.14c.95-1.11 1.42-1.67 1.66-2.34.25-.66.25-1.4.25-2.85V1.74'
         stroke='currentColor'
       />
     </svg>

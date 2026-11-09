@@ -26,19 +26,13 @@ export const IconRectangle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14.5'
-        height='20.4'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.25)'
+        d='M14.95 19.25c3.05 0 4.57 0 5.64-.79a4 4 0 0 0 .82-.82c.8-1.07.8-2.59.8-5.64s0-4.57-.8-5.64a4 4 0 0 0-.82-.82c-1.07-.8-2.6-.8-5.64-.8h-5.9c-3.05 0-4.57 0-5.64.8a4 4 0 0 0-.82.82c-.8 1.07-.8 2.59-.8 5.64s0 4.57.8 5.64a4 4 0 0 0 .82.82c1.07.8 2.6.8 5.64.8z'
         fill='currentColor'
       />
-      <rect
-        width='14.5'
-        height='20.4'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.2 19.25)'
+      <path
+        d='M1.8 12c0-3.05 0-4.57.79-5.64a4 4 0 0 1 .82-.82c1.07-.8 2.6-.8 5.64-.8h5.9c3.05 0 4.57 0 5.64.8a4 4 0 0 1 .82.82c.8 1.07.8 2.59.8 5.64v0c0 3.05 0 4.57-.8 5.64a4 4 0 0 1-.82.82c-1.07.8-2.6.8-5.64.8h-5.9c-3.05 0-4.57 0-5.64-.8a4 4 0 0 1-.82-.82c-.8-1.07-.8-2.59-.8-5.64'
         stroke='currentColor'
       />
     </svg>

@@ -26,12 +26,10 @@ export const IconTextOff: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M12 3.75v16.5' stroke='currentColor' />
+      <path d='M12 12v8.25' stroke='currentColor' />
+      <path d='M12 3.75V8.3' stroke='currentColor' />
       <path d='M14.74 20.25H9.26' stroke='currentColor' />
-      <path
-        d='M18.67 5.67c0-1.06-.86-1.92-1.92-1.92H6.83c-.83 0-1.5.68-1.5 1.5'
-        stroke='currentColor'
-      />
+      <path d='M7.45 3.75h9.3c1.06 0 1.92.86 1.92 1.92' stroke='currentColor' />
       <path d='m2.75 2.75 18.5 18.5' stroke='currentColor' />
     </svg>
   )

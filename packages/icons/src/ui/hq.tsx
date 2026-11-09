@@ -26,17 +26,14 @@ export const IconHq: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M10 7.18v9.67' stroke='currentColor' />
-      <path d='M3.49 7.18v9.67' stroke='currentColor' />
-      <path d='M3.49 12.02H10' stroke='currentColor' />
-      <path d='M21.54 20.55H2.46' stroke='currentColor' />
-      <path d='M21.54 3.48H2.46' stroke='currentColor' />
-      <path d='m16.97 13.1 4.57 4' stroke='currentColor' />
-      <rect
-        width='10.16'
-        height='7.28'
-        rx='3.64'
-        transform='matrix(0 -1 -1 0 20.37 17.1)'
+      <path d='M21.53 20.54H2.47' stroke='currentColor' />
+      <path d='M21.53 3.5H2.47' stroke='currentColor' />
+      <path d='M9.15 7.01V17' stroke='currentColor' />
+      <path d='M3.26 7.01V17' stroke='currentColor' />
+      <path d='M3.26 12h5.89' stroke='currentColor' />
+      <path d='M17 12.73 21.27 17' stroke='currentColor' />
+      <path
+        d='M20.58 11.9c0-2.7-1.87-4.89-4.18-4.89s-4.19 2.2-4.19 4.9 1.88 4.9 4.19 4.9a3.9 3.9 0 0 0 2.99-1.48 5.3 5.3 0 0 0 1.2-3.42'
         stroke='currentColor'
       />
     </svg>

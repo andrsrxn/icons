@@ -26,19 +26,28 @@ export const IconBinary: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect x='2.78' y='3.33' width='4.26' height='7.36' rx='2' stroke='currentColor' />
-      <rect x='17.01' y='3.33' width='4.26' height='7.36' rx='2' stroke='currentColor' />
-      <rect x='9.95' y='13.64' width='4.26' height='7.36' rx='2' stroke='currentColor' />
       <path
-        d='m10 5.6 1.52-1.35c.71-.65 1.07-.97 1.37-.84s.3.61.3 1.58v5.57'
+        d='m10.3 3.97.99-.63c.67-.43 1.01-.65 1.27-.5.26.14.26.54.26 1.34v6.3'
         stroke='currentColor'
       />
       <path
-        d='m2.93 15.92 1.52-1.37c.72-.64 1.08-.96 1.37-.83s.3.61.3 1.58v5.57'
+        d='m17.73 15.12 1-.63c.67-.43 1-.65 1.27-.5.26.14.26.54.26 1.34v6.3'
         stroke='currentColor'
       />
       <path
-        d='m17.07 15.92 1.51-1.37c.72-.64 1.08-.96 1.38-.83s.3.61.3 1.58v5.57'
+        d='m3.01 15.12 1-.63c.67-.43 1.01-.65 1.27-.5.26.14.26.54.26 1.34v6.3'
+        stroke='currentColor'
+      />
+      <path
+        d='M21.45 6.66c0 2.1-.55 3.82-2.46 3.82-1.9 0-2.45-1.71-2.45-3.82s.63-3.82 2.45-3.82 2.46 1.71 2.46 3.82'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.46 6.66c0 2.1-.55 3.82-2.45 3.82S2.55 8.77 2.55 6.66 3.18 2.84 5 2.84s2.45 1.71 2.45 3.82'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.63 17.8c0 2.12-.55 3.83-2.46 3.83-1.9 0-2.45-1.71-2.45-3.82s.63-3.82 2.45-3.82 2.46 1.71 2.46 3.82'
         stroke='currentColor'
       />
     </svg>

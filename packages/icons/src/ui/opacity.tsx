@@ -28,15 +28,15 @@ export const IconOpacity: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
+        d='M1.78 12a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M1.78 12a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0'
         fill='currentColor'
       />
       <path d='m2.09 9.55 12.27 12.27' stroke='currentColor' />
       <path d='m5.03 4.74 14.25 14.24' stroke='currentColor' />
       <path d='M10.13 1.96 21.98 13.8' stroke='currentColor' />
-      <circle cx='12' cy='12' r='10.22' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.22' stroke='currentColor' />
     </svg>
   )
 }

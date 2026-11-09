@@ -26,19 +26,13 @@ export const IconSlidesThumbnails: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='13.14'
-        height='20.54'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.27 16.29)'
+        d='M15.7 16.29c2.88 0 4.33 0 5.3-.8q.26-.22.47-.48c.8-.97.8-2.41.8-5.3s0-4.32-.8-5.3a4 4 0 0 0-.47-.47c-.97-.8-2.42-.8-5.3-.8H8.3c-2.88 0-4.33 0-5.3.8q-.26.21-.47.48c-.8.97-.8 2.4-.8 5.3 0 2.88 0 4.32.8 5.3q.21.24.47.47c.97.8 2.42.8 5.3.8z'
         fill='currentColor'
       />
-      <rect
-        width='13.14'
-        height='20.54'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.27 16.29)'
+      <path
+        d='M1.73 9.71c0-2.88 0-4.32.8-5.3q.21-.26.47-.47c.97-.8 2.42-.8 5.3-.8h7.4c2.88 0 4.33 0 5.3.8q.26.21.47.48c.8.97.8 2.4.8 5.3v0c0 2.88 0 4.32-.8 5.3q-.21.24-.47.47c-.97.8-2.42.8-5.3.8H8.3c-2.88 0-4.33 0-5.3-.8a4 4 0 0 1-.47-.48c-.8-.97-.8-2.41-.8-5.3'
         stroke='currentColor'
       />
       <path

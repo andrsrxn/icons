@@ -27,10 +27,14 @@ export const IconRestore: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M3.51 7.93c3.12-4.1 6.2-4.87 8.67-4.87A9.08 9.08 0 1 1 5.82 18.6'
+        d='M2.75 3.03v1.98c0 1.85 0 2.77.57 3.34.57.58 1.5.58 3.34.58h1.98'
         stroke='currentColor'
       />
-      <path d='M2.73 2.79V4.8c0 1.89 0 2.83.58 3.42s1.53.58 3.41.58h2.03' stroke='currentColor' />
+      <path
+        d='M4.98 17.8a9.17 9.17 0 1 0 7.1-14.97c-5.06 0-7.4 4.03-8.45 5.46'
+        stroke='currentColor'
+      />
+      <circle opacity='.2' cx='12' cy='12' r='9.25' fill='currentColor' />
     </svg>
   )
 }

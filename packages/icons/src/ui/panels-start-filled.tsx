@@ -26,8 +26,14 @@ export const IconPanelsStartFilled: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect x='2.96' y='2.74' width='9.35' height='18.52' rx='2' fill='currentColor' />
-      <rect x='2.74' y='2.74' width='18.53' height='18.52' rx='3' stroke='currentColor' />
+      <path
+        d='M2.96 8.74c0-2.83 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88H12v18.52H8.96c-2.83 0-4.25 0-5.12-.88s-.88-2.3-.88-5.12z'
+        fill='currentColor'
+      />
+      <path
+        d='M10.74 21.26h2.53c3.77 0 5.65 0 6.82-1.17 1.18-1.17 1.18-3.06 1.18-6.83v-2.52c0-3.77 0-5.66-1.18-6.83-1.17-1.17-3.05-1.17-6.82-1.17h-2.53c-3.78 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.52c0 3.77 0 5.66 1.17 6.83s3.05 1.17 6.82 1.17'
+        stroke='currentColor'
+      />
       <path d='M12 20.87V3.13' stroke='currentColor' />
     </svg>
   )

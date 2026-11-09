@@ -27,11 +27,17 @@ export const IconError400: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M5.8 16.38v-6.7c0-1.34 0-2.01-.36-2.12-.35-.1-.73.45-1.47 1.57L2.2 11.76c-.46.69-.69 1.03-.55 1.3.14.26.56.26 1.38.26h4.2'
+        d='M14.44 12c0 2.3-.6 4.16-2.68 4.16-2.07 0-2.67-1.86-2.67-4.15s.7-4.15 2.67-4.15c1.98 0 2.68 1.86 2.68 4.15'
         stroke='currentColor'
       />
-      <rect x='9.77' y='7.42' width='4.86' height='9.23' rx='2.43' stroke='currentColor' />
-      <rect x='17.4' y='7.41' width='4.86' height='9.23' rx='2.43' stroke='currentColor' />
+      <path
+        d='M22.4 12c0 2.3-.6 4.16-2.67 4.16-2.08 0-2.68-1.86-2.68-4.15s.7-4.15 2.68-4.15S22.4 9.72 22.4 12'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.42 13.14V9.86c0-1.33 0-2-.35-2.1-.35-.12-.73.43-1.47 1.54h0l-1.55 2.28c-.47.69-.7 1.03-.56 1.3.14.26.56.26 1.39.26zm0 0v3.02m0-3.02h1.4'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

@@ -26,49 +26,43 @@ export const IconDiceSix: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='18.78'
-        height='18.78'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.4 21.4)'
+        d='M13.4 21.4c3.76 0 5.65 0 6.82-1.18 1.17-1.17 1.17-3.06 1.17-6.83v-2.78c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-2.78c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v2.78c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
       <path
-        d='M17.7 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M17.37 12a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M8.02 12a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M8.25 12a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M17.7 7.1a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M17.37 7.38a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M17.8 16.9a.9.9 0 1 1-1.82 0 .9.9 0 0 1 1.81 0'
+        d='M17.46 16.62a.85.85 0 1 1-1.71 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M8.02 16.9a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M8.25 16.62a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M8.02 7.1a.9.9 0 1 1-1.81 0 .9.9 0 0 1 1.81 0'
+        d='M8.25 7.38a.85.85 0 1 1-1.7 0 .85.85 0 0 1 1.7 0'
         fill='currentColor'
         stroke='currentColor'
       />
-      <rect
-        width='18.78'
-        height='18.78'
-        rx='3'
-        transform='matrix(0 -1 -1 0 21.4 21.4)'
+      <path
+        d='M2.6 13.4v-2.8c0-3.76 0-5.65 1.18-6.82 1.17-1.17 3.06-1.17 6.83-1.17h2.78c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v2.78c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.78c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
     </svg>

@@ -26,17 +26,21 @@ export const IconPasscodeX: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <path d='m16.63 14.38 5.68 5.68' stroke='currentColor' />
+      <path d='m16.62 20.06 5.67-5.68' stroke='currentColor' />
       <path
         opacity='.2'
-        d='m18.46 18.21 3.85-3.7V9.8c0-1.89 0-2.83-.59-3.42s-1.53-.58-3.41-.58H5.69c-1.88 0-2.82 0-3.41.58-.59.59-.59 1.53-.59 3.42v4.42c0 1.89 0 2.83.59 3.42s1.53.58 3.41.58z'
+        d='M14.3 5.46c3.78 0 5.66 0 6.83 1.18 1.18 1.17 1.18 3.05 1.18 6.82v1l-4.11 4.08H8.23c-2.37 0-3.55 0-4.45-.49a4 4 0 0 1-1.6-1.6c-.49-.9-.49-2.08-.49-4.45s0-3.55.49-4.45a4 4 0 0 1 1.6-1.6c.9-.49 2.08-.49 4.45-.49z'
+        fillRule='evenodd'
+        clipRule='evenodd'
         fill='currentColor'
       />
       <path
-        d='M11.7 18.21h-4c-2.83 0-4.25 0-5.13-.88s-.88-2.29-.88-5.12v-.42c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h10c1.5 0 2.26 0 2.85.26a3 3 0 0 1 1.5 1.5c.27.6.27 1.35.27 2.86'
+        d='M11.62 18.54H8.23c-2.37 0-3.55 0-4.45-.49a4 4 0 0 1-1.6-1.6c-.49-.9-.49-2.08-.49-4.45s0-3.55.49-4.45a4 4 0 0 1 1.6-1.6c.9-.49 2.08-.49 4.45-.49h10.12a4 4 0 0 1 3.96 4.06'
         stroke='currentColor'
       />
       <path
-        d='M6.96 12a.66.66 0 1 1-1.32 0 .66.66 0 0 1 1.32 0'
+        d='M7.29 12a.66.66 0 1 1-1.32 0 .66.66 0 0 1 1.32 0'
         fill='currentColor'
         stroke='currentColor'
       />
@@ -45,8 +49,6 @@ export const IconPasscodeX: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path d='m16.63 14.38 5.68 5.68' stroke='currentColor' />
-      <path d='m16.62 20.06 5.67-5.68' stroke='currentColor' />
     </svg>
   )
 }

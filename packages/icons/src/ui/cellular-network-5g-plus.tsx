@@ -28,16 +28,16 @@ export const IconCellularNetwork5gPlus: Icon = ({
       focusable={false}>
       <path d='M8.05 7.94a6.7 6.7 0 0 1 3.97-1.3c1.76 0 3.23.59 3.96 1.3' stroke='currentColor' />
       <path d='M5.6 4.97A10.5 10.5 0 0 1 12 2.72c2.85 0 4.83 1 6.4 2.25' stroke='currentColor' />
+      <path d='M18.12 16.85h4.37' stroke='currentColor' />
+      <path d='M20.3 19.04v-4.38' stroke='currentColor' />
       <path
-        d='M1.9 20.95h2a2.23 2.23 0 0 0 0-4.45H1.62q0 0 0 0v-1.93c0-.87 0-1.3.25-1.6l.08-.07c.29-.26.72-.26 1.6-.26h2.13'
+        d='M6.35 12.58H2.52a.5.5 0 0 0-.5.45l-.25 2.4c-.05.42.44.74.84.62 1.66-.5 4-.18 4 2.12 0 3.31-3.89 3.19-4.96 1.44'
         stroke='currentColor'
       />
       <path
-        d='M14.7 13.1a4.2 4.2 0 1 0-.16 7.58c.35-.16.52-.24.68-.49.16-.24.16-.5.16-1v-2.05h-2.24'
+        d='M15.16 13.03a4.12 4.12 0 1 0-.17 7.42c.34-.15.51-.23.67-.48s.16-.5.16-1v-.99c0-.47 0-.7-.15-.85s-.38-.15-.85-.15h-1.2'
         stroke='currentColor'
       />
-      <path d='M18 16.85h4.38' stroke='currentColor' />
-      <path d='M20.2 19.04v-4.38' stroke='currentColor' />
     </svg>
   )
 }

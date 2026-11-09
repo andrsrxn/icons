@@ -48,6 +48,7 @@ export const IconCurrencyExchange: Icon = ({
         d='m1.72 18.12.06-.61c.12-1.41.18-2.12.66-2.52s1.18-.33 2.6-.2l.6.05'
         stroke='currentColor'
       />
+      <ellipse opacity='.2' cx='12.23' cy='11.99' rx='10.19' ry='9.75' fill='currentColor' />
     </svg>
   )
 }

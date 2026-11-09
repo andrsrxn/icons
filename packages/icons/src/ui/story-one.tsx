@@ -26,21 +26,13 @@ export const IconStoryOne: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <ellipse
-        opacity='.2'
-        cx='12.07'
-        cy='11.98'
-        rx='10.29'
-        ry='10.25'
-        transform='rotate(90 12.07 11.98)'
-        fill='currentColor'
-      />
+      <ellipse opacity='.2' cx='12.07' cy='11.98' rx='10.25' ry='10.29' fill='currentColor' />
       <path d='M12 22.25a10.25 10.25 0 0 1 0-20.5' stroke='currentColor' />
-      <path d='M16.39 2.7a10.3 10.3 0 0 1 5.06 5.18' stroke='currentColor' />
-      <path d='M18.92 19.62q-.88.79-1.92 1.36' stroke='currentColor' />
-      <path d='M22.32 12c0 1.7-.42 3.3-1.15 4.72' stroke='currentColor' />
+      <path d='M21.45 7.88c-1-2.28-2.8-4.13-5.06-5.18' stroke='currentColor' />
+      <path d='M17 20.99q1.05-.59 1.92-1.37' stroke='currentColor' />
+      <path d='M21.17 16.72A10 10 0 0 0 22.32 12' stroke='currentColor' />
       <path
-        d='m8.67 11.04 3.05-2.78c.72-.65 1.08-.98 1.37-.85s.3.62.3 1.59v8.22'
+        d='m9.44 8.78 1.75-1.1c.67-.44 1.01-.65 1.27-.51s.26.54.26 1.35v8.74'
         stroke='currentColor'
       />
     </svg>

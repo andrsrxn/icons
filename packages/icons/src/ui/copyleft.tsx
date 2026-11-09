@@ -31,8 +31,8 @@ export const IconCopyleft: Icon = ({
         d='M22.31 12A10.31 10.31 0 1 1 1.7 12a10.31 10.31 0 0 1 20.62 0'
         fill='currentColor'
       />
-      <path d='M22.3 12A10.3 10.3 0 0 1 12 22.31 10.31 10.31 0 1 1 22.3 12' stroke='currentColor' />
-      <path d='M9.13 7.17q1.13-.58 2.48-.6a5.44 5.44 0 1 1-2.48 10.3' stroke='currentColor' />
+      <path d='M22.3 12a10.31 10.31 0 1 0-20.6 0 10.31 10.31 0 0 0 20.62 0' stroke='currentColor' />
+      <path d='M9.13 7.17q1.13-.59 2.48-.6a5.44 5.44 0 1 1-2.48 10.3' stroke='currentColor' />
     </svg>
   )
 }

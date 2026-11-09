@@ -26,17 +26,10 @@ export const IconInfo: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        opacity='.2'
-        cx='12'
-        cy='12'
-        r='10.18'
-        transform='rotate(90 12 12)'
-        fill='currentColor'
-      />
-      <circle cx='12' cy='12' r='10.18' transform='rotate(90 12 12)' stroke='currentColor' />
+      <circle opacity='.2' cx='12' cy='12' r='10.18' fill='currentColor' />
+      <circle cx='12' cy='12' r='10.18' stroke='currentColor' />
       <path d='M10.6 10.67h.4c.47 0 .7 0 .85.14s.15.39.15.86v5.76' stroke='currentColor' />
-      <path d='M10.26 17.43h3.48' stroke='currentColor' />
+      <path d='M10.1 17.43h3.8' stroke='currentColor' />
       <path
         d='M12.57 7.08a.57.57 0 1 1-1.14 0 .57.57 0 0 1 1.14 0'
         fill='currentColor'

@@ -26,23 +26,17 @@ export const IconFiveSquare: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+        d='M13.58 21.58c3.77 0 5.66 0 6.83-1.17s1.17-3.06 1.17-6.83v-3.16c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17h-3.16c-3.77 0-5.66 0-6.83 1.17s-1.17 3.06-1.17 6.83v3.16c0 3.77 0 5.66 1.17 6.83s3.06 1.17 6.83 1.17z'
         fill='currentColor'
       />
       <path
-        d='M9.85 16.86h2.36a2.6 2.6 0 0 0 0-5.21H9.52q0 0 0 0V9.13c0-.94 0-1.42.3-1.7.28-.3.76-.3 1.7-.3h2.76'
+        d='M2.42 13.58v-3.16c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17h3.16c3.77 0 5.66 0 6.83 1.17s1.17 3.06 1.17 6.83v3.16c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-3.16c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83'
         stroke='currentColor'
       />
-      <rect
-        width='19.17'
-        height='19.17'
-        rx='3'
-        transform='scale(1 -1)rotate(90 21.58 0)'
+      <path
+        d='M14.71 6.98H9.94a.5.5 0 0 0-.5.44l-.35 3.26c-.04.42.44.73.84.6 2.02-.7 5.09-.4 5.09 2.51 0 4.04-4.73 3.89-6.04 1.76'
         stroke='currentColor'
       />
     </svg>

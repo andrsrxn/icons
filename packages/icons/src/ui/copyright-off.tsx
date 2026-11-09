@@ -31,8 +31,12 @@ export const IconCopyrightOff: Icon = ({
         d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
         fill='currentColor'
       />
-      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
-      <path d='M14.87 7.17a5.44 5.44 0 1 0 0 9.7' stroke='currentColor' />
+      <path
+        d='M6.98 3A10.31 10.31 0 0 1 21 17.03m-1.82 2.36a10.3 10.3 0 0 1-14.55-.18 10.3 10.3 0 0 1-.03-14.4'
+        stroke='currentColor'
+      />
+      <path d='M14.87 16.87q-1.14.58-2.48.6a5.44 5.44 0 0 1-4.05-9.08' stroke='currentColor' />
+      <path d='M14.87 7.17a5.4 5.4 0 0 0-4.17-.3' stroke='currentColor' />
       <path d='m2.74 2.74 18.52 18.52' stroke='currentColor' />
     </svg>
   )

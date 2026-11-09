@@ -26,41 +26,26 @@ export const IconReloadControls: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        d='M20.62 7.9c-3.12-4.09-6.2-4.86-8.67-4.86a9.08 9.08 0 1 0 6.36 15.55'
-        stroke='currentColor'
-      />
-      <path
-        d='M21.4 5.19v.6c0 1.42 0 2.13-.43 2.57-.44.44-1.15.44-2.56.44h-.61'
-        stroke='currentColor'
-      />
-      <circle
-        opacity='.2'
-        cx='10.1'
-        cy='9.75'
-        r='1.63'
-        transform='rotate(90 10.1 9.75)'
-        fill='currentColor'
-      />
-      <circle
-        opacity='.2'
-        cx='1.63'
-        cy='1.63'
-        r='1.63'
-        transform='matrix(0 1 1 0 12 13.73)'
-        fill='currentColor'
-      />
       <path d='M15.26 9.75h-3.53' stroke='currentColor' />
       <path d='M7.15 15.35H12' stroke='currentColor' />
       <path d='M8.47 9.75H7.15' stroke='currentColor' />
-      <path d='M15.26 15.35h1.07' stroke='currentColor' />
-      <circle cx='10.1' cy='9.75' r='1.63' transform='rotate(90 10.1 9.75)' stroke='currentColor' />
-      <circle
-        cx='1.63'
-        cy='1.63'
-        r='1.63'
-        transform='matrix(0 1 1 0 12 13.73)'
+      <path d='M15.26 15.35h1.36' stroke='currentColor' />
+      <circle cx='10.1' cy='9.75' r='1.63' stroke='currentColor' />
+      <circle cx='13.63' cy='15.35' r='1.63' stroke='currentColor' />
+      <path
+        d='M21.25 5.3v1.22c0 1.14 0 1.7-.35 2.05-.35.36-.92.36-2.05.36h-1.22'
         stroke='currentColor'
+      />
+      <path
+        d='M19.02 17.8a9.17 9.17 0 1 1-7.1-14.98c5.06 0 7.4 4.04 8.45 5.47'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M21.16 12c0 5.01-4.1 9.08-9.16 9.08A9.1 9.1 0 0 1 2.84 12c0-5.01 4.1-9.08 9.16-9.08A9.1 9.1 0 0 1 21.16 12m-5.9 3.35a1.63 1.63 0 1 1-3.26 0 1.63 1.63 0 0 1 3.26 0m-5.16-3.97a1.63 1.63 0 1 1 0-3.25 1.63 1.63 0 0 1 0 3.25'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
       />
     </svg>
   )

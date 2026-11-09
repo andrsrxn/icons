@@ -26,19 +26,13 @@ export const IconBankNote: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='14'
-        height='20.62'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.31 19)'
+        d='M15.31 19c3.3 0 4.95 0 5.97-1.03 1.03-1.02 1.03-2.67 1.03-5.97s0-4.95-1.03-5.97C20.26 5 18.61 5 15.31 5H8.69c-3.3 0-4.95 0-5.97 1.03C1.69 7.05 1.69 8.7 1.69 12s0 4.95 1.03 5.97C3.74 19 5.39 19 8.69 19z'
         fill='currentColor'
       />
-      <rect
-        width='14'
-        height='20.62'
-        rx='3'
-        transform='matrix(0 -1 -1 0 22.31 19)'
+      <path
+        d='M1.69 12c0-3.3 0-4.95 1.03-5.97C3.74 5 5.39 5 8.69 5h6.62c3.3 0 4.95 0 5.97 1.03 1.03 1.02 1.03 2.67 1.03 5.97v0c0 3.3 0 4.95-1.03 5.97C20.26 19 18.61 19 15.31 19H8.69c-3.3 0-4.95 0-5.97-1.03C1.69 16.95 1.69 15.3 1.69 12'
         stroke='currentColor'
       />
       <path d='M7.25 12H5.04' stroke='currentColor' />

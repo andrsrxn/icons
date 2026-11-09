@@ -26,14 +26,9 @@ export const IconDevicePhoneOut: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='5.39'
-        y='22.25'
-        width='20.5'
-        height='13.22'
-        rx='3'
-        transform='rotate(-90 5.39 22.25)'
+        d='M11.39 22.25c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12v-8.5c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h1.22c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12v8.5c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88z'
         fill='currentColor'
       />
       <path

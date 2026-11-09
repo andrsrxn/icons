@@ -37,22 +37,22 @@ export const IconMagicWand: Icon = ({
           stroke='currentColor'
         />
         <path d='m12.9 6.67 4.28 4.28' stroke='currentColor' />
-        <path d='M15.92 19.13c1.54 0 3.2-1.66 3.2-3.2' stroke='currentColor' />
-        <path d='M22.3 19.13c-1.53 0-3.19-1.66-3.19-3.2' stroke='currentColor' />
-        <path d='M15.92 19.13c1.53 0 3.2 1.7 3.2 3.2' stroke='currentColor' />
-        <path d='M22.3 19.13c-1.5 0-3.19 1.67-3.19 3.2' stroke='currentColor' />
-        <path d='M1.6 4.99c1.54 0 3.2-1.67 3.2-3.2' stroke='currentColor' />
-        <path d='M7.99 4.99c-1.54 0-3.2-1.67-3.2-3.2' stroke='currentColor' />
-        <path d='M1.6 4.99c1.53 0 3.2 1.68 3.2 3.19' stroke='currentColor' />
-        <path d='M7.99 4.99c-1.52 0-3.2 1.66-3.2 3.19' stroke='currentColor' />
+        <path d='M15.66 19c1.6 0 3.33-1.73 3.33-3.33' stroke='currentColor' />
+        <path d='M22.3 19c-1.6 0-3.32-1.73-3.32-3.33' stroke='currentColor' />
+        <path d='M15.66 19c1.6 0 3.33 1.77 3.33 3.33' stroke='currentColor' />
+        <path d='M22.3 19c-1.56 0-3.32 1.74-3.32 3.33' stroke='currentColor' />
+        <path d='M1.6 5.12c1.6 0 3.33-1.74 3.33-3.33' stroke='currentColor' />
+        <path d='M8.26 5.12c-1.6 0-3.34-1.74-3.34-3.33' stroke='currentColor' />
+        <path d='M1.6 5.12c1.6 0 3.33 1.75 3.33 3.33' stroke='currentColor' />
+        <path d='M8.26 5.12c-1.59 0-3.34 1.73-3.34 3.33' stroke='currentColor' />
         <path
           opacity='.2'
-          d='m5.68 4.04-.94-1.77-.94 1.77-1.81 1 1.8.93.95 2.07.94-2.07 1.97-1.02z'
+          d='m5.85 4.13-.97-1.84-1 1.84L2 5.17l1.89.97.99 2.16.97-2.16L7.9 5.08z'
           fill='currentColor'
         />
         <path
           opacity='.2'
-          d='m20.04 17.73-.93-1.77-.95 1.77-1.81 1 1.8.93.96 2.07.93-2.07 1.97-1.02z'
+          d='m19.95 17.54-.97-1.84-1 1.84-1.88 1.04 1.89.97.99 2.16.97-2.16L22 18.5z'
           fill='currentColor'
         />
       </g>

@@ -26,16 +26,23 @@ export const IconBatteryFull: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='1.72' y='6' width='17.26' height='12' rx='3' fill='currentColor' />
-      <rect x='1.72' y='6' width='17.26' height='12' rx='3' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M1.72 12c0-2.34 0-3.5.54-4.36a3.5 3.5 0 0 1 1.1-1.1C4.21 6 5.38 6 7.72 6h5.26c2.34 0 3.5 0 4.36.54q.68.42 1.1 1.1c.54.85.54 2.02.54 4.36s0 3.5-.54 4.36a3.5 3.5 0 0 1-1.1 1.1c-.85.54-2.02.54-4.36.54H7.72c-2.34 0-3.5 0-4.36-.54a3.5 3.5 0 0 1-1.1-1.1c-.54-.85-.54-2.02-.54-4.36'
+        fill='currentColor'
+      />
+      <path
+        d='M7.72 18h5.26c2.34 0 3.5 0 4.36-.54a3.5 3.5 0 0 0 1.1-1.1c.54-.85.54-2.02.54-4.36v0c0-2.34 0-3.5-.54-4.36a3.5 3.5 0 0 0-1.1-1.1C16.5 6 15.32 6 12.98 6H7.72c-2.34 0-3.5 0-4.36.54a3.5 3.5 0 0 0-1.1 1.1c-.54.85-.54 2.02-.54 4.36v0c0 2.34 0 3.5.54 4.36q.42.68 1.1 1.1c.85.54 2.02.54 4.36.54'
+        stroke='currentColor'
+      />
       <path
         d='m18.98 8.44.95.36c1.02.39 1.53.58 1.86.96a2 2 0 0 1 .25.36c.24.45.24 1 .24 2.08 0 1.11 0 1.67-.25 2.11a2 2 0 0 1-.25.36c-.34.39-.86.58-1.9.96l-.9.32'
         stroke='currentColor'
       />
-      <path d='M5.36 9.16v5.68' stroke='currentColor' />
-      <path d='M8.69 9.16v5.68' stroke='currentColor' />
-      <path d='M15.35 9.16v5.68' stroke='currentColor' />
-      <path d='M12.02 9.16v5.68' stroke='currentColor' />
+      <path d='M5.36 9.54v4.92' stroke='currentColor' />
+      <path d='M8.69 9.54v4.92' stroke='currentColor' />
+      <path d='M15.35 9.54v4.92' stroke='currentColor' />
+      <path d='M12.02 9.54v4.92' stroke='currentColor' />
     </svg>
   )
 }

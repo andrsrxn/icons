@@ -27,11 +27,6 @@ export const IconTextTracking: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m7.75 15.44 2.37-8.31c.79-2.74 1.18-4.12 1.93-4.12.76 0 1.15 1.38 1.92 4.13l2.34 8.3'
-        stroke='currentColor'
-      />
-      <path d='M14.75 10.37H9.31' stroke='currentColor' />
-      <path
         d='M3.79 21.51c-1.3-1.28-1.94-1.93-1.96-2.72v-.11c.02-.8.67-1.44 1.96-2.73'
         stroke='currentColor'
       />
@@ -40,6 +35,11 @@ export const IconTextTracking: Icon = ({
         stroke='currentColor'
       />
       <path d='M22.04 18.73H1.96' stroke='currentColor' />
+      <path
+        d='M7.7 15.03 9.73 8.1h0c1-3.4 1.5-5.11 2.44-5.1s1.4 1.73 2.3 5.16l1.83 6.87'
+        stroke='currentColor'
+      />
+      <path d='M9.3 10.4h5.56' stroke='currentColor' />
     </svg>
   )
 }
