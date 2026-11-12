@@ -28,16 +28,16 @@ export const IconChartDonut: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
+        d='M22.25 12A10.25 10.25 0 1 1 1.9 10.22L7.64 12a4.36 4.36 0 1 0 7.59-2.93l4.94-3.25A10.2 10.2 0 0 1 22.25 12'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M22.25 12A10.25 10.25 0 1 1 1.9 10.22L7.64 12a4.36 4.36 0 1 0 7.59-2.93l4.94-3.25A10.2 10.2 0 0 1 22.25 12'
         fill='currentColor'
       />
       <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
       <circle cx='12' cy='12' r='4.36' stroke='currentColor' />
-      <path d='M2.13 10.37 7.63 12' stroke='currentColor' />
-      <path d='m13.21 16.36 3.15 4.69' stroke='currentColor' />
-      <path d='m15.25 8.83 4.83-2.93' stroke='currentColor' />
+      <path d='m2.13 10.37 5.5.99' stroke='currentColor' />
+      <path d='m13.21 16.36 1.35 5.52' stroke='currentColor' />
+      <path d='m15.76 9.2 4.32-3.3' stroke='currentColor' />
     </svg>
   )
 }

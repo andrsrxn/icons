@@ -37,7 +37,7 @@ export const IconMoneyMinus: Icon = ({
       <path d='M17.52 5.13c0 2.76 2.11 5 4.72 5' stroke='currentColor' />
       <path d='M6.48 19c0-2.76-2.11-5-4.72-5' stroke='currentColor' />
       <circle cx='12' cy='12' r='2.72' stroke='currentColor' />
-      <path d='M17.23 16.5h5.01' stroke='currentColor' />
+      <path d='M17.17 16.66h5.42' stroke='currentColor' />
       <path
         d='M13.55 19h-4.8c-3.3 0-4.94 0-5.97-1.03h0C1.76 16.95 1.76 15.3 1.76 12s0-4.95 1.02-5.97h0C3.81 5 5.46 5 8.76 5h6.48c3.3 0 4.95 0 5.98 1.03 1.02 1.02 1.02 2.67 1.02 5.97v.16'
         stroke='currentColor'

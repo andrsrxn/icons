@@ -26,14 +26,18 @@ export const IconLightbulbSparkle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='8.81' y='17.05' width='6.11' height='5.25' rx='1' fill='currentColor' />
       <path
         opacity='.2'
-        d='m17.88 3.67-.92-1.73-.93 1.73-1.77.98 1.77.92.93 2.02.92-2.02 1.92-1z'
+        d='M8.81 19.05c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h2.1c.95 0 1.42 0 1.71.3.3.29.3.76.3 1.7v1.26c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-2.1c-.95 0-1.42 0-1.72-.3-.29-.29-.29-.76-.29-1.7z'
         fill='currentColor'
       />
       <path
-        d='M8.39 17.06a2.4 2.4 0 0 0-1.02-1.84c-1.62-1.26-2.44-3.3-2.44-5.6 0-3.6 2.75-6.57 6.27-6.9'
+        opacity='.2'
+        d='M17.95 3.67 16.91 1.7l-1.06 1.97-2.01 1.12 2.01 1.03 1.06 2.3 1.04-2.3 2.2-1.13z'
+        fill='currentColor'
+      />
+      <path
+        d='M11.2 2.72a6.94 6.94 0 0 0-6.27 6.9c0 2.3.82 4.34 2.44 5.6a2.4 2.4 0 0 1 1.02 1.84'
         stroke='currentColor'
       />
       <path
@@ -41,11 +45,11 @@ export const IconLightbulbSparkle: Icon = ({
         stroke='currentColor'
       />
       <path d='M15.33 17.06H8.65' stroke='currentColor' />
-      <path d='M13.84 4.82c1.56 0 3.24-1.7 3.24-3.25' stroke='currentColor' />
-      <path d='M20.33 4.82c-1.56 0-3.25-1.69-3.25-3.25' stroke='currentColor' />
-      <path d='M13.84 4.82c1.55 0 3.24 1.72 3.24 3.25' stroke='currentColor' />
-      <path d='M20.33 4.82c-1.54 0-3.25 1.7-3.25 3.25' stroke='currentColor' />
-      <path d='M15.33 17.05c0-.73.44-1.38 1.04-1.82a5.8 5.8 0 0 0 2.4-4.36' stroke='currentColor' />
+      <path d='M17.05 1.28c0 1.77-1.91 3.7-3.7 3.7' stroke='currentColor' />
+      <path d='M17.05 1.28c0 1.78 1.92 3.7 3.7 3.7' stroke='currentColor' />
+      <path d='M17.05 8.67c0-1.74-1.92-3.7-3.7-3.7' stroke='currentColor' />
+      <path d='M17.05 8.67c0-1.77 1.94-3.7 3.7-3.7' stroke='currentColor' />
+      <path d='M18.77 10.87a5.8 5.8 0 0 1-2.4 4.36 2.3 2.3 0 0 0-1.04 1.82' stroke='currentColor' />
       <path d='M8.4 9.46c0-.62.13-1.11.41-1.66.33-.63.75-.97 1.22-1.23' stroke='currentColor' />
     </svg>
   )

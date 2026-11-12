@@ -26,27 +26,22 @@ export const IconBorderRight: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='21.24'
-        y='21.24'
-        width='18.48'
-        height='18.48'
-        rx='3'
-        transform='rotate(-180 21.24 21.24)'
+        d='M21.2 15.28c0 2.82 0 4.24-.88 5.12s-2.3.88-5.12.88H8.72c-2.83 0-4.25 0-5.12-.88s-.88-2.3-.88-5.12V8.79c0-2.82 0-4.24.88-5.12.87-.88 2.29-.88 5.12-.88h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12z'
         fill='currentColor'
       />
-      <path d='M12 15.37V8.63' stroke='currentColor' />
-      <path d='M15.37 12H8.63' stroke='currentColor' />
+      <path d='M11.96 15.4V8.67' stroke='currentColor' />
+      <path d='M15.32 12.04H8.6' stroke='currentColor' />
       <path
-        d='M18.68 2.76a2.57 2.57 0 0 1 2.56 2.56v13.36a2.57 2.57 0 0 1-2.56 2.56'
+        d='M18.63 21.27a2.56 2.56 0 0 0 2.57-2.56V5.36a2.56 2.56 0 0 0-2.57-2.57'
         stroke='currentColor'
       />
-      <path d='M5.39 2.7h-.06a2.6 2.6 0 0 0-2.61 2.62' stroke='currentColor' />
-      <path d='M5.25 21.3h-.06a2.47 2.47 0 0 1-2.47-2.48' stroke='currentColor' />
-      <path d='M2.78 10.85v2.25' stroke='currentColor' />
-      <path d='M10.9 21.2h2.24' stroke='currentColor' />
-      <path d='M10.9 2.72h2.24' stroke='currentColor' />
+      <path d='M5.35 2.74h-.07a2.6 2.6 0 0 0-2.6 2.61' stroke='currentColor' />
+      <path d='M5.2 21.33h-.05a2.47 2.47 0 0 1-2.48-2.47' stroke='currentColor' />
+      <path d='M2.73 10.88v2.25' stroke='currentColor' />
+      <path d='M10.85 21.23h2.24' stroke='currentColor' />
+      <path d='M10.85 2.75h2.24' stroke='currentColor' />
     </svg>
   )
 }

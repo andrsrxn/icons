@@ -36,10 +36,10 @@ export const IconUserPlus: Icon = ({
         d='M18.38 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c4.58 0 8.3 3.79 8.3 8.46'
         fill='currentColor'
       />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='M15.47 7.99a5.4 5.4 0 1 0-10.79 0 5.4 5.4 0 0 0 10.79 0' stroke='currentColor' />
       <path d='M15.02 18.7h7.16' stroke='currentColor' />
       <path d='M18.6 22.28v-7.16' stroke='currentColor' />
-      <path d='M1.78 21.68a8.3 8.3 0 0 1 12.32-7.26' stroke='currentColor' />
+      <path d='M1.78 21.68a8.3 8.3 0 0 1 12.87-6.9' stroke='currentColor' />
     </svg>
   )
 }

@@ -26,12 +26,9 @@ export const IconMusicNotes: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        width='3.97'
-        height='11.92'
-        rx='1'
-        transform='scale(-1 1)rotate(-72.37 -6.06 17.17)'
+        d='M18.93 6.36c.85-.32 1.28-.48 1.46-.84.18-.37.03-.8-.26-1.67l-.07-.2c-.3-.93-.45-1.39-.84-1.57s-.83-.02-1.74.31L9.83 5.2c-.66.24-1 .36-1.18.63s-.16.63-.13 1.33v.26c.06 1.25.09 1.87.51 2.16.43.28 1.01.06 2.19-.37z'
         fill='currentColor'
       />
       <path
@@ -44,16 +41,10 @@ export const IconMusicNotes: Icon = ({
         d='M20.48 17.28a2.73 2.73 0 1 1-5.46 0 2.73 2.73 0 0 1 5.46 0'
         fill='currentColor'
       />
+      <path d='M8.46 19.07a2.73 2.73 0 1 0-5.46 0 2.73 2.73 0 0 0 5.46 0' stroke='currentColor' />
+      <path d='M20.48 17.28a2.73 2.73 0 1 0-5.46 0 2.73 2.73 0 0 0 5.46 0' stroke='currentColor' />
       <path
-        d='M8.46 19.07a2.7 2.7 0 0 1-2.73 2.73 2.73 2.73 0 1 1 2.73-2.73'
-        stroke='currentColor'
-      />
-      <path
-        d='M20.48 17.28a2.7 2.7 0 0 1-2.73 2.73 2.73 2.73 0 1 1 2.73-2.73'
-        stroke='currentColor'
-      />
-      <path
-        d='M20.48 17.4V6.89c0-2.57 0-3.86-.85-4.45-.84-.6-2.05-.18-4.47.67l-2.68.94c-1.94.68-2.91 1.01-3.47 1.8-.55.77-.55 1.8-.55 3.86v9.18'
+        d='M8.46 18.89V9.7c0-2.06 0-3.09.55-3.87.56-.77 1.53-1.11 3.47-1.8l2.68-.93c2.42-.85 3.63-1.27 4.47-.67.85.6.85 1.88.85 4.45v10.5'
         stroke='currentColor'
       />
       <path d='m8.46 10.17 11.66-4.3' stroke='currentColor' />

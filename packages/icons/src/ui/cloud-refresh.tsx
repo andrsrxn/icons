@@ -28,7 +28,7 @@ export const IconCloudRefresh: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='m1.48 12.97 3.85 3.79h13.63l2.95-2.14v-4.28L18.61 8l-1.73 1.2-.92-3.5L12 3.44 8.7 4.85 7.03 8 3.2 9.2z'
+        d='m1.48 12.97 3.12 3.79h15.07l2.24-2.14v-4.28L18.61 8l-1.73 1.2-.92-3.5L12 3.44 8.7 4.85 7.03 8 3.2 9.2z'
         fill='currentColor'
       />
       <path
@@ -43,7 +43,7 @@ export const IconCloudRefresh: Icon = ({
         d='M16.92 8.44a3.6 3.6 0 0 1 3.37.12 4.3 4.3 0 0 1 1.57 5.84c-.7 1.21-1.37 2-2.36 2.12'
         stroke='currentColor'
       />
-      <path d='M15.33 15.3c-.86-1.21-1.89-2.04-3.35-2.04q-2.18-.01-3.2 1.9' stroke='currentColor' />
+      <path d='M15.33 15.3c-.86-1.21-1.89-2.04-3.35-2.04q-2.19-.01-3.2 1.9' stroke='currentColor' />
       <path d='M8.97 18.35c.85 1.2 1.87 2.05 3.33 2.05q2.18 0 3.2-1.9' stroke='currentColor' />
       <path
         d='m15.8 13.1-.03.6c-.05.94-.08 1.4-.4 1.68-.3.28-.77.25-1.71.2l-.6-.04'

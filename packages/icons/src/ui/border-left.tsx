@@ -26,26 +26,22 @@ export const IconBorderLeft: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='1.41'
-        y='2.69'
-        width='18.48'
-        height='18.48'
-        rx='3'
+        d='M2.81 8.72c0-2.82 0-4.24.88-5.12s2.3-.88 5.12-.88h6.48c2.83 0 4.25 0 5.13.88s.87 2.3.87 5.12v6.49c0 2.82 0 4.24-.87 5.12-.88.88-2.3.88-5.13.88H8.81c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
         fill='currentColor'
       />
-      <path d='M10.65 8.57v6.73' stroke='currentColor' />
-      <path d='M7.29 11.93h6.73' stroke='currentColor' />
+      <path d='M12.06 8.6v6.73' stroke='currentColor' />
+      <path d='M8.69 11.96h6.73' stroke='currentColor' />
       <path
-        d='M3.98 21.17a2.57 2.57 0 0 1-2.57-2.56V5.26a2.57 2.57 0 0 1 2.57-2.57'
+        d='M5.38 2.73A2.57 2.57 0 0 0 2.8 5.29v13.35a2.57 2.57 0 0 0 2.57 2.57'
         stroke='currentColor'
       />
-      <path d='M17.26 21.23h.06a2.6 2.6 0 0 0 2.61-2.62' stroke='currentColor' />
-      <path d='M17.4 2.64h.06c1.37 0 2.47 1.1 2.47 2.47' stroke='currentColor' />
-      <path d='M19.87 13.09v-2.25' stroke='currentColor' />
-      <path d='M11.76 2.74H9.52' stroke='currentColor' />
-      <path d='M11.76 21.22H9.52' stroke='currentColor' />
+      <path d='M18.67 21.26h.06a2.6 2.6 0 0 0 2.6-2.61' stroke='currentColor' />
+      <path d='M18.8 2.67h.06c1.37 0 2.48 1.1 2.48 2.47' stroke='currentColor' />
+      <path d='M21.28 13.12v-2.25' stroke='currentColor' />
+      <path d='M13.16 2.77h-2.24' stroke='currentColor' />
+      <path d='M13.16 21.25h-2.24' stroke='currentColor' />
     </svg>
   )
 }

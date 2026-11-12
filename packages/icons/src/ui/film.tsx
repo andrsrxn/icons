@@ -41,8 +41,8 @@ export const IconFilm: Icon = ({
         stroke='currentColor'
       />
       <path d='M20.85 12H3.15' stroke='currentColor' />
-      <path d='M8.04 2.77v17.7' stroke='currentColor' />
-      <path d='M15.89 2.77v17.7' stroke='currentColor' />
+      <path d='M8.04 3.15v17.7' stroke='currentColor' />
+      <path d='M15.89 3.15v17.7' stroke='currentColor' />
       <path d='M7.56 7.39H2.84' stroke='currentColor' />
       <path d='M7.74 16.61H3.22' stroke='currentColor' />
       <path d='M21.16 7.39h-4.72' stroke='currentColor' />

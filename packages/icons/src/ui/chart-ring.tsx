@@ -26,17 +26,18 @@ export const IconChartRing: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
+      <path
         opacity='.2'
-        cx='11.96'
-        cy='11.96'
-        r='10.22'
-        transform='rotate(90 11.96 11.96)'
+        d='M22.25 12A10.25 10.25 0 1 1 1.9 10.22L7.64 12a4.36 4.36 0 1 0 7.59-2.93l4.94-3.25A10.2 10.2 0 0 1 22.25 12'
+        fillRule='evenodd'
+        clipRule='evenodd'
         fill='currentColor'
       />
-      <path d='M12 1.74a10.26 10.26 0 1 1-8.04 3.89' stroke='currentColor' />
-      <path d='M5.3 12A6.7 6.7 0 1 0 12 5.3' stroke='currentColor' />
-      <path d='M12 15.14a3.14 3.14 0 1 0 0-6.28' stroke='currentColor' />
+      <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
+      <circle cx='12' cy='12' r='4.36' stroke='currentColor' />
+      <path d='M2.13 10.37 7.63 12' stroke='currentColor' />
+      <path d='m13.21 16.36 1.35 5.52' stroke='currentColor' />
+      <path d='m15.25 8.83 4.83-2.93' stroke='currentColor' />
     </svg>
   )
 }

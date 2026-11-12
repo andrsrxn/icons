@@ -28,17 +28,17 @@ export const IconUserX: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M15.47 7.99a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
+        d='M15.47 7.93a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M17.44 21.84H1.77a8.4 8.4 0 0 1 8.3-8.46c2.9 0 5.44 1.5 6.93 3.8 2.31 1.26 2.22 2.26.44 4.66'
+        d='M17.44 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c2.89 0 5.43 1.5 6.92 3.8 2.31 1.26 2.22 2.26.44 4.66'
         fill='currentColor'
       />
-      <path d='m16.71 16.65 5.29 5.3' stroke='currentColor' />
-      <path d='M16.71 21.94 22 16.65' stroke='currentColor' />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='m16 16.06 5.79 5.78' stroke='currentColor' />
+      <path d='m16 21.84 5.78-5.78' stroke='currentColor' />
+      <path d='M15.47 7.93a5.4 5.4 0 1 0-10.79 0 5.4 5.4 0 0 0 10.79 0' stroke='currentColor' />
       <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>
   )

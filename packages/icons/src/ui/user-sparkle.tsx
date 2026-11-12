@@ -36,12 +36,12 @@ export const IconUserSparkle: Icon = ({
         d='M18.38 21.84H1.78a8.4 8.4 0 0 1 8.3-8.46c1.96 0 5.37 1.3 7.59 3.5l-2.39 1.75s1.8.38 3.1 3.21'
         fill='currentColor'
       />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <path d='M15.47 7.99a5.4 5.4 0 1 0-10.79 0 5.4 5.4 0 0 0 10.79 0' stroke='currentColor' />
       <path d='M1.78 21.68a8.3 8.3 0 0 1 8.3-8.3 10 10 0 0 1 4.08 1.11' stroke='currentColor' />
-      <path d='M14.38 18.5c1.95 0 4.05-2.12 4.05-4.06' stroke='currentColor' />
-      <path d='M22.48 18.5c-1.94 0-4.05-2.11-4.05-4.06' stroke='currentColor' />
-      <path d='M14.38 18.5c1.94 0 4.05 2.14 4.05 4.05' stroke='currentColor' />
-      <path d='M22.48 18.5c-1.92 0-4.05 2.11-4.05 4.05' stroke='currentColor' />
+      <path d='M18.32 14.22c0 2-2.15 4.17-4.16 4.17' stroke='currentColor' />
+      <path d='M18.32 14.22c0 2 2.17 4.17 4.16 4.17' stroke='currentColor' />
+      <path d='M18.32 22.55c0-1.96-2.16-4.16-4.16-4.16' stroke='currentColor' />
+      <path d='M18.32 22.55c0-1.99 2.2-4.16 4.16-4.16' stroke='currentColor' />
     </svg>
   )
 }

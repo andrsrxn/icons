@@ -26,19 +26,19 @@ export const IconHistory: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle opacity='.2' cx='11.67' cy='11.59' r='9.55' fill='currentColor' />
       <path
-        d='m15.47 15.8-2.4-1.6c-.88-.58-1.31-.87-1.55-1.32-.24-.44-.24-.96-.24-2v-3.5'
+        d='M11.28 7.38v3.5c0 1.04 0 1.56.24 2 .24.45.67.74 1.54 1.32l2.41 1.6'
         stroke='currentColor'
       />
       <path
-        d='M3.67 6.13a11.1 11.1 0 0 1 9.56-3.66 9.59 9.59 0 1 1-9.18 15.2'
+        d='M1.81 4.05v1.53c0 1.43 0 2.15.45 2.6.44.44 1.16.44 2.59.44h1.54'
         stroke='currentColor'
       />
       <path
-        d='M6.85 7.22H5.71c-1.41 0-2.12 0-2.56-.43-.44-.44-.44-1.15-.44-2.57V3.08'
+        d='M4.27 18.39A10.1 10.1 0 1 0 12.1 1.9c-5.58 0-8.15 4.44-9.3 6.02'
         stroke='currentColor'
       />
+      <circle opacity='.2' cx='12' cy='12' r='10.19' fill='currentColor' />
     </svg>
   )
 }

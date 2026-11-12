@@ -28,10 +28,10 @@ export const IconStrokeEndPointRound: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M18.97 16.96c.65 0 .98 0 1.24-.17.25-.17.37-.48.61-1.1L22 12.75c.15-.37.22-.55.22-.74 0-.2-.07-.37-.22-.74L20.82 8.3c-.24-.61-.36-.92-.61-1.09-.26-.17-.59-.17-1.24-.17H1.7v9.92z'
+        d='M18.95 16.96c.66 0 .99 0 1.24-.17s.38-.48.62-1.09L22 12.74c.14-.36.22-.55.22-.74 0-.2-.08-.38-.22-.74l-1.2-2.97c-.24-.6-.37-.9-.62-1.08-.25-.17-.58-.17-1.24-.17H1.52v9.92z'
         fill='currentColor'
       />
-      <path d='M1.7 16.96h15.64a4.96 4.96 0 0 0 0-9.92H1.7' stroke='currentColor' />
+      <path d='M1.7 16.96h15.64a4.96 4.96 0 1 0 0-9.92H1.7' stroke='currentColor' />
       <path d='M16.17 12h2.5' stroke='currentColor' />
       <path d='M10.07 12h2.5' stroke='currentColor' />
       <path d='M3.7 12h2.5' stroke='currentColor' />

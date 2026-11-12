@@ -28,7 +28,7 @@ export const IconStrokeEndPointNone: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M20.3 17.04c.94 0 1.41 0 1.7-.29.3-.3.3-.76.3-1.7v-6.1c0-.94 0-1.4-.3-1.7-.29-.3-.76-.3-1.7-.3H1.7v10.1z'
+        d='M20.3 17.04c.94 0 1.41 0 1.7-.29.3-.3.3-.76.3-1.7v-6.1c0-.94 0-1.4-.3-1.7-.29-.3-.76-.3-1.7-.3H1.5v10.1z'
         fill='currentColor'
       />
       <path

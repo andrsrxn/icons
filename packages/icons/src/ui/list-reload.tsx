@@ -37,6 +37,13 @@ export const IconListReload: Icon = ({
         d='M22.4 10.67v.03c0 1.42 0 2.13-.44 2.57s-1.15.44-2.57.44h-.04'
         stroke='currentColor'
       />
+      <path
+        opacity='.2'
+        d='M18.03 10.98a4.05 4.05 0 1 0 0 8.09 4.05 4.05 0 0 0 0-8.1'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
     </svg>
   )
 }

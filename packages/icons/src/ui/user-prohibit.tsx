@@ -26,26 +26,20 @@ export const IconUserProhibit: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <circle
-        cx='18.99'
-        cy='18.68'
-        r='3.42'
-        transform='rotate(90 19 18.68)'
-        stroke='currentColor'
-      />
-      <path d='m16.62 16.3 4.75 4.76' stroke='currentColor' />
+      <circle cx='18.5' cy='18.5' r='3.6' stroke='currentColor' />
+      <path d='m16 16 5 5' stroke='currentColor' />
       <path
         opacity='.2'
-        d='M15.47 7.99a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
+        d='M15.47 7.93a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='M16.47 21.84H1.77a8.4 8.4 0 0 1 8.3-8.46c2.9 0 5.44 1.5 6.93 3.8-2.05-.27-1 3.87-.53 4.66'
+        d='M16.47 21.84H1.77a8.4 8.4 0 0 1 8.3-8.46c2.36 0 4.48 1 6 2.6l-1.48 2.24s.79 2.95 1.88 3.62'
         fill='currentColor'
       />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
-      <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
+      <path d='M15.47 7.93a5.4 5.4 0 1 0-10.79 0 5.4 5.4 0 0 0 10.79 0' stroke='currentColor' />
+      <path d='M1.78 21.62a8.3 8.3 0 0 1 8.3-8.3c1.05 0 2.3.35 3.23.71' stroke='currentColor' />
     </svg>
   )
 }

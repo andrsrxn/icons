@@ -41,13 +41,13 @@ export const IconFilmX: Icon = ({
         stroke='currentColor'
       />
       <path d='M21.12 12H3.15' stroke='currentColor' />
-      <path d='M8.04 2.77v17.7' stroke='currentColor' />
-      <path d='M15.89 2.77V12' stroke='currentColor' />
       <path d='M7.7 16.61H3.15' stroke='currentColor' />
       <path d='m15.89 15.43 6.1 6.1' stroke='currentColor' />
       <path d='m15.89 21.53 6.1-6.1' stroke='currentColor' />
       <path d='M7.7 7.39H2.96' stroke='currentColor' />
       <path d='M20.9 7.39h-4.75' stroke='currentColor' />
+      <path d='M8.04 2.97v18.06' stroke='currentColor' />
+      <path d='M15.89 2.97V12' stroke='currentColor' />
     </svg>
   )
 }

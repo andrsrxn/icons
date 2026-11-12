@@ -28,13 +28,16 @@ export const IconHourglass: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='m6.55 15.86-1.37 6h13.5l-1.15-6L15.21 13l-3.4-1.68L8.86 13z'
+        d='m5.63 18.36-.45 3.5h13.5l-.52-3.5-2.62-3.59-3.57-3.14-3.61 3.14z'
         fill='currentColor'
       />
-      <path d='M5.22 21.69c0-5.46 3.04-9.88 6.78-9.88s6.78 4.42 6.78 9.88' stroke='currentColor' />
-      <path d='M5.22 2.3c0 5.25 3.04 9.5 6.78 9.5s6.78-4.25 6.78-9.5' stroke='currentColor' />
-      <path d='M20.04 21.69H3.96' stroke='currentColor' />
-      <path d='M20.04 2.3H3.96' stroke='currentColor' />
+      <path
+        d='M18.78 21.69c0-5.46-6.78-9.88-6.78-9.88s-6.78 4.42-6.78 9.88'
+        stroke='currentColor'
+      />
+      <path d='M18.78 2.3c0 5.25-6.78 9.5-6.78 9.5S5.22 7.56 5.22 2.3' stroke='currentColor' />
+      <path d='M20.04 21.69H3.95' stroke='currentColor' />
+      <path d='M20.04 2.3H3.95' stroke='currentColor' />
     </svg>
   )
 }

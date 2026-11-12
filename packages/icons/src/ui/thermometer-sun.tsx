@@ -28,7 +28,7 @@ export const IconThermometerSun: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M14.93 14.33V3.98a2.01 2.01 0 1 1 4.02 0v10.35s1.75 1.91 1.75 3.55a3.76 3.76 0 1 1-7.52 0c0-1.64 1.75-3.55 1.75-3.55'
+        d='M14.93 14.33V3.98a2.01 2.01 0 0 1 4.02 0v10.35s1.75 1.91 1.75 3.55a3.76 3.76 0 0 1-7.52 0c0-1.64 1.75-3.55 1.75-3.55'
         fill='currentColor'
       />
       <path d='M14.75 14.7a4.06 4.06 0 1 0 4.37 0' stroke='currentColor' />
@@ -41,10 +41,10 @@ export const IconThermometerSun: Icon = ({
         fill='currentColor'
         stroke='currentColor'
       />
-      <path
-        d='m10.57 5.37-.3-1.94m-3.8 4.56L4.9 6.84m.38 6.13-1.95.3m3.45 5.67 1.16-1.6'
-        stroke='currentColor'
-      />
+      <path d='m6.77 18.94 1.16-1.6' stroke='currentColor' />
+      <path d='m5.27 12.97-1.95.3' stroke='currentColor' />
+      <path d='M6.47 8 4.9 6.83' stroke='currentColor' />
+      <path d='m10.57 5.37-.3-1.94' stroke='currentColor' />
       <path d='M14.82 10.2a3.42 3.42 0 1 0-.26 4.15' stroke='currentColor' />
     </svg>
   )

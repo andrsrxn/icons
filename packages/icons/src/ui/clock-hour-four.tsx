@@ -28,8 +28,10 @@ export const IconClockHourFour: Icon = ({
       focusable={false}>
       <circle opacity='.2' cx='12' cy='12' r='10.25' fill='currentColor' />
       <circle cx='12' cy='12' r='10.25' stroke='currentColor' />
-      <path d='M12 5.37V12' stroke='currentColor' />
-      <path d='M16.45 14.8 12 12' stroke='currentColor' />
+      <path
+        d='M12 5.37V9.8c0 1.08 0 1.62.25 2.07s.7.74 1.62 1.32l2.58 1.62'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

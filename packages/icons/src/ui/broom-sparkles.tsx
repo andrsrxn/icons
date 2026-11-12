@@ -28,22 +28,22 @@ export const IconBroomSparkles: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='m5.68 3.8-.86-1.64-.88 1.63-1.67.93 1.67.86.88 1.9.86-1.9 1.82-.94z'
+        d='m6.02 3.97-.94-1.78-.95 1.78-1.82 1 1.82.94L5.08 8l.94-2.08L8 4.88z'
         fill='currentColor'
       />
       <path
         opacity='.2'
-        d='m19.94 18.06-.9-1.7-.91 1.7-1.74.96 1.74.9.9 1.98.9-1.99 1.9-.98z'
+        d='m19.78 17.78-.96-1.8-.97 1.8-1.84 1.02 1.84.96.97 2.1.96-2.1 2.01-1.05z'
         fill='currentColor'
       />
-      <path d='M1.88 4.88c1.47 0 3.06-1.6 3.06-3.07' stroke='currentColor' />
-      <path d='M15.98 19.18c1.53 0 3.18-1.66 3.18-3.18' stroke='currentColor' />
-      <path d='M8 4.88c-1.47 0-3.06-1.6-3.06-3.07' stroke='currentColor' />
-      <path d='M22.34 19.18c-1.52 0-3.18-1.65-3.18-3.18' stroke='currentColor' />
-      <path d='M1.88 4.88c1.46 0 3.06 1.62 3.06 3.06' stroke='currentColor' />
-      <path d='M15.98 19.18c1.52 0 3.18 1.69 3.18 3.19' stroke='currentColor' />
-      <path d='M8 4.88c-1.45 0-3.06 1.6-3.06 3.06' stroke='currentColor' />
-      <path d='M22.34 19.18c-1.5 0-3.18 1.66-3.18 3.19' stroke='currentColor' />
+      <path d='M5.2 1.81c0 1.6-1.72 3.34-3.32 3.34' stroke='currentColor' />
+      <path d='M18.96 15.59c0 1.62-1.76 3.39-3.4 3.39' stroke='currentColor' />
+      <path d='M5.2 1.81c0 1.6 1.74 3.34 3.34 3.34' stroke='currentColor' />
+      <path d='M18.96 15.59c0 1.63 1.76 3.39 3.38 3.39' stroke='currentColor' />
+      <path d='M5.2 8.48c0-1.57-1.73-3.33-3.32-3.33' stroke='currentColor' />
+      <path d='M18.96 22.37c0-1.6-1.77-3.4-3.4-3.4' stroke='currentColor' />
+      <path d='M5.2 8.48c0-1.6 1.76-3.33 3.34-3.33' stroke='currentColor' />
+      <path d='M18.96 22.37c0-1.62 1.78-3.4 3.38-3.4' stroke='currentColor' />
       <path d='m22.18 1.81-9.32 9.32' stroke='currentColor' />
       <path
         opacity='.2'
@@ -51,7 +51,7 @@ export const IconBroomSparkles: Icon = ({
         fill='currentColor'
       />
       <path
-        d='M7.18 21.16c.74.74 1.11 1.11 1.56 1.09s.78-.44 1.43-1.27l2.93-3.73a4 4 0 0 0 .21-5.39 6 6 0 0 0-.56-.58c-.3-.3-.44-.45-.59-.57a4 4 0 0 0-4.71-.29c-.16.1-.32.23-.66.49l-3.75 2.93c-.84.65-1.25.97-1.28 1.42s.35.82 1.1 1.57z'
+        d='m3.04 13.84 3.75-2.93c.34-.26.5-.39.66-.49a4 4 0 0 1 4.71.3c.15.11.3.26.6.56.29.3.44.44.56.59a4 4 0 0 1 .28 4.73c-.1.15-.23.32-.5.65l-2.93 3.73c-.65.83-.98 1.24-1.43 1.27-.45.02-.82-.35-1.56-1.1l-4.33-4.32c-.74-.75-1.12-1.12-1.09-1.57s.44-.77 1.28-1.42'
         stroke='currentColor'
       />
       <path d='m6.68 11.17 6.2 6.26' stroke='currentColor' />

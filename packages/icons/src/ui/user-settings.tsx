@@ -33,23 +33,17 @@ export const IconUserSettings: Icon = ({
       />
       <path
         opacity='.2'
-        d='M15.47 7.99a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
+        d='M15.47 7.93a5.4 5.4 0 1 1-10.79 0 5.4 5.4 0 0 1 10.8 0'
         fill='currentColor'
       />
-      <circle
-        cx='18.75'
-        cy='18.73'
-        r='2.44'
-        transform='rotate(-90 18.75 18.73)'
-        stroke='currentColor'
-      />
-      <path d='m16.86 21.98.6-.97' stroke='currentColor' />
-      <path d='m16.89 15.47.46.82' stroke='currentColor' />
-      <path d='m20.6 22.02-.46-.82' stroke='currentColor' />
-      <path d='M20.65 15.48 20 16.52' stroke='currentColor' />
-      <path d='m21.21 18.73 1.3-.01' stroke='currentColor' />
-      <path d='M15 18.74h1.15' stroke='currentColor' />
-      <path d='M15.47 7.99a5.4 5.4 0 0 1-5.4 5.4 5.4 5.4 0 1 1 5.4-5.4' stroke='currentColor' />
+      <circle cx='18.47' cy='18.49' r='2.62' stroke='currentColor' />
+      <path d='m17.09 20.94-.64 1.04' stroke='currentColor' />
+      <path d='m16.97 15.87-.5-.88' stroke='currentColor' />
+      <path d='m19.97 21.14.5.88' stroke='currentColor' />
+      <path d='m19.83 16.11.68-1.1' stroke='currentColor' />
+      <path d='m21.12 18.5 1.4-.02' stroke='currentColor' />
+      <path d='M14.44 18.5h1.24' stroke='currentColor' />
+      <path d='M15.47 7.93a5.4 5.4 0 1 0-10.79 0 5.4 5.4 0 0 0 10.79 0' stroke='currentColor' />
       <path d='M1.78 21.62a8.3 8.3 0 0 1 11.28-7.74' stroke='currentColor' />
     </svg>
   )

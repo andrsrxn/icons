@@ -28,7 +28,7 @@ export const IconUtensils: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M15.77 7.27c1.43-2.4 4.98-4.6 4.98-4.6v13.07h-6.73s0-5.5 1.75-8.47'
+        d='M15.77 7.27a14 14 0 0 1 3.51-3.57c.63-.47 1.47-.02 1.47.77v11.27h-6.73s0-5.5 1.75-8.47'
         fill='currentColor'
       />
       <path
@@ -42,10 +42,9 @@ export const IconUtensils: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M20.7 2.58a12 12 0 0 0-5.26 5.58 18 18 0 0 0-1.5 6.8c-.01.54.43.97.97.97h5.56'
+        d='M20.47 15.93h-5.55a.95.95 0 0 1-.97-.97c.06-1.72.38-4.52 1.49-6.8.72-1.5 1.62-2.7 2.6-3.66.95-.93 1.43-1.4 2.04-1.14s.61 1.01.61 2.51v15.55'
         stroke='currentColor'
       />
-      <path d='M20.7 21.42V2.68' stroke='currentColor' />
       <path d='M7.2 6.94V2.7' stroke='currentColor' />
     </svg>
   )

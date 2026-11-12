@@ -29,12 +29,9 @@ export const IconListClock: Icon = ({
       <path d='M21.32 6H2.6' stroke='currentColor' />
       <path d='M9.32 12H2.6' stroke='currentColor' />
       <path d='M9.32 18H2.6' stroke='currentColor' />
-      <circle opacity='.2' cx='17.34' cy='15.16' r='4.31' fill='currentColor' />
-      <circle cx='17.34' cy='15.16' r='4.31' stroke='currentColor' />
-      <path
-        d='m18.46 16.1-.76-.5c-.22-.14-.32-.22-.38-.33q-.07-.13-.06-.5v-1.08'
-        stroke='currentColor'
-      />
+      <circle opacity='.2' cx='17.34' cy='15.16' r='4.87' fill='currentColor' />
+      <circle cx='17.34' cy='15.16' r='4.87' stroke='currentColor' />
+      <path d='M17.25 13.5v1.29q-.02.37.06.5c.05.11.16.19.38.33l.92.61' stroke='currentColor' />
     </svg>
   )
 }

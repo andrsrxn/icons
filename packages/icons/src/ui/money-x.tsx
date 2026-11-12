@@ -37,10 +37,10 @@ export const IconMoneyX: Icon = ({
       <path d='M17.52 5.13c0 2.76 2.11 5 4.72 5' stroke='currentColor' />
       <path d='M6.48 19c0-2.76-2.11-5-4.72-5' stroke='currentColor' />
       <circle cx='12' cy='12' r='2.72' stroke='currentColor' />
-      <path d='m22.24 15.15-4.07 4.08' stroke='currentColor' />
-      <path d='m18.17 15.16 4.07 4.08' stroke='currentColor' />
+      <path d='m22.58 14.82-4.75 4.74' stroke='currentColor' />
+      <path d='m17.83 14.83 4.75 4.74' stroke='currentColor' />
       <path
-        d='M14.24 19H8.76c-3.3 0-4.95 0-5.98-1.03h0C1.76 16.95 1.76 15.3 1.76 12s0-4.95 1.02-5.97h0C3.81 5 5.46 5 8.76 5h6.68c3.1 0 4.66 0 5.66.92l.23.22c.91 1 .91 2.55.91 5.66'
+        d='M14.06 19h-5.3c-3.3 0-4.95 0-5.98-1.03h0C1.76 16.95 1.76 15.3 1.76 12s0-4.95 1.02-5.97h0C3.81 5 5.46 5 8.76 5h6.94c2.86 0 4.28 0 5.25.78q.29.24.51.51c.78.97.78 2.4.78 5.25'
         stroke='currentColor'
       />
     </svg>

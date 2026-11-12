@@ -28,7 +28,7 @@ export const IconMountains: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='m20.4 10.75-6.03.44-1.38-.78-2.87.15-3.52.93-3.04-.93-1.37 9.47h20.25z'
+        d='m20.85 10.77-6.3.47-1.43-.83-3 .16-3.67.99-3.19-.99-1.42 10.07h21.14z'
         fill='currentColor'
       />
       <path

@@ -26,13 +26,13 @@ export const IconTrainTrack: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect opacity='.2' x='5.6' y='4.09' width='12.79' height='15.53' rx='2' fill='currentColor' />
-      <path d='M5.91 22.35V1.65' stroke='currentColor' />
-      <path d='M18.09 22.35V1.65' stroke='currentColor' />
-      <path d='M20.52 4.09H3.48' stroke='currentColor' />
-      <path d='M20.52 9.36H3.48' stroke='currentColor' />
-      <path d='M20.52 14.64H3.48' stroke='currentColor' />
-      <path d='M20.52 19.91H3.48' stroke='currentColor' />
+      <path opacity='.2' d='M7.27 4.09h9.3l2.97 15.82H4.34z' fill='currentColor' />
+      <path d='M4 22.17 7.83 1.83' stroke='currentColor' />
+      <path d='M20 22.17 16.17 1.83' stroke='currentColor' />
+      <path d='M18.85 4.09H5.15' stroke='currentColor' />
+      <path d='M20 9.36H4' stroke='currentColor' />
+      <path d='M21.23 14.64H2.77' stroke='currentColor' />
+      <path d='M22.56 19.91H1.44' stroke='currentColor' />
     </svg>
   )
 }

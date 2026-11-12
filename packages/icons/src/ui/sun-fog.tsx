@@ -26,19 +26,12 @@ export const IconSunFog: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M22.23 16.88H1.77' stroke='currentColor' />
-      <path d='M18.5 19.75h-13' stroke='currentColor' />
+      <path d='M22.23 16.42H1.77' stroke='currentColor' />
+      <path d='M18.5 19.5h-13' stroke='currentColor' />
       <path d='M15.03 22.51H8.97' stroke='currentColor' />
-      <circle
-        opacity='.2'
-        cx='11.97'
-        cy='12.31'
-        r='4.67'
-        transform='rotate(90 11.97 12.3)'
-        fill='currentColor'
-      />
+      <circle opacity='.2' cx='11.97' cy='12.31' r='4.67' fill='currentColor' />
       <path
-        d='M10.45 16.81a4.8 4.8 0 0 1-3.15-4.5 4.67 4.67 0 0 1 9.34 0c0 1.94-1.4 3.9-3.15 4.5'
+        d='M14.42 16.35a5 5 0 0 0 2.22-4.04 4.67 4.67 0 0 0-9.34 0 4.8 4.8 0 0 0 2.22 4.04'
         stroke='currentColor'
       />
       <path d='M1.69 12.3h2.7' stroke='currentColor' />

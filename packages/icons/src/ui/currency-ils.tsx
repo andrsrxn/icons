@@ -26,13 +26,13 @@ export const IconCurrencyIls: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M1.82 4.3v15.4' stroke='currentColor' />
+      <path d='M2.83 4.3v15.4' stroke='currentColor' />
       <path
-        d='M1.82 4.3h3.57c4.66 0 7 0 8.46 1.43l.05.06c1.44 1.45 1.44 3.79 1.44 8.46'
+        d='M2.83 4.3h2.22c4.67 0 7 0 8.46 1.43l.06.06C15 7.24 15 9.58 15 14.25'
         stroke='currentColor'
       />
       <path
-        d='M8.6 9.98v9.73h3.58c4.72 0 7.07 0 8.54-1.47 1.46-1.46 1.46-3.82 1.46-8.53V4.59'
+        d='M8.94 9.98v9.73h2.23c4.71 0 7.07 0 8.53-1.47 1.47-1.46 1.47-3.82 1.47-8.53V4.59'
         stroke='currentColor'
       />
     </svg>

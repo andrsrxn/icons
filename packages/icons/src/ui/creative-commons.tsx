@@ -35,8 +35,8 @@ export const IconCreativeCommons: Icon = ({
         d='M1.72 12a10.28 10.28 0 1 1 20.56 0 10.28 10.28 0 0 1-20.56 0'
         stroke='currentColor'
       />
-      <path d='M10.62 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
-      <path d='M18.19 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
+      <path d='M10.38 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
+      <path d='M17.95 9.05a3.3 3.3 0 1 0 0 5.9' stroke='currentColor' />
     </svg>
   )
 }

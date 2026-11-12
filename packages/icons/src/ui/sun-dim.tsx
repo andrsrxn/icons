@@ -26,29 +26,16 @@ export const IconSunDim: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M3.37 11.99h.84' stroke='currentColor' />
-      <path d='M19.66 12h.95' stroke='currentColor' />
-      <path d='M11.96 20.72v-1.07' stroke='currentColor' />
-      <path d='M11.96 4.23V3.4' stroke='currentColor' />
-      <path d='m18.23 5.65.66-.66' stroke='currentColor' />
-      <path d='m5 18.87.7-.7' stroke='currentColor' />
-      <path d='m5.68 5.64-.46-.46' stroke='currentColor' />
-      <path d='m18.9 18.86-.68-.69' stroke='currentColor' />
-      <circle
-        opacity='.2'
-        cx='11.97'
-        cy='11.99'
-        r='4.73'
-        transform='rotate(90 11.97 11.99)'
-        fill='currentColor'
-      />
-      <circle
-        cx='11.97'
-        cy='11.99'
-        r='4.73'
-        transform='rotate(90 11.97 11.99)'
-        stroke='currentColor'
-      />
+      <path d='M3.08 11.98h.87' stroke='currentColor' />
+      <path d='M19.92 12h.98' stroke='currentColor' />
+      <path d='M12 21v-1.1' stroke='currentColor' />
+      <path d='M12 3.96v-.85' stroke='currentColor' />
+      <path d='m18.44 5.43.68-.68' stroke='currentColor' />
+      <path d='m4.77 19.1.72-.72' stroke='currentColor' />
+      <path d='M5.47 5.42 5 4.95' stroke='currentColor' />
+      <path d='m19.13 19.09-.7-.71' stroke='currentColor' />
+      <circle opacity='.2' cx='11.97' cy='11.99' r='4.93' fill='currentColor' />
+      <circle cx='11.97' cy='11.99' r='4.93' stroke='currentColor' />
     </svg>
   )
 }

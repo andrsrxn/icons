@@ -27,15 +27,16 @@ export const IconTextOrientation: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M5.58 16.74 3.41 8.05C2.7 5.3 2.37 3.9 3.02 3.52c.66-.37 1.68.62 3.72 2.62l6.4 6.23'
-        stroke='currentColor'
-      />
-      <path d='m9.18 8.7-4.8 2.77' stroke='currentColor' />
-      <path
         d='m20.46 15.76.55-2.01c.24-.91.36-1.37.16-1.73-.21-.36-.67-.48-1.58-.72l-2.02-.55'
         stroke='currentColor'
       />
       <path d='m5.6 21 15.16-8.75' stroke='currentColor' />
+      <path d='m5.68 4.6 4.9 8.52' stroke='currentColor' />
+      <path d='m12 12.3-2.82 1.63' stroke='currentColor' />
+      <path
+        d='M2.8 7.59a1.14 1.14 0 0 1 .42-1.57l4.9-2.83a1.14 1.14 0 0 1 1.57.42'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

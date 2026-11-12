@@ -26,20 +26,15 @@ export const IconBorderEnd: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <rect
+      <path
         opacity='.2'
-        x='21.24'
-        y='21.24'
-        width='18.48'
-        height='18.48'
-        rx='3'
-        transform='rotate(-180 21.24 21.24)'
+        d='M21.24 15.24c0 2.83 0 4.25-.88 5.12s-2.3.88-5.12.88H8.76c-2.83 0-4.24 0-5.12-.88-.88-.87-.88-2.29-.88-5.12V8.76c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.48c2.83 0 4.24 0 5.12.88s.88 2.3.88 5.12z'
         fill='currentColor'
       />
       <path d='M12 15.37V8.63' stroke='currentColor' />
       <path d='M15.37 12H8.63' stroke='currentColor' />
       <path
-        d='M18.68 2.76a2.57 2.57 0 0 1 2.56 2.56v13.36a2.57 2.57 0 0 1-2.56 2.56'
+        d='M18.68 21.24a2.57 2.57 0 0 0 2.56-2.56V5.32a2.57 2.57 0 0 0-2.56-2.56'
         stroke='currentColor'
       />
       <path d='M5.39 2.7h-.06a2.6 2.6 0 0 0-2.61 2.62' stroke='currentColor' />
