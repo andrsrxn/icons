@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconDropletOff: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-droplet-off'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M12 21.4c4.08 0 7.4-3.12 7.4-6.96C19.4 7.52 12 2.39 12 2.39S4.6 7.44 4.6 14.44c0 3.84 3.32 6.95 7.4 6.95'
+        fill='currentColor'
+      />
+      <path
+        d='M7.17 7.18a12.3 12.3 0 0 0-2.56 7.26c0 3.84 3.3 6.95 7.39 6.95a7.5 7.5 0 0 0 6.17-3.12'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.14 4.83q.42-.42.8-.77c.85-.79 1.28-1.18 2.06-1.18s1.2.4 2.06 1.18c2.19 2.02 5.33 5.74 5.33 10.38 0 0 0 .35-.05.9'
+        stroke='currentColor'
+      />
+      <path d='M12.67 17.96a4.5 4.5 0 0 0 2.88-2.39' stroke='currentColor' />
+      <path d='m2.76 2.74 18.5 18.52' stroke='currentColor' />
+    </svg>
+  )
+}

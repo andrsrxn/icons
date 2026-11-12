@@ -49,10 +49,10 @@ export const IconArticles: Icon = ({
         d='M12.48 7.12v-.28c0-.95 0-1.42.3-1.71.29-.3.76-.3 1.7-.3h2.67c.8 0 1.2 0 1.48.22l.16.16c.22.28.22.68.22 1.48s0 1.2-.22 1.48l-.16.16c-.27.22-.67.22-1.48.22h-3.23'
         stroke='currentColor'
       />
-      <path d='M5.1 16.15h4.65' stroke='currentColor' />
-      <path d='M14.25 11.14h3' stroke='currentColor' />
-      <path d='M5.1 19.16h4.65' stroke='currentColor' />
-      <path d='M14.25 14.15h3' stroke='currentColor' />
+      <path d='M5.74 16.48h5.03' stroke='currentColor' />
+      <path d='M14.25 11.57h3.7' stroke='currentColor' />
+      <path d='M5.74 19.22h5.03' stroke='currentColor' />
+      <path d='M14.25 14.3h3.7' stroke='currentColor' />
     </svg>
   )
 }

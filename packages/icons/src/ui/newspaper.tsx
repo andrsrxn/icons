@@ -41,14 +41,8 @@ export const IconNewspaper: Icon = ({
         d='M6.96 11.37H4.79a3 3 0 0 0-3 3v4.36a2.67 2.67 0 1 0 5.34 0V9.69'
         stroke='currentColor'
       />
-      <path
-        d='M15.8 14.46a.75.75 0 0 0 0-1.5zm-4.83-1.5a.75.75 0 0 0 0 1.5zm4.82.75v-.75h-4.82v1.5h4.82z'
-        fill='currentColor'
-      />
-      <path
-        d='M15.8 18.21a.75.75 0 0 0 0-1.5zm-4.83-1.5a.75.75 0 0 0 0 1.5v-1.49m4.82.75v-.75h-4.82v1.51h4.82z'
-        fill='currentColor'
-      />
+      <path d='M18 13.76h-6.28' stroke='currentColor' />
+      <path d='M18 17.35h-6.28' stroke='currentColor' />
       <path
         d='M12.86 6.34h4c.83 0 1.25 0 1.53.23l.12.12c.24.28.24.7.24 1.53s0 1.26-.24 1.53l-.12.13c-.28.23-.7.23-1.53.23h-4c-.83 0-1.25 0-1.53-.23l-.12-.13c-.24-.27-.24-.7-.24-1.53s0-1.25.24-1.53l.12-.12c.28-.23.7-.23 1.53-.23'
         stroke='currentColor'

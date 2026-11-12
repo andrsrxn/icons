@@ -14,5 +14,6 @@
     "recognize",
     "detect",
     "identify"
-  ]
+  ],
+  "rtl": true
 }

@@ -45,8 +45,8 @@ export const IconArticleSparkle: Icon = ({
         d='M13.9 10.74h-3.8c-.98 0-1.46 0-1.82-.22a1.5 1.5 0 0 1-.51-.5c-.22-.36-.22-.85-.22-1.82v0c0-.97 0-1.46.22-1.82q.2-.31.5-.5c.37-.22.85-.22 1.82-.22h3.82c.97 0 1.45 0 1.81.22q.32.19.51.5c.22.36.22.85.22 1.82v0c0 .97 0 1.46-.22 1.82q-.2.31-.5.5c-.37.22-.85.22-1.82.22'
         stroke='currentColor'
       />
-      <path d='M7.96 14.53h5.5' stroke='currentColor' />
-      <path d='M7.96 18.34h4.21' stroke='currentColor' />
+      <path d='M8.28 14.59h6.73' stroke='currentColor' />
+      <path d='M8.28 18.32H12' stroke='currentColor' />
     </svg>
   )
 }

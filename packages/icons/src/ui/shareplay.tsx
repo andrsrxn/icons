@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconShareplay: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-shareplay'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <g clipPath='url(#a)'>
+        <path
+          d='m8.53 16.78 1.58-2.13c.87-1.17 1.3-1.74 1.89-1.74s1.02.58 1.87 1.72l.01.02 1.59 2.13.04.06c1.2 1.6 1.79 2.4 1.46 3.05s-1.35.64-3.38.64h0-3.18 0c-2.03 0-3.05 0-3.38-.64-.33-.65.28-1.47 1.5-3.1'
+          stroke='currentColor'
+        />
+        <path
+          opacity='.2'
+          d='M15.3 3.47c3.3 0 4.96 0 5.98 1.02 1.03 1.03 1.03 2.68 1.03 5.98v2.83c0 .66 0 1-.05 1.27a3.5 3.5 0 0 1-2.9 2.9c-.27.04-.6.04-1.27.04-.36 0-.54 0-.7-.02a3.5 3.5 0 0 1-2.3-1.18c-.12-.13-.22-.28-.43-.57l-1.5-2.12a1.42 1.42 0 0 0-2.34.03l-1.36 2-.44.62a3.5 3.5 0 0 1-2.31 1.22c-.18.02-.38.02-.76.02-.7 0-1.05 0-1.34-.05a3.5 3.5 0 0 1-2.87-2.86c-.05-.3-.05-.64-.05-1.34v-2.8c0-3.3 0-4.94 1.03-5.97 1.02-1.02 2.67-1.02 5.97-1.02z'
+          fillRule='evenodd'
+          clipRule='evenodd'
+          fill='currentColor'
+        />
+        <path
+          d='M7.96 17.51c-2.6 0-3.89 0-4.8-.65a4 4 0 0 1-.81-.81c-.66-.92-.66-2.21-.66-4.8v-.78c0-3.3 0-4.95 1.03-5.98 1.02-1.02 2.67-1.02 5.97-1.02h6.62c3.3 0 4.95 0 5.97 1.02 1.03 1.03 1.03 2.68 1.03 5.98v.87c0 2.5 0 3.75-.62 4.65a4 4 0 0 1-.9.9c-.9.62-2.15.62-4.66.62'
+          stroke='currentColor'
+        />
+      </g>
+      <defs>
+        <clipPath id='a'>
+          <path fill='#fff' d='M0 0h24v24H0z' />
+        </clipPath>
+      </defs>
+    </svg>
+  )
+}

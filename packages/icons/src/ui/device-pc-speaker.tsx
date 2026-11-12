@@ -33,7 +33,7 @@ export const IconDevicePcSpeaker: Icon = ({
       />
       <circle opacity='.2' cx='17.17' cy='14.12' r='2.34' fill='currentColor' />
       <path
-        d='M12 6.14H6.66c-2.36 0-3.54 0-4.27.73s-.73 1.91-.73 4.27v.25c0 2.35 0 3.53.73 4.27s1.9.73 4.27.73h5.1'
+        d='M12 6.14H6.78c-1.99 0-2.98 0-3.7.45a3 3 0 0 0-.97.96c-.45.73-.45 1.72-.45 3.71s0 2.98.45 3.71a3 3 0 0 0 .96.96c.73.46 1.72.46 3.71.46h4.99'
         stroke='currentColor'
       />
       <path d='M5.77 19.46h4.31' stroke='currentColor' />

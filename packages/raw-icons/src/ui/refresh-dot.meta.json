@@ -5,12 +5,14 @@
     "development"
   ],
   "tags": [
+    "issue",
+    "git",
+    "indicator",
     "reload",
     "sync",
     "update",
     "cycle",
     "restart",
-    "point",
-    "indicator"
+    "point"
   ]
 }

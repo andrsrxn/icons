@@ -10,5 +10,6 @@
     "pilcrow",
     "document",
     "formatting"
-  ]
+  ],
+  "rtl": true
 }

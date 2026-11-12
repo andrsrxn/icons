@@ -6,9 +6,9 @@
     "direction",
     "pointer",
     "height",
-    "resize",
-    "stretch",
+    "change",
     "reorder",
+    "transfer",
     "sort",
     "filter"
   ]

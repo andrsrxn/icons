@@ -6,10 +6,9 @@
     "bidirectional",
     "pointer",
     "width",
-    "resize",
-    "stretch",
     "range",
     "change",
+    "transfer",
     "filter",
     "mcp",
     "connection"
