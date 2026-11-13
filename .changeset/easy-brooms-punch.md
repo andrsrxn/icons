@@ -4,8 +4,6 @@
 
 Restrict accessibility props for UI icons and flag icons to establish consistent, internally managed accessibility behavior.
 
-### Breaking changes
-
 - **UI icons**
   - Remove `role`, `aria-hidden`, `focusable`, and `aria-labelledby` from the public `IconProps` type.
   - UI icons are decorative by default and hidden from the accessibility tree.
