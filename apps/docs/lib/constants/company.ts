@@ -16,7 +16,7 @@ export const COMPANY = {
       new: 'https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml',
     },
     discussions: { showAndTell: 'https://github.com/andrsrxn/icons/discussions/16' },
-    version: '7',
+    version: '8',
     license: 'MIT',
     licenceUrl: 'https://github.com/andrsrxn/icons/blob/main/LICENSE',
     skills: 'https://github.com/andrsrxn/icons/tree/main/skills',
