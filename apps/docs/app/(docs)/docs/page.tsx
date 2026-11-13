@@ -9,8 +9,8 @@ import {
   IconListOrderedRtl,
   IconNotes,
   IconRocket,
-  IconSeekBackwardRtl,
-  IconSeekForwardRtl,
+  IconSeekBackwardTenRtl,
+  IconSeekForwardTenRtl,
   IconTextIndent,
   IconWarningTriangle,
 } from '@andrsrxn/icons'
@@ -554,6 +554,36 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>chevron-end-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>chevron-start-line</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>padding-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>padding-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>margin-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>margin-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>text-align-start</code>
             </p>
           </li>
@@ -580,6 +610,16 @@ export function App() {
           <li>
             <p>
               <code>text-firstline-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-paragraph</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>text-paragraph-scan</code>
             </p>
           </li>
           <li>
@@ -829,6 +869,11 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>key-backspace-minus</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>key-enter</code>
             </p>
           </li>
@@ -842,11 +887,7 @@ export function App() {
               <code>external-link</code>
             </p>
           </li>
-          <li>
-            <p>
-              <code>chevron-first</code>
-            </p>
-          </li>
+
           <li>
             <p>
               <code>skip-backward</code>
@@ -865,11 +906,6 @@ export function App() {
           <li>
             <p>
               <code>step-forward</code>
-            </p>
-          </li>
-          <li>
-            <p>
-              <code>chevron-last</code>
             </p>
           </li>
           <li>
@@ -995,13 +1031,13 @@ export function App() {
             className={
               'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
-            <IconSeekBackwardRtl />
+            <IconSeekBackwardTenRtl />
           </div>
           <div
             className={
               'flex size-20 md:size-32 items-center justify-center bg-card bg-contain border rounded-lg bg-center bg-no-repeat [&>svg]:size-20 md:[&>svg]:size-32'
             }>
-            <IconSeekForwardRtl />
+            <IconSeekForwardTenRtl />
           </div>
         </div>
         <h2>Accessibility</h2>
