@@ -3,7 +3,7 @@
 
 # andrsrxn/icons-svg
 
-Framework-agnostic icon library with 2,500+ duotone icons and 250+ flags.
+Framework-agnostic icon library with 3,000+ duotone icons and 250+ flags.
 <br />
 Smooth, RTL-aware, and optimized SVGs.
 

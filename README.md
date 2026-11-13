@@ -11,7 +11,7 @@
 [![Project CI](https://shieldcn.dev/github/andrsrxn/icons/ci.svg?variant=secondary&size=xs)](https://github.com/andrsrxn/icons/actions)
 [![Dependency count](https://shieldcn.dev/badge/Dependency%20count-0.svg?variant=secondary&split=true&size=xs)](https://npmgraph.js.org/?q=%40andrsrxn%2Ficons)
 
-React icon library with 2,500+ duotone icons and 250+ flags.
+React icon library with 3,000+ duotone icons and 250+ flags.
 <br />
 Smooth, RTL-aware, and optimized SVGs.
 
@@ -47,7 +47,7 @@ Most libraries only offer outline or solid variants, some duotone implementation
 
 ## Documentation
 
-[See full documentation](https://icons.andrsrxn.com)
+[See full documentation](https://icons.andrsrxn.com/docs)
 
 ## Contributing
 
@@ -70,7 +70,7 @@ All of the icons were made by scratch on Figma but inspired on the following ico
 
 ## Credits
 
-The flag icons are adapted from [FlagKit](https://github.com/madebybowtie/FlagKit) by [Bowtie](https://github.com/madebybowtie), used under the MIT License (Copyright (c) 2016 Bowtie AB). Only the 3:2 rectangular flag versions were used as source material and converted into `tsx` components. See [THIRD-PARTY-LICENSES.md](./packages/icons/THIRD-PARTY-LICENSES.md) for the full license text.
+The flag icons are adapted from [FlagKit](https://github.com/madebybowtie/FlagKit) by [Bowtie](https://github.com/madebybowtie), used under the MIT License (Copyright (c) 2016 Bowtie AB). Only the 3:2 rectangular flag versions were used as source material and converted into components. See [THIRD-PARTY-LICENSES.md](./packages/icons/THIRD-PARTY-LICENSES.md) for the full license text.
 
 ## License
 
