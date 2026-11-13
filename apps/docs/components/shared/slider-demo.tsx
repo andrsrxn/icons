@@ -1,7 +1,7 @@
 /** biome-ignore-all lint/style/noMagicNumbers: demo values */
 'use client'
 
-import { IconVolumeHigh, IconVolumeLow, IconVolumeSilent } from '@andrsrxn/icons'
+import { IconVolumeHigh, IconVolumeLow, IconVolumeX } from '@andrsrxn/icons'
 import { useState } from 'react'
 import { Item, ItemActions, ItemContent, ItemMedia, ItemTitle } from '@/components/ui/item'
 import { Slider } from '@/components/ui/slider'
@@ -20,7 +20,7 @@ export const SliderDemo = () => {
       return <IconVolumeLow />
     }
 
-    return <IconVolumeSilent />
+    return <IconVolumeX />
   }
 
   return (
