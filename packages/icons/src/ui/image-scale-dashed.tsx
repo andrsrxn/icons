@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconImageScaleDashed: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-image-scale-dashed'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path d='M21.3 5.98V5.9h0l-.01-.45a3 3 0 0 0-2.8-2.8h-.45' stroke='currentColor' />
+      <path d='M21.3 17.93V18h0l-.01.45a3 3 0 0 1-2.8 2.8h-.45' stroke='currentColor' />
+      <path d='M2.71 5.98V5.9h0v-.45a3 3 0 0 1 2.8-2.8h.45' stroke='currentColor' />
+      <path d='M13.82 2.72h-3.57' stroke='currentColor' />
+      <path d='M15.04 21.2h-.48' stroke='currentColor' />
+      <path d='M2.81 9.02v.67' stroke='currentColor' />
+      <path d='M21.29 10.17v3.57' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M8.8 12.13c1 0 1.5 0 1.89.18a2 2 0 0 1 1 1c.18.4.18.9.18 1.9v1.25a.96.96 0 0 1-1.58.73.96.96 0 0 0-1.28.05l-.13.12q-.15.16-.23.2a1 1 0 0 1-1.35-.14l-.17-.26-.67-1-.12-.18a1 1 0 0 0-1.5-.07q-.05.04-.14.16l-.24.3a1 1 0 0 1-1.7-.6l-.01-.37v-.64c0-.58 0-.87.06-1.11a2 2 0 0 1 1.45-1.46c.24-.06.53-.06 1.12-.06z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M2.75 17.25v-1.12c0-1.88 0-2.83.58-3.41.6-.59 1.53-.59 3.42-.59h1.12c1.88 0 2.83 0 3.41.59.59.58.59 1.53.59 3.41v1.12c0 1.89 0 2.83-.59 3.42-.58.58-1.53.58-3.41.58H6.75c-1.89 0-2.83 0-3.42-.58-.58-.59-.58-1.53-.58-3.42'
+        stroke='currentColor'
+      />
+      <path d='m11.51 12.75 4.5-4.49' stroke='currentColor' />
+      <path
+        d='M12.44 7.46h1.36c1.42 0 2.13 0 2.57.43.44.44.44 1.15.44 2.57v1.36'
+        stroke='currentColor'
+      />
+      <path
+        d='m2.81 18.74 2.03-2.9c.34-.49.51-.74.75-.73.23 0 .39.26.7.78l.9 1.46c.28.45.41.68.63.7.21.02.55-.36.9-.75.3-.31.53-.55.71-.55.19 0 .34.15.64.44l1.56 1.55'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconBatteryWarning: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-battery-warning'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M1.72 12c0-2.34 0-3.5.54-4.36a3.5 3.5 0 0 1 1.1-1.1C4.21 6 5.38 6 7.72 6h5.26c2.34 0 3.5 0 4.36.54q.68.42 1.1 1.1c.54.85.54 2.02.54 4.36s0 3.5-.54 4.36a3.5 3.5 0 0 1-1.1 1.1c-.85.54-2.02.54-4.36.54H7.72c-2.34 0-3.5 0-4.36-.54a3.5 3.5 0 0 1-1.1-1.1c-.54-.85-.54-2.02-.54-4.36'
+        fill='currentColor'
+      />
+      <path
+        d='M7.72 18h5.26c2.34 0 3.5 0 4.36-.54a3.5 3.5 0 0 0 1.1-1.1c.54-.85.54-2.02.54-4.36v0c0-2.34 0-3.5-.54-4.36a3.5 3.5 0 0 0-1.1-1.1C16.5 6 15.32 6 12.98 6H7.72c-2.34 0-3.5 0-4.36.54a3.5 3.5 0 0 0-1.1 1.1c-.54.85-.54 2.02-.54 4.36v0c0 2.34 0 3.5.54 4.36q.43.68 1.1 1.1c.85.54 2.02.54 4.36.54'
+        stroke='currentColor'
+      />
+      <path
+        d='m18.98 8.44.95.36c1.02.39 1.53.58 1.86.96a2 2 0 0 1 .25.36c.24.45.24 1 .24 2.08 0 1.11 0 1.67-.25 2.11a2 2 0 0 1-.25.36c-.34.39-.86.58-1.9.96l-.9.32'
+        stroke='currentColor'
+      />
+      <path d='M10.35 12.16v-3.6' stroke='currentColor' />
+      <path
+        d='M10.79 15.23a.43.43 0 1 1-.87 0 .43.43 0 0 1 .87 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

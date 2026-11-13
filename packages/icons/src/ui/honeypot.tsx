@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconHoneypot: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-honeypot'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        d='M21.32 12c-.2 2.25-1.43 5.23-2.36 7.21-.47 1-.7 1.49-1.2 1.8-.48.3-1.07.3-2.23.3H8.52c-1.15 0-1.73 0-2.21-.3-.49-.3-.73-.8-1.2-1.77-.95-1.97-2.23-4.98-2.43-7.24a10 10 0 0 1-.03-2.15c.33-3.2 3.3-6.42 6.44-7.02.75-.15 1.47-.15 2.9-.15 1.45 0 2.17 0 2.92.15 3.15.6 6.1 3.81 6.45 7 .08.76.04 1.23-.04 2.17'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M21.27 9.58c-.6-3.2-3.58-6.26-6.76-6.79-.66-.1-1.28-.1-2.51-.1s-1.85 0-2.51.1c-3.17.53-6.16 3.6-6.76 6.79z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M15.47 21.32c1.2 0 1.79 0 2.3-.32s.73-.83 1.21-1.84a38 38 0 0 0 1.48-3.58H3.56c.46 1.31 1.04 2.6 1.53 3.61.48 1 .72 1.5 1.22 1.81s1.09.32 2.27.32z'
+        fill='currentColor'
+      />
+      <path d='M3.77 2.68h16.46' stroke='currentColor' />
+      <path d='M2.92 9.65h18.16' stroke='currentColor' />
+      <path d='M3.96 15.62h16.09' stroke='currentColor' />
+      <path d='M9.22 6.62V2.68' stroke='currentColor' />
+    </svg>
+  )
+}

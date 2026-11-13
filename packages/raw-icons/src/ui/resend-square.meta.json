@@ -1,13 +1,13 @@
 {
   "categories": [
     "communication",
-    "mail"
+    "mail",
+    "tools"
   ],
   "tags": [
     "retry",
     "transmit",
     "forward",
-    "box",
     "again",
     "email"
   ]

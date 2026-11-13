@@ -1,12 +1,19 @@
 {
   "categories": [
-    "design"
+    "design",
+    "layout",
+    "editor"
   ],
   "tags": [
     "outline",
     "frame",
-    "line",
+    "stroke",
+    "table",
+    "cell",
+    "upper",
+    "above",
     "edge",
-    "overline"
+    "boundary",
+    "box"
   ]
 }

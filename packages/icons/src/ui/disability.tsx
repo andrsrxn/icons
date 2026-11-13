@@ -33,15 +33,15 @@ export const IconDisability: Icon = ({
         clipRule='evenodd'
         fill='currentColor'
       />
-      <circle opacity='.2' cx='14.32' cy='4.26' r='2.59' fill='currentColor' />
+      <circle opacity='.2' cx='14.6' cy='3.98' r='2.34' fill='currentColor' />
       <path d='M15.48 19.41a5.56 5.56 0 0 1-9.81-5.27' stroke='currentColor' />
-      <circle cx='14.32' cy='4.26' r='2.59' stroke='currentColor' />
+      <circle cx='14.6' cy='3.98' r='2.34' stroke='currentColor' />
       <path
-        d='m7.47 11.16.35-.51C8.5 9.64 8.84 9.13 9.36 8.9c.52-.24 1.13-.15 2.33.02l.85.12'
+        d='m7.47 11.16.55-.82c.59-.87.88-1.3 1.32-1.54s.96-.23 2-.23h1.52'
         stroke='currentColor'
       />
       <path
-        d='m19.05 19.16-1.8-2.9c-.41-.66-.62-1-.94-1.18l-.1-.05c-.33-.17-.72-.15-1.5-.13h0c-1.81.06-2.72.08-3.18-.46l-.13-.17c-.38-.6-.1-1.47.48-3.18l.66-1.96'
+        d='m19.05 19.16-1.81-2.92c-.4-.64-.6-.96-.9-1.15l-.15-.07c-.33-.16-.7-.14-1.45-.12-1.79.05-2.68.08-3.14-.44l-.18-.25c-.35-.6-.05-1.44.55-3.12l.89-2.45'
         stroke='currentColor'
       />
     </svg>

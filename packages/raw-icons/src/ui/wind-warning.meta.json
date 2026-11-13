@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "weather"
+  ],
+  "tags": [
+    "breeze",
+    "gust",
+    "storm",
+    "gale",
+    "alert",
+    "caution",
+    "danger",
+    "notice"
+  ]
+}

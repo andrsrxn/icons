@@ -9,6 +9,7 @@
     "backend",
     "integration",
     "gateway",
-    "connect"
+    "connect",
+    "badge"
   ]
 }

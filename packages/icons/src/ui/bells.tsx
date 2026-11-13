@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconBells: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-bells'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M21.27 12.76a1.62 1.62 0 0 0 .48-2.9l-.28-.19-.29-.2a2 2 0 0 1-.73-1.22l-.4-1.52c-.14-.5-.2-.76-.34-.99-.12-.22-.3-.4-.67-.78l-.2-.2c-.6-.62-.91-.93-1.3-1.08a4 4 0 0 0-1.69-.12l-1.73.06q-.35.01-.68.14l-1.92.78a3.1 3.1 0 0 0-1.93 3.04c.03.5.4.89.88 1.02 1.02.29 2.32.9 2.69 1.99l.05.15c.63 1.87.95 2.8 1.65 3.18.7.37 1.6.13 3.39-.35z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M10.24 8.62a5.27 5.27 0 0 1 3.73 6.45l-.48 1.8q0 0 0 0l.56 1.14a1.62 1.62 0 0 1-1.87 2.28l-9.45-2.53a1.6 1.6 0 0 1-.46-2.9l1.07-.7q0 0 0 0l.5-1.84a5.23 5.23 0 0 1 6.4-3.7'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.36 14.61 2.19-.59 4.72-1.26a1.62 1.62 0 0 0 .48-2.91l-1.05-.7v-.01l-.48-1.8a5.27 5.27 0 0 0-10.33 1'
+        stroke='currentColor'
+      />
+      <path
+        d='M4.76 18.3c-.34 1.28.6 2.63 2.08 3.03 1.49.4 2.97-.31 3.3-1.58'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.25 13.3c.34 1.27-.6 2.63-2.08 3.02-1.25.34-2.49-.1-3.06-1'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

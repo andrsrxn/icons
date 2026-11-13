@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconFolderHistory: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-folder-history'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='m22.23 14.93-3.17-2.74H16.1l-2.26 2.05s-.48 1.87-.14 3.36a11 11 0 0 0 1.22 2.61H9.7c-3.78 0-5.66 0-6.83-1.17S1.7 15.98 1.7 12.2V7.47a3.7 3.7 0 0 1 3.7-3.7h.8c.99 0 1.48 0 1.95.1A4 4 0 0 1 9 4.2c.43.22.8.54 1.56 1.18.75.63 1.12.95 1.55 1.17a4 4 0 0 0 .85.31c.47.12.96.12 1.95.12h.16c2.96 0 4.45 0 5.49.74a4 4 0 0 1 .93.93c.74 1.04.74 2.53.74 5.49z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M10.61 20.21H9.7c-3.78 0-5.66 0-6.83-1.17S1.7 15.98 1.7 12.2V6.46A2.57 2.57 0 0 1 4.26 3.9h2.2c.65 0 .98 0 1.29.05a4 4 0 0 1 1.6.63c.26.18.5.4.98.84.48.45.71.67.98.84a4 4 0 0 0 1.6.63c.31.05.64.05 1.29.05h5.01a3 3 0 0 1 3.02 3.02'
+        stroke='currentColor'
+      />
+      <path d='M17.83 15.1v.7c0 .52 0 .78.12 1s.33.37.77.66l.42.28' stroke='currentColor' />
+      <path d='M13.37 13.09v.68c0 .63 0 .94.2 1.14.19.2.5.2 1.14.2h.68' stroke='currentColor' />
+      <path
+        d='M14.46 19.43a4.46 4.46 0 1 0 3.45-7.3c-2.46 0-3.6 1.97-4.11 2.67'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

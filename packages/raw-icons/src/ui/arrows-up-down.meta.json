@@ -3,13 +3,14 @@
     "arrows"
   ],
   "tags": [
-    "direction",
-    "pointer",
+    "exchange",
+    "cycle",
+    "loop",
     "height",
-    "change",
     "reorder",
-    "transfer",
     "sort",
+    "range",
+    "transfer",
     "filter"
   ]
 }

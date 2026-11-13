@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconFolderSearch: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-folder-search'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M22.23 17.48c0 .68 0 1.02-.08 1.3a2 2 0 0 1-1.35 1.35c-.28.08-.62.08-1.3.08l1.62-2.14v-2.6l-3.19-1.77-2.98 1.76v2.99l1.6 1.76H9.7c-3.78 0-5.66 0-6.83-1.17S1.7 15.98 1.7 12.2V7.47a3.7 3.7 0 0 1 3.7-3.7h.8c.99 0 1.48 0 1.95.1A4 4 0 0 1 9 4.2c.43.22.8.54 1.56 1.18.75.63 1.12.95 1.55 1.17a4 4 0 0 0 .85.31c.47.12.96.12 1.95.12h.16c2.96 0 4.45 0 5.49.74a4 4 0 0 1 .93.93c.74 1.04.74 2.53.74 5.49v3.35'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M11.65 20.21H9.7c-3.78 0-5.66 0-6.83-1.17S1.7 15.98 1.7 12.2V6.46A2.57 2.57 0 0 1 4.26 3.9h2.2c.65 0 .98 0 1.29.05a4 4 0 0 1 1.6.63c.26.18.5.4.98.84.48.45.71.67.98.84a4 4 0 0 0 1.6.63c.31.05.64.05 1.29.05h3.53c.47 0 .7 0 .9.02a4 4 0 0 1 3.58 3.59c.02.2.02.43.02.9'
+        stroke='currentColor'
+      />
+      <path d='m19.91 19.54 1.89 1.88' stroke='currentColor' />
+      <path d='M20.82 17.04a3.22 3.22 0 1 0-6.45 0 3.22 3.22 0 0 0 6.45 0' stroke='currentColor' />
+    </svg>
+  )
+}

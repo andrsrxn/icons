@@ -11,6 +11,7 @@
     "blocked",
     "disabled",
     "inactive",
-    "hidden"
+    "hidden",
+    "badge"
   ]
 }

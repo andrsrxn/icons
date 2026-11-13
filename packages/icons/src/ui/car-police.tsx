@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconCarPolice: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-car-police'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M13.1 10.43H5.45c-.66 0-.98 0-1.26.06a3 3 0 0 0-2.4 2.4c-.05.27-.05.6-.05 1.25v1.9a1.82 1.82 0 0 0 2.76 1.55l1.33-.8c.9-.55 2.05-.4 2.78.36.42.45 1.01.7 1.62.7h2.96a3 3 0 0 0 1.8-.7l.18-.15.17-.15a3 3 0 0 1 1.8-.7h1.15l.08.23a1.89 1.89 0 0 0 3.67-.73l-.14-2.9c-.03-.58-.04-.87-.18-1.1a1 1 0 0 0-.28-.3c-.22-.14-.5-.17-1.09-.22z'
+        fill='currentColor'
+      />
+      <path
+        d='m17.95 10.43-.19-.55c-.66-1.98-1-2.97-1.78-3.53-.78-.57-1.82-.57-3.9-.57H7.85c-1.7 0-2.56 0-3.26.41S3.48 7.35 2.64 8.83l-.15.26h0c-.37.65-.55.98-.65 1.34l-.01.06c-.1.36-.1.73-.1 1.48v3.26a2.6 2.6 0 0 0 2.63 2.62'
+        stroke='currentColor'
+      />
+      <path
+        d='M1.93 10.5H19.7c.53 0 .8 0 1.03.05a2 2 0 0 1 1.5 1.5c.05.22.05.5.05 1.03v1.86c0 .85 0 1.27-.13 1.6a2 2 0 0 1-1.17 1.18c-.34.13-.77.13-1.62.13'
+        stroke='currentColor'
+      />
+      <circle cx='6.99' cy='18.58' r='2.6' stroke='currentColor' />
+      <circle cx='16.85' cy='18.58' r='2.6' stroke='currentColor' />
+      <path d='M9.59 17.85h4.66' stroke='currentColor' />
+      <path d='M9.84 10.5V5.78' stroke='currentColor' />
+      <path d='M9.03 5.78a2.97 2.97 0 0 1 5.94 0' stroke='currentColor' />
+      <path opacity='.2' d='M12 5.78h2.97a2.97 2.97 0 1 0-5.94 0z' fill='currentColor' />
+    </svg>
+  )
+}

@@ -1,0 +1,15 @@
+{
+  "categories": [
+    "design",
+    "layout"
+  ],
+  "tags": [
+    "spacing",
+    "padding",
+    "gap",
+    "whitespace",
+    "trailing",
+    "offset"
+  ],
+  "rtl": true
+}

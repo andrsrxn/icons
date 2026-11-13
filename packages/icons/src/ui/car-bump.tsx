@@ -1,0 +1,64 @@
+import type { Icon } from './types'
+
+export const IconCarBump: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-car-bump'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M19.02 8.98c-.21-.43-.31-.64-.43-.82a3 3 0 0 0-2.86-1.31c-.2.02-.44.09-.9.21L5.92 9.45c-.45.12-.67.18-.86.26a3 3 0 0 0-1.82 2.46c-.02.2-.01.44 0 .9.03.69.04 1.03.1 1.3a3 3 0 0 0 3.17 2.34c.27-.02.6-.11 1.27-.29l4.37-1.17 4.55-1.22a8 8 0 0 0 1.2-.37 3 3 0 0 0 1.62-3.51 8 8 0 0 0-.5-1.17'
+        fill='currentColor'
+      />
+      <path
+        d='m12.15 15.25-4.58 1.23c-.64.17-.96.25-1.22.28a3 3 0 0 1-3.15-2.21c-.07-.26-.1-.6-.16-1.25a8 8 0 0 1-.05-.93 3 3 0 0 1 1.82-2.6c.2-.08.43-.14.9-.27l9.16-2.45c.46-.13.7-.19.9-.21a3 3 0 0 1 2.88 1.33c.11.18.22.4.42.83.28.6.42.9.5 1.16a3 3 0 0 1-1.63 3.5c-.24.1-.56.19-1.2.36z'
+        stroke='currentColor'
+      />
+      <path
+        d='m3.97 9.97-.02-.18c-.19-2.38-.28-3.57.34-4.46.63-.88 1.78-1.2 4.1-1.81l1.27-.35c2.33-.62 3.49-.93 4.47-.48l.13.07c.96.5 1.43 1.6 2.37 3.82'
+        stroke='currentColor'
+      />
+      <path
+        d='M5 17.17c.18.7.27 1.04.46 1.28q.37.46.97.56c.3.04.65-.05 1.34-.24l.07-.02c.7-.18 1.04-.27 1.29-.46.3-.24.5-.59.56-.97.04-.3-.05-.65-.24-1.35'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.79 14.54c.18.7.28 1.04.47 1.28.23.3.58.51.96.56.3.05.65-.05 1.35-.23l.06-.02c.7-.18 1.04-.28 1.28-.46.3-.24.5-.6.56-.97.04-.3-.05-.65-.24-1.35'
+        stroke='currentColor'
+      />
+      <path d='m16.63 6.58 1.28-2.22' stroke='currentColor' />
+      <path d='m14.1 10.1 1.76-.46' stroke='currentColor' />
+      <path d='m6.06 12.26 1.85-.5' stroke='currentColor' />
+      <path d='M3.97 9.97 1.74 8.68' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M16.77 22.34h5.69c0-1.83-1.28-3.3-2.85-3.3s-2.84 1.47-2.84 3.3'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path d='M22.46 21.88a2.85 2.85 0 1 0-5.7 0' stroke='currentColor' />
+    </svg>
+  )
+}

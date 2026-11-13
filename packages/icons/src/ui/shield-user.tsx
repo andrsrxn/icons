@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconShieldUser: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-shield-user'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M10.97 2.4c.5-.3.75-.45 1.03-.45.27 0 .52.15 1.02.45l3.45 2.07L20 6.04c.75.34 1.13.5 1.29.84.15.33.05.73-.17 1.52l-2.25 8.17a2 2 0 0 1-.19.54c-.07.12-.18.21-.4.4l-4.92 4.5c-.64.58-.96.87-1.34.87s-.7-.29-1.35-.86l-5.01-4.5a2 2 0 0 1-.4-.41 2 2 0 0 1-.2-.55L2.83 8.44c-.22-.81-.33-1.21-.17-1.55.17-.34.55-.5 1.33-.83L6.78 4.9l.13-.06.12-.07zm-1.5 7.1a2.5 2.5 0 1 0 5 0 2.5 2.5 0 0 0-5 0m2.5 2.5a4.2 4.2 0 0 1 3.01 1.76c.37.58.55.87.27 1.38-.29.52-.77.52-1.75.52h-2.97c-1.06 0-1.58 0-1.87-.52-.28-.53-.06-.87.39-1.55a3.3 3.3 0 0 1 2.92-1.6'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M9.09 3.18c-1 .65-2.16 1.3-3.4 1.86C4.1 5.74 3.33 6.1 3 6.68c-.32.58-.23 1.23-.06 2.52.61 4.58 2.68 9.3 7.29 12.4.77.52 1.16.78 1.77.78s1-.26 1.77-.79c4.61-3.1 6.68-7.8 7.29-12.39v0c.17-1.3.26-1.94-.07-2.52-.32-.58-1.1-.93-2.68-1.64a25 25 0 0 1-3.4-1.86c-1.55-1-2.32-1.5-2.91-1.5s-1.37.5-2.91 1.5'
+        stroke='currentColor'
+      />
+      <path d='M14.46 9.49a2.5 2.5 0 1 0-4.98 0 2.5 2.5 0 0 0 4.98 0' stroke='currentColor' />
+      <path d='M8.47 15.48a3.5 3.5 0 0 1 7 0' stroke='currentColor' />
+    </svg>
+  )
+}

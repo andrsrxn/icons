@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconMessageTranslate: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-message-translate'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M12.43 21.86a9.8 9.8 0 1 0-9.8-9.8q.01 1.24.14 2.02a10 10 0 0 1 .16 1.43c-.02.2-.1.47-.25.99l-.08.24c-.71 2.39-1.07 3.59-.54 4.37a2 2 0 0 0 .36.4c.71.62 1.94.4 4.4-.03.33-.05.5-.08.64-.08h.1c.14 0 .33.03.71.1.88.14 2.44.36 4.16.36'
+        fill='currentColor'
+      />
+      <path
+        d='M22.23 12.06a9.8 9.8 0 0 1-9.8 9.8c-1.72 0-3.28-.22-4.16-.36h0a4 4 0 0 0-.72-.1h-.09c-.15 0-.31.03-.64.08-2.46.43-3.69.65-4.4.03a2 2 0 0 1-.36-.4c-.53-.78-.17-1.98.54-4.37l.08-.24h0c.15-.52.23-.78.25-1v-.04c.01-.2-.05-.6-.16-1.38q-.13-.79-.14-2.02a9.8 9.8 0 0 1 19.6 0'
+        stroke='currentColor'
+      />
+      <path d='M8.17 8.81h8.71' stroke='currentColor' />
+      <path d='M12.45 8.81v-2.4' stroke='currentColor' />
+      <path d='m10.8 12.02 5.3 5.3' stroke='currentColor' />
+      <path
+        d='M8.88 16.66a10 10 0 0 0 4.35-3.18c1.25-1.56 1.54-2.69 2.01-4.63'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

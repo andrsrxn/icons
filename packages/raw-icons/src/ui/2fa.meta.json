@@ -9,6 +9,7 @@
     "otp",
     "login",
     "identity",
-    "password"
+    "password",
+    "badge"
   ]
 }

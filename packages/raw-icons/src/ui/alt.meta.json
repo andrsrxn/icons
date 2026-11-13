@@ -9,6 +9,7 @@
     "alternative",
     "text",
     "image",
-    "description"
+    "description",
+    "badge"
   ]
 }

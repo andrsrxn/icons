@@ -1,0 +1,55 @@
+import type { Icon } from './types'
+
+export const IconFileImage: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-file-image'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M11.7 1.75c-3.73.04-5.6.06-6.76 1.23S3.78 6.02 3.78 9.75v4.67c0 2.4 0 3.6.68 3.83.67.23 1.41-.7 2.9-2.59l.07-.09c.74-.94 1.11-1.4 1.6-1.4.5 0 .85.49 1.57 1.45l1.18 1.58c.55.74.83 1.11 1.21 1.18l.18.02c.39 0 .73-.31 1.41-.94l.05-.04c.51-.47.77-.7 1.07-.75h.26c.3.03.57.26 1.1.71 1.14 1 1.71 1.5 2.2 1.38a1 1 0 0 0 .37-.16c.41-.3.42-1.05.44-2.57l.1-7.48H13.4V1.74z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M3.78 14.26V9.2c0-3.15 0-4.72.84-5.8a4 4 0 0 1 .71-.72c1.09-.83 2.66-.83 5.81-.83 1.37 0 2.05 0 2.68.21l.47.2c.6.29 1.08.77 2.05 1.74l.84.84.58.56c1.2 1.16 1.79 1.74 2.1 2.49.32.74.32 1.58.32 3.24v3.14c0 3.78 0 5.66-1.17 6.83-1.18 1.17-3.06 1.17-6.83 1.17h-.4c-3.77 0-5.65 0-6.82-1.17-1.18-1.17-1.18-3.05-1.18-6.83'
+        stroke='currentColor'
+      />
+      <path
+        d='M13.2 2.35v2.46c0 1.89 0 2.83.58 3.42.59.58 1.53.58 3.42.58h2.46'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.48 13.12a.58.58 0 1 1-1.15 0 .58.58 0 0 1 1.15 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m4.36 19.97 3.5-5.01c.6-.85.9-1.28 1.3-1.27s.67.46 1.22 1.34l1.55 2.54c.47.77.7 1.16 1.08 1.2.37.03.95-.63 1.57-1.3.5-.53.9-.94 1.22-.94s.58.25 1.1.76l2.7 2.68'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

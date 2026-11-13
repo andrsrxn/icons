@@ -1,0 +1,14 @@
+{
+  "categories": [
+    "weather",
+    "medical"
+  ],
+  "tags": [
+    "temperature",
+    "humidity",
+    "climate",
+    "moisture",
+    "dew",
+    "degrees"
+  ]
+}

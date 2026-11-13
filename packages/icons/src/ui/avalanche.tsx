@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconAvalanche: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-avalanche'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M3.33 9.27H4l2.55.78 4.01-1.64 2.01 5.79c1.27 3.63 1.9 5.45 1 6.7-.9 1.27-2.82 1.27-6.66 1.27H3.33z'
+        fill='currentColor'
+      />
+      <path
+        d='M3.94 1.82c5.1 0 8.11 9.43 9.51 15.45.5 2.18.76 3.27.11 4.09s-1.81.82-4.15.82H3.7'
+        stroke='currentColor'
+      />
+      <path d='M9.98 8.67s-1.87 1.38-3.52 1.38c-1.1 0-1.93-.59-2.8-1.06' stroke='currentColor' />
+      <path d='M13.89 19.05a2.8 2.8 0 1 0 4.36-3.17' stroke='currentColor' />
+      <path
+        d='M18.19 15.93c1.26 0 2.29-1.2 2.29-2.67 0-1.48-1.03-2.67-2.3-2.67q-.66 0-1.2.4'
+        stroke='currentColor'
+      />
+      <path d='M16.28 12.53a2.39 2.39 0 1 0-4.45-1.13' stroke='currentColor' />
+      <path d='m13.36 5.7-1.2-3.04' stroke='currentColor' />
+      <path d='M17.48 6.86 16.4 3.79' stroke='currentColor' />
+    </svg>
+  )
+}

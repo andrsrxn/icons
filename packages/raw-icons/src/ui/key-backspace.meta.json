@@ -1,14 +1,17 @@
 {
   "categories": [
-    "development"
+    "devices",
+    "editor"
   ],
   "tags": [
-    "password",
-    "access",
     "keyboard",
     "delete",
+    "x",
+    "button",
+    "erase",
     "remove",
-    "erase"
+    "subtract",
+    "input"
   ],
   "rtl": true
 }

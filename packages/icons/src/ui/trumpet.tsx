@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconTrumpet: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-trumpet'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='m9.86 9.68.1.01H21.3c.47 0 .7 0 .86.15.14.15.14.39.14.86v1.25c0 .48 0 .72-.14.86s-.39.15-.86.15H9.96l-.09.02-2.95.52-.2.04-.18.1-3.24 2.13c-.69.45-1.03.67-1.3.53-.26-.14-.26-.55-.26-1.37L1.7 7.62c0-.84 0-1.26.26-1.4.27-.15.61.09 1.31.56l3.1 2.12.18.1.2.05z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M22.24 9.66H9.49c-.95 0-1.83-.11-2.63-.52a29 29 0 0 1-3.81-2.55c-.55-.42-1.35-.03-1.35.65v8.08c0 .68.8 1.07 1.35.65a29 29 0 0 1 3.81-2.55c.78-.4 1.52-.33 2.55-.48h12.83'
+        stroke='currentColor'
+      />
+      <path d='M9.62 17.83v-4.75' stroke='currentColor' />
+      <path d='M7.65 17.83h10a2.37 2.37 0 1 0 0-4.75h-.04' stroke='currentColor' />
+      <path d='M9.62 9.5V8.23' stroke='currentColor' />
+      <path d='M13.1 17.83v-4.75' stroke='currentColor' />
+      <path d='M13.1 9.5V8.23' stroke='currentColor' />
+      <path d='M16.58 17.83v-4.75' stroke='currentColor' />
+      <path d='M16.58 9.5V8.23' stroke='currentColor' />
+      <path d='M22.27 14.98V7.7' stroke='currentColor' />
+    </svg>
+  )
+}

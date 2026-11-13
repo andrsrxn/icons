@@ -10,6 +10,7 @@
     "login",
     "disabled",
     "inactive",
-    "hidden"
+    "hidden",
+    "badge"
   ]
 }

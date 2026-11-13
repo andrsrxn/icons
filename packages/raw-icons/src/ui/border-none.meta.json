@@ -1,12 +1,18 @@
 {
   "categories": [
-    "design"
+    "design",
+    "layout",
+    "editor"
   ],
   "tags": [
     "outline",
     "frame",
+    "table",
+    "cell",
     "clear",
     "remove",
-    "empty"
+    "empty",
+    "hidden",
+    "box"
   ]
 }

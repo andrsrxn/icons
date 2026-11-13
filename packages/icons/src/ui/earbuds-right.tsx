@@ -26,7 +26,7 @@ export const IconEarbudsRight: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path opacity='.2' d='M15.46 12.07a4.8 4.8 0 1 1 4.8-4.8v13.55h-4.8z' fill='currentColor' />
+      <path opacity='.2' d='M15.46 12.07a4.8 4.8 0 1 1 4.8-4.8v10.77h-4.8z' fill='currentColor' />
       <path d='M20.26 7.28a4.8 4.8 0 1 0-4.8 4.79' stroke='currentColor' />
       <path
         d='M20.26 7.07v12.05c0 .37 0 .55-.03.7a2 2 0 0 1-1.66 1.67c-.16.03-.34.03-.71.03s-.55 0-.7-.03a2 2 0 0 1-1.67-1.66c-.03-.16-.03-.34-.03-.71v-7.05'
@@ -38,6 +38,7 @@ export const IconEarbudsRight: Icon = ({
         stroke='currentColor'
       />
       <path d='M14.45 8.63v-2.7' stroke='currentColor' />
+      <path d='M20.26 18.17h-4.79' stroke='currentColor' />
     </svg>
   )
 }

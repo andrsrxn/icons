@@ -1,14 +1,19 @@
 {
   "categories": [
+    "design",
     "layout",
     "editor"
   ],
   "tags": [
-    "boundary",
-    "edge",
+    "outline",
+    "frame",
+    "stroke",
+    "table",
+    "cell",
     "trailing",
     "side",
-    "container",
+    "edge",
+    "boundary",
     "box"
   ],
   "rtl": true

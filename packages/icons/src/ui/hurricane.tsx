@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconHurricane: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-hurricane'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M4.1 9.4A7.9 7.9 0 0 1 12 1.5v3.1c0 .91 0 1.37.22 1.65.21.29.76.44 1.87.74A7.9 7.9 0 0 1 12 22.5v-3.1c0-.91 0-1.37-.22-1.65-.21-.29-.76-.44-1.87-.74a7.9 7.9 0 0 1-5.8-7.61m7.9 4.8a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M10.02 1.75a7.9 7.9 0 0 0-.1 15.26c1.1.3 1.65.45 1.86.74s.22.74.22 1.65v1.1c0 .97 0 1.46.39 1.76s.79.2 1.59-.01a7.9 7.9 0 0 0 .1-15.26c-1.1-.3-1.65-.45-1.86-.74S12 5.51 12 4.6V3.5c0-.97 0-1.46-.39-1.76s-.79-.2-1.59.01'
+        stroke='currentColor'
+      />
+      <circle cx='12' cy='12' r='2.2' stroke='currentColor' />
+    </svg>
+  )
+}
