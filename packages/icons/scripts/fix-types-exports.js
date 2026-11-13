@@ -29,7 +29,7 @@ const FILES = [
   path.resolve(__dirname, '../dist/flags/types.d.ts'),
 ]
 
-function transformTypes(content) {
+export function transformTypes(content) {
   const exportMatch = content.match(/export\s*\{\s*([^}]+)\s*\};?/u)
 
   if (!exportMatch) {
@@ -60,16 +60,22 @@ function transformTypes(content) {
   return result
 }
 
-for (const file of FILES) {
-  if (!fs.existsSync(file)) {
-    continue
-  }
+function main() {
+  for (const file of FILES) {
+    if (!fs.existsSync(file)) {
+      continue
+    }
 
-  const source = fs.readFileSync(file, 'utf8')
-  const transformed = transformTypes(source)
+    const source = fs.readFileSync(file, 'utf8')
+    const transformed = transformTypes(source)
 
-  if (source !== transformed) {
-    fs.writeFileSync(file, transformed, 'utf8')
-    console.log(`Fixed exports: ${path.relative(process.cwd(), file)}`)
+    if (source !== transformed) {
+      fs.writeFileSync(file, transformed, 'utf8')
+      console.log(`Fixed exports: ${path.relative(process.cwd(), file)}`)
+    }
   }
+}
+
+if (process?.argv?.[1]?.endsWith('fix-types-exports.js')) {
+  main()
 }
