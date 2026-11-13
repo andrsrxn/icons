@@ -38,7 +38,7 @@ export const IconCurrencyGelCircle: Icon = ({
         d='M16.9 10.23a4.6 4.6 0 0 0-4.47-3.06c-2.7 0-5.18 1.43-5.18 5 0 3.56 2.83 5.03 5.18 5.03'
         stroke='currentColor'
       />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -36,7 +36,7 @@ export const IconCurrencyJpyCircle: Icon = ({
       <path d='M12 12.74v5.93' stroke='currentColor' />
       <path d='M9.26 15.48h5.47' stroke='currentColor' />
       <path d='M8.5 12.62h7' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -27,7 +27,7 @@ export const IconCurrencyVnd: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M15.33 9.64h-4.98a4.59 4.59 0 0 0 0 9.18h2.37a2.6 2.6 0 0 0 2.61-2.6V1.66'
+        d='M15.33 9.64h-4.98a4.59 4.59 0 1 0 0 9.18h2.37a2.6 2.6 0 0 0 2.61-2.6V1.66'
         stroke='currentColor'
       />
       <path d='M10.55 4.96h7.68' stroke='currentColor' />

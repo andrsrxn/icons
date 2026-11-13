@@ -32,13 +32,13 @@ export const IconCurrencyVesCircle: Icon = ({
         fill='currentColor'
       />
       <path d='M6.64 16.98V7.02' stroke='currentColor' />
-      <path d='M6.71 7.02H8.8a2.42 2.42 0 0 1 0 4.83H6.71' stroke='currentColor' />
+      <path d='M6.71 7.02H8.8a2.42 2.42 0 0 1 0 4.84H6.71' stroke='currentColor' />
       <path d='M6.71 11.85H9.5a2.56 2.56 0 1 1 0 5.13H6.7' stroke='currentColor' />
       <path
         d='M18.2 12.3c-.15-.55-.9-.97-1.8-.97-.88 0-1.85.37-1.85 1.47 0 2.17 3.55.48 3.71 2.61.08 1.02-.95 1.57-1.85 1.57s-1.57-.42-1.86-.99'
         stroke='currentColor'
       />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -34,7 +34,7 @@ export const IconCurrencyZarCircle: Icon = ({
       <path d='M9.18 17.96V6.4' stroke='currentColor' />
       <path d='m14.9 17.96-3.27-5.2' stroke='currentColor' />
       <path d='M9.27 6.41h2.95a3.17 3.17 0 1 1 0 6.35H9.27' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

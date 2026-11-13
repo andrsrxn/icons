@@ -26,27 +26,17 @@ export const IconCurrencyMntCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <g clipPath='url(#a)'>
-        <path
-          opacity='.2'
-          d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
-          fill='currentColor'
-        />
-        <path d='M12 6.53V18.6' stroke='currentColor' />
-        <path d='M7.22 7.72v-1.2h9.56v1.2' stroke='currentColor' />
-        <path d='m9.22 12.86 5.55-3.2' stroke='currentColor' />
-        <path d='m9.4 15.94 5.19-3' stroke='currentColor' />
-        <path d='M11.82 19.24h.75' stroke='currentColor' />
-        <path
-          d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12'
-          stroke='currentColor'
-        />
-      </g>
-      <defs>
-        <clipPath id='a'>
-          <path fill='#fff' d='M0 0h24v24H0z' />
-        </clipPath>
-      </defs>
+      <path
+        opacity='.2'
+        d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
+        fill='currentColor'
+      />
+      <path d='M12 6.52v12.09' stroke='currentColor' />
+      <path d='M7.22 7.72v-1.2h9.56v1.2' stroke='currentColor' />
+      <path d='m9.22 12.86 5.55-3.2' stroke='currentColor' />
+      <path d='m9.4 15.94 5.19-3' stroke='currentColor' />
+      <path d='M11.82 19.24h.75' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

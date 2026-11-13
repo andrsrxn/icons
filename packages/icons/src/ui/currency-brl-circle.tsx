@@ -38,8 +38,8 @@ export const IconCurrencyBrlCircle: Icon = ({
       <path d='M15.83 17.06V6.94' stroke='currentColor' />
       <path d='M6.06 16.3V7.95' stroke='currentColor' />
       <path d='m10.2 16.3-2.36-3.76' stroke='currentColor' />
-      <path d='M6.13 7.95h2.13a2.3 2.3 0 0 1 0 4.6H6.13' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M6.13 7.95h2.13a2.3 2.3 0 1 1 0 4.6H6.13' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -27,7 +27,7 @@ export const IconCurrencyBwp: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path d='M7.54 2.81v18.38' stroke='currentColor' />
-      <path d='M7.54 2.81h5.27a5.11 5.11 0 0 1 0 10.23H7.54' stroke='currentColor' />
+      <path d='M7.54 2.81h5.27a5.11 5.11 0 1 1 0 10.23H7.54' stroke='currentColor' />
     </svg>
   )
 }

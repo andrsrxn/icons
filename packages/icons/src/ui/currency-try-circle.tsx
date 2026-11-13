@@ -35,7 +35,7 @@ export const IconCurrencyTryCircle: Icon = ({
       <path d='M10.5 18.36c3.43 0 5.8-1.99 5.8-5.35' stroke='currentColor' />
       <path d='m7.7 9.86 6.95-3.36' stroke='currentColor' />
       <path d='m7.7 12.65 6.95-3.32' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -35,7 +35,7 @@ export const IconCurrencyThbCircle: Icon = ({
       <path d='M8.76 6.66h3.82a2.6 2.6 0 0 1 0 5.18H8.76' stroke='currentColor' />
       <path d='M8.76 11.84h4.88a2.75 2.75 0 0 1 0 5.5H8.76' stroke='currentColor' />
       <path d='M11.8 18.86V5.14' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

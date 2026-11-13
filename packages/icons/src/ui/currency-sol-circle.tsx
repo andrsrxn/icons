@@ -45,7 +45,7 @@ export const IconCurrencySolCircle: Icon = ({
         d='M14.8 10.24H7.6c-.32 0-.47 0-.53.1s.02.24.19.51l1.6 2.67q.08.14.13.17t.22.02h7.21c.32 0 .47 0 .53-.1q.08-.13-.19-.5l-1.6-2.67q-.08-.14-.13-.17-.06-.04-.22-.03'
         stroke='currentColor'
       />
-      <circle cx='12' cy='11.98' r='10.22' transform='rotate(90 12 11.98)' stroke='currentColor' />
+      <circle cx='12' cy='11.98' r='10.22' stroke='currentColor' />
     </svg>
   )
 }

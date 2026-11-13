@@ -40,7 +40,7 @@ export const IconCurrencyNioCircle: Icon = ({
         d='M10.98 8.7s-.52-.63-2.02-.63S5.56 9.2 5.56 12c0 2.78 1.86 3.94 3.4 3.94 1.44 0 2.02-.6 2.02-.6'
         stroke='currentColor'
       />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

@@ -28,7 +28,7 @@ export const IconCurrencyIls: Icon = ({
       focusable={false}>
       <path d='M2.83 4.3v15.4' stroke='currentColor' />
       <path
-        d='M2.83 4.3h2.22c4.67 0 7 0 8.46 1.43l.06.06C15 7.24 15 9.58 15 14.25'
+        d='M2.83 4.3h2.22c4.67 0 7 0 8.46 1.43l.06.05C15 7.24 15 9.58 15 14.25'
         stroke='currentColor'
       />
       <path

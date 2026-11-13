@@ -31,12 +31,9 @@ export const IconCurrencyGtqCircle: Icon = ({
         d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
         fill='currentColor'
       />
-      <path
-        d='M6.24 11.74A5.75 5.75 0 0 0 12 17.51a5.76 5.76 0 1 0-5.76-5.77'
-        stroke='currentColor'
-      />
+      <path d='M6.24 11.74a5.76 5.76 0 1 1 11.53 0 5.76 5.76 0 0 1-11.53 0' stroke='currentColor' />
       <path d='m12.72 13.07 4.85 4.08' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

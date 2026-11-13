@@ -35,7 +35,7 @@ export const IconCurrencyAngCircle: Icon = ({
       <path d='M11.8 13.68v2.55a1.8 1.8 0 1 1-3.6 0v-.33' stroke='currentColor' />
       <path d='M11.8 10.32V7.98c0-1.1.9-2 2-2h.4c.88 0 1.6.72 1.6 1.61' stroke='currentColor' />
       <path d='M13.98 9.74H9.6' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

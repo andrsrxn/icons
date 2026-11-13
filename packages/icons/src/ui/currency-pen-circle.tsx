@@ -41,7 +41,7 @@ export const IconCurrencyPenCircle: Icon = ({
         d='M11.57 9.16c-.23-.84-1.3-1.49-2.55-1.49-1.26 0-2.63.56-2.63 2.26 0 3.32 5.03.73 5.25 4 .11 1.56-1.34 2.4-2.62 2.4a2.8 2.8 0 0 1-2.63-1.52'
         stroke='currentColor'
       />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

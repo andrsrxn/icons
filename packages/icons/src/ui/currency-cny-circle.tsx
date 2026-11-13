@@ -38,7 +38,7 @@ export const IconCurrencyCnyCircle: Icon = ({
       />
       <path d='M6.01 16.1a4.9 4.9 0 0 0 4.18-4.89' stroke='currentColor' />
       <path d='M6.01 10.6H18' stroke='currentColor' />
-      <path d='M1.7 12A10.3 10.3 0 0 0 12 22.31 10.31 10.31 0 1 0 1.7 12' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }

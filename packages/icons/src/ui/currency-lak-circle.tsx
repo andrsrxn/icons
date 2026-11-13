@@ -26,26 +26,16 @@ export const IconCurrencyLakCircle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <g clipPath='url(#a)'>
-        <path
-          opacity='.2'
-          d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
-          fill='currentColor'
-        />
-        <path d='M9.25 18.34V5.66' stroke='currentColor' />
-        <path d='M15.7 18.34 9.73 12' stroke='currentColor' />
-        <path d='m9.84 12 5.85-6.34' stroke='currentColor' />
-        <path d='M6.57 12H16.8' stroke='currentColor' />
-        <path
-          d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12'
-          stroke='currentColor'
-        />
-      </g>
-      <defs>
-        <clipPath id='a'>
-          <path fill='#fff' d='M0 0h24v24H0z' />
-        </clipPath>
-      </defs>
+      <path
+        opacity='.2'
+        d='M1.69 12a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
+        fill='currentColor'
+      />
+      <path d='M9.25 18.34V5.66' stroke='currentColor' />
+      <path d='M15.7 18.34 9.73 12' stroke='currentColor' />
+      <path d='m9.84 12 5.85-6.34' stroke='currentColor' />
+      <path d='M6.57 12H16.8' stroke='currentColor' />
+      <path d='M1.7 12a10.31 10.31 0 1 1 20.61 0A10.31 10.31 0 0 1 1.7 12' stroke='currentColor' />
     </svg>
   )
 }
