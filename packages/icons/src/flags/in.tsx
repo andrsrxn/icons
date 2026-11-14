@@ -23,6 +23,7 @@ export const IconFlagIN: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
+      fill='none'
       data-slot='icon-flag-in'
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
@@ -87,7 +88,7 @@ export const IconFlagIN: FlagIcon = ({
           <path fill='url(#in-c)' d='M21 0H0v5h21z' />
           <path fill='url(#in-d)' d='M21 10H0v5h21z' />
           <path fill='url(#in-e)' d='M21 5H0v5h21z' />
-          <path fill='#181a93' fillOpacity='.15' d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3' />
+          <path fill='#181a93' fillOpacity='.2' d='M10.5 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3' />
           <path
             fill='#181a93'
             d='M10.5 9.5a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0-.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3'

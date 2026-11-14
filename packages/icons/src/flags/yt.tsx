@@ -23,6 +23,7 @@ export const IconFlagYT: FlagIcon = ({
       version='1.1'
       xmlns='http://www.w3.org/2000/svg'
       xmlnsXlink='http://www.w3.org/1999/xlink'
+      fill='none'
       data-slot='icon-flag-yt'
       preserveAspectRatio={cover ? 'xMidYMid slice' : preserveAspectRatio}
       className={`icon-flag ${className ?? ''}`.trim()}
