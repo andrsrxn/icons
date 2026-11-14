@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconChevronRightDoubleCircle: Icon = ({
+export const IconChevronsUp: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconChevronRightDoubleCircle: Icon = ({
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={strokeWidth}
-      data-slot='icon-ui-chevron-right-double-circle'
+      data-slot='icon-ui-chevrons-up'
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}
       role={isLabelled ? 'img' : undefined}
@@ -27,20 +27,11 @@ export const IconChevronRightDoubleCircle: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        opacity='.2'
-        d='M1.69 12.13a10.31 10.31 0 1 0 20.62 0 10.31 10.31 0 0 0-20.62 0'
-        fill='currentColor'
-      />
-      <path
-        d='M1.7 12.13a10.31 10.31 0 1 1 20.61 0 10.31 10.31 0 0 1-20.62 0'
+        d='m4.68 11.3 4.48-4.49c1.34-1.33 2-2 2.83-2s1.5.67 2.83 2l4.5 4.5'
         stroke='currentColor'
       />
       <path
-        d='m13.33 6.78 2.39 2.39c1.33 1.33 2 2 2 2.83 0 .82-.66 1.5-2 2.83l-2.39 2.39'
-        stroke='currentColor'
-      />
-      <path
-        d='m8 6.78 2.4 2.39c1.33 1.33 2 2 2 2.83 0 .82-.67 1.5-2 2.83L8 17.22'
+        d='m4.68 18.77 4.48-4.49c1.34-1.33 2-2 2.83-2s1.5.67 2.83 2l4.5 4.5'
         stroke='currentColor'
       />
     </svg>

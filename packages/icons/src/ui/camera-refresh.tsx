@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconCameraFlip: Icon = ({
+export const IconCameraRefresh: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconCameraFlip: Icon = ({
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={strokeWidth}
-      data-slot='icon-ui-camera-flip'
+      data-slot='icon-ui-camera-refresh'
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}
       role={isLabelled ? 'img' : undefined}
@@ -28,13 +28,13 @@ export const IconCameraFlip: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
+        d='m1.83 9.28.01-.6a3 3 0 0 1 2.73-2.72c.13-.02.29-.02.6-.02h.44c.82 0 1.58-.4 2.05-1.07A2.5 2.5 0 0 1 9.71 3.8h4.2a3 3 0 0 1 2.22 1.07l.11.12a3 3 0 0 0 2.28.95h.14c.47 0 .7 0 .9.03a3 3 0 0 1 2.58 2.58c.03.2.03.43.03.9v4.78c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12zM12 17.08a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2'
         fillRule='evenodd'
         clipRule='evenodd'
-        d='M7.66 4.87a2.5 2.5 0 0 1-2.05 1.07h-.44c-.31 0-.47 0-.6.02a3 3 0 0 0-2.73 2.72v5.55c0 2.83 0 4.24.87 5.12.88.88 2.3.88 5.12.88h8.34c2.83 0 4.24 0 5.12-.88s.88-2.3.88-5.12V9.45c0-.47 0-.7-.03-.9a3 3 0 0 0-2.57-2.58c-.2-.03-.44-.03-.9-.03h-.31A3 3 0 0 1 16.24 5l-.1-.12-.11-.12a3 3 0 0 0-2.12-.95H9.7c-.8 0-1.57.4-2.04 1.07'
         fill='currentColor'
       />
       <path
-        d='M1.83 9.2v-.12a3 3 0 0 1 2.95-2.95h.29c.97 0 1.88-.52 2.37-1.36s1.4-1.35 2.38-1.35h4.33c.98 0 1.9.51 2.4 1.35a2.8 2.8 0 0 0 2.4 1.36h.27a3 3 0 0 1 2.95 3.07v5.03c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12z'
+        d='M12 3.42h2.15c.98 0 1.9.51 2.4 1.35a2.8 2.8 0 0 0 2.4 1.36h.27a3 3 0 0 1 2.95 2.94v5.16c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V9.08a3 3 0 0 1 2.95-2.95h.29c.97 0 1.88-.52 2.37-1.36s1.4-1.35 2.38-1.35z'
         stroke='currentColor'
       />
       <path d='M15.83 11.25C14.8 9.8 13.57 8.8 11.81 8.8q-2.63 0-3.85 2.28' stroke='currentColor' />

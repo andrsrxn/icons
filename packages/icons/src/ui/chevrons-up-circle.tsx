@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconChevronUpDoubleCircle: Icon = ({
+export const IconChevronsUpCircle: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconChevronUpDoubleCircle: Icon = ({
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={strokeWidth}
-      data-slot='icon-ui-chevron-up-double-circle'
+      data-slot='icon-ui-chevrons-up-circle'
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}
       role={isLabelled ? 'img' : undefined}

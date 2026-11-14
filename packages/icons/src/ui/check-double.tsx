@@ -27,13 +27,10 @@ export const IconCheckDouble: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m1.68 12.89 2.44 3.35c1.12 1.53 1.67 2.3 2.44 2.3.76 0 1.32-.77 2.42-2.3l7.86-10.9'
+        d='m1.64 12.87 2.25 3.1c1.11 1.52 1.67 2.29 2.44 2.28.76 0 1.32-.76 2.42-2.3l7.46-10.33'
         stroke='currentColor'
       />
-      <path
-        d='m7.16 12.89 2.44 3.35c1.11 1.53 1.67 2.3 2.43 2.3s1.32-.77 2.43-2.3l7.86-10.9'
-        stroke='currentColor'
-      />
+      <path d='M22.32 5.62 13.6 17.7c-.57.8-1.76.8-2.33 0l-.34-.48' stroke='currentColor' />
     </svg>
   )
 }

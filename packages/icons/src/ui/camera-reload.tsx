@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconCameraReload: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-camera-reload'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='m1.83 9.28.01-.6a3 3 0 0 1 2.73-2.72c.13-.02.29-.02.6-.02h.44c.82 0 1.58-.4 2.05-1.07A2.5 2.5 0 0 1 9.71 3.8h4.2a3 3 0 0 1 2.22 1.07l.11.12a3 3 0 0 0 2.28.95h.14c.47 0 .7 0 .9.03a3 3 0 0 1 2.58 2.58c.03.2.03.43.03.9v4.78c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12zm9.92 8.16a4.15 4.15 0 1 0 0-8.3 4.15 4.15 0 0 0 0 8.3'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M12 3.42h2.15c.98 0 1.9.51 2.4 1.35a2.8 2.8 0 0 0 2.4 1.36h.27a3 3 0 0 1 2.95 2.94v5.16c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88H7.83c-2.83 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V9.08a3 3 0 0 1 2.95-2.95h.29c.97 0 1.88-.52 2.37-1.36s1.4-1.35 2.38-1.35z'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.75 11.36c-1.43-1.88-2.84-2.23-3.98-2.23a4.17 4.17 0 1 0 2.92 7.13'
+        stroke='currentColor'
+      />
+      <path d='M16.3 8.71v.2c0 1.41 0 2.12-.44 2.56s-1.15.44-2.56.44h-.2' stroke='currentColor' />
+    </svg>
+  )
+}

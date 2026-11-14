@@ -1,6 +1,6 @@
 import type { Icon } from './types'
 
-export const IconChevronStartDouble: Icon = ({
+export const IconChecks: Icon = ({
   size = 24,
   strokeWidth = 1.5,
   className,
@@ -19,7 +19,7 @@ export const IconChevronStartDouble: Icon = ({
       strokeLinecap='round'
       strokeLinejoin='round'
       strokeWidth={strokeWidth}
-      data-slot='icon-ui-chevron-start-double'
+      data-slot='icon-ui-checks'
       className={`icon-ui ${className ?? ''}`.trim()}
       {...props}
       role={isLabelled ? 'img' : undefined}
@@ -27,11 +27,11 @@ export const IconChevronStartDouble: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m11.33 19.32-4.5-4.48c-1.33-1.34-2-2-2-2.83s.67-1.5 2-2.83l4.5-4.5'
+        d='m1.68 12.89 2.44 3.35c1.12 1.53 1.67 2.3 2.44 2.3.76 0 1.32-.77 2.42-2.3l7.86-10.9'
         stroke='currentColor'
       />
       <path
-        d='m18.8 19.32-4.5-4.48c-1.33-1.34-2-2-2-2.83s.67-1.5 2-2.83l4.5-4.5'
+        d='m7.16 12.89 2.44 3.35c1.11 1.53 1.67 2.3 2.43 2.3s1.32-.77 2.43-2.3l7.86-10.9'
         stroke='currentColor'
       />
     </svg>
