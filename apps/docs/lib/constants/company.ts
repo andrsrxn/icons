@@ -16,11 +16,11 @@ export const COMPANY = {
       new: 'https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml',
     },
     discussions: { showAndTell: 'https://github.com/andrsrxn/icons/discussions/16' },
-    version: '8',
     license: 'MIT',
     licenceUrl: 'https://github.com/andrsrxn/icons/blob/main/LICENSE',
     skills: 'https://github.com/andrsrxn/icons/tree/main/skills',
     npm: 'https://www.npmjs.com/package/@andrsrxn/icons',
+    sponsor: 'https://github.com/sponsors/andrsrxn',
   },
   figma: {
     plugin: 'https://www.figma.com/community/plugin/1682600602773496009',
