@@ -14,6 +14,8 @@ import {
   IconFaceSparkle,
   IconFlame,
   IconHandPointer,
+  IconHeart,
+  IconHeartFilled,
   IconHeartHandshake,
   IconLike,
   IconMessageDots,
@@ -95,7 +97,6 @@ export const HeroSection = () => {
           </TabsContent>
         </Tabs>
         <div className='flex justify-center gap-2 gap-y-3 flex-wrap'>
-          <Badge variant='outline'>v{COMPANY.repo.version}</Badge>
           <Badge variant='outline'>No dependencies</Badge>
           <Badge variant='outline'>ESM only</Badge>
           <Badge variant='outline'>Commercial use</Badge>
@@ -110,9 +111,36 @@ export const HeroSection = () => {
             }
             variant='outline'
             className='dark group [a]:hover:text-white dark:bg-white dark:hover:bg-white dark:[a]:hover:text-black dark:[a]:text-black'>
-            <IconStar className='group-hover:hidden text-amber-300 dark:text-amber-500' />
-            <IconStarFilled className='group-hover:inline-block hidden text-amber-300 dark:text-amber-500' />{' '}
-            Star on Github
+            <IconStar
+              strokeWidth={2}
+              className='group-hover:hidden text-amber-300 dark:text-amber-500'
+            />
+            <IconStarFilled
+              strokeWidth={2}
+              className='group-hover:inline-block hidden text-amber-300 dark:text-amber-500'
+            />{' '}
+            Give a Star
+          </Badge>
+          <Badge
+            render={
+              <Link
+                href={COMPANY.repo.sponsor}
+                rel='noopener noreferrer'
+                target='_blank'
+                prefetch={false}
+              />
+            }
+            variant='outline'
+            className='dark group [a]:hover:text-white dark:bg-white dark:hover:bg-white dark:[a]:hover:text-black dark:[a]:text-black'>
+            <IconHeart
+              strokeWidth={2}
+              className='group-hover:hidden text-pink-300 dark:text-pink-500'
+            />
+            <IconHeartFilled
+              strokeWidth={2}
+              className='group-hover:inline-block hidden text-pink-300 dark:text-pink-500'
+            />{' '}
+            Sponsor
           </Badge>
         </div>
         <div
