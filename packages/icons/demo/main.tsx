@@ -61,6 +61,18 @@ const App = () => {
         </div>
       </div>
 
+      <div className='icon-grid-category' dir='ltr'>
+        <h2>RTL</h2>
+        <div className='icon-grid'>
+          <div dir='rtl'>
+            <div dir='ltr'>
+              <div dir='rtl'>
+                <icons.IconTextParagraph />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className='icon-grid-category'>
         <h2>UI Icons</h2>
         <div className='icon-grid'>{uiIcons}</div>
