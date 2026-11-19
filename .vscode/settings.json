@@ -1,6 +1,7 @@
 {
   "typescript.tsdk": "node_modules\\typescript\\lib",
   "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
     "source.organizeImports": "never",
     "source.organizeImports.biome": "explicit",
     "source.removeUnusedImports": "explicit",
