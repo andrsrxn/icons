@@ -11,9 +11,9 @@
 [![Project CI](https://shieldcn.dev/github/andrsrxn/icons/ci.svg?variant=secondary&size=xs)](https://github.com/andrsrxn/icons/actions)
 [![Dependency count](https://shieldcn.dev/badge/Dependency%20count-0.svg?variant=secondary&split=true&size=xs)](https://npmgraph.js.org/?q=%40andrsrxn%2Ficons)
 
-React icon library with 3,000+ duotone icons and 250+ flags.
+Duotone icon library with 3,000+ UI icons and 250+ minimal flags.
 <br />
-Smooth, RTL-aware, and optimized SVGs.
+Smooth, RTL-aware, and optimized.
 
 [Documentation](https://icons.andrsrxn.com/docs) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [npm](https://www.npmjs.com/package/@andrsrxn/icons)
 
@@ -40,8 +40,8 @@ Most libraries only offer outline or solid variants, some duotone implementation
 
 ## Groups
 
-- **UI**: Duotone icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: Simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`IconFlagGT`, `IconFlagUS`), the exceptions are `IconFlagLGTB` and continent flags, which have a `C` prefix (`IconFlagCAF` for Africa, `IconFlagCNA` for North America, and so on); treated as image assets with country code as `aria-label` included. (aspect ratio 3:2)
+- **UI**: Functional icons for apps, each with its own preview image. (aspect ratio 1:1)
+- **Flags**: Simple and minimal country flags, named with ISO 3166-1 alpha-2 code. The exceptions are `lgbt` and continent flags, which are prefixed with `c`. Treated as image assets. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app), [theSVG](https://thesvg.org), or [Simple Icons](https://simpleicons.org).
 
@@ -51,7 +51,7 @@ Most libraries only offer outline or solid variants, some duotone implementation
 
 ## Contributing
 
-We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml).
+Currently, we do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml).
 
 ## Support
 

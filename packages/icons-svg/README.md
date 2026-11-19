@@ -3,9 +3,9 @@
 
 # andrsrxn/icons-svg
 
-Framework-agnostic icon library with 3,000+ duotone icons and 250+ flags.
+Framework-agnostic duotone icon library with 3,000+ UI icons and 250+ minimal flags.
 <br />
-Smooth, RTL-aware, and optimized SVGs.
+Smooth, RTL-aware, and optimized.
 
 [Documentation](https://icons.andrsrxn.com/docs/svg) • [Figma plugin](https://www.figma.com/community/plugin/1682600602773496009) • [GitHub](https://github.com/andrsrxn/icons-svg)
 
@@ -45,7 +45,7 @@ You only need to be using `JavaScript`.
 
 ## Contributing
 
-We currently do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml).
+Currently, we do not accept contributions for new icons, but we appreciate suggestions and icon requests through [GitHub issues](https://github.com/andrsrxn/icons/issues/new?template=icon-request.yml).
 
 ## Support
 

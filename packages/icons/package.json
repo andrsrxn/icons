@@ -4,7 +4,7 @@
   "publishConfig": {
     "access": "public"
   },
-  "description": "React icon library with 3,000+ duotone icons and 250+ flags. Smooth, RTL-aware, and optimized SVGs.",
+  "description": "React duotone icon library with 3,000+ UI icons and 250+ minimal flags. Smooth, RTL-aware, and optimized.",
   "type": "module",
   "license": "MIT",
   "author": {
