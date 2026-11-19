@@ -280,6 +280,16 @@ Continent flags use the `C` prefix followed by the continent abbreviation.
 
 ---
 
+## Performance
+
+If the app is using Next.js, optimize the package on the `next.config.ts`:
+
+```ts
+experimental: {
+  optimizePackageImports: ['@andrsrxn/icons']
+}
+```
+
 ## RTL support
 
 ### Setup
