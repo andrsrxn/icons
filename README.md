@@ -41,7 +41,7 @@ Most libraries only offer outline or solid variants, some duotone implementation
 ## Groups
 
 - **UI**: Functional icons for apps, each with its own preview image. (aspect ratio 1:1)
-- **Flags**: Simple and minimal country flags, named with ISO 3166-1 alpha-2 code. The exceptions are `lgbt` and continent flags, which are prefixed with `c`. Treated as image assets. (aspect ratio 3:2)
+- **Flags**: Simple and minimal country flags, named with ISO 3166-1 alpha-2 code (`gt`, `us`). The exceptions are `lgbt` and continent flags, which are prefixed with `c`. Treated as image assets. (aspect ratio 3:2)
 
 > **Notice**: We do not provide any brand or logo icons, as we are purely an icon library. If you need such icons, we recommend checking out [SVGL](https://svgl.app), [theSVG](https://thesvg.org), or [Simple Icons](https://simpleicons.org).
 

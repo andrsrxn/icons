@@ -1,5 +1,132 @@
 # @andrsrxn/icons
 
+## 8.0.0
+
+### Major Changes
+
+- [`32fffd1`](https://github.com/andrsrxn/icons/commit/32fffd1fae47888eac5e38a35dc62beadb559048) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Restrict accessibility props for UI icons and flag icons to establish consistent, internally managed accessibility behavior.
+  
+  - **UI icons**
+    - Remove `role`, `aria-hidden`, `focusable`, and `aria-labelledby` from the public `IconProps` type.
+    - UI icons are decorative by default and hidden from the accessibility tree.
+    - Providing a non-empty `aria-label` makes the icon accessible with `role="img"`.
+  
+  - **Flag icons**
+    - Remove `role`, `focusable`, and `aria-labelledby` from the public `FlagIconProps` type.
+    - Flags are informative by default, using their country code as the fallback accessible label.
+    - Consumers can customize the accessible name through `aria-label` or make a flag decorative using `aria-hidden`.
+  
+  Accessibility attributes are now managed internally to ensure consistent behavior and prevent consumers from overriding the intended accessibility semantics.
+  
+  All icons are now not focusable by default.
+  
+  ```tsx
+  // Decorative icon (default), set aria-hidden to true, do not set role or aria-label.
+  <IconSearch aria-label="Search" />
+  
+  // Informational icon, automatically set role to 'img', and removes aria-hidden.
+  <IconSearch aria-label="Search" />
+  ```
+
+- [`9aaed5b`](https://github.com/andrsrxn/icons/commit/9aaed5b6978acccacc7804183007d6da17a4b4d1) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Renamed the following icons:
+  
+  - `layer` to `layers-one`
+  - `layer-half` to `layers-two`
+  - `layers` to `layers-three`
+  - `chevron-first` to `chevron-left-line`
+  - `chevron-last` to `chevron-right-line`
+  - `drop` to `droplet`
+  - `drop-off` to `droplet-off`
+  - `drops` to `droplets`
+  - `cloud-drop` to `cloud-droplet`
+  - `cloud-drops` to `cloud-droplets`
+  - `face-filter` to `face-smile-sparkle`
+  - `face-scan` to `face-smile-scan`
+  - `decimals-less` to `decimals-decrease`
+  - `decimals-more` to `decimals-increase`
+  - `book-download` to `book-out`
+  - `square-root` to `root`
+  - `volume-silent` to `volume-x`
+  - `crane` to `crane-tower`
+  - `camera-grid` to `grid-lines`
+  - `sound-off` to `sound-wave-x`
+  - `airplay` to `shareplay`
+  - `margins` to `margin`
+  - `camera-flip` to `camera-refresh`
+  - `check-double` to `checks`
+  - `annotations` to `annotation`
+  - `annotations-x` to `annotation-x`
+  - `annotations-minus` to `annotation-minus`
+  - `annotations-plus` to `annotation-plus`
+  - `timeline-annotations` to `timeline-annotation`
+  - `chevron-down-double` to `chevrons-down`
+  - `chevron-left-double` to `chevrons-left`
+  - `chevron-right-double` to `chevrons-right`
+  - `chevron-start-double` to `chevrons-start`
+  - `chevron-end-double` to `chevrons-end`
+  - `chevron-up-double` to `chevrons-up`
+  - `chevron-up-double-circle` to `chevrons-up-circle`
+  - `chevron-down-double-circle` to `chevrons-down-circle`
+  - `chevron-left-double-circle` to `chevrons-left-circle`
+  - `chevron-right-double-circle` to `chevrons-right-circle`
+  - `chevron-end-double-circle` to `chevrons-end-circle`
+  - `chevron-start-double-circle` to `chevrons-start-circle`
+  
+  ### Migration
+  
+  If your are using some of the icons above, you need to update your imports:
+  
+  ```diff
+  - import { face-filter } from '@andrsrxn/icons'
+  + import { face-smile-sparkle } from '@andrsrxn/icons'
+  ```
+
+- [`9aaed5b`](https://github.com/andrsrxn/icons/commit/9aaed5b6978acccacc7804183007d6da17a4b4d1) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Improved general styling:
+  
+  - Smoother corner radius for most icons (1,000+).
+  - The `-off` variants are now cut-off to the top-right corner for better recognition.
+  - Some icons were improved on spacing, alignment, and/or visual balance.
+
+- [`9aaed5b`](https://github.com/andrsrxn/icons/commit/9aaed5b6978acccacc7804183007d6da17a4b4d1) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Remove the following icons from RTL opt-out behavior:
+  
+  - `article`
+  - `license`
+
+### Minor Changes
+
+- [`9aaed5b`](https://github.com/andrsrxn/icons/commit/9aaed5b6978acccacc7804183007d6da17a4b4d1) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added more than 500 icons:
+  
+  `timer-restore`, `restore-controls`, `copyleft-off`, `chevron-up-line`, `chevron-down-line`, `chevron-end-line`, `chevron-start-line`, `text-letter-spacing`, `calendar-move`, `mouth`, `mouth-off`, `padding-left`, `margin-left`, `padding-right`, `padding-start`, `padding-end`, `padding-top`, `padding-bottom`, `margin-right`, `margin-start`, `margin-end`, `margin-bottom`, `margin-top`, `padding-vertical`, `padding-horizontal`, `margin-vertical`, `margin-horizontal`, `border-vertical`, `border-horizontal`, `file-database`, `battery-check`, `battery-x`, `battery-warning`, `file-md`, `file-mdx`, `markdown`, `api-off`, `markdown-off`, `agent-refresh`, `agent-reload`, `agent-swap`, `signal-status-high-filled`, `signal-status-medium-filled`, `signal-status-low-filled`, `squircle`, `squircle-dashed`, `terminal-scan`, `browser-search`, `resend-all`, `file-video`, `file-image`, `file-volume`, `file-asp`, `file-c`, `file-cs`, `file-http`, `file-java`, `file-less`, `file-php`, `file-ps1`, `file-py`, `file-r`, `file-rb`, `file-rs`, `file-scss`, `file-sass`, `file-sh`, `file-toml`, `file-go`, `file-yaml`, `file-vb`, `letter-a-circle`, `letter-a-square`, `letter-b-circle`, `letter-b-square`, `letter-c-circle`, `letter-c-square`, `letter-d-circle`, `letter-d-square`, `letter-e-circle`, `letter-g-circle`, `letter-h-circle`, `letter-f-circle`, `letter-e-square`, `letter-g-square`, `letter-h-square`, `letter-f-square`, `letter-i-circle`, `letter-k-circle`, `letter-l-circle`, `letter-j-circle`, `letter-i-square`, `letter-k-square`, `letter-l-square`, `letter-j-square`, `balloons`, `letter-m-circle`, `letter-r-circle`, `letter-v-circle`, `letter-o-circle`, `letter-t-circle`, `letter-x-circle`, `letter-p-circle`, `letter-u-circle`, `letter-y-circle`, `letter-n-circle`, `letter-s-circle`, `letter-w-circle`, `letter-m-square`, `letter-r-square`, `letter-v-square`, `letter-o-square`, `letter-t-square`, `letter-x-square`, `letter-p-square`, `letter-u-square`, `letter-y-square`, `letter-n-square`, `letter-s-square`, `letter-w-square`, `letter-z-circle`, `letter-z-square`, `letter-q-circle`, `letter-q-square`, `selection-search`, `earbuds-off`, `box-swap`, `brain-off`, `chart-quadrant`, `chart-radar`, `house-percent`, `cow`, `chart-correlation`, `chart-segmentation`, `list-prohibit`, `microphone-speaking`, `brain-search`, `brightness`, `brightness-auto`, `keyboard-brightness`, `keyboard-brightness-dim`, `message-translate`, `coin-swap`, `cdn`, `dns`, `gps`, `cdn-off`, `dns-off`, `not-available-circle`, `not-available-square`, `rss`, `folder-search`, `artboard-plus`, `artboard-minus`, `artboard-x`, `artboard-check`, `artboard-cursor`, `heat`, `globe-cursor`, `navigation-right`, `navigation-left`, `navigation-up`, `navigation-down`, `device-pc-shield`, `arrows-vertical-lines`, `arrows-horizontal-lines`, `lightning-auto`, `image-lock`, `scale-image`, `downscale-image`, `image-scale-dashed`, `image-downscale-dashed`, `house-device-laptop`, `calendar-event`, `calendar-list`, `headset-smile`, `printer-signal`, `printer-cloud`, `creative-commons-by`, `creative-commons-nc`, `creative-commons-nc-eu`, `creative-commons-nc-jp`, `creative-commons-sa`, `creative-commons-nd`, `creative-commons-public-domain`, `creative-commons-zero`, `creative-commons-share`, `creative-commons-remix`, `message-quotes`, `selection-camera`, `painting-art`, `code-sparkle`, `sim-card-one`, `sim-card-two`, `sim-card-x`, `sim-card-check`, `sim-card-warning`, `sd-card-check`, `sd-card-warning`, `remote-controller-signal`, `hotspot`, `reload-circle`, `connector`, `article-edit`, `news`, `file-info`, `file-cloud`, `file-history`, `folder-cloud`, `folder-history`, `text-underline-dashed`, `text-underline-dotted`, `text-direction-right`, `text-direction-left`, `arrows-up-down-circle`, `arrows-left-right-circle`, `nft`, `bowl`, `bowl-chopsticks`, `bowl-rice`, `bowl-scoop`, `bowl-scoops`, `car-front-droplet`, `car-police-front`, `car-police`, `caravan`, `trailer`, `direction-turn-right`, `direction-turn-left`, `sleep`, `volume-vibrate`, `closed-captioning-sparkle`, `shield-user`, `shield-plus`, `shield-minus`, `shield-star`, `shield-lightning`, `key-backspace-minus`, `user-map-pin`, `list-refresh`, `fog`, `earthquake`, `house-flood`, `hamburger-soda`, `briefcase-clock`, `house-night`, `house-day`, `house-moon`, `kidneys`, `lungs`, `apple-core`, `bells`, `book-cross`, `car-bump`, `cassette-tape`, `cassette-vhs`, `briefcase-forklift`, `dryer`, `excavator`, `face-eyes`, `face-kiss`, `face-kiss-heart`, `face-mask`, `money-clock`, `file-fragment`, `file-half`, `film-music`, `films`, `fish-bones`, `garage`, `gramophone`, `guitar-electric`, `guitars`, `honeypot`, `melon`, `hockey`, `hurricane`, `money-off`, `money-edit`, `music-note-off`, `music-notes-off`, `phone-sound-wave`, `new`, `pro`, `vod`, `store-twenty-four`, `store-twelve`, `shrimp`, `slider`, `avalanche`, `snowplow`, `spoon`, `cashier-off`, `slot-machine`, `store-off`, `calendar-one`, `toilet-paper`, `restroom`, `trumpet`, `keyboard-left`, `keyboard-right`, `keyboard-signal`, `mouse-signal`, `keyboard-floating`, `phone-keyboard`, `absolute-value`, `inhaler`, `thermometer-droplets`, `wind-warning`, `film-rating-g`, `film-rating-pg`, `film-rating-r`, `film-rating-pg-thirteen`, `film-rating-nc-seventeen`, `age-rating-three-plus`, `age-rating-seven-plus`, `age-rating-ten-plus`, `age-rating-twelve-plus`, `age-rating-thirteen-plus`, `age-rating-fifteen-plus`, `age-rating-sixteen-plus`, `age-rating-seventeen-plus`, `age-rating-eighteen-plus`, `age-rating-twenty-one-plus`, `chart-line-up-square`, `trend-up-square`, `trend-down-square`, `chart-line-down-square`, `age-rating-eighteen-plus-off`, `braile`, `chart-treemap`, `antenna`, `sequence`, `chart-heatmap`, `dark-mode`, `camera-refresh`, `camera-reload`, `calendar-range`, `calendar-reload`, `house-map-pin`, `megaphone-off`, `article-search`, `cloud-dashed`, `cloud-reload`, `brain-settings`, `connector-dashed`, `crop-image`, `currency-swap`, `face-smile-dashed`, `evacuate`, `eye-dashed`, `ice`, `field-mail`, `field-x`, `field-clock`, `field-calendar`, `field-otp`, `keyboard-numeric`, `plus-equal`, `minus-equal`, `asterisk-equal`, `divide-equal`, `move-vertical`, `move-horizontal`, `internal-link`, `printer-3d`, `house-prohibit`, `house-shield`, `aspect-ratio-16-9`, `aspect-ratio-9-16`, `aspect-ratio-1-85-1`, `aspect-ratio-3-2`, `aspect-ratio-4-3`, `panels-horizontal`, `panels-vertical`, `list-warning`, `clock-am`, `volume-bluetooth`, `clock-pm`, `text-underline-double`, `brain-question`, `hand-receiving-droplet`, `user-droplet`, `caduceus`, `reload-heart`, `heartbeat`, `teeths`, `restore-plus`, `reload-plus`, `refresh-x`, `restore-minus`, `reload-minus`, `refresh-minus`, `restore-x`, `reload-x`, `restore-check`, `reload-check`, `refresh-check`, `treadmill`, `experiment-check`, `experiment-x`, `experiment-warning`, `experiment-plus`, `experiment-minus`, `gravity`, `galaxy`, `thermometer-cloud`, `sandstorm`, `heart-square`, `star-square`, `mushroom`, `house-in`, `house-out`, `house-droplet`, `house-currency`, `money-check`, `money-check-edit`, `money-check-plus`, `money-check-x`, `money-check-in`, `money-check-out`, `money-check-warning`, `money-check-move`, `money-check-minus`, `house-user`, `token`, `croissant`, `currency-off`, `currency-circle-off`, `cloud-co2`, `leaf-refresh`, `box-heart`, `beer-off`, `door-lock`, `door-user`, `souvenir`, `aquarium`, `bed-bunk`, `obelisk`, `team-plus`, `drums`, `warehouse-snow`, `degree-360`, `degree-180`, `degree-90`, `degree-45`, `airplane-seat`, `direction-up`, `direction-turn-u`, `direction-turn-left-right`, `direction-up-merge`, `direction-down`, `square-measure`, `user-currency`, `curtains`, `air-conditioner-snow`, `dishes`, `dish-washer`, `dish`, `dish-droplet`, `calendar-droplet`, `thermometer-auto`, `thermometer-snowflake`, `gas-tank`, `powder`, `acorn`, `dron-seed`, `dron-light`, `ribbon`, `fireworks`, `user-pause`, `user-play`, `tree-pine-star`, `phone-clock`, `currency-circle-out`, `currency-circle-in`, `currency-circle-move`, `dependency`, `dot-circle-plus`, `dot-circle-x`, `dot-circle-move`, `dot-circle-in`, `dot-circle-out`, `dot-circle-check`, `money-check-check`, `ab-test`, `ease-spring`, `clock-warning`, `clock-plus`, `clock-minus`, `clock-x`, `clock-check`, `apple-scan`, `vram`, `build`, `hammer-brick`, `brick`, `concurrency`, `file-camera`, `git-remote`, `git-branches`, `git-commit-reset`, `git-commits`, `git-commit-plus`, `database-fragment`, `one-to-one`, `one-to-two`, `one-to-three`, `box-settings`, `browser-lightning`, `database-lightning`, `file-eye`, `box-lock`, `heart-user`, `arrows-start`, `arrows-end`, `arrows-right`, `arrows-left`, `arrows-up`, `arrows-down`, `user-key`, `lock-key`, `app-window-lock`, `chart-mode`, `chart-median`, `chart-mean`, `globe-ipv4`, `globe-ipv6`, `device-phone-wifi`, `vga-port`, `save-refresh`, `device-pc-off`, `file-user`, `microphone-vocal-off`, `device-phone-shake`, `camera-shake`, `iso`, `text-underline-wave`, `text-cap-height`, `thermometer-temperature`, `lightbulb-question`, and `scoreboard`.
+
+- [`9aaed5b`](https://github.com/andrsrxn/icons/commit/9aaed5b6978acccacc7804183007d6da17a4b4d1) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Added new RTL aware opt-in and opt-out icons:
+  
+  Opt-in:
+  
+  - `chevron-end-line`
+  - `chevron-start-line`
+  - `padding-start`
+  - `padding-end`
+  - `margin-start`
+  - `margin-end`
+  - `arrows-start`
+  - `arrows-end`
+  
+  Opt-out:
+  
+  - `text-paragraph`
+  - `text-paragraph-scan`
+  - `key-backspace-minus`
+
+### Patch Changes
+
+- [`a5e1cff`](https://github.com/andrsrxn/icons/commit/a5e1cffd0084a65e5bf028d95b9373a07a036bfd) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Fixed RTL icon flipping by using inherited CSS custom properties that flip in every nested direction.
+  
+  The implementation supports explicit `dir="rtl"` and `dir="ltr"` attributes, including nested direction overrides, without relying on CSS direction pseudo-class transformations.
+  
+  It doesn't use `dir(rtl)` selector because of incompatibilities with some CSS processors and style transformations, this is the most compatible way to do it.
+  
+  **Limitation:** Automatic direction detection through `dir="auto"` is not supported. RTL icon flipping requires an explicit `dir="rtl"` or `dir="ltr"` attribute on the relevant element or one of its ancestors. This limitation was already present in the previous implementation.
+
 ## 7.8.0
 
 ### Minor Changes
