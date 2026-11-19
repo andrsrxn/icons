@@ -228,7 +228,7 @@ export const IconGridSidebar = ({
                     })
                   }}>
                   <span className='flex items-center gap-2'>
-                    <cat.icon />
+                    <cat.icon className='opacity-80'/>
                     {cat.cat === 'ai' ? 'AI' : capitalize(cat.cat)}{' '}
                   </span>
                   <Badge variant='secondary' className='text-muted-foreground'>
