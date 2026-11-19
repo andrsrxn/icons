@@ -1,5 +1,11 @@
 # @andrsrxn/icons
 
+## 8.0.1
+
+### Patch Changes
+
+- [`3fa807e`](https://github.com/andrsrxn/icons/commit/3fa807ed47181d2643e1632f7ea1cdecc0280f10) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Removed unnecessary clip paths on `currency-` icons and `activity-circle`.
+
 ## 8.0.0
 
 ### Major Changes
