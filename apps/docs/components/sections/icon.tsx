@@ -98,8 +98,9 @@ export const IconSection = ({
   )
 
   const copyCodeExample = useMemo(
-    () => `import { ${componentName} } from '@andrsrxn/icons'\n\n<${componentName} />\n`,
-    [componentName]
+    () =>
+      `import { ${componentName} } from '@andrsrxn/icons${isUI ? '' : '/flags'}'\n\n<${componentName} />\n`,
+    [componentName, isUI]
   )
 
   const relatedIcons = useMemo(
