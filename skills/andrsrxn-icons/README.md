@@ -21,20 +21,6 @@ This skill provides instructions for AI agents working with `@andrsrxn/icons` in
 
 ---
 
-## What's included
-
-```
-skills/andrsrxn-icons/
-├── SKILL.md                                 # Core agent instructions and step-by-step procedure
-├── README.md                                # Skill overview and setup guide
-└── references/
-    ├── naming-and-design-rules.md           # Groups vs categories, naming logic, and duotone criteria
-    ├── rtl-icons.md                         # Complete inventory of RTL-flipped and exclusive -rtl icons
-    └── typescript-and-exports.md            # Entrypoint paths, TypeScript types, and props tables
-```
-
----
-
 ## Installation and usage
 
 To install this skill for your AI coding assistant:
@@ -65,7 +51,6 @@ Copy the `skills/andrsrxn-icons` directory into your project's `.agents/skills/`
 .agents/
 └── skills/
     └── andrsrxn-icons/
-        ├── references/
         ├── README.md
         └── SKILL.md
 ```
