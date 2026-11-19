@@ -79,7 +79,7 @@ export const ICON_CATEGORIES = [
 ### Non-Redundancy Rules:
 1. **Never repeat the icon name, direct sub-words, or suffix stems:**
    - E.g., for `plus.svg`: do **not** include `"plus"`.
-   - E.g., for `plus-square.svg`: `"plus"` and `"square"` are in the file name, so do not add them to `tags`.
+   - E.g., for `plus-square.svg`: `"plus"` and `"square"` are in the file name, so do not add them to `tags`, also if its only a suffix without total meaning, is not necessary to add `"badge"`, `"box"`, or similar, not even `"round"` for circle ones.
    - E.g., for suffix `-off` (such as `cloud-off` or `agent-off`): do **not** add `"offline"`, because it repeats the `"off"` suffix and `"line"` adds no search value on its own.
    - E.g., for suffix `-lock`: do **not** add `"locked"`. For `dices`: do **not** add `"dice"`. For `files`: do **not** add `"file"`. For `clock-hour-*`: do **not** add `"hours"`.
 2. **Never include intra-tag morphological duplicates (Keep only the larger/more specific term):**
@@ -96,8 +96,9 @@ export const ICON_CATEGORIES = [
    - E.g., if category is `["transport"]`, do **not** include `"transportation"`.
    - **Synonym Exception:** True synonyms that do not share the same root stem or substring with the category **are fully allowed**. For example, when an icon has category `"people"`, the tag `"person"` is completely valid and encouraged because `"person"` is a distinct synonym, not a direct stem or substring repetition of `"people"`.
 
-### Abbreviations & Numbers:
-- **Abbreviations:** Expand acronyms and abbreviations into full words (e.g., `3d` → `"three"`, `"dimension"`, `"spatial"`).
+### Abbreviations, Acronyms & Numbers:
+- **Acronyms, Initialisms & Slang (Uppercase):** Terms that are widely recognized acronyms, initialisms, or common technical slang MUST be written in uppercase (e.g., `"QR"`, `"SKU"`, `"GPS"`, `"TV"`, `"CLI"`, `"AI"`, `"UI"`, `"URL"`, `"API"`, `"SDK"`, `"PDF"`, `"SVG"`, `"CSS"`, `"HTML"`, `"SQL"`, `"ID"`, `"OTP"`, `"PIN"`, `"RAM"`).
+- **Abbreviations Expansion:** Expand acronyms and abbreviations into full descriptive words when applicable (e.g., `3d` → `"three"`, `"dimension"`, `"spatial"`; `geo` → `"geography"`, `"earth"`).
 - **Numbers to words & digits:**
   - E.g., `heading-1` → include `"1"`, `"first"`, `"primary"`, `"title"`.
   - E.g., `dice-one` → include `"1"`, `"single"`, `"roll"`.
@@ -117,6 +118,7 @@ When generating metadata for a variant (e.g., `folder-plus`, `folder-lock`):
 1. Locate the base icon metadata (e.g., `folder.meta.json`).
 2. Inherit the base categories and the 3–5 core tags from the base icon.
 3. Append standard suffix tags at the **end** of the `tags` array.
+4. It also applies to any icon with the same preffix, for example, if there is only one icon without suffix and the new icon has a suffix, you need to locate the base icon and do the same of above.
 
 ### B. Standard Suffixes & Prescribed Tags:
 When an icon ends with a standard suffix, append up to 3–4 standard suffix tags at the **end** of its tag list:
@@ -143,6 +145,7 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
 | `-filled` | `"active"`, `"solid"`, `"selected"` |
 | `-settings` | `"preferences"`, `"options"`, `"configure"`, `"customize"` |
 | `-search` | `"find"`, `"lookup"`, `"explore"`, `"scan"` |
+| `-scan` | `"inspect"`, `"identify"`, `"recognize"` |
 
 ### C. Non-Standard Modifier Icons (e.g. `file-cube`):
 - Take 2–4 of the most representative tags from the modifier icon (`cube` → `"3d"`, `"three"`, `"dimension"`, `"solid"`) and append them after the base icon's core tags.
