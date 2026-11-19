@@ -1,0 +1,47 @@
+import type { Icon } from './types'
+
+export const IconChartMean: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-chart-mean'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        d='m9.59 21.63.29-.29c1-1 1.5-1.5 2.12-1.5s1.12.5 2.12 1.5l.3.3'
+        stroke='currentColor'
+      />
+      <path d='M1.51 16.95h20.98' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M17.31 17.16c1.94 0 2.91 0 3.18-.6.26-.59-.4-1.3-1.7-2.74l-1.1-1.21-4.68-4.54-.33-.3c-.1-.05-.2-.09-.41-.16l-2.7-.91c-.37-.14-.57-.2-.77-.2s-.38.1-.74.28L6.8 7.4c-.35.18-.53.26-.66.41s-.2.33-.34.71L4 13.59l-.33.88c-.45 1.23-.67 1.84-.37 2.26.3.43.94.43 2.25.43z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M1.74 16.95c2.89 0 2-10.32 7.27-10.32 5.97 0 10.1 10.32 13.37 10.32'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -9,7 +9,6 @@
     "diesel",
     "station",
     "pump",
-    "oil",
-    "refuel"
+    "oil"
   ]
 }

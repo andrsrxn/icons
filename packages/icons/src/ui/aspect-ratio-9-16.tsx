@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconAspectRatio916: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-aspect-ratio-9-16'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M4.64 9.06c0-3.15 0-4.72.84-5.8a4 4 0 0 1 .71-.72c1.09-.83 2.66-.83 5.81-.83s4.72 0 5.8.83q.4.32.72.72c.84 1.08.84 2.65.84 5.8v5.88c0 3.15 0 4.72-.84 5.8a4 4 0 0 1-.71.72c-1.09.83-2.66.83-5.81.83s-4.72 0-5.8-.83a4 4 0 0 1-.72-.72c-.84-1.08-.84-2.65-.84-5.8z'
+        fill='currentColor'
+      />
+      <path
+        d='M12 22.3c3.15 0 4.72 0 5.8-.84a4 4 0 0 0 .72-.72c.84-1.08.84-2.65.84-5.8V9.06c0-3.15 0-4.72-.84-5.8a4 4 0 0 0-.71-.72c-1.09-.83-2.66-.83-5.81-.83v0c-3.15 0-4.72 0-5.8.83a4 4 0 0 0-.72.72c-.84 1.08-.84 2.65-.84 5.8v5.88c0 3.15 0 4.72.84 5.8q.31.4.71.72c1.09.83 2.66.83 5.81.83'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.88 14.59v.88c0 1.41 0 2.12-.43 2.56-.44.44-1.15.44-2.57.44H12'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.12 9.41v-.88c0-1.41 0-2.12.43-2.56.44-.44 1.15-.44 2.57-.44H12'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

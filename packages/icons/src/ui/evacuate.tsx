@@ -1,0 +1,60 @@
+import type { Icon } from './types'
+
+export const IconEvacuate: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-evacuate'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M13.03 8.49c0-1.89 0-2.83.58-3.42.6-.58 1.53-.58 3.42-.58h.53c1.89 0 2.83 0 3.42.58.58.59.58 1.53.58 3.42V19.5h-8.53z'
+        fill='currentColor'
+      />
+      <path
+        d='M21.56 19.3V8.49c0-1.89 0-2.83-.58-3.42-.6-.58-1.53-.58-3.42-.58h-.53c-1.89 0-2.83 0-3.42.58-.58.59-.58 1.53-.58 3.42v10.8'
+        stroke='currentColor'
+      />
+      <path d='M22.59 19.3H12' stroke='currentColor' />
+      <path d='M17.8 11.97h1.47' stroke='currentColor' />
+      <circle opacity='.2' cx='5.99' cy='6.91' r='2' fill='currentColor' />
+      <circle cx='5.99' cy='6.91' r='2' stroke='currentColor' />
+      <path
+        d='m5.4 10.68-.38 2.31c-.1.64-.16.96-.03 1.24.12.27.4.44.95.78l1.3.81c.29.18.44.28.54.4.1.14.17.3.28.64l.86 2.44'
+        stroke='currentColor'
+      />
+      <path
+        d='m4.83 14.07-.62 2.15a2 2 0 0 1-.14.39q-.08.1-.3.28h0l-2.32 2'
+        stroke='currentColor'
+      />
+      <path
+        d='m9.55 12.74-1.09-.2a4 4 0 0 1-1.16-.28 4 4 0 0 1-.92-.76l-.95-.91'
+        stroke='currentColor'
+      />
+      <path
+        d='m5.4 10.58-.7.23a4 4 0 0 0-1.3.57c-.27.22-.46.52-.83 1.14l-.52.84'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

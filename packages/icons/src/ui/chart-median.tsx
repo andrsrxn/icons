@@ -1,0 +1,44 @@
+import type { Icon } from './types'
+
+export const IconChartMedian: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-chart-median'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path d='M1.51 16.95h20.98' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M17.31 17.16c1.94 0 2.91 0 3.18-.6.26-.59-.4-1.3-1.7-2.74l-1.1-1.21L13 8.05a2 2 0 0 0-.31-.27c-.09-.06-.19-.1-.38-.17l-.44-.16c-1.23-.47-1.84-.7-2.27-.4s-.43.96-.43 2.27v5.84c0 .94 0 1.42.3 1.7.28.3.76.3 1.7.3z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M1.74 16.95c2.89 0 2-10.32 7.27-10.32 5.97 0 10.1 10.32 13.37 10.32'
+        stroke='currentColor'
+      />
+      <path d='M9.08 3.6v16.8' stroke='currentColor' />
+    </svg>
+  )
+}

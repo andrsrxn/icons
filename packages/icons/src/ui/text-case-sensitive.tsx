@@ -27,18 +27,14 @@ export const IconTextCaseSensitive: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M17.86 18.83c-1.6 0-2.91-1.17-2.91-2.63 0-1.92 1.3-2.62 2.91-2.62h2.92v2.62c0 1.46-1.3 2.63-2.92 2.63'
+        d='m2.37 19 2.28-7.75h0c1.12-3.82 1.68-5.72 2.72-5.71s1.56 1.93 2.58 5.78L12 19'
         stroke='currentColor'
       />
+      <path d='M4.17 13.83h6.21' stroke='currentColor' />
       <path
-        d='M15.68 9.98c.74-.96 1.72-1.5 2.97-1.27 1.95.36 2.42 1.6 2.42 3.7v5.29c0 .97.4 1.28.4 1.28'
+        d='M14.68 13.02q0 0 0 0m0 0s1.36-1.59 3.34-1.59c2 0 3.58 1.66 3.58 3.83S20 19 18.02 19c-.97 0-2.26-.01-2.67-.3q-.22-.15-.39-.38c-.28-.41-.28-1-.28-2.15zm0 0V5.24'
         stroke='currentColor'
       />
-      <path
-        d='m2.54 19 2.27-7.75h0C5.94 7.43 6.5 5.53 7.54 5.54c1.05.01 1.56 1.93 2.58 5.78L12.17 19'
-        stroke='currentColor'
-      />
-      <path d='M4.34 13.83h6.21' stroke='currentColor' />
     </svg>
   )
 }

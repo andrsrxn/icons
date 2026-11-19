@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconLightbulbQuestion: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-lightbulb-question'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        d='m15.33 17.16.01-.55c.06-.59.15-.8.57-1.21.06-.07.28-.24.7-.6h0a7.6 7.6 0 0 0 2.57-5.88 7.32 7.32 0 0 0-14.63 0c0 2.43 1 4.67 2.77 6.03l.3.24c.6.46.77.8.78 1.56v.14'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M8.81 19.05c0-.94 0-1.41.3-1.7.29-.3.76-.3 1.7-.3h2.1c.95 0 1.42 0 1.71.3.3.29.3.76.3 1.7v1.26c0 .94 0 1.41-.3 1.7-.29.3-.76.3-1.7.3h-2.1c-.95 0-1.42 0-1.72-.3-.29-.29-.29-.76-.29-1.7z'
+        fill='currentColor'
+      />
+      <path d='M15.33 17.06H8.65' stroke='currentColor' />
+      <path
+        d='M8.4 17.06v1.78c0 1.37 0 2.06.32 2.56a2 2 0 0 0 .58.58c.5.33 1.19.33 2.56.33s2.07 0 2.56-.33a2 2 0 0 0 .59-.58c.32-.5.32-1.19.32-2.56v-1.78'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.92 7.03c0-1.04.9-1.88 2.01-1.88 1.12 0 2.02.84 2.02 1.88 0 1.64-2.02 1.76-2.02 3.3'
+        stroke='currentColor'
+      />
+      <path
+        d='M12.36 13.26a.43.43 0 1 1-.86 0 .43.43 0 0 1 .86 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

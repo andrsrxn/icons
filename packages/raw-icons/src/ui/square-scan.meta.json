@@ -3,12 +3,15 @@
     "tools"
   ],
   "tags": [
-    "detect",
-    "shape",
-    "identify",
     "frame",
     "area",
-    "qr",
-    "capture"
+    "region",
+    "QR",
+    "capture",
+    "detect",
+    "focus",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

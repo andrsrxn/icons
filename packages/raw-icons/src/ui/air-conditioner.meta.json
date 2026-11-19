@@ -7,8 +7,11 @@
     "ventilation",
     "cooling",
     "AC",
+    "HVAC",
     "temperature",
     "cold",
-    "breeze"
+    "breeze",
+    "heater",
+    "warm"
   ]
 }

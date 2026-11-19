@@ -26,11 +26,10 @@ export const IconPlusEqual: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M10.5 6.62H2.72' stroke='currentColor' />
-      <path d='M21.2 19.7h-6.63' stroke='currentColor' />
-      <path d='M21.2 16.02h-6.63' stroke='currentColor' />
-      <path d='M6.62 2.74v7.76' stroke='currentColor' />
-      <path d='M20.96 3.05 3.04 20.96' stroke='currentColor' />
+      <path d='M1.98 12h8.06' stroke='currentColor' />
+      <path d='M13.96 9h8.06' stroke='currentColor' />
+      <path d='M6.01 16.03V7.97' stroke='currentColor' />
+      <path d='M13.96 15h8.06' stroke='currentColor' />
     </svg>
   )
 }

@@ -1,6 +1,7 @@
 {
   "categories": [
-    "ai", "people"
+    "ai",
+    "people"
   ],
   "tags": [
     "bot",
@@ -9,8 +10,8 @@
     "intelligence",
     "robot",
     "automation",
-    "llm",
-    "scanner",
-    "reader"
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

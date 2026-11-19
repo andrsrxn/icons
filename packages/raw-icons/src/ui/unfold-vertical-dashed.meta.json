@@ -11,6 +11,7 @@
     "stretch",
     "out",
     "tall",
-    "maximize"
+    "maximize",
+    "border"
   ]
 }

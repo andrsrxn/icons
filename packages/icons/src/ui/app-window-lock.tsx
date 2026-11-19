@@ -1,0 +1,62 @@
+import type { Icon } from './types'
+
+export const IconAppWindowLock: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-app-window-lock'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M22.15 11.03c0-3.77 0-5.66-1.17-6.83s-3.06-1.17-6.83-1.17H9.17c-3.24 0-4.86 0-5.96.88a4 4 0 0 0-.62.63c-.88 1.1-.87 2.72-.86 5.96.01 3.22.02 4.83.9 5.92a4 4 0 0 0 .62.62c1.1.87 2.7.87 5.92.87h5.68v-2.2l1.36-.78 5.94.48z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M11.16 17.96H9.23c-3.26 0-4.88 0-5.99-.89a4 4 0 0 1-.59-.59c-.89-1.1-.89-2.73-.89-5.98s0-4.89.9-5.99a4 4 0 0 1 .58-.59c1.1-.89 2.73-.89 5.99-.89h6.44c2.36 0 3.53 0 4.42.48a4 4 0 0 1 1.62 1.62c.48.9.48 2.07.48 4.42'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.62 7.28a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M10.7 7.28a.54.54 0 1 1-1.08 0 .54.54 0 0 1 1.08 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.77 7.28a.54.54 0 1 1-1.07 0 .54.54 0 0 1 1.07 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.5 20.65h3.7c.93 0 1.4 0 1.7-.29.3-.3.3-.76.3-1.7V16.9c0-.94 0-1.41-.3-1.7s-.77-.3-1.7-.3h-3.7c-.95 0-1.42 0-1.71.3-.3.29-.3.76-.3 1.7v1.74c0 .95 0 1.42.3 1.71s.76.3 1.7.3'
+        stroke='currentColor'
+      />
+      <path d='m16.22 14.91.2-1.63a1.96 1.96 0 0 1 3.9.02l.2 1.61' stroke='currentColor' />
+    </svg>
+  )
+}

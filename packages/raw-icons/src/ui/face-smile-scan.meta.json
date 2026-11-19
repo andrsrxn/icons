@@ -5,11 +5,12 @@
   "tags": [
     "expression",
     "emotion",
-    "scanner",
     "biometrics",
-    "recognition",
-    "id",
     "facial",
-    "identity"
+    "identity",
+    "detect",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

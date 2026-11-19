@@ -39,11 +39,11 @@ export const IconRefreshNotification: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M15.87 9h1.85c1.73 0 2.6 0 3.13-.53.54-.54.54-1.4.54-3.14V3.47'
+        d='m16.76 8.61 1.65.27c1.54.25 2.3.38 2.86-.02s.68-1.17.93-2.7l.27-1.66'
         stroke='currentColor'
       />
       <path
-        d='M2.6 20.45v-1.83c0-1.7 0-2.56.52-3.09C3.65 15 4.5 15 6.22 15h1.83'
+        d='m1.54 19.23.35-1.64c.33-1.53.5-2.29 1.07-2.66s1.34-.2 2.87.13l1.64.35'
         stroke='currentColor'
       />
       <path d='M21.4 17.99a3.46 3.46 0 1 0-6.94 0 3.46 3.46 0 0 0 6.93 0' stroke='currentColor' />

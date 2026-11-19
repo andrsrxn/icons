@@ -26,11 +26,6 @@ export const IconThermometerSnowflake: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        opacity='.2'
-        d='M14.65 14.32V4.03a2 2 0 0 1 4 0v10.29s1.74 1.9 1.74 3.53a3.74 3.74 0 0 1-7.48 0c0-1.63 1.74-3.53 1.74-3.53'
-        fill='currentColor'
-      />
       <path d='M14.48 14.7a4.03 4.03 0 1 0 4.34 0' stroke='currentColor' />
       <path
         d='M18.75 14.6V3.77a2 2 0 0 0-1.91-1.91h-.38a2 2 0 0 0-1.91 1.91V14.6'
@@ -53,6 +48,11 @@ export const IconThermometerSnowflake: Icon = ({
         stroke='currentColor'
       />
       <path d='M14.55 10.31a2.63 2.63 0 1 0-.36 4.09' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M12.73 9.47c1.42 0 2.15 1.15 2.15 2.56s-.73 2.56-2.15 2.56a2.56 2.56 0 1 1 0-5.12'
+        fill='currentColor'
+      />
     </svg>
   )
 }

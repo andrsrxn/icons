@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconReloadHeart: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-reload-heart'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M12 21.08A9.1 9.1 0 0 0 21.16 12c0-5.01-4.1-9.08-9.16-9.08A9.1 9.1 0 0 0 2.84 12c0 5.01 4.1 9.08 9.16 9.08m0-10.83a3 3 0 0 1 2.3-1.32c1.47 0 2.57 1.67 2.1 3.44-.31 1.16-1.62 2.17-2.8 3.09-.62.49-1.21.95-1.6 1.38-.39-.43-.98-.9-1.6-1.38-1.18-.92-2.49-1.93-2.8-3.09-.47-1.77.63-3.44 2.1-3.44 1.18 0 2.02.88 2.3 1.32'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M21.25 5.6v1.12c0 1.04 0 1.56-.32 1.88-.32.33-.84.33-1.88.33h-1.12'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.02 17.8a9.17 9.17 0 1 1-7.1-14.98c5.06 0 7.4 4.04 8.45 5.47'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 10.25a3 3 0 0 1 2.3-1.32c1.47 0 2.57 1.67 2.1 3.44-.48 1.77-3.28 3.21-4.4 4.47-1.12-1.26-3.92-2.7-4.4-4.47-.47-1.77.63-3.44 2.1-3.44 1.18 0 2.02.88 2.3 1.32'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

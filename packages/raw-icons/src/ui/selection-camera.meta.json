@@ -7,10 +7,12 @@
     "capture",
     "frame",
     "snapshot",
+    "screenshot",
     "target",
     "viewfinder",
     "focus",
     "square",
-    "border"
+    "border",
+    "area"
   ]
 }

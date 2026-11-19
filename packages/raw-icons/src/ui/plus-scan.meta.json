@@ -9,6 +9,10 @@
     "detect",
     "read",
     "barcode",
-    "qr"
+    "QR",
+    "focus",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

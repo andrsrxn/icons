@@ -26,16 +26,9 @@ export const IconClockTwelve: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <path d='M14.54 21.93a10.25 10.25 0 1 0-12.67-11.5' stroke='currentColor' />
       <path
-        opacity='.2'
-        d='M12 22.25a10.25 10.25 0 1 0-9.5-6.4l1.42-1.36.32 4.2A10.2 10.2 0 0 0 12 22.25'
-        fillRule='evenodd'
-        clipRule='evenodd'
-        fill='currentColor'
-      />
-      <path d='M14.54 21.93a10.25 10.25 0 1 0-12.66-11.5' stroke='currentColor' />
-      <path
-        d='M12.6 5.7v3.9c0 1.04 0 1.57.24 2 .24.45.68.74 1.55 1.32l2.71 1.81'
+        d='m17.1 14.73-2.71-1.8c-.87-.6-1.3-.88-1.54-1.32s-.24-.97-.24-2.02V5.7'
         stroke='currentColor'
       />
       <path
@@ -45,6 +38,11 @@ export const IconClockTwelve: Icon = ({
       <path
         d='M7.13 15.44c.68-1.1 3.12-1.17 3.12.9 0 1.45-1.84 2.17-2.96 3.92-.2.3.05.68.4.68h2.64'
         stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M1.78 12a10.22 10.22 0 1 0 20.44 0 10.22 10.22 0 0 0-20.44 0'
+        fill='currentColor'
       />
     </svg>
   )

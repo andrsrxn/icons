@@ -1,0 +1,42 @@
+import type { Icon } from './types'
+
+export const IconAnnotationX: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-annotation-x'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M17.71 17.43c.54 0 .82 0 1.04-.02a4 4 0 0 0 3.52-3.52c.03-.23.03-.5.03-1.04v-2.27c0-2.68 0-4.01-.62-4.99a4 4 0 0 0-1.26-1.26c-.97-.61-2.3-.61-4.98-.61H8.56c-2.67 0-4 0-4.98.61A4 4 0 0 0 2.32 5.6c-.62.98-.62 2.31-.62 4.99v2.23c0 .58 0 .87.03 1.11a4 4 0 0 0 3.49 3.48c.24.03.53.03 1.1.03h.3a3 3 0 0 1 1.76.68l1.27.93c1.13.83 1.7 1.25 2.35 1.25s1.22-.4 2.36-1.24l1.33-.96.23-.16a3 3 0 0 1 1.51-.5z'
+        fill='currentColor'
+      />
+      <path
+        d='m14.93 18.55-.5.52c-.89.94-1.33 1.42-1.86 1.57a2 2 0 0 1-1.12-.01c-.53-.16-.97-.64-1.85-1.6l-.4-.43c-.18-.2-.27-.3-.36-.38a3 3 0 0 0-1.77-.77c-.13-.02-.26-.02-.53-.02-.78 0-1.16 0-1.49-.05a4 4 0 0 1-3.3-3.3c-.05-.32-.05-.7-.05-1.48v-2.02c0-2.68 0-4.01.62-4.99a4 4 0 0 1 1.26-1.26c.97-.61 2.3-.61 4.98-.61h6.88c2.67 0 4 0 4.98.61a4 4 0 0 1 1.26 1.26c.62.98.62 2.31.62 4.99v2.08c0 .72 0 1.08-.05 1.38a4 4 0 0 1-3.35 3.35c-.3.04-.66.04-1.37.04l-.49.01a3 3 0 0 0-2.11 1.11'
+        stroke='currentColor'
+      />
+      <path d='m9.05 13.8 5.9-5.9' stroke='currentColor' />
+      <path d='m14.95 13.8-5.9-5.9' stroke='currentColor' />
+    </svg>
+  )
+}

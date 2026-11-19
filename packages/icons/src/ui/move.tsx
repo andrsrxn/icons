@@ -27,23 +27,23 @@ export const IconMove: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='m8.94 19.17.25.25c1.34 1.34 2 2 2.83 2s1.5-.66 2.83-2l.26-.25'
+        d='m8.91 19.16.26.25c1.33 1.34 2 2 2.83 2s1.5-.66 2.83-2l.26-.25'
         stroke='currentColor'
       />
       <path
-        d='m19.17 8.97.24.24c1.33 1.33 2 2 2 2.83s-.67 1.5-2 2.83l-.24.24'
+        d='m19.18 8.93.24.24c1.34 1.33 2 2 2 2.83s-.66 1.5-2 2.83l-.24.24'
         stroke='currentColor'
       />
       <path
-        d='m4.83 15.06-.24-.24c-1.33-1.33-2-2-2-2.83 0-.82.67-1.5 2-2.83l.24-.24'
+        d='m4.87 15.07-.24-.24c-1.34-1.33-2-2-2-2.83s.66-1.5 2-2.83l.24-.24'
         stroke='currentColor'
       />
       <path
-        d='m15.03 4.83-.22-.22c-1.34-1.33-2-2-2.83-2s-1.5.66-2.83 2l-.23.22'
+        d='m15.05 4.83-.22-.22c-1.33-1.33-2-2-2.83-2s-1.5.66-2.83 2h0l-.22.22'
         stroke='currentColor'
       />
       <path d='M21.22 12H2.78' stroke='currentColor' />
-      <path d='M11.97 21.22V2.78' stroke='currentColor' />
+      <path d='M12 21.19V2.76' stroke='currentColor' />
     </svg>
   )
 }

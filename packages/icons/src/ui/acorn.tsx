@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconAcorn: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-acorn'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M18 15.37c1.08 1.07 1.6 1.6 2.4 1.44.78-.15 1-.69 1.45-1.76 1.28-3.1-.85-5.99-3.81-8.95-2.98-2.97-5.82-5.19-8.96-3.83-1.07.47-1.61.7-1.76 1.48s.39 1.32 1.45 2.38z'
+        fill='currentColor'
+      />
+      <path
+        d='M18.04 6.1c2.96 2.96 5.1 5.85 3.8 8.95-.44 1.07-.66 1.6-1.45 1.76s-1.31-.37-2.38-1.44L8.77 6.13c-1.06-1.06-1.6-1.6-1.45-2.38s.69-1.01 1.76-1.48c3.14-1.36 5.98.86 8.96 3.83'
+        stroke='currentColor'
+      />
+      <path
+        d='M18.42 16.06c-6.46 6.46-12.6 6.16-14.9 5.74-.41-.07-.62-.11-.84-.34-.22-.22-.26-.43-.33-.84-.4-2.32-.66-8.5 5.73-14.9'
+        stroke='currentColor'
+      />
+      <path
+        d='m18.06 6 .6-.6h0c.48-.47.72-.71.99-.87a2.5 2.5 0 0 1 1.47-.34c.32.02.64.13 1.28.35'
+        stroke='currentColor'
+      />
+      <path d='M5.98 14.56s.29-1.15.91-2.23c.69-1.19 1.48-1.91 1.48-1.91' stroke='currentColor' />
+    </svg>
+  )
+}

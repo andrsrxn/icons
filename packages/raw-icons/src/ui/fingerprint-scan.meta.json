@@ -6,11 +6,12 @@
   "tags": [
     "biometric",
     "identity",
-    "access",
-    "lock",
-    "privacy",
     "authentication",
+    "privacy",
+    "sensor",
     "reader",
-    "sensor"
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

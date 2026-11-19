@@ -1,0 +1,56 @@
+import type { Icon } from './types'
+
+export const IconHammerBrick: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-hammer-brick'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='m8.48 8.45 2.45 2.21-6.22 6.89c-.4.45-.61.68-.86.76a1 1 0 0 1-.54.03c-.25-.06-.48-.26-.93-.67-.45-.4-.68-.61-.76-.86a1 1 0 0 1-.03-.54c.06-.26.26-.48.67-.93z'
+        fill='currentColor'
+      />
+      <path
+        d='m11.1 10.47-6.45 7.15c-.4.45-.61.68-.86.76a1 1 0 0 1-.54.03c-.25-.06-.48-.27-.93-.67s-.68-.62-.76-.87a1 1 0 0 1-.03-.53c.06-.26.26-.49.67-.94l6.45-7.14'
+        stroke='currentColor'
+      />
+      <path
+        d='m10.54 11.1.57-.63.12-.14a1 1 0 0 1 1.3-.06l.13.12.39.34c.24.22.26.59.04.83s-.2.61.04.83l.69.61c.35.32.52.48.71.55a1 1 0 0 0 .76-.04c.18-.09.34-.26.66-.61l1.91-2.13c.32-.35.48-.53.55-.72a1 1 0 0 0-.04-.75 3 3 0 0 0-.61-.66l-.7-.62a.6.6 0 0 0-.8.04.6.6 0 0 1-.82.04l-.75-.68a.6.6 0 0 1-.04-.82c.16-.19.2-.46.06-.66a8 8 0 0 0-1.3-1.5 11 11 0 0 0-5.14-2.68c-.7-.14-1.04-.22-1.23.1-.18.3.1.61.64 1.23 2.61 2.97 1.6 4.46.93 5.21'
+        stroke='currentColor'
+      />
+      <path d='M10.52 10.3 8.9 8.81' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M12.97 20.13c0-.6 0-.9.08-1.15.15-.42.49-.76.91-.91.25-.09.55-.09 1.16-.09h4.92c.6 0 .9 0 1.15.09.43.15.76.49.92.91.08.25.08.55.08 1.15s0 .91-.08 1.15a1.5 1.5 0 0 1-.92.92c-.24.08-.54.08-1.15.08h-4.92c-.6 0-.91 0-1.15-.08a1.5 1.5 0 0 1-.92-.92c-.08-.24-.08-.54-.08-1.15'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M20.04 22.28h-4.92c-.6 0-.91 0-1.15-.08a1.5 1.5 0 0 1-.92-.92c-.08-.24-.08-.54-.08-1.15v0c0-.6 0-.9.08-1.15.15-.42.49-.76.91-.91.25-.09.55-.09 1.16-.09h4.92c.6 0 .9 0 1.15.09.43.15.76.49.92.91.08.25.08.55.08 1.15v0c0 .6 0 .91-.08 1.15a1.5 1.5 0 0 1-.92.92c-.24.08-.54.08-1.15.08'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

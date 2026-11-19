@@ -28,32 +28,20 @@ export const IconBlend: Icon = ({
       focusable={false}>
       <g opacity='.2'>
         <path
+          d='M1.56 15.23a7.1 7.1 0 0 0 7.09 7.09c3.7 0 7.18-1.86 7.54-5.95-5.1.45-8.89-3.07-8.4-8.72-4.23.22-6.23 3.8-6.23 7.58'
           fillRule='evenodd'
           clipRule='evenodd'
-          d='M1.56 15.23a7.08 7.08 0 0 0 14.15.63c-4.52.4-7.86-2.71-7.43-7.7a7.1 7.1 0 0 0-6.72 7.07'
           fill='currentColor'
         />
         <path
+          d='M16.2 16.37c4.23-.22 6.24-3.8 6.24-7.6a7.1 7.1 0 0 0-7.1-7.09c-3.7 0-7.2 1.87-7.55 5.97 4.78-.6 8.91 2.92 8.4 8.72'
           fillRule='evenodd'
           clipRule='evenodd'
-          d='M15.7 15.86a7.1 7.1 0 1 0-7.42-7.7c4.22-.54 7.88 2.58 7.43 7.7'
           fill='currentColor'
         />
       </g>
-      <circle
-        cx='8.95'
-        cy='14.93'
-        r='7.38'
-        transform='rotate(90 8.95 14.93)'
-        stroke='currentColor'
-      />
-      <circle
-        cx='15.06'
-        cy='9.06'
-        r='7.37'
-        transform='rotate(90 15.06 9.06)'
-        stroke='currentColor'
-      />
+      <circle cx='8.95' cy='14.93' r='7.38' stroke='currentColor' />
+      <circle cx='15.06' cy='9.06' r='7.37' stroke='currentColor' />
     </svg>
   )
 }

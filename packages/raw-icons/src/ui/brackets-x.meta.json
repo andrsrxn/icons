@@ -10,6 +10,7 @@
     "remove",
     "delete",
     "cancel",
-    "close"
+    "close",
+    "JSON"
   ]
 }

@@ -5,10 +5,12 @@
   ],
   "tags": [
     "radar",
-    "shape",
-    "identify",
     "target",
     "focus",
-    "capture"
+    "capture",
+    "shape",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

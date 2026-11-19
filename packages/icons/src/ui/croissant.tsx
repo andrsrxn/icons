@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconCroissant: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-croissant'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M2.57 11.1c3.02-2.53 4.52-4.93 9.4-4.93 5.03 0 6.17 2.2 9.53 4.93l-3.36 4.74-3.01-1.07-1.23.95h-4l-.88-.95-3.15 1.07z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='m14.77 13.65.72-3.37c.38-1.76.57-2.64.22-3.3a2 2 0 0 0-.46-.56c-.56-.48-1.46-.48-3.27-.48-1.79 0-2.69 0-3.25.48a2 2 0 0 0-.45.56c-.36.64-.18 1.52.18 3.28l.7 3.37h0c.13.66.2.99.34 1.25a2 2 0 0 0 1.17.95c.29.09.63.09 1.3.09h0c.66 0 1 0 1.28-.09a2 2 0 0 0 1.17-.94c.14-.26.21-.59.35-1.24'
+        stroke='currentColor'
+      />
+      <path
+        d='m9.4 14.71-.53.25c-1.3.59-1.94.88-2.57.76l-.17-.04c-.62-.18-1.06-.74-1.93-1.86h0c-.97-1.25-1.45-1.87-1.36-2.68q0-.1.04-.21c.18-.8.75-1.17 1.89-1.9q.14-.1.32-.2c.86-.53 1.97-1 2.72-1.28'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.62 14.71.54.25c1.3.59 1.94.88 2.57.76l.17-.04c.62-.18 1.06-.74 1.93-1.86h0c.97-1.25 1.45-1.87 1.36-2.68l-.04-.21c-.18-.8-.75-1.17-1.89-1.9l-.32-.2c-.82-.5-1.87-.95-2.62-1.24'
+        stroke='currentColor'
+      />
+      <path
+        d='M5.65 15.66q-.63.3-1.33.7c-1.29.74-1.93 1.12-2.45.75-.52-.36-.42-.97-.21-2.18a9 9 0 0 1 1.12-3.08'
+        stroke='currentColor'
+      />
+      <path
+        d='M18.35 15.47q.63.3 1.33.7c1.29.75 1.93 1.12 2.45.76s.42-.97.21-2.19a9 9 0 0 0-1.12-3.07'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

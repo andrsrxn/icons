@@ -7,8 +7,11 @@
     "analyze",
     "detect",
     "smart",
-    "recognition",
     "capture",
-    "intelligent"
+    "intelligent",
+    "generate",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

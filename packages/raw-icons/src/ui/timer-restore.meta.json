@@ -1,13 +1,14 @@
 {
   "categories": [
     "time",
-    "tools"
+    "tools",
+    "arrows"
   ],
   "tags": [
     "countdown",
     "stopwatch",
     "clock",
-     "backup",
+    "backup",
     "recover",
     "revert",
     "reset",

@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconAspectRatio32: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-aspect-ratio-3-2'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M14.3 20c3.76 0 5.65 0 6.82-1.17S22.3 15.77 22.3 12s0-5.66-1.17-6.83S18.06 4 14.3 4H9.71C5.94 4 4.05 4 2.88 5.17S1.7 8.23 1.7 12s0 5.66 1.17 6.83S5.94 20 9.7 20z'
+        fill='currentColor'
+      />
+      <path
+        d='M1.7 12c0-3.77 0-5.66 1.18-6.83C4.05 4 5.94 4 9.7 4h4.58c3.77 0 5.66 0 6.83 1.17S22.3 8.23 22.3 12v0c0 3.77 0 5.66-1.17 6.83S18.06 20 14.3 20H9.71c-3.77 0-5.66 0-6.83-1.17S1.7 15.77 1.7 12'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.41 7.64h-.88c-1.41 0-2.12 0-2.56.43-.44.44-.44 1.15-.44 2.56v.89'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.59 16.37h.88c1.41 0 2.12 0 2.56-.44s.44-1.15.44-2.56v-.89'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,59 @@
+import type { Icon } from './types'
+
+export const IconCurrencySwap: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-currency-swap'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        d='M13.4 4.44h.24c1.88 0 2.83 0 3.41.59.59.58.59 1.52.59 3.41v1'
+        stroke='currentColor'
+      />
+      <path
+        d='M9.91 20.15H9.7c-1.89 0-2.83 0-3.42-.59-.58-.58-.58-1.53-.58-3.41v-1'
+        stroke='currentColor'
+      />
+      <path
+        d='M20.2 8.11c-1.07 1.08-1.6 1.62-2.26 1.71a2 2 0 0 1-.6 0c-.65-.1-1.19-.63-2.26-1.7'
+        stroke='currentColor'
+      />
+      <path
+        d='M3.12 16.43c1.08-1.07 1.61-1.6 2.26-1.7a2 2 0 0 1 .6 0c.65.09 1.2.63 2.27 1.7'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.71 4C8.5 3.27 7.43 2.7 6.2 2.7c-1.24 0-2.6.49-2.6 1.96 0 2.88 4.96.64 5.19 3.48.1 1.35-1.33 2.08-2.6 2.08-1.26 0-2.18-.57-2.59-1.32'
+        stroke='currentColor'
+      />
+      <path d='M6.2 2.7v-.92' stroke='currentColor' />
+      <path d='M6.2 11.14v-.92' stroke='currentColor' />
+      <path
+        d='M20.88 14.83s-.58-.84-2.25-.84-3.79 1.18-3.79 4.1 2.07 4.13 3.79 4.13c1.6 0 2.25-.76 2.25-.76'
+        stroke='currentColor'
+      />
+      <path d='M18.68 17h-5.15' stroke='currentColor' />
+      <path d='M17.8 19.2h-4.27' stroke='currentColor' />
+    </svg>
+  )
+}

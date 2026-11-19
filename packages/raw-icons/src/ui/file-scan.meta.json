@@ -7,10 +7,12 @@
     "page",
     "paper",
     "reader",
-    "detect",
     "laser",
     "ocr",
     "digitize",
-    "scanner"
+    "detect",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

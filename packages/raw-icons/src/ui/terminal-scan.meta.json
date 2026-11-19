@@ -6,10 +6,12 @@
     "console",
     "shell",
     "command",
+    "prompt",
+    "bash",
     "CLI",
-    "find",
-    "lookup",
-    "explore",
-    "inspect"
+    "detect",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

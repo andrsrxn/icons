@@ -1,0 +1,17 @@
+{
+  "categories": [
+    "weather",
+    "energy"
+  ],
+  "tags": [
+    "temperature",
+    "heat",
+    "cold",
+    "climate",
+    "fever",
+    "electricity",
+    "storm",
+    "flash",
+    "sensor"
+  ]
+}

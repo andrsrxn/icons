@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconThermometerCloud: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-thermometer-cloud'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path d='M14.75 14.7a4.06 4.06 0 1 0 4.37 0' stroke='currentColor' />
+      <path
+        d='M19.06 14.6V3.73a2 2 0 0 0-1.91-1.91h-.41a2 2 0 0 0-1.91 1.9v10.9'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.44 18.04a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m3.3 13.16 2.19 2.71 7.6.3 1.7-1.6V7.31l-3.4-1.56-2.48.73-1.29 2.58-2.99 1z'
+        fill='currentColor'
+      />
+      <path
+        d='M6.76 16.09c-.9 0-1.78-.4-2.38-1.06a3.6 3.6 0 0 1-.95-2.46 3.43 3.43 0 0 1 3.33-3.51c1.09 0 2.05.55 2.66 1.4'
+        stroke='currentColor'
+      />
+      <path d='M13.3 16.09H6.63' stroke='currentColor' />
+      <path d='M7.15 9.06a4.01 4.01 0 0 1 7.66-.29' stroke='currentColor' />
+    </svg>
+  )
+}

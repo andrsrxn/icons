@@ -1,0 +1,76 @@
+import type { Icon } from './types'
+
+export const IconKeyboardNumeric: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-keyboard-numeric'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M21.35 8.67c0-2.83 0-4.24-.88-5.12-.87-.88-2.29-.88-5.12-.88h-6.7c-2.83 0-4.25 0-5.12.88s-.88 2.3-.88 5.12v6.7c0 2.84 0 4.25.88 5.13.87.88 2.29.88 5.12.88h6.7c2.83 0 4.25 0 5.12-.88s.88-2.3.88-5.12z'
+        fill='currentColor'
+      />
+      <path
+        d='M14.35 21.38h-4.7c-3.3 0-4.95 0-5.98-1.03-1.02-1.02-1.02-2.67-1.02-5.97V9.67c0-3.3 0-4.95 1.02-5.97C4.7 2.67 6.35 2.67 9.65 2.67h4.7c3.3 0 4.95 0 5.98 1.03 1.02 1.02 1.02 2.67 1.02 5.97v4.7c0 3.3 0 4.96-1.02 5.98-1.03 1.03-2.68 1.03-5.98 1.03'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 16.53a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.9'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.24 16.53a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.9'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 11.58a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.89'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.24 11.58a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.89'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 6.63a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.89'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.76 6.63a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.89'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.24 6.63a.44.44 0 1 1 0 .89.44.44 0 0 1 0-.89'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M16.76 11.58v5.84' stroke='currentColor' />
+    </svg>
+  )
+}

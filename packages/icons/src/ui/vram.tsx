@@ -1,0 +1,52 @@
+import type { Icon } from './types'
+
+export const IconVram: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-vram'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M2.97 18.87c0-.78 0-1.17.09-1.5a2.5 2.5 0 0 1 1.76-1.75c.32-.09.71-.09 1.5-.09h11.37c.78 0 1.17 0 1.49.09.86.23 1.53.9 1.76 1.76.09.32.09.7.09 1.49 0 .78 0 1.17-.09 1.49a2.5 2.5 0 0 1-1.76 1.76c-.32.09-.71.09-1.5.09H6.32c-.78 0-1.17 0-1.49-.09a2.5 2.5 0 0 1-1.76-1.76c-.09-.32-.09-.71-.09-1.5'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M15.03 15.53H8.97c-2.82 0-4.24 0-5.12-.88s-.88-2.3-.88-5.12V7.8c0-2.83 0-4.24.88-5.12s2.3-.88 5.12-.88h6.06c2.82 0 4.24 0 5.12.88s.88 2.29.88 5.12v1.72c0 2.83 0 4.24-.88 5.12s-2.3.88-5.12.88'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.69 22.2H6.3c-.78 0-1.17 0-1.49-.08a2.5 2.5 0 0 1-1.76-1.76c-.09-.32-.09-.71-.09-1.5v0c0-.77 0-1.16.09-1.48a2.5 2.5 0 0 1 1.76-1.76c.32-.09.71-.09 1.5-.09h11.37c.78 0 1.17 0 1.49.09.86.23 1.53.9 1.76 1.76.09.32.09.7.09 1.49v0c0 .78 0 1.17-.09 1.49a2.5 2.5 0 0 1-1.76 1.76c-.32.09-.71.09-1.5.09'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.88 18.87a.56.56 0 1 1-1.12 0 .56.56 0 0 1 1.12 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M12.8 18.87h4.44' stroke='currentColor' />
+    </svg>
+  )
+}

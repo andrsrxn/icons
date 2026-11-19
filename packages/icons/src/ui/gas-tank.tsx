@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconGasTank: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-gas-tank'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M12.46 19.46c3.06 0 4.6 0 5.6-.9l.27-.27c.89-1 .89-2.52.89-5.58s0-4.6-.9-5.6l-.27-.27c-1-.89-2.53-.89-5.59-.89h-.92c-3.07 0-4.6 0-5.6.9l-.27.27c-.89 1-.89 2.52-.89 5.59s0 4.59.9 5.58q.12.16.27.28c1 .89 2.52.89 5.59.89z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path
+        d='M4.78 12.7c0-3.06 0-4.59.9-5.58q.12-.15.27-.28c1-.89 2.52-.89 5.59-.89h.92c3.06 0 4.6 0 5.6.9l.27.27c.89 1 .89 2.52.89 5.59v0c0 3.06 0 4.59-.9 5.58q-.12.16-.27.28c-1 .89-2.53.89-5.59.89h-.92c-3.07 0-4.6 0-5.6-.9l-.27-.27c-.89-1-.89-2.52-.89-5.58'
+        stroke='currentColor'
+      />
+      <path
+        d='M6.91 19.46c0 1.18 0 1.77.31 2.18q.12.15.27.26c.4.32 1 .32 2.18.32h4.66c1.18 0 1.77 0 2.18-.32q.15-.1.27-.26c.31-.4.31-1 .31-2.18'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.81 5.95V5.6c0-1.7 0-2.55-.48-3.12l-.2-.2c-.57-.49-1.42-.49-3.13-.49-1.7 0-2.56 0-3.12.49l-.2.2c-.5.57-.5 1.42-.5 3.12v.36'
+        stroke='currentColor'
+      />
+      <path d='M2.5 12.7h19' stroke='currentColor' />
+    </svg>
+  )
+}

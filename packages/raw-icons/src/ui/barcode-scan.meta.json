@@ -10,6 +10,9 @@
     "price",
     "inventory",
     "SKU",
-    "QR"
+    "QR",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

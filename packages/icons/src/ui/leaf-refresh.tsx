@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconLeafRefresh: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-leaf-refresh'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M6.52 5.43c4.29-3.82 10-3.91 12.51-3.74.78.06 1.4.62 1.5 1.4.34 2.46.52 8.08-3.62 12.66-3.76 4.15-8.78 3.36-11.27 1.12-2.27-2.05-3.5-7.54.88-11.44'
+        fill='currentColor'
+      />
+      <path
+        d='M19.98 10.34c.7-2.27.77-4.41.68-5.98-.07-1.08-.1-1.62-.68-2.16-.57-.54-1.12-.55-2.23-.56-2.85-.02-7.56.52-11.23 3.79-4.38 3.9-3.15 9.4-.88 11.44 1 .9 2.43 1.57 4 1.77'
+        stroke='currentColor'
+      />
+      <path d='M11.9 10.27c-2.22 1.39-6.96 5.74-8.12 12.09' stroke='currentColor' />
+      <path d='M21.57 16.1c-1.09-1.54-2.4-2.6-4.26-2.6q-2.78 0-4.08 2.42' stroke='currentColor' />
+      <path d='M13.47 19.75c1.09 1.53 2.38 2.6 4.25 2.6q2.78 0 4.08-2.4' stroke='currentColor' />
+      <path
+        d='m22.31 13.7-.12.96c-.12.94-.18 1.4-.5 1.66-.34.25-.8.2-1.74.07l-.96-.12'
+        stroke='currentColor'
+      />
+      <path
+        d='m12.74 22.18.11-.97c.1-.94.16-1.4.49-1.67.32-.25.79-.2 1.73-.1l.97.12'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

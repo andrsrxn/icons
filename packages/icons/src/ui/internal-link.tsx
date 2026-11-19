@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconInternalLink: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-internal-link'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M2.64 10.98c0-3.77 0-5.66 1.17-6.83s3.06-1.17 6.83-1.17H13c3.77 0 5.66 0 6.83 1.17S21 7.21 21 10.98v2.36c0 3.77 0 5.66-1.17 6.83s-3.06 1.17-6.83 1.17h-2.36c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83z'
+        fill='currentColor'
+      />
+      <path
+        d='M21 15.3c0 1.9 0 2.86-.32 3.61a4 4 0 0 1-2.1 2.11c-.76.32-1.72.32-3.63.32h-4.31c-3.77 0-5.66 0-6.83-1.17s-1.17-3.06-1.17-6.83v-4c0-2.2 0-3.3.42-4.15A4 4 0 0 1 4.85 3.4c.84-.42 1.95-.42 4.15-.42'
+        stroke='currentColor'
+      />
+      <path
+        d='M19.21 11.34h-2.47c-1.89 0-2.83 0-3.42-.58-.59-.59-.59-1.53-.59-3.42V4.86'
+        stroke='currentColor'
+      />
+      <path d='m21.63 2.35-8.01 8.02' stroke='currentColor' />
+    </svg>
+  )
+}

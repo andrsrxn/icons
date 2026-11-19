@@ -1,0 +1,18 @@
+{
+  "categories": [
+    "development",
+    "business",
+    "devices"
+  ],
+  "tags": [
+    "local",
+    "storage",
+    "server",
+    "sql",
+    "backend",
+    "shard",
+    "partition",
+    "split",
+    "piece"
+  ]
+}

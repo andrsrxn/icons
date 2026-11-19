@@ -45,10 +45,13 @@ export const IconListRefresh: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M19.88 13.46h.84c.78 0 1.17 0 1.4-.24.25-.24.25-.63.25-1.4v-.84'
+        d='m19.77 13.27.87.11c.82.1 1.22.15 1.5-.07s.34-.63.44-1.44l.1-.88'
         stroke='currentColor'
       />
-      <path d='M13.46 19.27v-1c0-.92 0-1.39.29-1.68s.75-.29 1.68-.29h.65' stroke='currentColor' />
+      <path
+        d='m13.15 19.12.12-1c.1-.91.16-1.38.48-1.63s.78-.2 1.7-.08l.64.07'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

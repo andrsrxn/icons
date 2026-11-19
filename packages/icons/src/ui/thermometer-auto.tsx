@@ -1,0 +1,51 @@
+import type { Icon } from './types'
+
+export const IconThermometerAuto: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-thermometer-auto'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path d='M10.21 14.7a4.06 4.06 0 1 1-4.36 0' stroke='currentColor' />
+      <path
+        d='M5.91 14.6V3.73A2 2 0 0 1 7.83 1.8h.41a2 2 0 0 1 1.91 1.9v10.9'
+        stroke='currentColor'
+      />
+      <path
+        d='M7.53 18.04a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m14.4 22 1.4-4.71h0c.68-2.33 1.02-3.49 1.66-3.48.63 0 .94 1.18 1.57 3.52L20.27 22'
+        stroke='currentColor'
+      />
+      <path d='M15.45 18.89h3.9' stroke='currentColor' />
+      <path
+        opacity='.2'
+        d='M5.98 14.24V3.86a2.02 2.02 0 1 1 4.04 0v10.38s1.75 1.91 1.75 3.56c0 2.08-1.69 4.36-3.77 4.36s-3.77-2.28-3.77-4.36c0-1.65 1.75-3.56 1.75-3.56'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

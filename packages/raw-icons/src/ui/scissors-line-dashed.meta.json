@@ -12,6 +12,7 @@
     "divide",
     "outline",
     "dotted",
-    "perforation"
+    "perforation",
+    "border"
   ]
 }

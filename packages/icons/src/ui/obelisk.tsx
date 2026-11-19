@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconObelisk: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-obelisk'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M14.55 22.26c.91 0 1.37 0 1.71-.2q.37-.2.57-.57c.2-.34.2-.8.2-1.7 0-.92 0-1.38-.2-1.72a1.5 1.5 0 0 0-.57-.57c-.34-.2-.8-.2-1.71-.2H9.4c-.92 0-1.37 0-1.71.2a1.5 1.5 0 0 0-.58.57c-.19.34-.19.8-.19 1.71s0 1.37.2 1.71q.2.37.57.58c.34.19.8.19 1.7.19z'
+        fill='currentColor'
+      />
+      <path
+        d='m9.17 17.3.99-12.36q0-.11.02-.16 0-.05.05-.15h0l.28-.67c.63-1.52.95-2.27 1.48-2.27s.85.75 1.48 2.27l.28.67.05.15.02.16.96 12.36'
+        stroke='currentColor'
+      />
+      <path d='M3.65 22.26h16.7' stroke='currentColor' />
+      <path
+        d='M17.03 21.95v-.65c0-1.88 0-2.82-.59-3.41s-1.53-.59-3.41-.59h-2.1c-1.9 0-2.84 0-3.42.59s-.59 1.53-.59 3.41v.65'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

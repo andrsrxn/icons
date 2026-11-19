@@ -1,0 +1,58 @@
+import type { Icon } from './types'
+
+export const IconPowder: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-powder'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path d='M1.64 19.2h20.72' stroke='currentColor' />
+      <path
+        d='m3.17 19.12.12-1.65c.07-1.1.11-1.65.27-2.13a4 4 0 0 1 1.75-2.17c.43-.26.96-.42 2.02-.73h0c.63-.18.95-.28 1.24-.41a4 4 0 0 0 1.4-1.11c.2-.25.36-.54.7-1.13.9-1.6 1.36-2.4 2-2.8.92-.58 2.3-.58 3.21.01.64.4 1.04 1.12 1.83 2.55a31 31 0 0 1 1.84 3.86 40 40 0 0 1 1.64 5.7'
+        stroke='currentColor'
+      />
+      <path
+        d='M8.26 16.23a.42.42 0 1 1-.85 0 .42.42 0 0 1 .85 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M14.8 11.47a.42.42 0 1 1-.85 0 .42.42 0 0 1 .84 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M16.83 15.81a.42.42 0 1 1-.85 0 .42.42 0 0 1 .85 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M18.56 19.41c1.2 0 1.81 0 2.11-.4.3-.39.14-.97-.18-2.13l-1.16-4.21-.08-.25c-.02-.06-.06-.11-.12-.23L16.6 7.84c-.3-.53-.46-.79-.71-.92-.26-.13-.56-.11-1.16-.07l-1.28.09c-.5.03-.75.05-.95.17s-.34.34-.6.76l-1.84 2.93c-.18.28-.27.43-.4.53-.12.1-.28.16-.6.28l-2.89 1.08-.34.14-.28.23-1.12 1a2 2 0 0 0-.44.44c-.08.14-.11.3-.18.6l-.43 1.86c-.26 1.13-.4 1.7-.1 2.07.3.38.89.38 2.05.38z'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+    </svg>
+  )
+}

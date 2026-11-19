@@ -39,10 +39,13 @@ export const IconRefreshOff: Icon = ({
       />
       <path d='M3.12 8.17c.6-.96 1.33-1.93 2.2-2.78' stroke='currentColor' />
       <path
-        d='M15.78 9h1.85c1.73 0 2.6 0 3.13-.53.54-.54.54-1.4.54-3.14V3.47'
+        d='m16.76 8.61 1.65.27c1.54.25 2.3.38 2.86-.02s.68-1.17.93-2.7l.27-1.66'
         stroke='currentColor'
       />
-      <path d='M2.5 20.45v-1.83c0-1.7 0-2.56.53-3.09S4.4 15 6.12 15h1.83' stroke='currentColor' />
+      <path
+        d='m1.54 19.23.35-1.64c.33-1.53.5-2.29 1.07-2.66s1.34-.2 2.87.13l1.64.35'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

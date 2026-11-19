@@ -1,0 +1,53 @@
+import type { Icon } from './types'
+
+export const IconCropImage: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-crop-image'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        d='M1.84 5.11h8.94c3.78 0 5.66 0 6.83 1.18 1.17 1.17 1.17 3.05 1.17 6.82v9.14'
+        stroke='currentColor'
+      />
+      <path
+        d='M22.2 19.04h-9.07c-3.77 0-5.66 0-6.83-1.18-1.17-1.17-1.17-3.05-1.17-6.82V1.77'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M5.13 7.11c0-.94 0-1.4.3-1.7.29-.3.76-.3 1.7-.3h5.66c2.82 0 4.23 0 5.11.88s.88 2.3.88 5.12v.92c0 .95 0 1.42-.17 1.68a1 1 0 0 1-.87.43c-.32-.02-.7-.3-1.44-.89a2 2 0 0 0-.63-.4 1 1 0 0 0-.57-.02 2 2 0 0 0-.64.39l-.21.15c-.59.41-.88.62-1.2.62l-.16-.02c-.32-.05-.57-.3-1.08-.81l-1.14-1.14c-.53-.53-.8-.8-1.12-.85h-.28c-.33.04-.6.3-1.14.82l-.93.9c-.3.28-.44.42-.56.48a1 1 0 0 1-1.43-.56 4 4 0 0 1-.08-.73z'
+        fill='currentColor'
+      />
+      <path
+        d='M15.26 8.9a.43.43 0 1 1-.86 0 .43.43 0 0 1 .86 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='m5.32 15.09 3-3.47c.53-.58.8-.88 1.15-.87.37.01.6.32 1.09.93l1.38 1.75c.43.53.64.8.97.83s.85-.44 1.4-.9c.44-.37.8-.65 1.09-.65.28 0 .51.17.98.53l2.4 1.85'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

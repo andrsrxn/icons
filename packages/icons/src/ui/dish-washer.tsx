@@ -1,0 +1,50 @@
+import type { Icon } from './types'
+
+export const IconDishWasher: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-dish-washer'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M13.47 21.47c3.77 0 5.65 0 6.82-1.18 1.18-1.17 1.18-3.05 1.18-6.82V8.08H2.53v5.39c0 3.77 0 5.65 1.18 6.82 1.17 1.18 3.05 1.18 6.82 1.18zm-1.3-9.09a3.7 3.7 0 0 1 2.5-.99c2.03 0 3.22 1.6 3.22 3.63s-1.42 3.5-3.45 3.5c-1 0-1.66-.18-2.32-.82a3.66 3.66 0 0 1-6.18-2.68 3.67 3.67 0 0 1 6.22-2.64'
+        fillRule='evenodd'
+        clipRule='evenodd'
+        fill='currentColor'
+      />
+      <path d='M2.65 8.08h18.82' stroke='currentColor' />
+      <path
+        d='M2.53 13.47v-2.94c0-3.77 0-5.65 1.18-6.82 1.17-1.17 3.05-1.17 6.82-1.17h2.94c3.77 0 5.65 0 6.82 1.17 1.18 1.17 1.18 3.05 1.18 6.83v2.93c0 3.77 0 5.65-1.18 6.82-1.17 1.18-3.05 1.18-6.82 1.18h-2.94c-3.77 0-5.65 0-6.82-1.18-1.18-1.17-1.18-3.05-1.18-6.82'
+        stroke='currentColor'
+      />
+      <circle cx='9.53' cy='14.92' r='3.64' stroke='currentColor' />
+      <path d='M12.13 12.13a3.64 3.64 0 1 1 0 5.59' stroke='currentColor' />
+      <path
+        d='M7.16 5.46a.52.52 0 1 1-1.05 0 .52.52 0 0 1 1.05 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

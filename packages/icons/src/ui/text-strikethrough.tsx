@@ -26,11 +26,15 @@ export const IconTextStrikethrough: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
+      <path d='M3.87 12h16.26' stroke='currentColor' />
       <path
-        d='M16.93 6.55C16.5 4.93 14.43 3.7 12 3.7S6.63 5.1 6.93 8.03c.65 6.33 9.7 1.41 10.15 7.68.21 3-2.6 4.61-5.08 4.61s-4.27-1.26-5.07-2.91'
+        d='M6.82 17.65A5.5 5.5 0 0 0 12 20.71c2.53 0 5.4-1.7 5.18-4.83-.2-2.93-2.28-3.52-4.52-3.87'
         stroke='currentColor'
       />
-      <path d='M3.87 12h16.26' stroke='currentColor' />
+      <path
+        d='M17.02 6.3c-.45-1.7-2.55-3-5.03-3-2.47 0-5.17 1.12-5.17 4.53q0 .78.17 1.35'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

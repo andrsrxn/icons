@@ -3,15 +3,15 @@
     "tools"
   ],
   "tags": [
-    "detect",
-    "shape",
-    "identify",
-    "analyze",
     "frame",
     "region",
-    "find",
-    "lookup",
-    "explore",
-    "capture"
+    "area",
+    "detect",
+    "capture",
+    "analyze",
+    "focus",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

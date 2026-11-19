@@ -1,10 +1,11 @@
 {
   "categories": [
     "tools",
-    "communication"
+    "communication",
+    "arrows"
   ],
   "tags": [
-     "reload",
+    "reload",
     "sync",
     "update",
     "cycle",

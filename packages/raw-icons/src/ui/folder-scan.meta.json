@@ -7,10 +7,12 @@
     "directory",
     "files",
     "reader",
-    "detect",
     "laser",
     "ocr",
     "audit",
-    "search"
+    "detect",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

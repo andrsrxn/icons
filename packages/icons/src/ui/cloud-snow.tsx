@@ -28,7 +28,7 @@ export const IconCloudSnow: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='m1.62 12.94 3.84 3.8H19.1l2.96-2.15v-4.28l-3.3-2.35-1.73 1.21-.93-3.5-3.95-2.27-3.3 1.42-1.66 3.14-3.85 1.21z'
+        d='m1.92 14.18 3.54 2.55H19.1l3.12-2.14v-4.28l-3.46-2.35-1.77.28-.89-2.56-3.95-2.28-3.3 1.42-1.91 2.8L2.7 9.13z'
         fill='currentColor'
       />
       <path d='M6.97 7.55a5.09 5.09 0 0 1 9.33-1.18c.84 1.44.8 2.9.61 3.88' stroke='currentColor' />
@@ -51,12 +51,12 @@ export const IconCloudSnow: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M12.61 17.84a.42.42 0 1 1 0 .85.42.42 0 0 1 0-.85'
+        d='M12.61 17.84a.43.43 0 1 1 0 .85.43.43 0 0 1 0-.85'
         fill='currentColor'
         stroke='currentColor'
       />
       <path
-        d='M12.5 13.51a.43.43 0 1 0 0 .85.43.43 0 0 0 0-.85'
+        d='M12.5 13.51a.42.42 0 1 0 0 .85.42.42 0 0 0 0-.85'
         fill='currentColor'
         stroke='currentColor'
       />

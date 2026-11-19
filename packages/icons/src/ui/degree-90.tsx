@@ -1,0 +1,49 @@
+import type { Icon } from './types'
+
+export const IconDegree90: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-degree-90'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <ellipse opacity='.2' cx='12' cy='13.44' rx='10.22' ry='4.88' fill='currentColor' />
+      <path
+        d='M18.17 7.96c0 2.29-.6 4.14-2.66 4.14-2.08 0-2.67-1.85-2.67-4.14s.69-4.14 2.67-4.14c1.97 0 2.66 1.85 2.66 4.14'
+        stroke='currentColor'
+      />
+      <path
+        d='m9.83 21.04.16-.12c1.52-1.12 2.28-1.68 2.4-2.5s-.44-1.58-1.56-3.1l-.12-.16'
+        stroke='currentColor'
+      />
+      <path
+        d='M10.17 5.98c-.16-1.07-1-2.16-2.19-2.16s-2.15.96-2.15 2.16c0 1.19.82 2.13 2 2.13.82 0 2.15-.45 2.34-2.13m0 0c.18 1.2.12 2.61-.61 3.91a4.4 4.4 0 0 1-2.63 2.21'
+        stroke='currentColor'
+      />
+      <path
+        d='M12 18.32c-5.64 0-10.22-2.19-10.22-4.88 0-.93.54-1.8 1.48-2.53'
+        stroke='currentColor'
+      />
+      <path d='M17.59 17.53c3.1-.86 4.63-2.69 4.63-4.1q0-.91-.66-1.72' stroke='currentColor' />
+    </svg>
+  )
+}

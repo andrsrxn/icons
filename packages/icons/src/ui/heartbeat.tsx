@@ -1,0 +1,42 @@
+import type { Icon } from './types'
+
+export const IconHeartbeat: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-heartbeat'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M15.58 6.22c-1 0-1.86.42-2.5.9-.6.48-.91.71-1.08.71s-.47-.23-1.08-.7a4 4 0 0 0-2.5-.9c-2.28 0-4 2.6-3.26 5.35.4 1.49 1.85 2.83 3.38 4.05 1.84 1.48 2.76 2.21 3.46 2.21s1.62-.73 3.46-2.2c1.53-1.23 2.98-2.57 3.38-4.06.74-2.75-.98-5.36-3.26-5.36'
+        fill='currentColor'
+      />
+      <path
+        d='M12.6 7.55a4.3 4.3 0 0 1 2.98-1.33c2.28 0 4 2.61 3.26 5.36-.4 1.49-1.85 2.83-3.38 4.05-1.84 1.48-2.76 2.21-3.46 2.21s-1.62-.73-3.46-2.2h0c-1.53-1.23-2.98-2.57-3.38-4.06-.74-2.75.98-5.36 3.26-5.36 1.29 0 2.32.69 2.97 1.33.33.31.49.47.61.47s.28-.16.6-.47'
+        stroke='currentColor'
+      />
+      <path d='M3.34 5.26a8.4 8.4 0 0 0 0 10.36' stroke='currentColor' />
+      <path d='M20.66 5.26a8.4 8.4 0 0 1 0 10.36' stroke='currentColor' />
+    </svg>
+  )
+}

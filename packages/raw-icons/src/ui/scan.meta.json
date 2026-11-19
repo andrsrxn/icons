@@ -3,11 +3,12 @@
     "security"
   ],
   "tags": [
-    "scanner",
     "barcode",
     "QR",
     "reader",
     "camera",
-    "inspect"
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

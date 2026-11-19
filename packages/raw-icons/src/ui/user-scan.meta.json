@@ -11,6 +11,8 @@
     "identity",
     "biometric",
     "verify",
+    "inspect",
+    "identify",
     "recognize"
   ]
 }

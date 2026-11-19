@@ -39,8 +39,11 @@ export const IconCameraRefresh: Icon = ({
       />
       <path d='M15.83 11.25C14.8 9.8 13.57 8.8 11.81 8.8q-2.63 0-3.85 2.28' stroke='currentColor' />
       <path d='M8.2 14.7c1.01 1.43 2.24 2.45 4 2.45q2.62 0 3.84-2.28' stroke='currentColor' />
-      <path d='M16.27 8.88v.8c0 .95 0 1.42-.3 1.71-.29.3-.76.3-1.7.3h-.8' stroke='currentColor' />
-      <path d='M7.74 17.08v-.81c0-.94 0-1.42.29-1.7.29-.3.76-.3 1.7-.3h.82' stroke='currentColor' />
+      <path
+        d='m16.53 8.99-.1.8c-.12.93-.18 1.4-.5 1.65-.34.25-.8.2-1.74.07l-.8-.1'
+        stroke='currentColor'
+      />
+      <path d='m7.5 16.99.1-.8c.1-.95.15-1.41.48-1.67s.79-.2 1.73-.1l.8.09' stroke='currentColor' />
     </svg>
   )
 }

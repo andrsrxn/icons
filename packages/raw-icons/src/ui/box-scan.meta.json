@@ -5,9 +5,11 @@
   "tags": [
     "package",
     "container",
-    "scanner",
-    "inspect",
+    "shipping",
     "x-ray",
-    "shipping"
+    "parcel",
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

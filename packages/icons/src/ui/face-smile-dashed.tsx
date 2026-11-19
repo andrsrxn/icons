@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconFaceSmileDashed: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-face-smile-dashed'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <circle opacity='.2' cx='12' cy='12' r='10.22' fill='currentColor' />
+      <path d='M2 14.32c-.24-.87-.3-1.4-.28-2.3.02-.8.08-1.27.28-2.05' stroke='currentColor' />
+      <path d='M22 14.32c.24-.87.3-1.4.28-2.3A8 8 0 0 0 22 9.97' stroke='currentColor' />
+      <path d='M14.18 22.14c-.87.24-1.4.3-2.3.29a8 8 0 0 1-2.05-.29' stroke='currentColor' />
+      <path d='M14.18 2.15c-.87-.24-1.4-.3-2.3-.29-.8.02-1.28.09-2.05.29' stroke='currentColor' />
+      <path
+        d='M20.6 17.68c-.44.78-.77 1.2-1.42 1.82-.58.56-.96.84-1.65 1.25'
+        stroke='currentColor'
+      />
+      <path d='M6.47 3.54c-.78.44-1.2.77-1.83 1.42-.55.58-.84.96-1.25 1.65' stroke='currentColor' />
+      <path d='M17.53 3.54c.78.44 1.2.77 1.83 1.42.55.58.84.96 1.25 1.65' stroke='currentColor' />
+      <path d='M3.4 17.68c.44.78.77 1.2 1.42 1.82.58.56.96.84 1.65 1.25' stroke='currentColor' />
+      <path
+        d='M9.55 9.75a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path
+        d='M15.97 9.75a.8.8 0 1 1-1.6 0 .8.8 0 0 1 1.6 0'
+        fill='currentColor'
+        stroke='currentColor'
+      />
+      <path d='M15.68 15.6a5.2 5.2 0 0 1-3.71 1.28 5.6 5.6 0 0 1-3.72-1.29' stroke='currentColor' />
+    </svg>
+  )
+}

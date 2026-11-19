@@ -1,0 +1,46 @@
+import type { Icon } from './types'
+
+export const IconDegree45: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-degree-45'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <ellipse opacity='.2' cx='12' cy='13.44' rx='10.22' ry='4.88' fill='currentColor' />
+      <path
+        d='m9.83 21.04.16-.12c1.52-1.12 2.28-1.68 2.4-2.5s-.44-1.58-1.56-3.1l-.12-.16'
+        stroke='currentColor'
+      />
+      <path d='M12 18.32c-5.64 0-10.22-2.19-10.22-4.88q.01-.91.65-1.72' stroke='currentColor' />
+      <path d='M17.59 17.53c3.1-.86 4.63-2.69 4.63-4.1q0-.91-.66-1.72' stroke='currentColor' />
+      <path
+        d='M9.59 9.75V5.82c0-1.4 0-2.1-.37-2.2-.36-.11-.73.48-1.48 1.66L5.88 8.22c-.43.67-.64 1.01-.5 1.27s.54.26 1.35.26zm0 0V12m0-2.25h1.2'
+        stroke='currentColor'
+      />
+      <path
+        d='M17.94 3.71h-3.4c-.44 0-.65 0-.8.13-.13.13-.16.34-.2.77l-.1.93c-.1.84-.14 1.26.02 1.42.17.17.69.13 1.74.05h0c1.46-.1 3 .46 3 2.33 0 3.33-3.91 3.2-5 1.44'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

@@ -1,0 +1,54 @@
+import type { Icon } from './types'
+
+export const IconHandReceivingDroplet: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-hand-receiving-droplet'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M2.2 15.68c0-.94 0-1.41.28-1.7.3-.3.77-.3 1.72-.3.94 0 1.42 0 1.7.3.3.29.3.76.3 1.7v3.91c0 .94 0 1.41-.3 1.7-.28.3-.76.3-1.7.3-.95 0-1.42 0-1.72-.3-.29-.29-.29-.76-.29-1.7z'
+        fill='currentColor'
+      />
+      <path
+        d='M11.03 17.99c1.53 0 3.15.1 3.92-.35m0 0a27 27 0 0 0 3.72-2.7 1.98 1.98 0 0 1 2.96.44c.35.58.35 1.3-.05 1.85-.85 1.17-2.53 3.13-4.66 3.86-2.93 1-4.61 1.21-7.91.46a8 8 0 0 1-2.8-1.29m8.74-2.62c.64-1.57.45-2.82-.24-3.07a11 11 0 0 0-4.03-.62c-3.73 0-4.48.87-4.48.87'
+        stroke='currentColor'
+      />
+      <path
+        d='M4.2 21.59c.94 0 1.42 0 1.7-.3.3-.29.3-.76.3-1.7v-3.91c0-.94 0-1.41-.3-1.7-.28-.3-.76-.3-1.7-.3v0c-.95 0-1.42 0-1.72.3-.29.29-.29.76-.29 1.7v3.91c0 .94 0 1.41.3 1.7.29.3.76.3 1.7.3'
+        stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='M15.58 10.47c2 0 3.63-1.53 3.63-3.42 0-3.4-3.63-5.92-3.63-5.92s-3.64 2.48-3.64 5.92c0 1.89 1.63 3.42 3.64 3.42'
+        fill='currentColor'
+      />
+      <path
+        d='M19.21 7.05c0 1.89-1.62 3.42-3.63 3.42s-3.64-1.53-3.64-3.42c0-1.96 1.13-3.58 2.13-4.62.58-.6.87-.9 1.5-.9.65 0 .94.3 1.51.9 1 1.05 2.13 2.67 2.13 4.62'
+        stroke='currentColor'
+      />
+      <path d='M16.73 6.54a1.5 1.5 0 0 1-.38.82c-.25.3-.53.44-.83.53' stroke='currentColor' />
+    </svg>
+  )
+}

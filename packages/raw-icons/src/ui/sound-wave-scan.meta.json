@@ -7,10 +7,11 @@
     "frequency",
     "voice",
     "amplitude",
+    "acoustic",
+    "waveform",
     "detect",
-    "analyze",
-    "find",
-    "lookup",
-    "explore"
+    "inspect",
+    "identify",
+    "recognize"
   ]
 }

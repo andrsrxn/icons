@@ -1,6 +1,7 @@
 {
   "categories": [
-    "typography"
+    "typography",
+    "arrows"
   ],
   "tags": [
     "font",
@@ -8,6 +9,7 @@
     "gap",
     "vertical",
     "format",
-    "measure"
+    "measure",
+    "height"
   ]
 }

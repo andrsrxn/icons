@@ -26,13 +26,13 @@ export const IconRefreshSparkle: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path d='M18.45 13.28c0 1.8-1.94 3.75-3.75 3.75' stroke='currentColor' />
-      <path d='M18.45 13.28c0 1.8 1.95 3.75 3.75 3.75' stroke='currentColor' />
-      <path d='M18.45 20.78c0-1.77-1.95-3.75-3.75-3.75' stroke='currentColor' />
-      <path d='M18.45 20.78c0-1.8 1.97-3.75 3.75-3.75' stroke='currentColor' />
+      <path d='M18.17 12.88c0 1.95-2.1 4.07-4.07 4.07' stroke='currentColor' />
+      <path d='M18.17 12.88c0 1.96 2.12 4.07 4.07 4.07' stroke='currentColor' />
+      <path d='M18.17 21.03c0-1.92-2.12-4.07-4.07-4.07' stroke='currentColor' />
+      <path d='M18.17 21.03c0-1.95 2.14-4.07 4.07-4.07' stroke='currentColor' />
       <path
         opacity='.2'
-        d='M2.57 12.07a9.4 9.4 0 0 0 15.47 7.19L15.77 17l2.78-2.6 1.84 1.88a9.4 9.4 0 1 0-17.82-4.21'
+        d='M2.57 12.07a9.4 9.4 0 0 0 15.47 7.19l-2.57-2.41 2.57-2.6 2.35 2.03a9.4 9.4 0 1 0-17.82-4.21'
         fillRule='evenodd'
         clipRule='evenodd'
         fill='currentColor'
@@ -43,10 +43,13 @@ export const IconRefreshSparkle: Icon = ({
         stroke='currentColor'
       />
       <path
-        d='M15.84 9h1.86c1.73 0 2.6 0 3.13-.53.54-.54.54-1.4.54-3.14V3.47'
+        d='m16.76 8.61 1.65.27c1.54.25 2.3.38 2.86-.02s.68-1.17.93-2.7l.27-1.66'
         stroke='currentColor'
       />
-      <path d='M2.57 20.45v-1.83c0-1.7 0-2.56.53-3.09S4.48 15 6.19 15h1.83' stroke='currentColor' />
+      <path
+        d='m1.54 19.23.35-1.64c.33-1.53.5-2.29 1.07-2.66s1.34-.2 2.87.13l1.64.35'
+        stroke='currentColor'
+      />
     </svg>
   )
 }

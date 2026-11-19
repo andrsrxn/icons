@@ -27,7 +27,7 @@ export const IconCloudSunRain: Icon = ({
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
       <path
-        d='M7.55 12.65a3.3 3.3 0 0 0-2.69-1.42 3.47 3.47 0 0 0-3.37 3.56c0 .97.37 1.84.97 2.49q.54.57 1.27.86'
+        d='M7.55 12.65a3.3 3.3 0 0 0-2.69-1.42 3.47 3.47 0 0 0-3.37 3.56c0 .97.37 1.85.97 2.49q.54.57 1.27.86'
         stroke='currentColor'
       />
       <path
@@ -38,9 +38,9 @@ export const IconCloudSunRain: Icon = ({
         d='M13.32 11.92a2.8 2.8 0 0 1 2.69.1 3.4 3.4 0 0 1 1.25 4.66 4 4 0 0 1-1.25 1.35'
         stroke='currentColor'
       />
-      <path d='M7.32 16.89v2.57' stroke='currentColor' />
-      <path d='M10.35 15.81v2.57' stroke='currentColor' />
-      <path d='M12.98 17.65v2.57' stroke='currentColor' />
+      <path d='M7.32 19.46v-2.57' stroke='currentColor' />
+      <path d='M10.35 18.38v-2.57' stroke='currentColor' />
+      <path d='M12.98 20.22v-2.57' stroke='currentColor' />
       <path
         opacity='.2'
         d='M15.93 12.26c-1.58-.85-3.03-.37-3.2-2.29-.18-1.91.61-2.97 2.53-3.14a3.5 3.5 0 0 1 3.79 3.14c.17 1.92-1.3 3.11-3.12 2.3'

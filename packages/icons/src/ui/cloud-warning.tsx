@@ -26,11 +26,6 @@ export const IconCloudWarning: Icon = ({
       aria-hidden={isLabelled ? undefined : true}
       aria-label={isLabelled ? ariaLabel : undefined}
       focusable={false}>
-      <path
-        opacity='.2'
-        d='m1.48 12.97 3.85 3.79h13.63l2.95-2.14v-4.28L18.61 8l-1.73 1.2-.92-3.5L12 3.44 8.7 4.85 7.03 8 3.2 9.2z'
-        fill='currentColor'
-      />
       <path d='M6.83 7.57a5.09 5.09 0 0 1 9.34-1.17c.83 1.44.8 2.9.6 3.88' stroke='currentColor' />
       <path
         d='M5.03 16.4a3.6 3.6 0 0 1-2.16-1.15 4.27 4.27 0 0 1 3.06-7.27c1.4 0 2.64.67 3.43 1.7'
@@ -45,6 +40,11 @@ export const IconCloudWarning: Icon = ({
         d='M12.42 19.35a.42.42 0 1 1-.84 0 .42.42 0 0 1 .84 0'
         fill='currentColor'
         stroke='currentColor'
+      />
+      <path
+        opacity='.2'
+        d='m1.92 14.18 3.54 2.55H19.1l3.12-2.14v-4.28l-3.46-2.35-1.77.28-.89-2.56-3.95-2.28-3.3 1.42-1.91 2.8L2.7 9.13z'
+        fill='currentColor'
       />
     </svg>
   )

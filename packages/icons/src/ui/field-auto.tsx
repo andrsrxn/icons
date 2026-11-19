@@ -1,0 +1,45 @@
+import type { Icon } from './types'
+
+export const IconFieldAuto: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-field-auto'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M15.77 18.54c2.85 0 4.28 0 5.24-.79q.29-.22.51-.51c.79-.96.79-2.39.79-5.24s0-4.28-.79-5.24a4 4 0 0 0-.51-.51c-.96-.79-2.39-.79-5.24-.79H8.23c-2.85 0-4.28 0-5.24.79a4 4 0 0 0-.51.51c-.79.96-.79 2.39-.79 5.24s0 4.28.79 5.24q.22.29.51.51c.96.79 2.39.79 5.24.79z'
+        fill='currentColor'
+      />
+      <path
+        d='M22.3 9.77v-.54a4 4 0 0 0-3.76-3.76H8.23c-2.37 0-3.55 0-4.45.48a4 4 0 0 0-1.6 1.6c-.49.9-.49 2.08-.49 4.45s0 3.55.49 4.45a4 4 0 0 0 1.6 1.6c.9.49 2.08.49 4.45.49h2.81'
+        stroke='currentColor'
+      />
+      <path
+        d='m15.16 19.41 1.4-4.72c.67-2.32 1.02-3.48 1.65-3.48.64.01.95 1.18 1.57 3.52l1.25 4.68'
+        stroke='currentColor'
+      />
+      <path d='M16.21 16.29h3.89' stroke='currentColor' />
+    </svg>
+  )
+}

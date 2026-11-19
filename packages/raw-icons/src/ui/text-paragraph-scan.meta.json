@@ -4,16 +4,15 @@
     "editor"
   ],
   "tags": [
-    "lines",
     "content",
     "copy",
     "prose",
     "reading",
     "document",
     "ocr",
-    "recognize",
     "detect",
-    "identify"
-  ],
-  "rtl": true
+    "inspect",
+    "identify",
+    "recognize"
+  ]
 }

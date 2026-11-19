@@ -1,0 +1,48 @@
+import type { Icon } from './types'
+
+export const IconDatabaseFragment: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-database-fragment'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <ellipse opacity='.2' cx='12' cy='5.23' rx='8.88' ry='3.44' fill='currentColor' />
+      <path
+        opacity='.2'
+        d='M3.25 16.75c0-1.31 0-1.97.4-2.27s1.06-.11 2.37.27c1.8.51 4.16 1.05 6.02.97 1.4-.05 2.3.05 3.78-.43l-.79 3.49.9 3.01c-1.51.37-2.47.44-3.89.44-2.46 0-5.76-1.05-7.54-1.69-.59-.2-.88-.32-1.06-.57-.19-.26-.19-.59-.19-1.24z'
+        fill='currentColor'
+      />
+      <ellipse cx='12' cy='5.23' rx='8.88' ry='3.44' stroke='currentColor' />
+      <path d='M10.93 12.35c-.93 0-1.5-.03-2.68-.26a7 7 0 0 1-2.19-.78' stroke='currentColor' />
+      <path d='M10.93 18.7c-.93 0-1.5-.02-2.68-.25a7 7 0 0 1-2.19-.79' stroke='currentColor' />
+      <path d='M12 22.2c-4.9 0-8.88-1.5-8.88-3.37' stroke='currentColor' />
+      <path d='M12 15.55c-4.9 0-8.88-1.51-8.88-3.38' stroke='currentColor' />
+      <path d='M3.12 5.74V18.6' stroke='currentColor' />
+      <path d='M20.88 5.23v7.37' stroke='currentColor' />
+      <path
+        d='M15.24 18.8c0-1.46 0-2.2.36-2.7a2 2 0 0 1 .5-.5c.51-.36 1.24-.36 2.7-.36v0c1.45 0 2.18 0 2.7.36q.3.2.5.5c.35.5.35 1.24.35 2.7v0c0 1.45 0 2.18-.36 2.7a2 2 0 0 1-.5.49c-.5.36-1.24.36-2.7.36v0c-1.45 0-2.18 0-2.7-.36a2 2 0 0 1-.49-.5c-.36-.51-.36-1.24-.36-2.7'
+        stroke='currentColor'
+      />
+    </svg>
+  )
+}

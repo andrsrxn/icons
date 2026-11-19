@@ -7,6 +7,9 @@
     "log",
     "clock",
     "rewind",
+    "reload",
+    "restore",
+    "refresh",
     "undo",
     "recent",
     "changelog"

@@ -1,10 +1,11 @@
 {
   "categories": [
     "tools",
-    "media"
+    "media",
+    "arrows"
   ],
   "tags": [
-   "backup",
+    "backup",
     "recover",
     "revert",
     "history",

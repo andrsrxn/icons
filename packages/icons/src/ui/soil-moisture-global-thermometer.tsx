@@ -28,14 +28,14 @@ export const IconSoilMoistureGlobalThermometer: Icon = ({
       focusable={false}>
       <path
         opacity='.2'
-        d='M16.48 19.07v-3.92c0-.42.37-.76.83-.76s.82.34.82.76v3.92s.72.72.72 1.34c0 .8-.69 1.43-1.54 1.43s-1.54-.64-1.54-1.43c0-.62.71-1.34.71-1.34'
+        d='M16.27 18.76V15.2c0-.45.47-.81 1.04-.81s1.04.36 1.04.81v3.56s.9 1.4.9 2.07c0 .84-.87 1.53-1.94 1.53s-1.94-.69-1.94-1.53c0-.66.9-2.07.9-2.07'
         fill='currentColor'
       />
       <path
         d='M16.04 18.72c-.28.37-.67.96-.67 1.66 0 1.1.87 1.98 1.94 1.98s1.94-.89 1.94-1.98c0-.7-.31-1.2-.69-1.66'
         stroke='currentColor'
       />
-      <path d='M18.56 18.72v-3.08a1.25 1.25 0 1 0-2.5 0v3.08' stroke='currentColor' />
+      <path d='M18.56 18.72v-3.08a1.25 1.25 0 0 0-2.5 0v3.08' stroke='currentColor' />
       <path d='M21.47 8s-3.92.78-6.7 3.7a16.5 16.5 0 0 0-3.58 6.1' stroke='currentColor' />
       <path d='M21.47 8s-3.92.78-6.7 3.7a16.5 16.5 0 0 0-3.58 6.1' stroke='currentColor' />
       <path d='M21.53 11.82s-.74.14-1.54.67' stroke='currentColor' />

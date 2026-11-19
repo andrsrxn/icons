@@ -9,7 +9,8 @@
     "expand",
     "letter",
     "font",
-    "kerning"
+    "kerning",
+    "list"
   ],
   "rtl": true
 }

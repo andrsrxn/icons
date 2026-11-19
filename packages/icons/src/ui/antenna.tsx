@@ -1,0 +1,43 @@
+import type { Icon } from './types'
+
+export const IconAntenna: Icon = ({
+  size = 24,
+  strokeWidth = 1.5,
+  className,
+  'aria-label': ariaLabel,
+  ...props
+}) => {
+  const isLabelled = Boolean(ariaLabel?.trim())
+
+  return (
+    <svg
+      viewBox='0 0 24 24'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+      width={size}
+      height={size}
+      strokeLinecap='round'
+      strokeLinejoin='round'
+      strokeWidth={strokeWidth}
+      data-slot='icon-ui-antenna'
+      className={`icon-ui ${className ?? ''}`.trim()}
+      {...props}
+      role={isLabelled ? 'img' : undefined}
+      aria-hidden={isLabelled ? undefined : true}
+      aria-label={isLabelled ? ariaLabel : undefined}
+      focusable={false}>
+      <path
+        opacity='.2'
+        d='M15.39 21.16c1.02-.53 1.53-.8 1.56-1.37s-.56-.95-1.74-1.7A31 31 0 0 1 10.1 14a31 31 0 0 1-4.08-5.1c-.75-1.18-1.13-1.77-1.7-1.74-.58.02-.85.53-1.38 1.56A9.23 9.23 0 0 0 15.4 21.16'
+        fill='currentColor'
+      />
+      <path
+        d='M10.1 14c1.8 1.8 3.67 3.16 5.1 4.08 1.19.76 1.78 1.13 1.75 1.71s-.54.84-1.56 1.37A9.23 9.23 0 0 1 2.94 8.72c.53-1.03.8-1.54 1.38-1.56s.95.56 1.7 1.74A31 31 0 0 0 10.1 14'
+        stroke='currentColor'
+      />
+      <path d='m12.81 11.16-2.73 2.74' stroke='currentColor' />
+      <path d='M17.86 10.11a4.86 4.86 0 0 0-4.23-4.23' stroke='currentColor' />
+      <path d='M21.87 9.81c-.22-4-4.26-7.87-7.94-7.94' stroke='currentColor' />
+    </svg>
+  )
+}
