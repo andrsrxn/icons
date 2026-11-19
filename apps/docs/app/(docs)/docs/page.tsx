@@ -76,9 +76,10 @@ export default function DocsPage() {
         </h1>
         <h2 id='overview'>Overview</h2>
         <p>
-          <strong>{COMPANY.fullName}</strong> is a {COMPANY.description} An open-source icon library
-          designed on Figma and built for modern React applications. The set is lightweight,
-          visually consistent, and accessible.
+          <strong>{COMPANY.fullName}</strong> is a{' '}
+          {COMPANY.description.charAt(0).toLowerCase() + COMPANY.description.slice(1)} An
+          open-source icon library designed on Figma and built for modern React applications. The
+          set is lightweight, visually consistent, and accessible.
         </p>
 
         <h2 id='why-another-icon-library'>Why another icon library?</h2>
@@ -87,10 +88,9 @@ export default function DocsPage() {
           <strong>there are no free duotone icon sets with the right style</strong>.
         </p>
         <p>
-          Most libraries offer only outline or solid variants.{' '}
-          <a href='https://phosphoricons.com/'>Phosphor Icons</a> does include free duotone
-          variants, but its implementation applies a duotone layer to every icon unconditionally,
-          this results in unnecessary visual noise and icons that feel semantically inconsistent.
+          Most libraries only offer outline or solid variants, some duotone implementations applies
+          an extra layer to every icon unconditionally, this results in unnecessary visual noise and
+          icons that feel semantically inconsistent.
         </p>
         <p>
           <code>andrsrxn/icons</code> takes a more deliberate approach:
@@ -116,16 +116,16 @@ export default function DocsPage() {
 
         <ul>
           <li>
-            <strong>UI</strong>: Functional icons for apps, each with its own preview image. (aspect
+            <strong>UI</strong>: Functional icons for apps, each with its own preview image. (Aspect
             ratio 1:1)
           </li>
           <li>
             <strong>Flags</strong>: Simple and minimal country flags, named with ISO 3166-1 alpha-2
             code (<code>IconFlagGT</code>, <code>IconFlagUS</code>), the exceptions are{' '}
-            <code>IconFlagLGTB</code> and continent flags, which have a <code>C</code> prefix (
-            <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, and so
-            on); treated as image assets with country code as <code>aria-label</code> included.
-            (aspect ratio 3:2)
+            <code>IconFlagLGTB</code> and continent flags, prefixed with <code>C</code> (
+            <code>IconFlagCAF</code> for Africa, <code>IconFlagCNA</code> for North America, etc.).
+            Treated as image assets with its country code as <code>aria-label</code>. (Aspect ratio
+            3:2)
           </li>
         </ul>
         <Alert className='max-w-154'>
@@ -228,8 +228,8 @@ export default function DocsPage() {
 
         <h3 id='agent-skill'>Agent skill</h3>
         <p>
-          If you are using an AI coding assistant (such as Antigravity, Cursor, Copilot, or Claude
-          Code), you can install the official agent skill into your project:
+          If you are using an AI coding assistant (such as Codex, Claude Code, Cursor, Copilot,
+          Antigravity, etc.), you can install the official agent skill into your project:
         </p>
         <h4>Automatic installation</h4>
         <Tabs defaultValue='pnpm'>
@@ -285,7 +285,6 @@ export default function DocsPage() {
           code={`.agents/
 └── skills/
     └── andrsrxn-icons/
-        ├── references/
         ├── README.md
         └── SKILL.md`}
 
@@ -344,7 +343,7 @@ export function App() {
           <AlertTitle>Best practices</AlertTitle>
           <AlertDescription>
             <p className='text-blue-900! dark:text-blue-100! text-sm!'>
-              Avoid importing all the icons at once from the root of the library, that is not
+              Avoid importing all the icons at once from the root of the library, that way is not
               tree-shakable and will increase the bundle size of your application.
             </p>
           </AlertDescription>
@@ -363,8 +362,19 @@ export function App() {
         />
         <p>
           The following UI icons automatically detect the <code>dir</code> attribute on the closest
-          parent element and get flippled using the <code>transform: scaleX(-1)</code> CSS property:
+          parent element and get flippled using the CSS property:
         </p>
+        <Alert className='max-w-prose bg-amber-50 border-amber-300 dark:border-amber-800 dark:bg-amber-950 dark:text-amber-50 text-amber-950'>
+          <IconWarningTriangle />
+          <AlertTitle>Limitation</AlertTitle>
+          <AlertDescription>
+            <p className='text-amber-900! dark:text-amber-100! text-sm!'>
+              <code>dir="auto"</code> does NOT trigger flipping. The <code>dir</code> attribute must
+              be set explicitly on a parent or ancestor element.
+            </p>
+          </AlertDescription>
+        </Alert>
+
         <h3 id='opt-in-icons'>Opt-in icons</h3>
         <ul className='grid grid-cols-2 lg:grid-cols-3'>
           <li>
@@ -444,6 +454,16 @@ export function App() {
           </li>
           <li>
             <p>
+              <code>arrows-start</code>
+            </p>
+          </li>
+          <li>
+            <p>
+              <code>arrows-end</code>
+            </p>
+          </li>
+          <li>
+            <p>
               <code>arrow-end-circle</code>
             </p>
           </li>
@@ -492,6 +512,7 @@ export function App() {
               <code>arrow-start-circle</code>
             </p>
           </li>
+
           <li>
             <p>
               <code>chevron-start-circle</code>
@@ -919,22 +940,21 @@ export function App() {
             </p>
           </li>
         </ul>
-        <p>
-          To opt-out of RTL on these icons and keep them as they are, add the Tailwind directive{' '}
-          <code>rtl:scale-x-100</code> or the quivalent in CSS:
-        </p>
-
-        <CodeBlock
-          code={`[dir=rtl] [data-slot='icon-ui-arrow-start'] {
-  transform: scaleX(1);
-}`}
-          filename='globals.css'
-          className='max-w-154'
-        />
+        <Alert className='max-w-154'>
+          <IconInfo />
+          <AlertTitle>Notice</AlertTitle>
+          <AlertDescription>
+            <p className=' text-sm!'>
+              To keep their default appearance and not flip the icon, add a parent element with{' '}
+              <code>dir='ltr'</code>, set inline style with
+              <code>scale: "none"</code> or the custom class of <code>'icon-ui-no-flip'</code>.
+            </p>
+          </AlertDescription>
+        </Alert>
 
         <p>Try it out in the following demo:</p>
 
-        <div className='flex items-center gap-4 md:gap-6'>
+        <div className='flex items-center gap-4 md:gap-6 scale-x-100' dir='ltr'>
           <RTLIcon>
             <IconArrowStart />
           </RTLIcon>
@@ -1066,7 +1086,7 @@ export function App() {
         </Alert>
         <p>
           On the other hand, Flag icons are treated as <strong>informative</strong> by default. They
-          use the <code>role='img'</code> and <code>aria-label</code> with its flag name in
+          use the <code>role='img'</code> and <code>aria-label</code> with its country code in
           uppercase.
         </p>
         <p>
@@ -1145,11 +1165,6 @@ export function App() {
         <h3 id='size' className='mt-6'>
           Size
         </h3>
-
-        <p>
-          <strong>Note:</strong> If you want to keep proportions on Flag icons, only set the{' '}
-          <code>width</code>.
-        </p>
 
         <CodeBlock
           code={`// Set the size with size prop
@@ -1250,10 +1265,19 @@ export function App() {
           filename='page.tsx'
           className='max-w-154'
         />
-
         <div className='bg-card rounded-md size-20 shadow-sm border '>
           <IconRocket size={80} className='stroke-2' />
         </div>
+        <Alert className='max-w-prose bg-blue-50 border-blue-300 dark:border-blue-800 dark:bg-blue-950 dark:text-blue-50 text-blue-950'>
+          <IconInfo />
+          <AlertTitle>Best practices</AlertTitle>
+          <AlertDescription>
+            <p className='text-blue-900! dark:text-blue-100! text-sm!'>
+              If the icon size is less than 18px, it is recommended to set the stroke width to{' '}
+              <code>2px</code> for a better visual result.
+            </p>
+          </AlertDescription>
+        </Alert>
 
         <h2 id='typescript'>TypeScript</h2>
 
@@ -1322,6 +1346,11 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             ))}
           </TableBody>
         </Table>
+        <p>
+          The props <code>role</code>, <code>aria-hidden</code>, <code>focusable</code>, and
+          <code>aria-labelledby</code> are not available for UI icons. These are handled inside for
+          accesibility.
+        </p>
         <h4 id='icon-flag-props' className='mt-6'>
           Flag icon props
         </h4>
@@ -1357,7 +1386,22 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
             ))}
           </TableBody>
         </Table>
-
+        <p>
+          The props <code>role</code>, <code>focusable</code>, and
+          <code>aria-labelledby</code> are not available for Flag icons. These are handled inside
+          for accesibility.
+        </p>
+        <h2 id='performance'>Performance</h2>
+        <p>
+          If you're using Next.js, you can optimize the package on the <code>next.config.ts</code>:
+        </p>
+        <CodeBlock
+          code={`experimental: {
+  optimizePackageImports: ['@andrsrxn/icons']
+}`}
+          filename='page.tsx'
+          className='max-w-154'
+        />
         <h2 id='figma'>Figma</h2>
 
         <p>
@@ -1372,7 +1416,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
         <h2 id='contributing'>Contributing</h2>
 
         <p>
-          We currently do not accept contributions for new icons, but we appreciate suggestions and
+          Currently, we do not accept contributions for new icons, but we appreciate suggestions and
           icon requests through{' '}
           <a href={COMPANY.repo.issues.new} target='_blank' rel='noopener noreferrer'>
             GitHub issues.
@@ -1470,7 +1514,7 @@ import type { FlagIcon, FlagIconProps } from '@andrsrxn/icons/flags/types'`}
           <a href='https://github.com/madebybowtie/FlagKit'>FlagKit</a> by{' '}
           <a href='https://github.com/madebybowtie'>Bowtie</a>, used under the MIT License
           (Copyright (c) 2016 Bowtie AB). Only the 3:2 rectangular flag versions were used as source
-          material and converted into <code>tsx</code> components. See{' '}
+          material and converted into components. See{' '}
           <a href='https://github.com/andrsrxn/icons/blob/main/THIRD-PARTY-LICENSES.md'>
             THIRD-PARTY-LICENSES.md
           </a>{' '}
