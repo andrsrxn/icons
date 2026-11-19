@@ -12,6 +12,8 @@ Opt-in:
 - `padding-end`
 - `margin-start`
 - `margin-end`
+- `arrows-start`
+- `arrows-end`
 
 Opt-out:
 
