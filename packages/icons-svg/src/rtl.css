@@ -1,5 +1,6 @@
 /* Direction configuration */
-[dir='ltr'] {
+[dir='ltr'],
+.icon-ui-no-flip {
   --andrsrxn-icon-ui-scale: none;
 }
 
@@ -22,6 +23,8 @@
 [data-slot='icon-ui-arrow-up-start'],
 [data-slot='icon-ui-arrow-up-end'],
 [data-slot='icon-ui-arrows-start-end'],
+[data-slot='icon-ui-arrows-start'],
+[data-slot='icon-ui-arrows-end'],
 [data-slot='icon-ui-arrows-start-from-line'],
 [data-slot='icon-ui-arrows-end-from-line'],
 [data-slot='icon-ui-arrow-end-circle'],
