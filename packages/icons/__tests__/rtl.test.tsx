@@ -37,10 +37,7 @@ import { IconRedo } from '../src/ui/redo'
 import { IconSearch } from '../src/ui/search'
 import { IconUndo } from '../src/ui/undo'
 
-const rtlCssPath = path.resolve(
-  import.meta.dirname,
-  '../../../packages/shared/src/rtl.css'
-)
+const rtlCssPath = path.resolve(import.meta.dirname, '../../../packages/shared/src/rtl.css')
 const rtlCss = fs.readFileSync(rtlCssPath, 'utf-8')
 
 /**
@@ -151,17 +148,20 @@ const nonFlippableIcons = [
   { name: 'IconSearch', Component: IconSearch },
 ] as const
 
-describe.each(nonFlippableIcons)('$name (should NOT be listed in :where block)', ({ Component }) => {
-  it('renders a data-slot that is NOT covered by the :where(...) scale rule', () => {
-    const { container } = render(
-      <div dir='rtl'>
-        <Component />
-      </div>
-    )
-    const slot = getSlot(container)
-    expect(
-      whereSlots.has(slot),
-      `Expected data-slot "${slot}" NOT to be listed inside :where(...) in rtl.css`
-    ).toBe(false)
-  })
-})
+describe.each(nonFlippableIcons)(
+  '$name (should NOT be listed in :where block)',
+  ({ Component }) => {
+    it('renders a data-slot that is NOT covered by the :where(...) scale rule', () => {
+      const { container } = render(
+        <div dir='rtl'>
+          <Component />
+        </div>
+      )
+      const slot = getSlot(container)
+      expect(
+        whereSlots.has(slot),
+        `Expected data-slot "${slot}" NOT to be listed inside :where(...) in rtl.css`
+      ).toBe(false)
+    })
+  }
+)
