@@ -11,7 +11,7 @@ import {
   IconDiff,
   IconDownload,
   IconExternalLink,
-  IconFaceSparkle,
+  IconFaceSmileSparkle,
   IconFlame,
   IconHandPointer,
   IconHeart,
@@ -184,8 +184,8 @@ export const HeroSection = () => {
             <IconUsers />
           </IconContainer>
           {/* Right side */}
-          <IconContainer className='top-[40%] -right-5' side='right' title='face-filter'>
-            <IconFaceSparkle />
+          <IconContainer className='top-[40%] -right-5' side='right' title='face-smile-sparkle'>
+            <IconFaceSmileSparkle />
           </IconContainer>
           <IconContainer className='top-[20%] -right-12' side='right' title='brain'>
             <IconBrain />

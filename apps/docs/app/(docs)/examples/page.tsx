@@ -53,7 +53,7 @@ import {
   IconTrendUp,
   IconUpload,
   IconUser,
-  IconUsersPlus,
+  IconUsers,
   IconWarningTriangle,
   IconX,
 } from '@andrsrxn/icons'
@@ -221,7 +221,7 @@ export default function ExamplesPage() {
               </DropdownMenuItem>
 
               <DropdownMenuItem>
-                <IconUsersPlus /> New team
+                <IconUsers /> Friends
               </DropdownMenuItem>
 
               <DropdownMenuSeparator />
