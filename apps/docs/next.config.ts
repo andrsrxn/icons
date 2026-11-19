@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
       static: 30,
       dynamic: 60,
     },
+    optimizePackageImports: ['@andrsrxn/icons'],
   },
   typedRoutes: false,
   images: {
