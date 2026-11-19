@@ -77,7 +77,7 @@ export const ICON_PROPS = {
       description: 'Size in pixels or any valid css length unit',
     },
     color: { type: 'string', default: 'currentColor', description: 'Stroke and fill colors' },
-    role: { type: 'string', default: 'img', description: 'Treated as image' },
+
     'aria-label': {
       type: 'string',
       default: (countryCode: string) => countryCode,
