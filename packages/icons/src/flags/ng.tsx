@@ -33,45 +33,25 @@ export const IconFlagNG: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ng-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ng-c'
-            x1='15.5'
-            x2='15.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#189b62' />
-            <stop offset='1' stopColor='#118653' />
-          </linearGradient>
-          <linearGradient id='ng-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#189b62' />
-            <stop offset='1' stopColor='#118653' />
-          </linearGradient>
-          <linearGradient
-            id='ng-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='ng-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ng-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ng-c' x1='15.5' x2='15.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#189b62' />
+          <stop offset='1' stopColor='#118653' />
+        </linearGradient>
+        <linearGradient id='ng-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#189b62' />
+          <stop offset='1' stopColor='#118653' />
+        </linearGradient>
+        <linearGradient id='ng-e' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='ng-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ng-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

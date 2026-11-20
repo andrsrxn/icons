@@ -33,45 +33,25 @@ export const IconFlagGT: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='gt-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gt-c'
-            x1='15.5'
-            x2='15.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#63aee3' />
-            <stop offset='1' stopColor='#4998d0' />
-          </linearGradient>
-          <linearGradient id='gt-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#63aee3' />
-            <stop offset='1' stopColor='#4998d0' />
-          </linearGradient>
-          <linearGradient
-            id='gt-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='gt-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='gt-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gt-c' x1='15.5' x2='15.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#63aee3' />
+          <stop offset='1' stopColor='#4998d0' />
+        </linearGradient>
+        <linearGradient id='gt-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#63aee3' />
+          <stop offset='1' stopColor='#4998d0' />
+        </linearGradient>
+        <linearGradient id='gt-e' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='gt-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='gt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

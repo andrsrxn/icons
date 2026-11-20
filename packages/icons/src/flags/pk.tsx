@@ -33,64 +33,50 @@ export const IconFlagPK: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='pk-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='pk-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0a632f' />
-            <stop offset='1' stopColor='#05411e' />
-          </linearGradient>
-          <linearGradient id='pk-d' x1='3' x2='3' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='pk-f'
-            x1='10.28'
-            x2='16.65'
-            y1='4.15'
-            y2='10.51'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='pk-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-          <filter
-            id='pk-e'
-            width='8.79'
-            height='9.29'
-            x='8.96'
-            y='3.04'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset dy='.5' />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1900' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1900' result='shape' />
-          </filter>
-        </defs>
+        <linearGradient id='pk-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='pk-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0a632f' />
+          <stop offset='1' stopColor='#05411e' />
+        </linearGradient>
+        <linearGradient id='pk-d' x1='3' x2='3' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='pk-f'
+          x1='10.28'
+          x2='16.65'
+          y1='4.15'
+          y2='10.51'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='pk-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
+        <filter
+          id='pk-e'
+          width='8.79'
+          height='9.29'
+          x='8.96'
+          y='3.04'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset dy='.5' />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1900' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1900' result='shape' />
+        </filter>
         <clipPath id='pk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

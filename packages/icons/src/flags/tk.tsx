@@ -33,35 +33,21 @@ export const IconFlagTK: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='tk-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='tk-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0637c5' />
-            <stop offset='1' stopColor='#002caa' />
-          </linearGradient>
-          <linearGradient id='tk-d' x1='11' x2='11' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fdd33f' />
-            <stop offset='1' stopColor='#fed02f' />
-          </linearGradient>
-          <clipPath id='tk-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='tk-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='tk-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0637c5' />
+          <stop offset='1' stopColor='#002caa' />
+        </linearGradient>
+        <linearGradient id='tk-d' x1='11' x2='11' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fdd33f' />
+          <stop offset='1' stopColor='#fed02f' />
+        </linearGradient>
+        <clipPath id='tk-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='tk-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

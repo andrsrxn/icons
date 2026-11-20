@@ -33,61 +33,41 @@ export const IconFlagEC: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ec-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ec-c'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0748ae' />
-            <stop offset='1' stopColor='#003993' />
-          </linearGradient>
-          <linearGradient
-            id='ec-d'
-            x1='10.5'
-            x2='10.5'
-            y1='11'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#de2035' />
-            <stop offset='1' stopColor='#ce1126' />
-          </linearGradient>
-          <linearGradient
-            id='ec-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd935' />
-            <stop offset='1' stopColor='#fdd216' />
-          </linearGradient>
-          <linearGradient
-            id='ec-f'
-            x1='10.5'
-            x2='10.5'
-            y1='6'
-            y2='9.6'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fbdc44' />
-            <stop offset='1' stopColor='#ffdc32' />
-          </linearGradient>
-          <clipPath id='ec-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ec-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ec-c' x1='10.5' x2='10.5' y1='7' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0748ae' />
+          <stop offset='1' stopColor='#003993' />
+        </linearGradient>
+        <linearGradient
+          id='ec-d'
+          x1='10.5'
+          x2='10.5'
+          y1='11'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#de2035' />
+          <stop offset='1' stopColor='#ce1126' />
+        </linearGradient>
+        <linearGradient id='ec-e' x1='10.5' x2='10.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd935' />
+          <stop offset='1' stopColor='#fdd216' />
+        </linearGradient>
+        <linearGradient
+          id='ec-f'
+          x1='10.5'
+          x2='10.5'
+          y1='6'
+          y2='9.6'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fbdc44' />
+          <stop offset='1' stopColor='#ffdc32' />
+        </linearGradient>
+        <clipPath id='ec-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ec-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

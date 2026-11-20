@@ -33,11 +33,9 @@ export const IconFlagCEU: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <clipPath id='ceu-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <clipPath id='ceu-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ceu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

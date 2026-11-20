@@ -33,89 +33,63 @@ export const IconFlagSH: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='sh-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='sh-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#07319c' />
-            <stop offset='1' stopColor='#00247e' />
-          </linearGradient>
-          <linearGradient
-            id='sh-d'
-            x1='15.5'
-            x2='15.5'
-            y1='6'
-            y2='12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#a7d2ff' />
-            <stop offset='1' stopColor='#91c6fd' />
-          </linearGradient>
-          <linearGradient
-            id='sh-f'
-            x1='13.25'
-            x2='13.25'
-            y1='8.5'
-            y2='12.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ee7b2d' />
-            <stop offset='1' stopColor='#cc621a' />
-          </linearGradient>
-          <linearGradient
-            id='sh-j'
-            x1='15.5'
-            x2='15.5'
-            y1='6'
-            y2='8'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fffc4b' />
-            <stop offset='1' stopColor='#fffc38' />
-          </linearGradient>
-          <linearGradient
-            id='sh-k'
-            x1='4.07'
-            x2='4.07'
-            y1='-.9'
-            y2='7.9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='sh-l' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='sh-m'
-            x1='4.75'
-            x2='4.75'
-            y1='0'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='sh-n' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <clipPath id='sh-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='sh-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sh-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#07319c' />
+          <stop offset='1' stopColor='#00247e' />
+        </linearGradient>
+        <linearGradient id='sh-d' x1='15.5' x2='15.5' y1='6' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#a7d2ff' />
+          <stop offset='1' stopColor='#91c6fd' />
+        </linearGradient>
+        <linearGradient
+          id='sh-f'
+          x1='13.25'
+          x2='13.25'
+          y1='8.5'
+          y2='12.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ee7b2d' />
+          <stop offset='1' stopColor='#cc621a' />
+        </linearGradient>
+        <linearGradient id='sh-j' x1='15.5' x2='15.5' y1='6' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fffc4b' />
+          <stop offset='1' stopColor='#fffc38' />
+        </linearGradient>
+        <linearGradient
+          id='sh-k'
+          x1='4.07'
+          x2='4.07'
+          y1='-.9'
+          y2='7.9'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sh-l' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient
+          id='sh-m'
+          x1='4.75'
+          x2='4.75'
+          y1='0'
+          y2='7.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sh-n' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <clipPath id='sh-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='sh-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

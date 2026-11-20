@@ -33,71 +33,45 @@ export const IconFlagVA: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='va-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='va-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fde048' />
-            <stop offset='1' stopColor='#ffdf32' />
-          </linearGradient>
-          <linearGradient
-            id='va-d'
-            x1='15.5'
-            x2='15.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='va-e'
-            x1='15.1'
-            x2='15.1'
-            y1='11.21'
-            y2='5.46'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#cd9d25' />
-            <stop offset='1' stopColor='#ebb93a' />
-          </linearGradient>
-          <linearGradient
-            id='va-f'
-            x1='15.5'
-            x2='15.5'
-            y1='2'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#cd9d25' />
-            <stop offset='1' stopColor='#ebb93a' />
-          </linearGradient>
-          <linearGradient
-            id='va-g'
-            x1='15.5'
-            x2='15.5'
-            y1='10'
-            y2='12.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f5252c' />
-            <stop offset='1' stopColor='#f6151c' />
-          </linearGradient>
-          <clipPath id='va-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='va-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='va-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fde048' />
+          <stop offset='1' stopColor='#ffdf32' />
+        </linearGradient>
+        <linearGradient id='va-d' x1='15.5' x2='15.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='va-e'
+          x1='15.1'
+          x2='15.1'
+          y1='11.21'
+          y2='5.46'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#cd9d25' />
+          <stop offset='1' stopColor='#ebb93a' />
+        </linearGradient>
+        <linearGradient id='va-f' x1='15.5' x2='15.5' y1='2' y2='5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#cd9d25' />
+          <stop offset='1' stopColor='#ebb93a' />
+        </linearGradient>
+        <linearGradient
+          id='va-g'
+          x1='15.5'
+          x2='15.5'
+          y1='10'
+          y2='12.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f5252c' />
+          <stop offset='1' stopColor='#f6151c' />
+        </linearGradient>
+        <clipPath id='va-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='va-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

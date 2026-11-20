@@ -33,223 +33,161 @@ export const IconFlagGS: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='gs-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#07319c' />
-            <stop offset='1' stopColor='#00247e' />
-          </linearGradient>
-          <linearGradient
-            id='gs-d'
-            x1='4.07'
-            x2='4.07'
-            y1='-.9'
-            y2='7.9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='gs-e' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='gs-f'
-            x1='4.75'
-            x2='4.75'
-            y1='0'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='gs-g' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='gs-h'
-            x1='18.5'
-            x2='18.5'
-            y1='8'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1e1e1e' />
-            <stop offset='1' />
-          </linearGradient>
-          <linearGradient
-            id='gs-j'
-            x1='18'
-            x2='18'
-            y1='8.5'
-            y2='11.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-k'
-            x1='14.5'
-            x2='14.5'
-            y1='8'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#a2adb0' />
-            <stop offset='1' stopColor='#8b9497' />
-          </linearGradient>
-          <linearGradient
-            id='gs-m'
-            x1='15'
-            x2='15'
-            y1='8.5'
-            y2='11.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#4f4f4f' />
-            <stop offset='1' stopColor='#2b2b2b' />
-          </linearGradient>
-          <linearGradient
-            id='gs-n'
-            x1='16.5'
-            x2='16.5'
-            y1='12'
-            y2='12.8'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fec241' />
-            <stop offset='1' stopColor='#febb2c' />
-          </linearGradient>
-          <linearGradient
-            id='gs-o'
-            x1='18.5'
-            x2='18.5'
-            y1='4.5'
-            y2='6.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-p'
-            x1='16.5'
-            x2='16.5'
-            y1='3.5'
-            y2='5.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#a84b14' />
-            <stop offset='1' stopColor='#913f0e' />
-          </linearGradient>
-          <linearGradient
-            id='gs-q'
-            x1='16.5'
-            x2='16.5'
-            y1='2.75'
-            y2='4.75'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#cfb063' />
-            <stop offset='1' stopColor='#bea157' />
-          </linearGradient>
-          <linearGradient
-            id='gs-r'
-            x1='16.5'
-            x2='16.5'
-            y1='10.5'
-            y2='12.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-s'
-            x1='14.5'
-            x2='14.5'
-            y1='4.5'
-            y2='6.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-t'
-            x1='15'
-            x2='15'
-            y1='5.5'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#2d42ff' />
-            <stop offset='1' stopColor='#0b24fc' />
-          </linearGradient>
-          <linearGradient
-            id='gs-u'
-            x1='18'
-            x2='18'
-            y1='5.5'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#2d42ff' />
-            <stop offset='1' stopColor='#0b24fc' />
-          </linearGradient>
-          <linearGradient id='gs-v' x1='18' x2='20' y1='7' y2='8' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e3dc3d' />
-            <stop offset='1' stopColor='#cfc82a' />
-          </linearGradient>
-          <linearGradient
-            id='gs-w'
-            x1='16.5'
-            x2='16.5'
-            y1='5'
-            y2='8'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#7f7d7d' />
-            <stop offset='1' stopColor='#656263' />
-          </linearGradient>
-          <linearGradient
-            id='gs-x'
-            x1='16.52'
-            x2='16.52'
-            y1='8'
-            y2='11.42'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gs-B'
-            x1='16.5'
-            x2='16.5'
-            y1='8'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0f8012' />
-            <stop offset='1' stopColor='#0b6a0d' />
-          </linearGradient>
-          <linearGradient
-            id='gs-D'
-            x1='16.5'
-            x2='16.5'
-            y1='8.5'
-            y2='10.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffcf44' />
-            <stop offset='1' stopColor='#fcc72e' />
-          </linearGradient>
-          <clipPath id='gs-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='gs-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#07319c' />
+          <stop offset='1' stopColor='#00247e' />
+        </linearGradient>
+        <linearGradient
+          id='gs-d'
+          x1='4.07'
+          x2='4.07'
+          y1='-.9'
+          y2='7.9'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-e' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient
+          id='gs-f'
+          x1='4.75'
+          x2='4.75'
+          y1='0'
+          y2='7.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-g' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient id='gs-h' x1='18.5' x2='18.5' y1='8' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1e1e1e' />
+          <stop offset='1' />
+        </linearGradient>
+        <linearGradient id='gs-j' x1='18' x2='18' y1='8.5' y2='11.5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-k' x1='14.5' x2='14.5' y1='8' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#a2adb0' />
+          <stop offset='1' stopColor='#8b9497' />
+        </linearGradient>
+        <linearGradient id='gs-m' x1='15' x2='15' y1='8.5' y2='11.5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#4f4f4f' />
+          <stop offset='1' stopColor='#2b2b2b' />
+        </linearGradient>
+        <linearGradient
+          id='gs-n'
+          x1='16.5'
+          x2='16.5'
+          y1='12'
+          y2='12.8'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fec241' />
+          <stop offset='1' stopColor='#febb2c' />
+        </linearGradient>
+        <linearGradient
+          id='gs-o'
+          x1='18.5'
+          x2='18.5'
+          y1='4.5'
+          y2='6.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='gs-p'
+          x1='16.5'
+          x2='16.5'
+          y1='3.5'
+          y2='5.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#a84b14' />
+          <stop offset='1' stopColor='#913f0e' />
+        </linearGradient>
+        <linearGradient
+          id='gs-q'
+          x1='16.5'
+          x2='16.5'
+          y1='2.75'
+          y2='4.75'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#cfb063' />
+          <stop offset='1' stopColor='#bea157' />
+        </linearGradient>
+        <linearGradient
+          id='gs-r'
+          x1='16.5'
+          x2='16.5'
+          y1='10.5'
+          y2='12.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='gs-s'
+          x1='14.5'
+          x2='14.5'
+          y1='4.5'
+          y2='6.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-t' x1='15' x2='15' y1='5.5' y2='7.5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#2d42ff' />
+          <stop offset='1' stopColor='#0b24fc' />
+        </linearGradient>
+        <linearGradient id='gs-u' x1='18' x2='18' y1='5.5' y2='7.5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#2d42ff' />
+          <stop offset='1' stopColor='#0b24fc' />
+        </linearGradient>
+        <linearGradient id='gs-v' x1='18' x2='20' y1='7' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e3dc3d' />
+          <stop offset='1' stopColor='#cfc82a' />
+        </linearGradient>
+        <linearGradient id='gs-w' x1='16.5' x2='16.5' y1='5' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#7f7d7d' />
+          <stop offset='1' stopColor='#656263' />
+        </linearGradient>
+        <linearGradient
+          id='gs-x'
+          x1='16.52'
+          x2='16.52'
+          y1='8'
+          y2='11.42'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gs-B' x1='16.5' x2='16.5' y1='8' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0f8012' />
+          <stop offset='1' stopColor='#0b6a0d' />
+        </linearGradient>
+        <linearGradient
+          id='gs-D'
+          x1='16.5'
+          x2='16.5'
+          y1='8.5'
+          y2='10.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffcf44' />
+          <stop offset='1' stopColor='#fcc72e' />
+        </linearGradient>
+        <clipPath id='gs-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='gs-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

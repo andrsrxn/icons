@@ -33,61 +33,41 @@ export const IconFlagMP: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='mp-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='mp-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1e8bd6' />
-            <stop offset='1' stopColor='#1074ba' />
-          </linearGradient>
-          <linearGradient
-            id='mp-d'
-            x1='10.5'
-            x2='10.5'
-            y1='2.5'
-            y2='12.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='mp-e'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='13'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#a9a7a9' />
-            <stop offset='1' stopColor='#8c8a8c' />
-          </linearGradient>
-          <linearGradient
-            id='mp-f'
-            x1='10.5'
-            x2='10.5'
-            y1='4.65'
-            y2='10.98'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='mp-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='mp-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='mp-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1e8bd6' />
+          <stop offset='1' stopColor='#1074ba' />
+        </linearGradient>
+        <linearGradient
+          id='mp-d'
+          x1='10.5'
+          x2='10.5'
+          y1='2.5'
+          y2='12.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='mp-e' x1='10.5' x2='10.5' y1='5' y2='13' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#a9a7a9' />
+          <stop offset='1' stopColor='#8c8a8c' />
+        </linearGradient>
+        <linearGradient
+          id='mp-f'
+          x1='10.5'
+          x2='10.5'
+          y1='4.65'
+          y2='10.98'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='mp-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='mp-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

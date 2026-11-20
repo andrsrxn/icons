@@ -33,73 +33,47 @@ export const IconFlagFJ: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='fj-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='fj-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#79cff6' />
-            <stop offset='1' stopColor='#68bfe6' />
-          </linearGradient>
-          <linearGradient id='fj-d' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#042c90' />
-            <stop offset='1' stopColor='#00247e' />
-          </linearGradient>
-          <linearGradient
-            id='fj-e'
-            x1='15.5'
-            x2='15.5'
-            y1='4'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='fj-h'
-            x1='15.5'
-            x2='15.5'
-            y1='4'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#eb1d43' />
-            <stop offset='1' stopColor='#d21034' />
-          </linearGradient>
-          <linearGradient id='fj-i' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='fj-j'
-            x1='4.75'
-            x2='4.75'
-            y1='0'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='fj-k' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <clipPath id='fj-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='fj-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='fj-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#79cff6' />
+          <stop offset='1' stopColor='#68bfe6' />
+        </linearGradient>
+        <linearGradient id='fj-d' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#042c90' />
+          <stop offset='1' stopColor='#00247e' />
+        </linearGradient>
+        <linearGradient id='fj-e' x1='15.5' x2='15.5' y1='4' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='fj-h' x1='15.5' x2='15.5' y1='4' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#eb1d43' />
+          <stop offset='1' stopColor='#d21034' />
+        </linearGradient>
+        <linearGradient id='fj-i' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient
+          id='fj-j'
+          x1='4.75'
+          x2='4.75'
+          y1='0'
+          y2='7.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='fj-k' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <clipPath id='fj-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='fj-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -33,61 +33,41 @@ export const IconFlagGH: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='gh-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gh-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e71f37' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <linearGradient
-            id='gh-d'
-            x1='10.5'
-            x2='10.5'
-            y1='10'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#118b56' />
-            <stop offset='1' stopColor='#0b6b41' />
-          </linearGradient>
-          <linearGradient
-            id='gh-e'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fdd64c' />
-            <stop offset='1' stopColor='#fcd036' />
-          </linearGradient>
-          <linearGradient
-            id='gh-f'
-            x1='10.5'
-            x2='10.5'
-            y1='5.25'
-            y2='9.77'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <clipPath id='gh-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='gh-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='gh-c' x1='10.5' x2='10.5' y1='0' y2='5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e71f37' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <linearGradient
+          id='gh-d'
+          x1='10.5'
+          x2='10.5'
+          y1='10'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#118b56' />
+          <stop offset='1' stopColor='#0b6b41' />
+        </linearGradient>
+        <linearGradient id='gh-e' x1='10.5' x2='10.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fdd64c' />
+          <stop offset='1' stopColor='#fcd036' />
+        </linearGradient>
+        <linearGradient
+          id='gh-f'
+          x1='10.5'
+          x2='10.5'
+          y1='5.25'
+          y2='9.77'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <clipPath id='gh-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='gh-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

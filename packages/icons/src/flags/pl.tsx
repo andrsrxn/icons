@@ -33,41 +33,21 @@ export const IconFlagPL: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='pl-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='pl-c'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#eb2a50' />
-            <stop offset='1' stopColor='#da1b40' />
-          </linearGradient>
-          <linearGradient
-            id='pl-d'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='pl-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='pl-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='pl-c' x1='10.5' x2='10.5' y1='7' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#eb2a50' />
+          <stop offset='1' stopColor='#da1b40' />
+        </linearGradient>
+        <linearGradient id='pl-d' x1='10.5' x2='10.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='pl-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='pl-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -33,71 +33,45 @@ export const IconFlagKI: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ki-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ki-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='8'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e62b3f' />
-            <stop offset='1' stopColor='#ca1a2c' />
-          </linearGradient>
-          <linearGradient
-            id='ki-d'
-            x1='10.5'
-            x2='10.5'
-            y1='6'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffda57' />
-            <stop offset='1' stopColor='#fcd036' />
-          </linearGradient>
-          <linearGradient
-            id='ki-e'
-            x1='10.5'
-            x2='10.5'
-            y1='3.14'
-            y2='13.86'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffda57' />
-            <stop offset='1' stopColor='#fcd036' />
-          </linearGradient>
-          <linearGradient
-            id='ki-f'
-            x1='11.06'
-            x2='11.06'
-            y1='1'
-            y2='3'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffda57' />
-            <stop offset='1' stopColor='#fcd036' />
-          </linearGradient>
-          <linearGradient
-            id='ki-g'
-            x1='10.5'
-            x2='10.5'
-            y1='8'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0752a2' />
-            <stop offset='1' stopColor='#034285' />
-          </linearGradient>
-          <clipPath id='ki-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ki-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ki-c' x1='10.5' x2='10.5' y1='0' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e62b3f' />
+          <stop offset='1' stopColor='#ca1a2c' />
+        </linearGradient>
+        <linearGradient id='ki-d' x1='10.5' x2='10.5' y1='6' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffda57' />
+          <stop offset='1' stopColor='#fcd036' />
+        </linearGradient>
+        <linearGradient
+          id='ki-e'
+          x1='10.5'
+          x2='10.5'
+          y1='3.14'
+          y2='13.86'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffda57' />
+          <stop offset='1' stopColor='#fcd036' />
+        </linearGradient>
+        <linearGradient
+          id='ki-f'
+          x1='11.06'
+          x2='11.06'
+          y1='1'
+          y2='3'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffda57' />
+          <stop offset='1' stopColor='#fcd036' />
+        </linearGradient>
+        <linearGradient id='ki-g' x1='10.5' x2='10.5' y1='8' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0752a2' />
+          <stop offset='1' stopColor='#034285' />
+        </linearGradient>
+        <clipPath id='ki-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ki-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

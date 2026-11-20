@@ -33,55 +33,35 @@ export const IconFlagJM: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='jm-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='jm-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1dbe4f' />
-            <stop offset='1' stopColor='#159b3f' />
-          </linearGradient>
-          <linearGradient id='jm-d' x1='4.5' x2='4.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <linearGradient
-            id='jm-e'
-            x1='16.5'
-            x2='16.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <linearGradient
-            id='jm-f'
-            x1='10.5'
-            x2='10.5'
-            y1='-1.44'
-            y2='16.43'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd646' />
-            <stop offset='1' stopColor='#fed02f' />
-          </linearGradient>
-          <clipPath id='jm-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='jm-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='jm-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1dbe4f' />
+          <stop offset='1' stopColor='#159b3f' />
+        </linearGradient>
+        <linearGradient id='jm-d' x1='4.5' x2='4.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient id='jm-e' x1='16.5' x2='16.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient
+          id='jm-f'
+          x1='10.5'
+          x2='10.5'
+          y1='-1.44'
+          y2='16.43'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd646' />
+          <stop offset='1' stopColor='#fed02f' />
+        </linearGradient>
+        <clipPath id='jm-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='jm-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

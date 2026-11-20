@@ -33,61 +33,41 @@ export const IconFlagLB: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='lb-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='lb-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='4'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f03340' />
-            <stop offset='1' stopColor='#eb212e' />
-          </linearGradient>
-          <linearGradient
-            id='lb-d'
-            x1='10.5'
-            x2='10.5'
-            y1='11'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f03340' />
-            <stop offset='1' stopColor='#eb212e' />
-          </linearGradient>
-          <linearGradient
-            id='lb-e'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='lb-f'
-            x1='10.5'
-            x2='10.5'
-            y1='5.18'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1fc065' />
-            <stop offset='1' stopColor='#17a555' />
-          </linearGradient>
-          <clipPath id='lb-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='lb-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='lb-c' x1='10.5' x2='10.5' y1='0' y2='4' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f03340' />
+          <stop offset='1' stopColor='#eb212e' />
+        </linearGradient>
+        <linearGradient
+          id='lb-d'
+          x1='10.5'
+          x2='10.5'
+          y1='11'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f03340' />
+          <stop offset='1' stopColor='#eb212e' />
+        </linearGradient>
+        <linearGradient id='lb-e' x1='10.5' x2='10.5' y1='4' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='lb-f'
+          x1='10.5'
+          x2='10.5'
+          y1='5.18'
+          y2='10'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1fc065' />
+          <stop offset='1' stopColor='#17a555' />
+        </linearGradient>
+        <clipPath id='lb-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='lb-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

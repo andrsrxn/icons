@@ -33,75 +33,49 @@ export const IconFlagKM: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='km-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='km-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='4'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffcb49' />
-            <stop offset='1' stopColor='#ffc638' />
-          </linearGradient>
-          <linearGradient
-            id='km-d'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#dc1d34' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <linearGradient
-            id='km-e'
-            x1='10.5'
-            x2='10.5'
-            y1='11'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#4985d4' />
-            <stop offset='1' stopColor='#3d77c2' />
-          </linearGradient>
-          <linearGradient
-            id='km-f'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='km-g' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#4ba343' />
-            <stop offset='1' stopColor='#408d39' />
-          </linearGradient>
-          <linearGradient
-            id='km-h'
-            x1='3.5'
-            x2='3.5'
-            y1='4.5'
-            y2='10.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='km-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='km-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='km-c' x1='10.5' x2='10.5' y1='0' y2='4' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffcb49' />
+          <stop offset='1' stopColor='#ffc638' />
+        </linearGradient>
+        <linearGradient id='km-d' x1='10.5' x2='10.5' y1='7' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#dc1d34' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <linearGradient
+          id='km-e'
+          x1='10.5'
+          x2='10.5'
+          y1='11'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#4985d4' />
+          <stop offset='1' stopColor='#3d77c2' />
+        </linearGradient>
+        <linearGradient id='km-f' x1='10.5' x2='10.5' y1='4' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='km-g' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#4ba343' />
+          <stop offset='1' stopColor='#408d39' />
+        </linearGradient>
+        <linearGradient
+          id='km-h'
+          x1='3.5'
+          x2='3.5'
+          y1='4.5'
+          y2='10.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='km-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='km-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -129,7 +129,7 @@ function generateComponent(fileName, svgContent) {
   const defsMatch = body.match(/<defs>([\s\S]*?)<\/defs>/u)
 
   if (defsMatch) {
-    ;[defsContent] = defsMatch
+    ;[, defsContent] = defsMatch
     body = body.replace(/<defs>[\s\S]*?<\/defs>/u, '')
   }
 

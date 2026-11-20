@@ -33,51 +33,31 @@ export const IconFlagCO: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='co-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='co-c'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0748ae' />
-            <stop offset='1' stopColor='#003993' />
-          </linearGradient>
-          <linearGradient
-            id='co-d'
-            x1='10.5'
-            x2='10.5'
-            y1='11'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#de2035' />
-            <stop offset='1' stopColor='#ce1126' />
-          </linearGradient>
-          <linearGradient
-            id='co-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd935' />
-            <stop offset='1' stopColor='#fdd216' />
-          </linearGradient>
-          <clipPath id='co-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='co-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='co-c' x1='10.5' x2='10.5' y1='7' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0748ae' />
+          <stop offset='1' stopColor='#003993' />
+        </linearGradient>
+        <linearGradient
+          id='co-d'
+          x1='10.5'
+          x2='10.5'
+          y1='11'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#de2035' />
+          <stop offset='1' stopColor='#ce1126' />
+        </linearGradient>
+        <linearGradient id='co-e' x1='10.5' x2='10.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd935' />
+          <stop offset='1' stopColor='#fdd216' />
+        </linearGradient>
+        <clipPath id='co-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='co-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

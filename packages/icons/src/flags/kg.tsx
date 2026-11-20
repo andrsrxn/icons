@@ -33,51 +33,31 @@ export const IconFlagKG: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='kg-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='kg-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f22a46' />
-            <stop offset='1' stopColor='#e71834' />
-          </linearGradient>
-          <linearGradient
-            id='kg-d'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff04d' />
-            <stop offset='1' stopColor='#ffee35' />
-          </linearGradient>
-          <linearGradient
-            id='kg-e'
-            x1='10.5'
-            x2='10.5'
-            y1='2.14'
-            y2='12.86'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff04d' />
-            <stop offset='1' stopColor='#ffee35' />
-          </linearGradient>
-          <clipPath id='kg-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='kg-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='kg-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f22a46' />
+          <stop offset='1' stopColor='#e71834' />
+        </linearGradient>
+        <linearGradient id='kg-d' x1='10.5' x2='10.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff04d' />
+          <stop offset='1' stopColor='#ffee35' />
+        </linearGradient>
+        <linearGradient
+          id='kg-e'
+          x1='10.5'
+          x2='10.5'
+          y1='2.14'
+          y2='12.86'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff04d' />
+          <stop offset='1' stopColor='#ffee35' />
+        </linearGradient>
+        <clipPath id='kg-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='kg-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

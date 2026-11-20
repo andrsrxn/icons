@@ -33,49 +33,29 @@ export const IconFlagPH: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ph-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ph-c'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#dd1c34' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <linearGradient
-            id='ph-d'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0d4bc3' />
-            <stop offset='1' stopColor='#073da6' />
-          </linearGradient>
-          <linearGradient id='ph-e' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='ph-f' x1='4.5' x2='4.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fdd64d' />
-            <stop offset='1' stopColor='#fcd036' />
-          </linearGradient>
-          <clipPath id='ph-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ph-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ph-c' x1='10.5' x2='10.5' y1='7' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#dd1c34' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <linearGradient id='ph-d' x1='10.5' x2='10.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0d4bc3' />
+          <stop offset='1' stopColor='#073da6' />
+        </linearGradient>
+        <linearGradient id='ph-e' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ph-f' x1='4.5' x2='4.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fdd64d' />
+          <stop offset='1' stopColor='#fcd036' />
+        </linearGradient>
+        <clipPath id='ph-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ph-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

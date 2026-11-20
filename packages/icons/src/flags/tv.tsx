@@ -33,63 +33,49 @@ export const IconFlagTV: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='tv-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='tv-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#72afc8' />
-            <stop offset='1' stopColor='#5d98b0' />
-          </linearGradient>
-          <linearGradient id='tv-d' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0a17a7' />
-            <stop offset='1' stopColor='#030e88' />
-          </linearGradient>
-          <linearGradient
-            id='tv-e'
-            x1='4.07'
-            x2='4.07'
-            y1='-.9'
-            y2='7.9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='tv-f' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='tv-g'
-            x1='4.75'
-            x2='4.75'
-            y1='0'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='tv-h' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <clipPath id='tv-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='tv-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='tv-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#72afc8' />
+          <stop offset='1' stopColor='#5d98b0' />
+        </linearGradient>
+        <linearGradient id='tv-d' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0a17a7' />
+          <stop offset='1' stopColor='#030e88' />
+        </linearGradient>
+        <linearGradient
+          id='tv-e'
+          x1='4.07'
+          x2='4.07'
+          y1='-.9'
+          y2='7.9'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='tv-f' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient
+          id='tv-g'
+          x1='4.75'
+          x2='4.75'
+          y1='0'
+          y2='7.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='tv-h' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <clipPath id='tv-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='tv-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

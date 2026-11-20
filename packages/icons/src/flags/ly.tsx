@@ -33,61 +33,35 @@ export const IconFlagLY: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ly-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ly-c'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <linearGradient
-            id='ly-d'
-            x1='10.5'
-            x2='10.5'
-            y1='10'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#34b857' />
-            <stop offset='1' stopColor='#2b9e4a' />
-          </linearGradient>
-          <linearGradient
-            id='ly-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f41f34' />
-            <stop offset='1' stopColor='#e60b21' />
-          </linearGradient>
-          <linearGradient
-            id='ly-f'
-            x1='10.5'
-            x2='10.5'
-            y1='6'
-            y2='9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='ly-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ly-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ly-c' x1='10.5' x2='10.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient
+          id='ly-d'
+          x1='10.5'
+          x2='10.5'
+          y1='10'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#34b857' />
+          <stop offset='1' stopColor='#2b9e4a' />
+        </linearGradient>
+        <linearGradient id='ly-e' x1='10.5' x2='10.5' y1='0' y2='5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f41f34' />
+          <stop offset='1' stopColor='#e60b21' />
+        </linearGradient>
+        <linearGradient id='ly-f' x1='10.5' x2='10.5' y1='6' y2='9' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='ly-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ly-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

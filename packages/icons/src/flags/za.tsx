@@ -33,65 +33,51 @@ export const IconFlagZA: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='za-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='za-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#06a86e' />
-            <stop offset='1' stopColor='#007a4e' />
-          </linearGradient>
-          <linearGradient id='za-d' x1='3.5' x2='3.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffbf2e' />
-            <stop offset='1' stopColor='#ffb612' />
-          </linearGradient>
-          <linearGradient
-            id='za-e'
-            x1='2.38'
-            x2='2.38'
-            y1='2.25'
-            y2='12.75'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <linearGradient
-            id='za-f'
-            x1='12.13'
-            x2='12.13'
-            y1='0'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f44e46' />
-            <stop offset='1' stopColor='#df3931' />
-          </linearGradient>
-          <linearGradient
-            id='za-g'
-            x1='12.13'
-            x2='12.13'
-            y1='10'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#072cb4' />
-            <stop offset='1' stopColor='#042396' />
-          </linearGradient>
-          <clipPath id='za-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='za-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='za-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#06a86e' />
+          <stop offset='1' stopColor='#007a4e' />
+        </linearGradient>
+        <linearGradient id='za-d' x1='3.5' x2='3.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffbf2e' />
+          <stop offset='1' stopColor='#ffb612' />
+        </linearGradient>
+        <linearGradient
+          id='za-e'
+          x1='2.38'
+          x2='2.38'
+          y1='2.25'
+          y2='12.75'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <linearGradient
+          id='za-f'
+          x1='12.13'
+          x2='12.13'
+          y1='0'
+          y2='5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f44e46' />
+          <stop offset='1' stopColor='#df3931' />
+        </linearGradient>
+        <linearGradient
+          id='za-g'
+          x1='12.13'
+          x2='12.13'
+          y1='10'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#072cb4' />
+          <stop offset='1' stopColor='#042396' />
+        </linearGradient>
+        <clipPath id='za-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='za-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

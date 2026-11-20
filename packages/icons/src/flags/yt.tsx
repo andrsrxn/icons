@@ -33,99 +33,73 @@ export const IconFlagYT: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='yt-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='yt-e'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1b2ca9' />
-            <stop offset='1' stopColor='#132294' />
-          </linearGradient>
-          <linearGradient
-            id='yt-h'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e6402c' />
-            <stop offset='1' stopColor='#d1321f' />
-          </linearGradient>
-          <linearGradient
-            id='yt-i'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='6.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='yt-j'
-            x1='10.5'
-            x2='10.5'
-            y1='8'
-            y2='9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f7e04b' />
-            <stop offset='1' stopColor='#ead135' />
-          </linearGradient>
-          <filter
-            id='yt-d'
-            width='5'
-            height='3'
-            x='8'
-            y='4'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_2639' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_2639' result='shape' />
-          </filter>
-          <filter
-            id='yt-g'
-            width='5'
-            height='4'
-            x='8'
-            y='7'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_2639' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_2639' result='shape' />
-          </filter>
-          <clipPath id='yt-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='yt-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='yt-e' x1='10.5' x2='10.5' y1='4' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1b2ca9' />
+          <stop offset='1' stopColor='#132294' />
+        </linearGradient>
+        <linearGradient id='yt-h' x1='10.5' x2='10.5' y1='7' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e6402c' />
+          <stop offset='1' stopColor='#d1321f' />
+        </linearGradient>
+        <linearGradient
+          id='yt-i'
+          x1='10.5'
+          x2='10.5'
+          y1='5'
+          y2='6.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='yt-j' x1='10.5' x2='10.5' y1='8' y2='9' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f7e04b' />
+          <stop offset='1' stopColor='#ead135' />
+        </linearGradient>
+        <filter
+          id='yt-d'
+          width='5'
+          height='3'
+          x='8'
+          y='4'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_2639' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_2639' result='shape' />
+        </filter>
+        <filter
+          id='yt-g'
+          width='5'
+          height='4'
+          x='8'
+          y='7'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_2639' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_2639' result='shape' />
+        </filter>
+        <clipPath id='yt-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='yt-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

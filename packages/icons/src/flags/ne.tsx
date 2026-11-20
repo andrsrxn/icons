@@ -33,61 +33,41 @@ export const IconFlagNE: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ne-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ne-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f0642f' />
-            <stop offset='1' stopColor='#df531d' />
-          </linearGradient>
-          <linearGradient
-            id='ne-d'
-            x1='10.5'
-            x2='10.5'
-            y1='10'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#2dcc45' />
-            <stop offset='1' stopColor='#1faf35' />
-          </linearGradient>
-          <linearGradient
-            id='ne-e'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ne-f'
-            x1='10.5'
-            x2='10.5'
-            y1='5.5'
-            y2='9.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e85c27' />
-            <stop offset='1' stopColor='#df531d' />
-          </linearGradient>
-          <clipPath id='ne-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='ne-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ne-c' x1='10.5' x2='10.5' y1='0' y2='5' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f0642f' />
+          <stop offset='1' stopColor='#df531d' />
+        </linearGradient>
+        <linearGradient
+          id='ne-d'
+          x1='10.5'
+          x2='10.5'
+          y1='10'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#2dcc45' />
+          <stop offset='1' stopColor='#1faf35' />
+        </linearGradient>
+        <linearGradient id='ne-e' x1='10.5' x2='10.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='ne-f'
+          x1='10.5'
+          x2='10.5'
+          y1='5.5'
+          y2='9.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e85c27' />
+          <stop offset='1' stopColor='#df531d' />
+        </linearGradient>
+        <clipPath id='ne-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='ne-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

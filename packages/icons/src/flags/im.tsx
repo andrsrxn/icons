@@ -33,51 +33,37 @@ export const IconFlagIM: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='im-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='im-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e52d42' />
-            <stop offset='1' stopColor='#cb1d31' />
-          </linearGradient>
-          <linearGradient
-            id='im-d'
-            x1='10.6'
-            x2='10.6'
-            y1='2.32'
-            y2='13.92'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='im-e'
-            x1='9.5'
-            x2='9.5'
-            y1='2.5'
-            y2='11.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f8dd4e' />
-            <stop offset='1' stopColor='#f9da38' />
-          </linearGradient>
-          <clipPath id='im-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='im-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='im-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e52d42' />
+          <stop offset='1' stopColor='#cb1d31' />
+        </linearGradient>
+        <linearGradient
+          id='im-d'
+          x1='10.6'
+          x2='10.6'
+          y1='2.32'
+          y2='13.92'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='im-e'
+          x1='9.5'
+          x2='9.5'
+          y1='2.5'
+          y2='11.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f8dd4e' />
+          <stop offset='1' stopColor='#f9da38' />
+        </linearGradient>
+        <clipPath id='im-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='im-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

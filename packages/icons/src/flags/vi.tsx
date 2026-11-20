@@ -33,61 +33,35 @@ export const IconFlagVI: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='vi-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='vi-c'
-            x1='10.5'
-            x2='10.5'
-            y1='1.98'
-            y2='12.74'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f8ce61' />
-            <stop offset='1' stopColor='#f3c44b' />
-          </linearGradient>
-          <linearGradient
-            id='vi-d'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='vi-f'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='6'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1e357f' />
-            <stop offset='1' stopColor='#162966' />
-          </linearGradient>
-          <linearGradient
-            id='vi-h'
-            x1='10.5'
-            x2='10.5'
-            y1='6'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#bc1443' />
-            <stop offset='1' stopColor='#a30b35' />
-          </linearGradient>
-          <clipPath id='vi-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='vi-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='vi-c'
+          x1='10.5'
+          x2='10.5'
+          y1='1.98'
+          y2='12.74'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f8ce61' />
+          <stop offset='1' stopColor='#f3c44b' />
+        </linearGradient>
+        <linearGradient id='vi-d' x1='10.5' x2='10.5' y1='4' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='vi-f' x1='10.5' x2='10.5' y1='4' y2='6' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1e357f' />
+          <stop offset='1' stopColor='#162966' />
+        </linearGradient>
+        <linearGradient id='vi-h' x1='10.5' x2='10.5' y1='6' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#bc1443' />
+          <stop offset='1' stopColor='#a30b35' />
+        </linearGradient>
+        <clipPath id='vi-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='vi-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

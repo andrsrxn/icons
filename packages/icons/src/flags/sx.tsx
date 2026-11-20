@@ -33,75 +33,49 @@ export const IconFlagSX: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='sx-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='sx-c'
-            x1='10.5'
-            x2='10.5'
-            y1='7'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0740aa' />
-            <stop offset='1' stopColor='#012f85' />
-          </linearGradient>
-          <linearGradient
-            id='sx-d'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f02c33' />
-            <stop offset='1' stopColor='#d82027' />
-          </linearGradient>
-          <linearGradient id='sx-e' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='sx-f'
-            x1='3.5'
-            x2='3.5'
-            y1='4.5'
-            y2='9.1'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e72c33' />
-            <stop offset='1' stopColor='#d82027' />
-          </linearGradient>
-          <linearGradient
-            id='sx-g'
-            x1='3.5'
-            x2='3.5'
-            y1='5'
-            y2='8.6'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#78c1f0' />
-            <stop offset='1' stopColor='#67b1e0' />
-          </linearGradient>
-          <linearGradient
-            id='sx-h'
-            x1='3.5'
-            x2='3.5'
-            y1='3.5'
-            y2='5.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f7e14b' />
-            <stop offset='1' stopColor='#f7df3e' />
-          </linearGradient>
-          <clipPath id='sx-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='sx-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sx-c' x1='10.5' x2='10.5' y1='7' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0740aa' />
+          <stop offset='1' stopColor='#012f85' />
+        </linearGradient>
+        <linearGradient id='sx-d' x1='10.5' x2='10.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f02c33' />
+          <stop offset='1' stopColor='#d82027' />
+        </linearGradient>
+        <linearGradient id='sx-e' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='sx-f'
+          x1='3.5'
+          x2='3.5'
+          y1='4.5'
+          y2='9.1'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e72c33' />
+          <stop offset='1' stopColor='#d82027' />
+        </linearGradient>
+        <linearGradient id='sx-g' x1='3.5' x2='3.5' y1='5' y2='8.6' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#78c1f0' />
+          <stop offset='1' stopColor='#67b1e0' />
+        </linearGradient>
+        <linearGradient
+          id='sx-h'
+          x1='3.5'
+          x2='3.5'
+          y1='3.5'
+          y2='5.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f7e14b' />
+          <stop offset='1' stopColor='#f7df3e' />
+        </linearGradient>
+        <clipPath id='sx-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='sx-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

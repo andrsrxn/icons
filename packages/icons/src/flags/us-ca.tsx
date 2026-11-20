@@ -33,51 +33,49 @@ export const IconFlagUSCA: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='us-ca-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='us-ca-c'
-            x1='10.5'
-            x2='10.5'
-            y1='12'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e7413d' />
-            <stop offset='1' stopColor='#db3531' />
-          </linearGradient>
-          <linearGradient
-            id='us-ca-d'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='us-ca-e'
-            x1='3.5'
-            x2='3.5'
-            y1='1.5'
-            y2='5.12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e7413d' />
-            <stop offset='1' stopColor='#db3531' />
-          </linearGradient>
-          <clipPath id='us-ca-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient
+          id='us-ca-b'
+          x1='10.5'
+          x2='10.5'
+          y1='0'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='us-ca-c'
+          x1='10.5'
+          x2='10.5'
+          y1='12'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e7413d' />
+          <stop offset='1' stopColor='#db3531' />
+        </linearGradient>
+        <linearGradient
+          id='us-ca-d'
+          x1='10.5'
+          x2='10.5'
+          y1='0'
+          y2='12'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='us-ca-e'
+          x1='3.5'
+          x2='3.5'
+          y1='1.5'
+          y2='5.12'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e7413d' />
+          <stop offset='1' stopColor='#db3531' />
+        </linearGradient>
+        <clipPath id='us-ca-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='us-ca-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

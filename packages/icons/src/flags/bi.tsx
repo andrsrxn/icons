@@ -33,71 +33,45 @@ export const IconFlagBI: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='bi-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='bi-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e4233b' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <linearGradient
-            id='bi-d'
-            x1='4.42'
-            x2='4.42'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#34cd4e' />
-            <stop offset='1' stopColor='#2ab441' />
-          </linearGradient>
-          <linearGradient
-            id='bi-e'
-            x1='16.5'
-            x2='16.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#34cd4e' />
-            <stop offset='1' stopColor='#2ab441' />
-          </linearGradient>
-          <linearGradient
-            id='bi-f'
-            x1='10.5'
-            x2='10.5'
-            y1='-1.44'
-            y2='16.43'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='bi-g'
-            x1='10.5'
-            x2='10.5'
-            y1='5.29'
-            y2='9.2'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#df2239' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <clipPath id='bi-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='bi-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='bi-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e4233b' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <linearGradient id='bi-d' x1='4.42' x2='4.42' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#34cd4e' />
+          <stop offset='1' stopColor='#2ab441' />
+        </linearGradient>
+        <linearGradient id='bi-e' x1='16.5' x2='16.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#34cd4e' />
+          <stop offset='1' stopColor='#2ab441' />
+        </linearGradient>
+        <linearGradient
+          id='bi-f'
+          x1='10.5'
+          x2='10.5'
+          y1='-1.44'
+          y2='16.43'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='bi-g'
+          x1='10.5'
+          x2='10.5'
+          y1='5.29'
+          y2='9.2'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#df2239' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <clipPath id='bi-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='bi-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

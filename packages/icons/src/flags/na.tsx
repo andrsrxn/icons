@@ -33,147 +33,127 @@ export const IconFlagNA: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='na-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='na-d'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0c4799' />
-            <stop offset='1' stopColor='#05387e' />
-          </linearGradient>
-          <linearGradient
-            id='na-f'
-            x1='3.5'
-            x2='3.5'
-            y1='1.66'
-            y2='5.35'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd243' />
-            <stop offset='1' stopColor='#ffcd2f' />
-          </linearGradient>
-          <linearGradient
-            id='na-h'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#1bac55' />
-            <stop offset='1' stopColor='#149447' />
-          </linearGradient>
-          <linearGradient
-            id='na-j'
-            x1='10.5'
-            x2='10.5'
-            y1='-2'
-            y2='17'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='na-k'
-            x1='10.5'
-            x2='10.5'
-            y1='-2.3'
-            y2='17.31'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e52347' />
-            <stop offset='1' stopColor='#d01739' />
-          </linearGradient>
-          <filter
-            id='na-c'
-            width='21'
-            height='10'
-            x='0'
-            y='0'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
-          </filter>
-          <filter
-            id='na-e'
-            width='3.7'
-            height='4.2'
-            x='1.65'
-            y='1.66'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset dy='.5' />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
-          </filter>
-          <filter
-            id='na-g'
-            width='21'
-            height='10'
-            x='0'
-            y='5'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
-          </filter>
-          <filter
-            id='na-i'
-            width='24.26'
-            height='19'
-            x='-1.63'
-            y='-2'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
-          </filter>
-          <clipPath id='na-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='na-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='na-d' x1='10.5' x2='10.5' y1='0' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0c4799' />
+          <stop offset='1' stopColor='#05387e' />
+        </linearGradient>
+        <linearGradient
+          id='na-f'
+          x1='3.5'
+          x2='3.5'
+          y1='1.66'
+          y2='5.35'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd243' />
+          <stop offset='1' stopColor='#ffcd2f' />
+        </linearGradient>
+        <linearGradient id='na-h' x1='10.5' x2='10.5' y1='5' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#1bac55' />
+          <stop offset='1' stopColor='#149447' />
+        </linearGradient>
+        <linearGradient
+          id='na-j'
+          x1='10.5'
+          x2='10.5'
+          y1='-2'
+          y2='17'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='na-k'
+          x1='10.5'
+          x2='10.5'
+          y1='-2.3'
+          y2='17.31'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e52347' />
+          <stop offset='1' stopColor='#d01739' />
+        </linearGradient>
+        <filter
+          id='na-c'
+          width='21'
+          height='10'
+          x='0'
+          y='0'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
+        </filter>
+        <filter
+          id='na-e'
+          width='3.7'
+          height='4.2'
+          x='1.65'
+          y='1.66'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset dy='.5' />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
+        </filter>
+        <filter
+          id='na-g'
+          width='21'
+          height='10'
+          x='0'
+          y='5'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
+        </filter>
+        <filter
+          id='na-i'
+          width='24.26'
+          height='19'
+          x='-1.63'
+          y='-2'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_1705' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_1705' result='shape' />
+        </filter>
+        <clipPath id='na-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='na-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

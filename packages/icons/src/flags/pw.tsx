@@ -33,35 +33,21 @@ export const IconFlagPW: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='pw-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='pw-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#65c6ee' />
-            <stop offset='1' stopColor='#4faed5' />
-          </linearGradient>
-          <linearGradient id='pw-d' x1='9.5' x2='9.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffe044' />
-            <stop offset='1' stopColor='#ffdd32' />
-          </linearGradient>
-          <clipPath id='pw-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='pw-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='pw-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#65c6ee' />
+          <stop offset='1' stopColor='#4faed5' />
+        </linearGradient>
+        <linearGradient id='pw-d' x1='9.5' x2='9.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffe044' />
+          <stop offset='1' stopColor='#ffdd32' />
+        </linearGradient>
+        <clipPath id='pw-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='pw-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

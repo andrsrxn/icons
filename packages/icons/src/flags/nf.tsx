@@ -33,55 +33,29 @@ export const IconFlagNF: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='nf-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='nf-c'
-            x1='15.5'
-            x2='15.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#219646' />
-            <stop offset='1' stopColor='#197837' />
-          </linearGradient>
-          <linearGradient id='nf-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#219646' />
-            <stop offset='1' stopColor='#197837' />
-          </linearGradient>
-          <linearGradient
-            id='nf-e'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='nf-f'
-            x1='10.5'
-            x2='10.5'
-            y1='2'
-            y2='13'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#259d4b' />
-            <stop offset='1' stopColor='#197837' />
-          </linearGradient>
-          <clipPath id='nf-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='nf-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='nf-c' x1='15.5' x2='15.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#219646' />
+          <stop offset='1' stopColor='#197837' />
+        </linearGradient>
+        <linearGradient id='nf-d' x1='3.5' x2='3.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#219646' />
+          <stop offset='1' stopColor='#197837' />
+        </linearGradient>
+        <linearGradient id='nf-e' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='nf-f' x1='10.5' x2='10.5' y1='2' y2='13' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#259d4b' />
+          <stop offset='1' stopColor='#197837' />
+        </linearGradient>
+        <clipPath id='nf-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='nf-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

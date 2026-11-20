@@ -33,41 +33,21 @@ export const IconFlagLI: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='li-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='li-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='8'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0a3b97' />
-            <stop offset='1' stopColor='#042e7d' />
-          </linearGradient>
-          <linearGradient
-            id='li-d'
-            x1='10.5'
-            x2='10.5'
-            y1='8'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e6273e' />
-            <stop offset='1' stopColor='#cc162c' />
-          </linearGradient>
-          <clipPath id='li-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='li-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='li-c' x1='10.5' x2='10.5' y1='0' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0a3b97' />
+          <stop offset='1' stopColor='#042e7d' />
+        </linearGradient>
+        <linearGradient id='li-d' x1='10.5' x2='10.5' y1='8' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e6273e' />
+          <stop offset='1' stopColor='#cc162c' />
+        </linearGradient>
+        <clipPath id='li-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='li-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

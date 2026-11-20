@@ -33,86 +33,72 @@ export const IconFlagAI: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='ai-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='ai-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0a17a7' />
-            <stop offset='1' stopColor='#030e88' />
-          </linearGradient>
-          <linearGradient
-            id='ai-d'
-            x1='4.07'
-            x2='4.07'
-            y1='-.9'
-            y2='7.9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='ai-e' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient
-            id='ai-f'
-            x1='4.75'
-            x2='4.75'
-            y1='0'
-            y2='7.5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='ai-g' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#db1e36' />
-            <stop offset='1' stopColor='#d51931' />
-          </linearGradient>
-          <linearGradient id='ai-i' x1='15' x2='15' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='ai-l' x1='15' x2='15' y1='6' y2='8' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffa51b' />
-            <stop offset='1' stopColor='#ff9a00' />
-          </linearGradient>
-          <clipPath id='ai-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-          <filter
-            id='ai-h'
-            width='4'
-            height='5.5'
-            x='13'
-            y='5'
-            colorInterpolationFilters='sRGB'
-            filterUnits='userSpaceOnUse'>
-            <feFlood floodOpacity='0' result='BackgroundImageFix' />
-            <feColorMatrix
-              in='SourceAlpha'
-              result='hardAlpha'
-              values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
-            />
-            <feOffset dy='.5' />
-            <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
-            <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_83' />
-            <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_83' result='shape' />
-          </filter>
-        </defs>
+        <linearGradient id='ai-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ai-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0a17a7' />
+          <stop offset='1' stopColor='#030e88' />
+        </linearGradient>
+        <linearGradient
+          id='ai-d'
+          x1='4.07'
+          x2='4.07'
+          y1='-.9'
+          y2='7.9'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ai-e' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient
+          id='ai-f'
+          x1='4.75'
+          x2='4.75'
+          y1='0'
+          y2='7.5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ai-g' x1='4.5' x2='4.5' y1='0' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#db1e36' />
+          <stop offset='1' stopColor='#d51931' />
+        </linearGradient>
+        <linearGradient id='ai-i' x1='15' x2='15' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='ai-l' x1='15' x2='15' y1='6' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffa51b' />
+          <stop offset='1' stopColor='#ff9a00' />
+        </linearGradient>
+        <clipPath id='ai-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
+        <filter
+          id='ai-h'
+          width='4'
+          height='5.5'
+          x='13'
+          y='5'
+          colorInterpolationFilters='sRGB'
+          filterUnits='userSpaceOnUse'>
+          <feFlood floodOpacity='0' result='BackgroundImageFix' />
+          <feColorMatrix
+            in='SourceAlpha'
+            result='hardAlpha'
+            values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'
+          />
+          <feOffset dy='.5' />
+          <feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0' />
+          <feBlend in2='BackgroundImageFix' result='effect1_dropShadow_799_83' />
+          <feBlend in='SourceGraphic' in2='effect1_dropShadow_799_83' result='shape' />
+        </filter>
         <clipPath id='ai-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

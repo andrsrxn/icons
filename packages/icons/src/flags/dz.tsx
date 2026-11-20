@@ -33,49 +33,29 @@ export const IconFlagDZ: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='dz-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='dz-c' x1='5.5' x2='5.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#048345' />
-            <stop offset='1' stopColor='#04753e' />
-          </linearGradient>
-          <linearGradient id='dz-d' x1='16' x2='16' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='dz-e'
-            x1='13'
-            x2='13'
-            y1='5.5'
-            y2='9.12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e81b42' />
-            <stop offset='1' stopColor='#d20f34' />
-          </linearGradient>
-          <linearGradient
-            id='dz-f'
-            x1='9.63'
-            x2='9.63'
-            y1='3'
-            y2='12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e81b42' />
-            <stop offset='1' stopColor='#d20f34' />
-          </linearGradient>
-          <clipPath id='dz-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='dz-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='dz-c' x1='5.5' x2='5.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#048345' />
+          <stop offset='1' stopColor='#04753e' />
+        </linearGradient>
+        <linearGradient id='dz-d' x1='16' x2='16' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='dz-e' x1='13' x2='13' y1='5.5' y2='9.12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e81b42' />
+          <stop offset='1' stopColor='#d20f34' />
+        </linearGradient>
+        <linearGradient id='dz-f' x1='9.63' x2='9.63' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e81b42' />
+          <stop offset='1' stopColor='#d20f34' />
+        </linearGradient>
+        <clipPath id='dz-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='dz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

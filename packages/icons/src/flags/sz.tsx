@@ -33,75 +33,43 @@ export const IconFlagSZ: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='sz-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='sz-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='3'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#486bca' />
-            <stop offset='1' stopColor='#3e5fba' />
-          </linearGradient>
-          <linearGradient
-            id='sz-d'
-            x1='10.5'
-            x2='10.5'
-            y1='12'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#486bca' />
-            <stop offset='1' stopColor='#3e5fba' />
-          </linearGradient>
-          <linearGradient
-            id='sz-e'
-            x1='10.5'
-            x2='10.5'
-            y1='3'
-            y2='12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffdf20' />
-            <stop offset='1' stopColor='#ffda00' />
-          </linearGradient>
-          <linearGradient
-            id='sz-f'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#cf1615' />
-            <stop offset='1' stopColor='#b20d0c' />
-          </linearGradient>
-          <linearGradient
-            id='sz-g'
-            x1='10.5'
-            x2='10.5'
-            y1='5'
-            y2='10'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='sz-i' x1='8.5' x2='8.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#262626' />
-            <stop offset='1' stopColor='#0d0d0d' />
-          </linearGradient>
-          <clipPath id='sz-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='sz-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sz-c' x1='10.5' x2='10.5' y1='0' y2='3' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#486bca' />
+          <stop offset='1' stopColor='#3e5fba' />
+        </linearGradient>
+        <linearGradient
+          id='sz-d'
+          x1='10.5'
+          x2='10.5'
+          y1='12'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#486bca' />
+          <stop offset='1' stopColor='#3e5fba' />
+        </linearGradient>
+        <linearGradient id='sz-e' x1='10.5' x2='10.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffdf20' />
+          <stop offset='1' stopColor='#ffda00' />
+        </linearGradient>
+        <linearGradient id='sz-f' x1='10.5' x2='10.5' y1='4' y2='11' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#cf1615' />
+          <stop offset='1' stopColor='#b20d0c' />
+        </linearGradient>
+        <linearGradient id='sz-g' x1='10.5' x2='10.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='sz-i' x1='8.5' x2='8.5' y1='5' y2='10' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#262626' />
+          <stop offset='1' stopColor='#0d0d0d' />
+        </linearGradient>
+        <clipPath id='sz-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='sz-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

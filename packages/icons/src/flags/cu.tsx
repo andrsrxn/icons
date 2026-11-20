@@ -33,85 +33,53 @@ export const IconFlagCU: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='cu-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='cu-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='3'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0b389f' />
-            <stop offset='1' stopColor='#052e8d' />
-          </linearGradient>
-          <linearGradient
-            id='cu-d'
-            x1='10.5'
-            x2='10.5'
-            y1='6'
-            y2='9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0b389f' />
-            <stop offset='1' stopColor='#052e8d' />
-          </linearGradient>
-          <linearGradient
-            id='cu-e'
-            x1='10.5'
-            x2='10.5'
-            y1='3'
-            y2='6'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='cu-f'
-            x1='10.5'
-            x2='10.5'
-            y1='12'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0b389f' />
-            <stop offset='1' stopColor='#052e8d' />
-          </linearGradient>
-          <linearGradient
-            id='cu-g'
-            x1='10.5'
-            x2='10.5'
-            y1='9'
-            y2='12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient id='cu-h' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e12a43' />
-            <stop offset='1' stopColor='#cd1931' />
-          </linearGradient>
-          <linearGradient
-            id='cu-i'
-            x1='3.5'
-            x2='3.5'
-            y1='5.5'
-            y2='9.12'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <clipPath id='cu-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='cu-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='cu-c' x1='10.5' x2='10.5' y1='0' y2='3' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0b389f' />
+          <stop offset='1' stopColor='#052e8d' />
+        </linearGradient>
+        <linearGradient id='cu-d' x1='10.5' x2='10.5' y1='6' y2='9' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0b389f' />
+          <stop offset='1' stopColor='#052e8d' />
+        </linearGradient>
+        <linearGradient id='cu-e' x1='10.5' x2='10.5' y1='3' y2='6' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='cu-f'
+          x1='10.5'
+          x2='10.5'
+          y1='12'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0b389f' />
+          <stop offset='1' stopColor='#052e8d' />
+        </linearGradient>
+        <linearGradient id='cu-g' x1='10.5' x2='10.5' y1='9' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='cu-h' x1='5' x2='5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e12a43' />
+          <stop offset='1' stopColor='#cd1931' />
+        </linearGradient>
+        <linearGradient
+          id='cu-i'
+          x1='3.5'
+          x2='3.5'
+          y1='5.5'
+          y2='9.12'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <clipPath id='cu-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='cu-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

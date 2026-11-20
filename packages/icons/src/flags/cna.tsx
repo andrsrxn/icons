@@ -33,11 +33,9 @@ export const IconFlagCNA: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <clipPath id='cna-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <clipPath id='cna-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='cna-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -33,45 +33,25 @@ export const IconFlagMY: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='my-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='my-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e1244a' />
-            <stop offset='1' stopColor='#be1134' />
-          </linearGradient>
-          <linearGradient id='my-d' x1='6' x2='6' y1='0' y2='8' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#0c3f8e' />
-            <stop offset='1' stopColor='#032a67' />
-          </linearGradient>
-          <linearGradient
-            id='my-e'
-            x1='5.97'
-            x2='5.97'
-            y1='1'
-            y2='7'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd34f' />
-            <stop offset='1' stopColor='#ffcb2f' />
-          </linearGradient>
-          <clipPath id='my-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='my-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='my-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e1244a' />
+          <stop offset='1' stopColor='#be1134' />
+        </linearGradient>
+        <linearGradient id='my-d' x1='6' x2='6' y1='0' y2='8' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#0c3f8e' />
+          <stop offset='1' stopColor='#032a67' />
+        </linearGradient>
+        <linearGradient id='my-e' x1='5.97' x2='5.97' y1='1' y2='7' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd34f' />
+          <stop offset='1' stopColor='#ffcb2f' />
+        </linearGradient>
+        <clipPath id='my-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='my-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

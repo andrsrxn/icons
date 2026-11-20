@@ -33,51 +33,37 @@ export const IconFlagJE: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='je-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='je-c'
-            x1='10.5'
-            x2='10.5'
-            y1='-1.44'
-            y2='16.43'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ef273f' />
-            <stop offset='1' stopColor='#db1c33' />
-          </linearGradient>
-          <linearGradient
-            id='je-d'
-            x1='10.5'
-            x2='10.5'
-            y1='2'
-            y2='5.29'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f22a41' />
-            <stop offset='1' stopColor='#e51d34' />
-          </linearGradient>
-          <linearGradient
-            id='je-e'
-            x1='10.5'
-            x2='10.5'
-            y1='1'
-            y2='4'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fadf46' />
-            <stop offset='1' stopColor='#f9dc38' />
-          </linearGradient>
-          <clipPath id='je-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='je-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='je-c'
+          x1='10.5'
+          x2='10.5'
+          y1='-1.44'
+          y2='16.43'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ef273f' />
+          <stop offset='1' stopColor='#db1c33' />
+        </linearGradient>
+        <linearGradient
+          id='je-d'
+          x1='10.5'
+          x2='10.5'
+          y1='2'
+          y2='5.29'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f22a41' />
+          <stop offset='1' stopColor='#e51d34' />
+        </linearGradient>
+        <linearGradient id='je-e' x1='10.5' x2='10.5' y1='1' y2='4' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fadf46' />
+          <stop offset='1' stopColor='#f9dc38' />
+        </linearGradient>
+        <clipPath id='je-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='je-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

@@ -33,35 +33,21 @@ export const IconFlagBD: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='bd-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='bd-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#128363' />
-            <stop offset='1' stopColor='#0c6a4f' />
-          </linearGradient>
-          <linearGradient id='bd-d' x1='9.5' x2='9.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#f23c53' />
-            <stop offset='1' stopColor='#f22e46' />
-          </linearGradient>
-          <clipPath id='bd-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient id='bd-b' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient id='bd-c' x1='10.5' x2='10.5' y1='0' y2='15' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#128363' />
+          <stop offset='1' stopColor='#0c6a4f' />
+        </linearGradient>
+        <linearGradient id='bd-d' x1='9.5' x2='9.5' y1='3' y2='12' gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#f23c53' />
+          <stop offset='1' stopColor='#f22e46' />
+        </linearGradient>
+        <clipPath id='bd-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='bd-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>

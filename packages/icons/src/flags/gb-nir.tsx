@@ -33,71 +33,69 @@ export const IconFlagGBNIR: FlagIcon = ({
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
       <defs>
-        <defs>
-          <linearGradient
-            id='gb-nir-b'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gb-nir-c'
-            x1='10.5'
-            x2='10.5'
-            y1='0'
-            y2='15'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e82739' />
-            <stop offset='1' stopColor='#ca1a2b' />
-          </linearGradient>
-          <linearGradient
-            id='gb-nir-d'
-            x1='10.5'
-            x2='10.5'
-            y1='4'
-            y2='11'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gb-nir-e'
-            x1='10.55'
-            x2='10.55'
-            y1='6.13'
-            y2='9'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#e6101e' />
-            <stop offset='1' stopColor='#ca0814' />
-          </linearGradient>
-          <linearGradient
-            id='gb-nir-f'
-            x1='10.5'
-            x2='10.5'
-            y1='2.91'
-            y2='4.1'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#fff' />
-            <stop offset='1' stopColor='#f0f0f0' />
-          </linearGradient>
-          <linearGradient
-            id='gb-nir-g'
-            x1='10.5'
-            x2='10.5'
-            y1='2'
-            y2='5'
-            gradientUnits='userSpaceOnUse'>
-            <stop stopColor='#ffd148' />
-            <stop offset='1' stopColor='#ffcb2f' />
-          </linearGradient>
-          <clipPath id='gb-nir-a'>
-            <path fill='#fff' d='M0 0h21v15H0z' />
-          </clipPath>
-        </defs>
+        <linearGradient
+          id='gb-nir-b'
+          x1='10.5'
+          x2='10.5'
+          y1='0'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='gb-nir-c'
+          x1='10.5'
+          x2='10.5'
+          y1='0'
+          y2='15'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e82739' />
+          <stop offset='1' stopColor='#ca1a2b' />
+        </linearGradient>
+        <linearGradient
+          id='gb-nir-d'
+          x1='10.5'
+          x2='10.5'
+          y1='4'
+          y2='11'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='gb-nir-e'
+          x1='10.55'
+          x2='10.55'
+          y1='6.13'
+          y2='9'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#e6101e' />
+          <stop offset='1' stopColor='#ca0814' />
+        </linearGradient>
+        <linearGradient
+          id='gb-nir-f'
+          x1='10.5'
+          x2='10.5'
+          y1='2.91'
+          y2='4.1'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#fff' />
+          <stop offset='1' stopColor='#f0f0f0' />
+        </linearGradient>
+        <linearGradient
+          id='gb-nir-g'
+          x1='10.5'
+          x2='10.5'
+          y1='2'
+          y2='5'
+          gradientUnits='userSpaceOnUse'>
+          <stop stopColor='#ffd148' />
+          <stop offset='1' stopColor='#ffcb2f' />
+        </linearGradient>
+        <clipPath id='gb-nir-a'>
+          <path fill='#fff' d='M0 0h21v15H0z' />
+        </clipPath>
         <clipPath id='gb-nir-clip'>
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
