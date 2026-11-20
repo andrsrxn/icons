@@ -7,10 +7,9 @@
     "region",
     "area",
     "detect",
-    "capture",
     "analyze",
     "focus",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

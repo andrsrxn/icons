@@ -10,7 +10,7 @@
     "extract",
     "detect",
     "verify",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

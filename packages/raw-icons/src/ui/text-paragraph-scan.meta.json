@@ -11,7 +11,7 @@
     "document",
     "ocr",
     "detect",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

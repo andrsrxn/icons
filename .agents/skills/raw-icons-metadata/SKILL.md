@@ -145,7 +145,7 @@ When an icon ends with a standard suffix, append up to 3–4 standard suffix tag
 | `-filled` | `"active"`, `"solid"`, `"selected"` |
 | `-settings` | `"preferences"`, `"options"`, `"configure"`, `"customize"` |
 | `-search` | `"find"`, `"lookup"`, `"explore"`, `"scan"` |
-| `-scan` | `"inspect"`, `"identify"`, `"recognize"` |
+| `-scan` | `"capture"`, `"identify"`, `"recognize"` |
 
 ### C. Non-Standard Modifier Icons (e.g. `file-cube`):
 - Take 2–4 of the most representative tags from the modifier icon (`cube` → `"3d"`, `"three"`, `"dimension"`, `"solid"`) and append them after the base icon's core tags.

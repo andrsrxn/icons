@@ -10,7 +10,7 @@
     "padlock",
     "biometric",
     "verify",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

@@ -11,7 +11,7 @@
     "ocr",
     "audit",
     "detect",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

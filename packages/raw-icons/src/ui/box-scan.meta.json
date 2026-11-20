@@ -8,7 +8,7 @@
     "shipping",
     "x-ray",
     "parcel",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]

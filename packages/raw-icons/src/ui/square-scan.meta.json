@@ -7,10 +7,9 @@
     "area",
     "region",
     "QR",
-    "capture",
     "detect",
     "focus",
-    "inspect",
+    "capture",
     "identify",
     "recognize"
   ]
