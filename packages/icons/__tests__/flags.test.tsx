@@ -58,13 +58,13 @@ describe('Flag Icons', () => {
     it('every internal id and url() reference is prefixed with the icon code', () => {
       const { container } = render(<Component />)
       const svg = container.querySelector('svg') as SVGSVGElement
-      const prefixPattern = new RegExp(`^${code}-`)
+      const prefixPattern = new RegExp(`^${code}-`, 'u')
 
       for (const el of svg.querySelectorAll('[id]')) {
         expect(el.getAttribute('id')).toMatch(prefixPattern)
       }
 
-      const refs = [...svg.outerHTML.matchAll(/url\(#([^)]+)\)/g)].map(m => m[1])
+      const refs = [...svg.outerHTML.matchAll(/url\(#([^)]+)\)/gu)].map(m => m[1])
       expect(refs.length).toBeGreaterThan(0)
       for (const ref of refs) {
         expect(ref).toMatch(prefixPattern)

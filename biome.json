@@ -249,7 +249,8 @@
             "useTopLevelRegex": "off"
           },
           "style": {
-            "noMagicNumbers": "off"
+            "noMagicNumbers": "off",
+            "useNamedCaptureGroup": "off"
           },
           "complexity": {
             "noExcessiveLinesPerFunction": "off"
