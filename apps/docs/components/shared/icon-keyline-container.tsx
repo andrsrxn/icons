@@ -70,7 +70,11 @@ export const IconKeylineContainer = ({
         style={{
           backgroundImage: isUI && shouldShowKeyline ? keylineURL : 'none',
         }}>
-        <IconComponent color={color} strokeWidth={strokeWidth} className='size-64 md:size-72' />
+        <IconComponent
+          color={isUI ? color : undefined}
+          strokeWidth={isUI ? strokeWidth : undefined}
+          className='size-64 md:size-72'
+        />
       </div>
 
       {isUI ? (
