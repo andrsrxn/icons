@@ -1,5 +1,11 @@
 # @andrsrxn/icons
 
+## 8.0.2
+
+### Patch Changes
+
+- [`73e33b1`](https://github.com/andrsrxn/icons/commit/73e33b1ed7ead962a924bac9aa397e601dbcecbf) Thanks [@andrsrxn](https://github.com/andrsrxn)! - Remove double `defs` tag on flag icon components.
+
 ## 8.0.1
 
 ### Patch Changes
