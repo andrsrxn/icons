@@ -110,6 +110,7 @@ export const IconFlagTC: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#tc-clip)'>
         <g clipPath='url(#tc-a)'>
           <path fill='url(#tc-b)' d='M21 0H0v15h21z' />

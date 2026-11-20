@@ -106,6 +106,7 @@ export const IconFlagSX: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sx-clip)'>
         <g clipPath='url(#sx-a)'>
           <path fill='url(#sx-b)' d='M21 0H0v15h21z' />

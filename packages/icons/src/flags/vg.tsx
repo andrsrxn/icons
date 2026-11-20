@@ -130,6 +130,7 @@ export const IconFlagVG: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#vg-clip)'>
         <g clipPath='url(#vg-a)'>
           <path fill='url(#vg-b)' d='M21 0H0v15h21z' />

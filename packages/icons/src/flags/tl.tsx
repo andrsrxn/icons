@@ -80,6 +80,7 @@ export const IconFlagTL: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#tl-clip)'>
         <g clipPath='url(#tl-a)'>
           <path fill='url(#tl-b)' d='M21 0H0v15h21z' />

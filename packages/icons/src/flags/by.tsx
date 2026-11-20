@@ -90,6 +90,7 @@ export const IconFlagBY: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#by-clip)'>
         <g clipPath='url(#by-a)'>
           <path fill='url(#by-b)' d='M21 0H0v15h21z' />

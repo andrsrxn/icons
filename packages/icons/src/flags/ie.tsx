@@ -76,6 +76,7 @@ export const IconFlagIE: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ie-clip)'>
         <g clipPath='url(#ie-a)'>
           <path fill='url(#ie-b)' d='M21 0H0v15h21z' />

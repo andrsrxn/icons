@@ -108,6 +108,7 @@ export const IconFlagNU: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#nu-clip)'>
         <g clipPath='url(#nu-a)'>
           <path fill='url(#nu-b)' d='M21 0H0v15h21z' />

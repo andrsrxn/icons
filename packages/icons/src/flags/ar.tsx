@@ -82,6 +82,7 @@ export const IconFlagAR: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ar-clip)'>
         <g clipPath='url(#ar-a)'>
           <path fill='url(#ar-b)' d='M21 0H0v15h21z' />

@@ -72,6 +72,7 @@ export const IconFlagVN: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#vn-clip)'>
         <g clipPath='url(#vn-a)'>
           <path fill='url(#vn-b)' d='M21 0H0v15h21z' />

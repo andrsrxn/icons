@@ -72,6 +72,7 @@ export const IconFlagGBSCT: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gb-sct-clip)'>
         <g clipPath='url(#gb-sct-a)'>
           <path fill='url(#gb-sct-b)' d='M21 0H0v15h21z' />

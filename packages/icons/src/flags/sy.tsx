@@ -96,6 +96,7 @@ export const IconFlagSY: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sy-clip)'>
         <g clipPath='url(#sy-a)'>
           <path fill='url(#sy-b)' d='M21 0H0v15h21z' />

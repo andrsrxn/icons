@@ -72,6 +72,7 @@ export const IconFlagSM: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sm-clip)'>
         <g clipPath='url(#sm-a)'>
           <path fill='url(#sm-b)' d='M21 0H0v15h21z' />

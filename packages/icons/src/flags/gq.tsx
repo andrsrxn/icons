@@ -86,6 +86,7 @@ export const IconFlagGQ: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gq-clip)'>
         <g clipPath='url(#gq-a)'>
           <path fill='url(#gq-b)' d='M21 0H0v15h21z' />

@@ -82,6 +82,7 @@ export const IconFlagEE: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ee-clip)'>
         <g clipPath='url(#ee-a)'>
           <path fill='url(#ee-b)' d='M21 0H0v15h21z' />

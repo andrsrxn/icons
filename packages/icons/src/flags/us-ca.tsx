@@ -82,6 +82,7 @@ export const IconFlagUSCA: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#us-ca-clip)'>
         <g clipPath='url(#us-ca-a)'>
           <path fill='url(#us-ca-b)' d='M21 0H0v15h21z' />

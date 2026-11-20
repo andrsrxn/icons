@@ -72,6 +72,7 @@ export const IconFlagSO: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#so-clip)'>
         <g clipPath='url(#so-a)'>
           <path fill='url(#so-b)' d='M21 0H0v15h21z' />

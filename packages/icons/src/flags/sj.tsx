@@ -82,6 +82,7 @@ export const IconFlagSJ: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sj-clip)'>
         <g clipPath='url(#sj-a)'>
           <path fill='url(#sj-b)' d='M21 0H0v15h21z' />

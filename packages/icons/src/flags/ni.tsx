@@ -82,6 +82,7 @@ export const IconFlagNI: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ni-clip)'>
         <g clipPath='url(#ni-a)'>
           <path fill='url(#ni-b)' d='M21 0H0v15h21z' />

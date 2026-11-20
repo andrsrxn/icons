@@ -70,6 +70,7 @@ export const IconFlagUS: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#us-clip)'>
         <g clipPath='url(#us-a)'>
           <path fill='url(#us-b)' d='M21 0H0v15h21z' />

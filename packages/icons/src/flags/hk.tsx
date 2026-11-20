@@ -72,6 +72,7 @@ export const IconFlagHK: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#hk-clip)'>
         <g clipPath='url(#hk-a)'>
           <path fill='url(#hk-b)' d='M21 0H0v15h21z' />

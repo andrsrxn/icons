@@ -82,6 +82,7 @@ export const IconFlagAD: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ad-clip)'>
         <g clipPath='url(#ad-a)'>
           <path fill='url(#ad-b)' d='M21 0H0v15h21z' />

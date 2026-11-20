@@ -120,6 +120,7 @@ export const IconFlagPN: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#pn-clip)'>
         <g clipPath='url(#pn-a)'>
           <path fill='url(#pn-b)' d='M21 0H0v15h21z' />

@@ -117,6 +117,7 @@ export const IconFlagAI: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ai-clip)'>
         <g clipPath='url(#ai-a)'>
           <path fill='url(#ai-b)' d='M21 0H0v15h21z' />

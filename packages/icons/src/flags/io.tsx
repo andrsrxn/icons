@@ -90,6 +90,7 @@ export const IconFlagIO: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#io-clip)'>
         <g clipPath='url(#io-a)'>
           <path fill='url(#io-b)' d='M21 0H0v15h21z' />

@@ -92,6 +92,7 @@ export const IconFlagMK: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#mk-clip)'>
         <g clipPath='url(#mk-a)'>
           <path fill='url(#mk-b)' d='M21 0H0v15h21z' />

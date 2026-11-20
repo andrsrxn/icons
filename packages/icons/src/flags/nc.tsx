@@ -102,6 +102,7 @@ export const IconFlagNC: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#nc-clip)'>
         <g clipPath='url(#nc-a)'>
           <path fill='url(#nc-b)' d='M21 0H0v15h21z' />

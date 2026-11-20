@@ -72,6 +72,7 @@ export const IconFlagAL: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#al-clip)'>
         <g clipPath='url(#al-a)'>
           <path fill='url(#al-b)' d='M21 0H0v15h21z' />

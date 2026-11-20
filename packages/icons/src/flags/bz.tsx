@@ -92,6 +92,7 @@ export const IconFlagBZ: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#bz-clip)'>
         <g clipPath='url(#bz-a)'>
           <path fill='url(#bz-b)' d='M21 0H0v15h21z' />

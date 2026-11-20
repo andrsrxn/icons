@@ -82,6 +82,7 @@ export const IconFlagJE: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#je-clip)'>
         <g clipPath='url(#je-a)'>
           <path fill='url(#je-b)' d='M21 0H0v15h21z' />

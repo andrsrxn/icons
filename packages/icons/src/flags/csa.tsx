@@ -42,6 +42,7 @@ export const IconFlagCSA: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#csa-clip)'>
         <g clipPath='url(#csa-a)'>
           <mask id='csa-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>

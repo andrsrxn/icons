@@ -76,6 +76,7 @@ export const IconFlagMX: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#mx-clip)'>
         <g clipPath='url(#mx-a)'>
           <path fill='url(#mx-b)' d='M21 0H0v15h21z' />

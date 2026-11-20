@@ -76,6 +76,7 @@ export const IconFlagSG: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sg-clip)'>
         <g clipPath='url(#sg-a)'>
           <path fill='url(#sg-b)' d='M21 0H0v15h21z' />

@@ -82,6 +82,7 @@ export const IconFlagER: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#er-clip)'>
         <g clipPath='url(#er-a)'>
           <path fill='url(#er-b)' d='M21 0H0v15h21z' />

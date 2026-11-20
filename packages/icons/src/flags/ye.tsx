@@ -82,6 +82,7 @@ export const IconFlagYE: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ye-clip)'>
         <g clipPath='url(#ye-a)'>
           <path fill='url(#ye-b)' d='M21 0H0v15h21z' />

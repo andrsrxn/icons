@@ -92,6 +92,7 @@ export const IconFlagMM: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#mm-clip)'>
         <g clipPath='url(#mm-a)'>
           <path fill='url(#mm-b)' d='M21 0H0v15h21z' />

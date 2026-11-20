@@ -62,6 +62,7 @@ export const IconFlagJP: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#jp-clip)'>
         <g clipPath='url(#jp-a)'>
           <path fill='url(#jp-b)' d='M21 0H0v15h21z' />

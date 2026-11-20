@@ -76,6 +76,7 @@ export const IconFlagCI: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ci-clip)'>
         <g clipPath='url(#ci-a)'>
           <path fill='url(#ci-b)' d='M21 0H0v15h21z' />

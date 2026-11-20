@@ -254,6 +254,7 @@ export const IconFlagGS: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gs-clip)'>
         <g clipPath='url(#gs-a)'>
           <path fill='url(#gs-b)' d='M21 0H0v15h21z' />

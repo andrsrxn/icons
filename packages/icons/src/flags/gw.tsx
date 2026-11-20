@@ -80,6 +80,7 @@ export const IconFlagGW: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gw-clip)'>
         <g clipPath='url(#gw-a)'>
           <path fill='url(#gw-b)' d='M21 0H0v15h21z' />

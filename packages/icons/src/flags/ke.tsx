@@ -116,6 +116,7 @@ export const IconFlagKE: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ke-clip)'>
         <g clipPath='url(#ke-a)'>
           <path fill='url(#ke-b)' d='M21 0H0v15h21z' />

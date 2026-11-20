@@ -86,6 +86,7 @@ export const IconFlagSD: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sd-clip)'>
         <g clipPath='url(#sd-a)'>
           <path fill='url(#sd-b)' d='M21 0H0v15h21z' />

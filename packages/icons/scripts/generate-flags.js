@@ -147,7 +147,7 @@ function generateComponent(fileName, svgContent) {
           <rect x='0' y='0' width='${vbWidth}' height='${vbHeight}' />
         </clipPath>`
 
-  const jsxDefs = svgAttrsToJsx(`${defsContent}${clipPathDef}`)
+  const jsxDefs = svgAttrsToJsx(`<defs>${defsContent}${clipPathDef}</defs>`)
   const jsxBody = svgAttrsToJsx(innerBody)
 
   return `import type { FlagIcon } from './types'
@@ -184,8 +184,8 @@ export const ${componentName}: FlagIcon = ({
       aria-hidden={!isAccessible}
       aria-label={isAccessible ? ariaLabel : undefined}
       focusable={false}>
-      <defs>${jsxDefs}
-      </defs>
+      ${jsxDefs}
+      
       <g clipPath='url(#${clipId})'>
         ${jsxBody.trim()}
       </g>

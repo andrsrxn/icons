@@ -150,6 +150,7 @@ export const IconFlagFK: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#fk-clip)'>
         <g clipPath='url(#fk-a)'>
           <path fill='url(#fk-b)' d='M21 0H0v15h21z' />

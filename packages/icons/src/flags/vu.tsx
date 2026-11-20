@@ -96,6 +96,7 @@ export const IconFlagVU: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#vu-clip)'>
         <g clipPath='url(#vu-a)'>
           <path fill='url(#vu-b)' d='M21 0H0v15h21z' />

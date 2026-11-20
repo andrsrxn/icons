@@ -110,6 +110,7 @@ export const IconFlagMS: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ms-clip)'>
         <g clipPath='url(#ms-a)'>
           <path fill='url(#ms-b)' d='M21 0H0v15h21z' />

@@ -84,6 +84,7 @@ export const IconFlagTF: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#tf-clip)'>
         <g clipPath='url(#tf-a)'>
           <path fill='url(#tf-b)' d='M21 0H0v15h21z' />

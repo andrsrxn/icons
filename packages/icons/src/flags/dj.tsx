@@ -86,6 +86,7 @@ export const IconFlagDJ: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#dj-clip)'>
         <g clipPath='url(#dj-a)'>
           <path fill='url(#dj-b)' d='M21 0H0v15h21z' />

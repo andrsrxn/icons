@@ -42,6 +42,7 @@ export const IconFlagCOC: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#coc-clip)'>
         <g clipPath='url(#coc-a)'>
           <mask id='coc-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>

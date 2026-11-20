@@ -178,6 +178,7 @@ export const IconFlagNA: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#na-clip)'>
         <g clipPath='url(#na-a)'>
           <path fill='url(#na-b)' d='M21 0H0v15h21z' />

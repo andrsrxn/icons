@@ -112,6 +112,7 @@ export const IconFlagKN: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#kn-clip)'>
         <g clipPath='url(#kn-a)'>
           <path fill='url(#kn-b)' d='M21 0H0v15h21z' />

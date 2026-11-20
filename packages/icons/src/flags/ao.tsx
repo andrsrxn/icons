@@ -92,6 +92,7 @@ export const IconFlagAO: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#ao-clip)'>
         <g clipPath='url(#ao-a)'>
           <path fill='url(#ao-b)' d='M21 0H0v15h21z' />

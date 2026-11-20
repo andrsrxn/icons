@@ -90,6 +90,7 @@ export const IconFlagAU: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#au-clip)'>
         <g clipPath='url(#au-a)'>
           <path fill='url(#au-b)' d='M21 0H0v15h21z' />

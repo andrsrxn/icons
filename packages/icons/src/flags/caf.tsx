@@ -42,6 +42,7 @@ export const IconFlagCAF: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#caf-clip)'>
         <g clipPath='url(#caf-a)'>
           <mask id='caf-b' width='21' height='15' x='0' y='0' maskUnits='userSpaceOnUse'>

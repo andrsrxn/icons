@@ -95,6 +95,7 @@ export const IconFlagGL: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gl-clip)'>
         <g clipPath='url(#gl-a)'>
           <path fill='url(#gl-b)' d='M21 0H0v15h21z' />

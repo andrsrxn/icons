@@ -96,6 +96,7 @@ export const IconFlagKP: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#kp-clip)'>
         <g clipPath='url(#kp-a)'>
           <path fill='url(#kp-b)' d='M21 0H0v15h21z' />

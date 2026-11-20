@@ -86,6 +86,7 @@ export const IconFlagKZ: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#kz-clip)'>
         <g clipPath='url(#kz-a)'>
           <path fill='url(#kz-b)' d='M21 0H0v15h21z' />

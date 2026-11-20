@@ -86,6 +86,7 @@ export const IconFlagCW: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#cw-clip)'>
         <g clipPath='url(#cw-a)'>
           <path fill='url(#cw-b)' d='M21 0H0v15h21z' />

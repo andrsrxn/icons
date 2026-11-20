@@ -120,6 +120,7 @@ export const IconFlagSH: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sh-clip)'>
         <g clipPath='url(#sh-a)'>
           <path fill='url(#sh-b)' d='M21 0H0v15h21z' />

@@ -96,6 +96,7 @@ export const IconFlagSA: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#sa-clip)'>
         <g clipPath='url(#sa-a)'>
           <path fill='url(#sa-b)' d='M21 0H0v15h21z' />

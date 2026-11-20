@@ -72,6 +72,7 @@ export const IconFlagBT: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#bt-clip)'>
         <g clipPath='url(#bt-a)'>
           <path fill='url(#bt-b)' d='M21 0H0v15h21z' />

@@ -132,6 +132,7 @@ export const IconFlagPM: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#pm-clip)'>
         <g clipPath='url(#pm-a)'>
           <path fill='url(#pm-b)' d='M21 0H0v15h21z' />

@@ -82,6 +82,7 @@ export const IconFlagPY: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#py-clip)'>
         <g clipPath='url(#py-a)'>
           <path fill='url(#py-b)' d='M21 0H0v15h21z' />

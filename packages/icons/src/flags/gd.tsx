@@ -112,6 +112,7 @@ export const IconFlagGD: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#gd-clip)'>
         <g clipPath='url(#gd-a)'>
           <path fill='url(#gd-b)' d='M21 0H0v15h21z' />

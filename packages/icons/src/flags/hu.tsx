@@ -82,6 +82,7 @@ export const IconFlagHU: FlagIcon = ({
           <rect x='0' y='0' width='21' height='15' />
         </clipPath>
       </defs>
+
       <g clipPath='url(#hu-clip)'>
         <g clipPath='url(#hu-a)'>
           <path fill='url(#hu-b)' d='M21 0H0v15h21z' />
